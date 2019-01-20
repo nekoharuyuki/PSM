@@ -1,0 +1,136 @@
+
+SCE SFX Asset Library
+
+/////////////////////////////////////////////////////////////////////////////////////
+This is a royalty free sound effects library created by Sony Computer Entertainment.
+All sound effects are recorded and created in 16bit/44.1kHz and presented in wave format.
+
+The goal is to expand this library until it covers most areas used for game development 
+and other applicaions while keeping it free to use for game and application developers 
+for Sony supported platforms.
+
+For feedback, questions and requests please email: 
+Kim Nordstrom (kim_nordstrom@playstation.sony.com)
+
+/////////////////////////////////////////////////////////////////////////////////////
+12/19/12 - 0.42 - December
+
+Converted all files to 16-bit.
+
+/////////////////////////////////////////////////////////////////////////////////////
+11/02/2012 - 0.41 - November
+
+Converted all files to 44100 Hz.
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+03/30/2012 - 0.4 - March
+
+Features in this release:
+	- Added 150 new sound effects for a total of 1320 sounds.
+
+Changes in this release:
+	- Complete restructure and renaming to better follow Sony PD standard naming convention.
+	
+New sounds in this release:
+Check the excel document to see exactly what sounds were included. (Newest release is 
+marked in red)
+
+	- In creaks\ 					 		16 new sounds were added
+	- In fire\	 					 		 6 new sounds were added
+	- In impacts\	 				 		 8 new sounds were added
+	- In insects\	 				 		 1 new sounds were added
+	- In liquids\ 					 		 9 new sounds were added
+	- In menu\		 				 		 1 new sounds were added
+	- In monsters\	 				 		27 new sounds were added
+	- In rattles\	 				 		42 new sounds were added
+	- In squeaks\ 					 		11 new sounds were added
+	- In stone\ 					 		18 new sounds were added
+	- In whooshes\ 					 		11 new sounds were added
+
+Upcoming releases:
+	- No releases planned.
+	
+/////////////////////////////////////////////////////////////////////////////////////
+02/24/2012 - 0.3 - February
+
+Features in this release:
+	- Added 362 new sound effects for a total of 1170 sounds.
+	- Sony PD Sound generously donated some of their raw recordings and sound files from 
+	  the past 10 years. Sounds from Sony PD Sound will be included in this and future 
+	  releases.
+	- Added new column "Sound Creator" in excel document. It shows who created the sound.
+
+Changes in this release:
+	- Renamed and/or moved some of the folders
+	- Renamed and/or moved some of the sound files
+	- Fixed missmatched number of sounds in the excel document and actual sound files.
+	
+New sounds in this release:
+Check the excel document to see exactly what sounds were included. (Newest release is 
+marked in red)
+
+	- In alarms & bleeps\ 					 3 new sounds were added
+	- In ambience\ 							 4 new sounds were added
+	- In ambience\mood\ 					 2 new sounds were added
+	- In animals\ 							26 new sounds were added
+	- In cartoon\ 							 9 new sounds were added
+	- In clothes & accessories\ 			 4 new sounds were added
+	- In creeks & squeaks\					11 new sounds were added
+	- In destruction\						 4 new sounds were added
+	- In destruction\explosions\		 	35 new sounds were added
+	- In energy\							 2 new sounds were added
+	- In fx\								18 new sounds were added
+	- In impacts & hits\breaks & cracks\	16 new sounds were added
+	- In impacts & hits\hits\				19 new sounds were added
+	- In impacts & hits\swords\				16 new sounds were added
+	- In instruments\						 2 new sounds were added
+	- In liquids\water\						76 new sounds were added	
+	- In machines\		 					 6 new sounds were added
+	- In menu\								 3 new sounds were added
+	- In menu\pickups\						 1 new sounds were added
+	- In movement\footsteps\				35 new sounds were added
+	- In movement\water\					28 new sounds were added
+	- In movement\whooshes\					 3 new sounds were added
+	- In noise\								16 new sounds were added
+	- In tools & equipment\					 3 new sounds were added
+	- In voices\							20 new sounds were added
+	
+
+
+Upcoming releases:
+	- Add an additional 200 sounds per release.
+	- Add info in the excel document. Sound lenght, file size and tags.
+	- Sound search/filtering tool to search and preview sounds in the library via tags.
+	
+/////////////////////////////////////////////////////////////////////////////////////
+12/22/2011 - 0.2 - December
+
+Features in this release:
+	- Added 100 new sound effects for a total of 810 sounds.
+	- Added column "Release Version" in excel document. It shows which release version 
+	  a sound effect was added.
+
+Changes in this release:
+	- Changed misspelled "creeks" to "creaks" 
+	
+Upcoming releases:
+	- Add an additional 100 sounds per release.
+	- Add info in the excel document. Sound lenght, file size and tags.
+	- Sound search/filtering tool to search and preview sounds in the library via tags.
+	
+/////////////////////////////////////////////////////////////////////////////////////
+10/28/2011 - 0.1 - October
+	- Initial release
+
+Features in this release:
+	- 678 sound effects and 32 ambient sounds for at total of 710 sounds.
+	- Excel document with the following information about the sounds: file name, sound 
+	  descriptions, directory, looping, channels, bit rate, sample rate and file format.
+	
+Upcoming releases:
+	- Add an additional 100 sounds per release.
+	- Add info in the excel document. Sound lenght, file size, creation date and tags.
+	- Sound search/filtering tool to search and preview sounds in the library via tags.
+	
+/////////////////////////////////////////////////////////////////////////////////////
