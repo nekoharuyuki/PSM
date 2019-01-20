@@ -1,0 +1,680 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: クラス LiveSpringPanel</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveSpringPanel.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public メソッド</a> &#124;
+<a href="#pro-methods">Protected メソッド</a> &#124;
+<a href="#properties">プロパティ</a>  </div>
+  <div class="headertitle">
+<h1>クラス LiveSpringPanel</h1>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="Sce::PlayStation::HighLevel::UI::LiveSpringPanel" --><!-- doxytag: inherits="Sce::PlayStation::HighLevel::UI::Panel" -->
+<p>加速度センサーやパネルの動きに応じて子ウィジェットが揺れるパネル  
+<a href="#_details">[詳細]</a></p>
+<div class="dynheader">
+LiveSpringPanelに対する継承グラフ</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveSpringPanel.png" usemap="#LiveSpringPanel_map" alt=""/>
+  <map id="LiveSpringPanel_map" name="LiveSpringPanel_map">
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Panel.html" alt="Panel" shape="rect" coords="0,112,105,136"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ContainerWidget.html" alt="ContainerWidget" shape="rect" coords="0,56,105,80"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html" alt="Widget" shape="rect" coords="0,0,105,24"/>
+</map>
+ </div></div>
+
+<p><a href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveSpringPanel-members.html">すべてのメンバ一覧</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Public メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abae541305a4fb7eeeb0220ba43fc3c06"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::LiveSpringPanel::LiveSpringPanel" ref="abae541305a4fb7eeeb0220ba43fc3c06" args="()" -->
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveSpringPanel.html#abae541305a4fb7eeeb0220ba43fc3c06">LiveSpringPanel</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveSpringPanel.html#a390da2cfa7428b13584bbfe96e598286">AddChildFirst</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a> child)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">子ウィジェットを先頭に追加する。  <a href="#a390da2cfa7428b13584bbfe96e598286"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveSpringPanel.html#ac08c7ec5c103d13a2c82620baac05247">AddChildLast</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a> child)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">子ウィジェットを末尾に追加する。  <a href="#ac08c7ec5c103d13a2c82620baac05247"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveSpringPanel.html#a811c74198ad10347ed4edc0fc8e20fe6">InsertChildBefore</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a> child, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a> nextChild)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した子ウィジェットの直前に挿入する。  <a href="#a811c74198ad10347ed4edc0fc8e20fe6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveSpringPanel.html#a3dabdb24fc56148b87b54e054da95816">InsertChildAfter</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a> child, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a> prevChild)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した子ウィジェットの直後に挿入する。  <a href="#a3dabdb24fc56148b87b54e054da95816"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveSpringPanel.html#a92367a79e37cdac1691bc0d9584f9abf">RemoveChild</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a> child)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">指定された子ウィジェットを削除する。  <a href="#a92367a79e37cdac1691bc0d9584f9abf"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveSpringPanel.html#a371cc2e9e3fa8862cdfdc4ffad9f9598">SetDampingConstant</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a> widget, <a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1UI.html#ae5df13207e05e6661ba0e16d18d1f83e">SpringType</a> type, float dampingConstant)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">バネの減衰定数（揺れが収束までの早さ）を設定する。  <a href="#a371cc2e9e3fa8862cdfdc4ffad9f9598"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveSpringPanel.html#a6bbeba8fc5a2b456da4507d5b6722cbd">GetDampingConstant</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a> widget, <a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1UI.html#ae5df13207e05e6661ba0e16d18d1f83e">SpringType</a> type)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">バネの減衰定数（揺れが収束までの早さ）を取得する。  <a href="#a6bbeba8fc5a2b456da4507d5b6722cbd"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveSpringPanel.html#ac4b011c077040b81f5ae8b48ec53a418">SetSpringConstant</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a> widget, <a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1UI.html#ae5df13207e05e6661ba0e16d18d1f83e">SpringType</a> type, float springConstant)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">バネ定数（バネが元の位置に戻ろうとする強さ）を設定する。  <a href="#ac4b011c077040b81f5ae8b48ec53a418"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveSpringPanel.html#afa56f4a6eb760c14801e638b0095c4d6">GetSpringConstant</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a> widget, <a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1UI.html#ae5df13207e05e6661ba0e16d18d1f83e">SpringType</a> type)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">バネ定数（バネが元の位置に戻ろうとする強さ）を取得する。  <a href="#afa56f4a6eb760c14801e638b0095c4d6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveSpringPanel.html#a8a6237e941aa953d30b11ebe3c8b23ff">SetDisplacement</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a> widget, <a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1UI.html#ae5df13207e05e6661ba0e16d18d1f83e">SpringType</a> type, float displacement)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">バネの変化量（初期位置からのずれ）を設定する。  <a href="#a8a6237e941aa953d30b11ebe3c8b23ff"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveSpringPanel.html#ab0a03965ab35ef6730c6297aa1aa43d6">GetDisplacement</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a> widget, <a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1UI.html#ae5df13207e05e6661ba0e16d18d1f83e">SpringType</a> type)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">バネの変化量（初期位置からのずれ）を取得する。  <a href="#ab0a03965ab35ef6730c6297aa1aa43d6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveSpringPanel.html#ae233138a99bb33922105af507afc33bf">AddAcceleraton</a> (float x, float y, float z)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">子ウィジェットに加速度を加える  <a href="#ae233138a99bb33922105af507afc33bf"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-methods"></a>
+Protected メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveSpringPanel.html#a6e215133d6ee42486ffbb7e88cdceb1c">OnUpdate</a> (float elapsedTime)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">更新処理  <a href="#a6e215133d6ee42486ffbb7e88cdceb1c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">internal override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveSpringPanel.html#a1a132d01d3563a7504195cb38be4f55c">OnMotionEvent</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1MotionEvent.html">MotionEvent</a> motionEvent)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">モーションイベントハンドラ  <a href="#a1a132d01d3563a7504195cb38be4f55c"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="properties"></a>
+プロパティ</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9dd7742ad792942eeb22be2bc1fc2020"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::LiveSpringPanel::ReflectSensorAcceleration" ref="a9dd7742ad792942eeb22be2bc1fc2020" args="" -->
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveSpringPanel.html#a9dd7742ad792942eeb22be2bc1fc2020">ReflectSensorAcceleration</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">加速度センサーの値を子ウィジェットの動きに反映させるかどうかを取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a90239ce10187f5bb01c088137035a165"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::LiveSpringPanel::ReflectMotionAcceleration" ref="a90239ce10187f5bb01c088137035a165" args="" -->
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveSpringPanel.html#a90239ce10187f5bb01c088137035a165">ReflectMotionAcceleration</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">パネルの動きを子ウィジェットの動きに反映させるかどうかを取得・設定する。 <br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>説明</h2>
+<div class="textblock"><p>加速度センサーやパネルの動きに応じて子ウィジェットが揺れるパネル </p>
+</div><hr/><h2>メソッド</h2>
+<a class="anchor" id="ae233138a99bb33922105af507afc33bf"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::LiveSpringPanel::AddAcceleraton" ref="ae233138a99bb33922105af507afc33bf" args="(float x, float y, float z)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddAcceleraton </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>z</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>子ウィジェットに加速度を加える </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>X方向の加速度</td></tr>
+    <tr><td class="paramname">y</td><td>Y方向の加速度</td></tr>
+    <tr><td class="paramname">z</td><td>Z方向の加速度</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a390da2cfa7428b13584bbfe96e598286"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::LiveSpringPanel::AddChildFirst" ref="a390da2cfa7428b13584bbfe96e598286" args="(Widget child)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void AddChildFirst </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>&#160;</td>
+          <td class="paramname"><em>child</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>子ウィジェットを先頭に追加する。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td>追加する子ウィジェット</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>既に追加されている場合は先頭に移動する。 </p>
+
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ContainerWidget.html#a2e0fcc7c6b36a5c70ae50de56cde5d80">ContainerWidget</a>を再定義しています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ac08c7ec5c103d13a2c82620baac05247"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::LiveSpringPanel::AddChildLast" ref="ac08c7ec5c103d13a2c82620baac05247" args="(Widget child)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void AddChildLast </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>&#160;</td>
+          <td class="paramname"><em>child</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>子ウィジェットを末尾に追加する。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td>追加する子ウィジェット</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>既に追加されている場合は末尾に移動する。 </p>
+
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ContainerWidget.html#a36440387c91892f0b65f8ecdb7ad9a67">ContainerWidget</a>を再定義しています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a6bbeba8fc5a2b456da4507d5b6722cbd"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::LiveSpringPanel::GetDampingConstant" ref="a6bbeba8fc5a2b456da4507d5b6722cbd" args="(Widget widget, SpringType type)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float GetDampingConstant </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>&#160;</td>
+          <td class="paramname"><em>widget</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1UI.html#ae5df13207e05e6661ba0e16d18d1f83e">SpringType</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>バネの減衰定数（揺れが収束までの早さ）を取得する。 </p>
+<p>0以上、1以下の値で、大きくなればゆれが収束するまでの時間が短くなる。デフォルトは0.2。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">widget</td><td>減衰定数を取得するウィジェット</td></tr>
+    <tr><td class="paramname">type</td><td>減衰定数を取得するバネの種類</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab0a03965ab35ef6730c6297aa1aa43d6"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::LiveSpringPanel::GetDisplacement" ref="ab0a03965ab35ef6730c6297aa1aa43d6" args="(Widget widget, SpringType type)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float GetDisplacement </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>&#160;</td>
+          <td class="paramname"><em>widget</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1UI.html#ae5df13207e05e6661ba0e16d18d1f83e">SpringType</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>バネの変化量（初期位置からのずれ）を取得する。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">widget</td><td>変化量を取得するウィジェット</td></tr>
+    <tr><td class="paramname">type</td><td>変化量を取得するバネの種類</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="afa56f4a6eb760c14801e638b0095c4d6"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::LiveSpringPanel::GetSpringConstant" ref="afa56f4a6eb760c14801e638b0095c4d6" args="(Widget widget, SpringType type)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float GetSpringConstant </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>&#160;</td>
+          <td class="paramname"><em>widget</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1UI.html#ae5df13207e05e6661ba0e16d18d1f83e">SpringType</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>バネ定数（バネが元の位置に戻ろうとする強さ）を取得する。 </p>
+<p>0以上、1以下の値で、大きくなればゆれが小さくなる。デフォルトは0.3。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">widget</td><td>バネ定数を取得するウィジェット</td></tr>
+    <tr><td class="paramname">type</td><td>バネ定数を取得するバネの種類</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3dabdb24fc56148b87b54e054da95816"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::LiveSpringPanel::InsertChildAfter" ref="a3dabdb24fc56148b87b54e054da95816" args="(Widget child, Widget prevChild)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void InsertChildAfter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>&#160;</td>
+          <td class="paramname"><em>child</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>&#160;</td>
+          <td class="paramname"><em>prevChild</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>指定した子ウィジェットの直後に挿入する。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td>挿入する子ウィジェット</td></tr>
+    <tr><td class="paramname">prevChild</td><td>挿入する子ウィジェットの直前となる子ウィジェット</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>既に追加されている場合は指定した子ウィジェットの直後に移動する。 </p>
+
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ContainerWidget.html#abcf83a8798825d6386d3052d20fefbfd">ContainerWidget</a>を再定義しています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a811c74198ad10347ed4edc0fc8e20fe6"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::LiveSpringPanel::InsertChildBefore" ref="a811c74198ad10347ed4edc0fc8e20fe6" args="(Widget child, Widget nextChild)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void InsertChildBefore </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>&#160;</td>
+          <td class="paramname"><em>child</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>&#160;</td>
+          <td class="paramname"><em>nextChild</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>指定した子ウィジェットの直前に挿入する。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td>挿入する子ウィジェット</td></tr>
+    <tr><td class="paramname">nextChild</td><td>挿入する子ウィジェットの直後となる子ウィジェット</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>既に追加されている場合は指定した子ウィジェットの直前に移動する。 </p>
+
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ContainerWidget.html#ae610b581ca1b434adbb08dd5627ab9af">ContainerWidget</a>を再定義しています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a1a132d01d3563a7504195cb38be4f55c"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::LiveSpringPanel::OnMotionEvent" ref="a1a132d01d3563a7504195cb38be4f55c" args="(MotionEvent motionEvent)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">internal override void OnMotionEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1MotionEvent.html">MotionEvent</a>&#160;</td>
+          <td class="paramname"><em>motionEvent</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>モーションイベントハンドラ </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">motionEvent</td><td>モーションイベント</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a349d9cddf27607c163365f7f355e2938">Widget</a>を再定義しています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a6e215133d6ee42486ffbb7e88cdceb1c"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::LiveSpringPanel::OnUpdate" ref="a6e215133d6ee42486ffbb7e88cdceb1c" args="(float elapsedTime)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void OnUpdate </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>elapsedTime</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>更新処理 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">elapsedTime</td><td>前回のUpdateからの経過時間（ミリ秒）</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a0635f3ec717eab9930522f4b1feef401">Widget</a>を再定義しています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a92367a79e37cdac1691bc0d9584f9abf"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::LiveSpringPanel::RemoveChild" ref="a92367a79e37cdac1691bc0d9584f9abf" args="(Widget child)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void RemoveChild </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>&#160;</td>
+          <td class="paramname"><em>child</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>指定された子ウィジェットを削除する。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td>削除するウィジェット</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ContainerWidget.html#a6ec59edc5bd68f69f1c3f563a583bf46">ContainerWidget</a>を再定義しています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a371cc2e9e3fa8862cdfdc4ffad9f9598"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::LiveSpringPanel::SetDampingConstant" ref="a371cc2e9e3fa8862cdfdc4ffad9f9598" args="(Widget widget, SpringType type, float dampingConstant)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetDampingConstant </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>&#160;</td>
+          <td class="paramname"><em>widget</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1UI.html#ae5df13207e05e6661ba0e16d18d1f83e">SpringType</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>dampingConstant</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>バネの減衰定数（揺れが収束までの早さ）を設定する。 </p>
+<p>0以上、1以下の値で、大きくなればゆれが収束するまでの時間が短くなる。デフォルトは0.2。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">widget</td><td>減衰定数を設定するウィジェット。nullを指定するとすべてのウィジェットの減衰定数を変更する。</td></tr>
+    <tr><td class="paramname">type</td><td>減衰定数を設定するバネの種類。SpringType.Allを指定するとすべてのバネの減衰定数を変更する。</td></tr>
+    <tr><td class="paramname">dampingConstant</td><td>減衰定数</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a8a6237e941aa953d30b11ebe3c8b23ff"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::LiveSpringPanel::SetDisplacement" ref="a8a6237e941aa953d30b11ebe3c8b23ff" args="(Widget widget, SpringType type, float displacement)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetDisplacement </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>&#160;</td>
+          <td class="paramname"><em>widget</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1UI.html#ae5df13207e05e6661ba0e16d18d1f83e">SpringType</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>displacement</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>バネの変化量（初期位置からのずれ）を設定する。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">widget</td><td>変化量を設定するウィジェット</td></tr>
+    <tr><td class="paramname">type</td><td>変化量を設定するバネの種類</td></tr>
+    <tr><td class="paramname">displacement</td><td>変化量</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac4b011c077040b81f5ae8b48ec53a418"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::LiveSpringPanel::SetSpringConstant" ref="ac4b011c077040b81f5ae8b48ec53a418" args="(Widget widget, SpringType type, float springConstant)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetSpringConstant </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>&#160;</td>
+          <td class="paramname"><em>widget</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1UI.html#ae5df13207e05e6661ba0e16d18d1f83e">SpringType</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>springConstant</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>バネ定数（バネが元の位置に戻ろうとする強さ）を設定する。 </p>
+<p>0以上、1以下の値で、大きくなればゆれが小さくなる。デフォルトは0.3。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">widget</td><td>バネ定数を設定するウィジェット。nullを指定するとすべてのWidgetのバネ定数を変更する。</td></tr>
+    <tr><td class="paramname">type</td><td>バネ定数を設定するバネの種類。SpringType.Allを指定するとすべてのバネの減衰定数を変更する。</td></tr>
+    <tr><td class="paramname">springConstant</td><td>バネ定数</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><b>Sce</b>      </li>
+      <li class="navelem"><b>PlayStation</b>      </li>
+      <li class="navelem"><b>HighLevel</b>      </li>
+      <li class="navelem"><a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1UI.html">UI</a>      </li>
+      <li class="navelem"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveSpringPanel.html">LiveSpringPanel</a>      </li>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

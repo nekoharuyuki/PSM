@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: クラス EditableText</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1EditableText.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public メソッド</a> &#124;
+<a href="#pro-methods">Protected メソッド</a> &#124;
+<a href="#properties">プロパティ</a> &#124;
+<a href="#events">イベント</a>  </div>
+  <div class="headertitle">
+<h1>クラス EditableText</h1>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="Sce::PlayStation::HighLevel::UI::EditableText" --><!-- doxytag: inherits="Sce::PlayStation::HighLevel::UI::Widget,Sce::PlayStation::HighLevel::UI::IWeakEventListener" -->
+<p>編集可能なテキストウィジェット  
+<a href="#_details">[詳細]</a></p>
+<div class="dynheader">
+EditableTextに対する継承グラフ</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1EditableText.png" usemap="#EditableText_map" alt=""/>
+  <map id="EditableText_map" name="EditableText_map">
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html" alt="Widget" shape="rect" coords="0,0,80,24"/>
+</map>
+ </div></div>
+
+<p><a href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1EditableText-members.html">すべてのメンバ一覧</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Public メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e372b0c93533068180deb4bd2a01920"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::EditableText::EditableText" ref="a5e372b0c93533068180deb4bd2a01920" args="()" -->
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1EditableText.html#a5e372b0c93533068180deb4bd2a01920">EditableText</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ <br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-methods"></a>
+Protected メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a64b7a39120fa9fc9f946b694478b3889"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::EditableText::DisposeSelf" ref="a64b7a39120fa9fc9f946b694478b3889" args="()" -->
+override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1EditableText.html#a64b7a39120fa9fc9f946b694478b3889">DisposeSelf</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">使用されているリソースを解放する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1EditableText.html#a7ed7877bc924a22a5c0be18e6e54966c">OnPressStateChanged</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1PressStateChangedEventArgs.html">PressStateChangedEventArgs</a> e)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">プレス状態が変化したときに呼び出される  <a href="#a7ed7877bc924a22a5c0be18e6e54966c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1EditableText.html#a6e215133d6ee42486ffbb7e88cdceb1c">OnUpdate</a> (float elapsedTime)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">更新処理  <a href="#a6e215133d6ee42486ffbb7e88cdceb1c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a043f0d1936d88abcdbb7b11a30947844"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::EditableText::Render" ref="a043f0d1936d88abcdbb7b11a30947844" args="()" -->
+internal override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1EditableText.html#a043f0d1936d88abcdbb7b11a30947844">Render</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シーングラフを描画する。 <br/></td></tr>
+<tr><td colspan="2"><h2><a name="properties"></a>
+プロパティ</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5ea0d912bc2212f4d0e1fbc8984931c"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::EditableText::Width" ref="ac5ea0d912bc2212f4d0e1fbc8984931c" args="" -->
+override float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1EditableText.html#ac5ea0d912bc2212f4d0e1fbc8984931c">Width</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">幅を取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9262abc1edf9547d628813c2784d835b"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::EditableText::Height" ref="a9262abc1edf9547d628813c2784d835b" args="" -->
+override float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1EditableText.html#a9262abc1edf9547d628813c2784d835b">Height</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">高さを取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4726c7c06ae41233e679361293b4173"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::EditableText::Text" ref="ab4726c7c06ae41233e679361293b4173" args="" -->
+string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1EditableText.html#ab4726c7c06ae41233e679361293b4173">Text</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列を取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aafa9cf2038563d7ffa30823fa21cdf8a"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::EditableText::Font" ref="aafa9cf2038563d7ffa30823fa21cdf8a" args="" -->
+<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1UIFont.html">UIFont</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1EditableText.html#aafa9cf2038563d7ffa30823fa21cdf8a">Font</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列のフォントを取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f662fbfdf5403646691b0aa0234adb8"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::EditableText::TextColor" ref="a5f662fbfdf5403646691b0aa0234adb8" args="" -->
+<a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1UIColor.html">UIColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1EditableText.html#a5f662fbfdf5403646691b0aa0234adb8">TextColor</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列の色を取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d1a5ce9ff00dcc1d22511ca604c1901"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::EditableText::DefaultText" ref="a4d1a5ce9ff00dcc1d22511ca604c1901" args="" -->
+string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1EditableText.html#a4d1a5ce9ff00dcc1d22511ca604c1901">DefaultText</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトの文字列を取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61d33f8f9a7ca48f4f1d1f1011893a36"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::EditableText::DefaultFont" ref="a61d33f8f9a7ca48f4f1d1f1011893a36" args="" -->
+<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1UIFont.html">UIFont</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1EditableText.html#a61d33f8f9a7ca48f4f1d1f1011893a36">DefaultFont</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトの文字列のフォントを取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61de87162e1260f20fff6d24c7016221"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::EditableText::DefaultTextColor" ref="a61de87162e1260f20fff6d24c7016221" args="" -->
+<a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1UIColor.html">UIColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1EditableText.html#a61de87162e1260f20fff6d24c7016221">DefaultTextColor</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトの文字列の色を取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a85a3f198e7b1b36fe413c07dd91f8576"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::EditableText::TextShadow" ref="a85a3f198e7b1b36fe413c07dd91f8576" args="" -->
+<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1TextShadowSettings.html">TextShadowSettings</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1EditableText.html#a85a3f198e7b1b36fe413c07dd91f8576">TextShadow</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列の影を取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af440c895684303c2ede325bc175e2585"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::EditableText::HorizontalAlignment" ref="af440c895684303c2ede325bc175e2585" args="" -->
+<a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1UI.html#aa00e70829e72ff16addc4d9f06fe3bc5">HorizontalAlignment</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1EditableText.html#af440c895684303c2ede325bc175e2585">HorizontalAlignment</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列またはアイコン画像の水平方向のアライメントを取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a805b80e6a5f77838a1bbfe5cc0875fae"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::EditableText::VerticalAlignment" ref="a805b80e6a5f77838a1bbfe5cc0875fae" args="" -->
+<a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1UI.html#a9c2ed22cfbd21f13df24ea193b310aee">VerticalAlignment</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1EditableText.html#a805b80e6a5f77838a1bbfe5cc0875fae">VerticalAlignment</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列またはアイコン画像の垂直方向のアライメントを取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acf1261e4cec50b1d60f8aee1bf4d794d"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::EditableText::LineBreak" ref="acf1261e4cec50b1d60f8aee1bf4d794d" args="" -->
+<a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1UI.html#ab2d53a4a8451682b7bb14320dea29a88">LineBreak</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1EditableText.html#acf1261e4cec50b1d60f8aee1bf4d794d">LineBreak</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列の改行方法を取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ec1e5dfdc47d6e0ebc6f2d460cfed7e"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::EditableText::TextTrimming" ref="a6ec1e5dfdc47d6e0ebc6f2d460cfed7e" args="" -->
+<a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1UI.html#ad5c824cbd61a1d654cf80ccfc322e322">TextTrimming</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1EditableText.html#a6ec1e5dfdc47d6e0ebc6f2d460cfed7e">TextTrimming</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列のトリミング方法を取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1EditableText.html#a5e9903bce3c23030b302ef2b4ac9f5c9">LineGap</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">行間を取得・設定する。  <a href="#a5e9903bce3c23030b302ef2b4ac9f5c9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08c7fbb3c5536af62f56315b3a2924f2"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::EditableText::TextInputMode" ref="a08c7fbb3c5536af62f56315b3a2924f2" args="" -->
+<a class="el" href="namespaceSce_1_1PlayStation_1_1Core_1_1Environment.html#a46cc43e9f943ba8cfa8d80c9aafb1334">TextInputMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1EditableText.html#a08c7fbb3c5536af62f56315b3a2924f2">TextInputMode</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">テキスト入力の動作モードを取得・設定する。 <br/></td></tr>
+<tr><td colspan="2"><h2><a name="events"></a>
+イベント</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a77f9e807c909b9b824fa0d8ba13a9e7e"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::EditableText::TextChanged" ref="a77f9e807c909b9b824fa0d8ba13a9e7e" args="" -->
+EventHandler<br class="typebreak"/>
+&lt; <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1TextChangedEventArgs.html">TextChangedEventArgs</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1EditableText.html#a77f9e807c909b9b824fa0d8ba13a9e7e">TextChanged</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Textプロパティが変更された場合に発行するイベント <br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>説明</h2>
+<div class="textblock"><p>編集可能なテキストウィジェット </p>
+</div><hr/><h2>メソッド</h2>
+<a class="anchor" id="a7ed7877bc924a22a5c0be18e6e54966c"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::EditableText::OnPressStateChanged" ref="a7ed7877bc924a22a5c0be18e6e54966c" args="(PressStateChangedEventArgs e)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void OnPressStateChanged </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1PressStateChangedEventArgs.html">PressStateChangedEventArgs</a>&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>プレス状態が変化したときに呼び出される </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>イベント引数</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#ac7c77fb040aeb97a6d9c51738c2876fa">Widget</a>を再定義しています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a6e215133d6ee42486ffbb7e88cdceb1c"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::EditableText::OnUpdate" ref="a6e215133d6ee42486ffbb7e88cdceb1c" args="(float elapsedTime)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void OnUpdate </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>elapsedTime</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>更新処理 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">elapsedTime</td><td>前回のUpdateからの経過時間（ミリ秒）</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a0635f3ec717eab9930522f4b1feef401">Widget</a>を再定義しています。</p>
+
+</div>
+</div>
+<hr/><h2>プロパティ</h2>
+<a class="anchor" id="a5e9903bce3c23030b302ef2b4ac9f5c9"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::EditableText::LineGap" ref="a5e9903bce3c23030b302ef2b4ac9f5c9" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LineGap<code> [get, set]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>行間を取得・設定する。 </p>
+<p>初期値は０ </p>
+
+</div>
+</div>
+</div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><b>Sce</b>      </li>
+      <li class="navelem"><b>PlayStation</b>      </li>
+      <li class="navelem"><b>HighLevel</b>      </li>
+      <li class="navelem"><a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1UI.html">UI</a>      </li>
+      <li class="navelem"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1EditableText.html">EditableText</a>      </li>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

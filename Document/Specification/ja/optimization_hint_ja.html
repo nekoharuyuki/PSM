@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: 最適化のヒント</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('optimization_hint_ja.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<h1>最適化のヒント </h1>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><blockquote>
+この文書では最適化のヒントに関して説明します。</blockquote>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#id2" id="id5">実機での正しいパフォーマンスを知るには</a></li>
+<li><a class="reference internal" href="#id3" id="id6">最適化オプションの有効化</a></li>
+<li><a class="reference internal" href="#id4" id="id7">データをロードする時間の短縮</a></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h1><a class="toc-backref" href="#id5">実機での正しいパフォーマンスを知るには</a></h1>
+<p>実機での正しいパフォーマンスを知るには次の設定でPSMアプリを実行してください。</p>
+<ul class="simple">
+<li>Releaseモードでビルドする。</li>
+<li>PSMアプリのデプロイ後、実機のDevAssistant のメニューからPSMアプリを立ち上げてください。( PSM Studioから起動すると、実機とPCの間で通信が行われるため、オーバーヘッドがかかります。)</li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h1><a class="toc-backref" href="#id6">最適化オプションの有効化</a></h1>
+<p>最適化オプションを有効にすると、処理速度の向上をはかることができます。</p>
+<p>最適化オプションを有効にするには次の設定を行ってください。</p>
+<ul>
+<li><p class="first">[メニュー] - [Project] – [(project name) Options] – [Build] – [Compiler] – [Enable optimizations]にチェックをいれます。</p>
+<div align="center" class="figure">
+<img alt="./image/user_guide/optimization_check.png" src="./image/user_guide/optimization_check.png" style="width: 503.25px; height: 479.25px;" />
+<p class="caption"><strong>図1 最適化オプション</strong></p>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h1><a class="toc-backref" href="#id7">データをロードする時間の短縮</a></h1>
+<p>プロジェクトにデータファイルを登録すると、署名と暗号化を行う設定がファイルに対してデフォルトでなされます。</p>
+<p>この「署名と暗号化」の設定から「平文」の設定に変更すると、ファイルのロード時に行われる復号と署名の処理が省略されて、処理時間が短縮されます。</p>
+<p>ロード時間を短縮したい場合、平文の設定に変更することを検討してください。</p>
+<p>なお「平文」の設定は次のように行います。</p>
+<ol class="arabic simple">
+<li>ソリューションエクスプローラでファイルを右クリックし、[Properties] を選択します。</li>
+<li>[Properties]ウィンドウが表示されるので、その中の[Content Protection]を[SignedAndEncrypted]から[Plain]に変更します。</li>
+</ol>
+<p>※ ただし平文の設定を行うと、Androidデバイスではそのままの状態の画像ファイル・サウンドファイルがSDカードに配置され、エンドユーザーがそのファイルを閲覧できるようになるのでご注意ください。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="./image/user_guide/plain.png" src="./image/user_guide/plain.png" style="width: 399.0px; height: 588.75px;" />
+<p class="caption"><strong>図2 平文の設定</strong></p>
+</div>
+</blockquote>
+</div>
+ </div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

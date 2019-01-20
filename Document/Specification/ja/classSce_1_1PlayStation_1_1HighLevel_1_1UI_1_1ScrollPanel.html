@@ -1,0 +1,504 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: クラス ScrollPanel</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public メソッド</a> &#124;
+<a href="#pro-methods">Protected メソッド</a> &#124;
+<a href="#properties">プロパティ</a>  </div>
+  <div class="headertitle">
+<h1>クラス ScrollPanel</h1>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="Sce::PlayStation::HighLevel::UI::ScrollPanel" --><!-- doxytag: inherits="Sce::PlayStation::HighLevel::UI::ContainerWidget" -->
+<p>スクロール可能な領域を持つコンテナウィジェット  
+<a href="#_details">[詳細]</a></p>
+<div class="dynheader">
+ScrollPanelに対する継承グラフ</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.png" usemap="#ScrollPanel_map" alt=""/>
+  <map id="ScrollPanel_map" name="ScrollPanel_map">
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ContainerWidget.html" alt="ContainerWidget" shape="rect" coords="0,56,105,80"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html" alt="Widget" shape="rect" coords="0,0,105,24"/>
+</map>
+ </div></div>
+
+<p><a href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel-members.html">すべてのメンバ一覧</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Public メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6dc878cc55170dfaa065722c78b31706"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::ScrollPanel::ScrollPanel" ref="a6dc878cc55170dfaa065722c78b31706" args="()" -->
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.html#a6dc878cc55170dfaa065722c78b31706">ScrollPanel</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.html#a390da2cfa7428b13584bbfe96e598286">AddChildFirst</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a> child)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">子ウィジェットを先頭に追加する。  <a href="#a390da2cfa7428b13584bbfe96e598286"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.html#ac08c7ec5c103d13a2c82620baac05247">AddChildLast</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a> child)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">子ウィジェットを末尾に追加する。  <a href="#ac08c7ec5c103d13a2c82620baac05247"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.html#a811c74198ad10347ed4edc0fc8e20fe6">InsertChildBefore</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a> child, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a> nextChild)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した子ウィジェットの直前に挿入する。  <a href="#a811c74198ad10347ed4edc0fc8e20fe6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.html#a3dabdb24fc56148b87b54e054da95816">InsertChildAfter</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a> child, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a> prevChild)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した子ウィジェットの直後に挿入する。  <a href="#a3dabdb24fc56148b87b54e054da95816"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.html#a92367a79e37cdac1691bc0d9584f9abf">RemoveChild</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a> child)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">指定された子ウィジェットを削除する。  <a href="#a92367a79e37cdac1691bc0d9584f9abf"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.html#ae2d18c0b834600244593ae5b5e03ab32">ScrollTo</a> (float x, float y, bool withAnimation)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した位置へスクロールする  <a href="#ae2d18c0b834600244593ae5b5e03ab32"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-methods"></a>
+Protected メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">internal override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.html#a5d5b5b7076275c437fdb988a2c0bbc29">OnPreviewKeyEvent</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1KeyEvent.html">KeyEvent</a> keyEvent)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">事前キーイベントのハンドラ  <a href="#a5d5b5b7076275c437fdb988a2c0bbc29"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.html#a6e215133d6ee42486ffbb7e88cdceb1c">OnUpdate</a> (float elapsedTime)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">更新処理  <a href="#a6e215133d6ee42486ffbb7e88cdceb1c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">internal override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.html#a7c6ee38d499de41cb696bc07aa9acb31">OnTouchEvent</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1TouchEventCollection.html">TouchEventCollection</a> touchEvents)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">タッチイベントハンドラ  <a href="#a7c6ee38d499de41cb696bc07aa9acb31"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="properties"></a>
+プロパティ</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5ea0d912bc2212f4d0e1fbc8984931c"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::ScrollPanel::Width" ref="ac5ea0d912bc2212f4d0e1fbc8984931c" args="" -->
+override float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.html#ac5ea0d912bc2212f4d0e1fbc8984931c">Width</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">幅を取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9262abc1edf9547d628813c2784d835b"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::ScrollPanel::Height" ref="a9262abc1edf9547d628813c2784d835b" args="" -->
+override float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.html#a9262abc1edf9547d628813c2784d835b">Height</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">高さを取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab740473ac8f71a90161e27aad8af2c61"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::ScrollPanel::PanelX" ref="ab740473ac8f71a90161e27aad8af2c61" args="" -->
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.html#ab740473ac8f71a90161e27aad8af2c61">PanelX</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">親の座標系でのパネルのX座標を取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af27062d2907d8b9497b257ced1ead0d5"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::ScrollPanel::PanelY" ref="af27062d2907d8b9497b257ced1ead0d5" args="" -->
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.html#af27062d2907d8b9497b257ced1ead0d5">PanelY</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">親の座標系でのパネルのY座標を取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a44376ee25d40cd347b48b33fecfd3321"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::ScrollPanel::PanelWidth" ref="a44376ee25d40cd347b48b33fecfd3321" args="" -->
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.html#a44376ee25d40cd347b48b33fecfd3321">PanelWidth</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">パネルの幅を取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4bd35ff9ef5e4e22646f54cd00113a2c"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::ScrollPanel::PanelHeight" ref="a4bd35ff9ef5e4e22646f54cd00113a2c" args="" -->
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.html#a4bd35ff9ef5e4e22646f54cd00113a2c">PanelHeight</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">パネルの高さを取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12478a608684911a11510f751c792379"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::ScrollPanel::PanelColor" ref="a12478a608684911a11510f751c792379" args="" -->
+<a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1UIColor.html">UIColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.html#a12478a608684911a11510f751c792379">PanelColor</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">パネルの色を取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac4c8ba12f51491f5e114c7f582c643a4"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::ScrollPanel::ScrollBarVisibility" ref="ac4c8ba12f51491f5e114c7f582c643a4" args="" -->
+<a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1UI.html#a72952bd085f3b5cfa46218bed3a848f8">ScrollBarVisibility</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.html#ac4c8ba12f51491f5e114c7f582c643a4">ScrollBarVisibility</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">スクロールバーの見え方を取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a424fb08c44d62924024b4f17a29fae5d"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::ScrollPanel::HorizontalScroll" ref="a424fb08c44d62924024b4f17a29fae5d" args="" -->
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.html#a424fb08c44d62924024b4f17a29fae5d">HorizontalScroll</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">水平方向のスクロールをするかどうかを取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a86e7827915e7b2cc7fd7ec6f489985ae"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::ScrollPanel::VerticalScroll" ref="a86e7827915e7b2cc7fd7ec6f489985ae" args="" -->
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.html#a86e7827915e7b2cc7fd7ec6f489985ae">VerticalScroll</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">垂直方向のスクロールをするかどうかを取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">override IEnumerable&lt; <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.html#aa133bdda01c1cb0b08ff094989582df8">Children</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">子ウィジェットを取得する。  <a href="#aa133bdda01c1cb0b08ff094989582df8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa8e403727c8a51b9a4ef15a31e1eef46"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::ScrollPanel::Focusable" ref="aa8e403727c8a51b9a4ef15a31e1eef46" args="" -->
+override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.html#aa8e403727c8a51b9a4ef15a31e1eef46">Focusable</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">フォーカスが当たるかどうかを取得・設定する <br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>説明</h2>
+<div class="textblock"><p>スクロール可能な領域を持つコンテナウィジェット </p>
+</div><hr/><h2>メソッド</h2>
+<a class="anchor" id="a390da2cfa7428b13584bbfe96e598286"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::ScrollPanel::AddChildFirst" ref="a390da2cfa7428b13584bbfe96e598286" args="(Widget child)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void AddChildFirst </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>&#160;</td>
+          <td class="paramname"><em>child</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>子ウィジェットを先頭に追加する。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td>追加する子ウィジェット</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>既に追加されている場合は先頭に移動する。 </p>
+
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ContainerWidget.html#a2e0fcc7c6b36a5c70ae50de56cde5d80">ContainerWidget</a>を再定義しています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ac08c7ec5c103d13a2c82620baac05247"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::ScrollPanel::AddChildLast" ref="ac08c7ec5c103d13a2c82620baac05247" args="(Widget child)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void AddChildLast </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>&#160;</td>
+          <td class="paramname"><em>child</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>子ウィジェットを末尾に追加する。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td>追加する子ウィジェット</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>既に追加されている場合は末尾に移動する。 </p>
+
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ContainerWidget.html#a36440387c91892f0b65f8ecdb7ad9a67">ContainerWidget</a>を再定義しています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a3dabdb24fc56148b87b54e054da95816"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::ScrollPanel::InsertChildAfter" ref="a3dabdb24fc56148b87b54e054da95816" args="(Widget child, Widget prevChild)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void InsertChildAfter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>&#160;</td>
+          <td class="paramname"><em>child</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>&#160;</td>
+          <td class="paramname"><em>prevChild</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>指定した子ウィジェットの直後に挿入する。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td>挿入する子ウィジェット</td></tr>
+    <tr><td class="paramname">prevChild</td><td>挿入する子ウィジェットの直前となる子ウィジェット</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>既に追加されている場合は指定した子ウィジェットの直後に移動する。 </p>
+
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ContainerWidget.html#abcf83a8798825d6386d3052d20fefbfd">ContainerWidget</a>を再定義しています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a811c74198ad10347ed4edc0fc8e20fe6"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::ScrollPanel::InsertChildBefore" ref="a811c74198ad10347ed4edc0fc8e20fe6" args="(Widget child, Widget nextChild)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void InsertChildBefore </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>&#160;</td>
+          <td class="paramname"><em>child</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>&#160;</td>
+          <td class="paramname"><em>nextChild</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>指定した子ウィジェットの直前に挿入する。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td>挿入する子ウィジェット</td></tr>
+    <tr><td class="paramname">nextChild</td><td>挿入する子ウィジェットの直後となる子ウィジェット</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>既に追加されている場合は指定した子ウィジェットの直前に移動する。 </p>
+
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ContainerWidget.html#ae610b581ca1b434adbb08dd5627ab9af">ContainerWidget</a>を再定義しています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a5d5b5b7076275c437fdb988a2c0bbc29"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::ScrollPanel::OnPreviewKeyEvent" ref="a5d5b5b7076275c437fdb988a2c0bbc29" args="(KeyEvent keyEvent)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">internal override void OnPreviewKeyEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1KeyEvent.html">KeyEvent</a>&#160;</td>
+          <td class="paramname"><em>keyEvent</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>事前キーイベントのハンドラ </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">keyEvent</td><td>キーイベント</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a05b9bbd469ddb38469b50b3e386df8f5">Widget</a>を再定義しています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a7c6ee38d499de41cb696bc07aa9acb31"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::ScrollPanel::OnTouchEvent" ref="a7c6ee38d499de41cb696bc07aa9acb31" args="(TouchEventCollection touchEvents)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">internal override void OnTouchEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1TouchEventCollection.html">TouchEventCollection</a>&#160;</td>
+          <td class="paramname"><em>touchEvents</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>タッチイベントハンドラ </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">touchEvents</td><td>タッチイベント</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#abd28ba62ef15bca7d0ac21b94d2e536d">Widget</a>を再定義しています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a6e215133d6ee42486ffbb7e88cdceb1c"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::ScrollPanel::OnUpdate" ref="a6e215133d6ee42486ffbb7e88cdceb1c" args="(float elapsedTime)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void OnUpdate </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>elapsedTime</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>更新処理 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">elapsedTime</td><td>前回のUpdateからの経過時間（ミリ秒）</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a0635f3ec717eab9930522f4b1feef401">Widget</a>を再定義しています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a92367a79e37cdac1691bc0d9584f9abf"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::ScrollPanel::RemoveChild" ref="a92367a79e37cdac1691bc0d9584f9abf" args="(Widget child)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void RemoveChild </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>&#160;</td>
+          <td class="paramname"><em>child</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>指定された子ウィジェットを削除する。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td>削除する子ウィジェット</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ContainerWidget.html#a6ec59edc5bd68f69f1c3f563a583bf46">ContainerWidget</a>を再定義しています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ae2d18c0b834600244593ae5b5e03ab32"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::ScrollPanel::ScrollTo" ref="ae2d18c0b834600244593ae5b5e03ab32" args="(float x, float y, bool withAnimation)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScrollTo </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>withAnimation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>指定した位置へスクロールする </p>
+<p>スクロールできない方向は無視されます。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>右上の内部パネルのX座標。PanelX と正負が反転した値となる。</td></tr>
+    <tr><td class="paramname">y</td><td>右上の内部パネルのY座標。PanelY と正負が反転した値となる。</td></tr>
+    <tr><td class="paramname">withAnimation</td><td>アニメーションするかどうか</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/><h2>プロパティ</h2>
+<a class="anchor" id="aa133bdda01c1cb0b08ff094989582df8"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::ScrollPanel::Children" ref="aa133bdda01c1cb0b08ff094989582df8" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override IEnumerable&lt;<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>&gt; Children<code> [get]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>子ウィジェットを取得する。 </p>
+<p>コレクションを反復処理する列挙子を返す。 </p>
+
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ContainerWidget.html#a0f7dc4f70a8e53150102a86ea22efc82">ContainerWidget</a>を再定義しています。</p>
+
+</div>
+</div>
+</div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><b>Sce</b>      </li>
+      <li class="navelem"><b>PlayStation</b>      </li>
+      <li class="navelem"><b>HighLevel</b>      </li>
+      <li class="navelem"><a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1UI.html">UI</a>      </li>
+      <li class="navelem"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.html">ScrollPanel</a>      </li>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

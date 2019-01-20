@@ -1,0 +1,350 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: レイアウトガイド</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('tool_layout_ja.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<h1>レイアウトガイド </h1>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><p>本章では、アプリケーションのレイアウトを効率よく作成するためのTipsを紹介します。</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#id2" id="id11">ガイド線</a><ul>
+<li><a class="reference internal" href="#id3" id="id12">ユーザー定義ガイド</a></li>
+<li><a class="reference internal" href="#id4" id="id13">スマートガイド</a></li>
+<li><a class="reference internal" href="#id5" id="id14">グリッド</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id6" id="id15">レイアウトアンカー機能</a></li>
+<li><a class="reference internal" href="#id7" id="id16">デバイスの把持方向に応じた画面レイアウト</a></li>
+<li><a class="reference internal" href="#id8" id="id17">プレビュー機能</a></li>
+<li><a class="reference internal" href="#id9" id="id18">カスタムウィジェットのレイアウト</a><ul>
+<li><a class="reference internal" href="#id10" id="id19">制限事項</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h1><a class="toc-backref" href="#id11">ガイド線</a></h1>
+<blockquote>
+UI Composerでは、ウィジェットを簡単に整列させるための機能としてガイド線とグリッド線を提供しています。
+ガイド線、グリッド線への吸着や表示/非表示は、メニューで設定可能です。また、ガイド線・グリッドの色設定、グリッド幅は、メニューの[ファイル]-[環境設定]で行うことができます。
+ガイド線には「ユーザー定義ガイド」「スマートガイド」の2種類があります。</blockquote>
+<div class="section" id="id3">
+<h2><a class="toc-backref" href="#id12">ユーザー定義ガイド</a></h2>
+<blockquote>
+<p>特定の座標にウィジェットを配置した場合に有効なガイド線で、レイアウトウィンドウのルーラーからマウスでドラッグし引き出し、自由に設定することができます。
+メニューからガイド線の追加、削除を行うことも可能です(図1)。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/composer/user_guide.png" src="image/uitoolkit/composer/user_guide.png" />
+<p class="caption"><em>図 1 ユーザー定義ガイド</em></p>
+</div>
+</blockquote>
+</div>
+<div class="section" id="id4">
+<h2><a class="toc-backref" href="#id13">スマートガイド</a></h2>
+<blockquote>
+<p>レイアウトキャンバスに配置されているウィジェットとマウスで操作しているウィジェットの整列を補助するためのガイド線です(図2)。</p>
+<p>配置されているウィジェットと操作しているウィジェットの上下左右の端、もしくは中央が揃った場合に表示されます。</p>
+<div align="center" class="figure">
+<img alt="image/interface_layout/tool_smart_guide.png" src="image/interface_layout/tool_smart_guide.png" />
+<p class="caption"><em>図 2 スマートガイド</em></p>
+</div>
+</blockquote>
+</div>
+<div class="section" id="id5">
+<h2><a class="toc-backref" href="#id14">グリッド</a></h2>
+<blockquote>
+<p>レイアウトキャンバス上に格子状に引かれた線がグリッド線です(図3)。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/composer/gridguide.png" src="image/uitoolkit/composer/gridguide.png" />
+<p class="caption"><em>図 3 グリッドガイド</em></p>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="section" id="id6">
+<h1><a class="toc-backref" href="#id15">レイアウトアンカー機能</a></h1>
+<blockquote>
+<p>UIToolkit で作成されたアプリケーションは解像度の異なるデバイス上で動作することが可能です。そのため、UI Composerでレイアウトした Scene のサイズと、実機で描画される際の Scene のサイズが異なる場合があります。</p>
+<p>Scene や Panel のサイズが変わった際に、UISystem はレイアウトアンカー( Anchor )の設定に基づいて Scene や Panel 内部のウィジェットをレイアウトします。Anchor では、上下左右のマージンを固定にするかどうか、幅・高さを自動的にリサイズするかどうかを設定することが可能です。UI Composer を利用すると、Anchor を視覚的に設定することが可能です(図4)。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/composer/anochorflag_customizer.png" src="image/uitoolkit/composer/anochorflag_customizer.png" style="width: 400px;" />
+<p class="caption"><em>図 4 Anchor Customizer</em></p>
+</div>
+<p>Anchor Customizerは、6つのトグルスイッチ群になっています。ウィジェットの親ウィジェットがリサイズされたときの挙動は、Previewer にアニメーションで表示されます。アニメーションは、マウスカーソルが Anchor Customizer の上にあるときにのみ再生されます。</p>
+<p>UI Composer で設定した内容と、出力されるソースコードで指定される Anchor の値の関係は下図のようになります。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/composer/layout_anchor.png" src="image/uitoolkit/composer/layout_anchor.png" style="width: 800px;" />
+<p class="caption"><em>図 5 レイアウトアンカーの設定と、ウィジェットがオートリサイズされた結果</em></p>
+</div>
+<p>ちなみに、Panelクラスのレイアウトを行っている場合(レイアウトキャンバスの表示がPanelである場合)は、レイアウトのルートとなるPanelのレイアウトアンカーを設定することはできません(別のレイアウトキャンバス上にレイアウトする際は可能です)。インスタンス化するタイミングで適切なレイアウトアンカーを設定するようにして下さい。</p>
+</blockquote>
+</div>
+<div class="section" id="id7">
+<h1><a class="toc-backref" href="#id16">デバイスの把持方向に応じた画面レイアウト</a></h1>
+<blockquote>
+<p>デバイスの把持方向によって異なる画面レイアウトを指定することが可能です。</p>
+<p>メニューの[表示]-[キャンバスの向き]を選択すると、レイアウトキャンバスの方向が切り替わります(図6)。</p>
+<div align="center" class="figure">
+<img alt="image/interface_layout/tool_change_orientation.png" src="image/interface_layout/tool_change_orientation.png" />
+<p class="caption"><em>図 6 レイアウトキャンバスの方向切替</em></p>
+</div>
+<p>ウィジェットはレイアウトキャンバスの方向毎に <em>それぞれ位置・サイズなどのプロパティを指定できる</em> ようになっています。つまりデバイスの向きを縦にした場合と横にした場合のそれぞれの状態に対して画面のレイアウトを行うことが可能です。</p>
+<p>出力されるソースコードには、画面レイアウトを切り替えるメソッドが生成されます(下記ソースコード参照)。デバイスの把持方向が変わったタイミングなどでそのメソッドを呼び出すことで、適切なレイアウトを指定することが可能です。</p>
+<p>把持方向に合わせて初期化することができ、指定しない場合は、水平方向のレイアウトとなります。</p>
+<blockquote>
+<div class="highlight"><pre><span class="k">partial</span> <span class="k">class</span> <span class="nc">MyScene</span>
+<span class="p">{</span>
+    <span class="c1">// ...</span>
+
+    <span class="k">private</span> <span class="k">void</span> <span class="nf">InitializeWidget</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">InitializeWidget</span><span class="p">(</span><span class="n">LayoutOrientation</span><span class="p">.</span><span class="n">Horizontal</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">private</span> <span class="k">void</span> <span class="nf">InitializeWidget</span><span class="p">(</span><span class="n">LayoutOrientation</span> <span class="n">orientation</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// create instance</span>
+
+        <span class="n">SetWidgetLayout</span><span class="p">(</span><span class="n">orientation</span><span class="p">);</span>
+
+        <span class="c1">// set property</span>
+
+        <span class="c1">// update language</span>
+    <span class="p">}</span>
+
+    <span class="k">private</span> <span class="n">LayoutOrientation</span> <span class="n">_currentLayoutOrientation</span><span class="p">;</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">SetWidgetLayout</span><span class="p">(</span><span class="n">LayoutOrientation</span> <span class="n">orientation</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">switch</span> <span class="p">(</span><span class="n">orientation</span><span class="p">)</span>
+        <span class="p">{</span>
+        <span class="k">case</span> <span class="n">LayoutOrientation</span><span class="p">.</span><span class="n">Vertical</span><span class="p">:</span>
+            <span class="k">this</span><span class="p">.</span><span class="n">DesignWidth</span> <span class="p">=</span> <span class="m">400</span><span class="p">;</span>
+            <span class="k">this</span><span class="p">.</span><span class="n">DesignHeight</span> <span class="p">=</span> <span class="m">600</span><span class="p">;</span>
+
+            <span class="n">sceneBackgroundPanel</span><span class="p">.</span><span class="n">SetPosition</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">);</span>
+            <span class="n">sceneBackgroundPanel</span><span class="p">.</span><span class="n">SetSize</span><span class="p">(</span><span class="m">400</span><span class="p">,</span> <span class="m">600</span><span class="p">);</span>
+            <span class="n">sceneBackgroundPanel</span><span class="p">.</span><span class="n">Anchors</span> <span class="p">=</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Top</span> <span class="p">|</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Bottom</span> <span class="p">|</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Left</span> <span class="p">|</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Right</span><span class="p">;</span>
+            <span class="n">sceneBackgroundPanel</span><span class="p">.</span><span class="n">Visible</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+
+            <span class="n">ImageBox_1</span><span class="p">.</span><span class="n">SetPosition</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">10</span><span class="p">);</span>
+            <span class="n">ImageBox_1</span><span class="p">.</span><span class="n">SetSize</span><span class="p">(</span><span class="m">400</span><span class="p">,</span> <span class="m">264</span><span class="p">);</span>
+            <span class="n">ImageBox_1</span><span class="p">.</span><span class="n">Anchors</span> <span class="p">=</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Top</span> <span class="p">|</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Height</span> <span class="p">|</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Left</span> <span class="p">|</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Width</span><span class="p">;</span>
+            <span class="n">ImageBox_1</span><span class="p">.</span><span class="n">Visible</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+
+            <span class="n">Label_3</span><span class="p">.</span><span class="n">SetPosition</span><span class="p">(</span><span class="m">23</span><span class="p">,</span> <span class="m">282</span><span class="p">);</span>
+            <span class="n">Label_3</span><span class="p">.</span><span class="n">SetSize</span><span class="p">(</span><span class="m">353</span><span class="p">,</span> <span class="m">268</span><span class="p">);</span>
+            <span class="n">Label_3</span><span class="p">.</span><span class="n">Anchors</span> <span class="p">=</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Top</span> <span class="p">|</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Height</span> <span class="p">|</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Left</span> <span class="p">|</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Width</span><span class="p">;</span>
+            <span class="n">Label_3</span><span class="p">.</span><span class="n">Visible</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+
+            <span class="k">break</span><span class="p">;</span>
+
+        <span class="k">default</span><span class="p">:</span>
+            <span class="k">this</span><span class="p">.</span><span class="n">DesignWidth</span> <span class="p">=</span> <span class="m">600</span><span class="p">;</span>
+            <span class="k">this</span><span class="p">.</span><span class="n">DesignHeight</span> <span class="p">=</span> <span class="m">400</span><span class="p">;</span>
+
+            <span class="n">sceneBackgroundPanel</span><span class="p">.</span><span class="n">SetPosition</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">);</span>
+            <span class="n">sceneBackgroundPanel</span><span class="p">.</span><span class="n">SetSize</span><span class="p">(</span><span class="m">600</span><span class="p">,</span> <span class="m">400</span><span class="p">);</span>
+            <span class="n">sceneBackgroundPanel</span><span class="p">.</span><span class="n">Anchors</span> <span class="p">=</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Top</span> <span class="p">|</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Bottom</span> <span class="p">|</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Left</span> <span class="p">|</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Right</span><span class="p">;</span>
+            <span class="n">sceneBackgroundPanel</span><span class="p">.</span><span class="n">Visible</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+
+            <span class="n">ImageBox_1</span><span class="p">.</span><span class="n">SetPosition</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">);</span>
+            <span class="n">ImageBox_1</span><span class="p">.</span><span class="n">SetSize</span><span class="p">(</span><span class="m">600</span><span class="p">,</span> <span class="m">400</span><span class="p">);</span>
+            <span class="n">ImageBox_1</span><span class="p">.</span><span class="n">Anchors</span> <span class="p">=</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Top</span> <span class="p">|</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Height</span> <span class="p">|</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Left</span> <span class="p">|</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Width</span><span class="p">;</span>
+            <span class="n">ImageBox_1</span><span class="p">.</span><span class="n">Visible</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+
+            <span class="n">Label_3</span><span class="p">.</span><span class="n">SetPosition</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">398</span><span class="p">);</span>
+            <span class="n">Label_3</span><span class="p">.</span><span class="n">SetSize</span><span class="p">(</span><span class="m">214</span><span class="p">,</span> <span class="m">36</span><span class="p">);</span>
+            <span class="n">Label_3</span><span class="p">.</span><span class="n">Anchors</span> <span class="p">=</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Top</span> <span class="p">|</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Height</span> <span class="p">|</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Left</span> <span class="p">|</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Width</span><span class="p">;</span>
+            <span class="n">Label_3</span><span class="p">.</span><span class="n">Visible</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+
+            <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">_currentLayoutOrientation</span> <span class="p">=</span> <span class="n">orientation</span><span class="p">;</span>
+    <span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<p><strong>UIComposer で出力するコードは水平方向（LayoutOrientation.Horizontal）のレイアウトがデフォルトとなっています。</strong></p>
+<p><strong>もし、垂直方向（LayoutOrientation.Vertical）を起動時のデフォルトとしたい場合は、コンストラクタ内でInitializeWidget(LayoutOrientation)を使うように書き換える必要があります。</strong></p>
+</blockquote>
+</div>
+<div class="section" id="id8">
+<h1><a class="toc-backref" href="#id17">プレビュー機能</a></h1>
+<blockquote>
+<p>UIComposerではユーザーが作成したレイアウト（Scene、Panel、Dialog、ListPanelItem）をシミュレータ上でプレビューすることが可能です。</p>
+<p>プレビューはツール上で現在編集中のレイアウトに対して行われ、レイアウトのサイズと同じサイズで表示されます。</p>
+<p>プレビューで確認できるのは以下の項目です。Buttonを押したときの動作などはプレビューできません。ツールのプレビューで確認できるのは見た目に関する項目のみです。</p>
+<ul class="simple">
+<li>ツール上で配置したWidgetのレイアウト</li>
+<li>文字、画像等のツール上で設定したWidgetの状態</li>
+<li>SceneのTransitionやWidgetのEffectなどのアニメーション</li>
+</ul>
+<p>プレビューの利用手順</p>
+<ul class="simple">
+<li>メニューから[ファイル]-[プレビュー]を選択してください。</li>
+</ul>
+<p>プレビュー機能の特記事項</p>
+<ul class="simple">
+<li>ListPanel、GridListPanel、LiveListPanelは設定されたListPanelItemを自動で100個追加して表示します。</li>
+</ul>
+<p>プレビュー例</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/composer/preview_layout_livesphere.png" src="image/uitoolkit/composer/preview_layout_livesphere.png" style="width: 400px;" />
+<p class="caption"><em>図 7 レイアウトキャンバス上での表示 (LiveSphere)</em></p>
+</div>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/composer/preview_simulator_livesphere.png" src="image/uitoolkit/composer/preview_simulator_livesphere.png" style="width: 400px;" />
+<p class="caption"><em>図 8 プレビューでの表示 (LiveSphere)</em></p>
+</div>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/composer/preview_layout_gridlist.png" src="image/uitoolkit/composer/preview_layout_gridlist.png" style="width: 400px;" />
+<p class="caption"><em>図 9 レイアウトキャンバス上での表示 (GridListPanel)</em></p>
+</div>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/composer/preview_simulator_gridlist.png" src="image/uitoolkit/composer/preview_simulator_gridlist.png" style="width: 400px;" />
+<p class="caption"><em>図 10 プレビューでの表示 (GridListPanel)</em></p>
+</div>
+</blockquote>
+</div>
+<div class="section" id="id9">
+<h1><a class="toc-backref" href="#id18">カスタムウィジェットのレイアウト</a></h1>
+<blockquote>
+<p>標準のウィジェットには含まれないユーザーが独自に作成したウィジェットをレイアウトすることができます。</p>
+<p>他のウィジェットと同様に WidgetList ウインドウから CustomWidget をレイアウトキャンバス上にドラッグアンドドロップしてレイアウトします（図11）。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/composer/tool_layout_customwidget.png" src="image/uitoolkit/composer/tool_layout_customwidget.png" style="width: 400px;" />
+<p class="caption"><em>図 11 カスタムウィジェットのレイアウトキャンバスへの配置</em></p>
+</div>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/composer/tool_canvas_customwidget.png" src="image/uitoolkit/composer/tool_canvas_customwidget.png" style="width: 400px;" />
+<p class="caption"><em>図 12 カスタムウィジェットのレイアウトキャンバス上での表示</em></p>
+</div>
+<p>CustomWidget を選択すると、プロパティウィンドウに NameSpace プロパティと ClassName プロパティが表示されます。</p>
+<p>NameSpace プロパティを編集することで、CustomWidget のネームスペースを、ClassName プロパティを編集することで、CustomWidget のクラスを設定することができます（図13）。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/composer/tool_property_customwidget.png" src="image/uitoolkit/composer/tool_property_customwidget.png" style="width: 400px;" />
+<p class="caption"><em>図 13 カスタムウィジェットのプロパティ</em></p>
+</div>
+<p>ただし、レイアウトキャンバス上での表示には何も反映されません。</p>
+</blockquote>
+<div class="section" id="id10">
+<h2><a class="toc-backref" href="#id19">制限事項</a></h2>
+<blockquote>
+<ul class="simple">
+<li>CustomWidget は、ユーザーが独自に作成したウィジェットであるため、どのようなプロパティが存在するかは不明です。そのため、UIComposer では CustomWidget のプロパティについては編集を行うことはできません。</li>
+<li>CustomWidget は、ユーザーが独自に作成したウィジェットであるため、どのような表示をされるのかは不明です。そのため、UIComposer では CustomWidget のダミーを表示をすることでプレビューできるようにしています（図14）。</li>
+</ul>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/composer/tool_preview_customwidget.png" src="image/uitoolkit/composer/tool_preview_customwidget.png" style="width: 400px;" />
+<p class="caption"><em>図 14 カスタムウィジェットのプレビュー表示</em></p>
+</div>
+<ul class="simple">
+<li>「カスタムウィジェットのレイアウト」機能の追加に伴い、今までの「カスタムパネルのレイアウト」機能は廃止となりました。</li>
+</ul>
+</blockquote>
+<!--  -->
+</div>
+</div>
+ </div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

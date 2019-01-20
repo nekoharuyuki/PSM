@@ -1,0 +1,344 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: 2.画像を出す</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('programing_guide02_ja.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<h1>2.画像を出す </h1>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><p>この文書ではスクリーンに画像を表示する手順について説明します。</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#id2" id="id12">画像表示の手順</a><ul>
+<li><a class="reference internal" href="#id3" id="id13">画像ファイルの登録</a></li>
+<li><a class="reference internal" href="#id4" id="id14">シェーダープログラムの登録</a></li>
+<li><a class="reference internal" href="#id5" id="id15">テクスチャの生成とシェーダープログラムの初期化</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id6" id="id16">頂点バッファの作成</a><ul>
+<li><a class="reference internal" href="#id7" id="id17">頂点バッファの設定</a></li>
+<li><a class="reference internal" href="#id8" id="id18">座標系の変換</a></li>
+<li><a class="reference internal" href="#id9" id="id19">ポリゴンの描画を実行</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id10" id="id20">簡易版スプライトクラスを定義する</a></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h1><a class="toc-backref" href="#id12">画像表示の手順</a></h1>
+<p>次は画像を表示してみましょう。
+フォルダー Tutorial/Sample02_01/のソリューションを開いてください。</p>
+<p>画像を表示するには以下の手順を踏みます。</p>
+<div class="section" id="id3">
+<h2><a class="toc-backref" href="#id13">画像ファイルの登録</a></h2>
+<p>表示したい画像ファイルをプロジェクトに登録します。</p>
+<ol class="arabic">
+<li><p class="first">PSM Studioのソリューションエクスプローラで、resourcesフォルダーを選択し、右クリック - [追加] - [ファイルを追加] で表示したい画像ファイルを選択します。</p>
+</li>
+<li><dl class="first docutils">
+<dt>ファイルを登録したら、右クリック - [ビルドアクション] で [Content]を選択しておきます(PNGの場合、デフォルトでContentが設定されます）。</dt>
+<dd><ul class="first simple">
+<li>ビルドアクションが「None」のままだと実機 (PS Vita, Androidデバイス) に転送されませんのでご注意ください。</li>
+<li>画像ファイルはPNG、BMP、JPEG、GIF形式に対応しています。PNG形式は透明色に対応しているので、抜き色を使いたい場合は、この形式を使うと良いでしょう。</li>
+<li>フォルダーはresourcesでなく、任意の場所でも構いません。</li>
+</ul>
+<img alt="image/program_guide/add_png.png" class="last" src="image/program_guide/add_png.png" />
+</dd>
+</dl>
+</li>
+</ol>
+<p>詳しくは「ビルドアクションについて」をご覧ください。</p>
+</div>
+<div class="section" id="id4">
+<h2><a class="toc-backref" href="#id14">シェーダープログラムの登録</a></h2>
+<p>シェーダープログラムをプロジェクトに登録します。</p>
+<ul>
+<li><p class="first">ここでは頂点シェーダーSprite.vcgとフラグメントシェーダーSprite.fcgをプロジェクトに登録しています。</p>
+</li>
+<li><p class="first">ファイルを登録したら、右クリック - [ビルドアクション] で ShaderProgramを設定しておきます。ビルドアクションにShaderProgramを設定しておくと、ビルド時にSprite.vcgとSprite.fcgをバイナリ形式のSprite.cgxファイルに変換してくれます。</p>
+<blockquote>
+<img alt="image/program_guide/add_shader.png" src="image/program_guide/add_shader.png" />
+</blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h2><a class="toc-backref" href="#id15">テクスチャの生成とシェーダープログラムの初期化</a></h2>
+<p>画像ファイルとシェーダープログラムをプロジェクトに登録したら、プログラムで以下のように初期化処理を行ってください。</p>
+<blockquote>
+Sample02_01/AppMain.cs</blockquote>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Initialize</span> <span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">graphics</span> <span class="p">=</span> <span class="k">new</span> <span class="n">GraphicsContext</span><span class="p">();</span>
+    <span class="p">...</span>
+
+    <span class="n">texture</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Texture2D</span><span class="p">(</span><span class="s">&quot;/Application/resources/Player.png&quot;</span><span class="p">,</span> <span class="k">false</span><span class="p">);</span>
+    <span class="n">shaderProgram</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ShaderProgram</span><span class="p">(</span><span class="s">&quot;/Application/shaders/sprite.cgx&quot;</span><span class="p">);</span>
+
+    <span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+<p><strong>Texture2D</strong></p>
+<p>texture = new Texture2D(&quot;/Application/resources/Player.png&quot;, false);では、テクスチャを作成しています。
+「テクスチャを作成する」とはビデオメモリ上に画像のイメージを作成することを意味します。</p>
+<p><strong>ShaderProgram</strong></p>
+<p>プログラムでシェーダープログラムを読むときは、生成されたSprite.cgxを指定します。</p>
+<p>shaderProgram = new ShaderProgram(&quot;/Application/shaders/sprite.cgx&quot;);では引数で指定したシェーダープログラムを実行時コンパイルします。
+あとはshaderProgramからメソッドを使って処理を行うことができます。</p>
+</div>
+</div>
+<div class="section" id="id6">
+<h1><a class="toc-backref" href="#id16">頂点バッファの作成</a></h1>
+<p>次は、テクスチャを描画するための頂点バッファを設定します。
+ここでは次のように3角のポリゴンを2枚書いて4角形にすることにします。</p>
+<blockquote>
+<img alt="image/program_guide/PlayerDivided.png" src="image/program_guide/PlayerDivided.png" />
+<p>ソースコードを見ていきましょう。</p>
+<p>頂点座標、テクスチャ座標、頂点色、インデックスを保持する領域を4頂点ぶん用意します。</p>
+<ul class="simple">
+<li>頂点座標はx,y,z の3つが必要なので、floatの配列で12個確保しています。zは奥行きを指定するのに使用します。</li>
+<li>テクスチャ座標はu,vの2つが必要なので、floatの配列で8個確保します。</li>
+<li>頂点の色は、r,g,b,aの4つが必要なので、floatの配列で16個確保します。</li>
+<li>インデックスは4つ確保します。インデックスは頂点描画の順番を指定するのに使用します。</li>
+</ul>
+<p>AppMain.cs</p>
+</blockquote>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">AppMain</span>
+<span class="p">{</span>
+    <span class="p">...</span>
+    <span class="k">static</span> <span class="kt">float</span><span class="p">[]</span> <span class="n">vertices</span><span class="p">=</span><span class="k">new</span> <span class="kt">float</span><span class="p">[</span><span class="m">12</span><span class="p">];</span>
+
+    <span class="k">static</span> <span class="kt">float</span><span class="p">[]</span> <span class="n">texcoords</span> <span class="p">=</span> <span class="p">{</span>
+        <span class="m">0.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">,</span> <span class="c1">// 0 top left.</span>
+        <span class="m">0.0f</span><span class="p">,</span> <span class="m">1.0f</span><span class="p">,</span> <span class="c1">// 1 bottom left.</span>
+        <span class="m">1.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">,</span> <span class="c1">// 2 top right.</span>
+        <span class="m">1.0f</span><span class="p">,</span> <span class="m">1.0f</span><span class="p">,</span> <span class="c1">// 3 bottom right.</span>
+    <span class="p">};</span>
+
+    <span class="k">static</span> <span class="kt">float</span><span class="p">[]</span> <span class="n">colors</span> <span class="p">=</span> <span class="p">{</span>
+        <span class="m">1.0f</span><span class="p">,</span>   <span class="m">1.0f</span><span class="p">,</span>   <span class="m">1.0f</span><span class="p">,</span>   <span class="m">1.0f</span><span class="p">,</span>   <span class="c1">// 0 top left.</span>
+        <span class="m">1.0f</span><span class="p">,</span>   <span class="m">1.0f</span><span class="p">,</span>   <span class="m">1.0f</span><span class="p">,</span>   <span class="m">1.0f</span><span class="p">,</span>   <span class="c1">// 1 bottom left.</span>
+        <span class="m">1.0f</span><span class="p">,</span>   <span class="m">1.0f</span><span class="p">,</span>   <span class="m">1.0f</span><span class="p">,</span>   <span class="m">1.0f</span><span class="p">,</span>   <span class="c1">// 2 top right.</span>
+        <span class="m">1.0f</span><span class="p">,</span>   <span class="m">1.0f</span><span class="p">,</span>   <span class="m">1.0f</span><span class="p">,</span>   <span class="m">1.0f</span><span class="p">,</span>   <span class="c1">// 3 bottom right.</span>
+    <span class="p">};</span>
+
+    <span class="k">const</span> <span class="kt">int</span> <span class="n">indexSize</span> <span class="p">=</span> <span class="m">4</span><span class="p">;</span>
+    <span class="k">static</span> <span class="kt">ushort</span><span class="p">[]</span> <span class="n">indices</span><span class="p">;</span>
+    <span class="p">...</span>
+</pre></div>
+<!-- end-of-code-block -->
+<p>頂点の座標はInitialize()で画像ファイルを読み込んだ後、設定します。</p>
+<blockquote>
+AppMain.cs</blockquote>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Initialize</span> <span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">graphics</span> <span class="p">=</span> <span class="k">new</span> <span class="n">GraphicsContext</span><span class="p">();</span>
+    <span class="n">ImageRect</span> <span class="n">rectScreen</span> <span class="p">=</span> <span class="n">graphics</span><span class="p">.</span><span class="n">Screen</span><span class="p">.</span><span class="n">Rectangle</span><span class="p">;</span>
+
+    <span class="n">texture</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Texture2D</span><span class="p">(</span><span class="s">&quot;/Application/resources/Player.png&quot;</span><span class="p">,</span> <span class="k">false</span><span class="p">);</span>
+    <span class="n">shaderProgram</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ShaderProgram</span><span class="p">(</span><span class="s">&quot;/Application/shaders/Sprite.cgx&quot;</span><span class="p">);</span>
+    <span class="n">shaderProgram</span><span class="p">.</span><span class="n">SetUniformBinding</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="s">&quot;u_ScreenMatrix&quot;</span><span class="p">);</span>
+
+    <span class="n">vertices</span><span class="p">[</span><span class="m">0</span><span class="p">]=</span><span class="m">0.0f</span><span class="p">;</span>   <span class="c1">// x0</span>
+    <span class="n">vertices</span><span class="p">[</span><span class="m">1</span><span class="p">]=</span><span class="m">0.0f</span><span class="p">;</span>   <span class="c1">// y0</span>
+    <span class="n">vertices</span><span class="p">[</span><span class="m">2</span><span class="p">]=</span><span class="m">0.0f</span><span class="p">;</span>   <span class="c1">// z0</span>
+
+    <span class="n">vertices</span><span class="p">[</span><span class="m">3</span><span class="p">]=</span><span class="m">0.0f</span><span class="p">;</span>   <span class="c1">// x1</span>
+    <span class="n">vertices</span><span class="p">[</span><span class="m">4</span><span class="p">]=</span><span class="n">texture</span><span class="p">.</span><span class="n">Height</span><span class="p">;</span> <span class="c1">// y1</span>
+    <span class="n">vertices</span><span class="p">[</span><span class="m">5</span><span class="p">]=</span><span class="m">0.0f</span><span class="p">;</span>   <span class="c1">// z1</span>
+
+    <span class="n">vertices</span><span class="p">[</span><span class="m">6</span><span class="p">]=</span><span class="n">texture</span><span class="p">.</span><span class="n">Width</span><span class="p">;</span>  <span class="c1">// x2</span>
+    <span class="n">vertices</span><span class="p">[</span><span class="m">7</span><span class="p">]=</span><span class="m">0.0f</span><span class="p">;</span>   <span class="c1">// y2</span>
+    <span class="n">vertices</span><span class="p">[</span><span class="m">8</span><span class="p">]=</span><span class="m">0.0f</span><span class="p">;</span>   <span class="c1">// z2</span>
+
+    <span class="n">vertices</span><span class="p">[</span><span class="m">9</span><span class="p">]=</span><span class="n">texture</span><span class="p">.</span><span class="n">Width</span><span class="p">;</span>  <span class="c1">// x3</span>
+    <span class="n">vertices</span><span class="p">[</span><span class="m">10</span><span class="p">]=</span><span class="n">texture</span><span class="p">.</span><span class="n">Height</span><span class="p">;</span>    <span class="c1">// y3</span>
+    <span class="n">vertices</span><span class="p">[</span><span class="m">11</span><span class="p">]=</span><span class="m">0.0f</span><span class="p">;</span>  <span class="c1">// z3</span>
+    <span class="p">...</span>
+</pre></div>
+<!-- end-of-code-block -->
+<div class="section" id="id7">
+<h2><a class="toc-backref" href="#id17">頂点バッファの設定</a></h2>
+<p>次に頂点バッファを設定します。VertexBuffer()の最初の引数で頂点のサイズ4を指定しています。</p>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Initialize</span> <span class="p">()</span>
+<span class="p">{</span>
+    <span class="p">...</span>
+    <span class="c1">//                                              vertex pos,               texture,       color</span>
+    <span class="n">vertexBuffer</span> <span class="p">=</span> <span class="k">new</span> <span class="n">VertexBuffer</span><span class="p">(</span><span class="m">4</span><span class="p">,</span> <span class="n">indexSize</span><span class="p">,</span> <span class="n">VertexFormat</span><span class="p">.</span><span class="n">Float3</span><span class="p">,</span> <span class="n">VertexFormat</span><span class="p">.</span><span class="n">Float2</span><span class="p">,</span> <span class="n">VertexFormat</span><span class="p">.</span><span class="n">Float4</span><span class="p">);</span>
+    <span class="p">...</span>
+    <span class="n">vertexBuffer</span><span class="p">.</span><span class="n">SetVertices</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="n">vertices</span><span class="p">);</span>
+    <span class="n">vertexBuffer</span><span class="p">.</span><span class="n">SetVertices</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="n">texcoords</span><span class="p">);</span>
+    <span class="n">vertexBuffer</span><span class="p">.</span><span class="n">SetVertices</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="n">colors</span><span class="p">);</span>
+
+    <span class="n">vertexBuffer</span><span class="p">.</span><span class="n">SetIndices</span><span class="p">(</span><span class="n">indices</span><span class="p">);</span>
+    <span class="n">graphics</span><span class="p">.</span><span class="n">SetVertexBuffer</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="n">vertexBuffer</span><span class="p">);</span>
+</pre></div>
+<!-- end-of-code-block -->
+<p>vertexBuffer.SetVertices()で頂点データを頂点バッファにコピーします。</p>
+<p>graphics.SetVertexBuffer()で描画に使用する頂点バッファを指定します。</p>
+</div>
+<div class="section" id="id8">
+<h2><a class="toc-backref" href="#id18">座標系の変換</a></h2>
+<p>次にピクセル単位の座標系を、デフォルトのスクリーンの座標系に変換する行列を設定します。</p>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Initialize</span> <span class="p">()</span>
+<span class="p">{</span>
+    <span class="p">...</span>
+    <span class="n">ImageRect</span> <span class="n">rectScreen</span> <span class="p">=</span> <span class="n">graphics</span><span class="p">.</span><span class="n">Screen</span><span class="p">.</span><span class="n">Rectangle</span><span class="p">;</span>
+    <span class="p">...</span>
+    <span class="n">screenMatrix</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Matrix4</span><span class="p">(</span>
+         <span class="m">2.0f</span><span class="p">/</span><span class="n">rectScreen</span><span class="p">.</span><span class="n">Width</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">,</span>       <span class="m">0.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">,</span>
+         <span class="m">0.0f</span><span class="p">,</span>   <span class="p">-</span><span class="m">2.0f</span><span class="p">/</span><span class="n">rectScreen</span><span class="p">.</span><span class="n">Height</span><span class="p">,</span>   <span class="m">0.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">,</span>
+         <span class="m">0.0f</span><span class="p">,</span>   <span class="m">0.0f</span><span class="p">,</span> <span class="m">1.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">,</span>
+         <span class="p">-</span><span class="m">1.0f</span><span class="p">,</span>  <span class="m">1.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">,</span> <span class="m">1.0f</span>
+    <span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+<p>ImageRect rectScreen = graphics.Screen.Rectangle;でスクリーンの大きさを取得します。</p>
+<p>２次元のゲームの座標系は、左上を原点とし、スクリーン下方向をY軸のプラスとするものが一般的です。
+かつ、ディスプレイ解像度の1ピクセルを1単位とします。</p>
+<p>それに対してデフォルトのスクリーンの座標系は、スクリーン中央を原点とし、スクリーン右側を1.0、左側を-1.0、上側を1.0、下側を-1.0、とします。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/program_guide/OpenGL_coordinate.png" src="image/program_guide/OpenGL_coordinate.png" />
+<p class="caption"><strong>2Dゲームの座標系(左)とスクリーンの座標系(右)</strong></p>
+</div>
+</blockquote>
+<p>そのため２次元のゲームの座標系（以下、ピクセルの座標系）で指定したポリゴンをスクリーンで表示するには、頂点をスクリーンの座標系に変換しなければなりません。</p>
+<p>Matrix4()で設定されている値は、この変換を行うためのものです。</p>
+</div>
+<div class="section" id="id9">
+<h2><a class="toc-backref" href="#id19">ポリゴンの描画を実行</a></h2>
+<p>各要素を指定したら、あとは描画命令を実行します。</p>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Render</span> <span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">graphics</span><span class="p">.</span><span class="n">Clear</span><span class="p">();</span>
+
+    <span class="n">graphics</span><span class="p">.</span><span class="n">SetShaderProgram</span><span class="p">(</span><span class="n">shaderProgram</span><span class="p">);</span>
+    <span class="n">graphics</span><span class="p">.</span><span class="n">SetTexture</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="n">texture</span><span class="p">);</span>
+    <span class="n">shaderProgram</span><span class="p">.</span><span class="n">SetUniformValue</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="k">ref</span> <span class="n">screenMatrix</span><span class="p">);</span>
+
+    <span class="n">graphics</span><span class="p">.</span><span class="n">DrawArrays</span><span class="p">(</span><span class="n">DrawMode</span><span class="p">.</span><span class="n">TriangleStrip</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="n">indexSize</span><span class="p">);</span>
+
+    <span class="n">graphics</span><span class="p">.</span><span class="n">SwapBuffers</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+<p>DrawArrays()が描画実行の関数です。</p>
+<p>実行すると、スクリーンに画像が表示されます。</p>
+<blockquote>
+<img alt="image/program_guide/sample02.JPG" src="image/program_guide/sample02.JPG" />
+</blockquote>
+</div>
+</div>
+<div class="section" id="id10">
+<h1><a class="toc-backref" href="#id20">簡易版スプライトクラスを定義する</a></h1>
+<p>この章で使った画像表示のコードをクラスとして再利用できるようにしておきましょう。
+クラスとして定義したものをTutoLib/SimpleSprite.csに記述しています。</p>
+<p>※このSimpleSpriteクラスはプログラミングガイドの説明のためにつくった簡易的なもので、描画に最適な処理にはなっていません。
+高速に描画する場合、 <a class="reference external" href="./efficient_rendering_ja.html">スプライトの効率的な描画について</a> をご参照ください。</p>
+<blockquote>
+</blockquote>
+</div>
+ </div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

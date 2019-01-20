@@ -1,0 +1,447 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: 構成</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('annotated.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<h1>構成</h1>  </div>
+</div>
+<div class="contents">
+<div class="textblock">クラス、構造体、共用体、インタフェースの説明です。</div><table>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Services_1_1AccountInformation.html">AccountInformation</a></td><td class="indexvalue">アカウント情報をあらわす static クラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Environment_1_1Shell_1_1Action.html">Shell.Action</a></td><td class="indexvalue">システム機能の呼び出し内容を表す構造体 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1ActionBase.html">ActionBase</a></td><td class="indexvalue">全てのアクションの基底クラス。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1ActionManager.html">ActionManager</a></td><td class="indexvalue"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1ActionManager.html" title="ActionManager は Node のアクションを管理するシングルトンオブジェクトです。 メインの Update ループは Director.Update() で呼び出されます。...">ActionManager</a> は <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html" title="ノードは全てのシーングラフノードの基底クラスです。標準的な2D変換行列、子のリスト、親へのハンドラを持ちます。ノードは多くとも1つの親をもつことができます。">Node</a> のアクションを管理するシングルトンオブジェクトです。 メインの Update ループは <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Director.html#aec0783b5a136e042adcc47bae4fe5291" title="メインのステップ関数です。1フレームに1度呼び出す必要があります。">Director.Update()</a> で呼び出されます。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1ActionTweenGeneric-g.html">ActionTweenGeneric&lt; T &gt;</a></td><td class="indexvalue">汎用的な補間アクションの基底クラス。set/get 関数をセットします。 抽象クラス。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1ActionTweenGenericVector2.html">ActionTweenGenericVector2</a></td><td class="indexvalue"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1ActionTweenGenericVector2.html" title="ActionTweenGenericVector2 はスタート値からターゲット値に移行する、シンプルなwiseブレンドを行います。">ActionTweenGenericVector2</a> はスタート値からターゲット値に移行する、シンプルなwiseブレンドを行います。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1ActionTweenGenericVector2Rotation.html">ActionTweenGenericVector2Rotation</a></td><td class="indexvalue"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1ActionTweenGenericVector2Rotation.html" title="ActionTweenGenericVector2Rotation は単位ベクトルを補間します。単位ベクトルは回転で補間します。">ActionTweenGenericVector2Rotation</a> は単位ベクトルを補間します。単位ベクトルは回転で補間します。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1ActionTweenGenericVector2Scale.html">ActionTweenGenericVector2Scale</a></td><td class="indexvalue"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1ActionTweenGenericVector2Scale.html" title="ActionTweenGenericVector2Scale は ActionTweenGenericVector2 に似ていますが、 スケール値 (乗法) で実行します。">ActionTweenGenericVector2Scale</a> は <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1ActionTweenGenericVector2.html" title="ActionTweenGenericVector2 はスタート値からターゲット値に移行する、シンプルなwiseブレンドを行います。">ActionTweenGenericVector2</a> に似ていますが、 スケール値 (乗法) で実行します。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1ActionTweenGenericVector4.html">ActionTweenGenericVector4</a></td><td class="indexvalue"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1ActionTweenGenericVector4.html" title="ActionTweenGenericVector4 はスタート値からターゲット値に移行する、シンプルなwiseブレンドを行います。">ActionTweenGenericVector4</a> はスタート値からターゲット値に移行する、シンプルなwiseブレンドを行います。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1ActionWithDuration.html">ActionWithDuration</a></td><td class="indexvalue">有限の期間を持つアクションの基底クラス。 抽象クラス。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1AnimationImageBox.html">AnimationImageBox</a></td><td class="indexvalue">画像切り替えによるアニメーションの表示ウィジェット </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1AnimationUtility.html">AnimationUtility</a></td><td class="indexvalue">アニメーション用のユーティリティ </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1DrawHelpers_1_1ArrowParams.html">DrawHelpers.ArrowParams</a></td><td class="indexvalue">DrawArrow に渡される矢印のパラメータ。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Model_1_1BasicArrays.html">BasicArrays</a></td><td class="indexvalue">モデルの頂点配列を表すクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Model_1_1BasicBone.html">BasicBone</a></td><td class="indexvalue">モデルのボーンを表すクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Model_1_1BasicFCurve.html">BasicFCurve</a></td><td class="indexvalue">モデルの関数カーブを表すクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Model_1_1BasicLayer.html">BasicLayer</a></td><td class="indexvalue">モデルのレイヤーを表すクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Model_1_1BasicMaterial.html">BasicMaterial</a></td><td class="indexvalue">モデルのマテリアルを表すクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Model_1_1BasicMesh.html">BasicMesh</a></td><td class="indexvalue">モデルのメッシュを表すクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Model_1_1BasicModel.html">BasicModel</a></td><td class="indexvalue">モデルを表すクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Model_1_1BasicMotion.html">BasicMotion</a></td><td class="indexvalue">モデルのモーションを表すクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Model_1_1BasicParameters.html">BasicParameters</a></td><td class="indexvalue">基本プログラムのパラメータを表すクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Model_1_1BasicPart.html">BasicPart</a></td><td class="indexvalue">モデルのパートを表すクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Model_1_1BasicProgram.html">BasicProgram</a></td><td class="indexvalue">基本プログラムを表すクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Model_1_1BasicProgramContainer.html">BasicProgramContainer</a></td><td class="indexvalue">プログラムコンテナを表すクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Model_1_1BasicTexture.html">BasicTexture</a></td><td class="indexvalue">モデルのテクスチャを表すクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Model_1_1BasicTextureContainer.html">BasicTextureContainer</a></td><td class="indexvalue">テクスチャコンテナを表すクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Audio_1_1Bgm.html">Bgm</a></td><td class="indexvalue">音楽データ </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Audio_1_1BgmPlayer.html">BgmPlayer</a></td><td class="indexvalue">音楽再生機能を提供するクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Graphics_1_1BlendFunc.html">BlendFunc</a></td><td class="indexvalue">アルファブレンド関数を表す構造体 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1BlendMode.html">BlendMode</a></td><td class="indexvalue"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1BlendMode.html" title="BlendMode はブレンドステート(BlendFunc+&#39;enabled&#39; bool)をラップし、扱いやすい名称として提供します。">BlendMode</a> はブレンドステート(BlendFunc+'enabled' bool)をラップし、扱いやすい名称として提供します。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Bounds2.html">Bounds2</a></td><td class="indexvalue">An axis aligned box class in 2D </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1BunjeeJumpEffect.html">BunjeeJumpEffect</a></td><td class="indexvalue">ウィジェットが上から落ちてきて少し跳ねて止まるエフェクト </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1BusyIndicator.html">BusyIndicator</a></td><td class="indexvalue">進行状況を表示するウィジェット </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Button.html">Button</a></td><td class="indexvalue">ボタンウィジェット </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Input2_1_1ButtonState.html">Input2.ButtonState</a></td><td class="indexvalue">ボタンのデータ構造体は Input.GamePad、Input.Touch、Keyboardなどのヘルパーラップで共有されます。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Byte2.html">Byte2</a></td><td class="indexvalue">Vector of 2 signed bytes </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Byte2N.html">Byte2N</a></td><td class="indexvalue">Vector of 2 normalized signed bytes </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Byte3.html">Byte3</a></td><td class="indexvalue">Vector of 3 signed bytes </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Byte3N.html">Byte3N</a></td><td class="indexvalue">Vector of 3 normalized signed bytes </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Byte4.html">Byte4</a></td><td class="indexvalue">Vector of 4 signed bytes </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Byte4N.html">Byte4N</a></td><td class="indexvalue">Vector of 4 normalized signed bytes </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1ByteN.html">ByteN</a></td><td class="indexvalue">Scalar normalized signed byte </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TextureInfo_1_1CachedTileData.html">TextureInfo.CachedTileData</a></td><td class="indexvalue">各タイルのキャッシュされたUV情報。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1CallFunc.html">CallFunc</a></td><td class="indexvalue">指定した関数を呼び出す、ワンショットアクション。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Device_1_1Camera.html">Camera</a></td><td class="indexvalue">カメラを表すクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Camera2D.html">Camera2D</a></td><td class="indexvalue">2Dビューの設定とナビゲーション。 行列のスタックとルーラーと軸の描画には <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1GraphicsContextAlpha.html" title="行列スタックと他の関数でSce.PlayStation.Core.Graphics.GraphicsContextを強化します。">GraphicsContextAlpha</a> と <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1DrawHelpers.html" title="2D/3Dの基本的な描画関数を提供します。このクラスは主にデバッグシェーダーを使った ImmediateMode のオブジェクトです。 パフォーマンスが良くないため、デバッグ以外の用途で DrawHel...">DrawHelpers</a> をお使いください。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Camera3D.html">Camera3D</a></td><td class="indexvalue">基本的な3Dカメラ。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Device_1_1CameraImportDialog.html">CameraImportDialog</a></td><td class="indexvalue">写真を撮影するコモンダイアログクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Device_1_1CameraInfo.html">CameraInfo</a></td><td class="indexvalue">カメラの詳細情報 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Device_1_1CameraSize.html">CameraSize</a></td><td class="indexvalue">カメラの画像の解像度 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1FontMap_1_1CharData.html">FontMap.CharData</a></td><td class="indexvalue">単一文字のUVデータ。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Imaging_1_1CharMetrics.html">CharMetrics</a></td><td class="indexvalue">文字ごとのメトリクス情報 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1CheckBox.html">CheckBox</a></td><td class="indexvalue">チェックボックスウィジェット </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Environment_1_1Clipboard.html">Clipboard</a></td><td class="indexvalue">クリップボードにアクセスするためのクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1ColorBuffer.html">ColorBuffer</a></td><td class="indexvalue">カラーバッファを表すクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Colors.html">Colors</a></td><td class="indexvalue">名前の付いた色の定数。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ContainerWidget.html">ContainerWidget</a></td><td class="indexvalue">コンテナ機能を持つウィジェット </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1ConvexPoly2.html">ConvexPoly2</a></td><td class="indexvalue">A convex polygon class in 2D </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1CrossFadeTransition.html">CrossFadeTransition</a></td><td class="indexvalue">クロスフェードトランジション </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Graphics_1_1CullFace.html">CullFace</a></td><td class="indexvalue">バックフェースカリングを表す構造体 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1CustomButtonImageSettings.html">CustomButtonImageSettings</a></td><td class="indexvalue">ボタンのカスタマイズ画像の設定情報 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1CustomCheckBoxImageSettings.html">CustomCheckBoxImageSettings</a></td><td class="indexvalue">カスタマイズ画像の設定情報 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1DatePicker.html">DatePicker</a></td><td class="indexvalue">日付を選択するためのウィジェット </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1DatePickerValueChangedEventArgs.html">DatePickerValueChangedEventArgs</a></td><td class="indexvalue"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1DatePicker.html" title="日付を選択するためのウィジェット">DatePicker</a> の値が変更されたときのイベント引数 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1DebugFlags.html">DebugFlags</a></td><td class="indexvalue">フラグのビットは Director.Instance.DebugFlags によって使用されます。 デフォルトでは、全てオフです。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1GraphicsContextAlpha_1_1DebugStats__.html">GraphicsContextAlpha.DebugStats_</a></td><td class="indexvalue">現時点では、DebugStats は DrawArrays の呼び出し回数のみ保持します。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1SpriteRenderer_1_1DefaultFontShader__.html">SpriteRenderer.DefaultFontShader_</a></td><td class="indexvalue">Fontのデフォルトのシェーダー。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1SpriteRenderer_1_1DefaultShader__.html">SpriteRenderer.DefaultShader_</a></td><td class="indexvalue">スプライトのデフォルトのシェーダー：色によって変調されたテクスチャ。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1DelayedExecutor.html">DelayedExecutor</a></td><td class="indexvalue">ある時間が経過した後に処理を行うエフェクト </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1DelayTime.html">DelayTime</a></td><td class="indexvalue">指定した期間ののち終了する、待機アクション。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1DepthBuffer.html">DepthBuffer</a></td><td class="indexvalue">デプスバッファを表すクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Graphics_1_1DepthFunc.html">DepthFunc</a></td><td class="indexvalue">デプステスト関数を表す構造体 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Dialog.html">Dialog</a></td><td class="indexvalue">モーダルダイアログ </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1DialogEventArgs.html">DialogEventArgs</a></td><td class="indexvalue">ダイアログイベント引数 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Director.html">Director</a></td><td class="indexvalue"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Director.html" title="Director はシーンスタックを管理し、Scheduler と ActionManager の update ループを呼び出すシングルトンです。 開発者自身が独自にメインループを実装する場合、開発者...">Director</a> はシーンスタックを管理し、Scheduler と <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1ActionManager.html" title="ActionManager は Node のアクションを管理するシングルトンオブジェクトです。 メインの Update ループは Director.Update() で呼び出されます。...">ActionManager</a> の update ループを呼び出すシングルトンです。 開発者自身が独自にメインループを実装する場合、開発者はUpdate / Render / PostSwap 関数をメインループの中で呼び出さなければなりません。 また <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Director.html" title="Director はシーンスタックを管理し、Scheduler と ActionManager の update ループを呼び出すシングルトンです。 開発者自身が独自にメインループを実装する場合、開発者...">Director</a> は、グラフィックスコンテキスト (GL) 、SpriteRenderer オブジェクト ( 主に内部的に利用されますが、開発者が直接使うこともできます )、 デバッグ情報を描画する DrawHelpers を保持します。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1DoubleTapEventArgs.html">DoubleTapEventArgs</a></td><td class="indexvalue">ダブルタップイベント引数 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1DoubleTapGestureDetector.html">DoubleTapGestureDetector</a></td><td class="indexvalue">ダブルタップ検出器 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1DragEventArgs.html">DragEventArgs</a></td><td class="indexvalue">ドラッグイベント引数 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1DragGestureDetector.html">DragGestureDetector</a></td><td class="indexvalue">ドラッグ検出器 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1DrawHelpers.html">DrawHelpers</a></td><td class="indexvalue">2D/3Dの基本的な描画関数を提供します。このクラスは主にデバッグシェーダーを使った <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1ImmediateMode-g.html" title="イミーディエイトモードの頂点配列は、ImmBegin()/ImmVertex()/ImmEnd()などのOpenGLスタイルのインターフェースを使い、どのフレームでも描画できます。">ImmediateMode</a> のオブジェクトです。 パフォーマンスが良くないため、デバッグ以外の用途で <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1DrawHelpers.html" title="2D/3Dの基本的な描画関数を提供します。このクラスは主にデバッグシェーダーを使った ImmediateMode のオブジェクトです。 パフォーマンスが良くないため、デバッグ以外の用途で DrawHel...">DrawHelpers</a> を使用することは推奨しません。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1EditableText.html">EditableText</a></td><td class="indexvalue">編集可能なテキストウィジェット </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Effect.html">Effect</a></td><td class="indexvalue">ウィジェットまたはエレメントに適用するアニメーションの基底クラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1EmbeddedDebugFontData.html">EmbeddedDebugFontData</a></td><td class="indexvalue">スクリーン用デバッグプリントのための、埋め込みフォントデータ。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1ParticleSystem_1_1EmitterParams.html">ParticleSystem.EmitterParams</a></td><td class="indexvalue">このクラスは、パーティクルの初期化に必要な全てのパラメータを再グループ化します。 ランダムの範囲を与えるため、多くの値は分散しています(-Var の接尾辞)。 分散が "相対"値（-RelVarの接尾辞）である場合、0,1の間の値が期待されています。 例: 0.2f は、作成時に対応する値は -+20でランダム化されることを意味します。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1FadeInEffect.html">FadeInEffect</a></td><td class="indexvalue">フェードインエフェクト </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1FadeOutEffect.html">FadeOutEffect</a></td><td class="indexvalue">フェードアウトエフェクト </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1FlickEventArgs.html">FlickEventArgs</a></td><td class="indexvalue">フリックイベント引数 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1FlickGestureDetector.html">FlickGestureDetector</a></td><td class="indexvalue">フリック検出器 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1FlipBoardEffect.html">FlipBoardEffect</a></td><td class="indexvalue">真ん中で折れるエフェクト </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1FlipBoardTransition.html">FlipBoardTransition</a></td><td class="indexvalue">真ん中で折れるトランジション </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1FMath.html">FMath</a></td><td class="indexvalue">Math wrapper and convenience functions </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1FocusChangedEventArgs.html">FocusChangedEventArgs</a></td><td class="indexvalue">FocusChangedイベント引数 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1FocusCustomSettings.html">FocusCustomSettings</a></td><td class="indexvalue">フォーカスのカスタム設定 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Imaging_1_1Font.html">Font</a></td><td class="indexvalue">フォント </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1FontMap.html">FontMap</a></td><td class="indexvalue">Fontオブジェクトと使用予定のすべての文字を含むテキストを指定して、フォントマップは、文字を格納したTexture2Dオブジェクトと対応するUVテーブルを作成します。このデータは、GameEngine2Dのさまざまなテキスト描画関数で使用されます。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Imaging_1_1FontMetrics.html">FontMetrics</a></td><td class="indexvalue">フォントのメトリクス情報 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1FrameBuffer.html">FrameBuffer</a></td><td class="indexvalue">フレームバッファを表すクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Device_1_1Camera_1_1FrameChangedEventArgs.html">Camera.FrameChangedEventArgs</a></td><td class="indexvalue">ストリームの画像のフレームが変化したときに発生するイベントで渡される引数クラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Frustum.html">Frustum</a></td><td class="indexvalue">Camera2DとCamera3Dによって使用される視錐台 (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Frustum.html" title="Camera2DとCamera3Dによって使用される視錐台 (Frustum) のオブジェクト。 透視変換に利用します。">Frustum</a>) のオブジェクト。 透視変換に利用します。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Input_1_1GamePad.html">GamePad</a></td><td class="indexvalue">ゲームパッドデバイスを表すクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Input2_1_1GamePad.html">Input2.GamePad</a></td><td class="indexvalue">Input.GamePad (button bits) をラップしたクラス。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Input_1_1GamePadData.html">GamePadData</a></td><td class="indexvalue">ゲームパッドのデータ </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Input2_1_1GamePadData.html">Input2.GamePadData</a></td><td class="indexvalue">Input.GamePadData をラップしたクラス。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1GestureDetector.html">GestureDetector</a></td><td class="indexvalue">ジェスチャ検出機構の基底クラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1GestureEventArgs.html">GestureEventArgs</a></td><td class="indexvalue">ジェスチャイベント引数の基底クラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Graphics_1_1GraphicsCaps.html">GraphicsCaps</a></td><td class="indexvalue">グラフィクス能力を表すクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1GraphicsContext.html">GraphicsContext</a></td><td class="indexvalue">グラフィクスコンテキストを表すクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1GraphicsContextAlpha.html">GraphicsContextAlpha</a></td><td class="indexvalue">行列スタックと他の関数でSce.PlayStation.Core.Graphics.GraphicsContextを強化します。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1GridListPanel.html">GridListPanel</a></td><td class="indexvalue">複数の行と列を持つリストウィジェット </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Half.html">Half</a></td><td class="indexvalue">Scalar half </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Half2.html">Half2</a></td><td class="indexvalue">Vector of 2 halfs </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Half3.html">Half3</a></td><td class="indexvalue">Vector of 3 halfs </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Half4.html">Half4</a></td><td class="indexvalue">Vector of 4 halfs </td></tr>
+  <tr><td class="indexkey"><a class="el" href="interfaceSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1ICamera.html">ICamera</a></td><td class="indexvalue"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Camera2D.html" title="2Dビューの設定とナビゲーション。 行列のスタックとルーラーと軸の描画には GraphicsContextAlpha と DrawHelpers をお使いください。">Camera2D</a> と <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Camera3D.html" title="基本的な3Dカメラ。">Camera3D</a> 用の共通インターフェース。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="interfaceSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1ICollisionBasics.html">ICollisionBasics</a></td><td class="indexvalue"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Bounds2.html" title="An axis aligned box class in 2D.">Bounds2</a>, <a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Sphere2.html" title="A sphere class in 2D.">Sphere2</a>, <a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1ConvexPoly2.html" title="A convex polygon class in 2D.">ConvexPoly2</a> の共通インターフェース。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="interfaceSce_1_1PlayStation_1_1Core_1_1Environment_1_1ICommonDialog.html">ICommonDialog</a></td><td class="indexvalue">コモンダイアログ共通のインターフェイス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Imaging_1_1Image.html">Image</a></td><td class="indexvalue">画像 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ImageAsset.html">ImageAsset</a></td><td class="indexvalue">画像アセットクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ImageBox.html">ImageBox</a></td><td class="indexvalue">画像を表示するウィジェット </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Imaging_1_1ImageColor.html">ImageColor</a></td><td class="indexvalue">画素の色 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Imaging_1_1ImagePosition.html">ImagePosition</a></td><td class="indexvalue">画像の中の座標 (左上原点) </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Imaging_1_1ImageRect.html">ImageRect</a></td><td class="indexvalue">画像の中の矩形領域 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Imaging_1_1ImageSize.html">ImageSize</a></td><td class="indexvalue">画像のサイズ </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1ImmediateMode-g.html">ImmediateMode&lt; T &gt;</a></td><td class="indexvalue">イミーディエイトモードの頂点配列は、ImmBegin()/ImmVertex()/ImmEnd()などのOpenGLスタイルのインターフェースを使い、どのフレームでも描画できます。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1ImmediateModeQuads-g.html">ImmediateModeQuads&lt; T &gt;</a></td><td class="indexvalue"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1ImmediateModeQuads-g.html" title="ImmediateModeQuads はクワッドの描画を扱うために、ImmediateModeをラップしています。 このクラスはSpriteRenderer や他の場所で使用されます。">ImmediateModeQuads</a> はクワッドの描画を扱うために、ImmediateModeをラップしています。 このクラスはSpriteRenderer や他の場所で使用されます。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Services_1_1InAppPurchaseDialog.html">InAppPurchaseDialog</a></td><td class="indexvalue">アプリ内課金を処理するためのダイアログをあらわすクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Services_1_1InAppPurchaseProduct.html">InAppPurchaseProduct</a></td><td class="indexvalue">アプリ内課金で購入可能なプロダクトをあらわすクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Services_1_1InAppPurchaseProductList.html">InAppPurchaseProductList</a></td><td class="indexvalue">アプリ内課金で購入可能なプロダクトのリストをあらわすクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Input2.html">Input2</a></td><td class="indexvalue">Sce.PlayStation.Core.Inputをラップしたクラス。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="interfaceSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1ParticleSystem_1_1IParticleShader.html">ParticleSystem.IParticleShader</a></td><td class="indexvalue"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1ParticleSystem.html" title="シンプルなパーティクルシステムエフェクト。">ParticleSystem</a> のシェーダーインターフェース。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="interfaceSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1SpriteRenderer_1_1ISpriteShader.html">SpriteRenderer.ISpriteShader</a></td><td class="indexvalue">開発者によって設定されるシェーダープログラムのインターフェース。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1JumpFlipEffect.html">JumpFlipEffect</a></td><td class="indexvalue">画面手前にジャンプし反転して切り替わるエフェクト </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1JumpFlipTransition.html">JumpFlipTransition</a></td><td class="indexvalue">画面手前にジャンプし反転して切り替わるトランジション </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1KeyEvent.html">KeyEvent</a></td><td class="indexvalue">キーイベント情報 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1KeyEventArgs.html">KeyEventArgs</a></td><td class="indexvalue">キーイベント引数 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Label.html">Label</a></td><td class="indexvalue">テキストのプリミティブを描画します。2つのタイプのフォントデータをサポートしています:</p>
+<ul>
+<li>SpriteRenderer に埋め込まれたデバッグフォント。</li>
+<li>FontMap オブジェクトを使ったもの。 </li>
+</ul>
+</td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Label.html">Label</a></td><td class="indexvalue">文字列を表示するウィジェット </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ListPanel.html">ListPanel</a></td><td class="indexvalue">複数の行を持つリストウィジェット </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ListPanelItem.html">ListPanelItem</a></td><td class="indexvalue">リストのアイテム用のコンテナウィジェット </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ListPanelItemSelectChangedEventArgs.html">ListPanelItemSelectChangedEventArgs</a></td><td class="indexvalue">リストアイテムが選択された場合に呼び出されるイベント引数 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ListSection.html">ListSection</a></td><td class="indexvalue">リストのセクション用のコンテナ部品 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ListSectionCollection.html">ListSectionCollection</a></td><td class="indexvalue">セクションのコレクション </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveFlipPanel.html">LiveFlipPanel</a></td><td class="indexvalue">イベントにより回転するコンテナウィジェット </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveJumpPanel.html">LiveJumpPanel</a></td><td class="indexvalue">子ウィジェットが画面手前にジャンプするコンテナウィジェット。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveListPanel.html">LiveListPanel</a></td><td class="indexvalue">アイテムが不規則な配置でスクロールするリストウィジェット </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveScrollPanel.html">LiveScrollPanel</a></td><td class="indexvalue">形状が歪みながらスクロールするコンテナウィジェット </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveSphere.html">LiveSphere</a></td><td class="indexvalue">球体型のウィジェット </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveSpringPanel.html">LiveSpringPanel</a></td><td class="indexvalue">加速度センサーやパネルの動きに応じて子ウィジェットが揺れるパネル </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS_1_1Local.html">TRS.Local</a></td><td class="indexvalue">エイリアス。一般的にCenteringに渡すために使用します。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Device_1_1Location.html">Location</a></td><td class="indexvalue">位置情報を表すクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Device_1_1LocationData.html">LocationData</a></td><td class="indexvalue">位置情報 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LongPressEventArgs.html">LongPressEventArgs</a></td><td class="indexvalue">ロングプレスイベント引数 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LongPressGestureDetector.html">LongPressGestureDetector</a></td><td class="indexvalue">ロングプレス検出器 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Math.html">Math</a></td><td class="indexvalue">数学/ベクトルライブラリ用に拡張した <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Math.html" title="数学/ベクトルライブラリ用に拡張した Math クラス。">Math</a> クラス。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Matrix3.html">Matrix3</a></td><td class="indexvalue">2Dを扱うための 3x3の行列。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Matrix4.html">Matrix4</a></td><td class="indexvalue">Matrix of 16 floats </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1MatrixStack.html">MatrixStack</a></td><td class="indexvalue">OpenGLに似た、シンプルな変換行列のスタックです。直交行列を扱うための工夫がなされています。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1MessageDialog.html">MessageDialog</a></td><td class="indexvalue">警告のメッセージ等を表示するための特殊化されたモーダルダイアログ </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1MessageDialogButtonEventArgs.html">MessageDialogButtonEventArgs</a></td><td class="indexvalue">メッセージダイアログのイベント引数 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Environment_1_1MinimizedEventArgs.html">MinimizedEventArgs</a></td><td class="indexvalue">最小化イベントで渡ってくるデータ </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Input_1_1Motion.html">Motion</a></td><td class="indexvalue">モーションセンサを表すクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Input_1_1MotionData.html">MotionData</a></td><td class="indexvalue">モーションセンサのデータ </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1MotionEvent.html">MotionEvent</a></td><td class="indexvalue">モーションイベントクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1MotionEventArgs.html">MotionEventArgs</a></td><td class="indexvalue">モーションイベント引数 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1MoveBy.html">MoveBy</a></td><td class="indexvalue">オフセットの値を現在の位置に徐々に加算していくアクション。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1MoveEffect.html">MoveEffect</a></td><td class="indexvalue">現在の位置から指定した位置に移動するエフェクト </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1MoveTo.html">MoveTo</a></td><td class="indexvalue">指定した目標に徐々に移動するアクション。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Services_1_1Network.html">Network</a></td><td class="indexvalue">スコアボード使用をハンドルするネットワーク クラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Services_1_1NetworkRequest.html">NetworkRequest</a></td><td class="indexvalue">ネットワーク リクエスト クラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Services_1_1NetworkResponse.html">NetworkResponse</a></td><td class="indexvalue">ネットワーク レスポンス クラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Services_1_1NetworkStreamReader.html">NetworkStreamReader</a></td><td class="indexvalue">ストリーム リーダー クラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1NinePatchMargin.html">NinePatchMargin</a></td><td class="indexvalue">９パッチ情報を格納するための構造体 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html">Node</a></td><td class="indexvalue">ノードは全てのシーングラフノードの基底クラスです。標準的な2D変換行列、子のリスト、親へのハンドラを持ちます。ノードは多くとも1つの親をもつことができます。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1PagePanel.html">PagePanel</a></td><td class="indexvalue">ページ単位でスクロールするコンテナウィジェット </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Panel.html">Panel</a></td><td class="indexvalue">コンテナの機能を持つウィジェット </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1ParticleSystem_1_1Particle.html">ParticleSystem.Particle</a></td><td class="indexvalue">CreateParticle で返される、パーティクルオブジェクト。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Particles.html">Particles</a></td><td class="indexvalue">ひとつの <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1ParticleSystem.html" title="シンプルなパーティクルシステムエフェクト。">ParticleSystem</a> を シーングラフノードにラップしたパーティクルクラス。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1ParticleSystem_1_1ParticleShaderDefault.html">ParticleSystem.ParticleShaderDefault</a></td><td class="indexvalue">デフォルトのシェーダー。テクスチャの色は変調されます。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1ParticleSystem.html">ParticleSystem</a></td><td class="indexvalue">シンプルなパーティクルシステムエフェクト。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Environment_1_1PersistentMemory.html">PersistentMemory</a></td><td class="indexvalue">永続的なメモリ領域を提供するクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Device_1_1PhotoImportDialog.html">PhotoImportDialog</a></td><td class="indexvalue">写真を選択するコモンダイアログクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a></td><td class="indexvalue">多くのプロパティを利用して剛体を定義する </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsJoint.html">PhysicsJoint</a></td><td class="indexvalue">ジョイント </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html">PhysicsScene</a></td><td class="indexvalue">２Ｄ物理シミュレーションのシーン </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsShape.html">PhysicsShape</a></td><td class="indexvalue">全ての形状は凸形状としてセットされます </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsSolverPair.html">PhysicsSolverPair</a></td><td class="indexvalue">衝突した剛体ペアの衝突情報を保持している </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsSpring.html">PhysicsSpring</a></td><td class="indexvalue">スプリング </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsUtility.html">PhysicsUtility</a></td><td class="indexvalue">Physics2Dのためのユーティリティクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Device_1_1Camera_1_1PictureStateChangedEventArgs.html">Camera.PictureStateChangedEventArgs</a></td><td class="indexvalue">写真の撮影状況が変化したときに発生するイベントで渡される引数クラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1PinchEventArgs.html">PinchEventArgs</a></td><td class="indexvalue">ピンチイベント引数 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1PinchGestureDetector.html">PinchGestureDetector</a></td><td class="indexvalue">ピンチ検出器 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1PitchRoll.html">PitchRoll</a></td><td class="indexvalue">ピッチ/ロール回転のヘルパーオブジェクト/関数。 Pitch(x) -&gt; roll(y)の順に回転します。 ロールは-pi, pi、ピッチは-pi/2,pi/2です。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1PixelBuffer.html">PixelBuffer</a></td><td class="indexvalue">ピクセルバッファを表す基底クラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Plane2.html">Plane2</a></td><td class="indexvalue">A plane class in 2D </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Plane3D.html">Plane3D</a></td><td class="indexvalue"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Plane3D.html" title="Plane3D ノードは、シーングラフ内で、ある程度まで3Dの方向性を許可します。 それは、タッチ座標を扱う方法をいくぶんか複雑にします。なのでシーン階層に Plane3D を含んでいる場合、直接 Di...">Plane3D</a> ノードは、シーングラフ内で、ある程度まで3Dの方向性を許可します。 それは、タッチ座標を扱う方法をいくぶんか複雑にします。なのでシーン階層に <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Plane3D.html" title="Plane3D ノードは、シーングラフ内で、ある程度まで3Dの方向性を許可します。 それは、タッチ座標を扱う方法をいくぶんか複雑にします。なのでシーン階層に Plane3D を含んでいる場合、直接 Di...">Plane3D</a> を含んでいる場合、直接 Director.Instance.CurrentScene.Camera.GetTouchPos() を使う代わりに、Plane3D 空間(すべてサブノード)で点を得るのに <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a05841bd87a15c4cf866014e38e4ffc4e" title="Like Director.Instance.CurrentScene.Camera.GetTouchPos に似ていますが、シーングラフ内の祖先に Plane3D が存在したときのケースを扱います。...">Node.GetTouchPos()</a> を使うことを確認してください。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Graphics_1_1PolygonOffset.html">PolygonOffset</a></td><td class="indexvalue">ポリゴンオフセットを表す構造体 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1PopupList.html">PopupList</a></td><td class="indexvalue">複数の選択肢から１つを選択するためのウィジェット </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1PopupListItemCollection.html">PopupListItemCollection</a></td><td class="indexvalue">PopupListのListItems用コレクション </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1PopupListItemsChangedEventArgs.html">PopupListItemsChangedEventArgs</a></td><td class="indexvalue">PopupListのListItemsChangedイベント引数 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1PopupSelectionChangedEventArgs.html">PopupSelectionChangedEventArgs</a></td><td class="indexvalue"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1PopupList.html" title="複数の選択肢から１つを選択するためのウィジェット">PopupList</a> の選択中のアイテムが変わったときに呼ばれるイベント引数 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1PressStateChangedEventArgs.html">PressStateChangedEventArgs</a></td><td class="indexvalue">PressStateChangedイベント引数 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Graphics_1_1Primitive.html">Primitive</a></td><td class="indexvalue">プリミティブを表す構造体 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ProgressBar.html">ProgressBar</a></td><td class="indexvalue">進捗の度合いを表示するウィジェット </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1PushTransition.html">PushTransition</a></td><td class="indexvalue">新しいシーンが古いシーンを押しだすトランジション </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Quaternion.html">Quaternion</a></td><td class="indexvalue"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Quaternion.html" title="quaternion">Quaternion</a> </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Math_1_1RandGenerator.html">Math.RandGenerator</a></td><td class="indexvalue">System.Randomをラップし、ベクトルの乱数生成を拡張したクラス。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1RawSpriteTile.html">RawSpriteTile</a></td><td class="indexvalue"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1RawSpriteTileList.html" title="描画呼び出しや、ステートのセットアップの回数を減らすため、スプライトを一括して描画します。 SpriteListとは違い、Node オブジェクトのリストを保持する代わりに、より軽いRawSpriteTi...">RawSpriteTileList</a> で使用される構造体。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1RawSpriteTileList.html">RawSpriteTileList</a></td><td class="indexvalue">描画呼び出しや、ステートのセットアップの回数を減らすため、スプライトを一括して描画します。 SpriteListとは違い、Node オブジェクトのリストを保持する代わりに、より軽いRawSpriteTileのリストを保持します。 これは <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html" title="ノードは全てのシーングラフノードの基底クラスです。標準的な2D変換行列、子のリスト、親へのハンドラを持ちます。ノードは多くとも1つの親をもつことができます。">Node</a> として利用可能な SpriteRenderer のラップです。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1RayHit.html">RayHit</a></td><td class="indexvalue">レイキャスト用のレイ情報 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Rectangle.html">Rectangle</a></td><td class="indexvalue"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Rectangle.html" title="rectangle">Rectangle</a> </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Graphics_1_1RenderTarget.html">RenderTarget</a></td><td class="indexvalue">レンダリング結果の格納先を表す構造体 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Repeat.html">Repeat</a></td><td class="indexvalue">アクションを回数指定で繰り返すアクション。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1RepeatForever.html">RepeatForever</a></td><td class="indexvalue">他のアクションを永続的に繰り返すアクション。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Environment_1_1RestoredEventArgs.html">RestoredEventArgs</a></td><td class="indexvalue">最小化からの復帰イベントに渡ってくるデータ </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Rgb565.html">Rgb565</a></td><td class="indexvalue">16 bit color struct with 5 bits for R, 6 bits for G, and 5 bits for G </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Rgba.html">Rgba</a></td><td class="indexvalue">32 bit color struct, with 8 bits per channel </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Rgba4444.html">Rgba4444</a></td><td class="indexvalue">16 bit color struct with 4 bits per channel </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Rgba5551.html">Rgba5551</a></td><td class="indexvalue">16 bit color struct with 5 bits per channel for R, G, and B. and 1 bit for A </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1RollPitch.html">RollPitch</a></td><td class="indexvalue">Pitch/roll 回転のヘルパーオブジェクト/関数。 Roll(y) -&gt; pitch(x)の順に回転します。 ピッチは-pi, pi、ロールは-pi/2,pi/2です。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1RootUIElement.html">RootUIElement</a></td><td class="indexvalue">エレメントツリーのルート </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1RootWidget.html">RootWidget</a></td><td class="indexvalue">ウィジェットツリーのルート </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1RotateBy.html">RotateBy</a></td><td class="indexvalue">現在の回転値に徐々にオフセット値を加算していくアクション。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1RotateTo.html">RotateTo</a></td><td class="indexvalue">指定した値へ徐々に回転値をセットしていくアクション。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1ScaleBy.html">ScaleBy</a></td><td class="indexvalue">現在のスケールに徐々に追加のスケールを追加していくアクション。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1ScaleTo.html">ScaleTo</a></td><td class="indexvalue">指定した値へスケールを徐々にセットしていくアクション。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Scene.html">Scene</a></td><td class="indexvalue"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Scene.html" title="Scene クラスはシーングラフのルートノードタイプです。 シーンスタックを操作するため Director シングルトンを使い、現在のシーンは Director.Instance.CurrentScene でアクセスします。 2つのシーンが画面遷移のためブレンディングされるときを除き、アクティブになるシーンはひとつだけです。">Scene</a> クラスはシーングラフのルートノードタイプです。 シーンスタックを操作するため <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Director.html" title="Director はシーンスタックを管理し、Scheduler と ActionManager の update ループを呼び出すシングルトンです。 開発者自身が独自にメインループを実装する場合、開発者...">Director</a> シングルトンを使い、現在のシーンは Director.Instance.CurrentScene でアクセスします。 2つのシーンが画面遷移のためブレンディングされるときを除き、アクティブになるシーンはひとつだけです。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Scene.html">Scene</a></td><td class="indexvalue">画面 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Scheduler.html">Scheduler</a></td><td class="indexvalue"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Scheduler.html" title="Scheduler は、開発者が登録する update 関数に関連した Node を管理するシングルトンです。 スケジュールされた関数は毎フレーム呼び出されます。または、開発者は特別な間隔で呼び出すこと...">Scheduler</a> は、開発者が登録する update 関数に関連した <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html" title="ノードは全てのシーングラフノードの基底クラスです。標準的な2D変換行列、子のリスト、親へのハンドラを持ちます。ノードは多くとも1つの親をもつことができます。">Node</a> を管理するシングルトンです。 スケジュールされた関数は毎フレーム呼び出されます。または、開発者は特別な間隔で呼び出すこともできます。 <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Scheduler.html" title="Scheduler は、開発者が登録する update 関数に関連した Node を管理するシングルトンです。 スケジュールされた関数は毎フレーム呼び出されます。または、開発者は特別な間隔で呼び出すこと...">Scheduler</a> の update ループは <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Director.html#aec0783b5a136e042adcc47bae4fe5291" title="メインのステップ関数です。1フレームに1度呼び出す必要があります。">Director.Update()</a> の内部で呼び出されます。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollBar.html">ScrollBar</a></td><td class="indexvalue">画面のスクロール位置を把握するためのウィジェット </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.html">ScrollPanel</a></td><td class="indexvalue">スクロール可能な領域を持つコンテナウィジェット </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Sequence.html">Sequence</a></td><td class="indexvalue">順番に、他の一連のアクションを実行するためのアクション。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1ShaderProgram.html">ShaderProgram</a></td><td class="indexvalue">シェーダープログラムを表すクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1ShaderProgramOption.html">ShaderProgramOption</a></td><td class="indexvalue">シェーダープログラムの作成オプションを表すクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Environment_1_1Shell.html">Shell</a></td><td class="indexvalue">システムの機能を呼び出すためのクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Short2.html">Short2</a></td><td class="indexvalue">Vector of 2 signed shorts </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Short2N.html">Short2N</a></td><td class="indexvalue">Vector of 2 normalized signed shorts </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Short3.html">Short3</a></td><td class="indexvalue">Vector of 3 signed shorts </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Short3N.html">Short3N</a></td><td class="indexvalue">Vector of 3 normalized signed shorts </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Short4.html">Short4</a></td><td class="indexvalue">Vector of 4 signed shorts </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Short4N.html">Short4N</a></td><td class="indexvalue">Vector of 4 normalized signed shorts </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1ShortN.html">ShortN</a></td><td class="indexvalue">Scalar normalized signed short </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1ParticleSystem_1_1SimulationParams.html">ParticleSystem.SimulationParams</a></td><td class="indexvalue"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1ParticleSystem_1_1SimulationParams.html" title="SimulationParams は、Update と Draw で必要とされる全てのパラメータを、再グループ化します。">SimulationParams</a> は、Update と Draw で必要とされる全てのパラメータを、再グループ化します。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1SkewBy.html">SkewBy</a></td><td class="indexvalue">現在のスキュー値に徐々にオフセット値を加算していくアクション。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1SkewTo.html">SkewTo</a></td><td class="indexvalue">指定した値へ徐々にスキューをセットしていくアクション。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1SlideInEffect.html">SlideInEffect</a></td><td class="indexvalue">画面の外から現在の位置まで平行移動するエフェクト </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1SlideOutEffect.html">SlideOutEffect</a></td><td class="indexvalue">現在の位置から画面の外まで平行移動するエフェクト </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Slider.html">Slider</a></td><td class="indexvalue">数値などの調整を行うためのウィジェット </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1SliderValueChangeEventArgs.html">SliderValueChangeEventArgs</a></td><td class="indexvalue">現在の位置が変化したときのイベント引数 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1SlideTransition.html">SlideTransition</a></td><td class="indexvalue">平行移動してシーンを切り替えるトランジション </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Audio_1_1Sound.html">Sound</a></td><td class="indexvalue">効果音データ </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Audio_1_1SoundPlayer.html">SoundPlayer</a></td><td class="indexvalue">効果音再生機能を提供するクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Sphere2.html">Sphere2</a></td><td class="indexvalue">A sphere class in 2D </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1SpriteBase.html">SpriteBase</a></td><td class="indexvalue">単一のスプライトノードの規定クラス。抽象クラスです。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1SpriteList.html">SpriteList</a></td><td class="indexvalue">描画呼び出しやステートのセットアップの呼び出し回数を削減するため、スプライトを一括して描画します。 <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1SpriteUV.html" title="SpriteUVは、手動で UV を設定するスプライトです。 UV は TRS オブジェクトとして格納されます。 SpriteUVを別個で描画すると、処理が重くなるので注意してください。可能な限り、Sp...">SpriteUV</a> や <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1SpriteTile.html" title="SpriteTile は、TextureInfo 内のタイルインデックス (1D または 2D) を指定する形式のスプライトです。 別個で描画すると、処理が重くなるので注意してください。可能な限り、Sp...">SpriteTile</a> オブジェクトを <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a5a7ca91358b6bfe637db93ebce3f1bc6" title="子に描画プロパティを追加します。">AddChild()</a> で <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1SpriteList.html" title="描画呼び出しやステートのセットアップの呼び出し回数を削減するため、スプライトを一括して描画します。 SpriteUV や SpriteTile オブジェクトを AddChild() で SpriteLi...">SpriteList</a> の子として追加するだけで、一括描画を可能にします。 ただし、スプライトの TextureInfo, BlendMode, Color のプロパティは無視されます。それらのプロパティは親の <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1SpriteList.html" title="描画呼び出しやステートのセットアップの呼び出し回数を削減するため、スプライトを一括して描画します。 SpriteUV や SpriteTile オブジェクトを AddChild() で SpriteLi...">SpriteList</a> に依存します。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1SpriteRenderer.html">SpriteRenderer</a></td><td class="indexvalue">SpriteRendererは、単純なBeginSprites / AddSprite X N / EndSprite APIでのスプライトの一括描画をラップします。 また、FontMap を使ったテキスト描画関数を提供します。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1SpriteTile.html">SpriteTile</a></td><td class="indexvalue"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1SpriteTile.html" title="SpriteTile は、TextureInfo 内のタイルインデックス (1D または 2D) を指定する形式のスプライトです。 別個で描画すると、処理が重くなるので注意してください。可能な限り、Sp...">SpriteTile</a> は、TextureInfo 内のタイルインデックス (1D または 2D) を指定する形式のスプライトです。 別個で描画すると、処理が重くなるので注意してください。可能な限り、SpriteList の子として利用してください。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1SpriteUV.html">SpriteUV</a></td><td class="indexvalue">SpriteUVは、手動で UV を設定するスプライトです。 UV は TRS オブジェクトとして格納されます。 SpriteUVを別個で描画すると、処理が重くなるので注意してください。可能な限り、SpriteList の子として利用してください。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Graphics_1_1StencilFunc.html">StencilFunc</a></td><td class="indexvalue">ステンシルテスト関数を表す構造体 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Graphics_1_1StencilOp.html">StencilOp</a></td><td class="indexvalue">ステンシルテスト操作を表す構造体 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Environment_1_1SystemEvents.html">SystemEvents</a></td><td class="indexvalue">システムからのイベントを受け取るためのクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Environment_1_1SystemMemory.html">SystemMemory</a></td><td class="indexvalue">システムのメモリの状態を取得するクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Environment_1_1SystemParameters.html">SystemParameters</a></td><td class="indexvalue">システムのパラメタを受け取るためのクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1TapEventArgs.html">TapEventArgs</a></td><td class="indexvalue">タップイベント引数 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1TapGestureDetector.html">TapGestureDetector</a></td><td class="indexvalue">タップ検出器 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1TextChangedEventArgs.html">TextChangedEventArgs</a></td><td class="indexvalue">テキストを変更したときのイベント引数 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Environment_1_1TextInputDialog.html">TextInputDialog</a></td><td class="indexvalue">テキスト入力ダイアログ </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1TextShadowSettings.html">TextShadowSettings</a></td><td class="indexvalue">文字列の影の設定情報 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1Texture.html">Texture</a></td><td class="indexvalue">テクスチャを表す基底クラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1Texture2D.html">Texture2D</a></td><td class="indexvalue">2Dテクスチャを表すクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1TextureCube.html">TextureCube</a></td><td class="indexvalue">キューブテクスチャを表すクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Graphics_1_1TextureFilter.html">TextureFilter</a></td><td class="indexvalue">テクスチャフィルタを表す構造体 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TextureInfo.html">TextureInfo</a></td><td class="indexvalue">TextureInfoは、Texture2Dオブジェクトを保持し、関連付けられたタイルのUVデータをキャッシュします。 タイルの転送元領域はテクスチャ全体である必要はなく、UV領域内の任意の大きさのボックスで指定することができます。 TextureInfoは、渡されるTexture2Dオブジェクトの所有権を取得し、Dispose関数で破棄します。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Graphics_1_1TextureWrap.html">TextureWrap</a></td><td class="indexvalue">テクスチャラップを表す構造体 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1TiltDropEffect.html">TiltDropEffect</a></td><td class="indexvalue">下方向へ落ちるエフェクト </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1TiltDropTransition.html">TiltDropTransition</a></td><td class="indexvalue">下方向へ落ちるトランジション </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1TimePicker.html">TimePicker</a></td><td class="indexvalue">時刻を選択するためのウィジェット </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1TimePickerValueChangedEventArgs.html">TimePickerValueChangedEventArgs</a></td><td class="indexvalue"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1TimePicker.html" title="時刻を選択するためのウィジェット">TimePicker</a> の値が変更されたときのイベント引数 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Timer.html">Timer</a></td><td class="indexvalue">シンプルなタイマー。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1TintBy.html">TintBy</a></td><td class="indexvalue">徐々に色を加算していくアクション。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1TintTo.html">TintTo</a></td><td class="indexvalue">指定した値に徐々に色をセットしていくアクション。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Input2_1_1Touch.html">Input2.Touch</a></td><td class="indexvalue">Input.Touch をラップしたクラス。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Input_1_1Touch.html">Touch</a></td><td class="indexvalue">タッチパネルデバイスを表すクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Input_1_1TouchData.html">TouchData</a></td><td class="indexvalue">タッチパネルの指ひとつ分のタッチ情報 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Input2_1_1TouchData.html">Input2.TouchData</a></td><td class="indexvalue">Input.TouchData をラップしたクラス。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1TouchEvent.html">TouchEvent</a></td><td class="indexvalue">タッチイベントクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1TouchEventArgs.html">TouchEventArgs</a></td><td class="indexvalue">タッチイベント引数 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1TouchEventCollection.html">TouchEventCollection</a></td><td class="indexvalue">複数のタッチイベントをまとめて保持するクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Transition.html">Transition</a></td><td class="indexvalue">シーンに適用するアニメーションの基底クラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1TransitionCrossFade.html">TransitionCrossFade</a></td><td class="indexvalue"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1TransitionCrossFade.html" title="TransitionCrossFade は 2つのシーンをクロスフェードさせるために、ブレンドを使います。 フェイドのコントロールに DTween を使うことができます。">TransitionCrossFade</a> は 2つのシーンをクロスフェードさせるために、ブレンドを使います。 フェイドのコントロールに DTween を使うことができます。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1TransitionDirectionalFade.html">TransitionDirectionalFade</a></td><td class="indexvalue"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1TransitionDirectionalFade.html" title="TransitionDirectionalFade は2つのシーンをクロスフェードさせるのに、変換ブレンドマスクを使います。 クロスフェードのラインは、開発者が指定した方向に沿って動作し、古いシーンが新...">TransitionDirectionalFade</a> は2つのシーンをクロスフェードさせるのに、変換ブレンドマスクを使います。 クロスフェードのラインは、開発者が指定した方向に沿って動作し、古いシーンが新しいシーンに置き換わります。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1TransitionFadeBase.html">TransitionFadeBase</a></td><td class="indexvalue">フェイドの画面遷移を行う基底クラス。 両方のシーンをオフスクリーンで描画する必要があります。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1TransitionScene.html">TransitionScene</a></td><td class="indexvalue">画面遷移ノードのための基底クラス。これらのノードは2つのシーンを視覚的に遷移させます。 遷移中は、両方のシーンを Updateし、描画します。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1TransitionSolidFade.html">TransitionSolidFade</a></td><td class="indexvalue"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1TransitionSolidFade.html" title="TransitionSolidFade は、次のシーンをフェイドする前に、現在のシーンを黒にフェイドします。">TransitionSolidFade</a> は、次のシーンをフェイドする前に、現在のシーンを黒にフェイドします。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS.html">TRS</a></td><td class="indexvalue">TRSはシーングラフの専門用語です。TRSは平行移動/回転/スケールの2D変換行列を標準的な方法で格納するのために使用されています。 また、向きをもった境界ボックスを定義します。 TRSはスプライトの配置/サイズとスプライトUVの両方を格納するためにも使用します。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1UByte2.html">UByte2</a></td><td class="indexvalue">Vector of 2 unsigned shorts </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1UByte2N.html">UByte2N</a></td><td class="indexvalue">Vector of 2 normalized unsigned bytes </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1UByte3.html">UByte3</a></td><td class="indexvalue">Vector of 3 unsigned shorts </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1UByte3N.html">UByte3N</a></td><td class="indexvalue">Vector of 3 normalized unsigned bytes </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1UByte4.html">UByte4</a></td><td class="indexvalue">Vector of 4 unsigned bytes </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1UByte4N.html">UByte4N</a></td><td class="indexvalue">Vector of 4 normalized unsigned bytes </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1UByteN.html">UByteN</a></td><td class="indexvalue">Scalar normalized unsigned byte </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1UIAnimationPlayer.html">UIAnimationPlayer</a></td><td class="indexvalue">Uia 形式のアニメーションを再生するクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1UIColor.html">UIColor</a></td><td class="indexvalue">色を扱う構造体 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1UIDebug.html">UIDebug</a></td><td class="indexvalue"><a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1UI.html" title="画面上のユーザインタフェイスを扱う機能">UI</a> Toolkit のデバッグに使用するユーティリティクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1UIElement.html">UIElement</a></td><td class="indexvalue">描画要素の基底クラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1UIFont.html">UIFont</a></td><td class="indexvalue">UIで使用するフォントクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1UIMotion.html">UIMotion</a></td><td class="indexvalue">Uim 形式のモーションを再生するクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1UIPrimitive.html">UIPrimitive</a></td><td class="indexvalue">プリミティブ </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1UIPrimitiveUtility.html">UIPrimitiveUtility</a></td><td class="indexvalue">プリミティブのユーティリティ </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1UIPrimitiveVertex.html">UIPrimitiveVertex</a></td><td class="indexvalue">UIPrimitiveが管理する頂点データ </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1UISprite.html">UISprite</a></td><td class="indexvalue">複数の矩形をまとめて描画する </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1UISpriteUnit.html">UISpriteUnit</a></td><td class="indexvalue">UISpriteが管理する矩形データ </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1UISpriteUtility.html">UISpriteUtility</a></td><td class="indexvalue">スプライトのユーティリティ </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1UISystem.html">UISystem</a></td><td class="indexvalue"><a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1UI.html" title="画面上のユーザインタフェイスを扱う機能">UI</a> Toolkitのシステム全体の管理を行うクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1UpdateEventArgs.html">UpdateEventArgs</a></td><td class="indexvalue">更新処理イベントのデータが格納されているクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1UShort2.html">UShort2</a></td><td class="indexvalue">Vector of 2 unsigned shorts </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1UShort2N.html">UShort2N</a></td><td class="indexvalue">Vector of 2 normalized unsigned shorts </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1UShort3.html">UShort3</a></td><td class="indexvalue">Vector of 3 unsigned shorts </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1UShort3N.html">UShort3N</a></td><td class="indexvalue">Vector of 3 normalized unsigned shorts </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1UShort4.html">UShort4</a></td><td class="indexvalue">Vector of 4 unsigned shorts </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1UShort4N.html">UShort4N</a></td><td class="indexvalue">Vector of 4 normalized unsigned shorts </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1UShortN.html">UShortN</a></td><td class="indexvalue">Scalar normalized unsigned short </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a></td><td class="indexvalue">Vector of 2 floats </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Vector2i.html">Vector2i</a></td><td class="indexvalue">Vector2 のint版。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector3.html">Vector3</a></td><td class="indexvalue">Vector of 3 floats </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Vector3i.html">Vector3i</a></td><td class="indexvalue">Vector3 の int版。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector4.html">Vector4</a></td><td class="indexvalue">Vector of 4 floats </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1DrawHelpers_1_1Vertex.html">DrawHelpers.Vertex</a></td><td class="indexvalue"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1DrawHelpers.html" title="2D/3Dの基本的な描画関数を提供します。このクラスは主にデバッグシェーダーを使った ImmediateMode のオブジェクトです。 パフォーマンスが良くないため、デバッグ以外の用途で DrawHel...">DrawHelpers</a> で使用される頂点 (V4F_C4F)。 </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1VertexBuffer.html">VertexBuffer</a></td><td class="indexvalue">頂点バッファを表すクラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a></td><td class="indexvalue">ウィジェットの基底クラス </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ZoomEffect.html">ZoomEffect</a></td><td class="indexvalue">現在のスケールから指定したスケールに拡大または縮小するエフェクト </td></tr>
+</table>
+</div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

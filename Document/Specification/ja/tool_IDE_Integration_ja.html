@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: PSM Studio との連動</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('tool_IDE_Integration_ja.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<h1>PSM Studio との連動 </h1>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><blockquote>
+PSM Studio のプロジェクトで、UI Composer が出力したファイルを利用する際の注意点について説明します。</blockquote>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#id1" id="id4">アプリケーションのプロジェクト構成</a></li>
+<li><a class="reference internal" href="#id2" id="id5">クラス定義ファイル</a></li>
+<li><a class="reference internal" href="#id3" id="id6">イメージアセットファイル</a></li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h1><a class="toc-backref" href="#id4">アプリケーションのプロジェクト構成</a></h1>
+<blockquote>
+<p>UI Composer が出力するソースファイル(下記の「*」の付いたファイル)、および追加したイメージアセットファイル(「**」の付いたファイル)を SampleApp.csproj に追加してビルドを行って下さい。:</p>
+<pre class="literal-block">
+SampleApp/
+          SampleApp.csproj
+
+          SampleApp.uic
+          SampleApp_LanguageTable.csv
+
+          AppMain.cs
+
+          SampleA.cs
+          SampleB.cs
+          SampleC.cs
+
+          SampleScene.cs             *
+          SampleScene.composer.cs    *
+          SamplePanel.cs             *
+          SamplePanel.composer.cs    *
+          SampleDialog.cs            *
+          SampleDialog.composer.cs   *
+
+          UIStringTable.cs           *
+
+          assets/
+                 AAA.png             **
+                 BBB.png             **
+</pre>
+</blockquote>
+</div>
+<div class="section" id="id2">
+<h1><a class="toc-backref" href="#id5">クラス定義ファイル</a></h1>
+<blockquote>
+<p>UI Composer は、ユーザーがレイアウトした「画面」毎に、クラス定義を自動生成します。1つのクラスをxxx.composer.cs と xxx.cs に分けて partial class として自動生成します。</p>
+<ul class="simple">
+<li>xxx.composer.cs には、配置したウィジェットのレイアウト情報（X,Y 座標） やプロパティの設定値を設定するメソッドが定義されます。常に上書きされます。</li>
+<li>xxx.cs にはクラスのコンストラクタが定義され、その中で、xxx.composer.cs 内に定義されている初期化メソッド呼び出しが記述されます。既に存在する場合は生成されません。</li>
+</ul>
+<p>例えば、２つの「画面」をレイアウトした場合、下記のファイルが出力されます。</p>
+<blockquote>
+<ul class="simple">
+<li>SampleScene.composer.cs : レイアウト定義</li>
+<li>SampleScene.cs          : イベントハンドラやロジックの実装用ファイル</li>
+<li>SamplePanel.composer.cs : レイアウト定義</li>
+<li>SamplePanel.cs          : イベントハンドラやロジックの実装用ファイル</li>
+<li>UIStringTable.cs           : 言語毎に「画面」に応じた文言を表示するための文言テーブル</li>
+</ul>
+</blockquote>
+<p>出力された .cs ファイルを PSM Studio のプロジェクトに取り込むことで UI Composer で行った作業を利用することが可能です。UI Composer で「画面」レイアウトを手直しした場合、SampleScene.cs や SamplePanel.cs は上書きされませんが、 <strong>xxx.composer.cs は常に上書きされる</strong> ことに注意して下さい。このファイルは編集しないことを推奨します。イベントハンドラなどの実装は xxxxx.cs に対して行ってください。また、xxxxx.csが既に存在する場合は、このファイルは上書きされないため、途中で名前空間を変更した場合は手動でxxxxx.csの名前空間を変更する必要があります。</p>
+</blockquote>
+</div>
+<div class="section" id="id3">
+<h1><a class="toc-backref" href="#id6">イメージアセットファイル</a></h1>
+<blockquote>
+<p>UI Composer で使用しているイメージアセットファイルは、PSM Studio のプロジェクトに「コンテンツ」として登録する必要があります。</p>
+<ul>
+<li><dl class="first docutils">
+<dt>イメージアセットファイルの登録方法</dt>
+<dd><ul class="first last simple">
+<li>PSM Studio で対象のソリューションファイルを開きます。</li>
+<li>ソリューションパネルで、対象のプロジェクトを右クリックし、[追加 (Add)] &gt; [AddExistingFolder...] を選択します。</li>
+<li>フォルダーの選択ダイアログで「assets」フォルダーを選択し、[開く (Open)」を押します。</li>
+<li>ファイルの選択ダイアログでイメージアセットファイルを選択します。</li>
+<li>ソリューションパネルの追加されたイメージアセットファイルを右クリックし、[ビルドアクション (Build Action)] &gt; [コンテンツ (Content)] を選択します。（pngファイルはデフォルトでビルドアクションがコンテンツになります。）</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</blockquote>
+</div>
+ </div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

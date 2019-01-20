@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: UI Toolkit の描画の仕組み</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('ui_3d_system_ja.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<h1>UI Toolkit の描画の仕組み </h1>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><blockquote>
+UI Toolkit の描画の仕組みについて解説します。</blockquote>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#widget-uielement-3d" id="id4">Widget や UIElement の3D 配置の方法</a></li>
+<li><a class="reference internal" href="#d" id="id5">3D 描画で使用される座標系</a></li>
+<li><a class="reference internal" href="#id1" id="id6">3D 描画時の制約</a><ul>
+<li><a class="reference internal" href="#widget" id="id7">Widget のクリッピング領域</a></li>
+<li><a class="reference internal" href="#id2" id="id8">Widget のヒット判定</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#zsort" id="id9">ZSort プロパティについて</a></li>
+<li><a class="reference internal" href="#id3" id="id10">描画処理の流れ</a></li>
+<li><a class="reference internal" href="#graphicscontext" id="id11">GraphicsContext について</a></li>
+</ul>
+</div>
+<div class="section" id="widget-uielement-3d">
+<h1><a class="toc-backref" href="#id4">Widget や UIElement の3D 配置の方法</a></h1>
+<blockquote>
+<p>UI Toolkit では、従来通りの平面的なウィジェットの中に、部分的に立体的な表現を混在させることができます。</p>
+<p>Widget や UIElement を 3D 座標系で配置する場合は、Transform3D プロパティや Z プロパティを使用して位置を設定します。</p>
+<p>3D 座標系で Widget と UIElement の位置設定を行うコード例を以下に示します。</p>
+<blockquote>
+<div class="highlight"><pre><span class="c1">// set position Z</span>
+
+<span class="c1">// Widget</span>
+<span class="n">Matrix4</span> <span class="n">mat</span> <span class="p">=</span> <span class="n">widget</span><span class="p">.</span><span class="n">Transform3D</span><span class="p">;</span>
+<span class="n">mat</span><span class="p">.</span><span class="n">M43</span> <span class="p">=</span> <span class="p">-</span><span class="m">100.0f</span><span class="p">;</span>
+<span class="n">widget</span><span class="p">.</span><span class="n">Transform3D</span> <span class="p">=</span> <span class="n">mat</span><span class="p">;</span>
+<span class="c1">// another way</span>
+<span class="n">widget</span><span class="p">.</span><span class="n">Transform3D</span> <span class="p">=</span> <span class="n">Matrix4</span><span class="p">.</span><span class="n">Translation</span><span class="p">(</span><span class="k">new</span> <span class="n">Vector3</span><span class="p">(</span><span class="n">widget</span><span class="p">.</span><span class="n">X</span><span class="p">,</span> <span class="n">widget</span><span class="p">.</span><span class="n">Y</span><span class="p">,</span> <span class="p">-</span><span class="m">100.0f</span><span class="p">));</span>
+
+<span class="c1">// UIElement (UISprite and UIPrimitive)</span>
+<span class="n">Matrix4</span> <span class="n">mat2</span> <span class="p">=</span> <span class="n">uiElement</span><span class="p">.</span><span class="n">Transform3D</span><span class="p">;</span>
+<span class="n">mat2</span><span class="p">.</span><span class="n">M43</span> <span class="p">=</span> <span class="p">-</span><span class="m">100.0f</span><span class="p">;</span>
+<span class="n">uiElement</span><span class="p">.</span><span class="n">Transform3D</span> <span class="p">=</span> <span class="n">mat2</span><span class="p">;</span>
+
+<span class="c1">// UISpriteUnit</span>
+<span class="n">UISpriteUnit</span> <span class="n">unit</span> <span class="p">=</span> <span class="n">uiSprt</span><span class="p">.</span><span class="n">GetUnit</span><span class="p">(</span><span class="m">0</span><span class="p">);</span>
+<span class="n">unit</span><span class="p">.</span><span class="n">Z</span> <span class="p">=</span> <span class="p">-</span><span class="m">100.0f</span><span class="p">;</span>
+
+<span class="c1">// UIPrimitiveVertex</span>
+<span class="n">UIPrimitiveVertex</span> <span class="n">vertex</span> <span class="p">=</span> <span class="n">uiPrimitive</span><span class="p">.</span><span class="n">GetVertex</span><span class="p">(</span><span class="m">0</span><span class="p">);</span>
+<span class="n">vertex</span><span class="p">.</span><span class="n">Z</span> <span class="p">=</span> <span class="p">-</span><span class="m">100.0f</span><span class="p">;</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="d">
+<h1><a class="toc-backref" href="#id5">3D 描画で使用される座標系</a></h1>
+<blockquote>
+<p>3D 描画で使用される座標系は、以下のような右手座標系になっています(図1)。</p>
+<ul>
+<li><p class="first">画面右方向が X 軸の正の方向</p>
+</li>
+<li><p class="first">画面下方向が Y 軸の正の方向</p>
+</li>
+<li><p class="first">画面奥方向が Z 軸の正の方向</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/ui_3d_coordinate_system.png" src="image/uitoolkit/ui_3d_coordinate_system.png" style="width: 600px;" />
+<p class="caption"><strong>図1 UI Toolkit の使用する 3D 座標系</strong></p>
+</div>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="id1">
+<h1><a class="toc-backref" href="#id6">3D 描画時の制約</a></h1>
+<blockquote>
+Widget や UIElement の 3D 表現を行う際は、以下の点に注意してください。</blockquote>
+<div class="section" id="widget">
+<h2><a class="toc-backref" href="#id7">Widget のクリッピング領域</a></h2>
+<blockquote>
+<p>Widget のクリッピング領域は X、Y 座標と幅と高さのみ使って決定されるため、3D 座標系で配置された Widget や UIElement は正しくクリッピングされません。</p>
+<p>Widgetを3D座標系で配置する際は、Clip プロパティに false を設定してクリッピングをオフにしてください。</p>
+</blockquote>
+</div>
+<div class="section" id="id2">
+<h2><a class="toc-backref" href="#id8">Widget のヒット判定</a></h2>
+<blockquote>
+<p>Widget のヒット判定もクリッピング領域同様に、X、Y座標と幅、高さのみで決定されます。</p>
+<p>Widget を 3D 座標系で配置する際は、TouchResponse プロパティに false を設定してヒット判定を切るか、HitTest メソッドをオーバーライドして正しいヒット判定処理を記述してください。</p>
+</blockquote>
+</div>
+</div>
+<div class="section" id="zsort">
+<h1><a class="toc-backref" href="#id9">ZSort プロパティについて</a></h1>
+<blockquote>
+<p>3D 配置されている描画要素の前後関係が時間と共に変化する場合は、正しい描画を行うために、画面上での Z 座標が大きい要素（奥にあるもの）から順に描画する必要があります。</p>
+<p>Widget や UIElement の ZSort プロパティを true にすると、true にした対象が 3D 描画される際に、自動的に画面の奥方向から手前の順にソートされて、描画が行われます。</p>
+<p>また、ZSort 指定された Widget や UIElement に対して、ZSort 指定されていない子要素はひとまとまりとしてソートされます。</p>
+<p>図2 に UIElement に ZSort が指定された際のグループの例を示します。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/ui_z_sort_group.png" src="image/uitoolkit/ui_z_sort_group.png" style="width: 800px;" />
+<p class="caption"><strong>図2 ソート時の UIElement のグループ分けの例</strong></p>
+</div>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="id3">
+<h1><a class="toc-backref" href="#id10">描画処理の流れ</a></h1>
+<blockquote>
+<p>UI Toolkit では、図3 のような手順で描画処理を行います。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/ui_render_sequence.png" src="image/uitoolkit/ui_render_sequence.png" style="width: 1000px;" />
+<p class="caption"><strong>図3 UIToolkit の描画処理の流れ</strong></p>
+</div>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="graphicscontext">
+<h1><a class="toc-backref" href="#id11">GraphicsContext について</a></h1>
+<blockquote>
+<p>UI Toolkit では、初期化処理時（UISystem.Initialize）と描画処理時（UISystem.Render）に、以下の Sce.PlayStation.Core.Graphics.GraphicsContext のステートを変更しますので、UI Toolkit 以外でも描画処理を行う場合には注意してください。</p>
+<blockquote>
+<p>UISystem.Initialize 呼び出し時に変更されるステート</p>
+<blockquote>
+<ul class="simple">
+<li>EnableMode.Blend（trueに設定されます）</li>
+<li>EnableMode.ScissorTest（trueに設定されます）</li>
+<li>FrameBuffer（nullに設定されます）</li>
+<li>BrendFunc（BlendFuncMode.Add, BlendFuncFactor.SrcAlpha, BlendFuncFactor.OneMinusSrcAlphaに設定されます）</li>
+</ul>
+</blockquote>
+<p>UISystem.Render 呼び出し時に変更されるステート</p>
+<blockquote>
+<ul class="simple">
+<li>Scissor</li>
+<li>ShaderProgram</li>
+<li>Texture</li>
+<li>VertexBuffer</li>
+<li>Viewport（全画面に設定されます）</li>
+<li>FrameBuffer（nullに設定されます）</li>
+</ul>
+</blockquote>
+</blockquote>
+<p>なお、これ以外のステートに関しても描画処理時に変更する場合がありますが、描画処理終了後に適切に復元されます。</p>
+</blockquote>
+</div>
+ </div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

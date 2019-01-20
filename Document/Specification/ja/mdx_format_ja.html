@@ -1,0 +1,1439 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: PlayStation(R)Mobile MDX ファイル形式</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('mdx_format_ja.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<h1>PlayStation(R)Mobile MDX ファイル形式 </h1>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><p>PlayStation(R)Mobile MDX ファイル形式は、モデルデータを格納するファイル形式です。</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#mdx" id="id15">MDX ファイル形式</a><ul>
+<li><a class="reference internal" href="#id1" id="id16">モデルデータ</a></li>
+<li><a class="reference internal" href="#id2" id="id17">ブロック構造</a></li>
+<li><a class="reference internal" href="#id3" id="id18">文法</a></li>
+<li><a class="reference internal" href="#id4" id="id19">テキスト形式</a></li>
+<li><a class="reference internal" href="#id5" id="id20">バイナリ形式</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id6" id="id21">ブロック</a><ul>
+<li><a class="reference internal" href="#file" id="id22">File</a></li>
+<li><a class="reference internal" href="#model" id="id23">Model</a></li>
+<li><a class="reference internal" href="#bone" id="id24">Bone</a></li>
+<li><a class="reference internal" href="#part" id="id25">Part</a></li>
+<li><a class="reference internal" href="#mesh" id="id26">Mesh</a></li>
+<li><a class="reference internal" href="#arrays" id="id27">Arrays</a></li>
+<li><a class="reference internal" href="#material" id="id28">Material</a></li>
+<li><a class="reference internal" href="#layer" id="id29">Layer</a></li>
+<li><a class="reference internal" href="#texture" id="id30">Texture</a></li>
+<li><a class="reference internal" href="#motion" id="id31">Motion</a></li>
+<li><a class="reference internal" href="#fcurve" id="id32">FCurve</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id7" id="id33">共通コマンド</a><ul>
+<li><a class="reference internal" href="#filename" id="id34">FileName</a></li>
+<li><a class="reference internal" href="#fileimage" id="id35">FileImage</a></li>
+<li><a class="reference internal" href="#boundingbox" id="id36">BoundingBox</a></li>
+<li><a class="reference internal" href="#boundingsphere" id="id37">BoundingSphere</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id8" id="id38">Bone コマンド</a><ul>
+<li><a class="reference internal" href="#parentbone" id="id39">ParentBone</a></li>
+<li><a class="reference internal" href="#visibility" id="id40">Visibility</a></li>
+<li><a class="reference internal" href="#pivot" id="id41">Pivot</a></li>
+<li><a class="reference internal" href="#translate" id="id42">Translate</a></li>
+<li><a class="reference internal" href="#rotate" id="id43">Rotate</a></li>
+<li><a class="reference internal" href="#rotatexyz-yzx-zxy-xzy-yxz-zyx" id="id44">RotateXYZ/YZX/ZXY/XZY/YXZ/ZYX</a></li>
+<li><a class="reference internal" href="#scale" id="id45">Scale</a></li>
+<li><a class="reference internal" href="#blendbone" id="id46">BlendBone</a></li>
+<li><a class="reference internal" href="#drawpart" id="id47">DrawPart</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id9" id="id48">Mesh コマンド</a><ul>
+<li><a class="reference internal" href="#setmaterial" id="id49">SetMaterial</a></li>
+<li><a class="reference internal" href="#setarrays" id="id50">SetArrays</a></li>
+<li><a class="reference internal" href="#blendindices" id="id51">BlendIndices</a></li>
+<li><a class="reference internal" href="#drawarrays" id="id52">DrawArrays</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id10" id="id53">Material コマンド</a><ul>
+<li><a class="reference internal" href="#diffuse" id="id54">Diffuse</a></li>
+<li><a class="reference internal" href="#ambient" id="id55">Ambient</a></li>
+<li><a class="reference internal" href="#specular" id="id56">Specular</a></li>
+<li><a class="reference internal" href="#emission" id="id57">Emission</a></li>
+<li><a class="reference internal" href="#opacity" id="id58">Opacity</a></li>
+<li><a class="reference internal" href="#shininess" id="id59">Shininess</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id11" id="id60">Layer コマンド</a><ul>
+<li><a class="reference internal" href="#settexture" id="id61">SetTexture</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id12" id="id62">Texture コマンド</a><ul>
+<li><a class="reference internal" href="#uvtranslate" id="id63">UVTranslate</a></li>
+<li><a class="reference internal" href="#uvscale" id="id64">UVScale</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id13" id="id65">Motion コマンド</a><ul>
+<li><a class="reference internal" href="#frameloop" id="id66">FrameLoop</a></li>
+<li><a class="reference internal" href="#framerate" id="id67">FrameRate</a></li>
+<li><a class="reference internal" href="#framerepeat" id="id68">FrameRepeat</a></li>
+<li><a class="reference internal" href="#animate" id="id69">Animate</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id14" id="id70">列挙定数</a><ul>
+<li><a class="reference internal" href="#blocktype" id="id71">BlockType</a></li>
+<li><a class="reference internal" href="#commandtype" id="id72">CommandType</a></li>
+<li><a class="reference internal" href="#vertexformat" id="id73">VertexFormat</a></li>
+<li><a class="reference internal" href="#interptype" id="id74">InterpType</a></li>
+<li><a class="reference internal" href="#extraptype" id="id75">ExtrapType</a></li>
+<li><a class="reference internal" href="#drawmode" id="id76">DrawMode</a></li>
+<li><a class="reference internal" href="#repeatmode" id="id77">RepeatMode</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="mdx">
+<h1><a class="toc-backref" href="#id15">MDX ファイル形式</a></h1>
+<div class="section" id="id1">
+<h2><a class="toc-backref" href="#id16">モデルデータ</a></h2>
+<p>MDX ファイルは、以下の機能をもつモデルデータを格納できます。</p>
+<ul class="simple">
+<li>階層ノード (トランスフォーメーション、ビジビリティ、スキニング)</li>
+<li>形状データ (ポイント、ライン、トライアングル)</li>
+<li>頂点データ (位置、法線、カラー、UV、ウェイト、インデクス)</li>
+<li>マテリアル設定 (レガシーマテリアル)</li>
+<li>テクスチャマッピング (シングルレイヤー)</li>
+<li>テクスチャ画像 (PNG, JPG, BMP, GIF）</li>
+<li>アニメーション (トランスフォーメーション、マテリアル、UV)</li>
+</ul>
+<p>モデルデータのデフォルト設定は、以下のようになっています。</p>
+<ul class="simple">
+<li>3D 座標 : 右手系 (Ｙ＝上)</li>
+<li>UV 座標 : 左上原点</li>
+<li>行列順序 : Column-major</li>
+<li>面カリング : CCW が表面</li>
+<li>法線ベクトル : 表面方向</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h2><a class="toc-backref" href="#id17">ブロック構造</a></h2>
+<p>MDX ファイルは、以下のような階層的なブロックで構成されます。</p>
+<div class="highlight"><pre><span class="n">File</span>            <span class="c1">// ファイル本体 (バイナリ形式のみ)</span>
+  <span class="n">Model</span>         <span class="c1">// モデル本体</span>
+    <span class="n">Bone</span>        <span class="c1">// 階層ノード</span>
+    <span class="n">Part</span>        <span class="c1">// 形状データ</span>
+      <span class="n">Mesh</span>      <span class="c1">// 描画メッシュ</span>
+      <span class="n">Arrays</span>    <span class="c1">// 頂点データ</span>
+    <span class="n">Material</span>    <span class="c1">// マテリアル設定</span>
+      <span class="n">Layer</span>     <span class="c1">// テクスチャマッピング</span>
+    <span class="n">Texture</span>     <span class="c1">// テクスチャ画像</span>
+    <span class="n">Motion</span>      <span class="c1">// アニメーション集合</span>
+      <span class="n">FCurve</span>    <span class="c1">// アニメーションカーブ</span>
+</pre></div>
+<!-- end-of-code-block -->
+<p>テキスト形式の単純なモデルデータの例を、以下に示します。</p>
+<div class="highlight"><pre><span class="nv">.MDS</span> <span class="mf">1.00</span>
+
+<span class="nv">Model</span> <span class="s2">&quot;model-0&quot;</span> <span class="k">{</span>
+    <span class="nv">Bone</span> <span class="s2">&quot;bone-0&quot;</span> <span class="k">{</span>
+        <span class="nv">Translate</span> <span class="mf">0.000000</span> <span class="mf">0.000000</span> <span class="mf">0.000000</span>
+        <span class="nv">RotateYXZ</span> <span class="mf">0.000000</span> <span class="mf">0.000000</span> <span class="mf">0.000000</span>
+        <span class="nv">DrawPart</span> <span class="s2">&quot;part-0&quot;</span>
+    <span class="k">}</span>
+    <span class="nv">Part</span> <span class="s2">&quot;part-0&quot;</span> <span class="k">{</span>
+        <span class="nv">Mesh</span> <span class="s2">&quot;mesh-0&quot;</span> <span class="k">{</span>
+            <span class="nv">SetMaterial</span> <span class="s2">&quot;material-0&quot;</span>
+            <span class="nv">SetArrays</span> <span class="s2">&quot;arrays-0&quot;</span>
+            <span class="nv">DrawArrays</span> TRIANGLES <span class="mi">3</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span>
+        <span class="k">}</span>
+        <span class="nv">Arrays</span> <span class="s2">&quot;arrays-0&quot;</span> POSITION<span class="o">|</span>NORMAL <span class="mi">0</span> <span class="mi">3</span> <span class="k">{</span>
+            <span class="nv">0.000000</span> <span class="mf">0.577350</span> <span class="mf">0.000000</span> <span class="mf">0.000000</span> <span class="mf">0.000000</span> <span class="mf">1.000000</span>
+            <span class="nv">-0.500000</span> <span class="o">-</span><span class="mf">0.288675</span> <span class="mf">0.000000</span> <span class="mf">0.000000</span> <span class="mf">0.000000</span> <span class="mf">1.000000</span>
+            <span class="nv">0.500000</span> <span class="o">-</span><span class="mf">0.288675</span> <span class="mf">0.000000</span> <span class="mf">0.000000</span> <span class="mf">0.000000</span> <span class="mf">1.000000</span>
+        <span class="k">}</span>
+    <span class="k">}</span>
+    <span class="nv">Material</span> <span class="s2">&quot;material-0&quot;</span> <span class="k">{</span>
+        <span class="nv">Diffuse</span> <span class="mf">0.000000</span> <span class="mf">0.000000</span> <span class="mf">1.000000</span>
+        <span class="nv">Specular</span> <span class="mf">1.000000</span> <span class="mf">1.000000</span> <span class="mf">1.000000</span>
+        <span class="nv">Opacity</span> <span class="mf">1.000000</span>
+        <span class="nv">Shininess</span> <span class="mf">10.000000</span>
+    <span class="k">}</span>
+<span class="k">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+</div>
+<div class="section" id="id3">
+<h2><a class="toc-backref" href="#id18">文法</a></h2>
+<p>MDX ファイルは、ヘッダ、ブロック、コマンドの組み合わせで記述されます。</p>
+<div class="highlight"><pre><span class="nv">FormatSignature</span> <span class="nv">$version</span>
+
+<span class="nv">BlockType</span> <span class="nv">$name</span> <span class="nv">$arg1</span> <span class="nv">$arg2</span> ... <span class="k">{</span>
+    <span class="nv">CommandType</span> <span class="nv">$arg1</span> <span class="nv">$arg2</span> ...
+    <span class="nv">CommandType</span> <span class="nv">$arg1</span> <span class="nv">$arg2</span> ...
+
+    <span class="nv">BlockType</span> <span class="nv">$name</span> <span class="nv">$arg1</span> <span class="nv">$arg2</span> ... <span class="k">{</span>
+        <span class="nv">CommandType</span> <span class="nv">$arg1</span> <span class="nv">$arg2</span> ...
+        <span class="nv">CommandType</span> <span class="nv">$arg1</span> <span class="nv">$arg2</span> ...
+    <span class="k">}</span>
+
+    <span class="nv">BlockType</span> <span class="nv">$name</span> <span class="nv">$arg1</span> <span class="nv">$arg2</span> ... <span class="k">{</span>
+        <span class="nv">$data0</span> <span class="nv">$data1</span> <span class="nv">$data2</span> <span class="nv">...</span>
+    <span class="k">}</span>
+<span class="k">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+<dl class="docutils">
+<dt><strong>ヘッダ</strong></dt>
+<dd>ヘッダはファイルフォーマットをあらわします。フォーマットシグネチャとバージョンが記述されます。</dd>
+<dt><strong>ブロック</strong></dt>
+<dd>ブロックは一群のデータ集合をあらわします。ブロックタイプ、名前および引数が記述されます。
+ブロックの子要素として、複数のコマンドや複数のブロックを格納することができます。
+さらに、ブロックデータとして単純な値の配列を格納することもできます。</dd>
+<dt><strong>コマンド</strong></dt>
+<dd>コマンドは単純なデータをあらわします。コマンドタイプと引数が記述されます。</dd>
+</dl>
+<p>コマンド引数、ブロック引数、ブロックデータに含まれる要素の型は、以下のとおりです。</p>
+<blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="9%" />
+<col width="25%" />
+<col width="17%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">型</th>
+<th class="head">データ</th>
+<th class="head">記述例 1</th>
+<th class="head">記述例 2</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>ref</td>
+<td>ブロックへの参照</td>
+<td>&quot;bone-0&quot;</td>
+<td>&quot;Bone::bone-0&quot;  (ブロックタイプつき)</td>
+</tr>
+<tr><td>enum</td>
+<td>列挙定数</td>
+<td>POSITION</td>
+<td>POSITION|NORMAL (論理和)</td>
+</tr>
+<tr><td>string</td>
+<td>8bit ゼロ終端文字列</td>
+<td>&quot;texture.png&quot;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>float</td>
+<td>32bit 浮動小数点数</td>
+<td>10.0</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>half</td>
+<td>16bit 浮動小数点数</td>
+<td>10.0</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>int</td>
+<td>32bit 符号つき整数</td>
+<td>10</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>uint</td>
+<td>32bit 符号なし整数</td>
+<td>10</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>short</td>
+<td>16bit 符号つき整数</td>
+<td>10</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>ushort</td>
+<td>16bit 符号なし整数</td>
+<td>10</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>byte</td>
+<td>8bit 符号つき整数</td>
+<td>10</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>ubyte</td>
+<td>8bit 符号なし整数</td>
+<td>10</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+<div class="section" id="id4">
+<h2><a class="toc-backref" href="#id19">テキスト形式</a></h2>
+<p>テキスト形式では、モデルデータがテキスト表現で格納されます。</p>
+<ul class="simple">
+<li>ファイル名の拡張子は &quot;.MDS&quot; です。</li>
+<li>フォーマットシグネチャは &quot;.MDS&quot; です。</li>
+<li>キャラクタのサイズは 8bit です。</li>
+<li>File ブロックは省略されます</li>
+<li>Arrays ブロックの頂点ストライドは 0 になります</li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h2><a class="toc-backref" href="#id20">バイナリ形式</a></h2>
+<p>バイナリ形式では、モデルデータがバイナリ表現で格納されます。</p>
+<ul class="simple">
+<li>ファイル名の拡張子は &quot;.MDX&quot; です。</li>
+<li>フォーマットシグネチャは '.MDX' です。</li>
+<li>バイトオーダーはリトルエンディアンです</li>
+<li>File ブロックが出力されます</li>
+<li>Arrays ブロックの頂点ストライドは計算された値になります</li>
+</ul>
+<p>ヘッダ、ブロック、コマンドは、以下のような構造体に格納されます。</p>
+<div class="highlight"><pre><span class="k">struct</span> <span class="nc">MdxHeader</span> <span class="p">{</span>
+    <span class="kt">uint</span> <span class="n">Signature</span> <span class="p">;</span>        <span class="c1">// フォーマットシグネチャ ( 0x2e4d4458 )</span>
+    <span class="kt">uint</span> <span class="n">Version</span> <span class="p">;</span>          <span class="c1">// フォーマットバージョン ( 0x312e3030 )</span>
+    <span class="kt">uint</span> <span class="n">Style</span> <span class="p">;</span>            <span class="c1">// フォーマットスタイル   ( 0x0050534d )</span>
+    <span class="kt">uint</span> <span class="n">Option</span> <span class="p">;</span>           <span class="c1">// フォーマットオプション ( 0x00000000 )</span>
+<span class="p">}</span>
+
+<span class="k">struct</span> <span class="nc">MdxBlock</span> <span class="p">{</span>
+    <span class="kt">ushort</span> <span class="n">Type</span> <span class="p">;</span>           <span class="c1">// ブロックタイプ</span>
+    <span class="kt">ushort</span> <span class="n">NameEnd</span> <span class="p">;</span>        <span class="c1">// ブロック名の終了位置</span>
+    <span class="kt">uint</span> <span class="n">ArgsEnd</span> <span class="p">;</span>          <span class="c1">// ブロック引数の終了位置</span>
+    <span class="kt">uint</span> <span class="n">DataEnd</span> <span class="p">;</span>          <span class="c1">// ブロックデータの終了位置</span>
+    <span class="kt">uint</span> <span class="n">ChildEnd</span> <span class="p">;</span>         <span class="c1">// 子要素の終了位置</span>
+
+    <span class="c1">// ブロック名</span>
+    <span class="c1">// ブロック引数</span>
+    <span class="c1">// ブロックデータ</span>
+    <span class="c1">// 子要素</span>
+<span class="p">}</span>
+
+<span class="k">struct</span> <span class="nc">MdxCommand</span> <span class="p">{</span>
+    <span class="kt">ushort</span> <span class="n">Type</span> <span class="p">;</span>           <span class="c1">// コマンドタイプ | 0x8000</span>
+    <span class="kt">ushort</span> <span class="n">ArgsEnd</span> <span class="p">;</span>        <span class="c1">// コマンド引数の終了位置</span>
+
+    <span class="c1">// コマンド引数</span>
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+<ul class="simple">
+<li>構造体とその要素の位置は、４バイト単位でアラインされています。</li>
+<li>ある要素の開始位置は、直前の要素の終了位置から計算できます。</li>
+<li>ある要素の終了位置は、構造体先頭からのオフセットとして、構造体に格納されています。</li>
+</ul>
+<p>コマンド引数、ブロック引数、ブロックデータに含まれる値の位置は、それぞれのデータ型のサイズでアラインされています。ブロックへの参照は以下のようなビットフィールド値として格納されます。</p>
+<div class="highlight"><pre><span class="k">struct</span> <span class="nc">MdxReference</span> <span class="p">{</span>
+    <span class="kt">uint</span> <span class="n">Bits</span> <span class="p">;</span>
+
+    <span class="c1">// ブロックのタイプ</span>
+    <span class="kt">int</span> <span class="n">Type</span> <span class="p">{</span> <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="p">(</span><span class="kt">int</span><span class="p">)(</span> <span class="n">Bits</span> <span class="p">&gt;&gt;</span> <span class="m">16</span> <span class="p">)</span> <span class="p">&amp;</span> <span class="m">0</span><span class="n">xffff</span> <span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+    <span class="c1">// ブロックの相対レベル</span>
+    <span class="kt">int</span> <span class="n">Level</span> <span class="p">{</span> <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="p">(</span><span class="kt">int</span><span class="p">)(</span> <span class="n">Bits</span> <span class="p">&gt;&gt;</span> <span class="m">12</span> <span class="p">)</span> <span class="p">&amp;</span> <span class="m">0</span><span class="n">x000f</span> <span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+    <span class="c1">// 同じ階層内の同タイプブロック内のブロック番号</span>
+    <span class="kt">int</span> <span class="n">Index</span> <span class="p">{</span> <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="p">(</span><span class="kt">int</span><span class="p">)(</span> <span class="n">Bits</span> <span class="p">&gt;&gt;</span> <span class="m">0</span> <span class="p">)</span> <span class="p">&amp;</span> <span class="m">0</span><span class="n">x0fff</span> <span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+</div>
+</div>
+<div class="section" id="id6">
+<h1><a class="toc-backref" href="#id21">ブロック</a></h1>
+<div class="section" id="file">
+<h2><a class="toc-backref" href="#id22">File</a></h2>
+<pre class="literal-block">
+[概要]
+
+    ファイル本体をあらわすブロック
+
+[書式]
+
+    File $name {
+        ...
+    }
+
+[引数]
+
+    string $name                ブロック名
+
+[要素]
+
+    Model
+</pre>
+</div>
+<div class="section" id="model">
+<h2><a class="toc-backref" href="#id23">Model</a></h2>
+<pre class="literal-block">
+[概要]
+
+    モデル本体をあらわすブロック
+
+[書式]
+
+    Model $name {
+        ...
+    }
+
+[引数]
+
+    string $name                ブロック名
+
+[要素]
+
+    BoundingBox
+    BoundingSphere
+    Bone                        (複数可)
+    Part                        (複数可)
+    Material                    (複数可)
+    Texture                     (複数可)
+    Motion                      (複数可)
+</pre>
+</div>
+<div class="section" id="bone">
+<h2><a class="toc-backref" href="#id24">Bone</a></h2>
+<pre class="literal-block">
+[概要]
+
+    階層ノードをあらわすブロック
+
+[書式]
+
+    Bone $name {
+        ...
+    }
+
+[引数]
+
+    string $name                ブロック名
+
+[要素]
+
+    BoundingBox
+    BoundingSphere
+    ParentBone
+    Visibility
+    Pivot
+    Translate
+    Rotate*
+    Scale
+    BlendBone                   (複数可)
+    DrawPart                    (複数可)
+</pre>
+</div>
+<div class="section" id="part">
+<h2><a class="toc-backref" href="#id25">Part</a></h2>
+<pre class="literal-block">
+[概要]
+
+    形状データをあらわすブロック
+
+[書式]
+
+    Part $name {
+        ...
+    }
+
+[引数]
+
+    string $name                ブロック名
+
+[要素]
+
+    BoundingBox
+    BoundingSphere
+    Mesh                        (複数可)
+    Arrays                      (複数可)
+</pre>
+</div>
+<div class="section" id="mesh">
+<h2><a class="toc-backref" href="#id26">Mesh</a></h2>
+<pre class="literal-block">
+[概要]
+
+    描画メッシュをあらわすブロック
+
+[書式]
+
+    Mesh $name {
+        ...
+    }
+
+[引数]
+
+    string $name                ブロック名
+
+[要素]
+
+    BoundingBox
+    BoundingSphere
+    SetMaterial
+    SetArrays
+    BlendIndices
+    DrawArrays                  (複数可)
+</pre>
+</div>
+<div class="section" id="arrays">
+<h2><a class="toc-backref" href="#id27">Arrays</a></h2>
+<pre class="literal-block">
+[概要]
+
+    頂点データをあらわすブロック
+
+[書式]
+
+    Arrays $name $format $stride $count {
+        ...
+    }
+
+[引数]
+
+    string $name                ブロック名
+    enum VertexFormat $format   頂点フォーマット
+    int $stride                 頂点ストライド
+    int $count                  頂点数
+
+[データ]
+
+    頂点データは (１頂点のデータ x 頂点数) で構成されます。
+    ------------------------------------------------
+    Position Normal Color TexCoord Weights Indices  // Data for one vertex
+    Position Normal Color TexCoord Weights Indices  // Data for one vertex
+    Position Normal Color TexCoord Weights Indices  // Data for one vertex
+    ...
+    ------------------------------------------------
+
+    頂点データの内容は、頂点フォーマットの論理和で定義されます。
+
+    頂点フォーマットと、対応する頂点要素は以下のとおりです。
+    ------------------------------------------------
+    POSITION    float x 3   位置座標
+    NORMAL      float x 3   法線ベクトル
+    COLOR       float x 4   頂点カラー
+    TEXCOORD    float x 2   テクスチャ座標
+    WEIGHTn     float x n   ブレンドウェイト
+    INDICES     ubyte x n   ブレンドインデクス
+    ------------------------------------------------
+</pre>
+</div>
+<div class="section" id="material">
+<h2><a class="toc-backref" href="#id28">Material</a></h2>
+<pre class="literal-block">
+[概要]
+
+    マテリアル設定をあらわすブロック
+
+[書式]
+
+    Material $name {
+        ...
+    }
+
+[引数]
+
+    string $name                ブロック名
+
+[要素]
+
+    Diffuse
+    Ambient
+    Specular
+    Emission
+    Opacity
+    Shininess
+    Layer                       (複数可)
+</pre>
+</div>
+<div class="section" id="layer">
+<h2><a class="toc-backref" href="#id29">Layer</a></h2>
+<pre class="literal-block">
+[概要]
+
+    テクスチャマッピングをあらわすブロック
+
+[書式]
+
+    Layer $name {
+        ...
+    }
+
+[引数]
+
+    string $name                ブロック名
+
+[要素]
+
+    SetTexture
+</pre>
+</div>
+<div class="section" id="texture">
+<h2><a class="toc-backref" href="#id30">Texture</a></h2>
+<pre class="literal-block">
+[概要]
+
+    テクスチャ画像をあらわすブロック
+
+[書式]
+
+    Texture $name {
+        ...
+    }
+
+[引数]
+
+    string $name                ブロック名
+
+[要素]
+
+    FileName
+    FileImage
+    UVTranslate
+    UVScale
+</pre>
+</div>
+<div class="section" id="motion">
+<h2><a class="toc-backref" href="#id31">Motion</a></h2>
+<pre class="literal-block">
+[概要]
+
+    アニメーション集合をあらわすブロック
+
+[書式]
+
+    Motion $name {
+        ...
+    }
+
+[引数]
+
+    string $name                ブロック名
+
+[要素]
+
+    FrameLoop
+    FrameRate
+    FrameRepeat
+    Animate                     (複数可)
+    FCurve                      (複数可)
+</pre>
+</div>
+<div class="section" id="fcurve">
+<h2><a class="toc-backref" href="#id32">FCurve</a></h2>
+<pre class="literal-block">
+[概要]
+
+    アニメーションカーブをあらわすブロック
+
+[書式]
+
+    FCurve $name $interp $extrap $dimCount $keyCount {
+        ...
+    }
+
+[引数]
+
+    string $name                ブロック名
+    enum InterpType $interp     内挿タイプ
+    enum ExtrapType $extrap     外挿タイプ
+    int $dimCount               次元数
+    int $keyCount               キーフレーム数
+
+[データ]
+
+    アニメーションカーブは (１キーフレームのデータ x キーフレーム数) で構成されます。
+
+    基本的には、１つのキーフレームにはフレームとキー値が格納されます。要素数は (次元数 + 1) になります。
+    ------------------------------------------------
+    Frame Values[n]  // Data for one key-frame
+    Frame Values[n]  // Data for one key-frame
+    Frame Values[n]  // Data for one key-frame
+    ...
+    ------------------------------------------------
+
+    内挿タイプが HERMITE の場合、さらに接線ベクトルの Y 成分が格納されます。要素数は (次元数 x 3 + 1) となります。
+    ------------------------------------------------
+    Frame Values[n] InTangentY[n] OutTangentY[n]
+    Frame Values[n] InTangentY[n] OutTangentY[n]
+    Frame Values[n] InTangentY[n] OutTangentY[n]
+    ...
+    ------------------------------------------------
+
+    内挿タイプが CUBIC の場合、さらに接線ベクトルの X 成分が格納されます。要素数は (次元数 x 5 + 1) となります。
+    ------------------------------------------------
+    Frame Values[n] InTangentY[n] OutTangentY[n] InTangentX[n] OutTangentX[n]
+    Frame Values[n] InTangentY[n] OutTangentY[n] InTangentX[n] OutTangentX[n]
+    Frame Values[n] InTangentY[n] OutTangentY[n] InTangentX[n] OutTangentX[n]
+    ...
+    ------------------------------------------------
+</pre>
+</div>
+</div>
+<div class="section" id="id7">
+<h1><a class="toc-backref" href="#id33">共通コマンド</a></h1>
+<div class="section" id="filename">
+<h2><a class="toc-backref" href="#id34">FileName</a></h2>
+<pre class="literal-block">
+[概要]
+
+    ファイル名
+
+[書式]
+
+    FileName $name
+
+[引数]
+
+    string $name                ファイル名
+</pre>
+</div>
+<div class="section" id="fileimage">
+<h2><a class="toc-backref" href="#id35">FileImage</a></h2>
+<pre class="literal-block">
+[概要]
+
+    ファイルイメージ
+
+[書式]
+
+    FileImage $size $data ...
+
+[引数]
+
+    uint $size                  サイズ (単位＝バイト)
+    uint $data ...              データ (32bit ごと)
+</pre>
+</div>
+<div class="section" id="boundingbox">
+<h2><a class="toc-backref" href="#id36">BoundingBox</a></h2>
+<pre class="literal-block">
+[概要]
+
+    バウンディングボックス
+
+[書式]
+
+    BoundingBox $minX $minY $minZ $maxX $maxY $maxZ
+
+[引数]
+
+    float $minX                 最小 X
+    float $minY                 最小 Y
+    float $minZ                 最小 Z
+    float $maxX                 最大 X
+    float $maxY                 最大 Y
+    float $maxZ                 最大 Z
+</pre>
+</div>
+<div class="section" id="boundingsphere">
+<h2><a class="toc-backref" href="#id37">BoundingSphere</a></h2>
+<pre class="literal-block">
+[概要]
+
+    バウンディングスフィア
+
+[書式]
+
+    BoundingSphere $centerX $centerY $centerZ $radius
+
+[引数]
+
+    float $centerX              中心 X
+    float $centerY              中心 Y
+    float $centerZ              中心 Z
+    float $radius               半径
+</pre>
+</div>
+</div>
+<div class="section" id="id8">
+<h1><a class="toc-backref" href="#id38">Bone コマンド</a></h1>
+<div class="section" id="parentbone">
+<h2><a class="toc-backref" href="#id39">ParentBone</a></h2>
+<pre class="literal-block">
+[概要]
+
+    親ボーン
+
+[書式]
+
+    ParentBone $bone
+
+[引数]
+
+    ref Bone $bone              親ボーンへの参照
+</pre>
+</div>
+<div class="section" id="visibility">
+<h2><a class="toc-backref" href="#id40">Visibility</a></h2>
+<pre class="literal-block">
+[概要]
+
+    ビジビリティ
+
+[書式]
+
+    Visibility $visibility
+
+[引数]
+
+    uint $visibility            ビジビリティ
+</pre>
+</div>
+<div class="section" id="pivot">
+<h2><a class="toc-backref" href="#id41">Pivot</a></h2>
+<pre class="literal-block">
+[概要]
+
+    ピボット
+
+[書式]
+
+    Pivot $x $y $z
+
+[引数]
+
+    float $x                    X
+    float $y                    Y
+    float $z                    Z
+</pre>
+</div>
+<div class="section" id="translate">
+<h2><a class="toc-backref" href="#id42">Translate</a></h2>
+<pre class="literal-block">
+[概要]
+
+    トランスレーション
+
+[書式]
+
+    Translate $x $y $z
+
+[引数]
+
+    float $x                    X
+    float $y                    Y
+    float $z                    Z
+</pre>
+</div>
+<div class="section" id="rotate">
+<h2><a class="toc-backref" href="#id43">Rotate</a></h2>
+<pre class="literal-block">
+[概要]
+
+    ローテーション (四元数)
+
+[書式]
+
+    Rotate $x $y $z $w
+
+[引数]
+
+    float $x                    X
+    float $y                    Y
+    float $z                    Z
+    float $w                    W
+</pre>
+</div>
+<div class="section" id="rotatexyz-yzx-zxy-xzy-yxz-zyx">
+<h2><a class="toc-backref" href="#id44">RotateXYZ/YZX/ZXY/XZY/YXZ/ZYX</a></h2>
+<pre class="literal-block">
+[概要]
+
+    ローテーション (オイラー角)
+
+[書式]
+
+    RotateXYZ $x $y $z
+    RotateYZX $x $y $z
+    RotateZXY $x $y $z
+    RotateXZY $x $y $z
+    RotateYXZ $x $y $z
+    RotateZYX $x $y $z
+
+[引数]
+
+    float $x                    X (単位＝度)
+    float $y                    Y (単位＝度)
+    float $z                    Z (単位＝度)
+</pre>
+</div>
+<div class="section" id="scale">
+<h2><a class="toc-backref" href="#id45">Scale</a></h2>
+<pre class="literal-block">
+[概要]
+
+    スケーリング
+
+[書式]
+
+    Scale $x $y $z
+
+[引数]
+
+    float $x                    X
+    float $y                    Y
+    float $z                    Z
+</pre>
+</div>
+<div class="section" id="blendbone">
+<h2><a class="toc-backref" href="#id46">BlendBone</a></h2>
+<pre class="literal-block">
+[概要]
+
+    頂点ブレンドボーン
+
+[書式]
+
+    BlendBone $bone $m11 $m12 $m13 $m14 \
+                    $m21 $m22 $m23 $m24 \
+                    $m31 $m32 $m33 $m34 \
+                    $m41 $m42 $m43 $m44
+
+[引数]
+
+    ref Bone $bone              頂点ブレンドボーンへの参照
+    float $m11 ... $m14         オフセット行列の 1 列目
+    float $m21 ... $m24         オフセット行列の 2 列目
+    float $m31 ... $m34         オフセット行列の 3 列目
+    float $m41 ... $m44         オフセット行列の 4 列目
+</pre>
+</div>
+<div class="section" id="drawpart">
+<h2><a class="toc-backref" href="#id47">DrawPart</a></h2>
+<pre class="literal-block">
+[概要]
+
+    描画パート
+
+[書式]
+
+    DrawPart $part
+
+[引数]
+
+    ref Part $part              描画パートへの参照
+</pre>
+</div>
+</div>
+<div class="section" id="id9">
+<h1><a class="toc-backref" href="#id48">Mesh コマンド</a></h1>
+<div class="section" id="setmaterial">
+<h2><a class="toc-backref" href="#id49">SetMaterial</a></h2>
+<pre class="literal-block">
+[概要]
+
+    マテリアル設定
+
+[書式]
+
+    SetMaterial $material
+
+[引数]
+
+    ref Material $material      マテリアル設定への参照
+</pre>
+</div>
+<div class="section" id="setarrays">
+<h2><a class="toc-backref" href="#id50">SetArrays</a></h2>
+<pre class="literal-block">
+[概要]
+
+    頂点データ
+
+[書式]
+
+    SetArrays $arrays
+
+[引数]
+
+    ref Arrays $arrays          頂点データへの参照
+</pre>
+</div>
+<div class="section" id="blendindices">
+<h2><a class="toc-backref" href="#id51">BlendIndices</a></h2>
+<pre class="literal-block">
+[概要]
+
+    頂点ブレンドインデクス
+
+[書式]
+
+    BlendIndices $count $index ...
+
+[引数]
+
+    int $count                  頂点ブレンド数
+    int $index ...              頂点ブレンドインデクス
+</pre>
+</div>
+<div class="section" id="drawarrays">
+<h2><a class="toc-backref" href="#id52">DrawArrays</a></h2>
+<pre class="literal-block">
+[概要]
+
+    描画プリミティブ
+
+[書式]
+
+    DrawArrays $mode $vertCount $primCount $index ...
+
+[引数]
+
+    enum DrawMode $mode         描画モード
+    int $vertCount              頂点数
+    int $primCount              プリミティブ数
+    ushort $index ...           頂点インデクス
+</pre>
+</div>
+</div>
+<div class="section" id="id10">
+<h1><a class="toc-backref" href="#id53">Material コマンド</a></h1>
+<div class="section" id="diffuse">
+<h2><a class="toc-backref" href="#id54">Diffuse</a></h2>
+<pre class="literal-block">
+[概要]
+
+    ディフューズカラー
+
+[書式]
+
+    Diffuse $r $g $b
+
+[引数]
+
+    float $r                    R
+    float $g                    G
+    float $b                    B
+</pre>
+</div>
+<div class="section" id="ambient">
+<h2><a class="toc-backref" href="#id55">Ambient</a></h2>
+<pre class="literal-block">
+[概要]
+
+    アンビエントカラー
+
+[書式]
+
+    Ambient $r $g $b
+
+[引数]
+
+    float $r                    R
+    float $g                    G
+    float $b                    B
+</pre>
+</div>
+<div class="section" id="specular">
+<h2><a class="toc-backref" href="#id56">Specular</a></h2>
+<pre class="literal-block">
+[概要]
+
+    スペキュラーカラー
+
+[書式]
+
+    Specular $r $g $b
+
+[引数]
+
+    float $r                    R
+    float $g                    G
+    float $b                    B
+</pre>
+</div>
+<div class="section" id="emission">
+<h2><a class="toc-backref" href="#id57">Emission</a></h2>
+<pre class="literal-block">
+[概要]
+
+    エミッションカラー
+
+[書式]
+
+    Emission $r $g $b
+
+[引数]
+
+    float $r                    R
+    float $g                    G
+    float $b                    B
+</pre>
+</div>
+<div class="section" id="opacity">
+<h2><a class="toc-backref" href="#id58">Opacity</a></h2>
+<pre class="literal-block">
+[概要]
+
+    不透明度
+
+[書式]
+
+    Opacity $opacity
+
+[引数]
+
+    float $opacity              不透明度
+</pre>
+</div>
+<div class="section" id="shininess">
+<h2><a class="toc-backref" href="#id59">Shininess</a></h2>
+<pre class="literal-block">
+[概要]
+
+    スペキュラー指数
+
+[書式]
+
+    Shininess $shininess
+
+[引数]
+
+    float $shininess            スペキュラー指数
+</pre>
+</div>
+</div>
+<div class="section" id="id11">
+<h1><a class="toc-backref" href="#id60">Layer コマンド</a></h1>
+<div class="section" id="settexture">
+<h2><a class="toc-backref" href="#id61">SetTexture</a></h2>
+<pre class="literal-block">
+[概要]
+
+    テクスチャ画像
+
+[書式]
+
+    SetTexture $texture
+
+[引数]
+
+    ref Texture $texture        テクスチャへの参照
+</pre>
+</div>
+</div>
+<div class="section" id="id12">
+<h1><a class="toc-backref" href="#id62">Texture コマンド</a></h1>
+<div class="section" id="uvtranslate">
+<h2><a class="toc-backref" href="#id63">UVTranslate</a></h2>
+<pre class="literal-block">
+[概要]
+
+    UV トランスレーション
+
+[書式]
+
+    UVTranslate $u $v
+
+[引数]
+
+    float $u                    U
+    float $v                    V
+</pre>
+</div>
+<div class="section" id="uvscale">
+<h2><a class="toc-backref" href="#id64">UVScale</a></h2>
+<pre class="literal-block">
+[概要]
+
+    UV スケーリング
+
+[書式]
+
+    UVScale $u $v
+
+[引数]
+
+    float $u                    U
+    float $v                    V
+</pre>
+</div>
+</div>
+<div class="section" id="id13">
+<h1><a class="toc-backref" href="#id65">Motion コマンド</a></h1>
+<div class="section" id="frameloop">
+<h2><a class="toc-backref" href="#id66">FrameLoop</a></h2>
+<pre class="literal-block">
+[概要]
+
+    ループ範囲
+
+[書式]
+
+    FrameLoop $start $end
+
+[引数]
+
+    $start                      開始フレーム
+    $end                        終了フレーム
+</pre>
+</div>
+<div class="section" id="framerate">
+<h2><a class="toc-backref" href="#id67">FrameRate</a></h2>
+<pre class="literal-block">
+[概要]
+
+    フレームレート
+
+[書式]
+
+    FrameRate $fps
+
+[引数]
+
+    float $fps                  フレームレート (単位＝フレーム毎秒)
+</pre>
+</div>
+<div class="section" id="framerepeat">
+<h2><a class="toc-backref" href="#id68">FrameRepeat</a></h2>
+<pre class="literal-block">
+[概要]
+
+    繰り返しモード
+
+[書式]
+
+    FrameRepeat $mode
+
+[引数]
+
+    enum RepeatMode $mode       繰り返しモード
+</pre>
+</div>
+<div class="section" id="animate">
+<h2><a class="toc-backref" href="#id69">Animate</a></h2>
+<pre class="literal-block">
+[概要]
+
+    アニメーション
+
+[書式]
+
+    Animate $block $command $option $fcurve
+
+[引数]
+
+    ref Block $block            ブロックへの参照
+    enum CommandType $command   コマンドタイプ
+    int $option                 オプション
+    ref FCurve $fcurve          アニメーションカーブへの参照
+</pre>
+</div>
+</div>
+<div class="section" id="id14">
+<h1><a class="toc-backref" href="#id70">列挙定数</a></h1>
+<div class="section" id="blocktype">
+<h2><a class="toc-backref" href="#id71">BlockType</a></h2>
+<pre class="literal-block">
+File            = 0x0002
+Model           = 0x0010
+Bone            = 0x0011
+Part            = 0x0012
+Mesh            = 0x0013
+Arrays          = 0x0014
+Material        = 0x0016
+Layer           = 0x0017
+Texture         = 0x0018
+Motion          = 0x001b
+FCurve          = 0x001c
+</pre>
+</div>
+<div class="section" id="commandtype">
+<h2><a class="toc-backref" href="#id72">CommandType</a></h2>
+<pre class="literal-block">
+FileName        = 0x0080
+FileImage       = 0x0081
+BoundingBox     = 0x0082
+BoundingSphere  = 0x0083
+ParentBone      = 0x0440
+Visibility      = 0x0441
+Pivot           = 0x0442
+Translate       = 0x0443
+Rotate          = 0x0444
+RotateXYZ       = 0x0445
+RotateYZX       = 0x0446
+RotateZXY       = 0x0447
+RotateXZY       = 0x0448
+RotateYXZ       = 0x0449
+RotateZYX       = 0x044a
+Scale           = 0x044b
+BlendBone       = 0x0460
+DrawPart        = 0x047f
+SetMaterial     = 0x04c0
+SetArrays       = 0x04c1
+BlendIndices    = 0x04c2
+DrawArrays      = 0x04e0
+Diffuse         = 0x0581
+Ambient         = 0x0582
+Specular        = 0x0583
+Emission        = 0x0584
+Opacity         = 0x0588
+Shininess       = 0x0589
+SetTexture      = 0x05c0
+UVTranslate     = 0x0621
+UVScale         = 0x0623
+FrameLoop       = 0x06c0
+FrameRate       = 0x06c1
+FrameRepeat     = 0x06c2
+Animate         = 0x06e0
+</pre>
+</div>
+<div class="section" id="vertexformat">
+<h2><a class="toc-backref" href="#id73">VertexFormat</a></h2>
+<pre class="literal-block">
+POSITION        = 1 &lt;&lt; 0
+NORMAL          = 1 &lt;&lt; 1
+COLOR           = 1 &lt;&lt; 3
+TEXCOORD        = 1 &lt;&lt; 5
+WEIGHTn         = n &lt;&lt; 8
+INDICES         = 1 &lt;&lt; 16
+</pre>
+</div>
+<div class="section" id="interptype">
+<h2><a class="toc-backref" href="#id74">InterpType</a></h2>
+<pre class="literal-block">
+CONSTANT        = 0x0000
+LINEAR          = 0x0001
+HERMITE         = 0x0002
+CUBIC           = 0x0003
+SPHERICAL       = 0x0004
+</pre>
+</div>
+<div class="section" id="extraptype">
+<h2><a class="toc-backref" href="#id75">ExtrapType</a></h2>
+<pre class="literal-block">
+HOLD            = 0x0000
+CYCLE           = 0x0011
+SHUTTLE         = 0x0022
+HOLD_HOLD       = 0x0000
+HOLD_CYCLE      = 0x0001
+HOLD_SHUTTLE    = 0x0002
+CYCLE_HOLD      = 0x0010
+CYCLE_CYCLE     = 0x0011
+CYCLE_SHUTTLE   = 0x0012
+SHUTTLE_HOLD    = 0x0020
+SHUTTLE_CYCLE   = 0x0021
+SHUTTLE_SHUTTLE = 0x0022
+</pre>
+</div>
+<div class="section" id="drawmode">
+<h2><a class="toc-backref" href="#id76">DrawMode</a></h2>
+<pre class="literal-block">
+POINTS          = 0x0000
+LINES           = 0x0001
+LINE_STRIP      = 0x0002
+TRIANGLES       = 0x0003
+TRIANGLE_STRIP  = 0x0004
+TRIANGLE_FAN    = 0x0005
+</pre>
+</div>
+<div class="section" id="repeatmode">
+<h2><a class="toc-backref" href="#id77">RepeatMode</a></h2>
+<pre class="literal-block">
+HOLD            = 0x0000
+CYCLE           = 0x0001
+</pre>
+</div>
+</div>
+ </div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: PlayStation(R)Mobile Development Assistant について</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('overview_devassistant_ja.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<h1>PlayStation(R)Mobile Development Assistant について </h1>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><p>この文書では実機でPSMアプリケーションを実行するために必要となる PlayStation(R)Mobile Development Assistant (PSM DevAssistant) について説明します。</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#id1" id="id2">概要</a><ul>
+<li><a class="reference internal" href="#android-playstation-r-mobile-development-assistant" id="id3">Android版 PlayStation(R)Mobile Development Assistant</a></li>
+<li><a class="reference internal" href="#ps-vita-playstation-r-mobile-development-assistant" id="id4">PS Vita版 PlayStation(R)Mobile Development Assistant</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h1><a class="toc-backref" href="#id2">概要</a></h1>
+<p>PlayStation(R)Mobile Development Assistant (PSM DevAssistant) とは、AndroidデバイスやPS Vita上でPSMアプリの開発を行うためのアプリケーションです。</p>
+<p>Android版 / PS Vita版 が存在し、アプリケーションの実行に先立って各デバイスにインストールされている必要があります。</p>
+<p>また、各デバイス上での実行に先立って Publishing Utility を用いてプロジェクトに対応する鍵の作成とネットワークに接続できる環境が必要となります。</p>
+<p>インストールを含む各デバイスでの設定、及び鍵作成の詳細についてはそれぞれ以下のドキュメントを参照してください。</p>
+<blockquote>
+<ul class="simple">
+<li><a class="reference external" href="./setup_launcher_ja.html">Androidデバイスで実行するための設定</a></li>
+<li><a class="reference external" href="./setup_launcher_vita_ja.html">PlayStation(R)Vitaで実行するための設定</a></li>
+<li><a class="reference external" href="./key_management_ja.html">実機でPSMアプリを実行するための鍵の作成について</a></li>
+</ul>
+</blockquote>
+<div class="section" id="android-playstation-r-mobile-development-assistant">
+<h2><a class="toc-backref" href="#id3">Android版 PlayStation(R)Mobile Development Assistant</a></h2>
+<p>Android版 PlayStation(R)Mobile Development Assistant は、以下のような画面になります。</p>
+<div align="center" class="figure">
+<img alt="./image/devassistant/screenshot_devassistant_android.png" src="./image/devassistant/screenshot_devassistant_android.png" style="width: 640.0px; height: 360.0px;" />
+<p class="caption"><strong>図1 Android版 PlayStation(R)Mobile Development Assistant</strong></p>
+</div>
+<p>図1の右上のメニューを選択することで、Android版 PlayStation(R)Mobile Development Assistant のメニューが表示されます。</p>
+<p>各メニューは以下のような機能を提供します。</p>
+<blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="67%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">項目名</th>
+<th class="head">概要</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><em>Refresh</em></td>
+<td>インストール済みのPSMアプリのリストを更新します。</td>
+</tr>
+<tr><td><em>Debug Settings</em></td>
+<td>各種デバッグ項目を表示します。</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p><strong>[Debug Settings]</strong> 内の項目には、以下のようなものが存在します。</p>
+<blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="39%" />
+<col width="61%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">項目名</th>
+<th class="head">概要</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><em>Reset Ticket Information</em></td>
+<td>アプリ内課金機能について、購入情報をクリアします。</td>
+</tr>
+<tr><td><em>Sign In</em></td>
+<td>PlayStation(R)Networkにログインする為の情報を入力します。</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p>また、インストール済みのPSMアプリを削除するには、リストに表示されている各アプリ名のセルを長押しすることで表示されるメニューから &quot;Delete&quot; を選択します。</p>
+</div>
+<div class="section" id="ps-vita-playstation-r-mobile-development-assistant">
+<h2><a class="toc-backref" href="#id4">PS Vita版 PlayStation(R)Mobile Development Assistant</a></h2>
+<p>PS Vita版 PlayStation(R)Mobile Development Assistant は、以下のような画面になります。</p>
+<div align="center" class="figure">
+<img alt="./image/devassistant/screenshot_devassistant_vita.png" src="./image/devassistant/screenshot_devassistant_vita.png" style="width: 720.0px; height: 408.0px;" />
+<p class="caption"><strong>図2 PS Vita版 PlayStation(R)Mobile Development Assistant</strong></p>
+</div>
+<p>図2の右下のメニューを選択することで、PS Vita版 PlayStation(R)Mobile Development Assistant のオプション一覧が表示されます。</p>
+<p>各メニューは以下のような機能を提供します。</p>
+<blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="36%" />
+<col width="64%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">項目名</th>
+<th class="head">概要</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><em>Delete Contents</em></td>
+<td>インストール済みのPSMアプリを削除します。</td>
+</tr>
+<tr><td><em>Intellectual Property Notices</em></td>
+<td>PSM DevAssistant の権利表記を表示します。</td>
+</tr>
+<tr><td><em>Go to the Developer Forums</em></td>
+<td>ウェブブラウザーを起動して、Devloper Forums ページを開きます。</td>
+</tr>
+<tr><td><em>Debug Settings</em></td>
+<td>各種デバッグ項目を表示します。</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p><strong>[Debug Settings]</strong> 内の項目には、以下のようなものが存在します。</p>
+<blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="73%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">項目名</th>
+<th class="head">概要</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><em>Delete Documents</em></td>
+<td>インストール済みの全てのPSMアプリのセーブデータ(Documents)を削除します。</td>
+</tr>
+<tr><td><em>Reset Ticket Information</em></td>
+<td>アプリ内課金機能について、インストール済みの全てのPSMアプリの購入情報をクリアします。</td>
+</tr>
+<tr><td><em>Switch Development Assistant</em></td>
+<td>動作させる Development Assistant のバージョンを切り替えます。</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p>PSM Publishing Utility によるデバイスシード・鍵の作成、及びPSMアプリをインストールするためには、現在アクティブな Development Assistant のバージョンと 使用する PSM SDK Installer のバージョンを合わせておく必要がありますので、注意が必要です。</p>
+</div>
+</div>
+ </div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

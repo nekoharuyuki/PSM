@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: クラス Plane3D</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Plane3D.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public メソッド</a> &#124;
+<a href="#pub-attribs">Public 変数</a>  </div>
+  <div class="headertitle">
+<h1>クラス Plane3D</h1>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="Sce::PlayStation::HighLevel::GameEngine2D::Plane3D" --><!-- doxytag: inherits="Sce::PlayStation::HighLevel::GameEngine2D::Node" -->
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Plane3D.html" title="Plane3D ノードは、シーングラフ内で、ある程度まで3Dの方向性を許可します。 それは、タッチ座標を扱う方法をいくぶんか複雑にします。なのでシーン階層に Plane3D を含んでいる場合、直接 Di...">Plane3D</a> ノードは、シーングラフ内で、ある程度まで3Dの方向性を許可します。 それは、タッチ座標を扱う方法をいくぶんか複雑にします。なのでシーン階層に <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Plane3D.html" title="Plane3D ノードは、シーングラフ内で、ある程度まで3Dの方向性を許可します。 それは、タッチ座標を扱う方法をいくぶんか複雑にします。なのでシーン階層に Plane3D を含んでいる場合、直接 Di...">Plane3D</a> を含んでいる場合、直接 Director.Instance.CurrentScene.Camera.GetTouchPos() を使う代わりに、Plane3D 空間(すべてサブノード)で点を得るのに <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a05841bd87a15c4cf866014e38e4ffc4e" title="Like Director.Instance.CurrentScene.Camera.GetTouchPos に似ていますが、シーングラフ内の祖先に Plane3D が存在したときのケースを扱います。...">Node.GetTouchPos()</a> を使うことを確認してください。  
+<a href="#_details">[詳細]</a></p>
+<div class="dynheader">
+Plane3Dに対する継承グラフ</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Plane3D.png" usemap="#Plane3D_map" alt=""/>
+  <map id="Plane3D_map" name="Plane3D_map">
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html" alt="Node" shape="rect" coords="0,0,60,24"/>
+</map>
+ </div></div>
+
+<p><a href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Plane3D-members.html">すべてのメンバ一覧</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Public メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a374ffa16734c7e7418670815dc7618b9"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Plane3D::Plane3D" ref="a374ffa16734c7e7418670815dc7618b9" args="()" -->
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Plane3D.html#a374ffa16734c7e7418670815dc7618b9">Plane3D</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ。デフォルトはz=0 平面(単位行列)。 詳細は ModelMatrix のコメントを参照してください。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Plane3D.html#a2bd8271aeb0986382b8f821625f2bc23">Plane3D</a> (<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Matrix4.html">Matrix4</a> modelmatrix)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ。  <a href="#a2bd8271aeb0986382b8f821625f2bc23"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a49ab109887ee920a7b8d66b70c50f49d"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Plane3D::PushTransform" ref="a49ab109887ee920a7b8d66b70c50f49d" args="()" -->
+override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Plane3D.html#a49ab109887ee920a7b8d66b70c50f49d">PushTransform</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ノードとその子を描画する前にこの関数が呼び出されます。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af8e32079f6acf9b2c1f37b007ad3fa91"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Plane3D::FindParentPlane" ref="af8e32079f6acf9b2c1f37b007ad3fa91" args="(ref Matrix4 mat)" -->
+override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Plane3D.html#af8e32079f6acf9b2c1f37b007ad3fa91">FindParentPlane</a> (ref <a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Matrix4.html">Matrix4</a> mat)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">注意: FindParentPlane は最初に見つかった <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Plane3D.html" title="Plane3D ノードは、シーングラフ内で、ある程度まで3Dの方向性を許可します。 それは、タッチ座標を扱う方法をいくぶんか複雑にします。なのでシーン階層に Plane3D を含んでいる場合、直接 Di...">Plane3D</a> で停止します。 ツリーの枝で、複数の <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Plane3D.html" title="Plane3D ノードは、シーングラフ内で、ある程度まで3Dの方向性を許可します。 それは、タッチ座標を扱う方法をいくぶんか複雑にします。なのでシーン階層に Plane3D を含んでいる場合、直接 Di...">Plane3D</a> ノードを持っていないという前提です。 <br/></td></tr>
+<tr><td colspan="2"><h2><a name="pub-attribs"></a>
+Public 変数</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Matrix4.html">Matrix4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Plane3D.html#a47817e2fe3bbb2f4e054a70123be5daa">ModelMatrix</a> = Matrix4.Identity</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">この平面のための"変換行列"です。 平面は基点と法線で定義されます。しかし我々は平面を座標系(スタックにプッシュできる行列)としても使用するため、平面を行列として格納します。  <a href="#a47817e2fe3bbb2f4e054a70123be5daa"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>説明</h2>
+<div class="textblock"><p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Plane3D.html" title="Plane3D ノードは、シーングラフ内で、ある程度まで3Dの方向性を許可します。 それは、タッチ座標を扱う方法をいくぶんか複雑にします。なのでシーン階層に Plane3D を含んでいる場合、直接 Di...">Plane3D</a> ノードは、シーングラフ内で、ある程度まで3Dの方向性を許可します。 それは、タッチ座標を扱う方法をいくぶんか複雑にします。なのでシーン階層に <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Plane3D.html" title="Plane3D ノードは、シーングラフ内で、ある程度まで3Dの方向性を許可します。 それは、タッチ座標を扱う方法をいくぶんか複雑にします。なのでシーン階層に Plane3D を含んでいる場合、直接 Di...">Plane3D</a> を含んでいる場合、直接 Director.Instance.CurrentScene.Camera.GetTouchPos() を使う代わりに、Plane3D 空間(すべてサブノード)で点を得るのに <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a05841bd87a15c4cf866014e38e4ffc4e" title="Like Director.Instance.CurrentScene.Camera.GetTouchPos に似ていますが、シーングラフ内の祖先に Plane3D が存在したときのケースを扱います。...">Node.GetTouchPos()</a> を使うことを確認してください。 </p>
+</div><hr/><h2>コンストラクタとデストラクタ</h2>
+<a class="anchor" id="a2bd8271aeb0986382b8f821625f2bc23"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Plane3D::Plane3D" ref="a2bd8271aeb0986382b8f821625f2bc23" args="(Matrix4 modelmatrix)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Plane3D.html">Plane3D</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Matrix4.html">Matrix4</a>&#160;</td>
+          <td class="paramname"><em>modelmatrix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>コンストラクタ。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">modelmatrix</td><td>平面にセットする ModelMatrix の値。 詳細は ModelMatrix のコメントを参照してください。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/><h2>変数</h2>
+<a class="anchor" id="a47817e2fe3bbb2f4e054a70123be5daa"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Plane3D::ModelMatrix" ref="a47817e2fe3bbb2f4e054a70123be5daa" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Matrix4.html">Matrix4</a> <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Plane3D.html#a47817e2fe3bbb2f4e054a70123be5daa">ModelMatrix</a> = Matrix4.Identity</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>この平面のための"変換行列"です。 平面は基点と法線で定義されます。しかし我々は平面を座標系(スタックにプッシュできる行列)としても使用するため、平面を行列として格納します。 </p>
+<p>3D平面は、 ModelMatrix によって変換される z=0の '単位行列' 平面として定義されます。それは、ModelMatrix.ColumnZ が 平面の法線ベクトルであり、ModelMatrix.ColumnWは平面の任意の点として表されます。</p>
+<p>ModelMatrix は右手座標系、直交座標系(チェックはありません)に設定されていることを前提にしています。</p>
+<p>ModelMatrix.ColumnX、ModelMatrix.ColumnY、ModelMatrix.ColumnZは、単位長さの各々は、お互いにすべて垂直であることを意味します。 ModelMatrix.ColumnXとModelMatrix.ColumnYの外積はModelMatrix.ColumnZと同じ方向です。 ModelMatrix のデフォルト値は Matrix4.Identity (z=0 平面) です。 この行列は変換スタックにあるかのように使用されます。 </p>
+
+</div>
+</div>
+</div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><b>Sce</b>      </li>
+      <li class="navelem"><b>PlayStation</b>      </li>
+      <li class="navelem"><b>HighLevel</b>      </li>
+      <li class="navelem"><a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D.html">GameEngine2D</a>      </li>
+      <li class="navelem"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Plane3D.html">Plane3D</a>      </li>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

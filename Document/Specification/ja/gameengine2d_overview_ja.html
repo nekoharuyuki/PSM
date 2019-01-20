@@ -1,0 +1,542 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: GameEngine2Dの使い方</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('gameengine2d_overview_ja.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<h1>GameEngine2Dの使い方 </h1>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><blockquote>
+<p>この文書ではハイレベルライブラリであるSce.PlayStation.HighLevel.GameEngine2Dについて説明します。</p>
+<p>GameEngine2Dは、シンプルな2Dゲームを開発するのに必要な基本的機能を提供します。</p>
+</blockquote>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#id1" id="id12">GameEngine2Dについて</a></li>
+<li><a class="reference internal" href="#id2" id="id13">基本的な使い方</a></li>
+<li><a class="reference internal" href="#id3" id="id14">シーングラフについて</a></li>
+<li><a class="reference internal" href="#id4" id="id15">スプライトの動かし方</a></li>
+<li><a class="reference internal" href="#spriteuv-spritetile-spritelist-rawspritetile" id="id16">SpriteUV, SpriteTile, SpriteList, RawSpriteTileの選択</a></li>
+<li><a class="reference internal" href="#id5" id="id17">テクスチャについて</a></li>
+<li><a class="reference internal" href="#id6" id="id18">フォント</a></li>
+<li><a class="reference internal" href="#dispose" id="id19">Dispose()について</a></li>
+<li><a class="reference internal" href="#transitions" id="id20">画面遷移 (transitions) について</a></li>
+<li><a class="reference internal" href="#id7" id="id21">サンプル</a></li>
+<li><a class="reference internal" href="#sce-playstation-highlevel-gameengine2d-base" id="id22">Sce.PlayStation.HighLevel.GameEngine2D.Base の基本的な概要</a></li>
+<li><a class="reference internal" href="#id8" id="id23">外部リソースと参考サイト</a></li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h1><a class="toc-backref" href="#id12">GameEngine2Dについて</a></h1>
+<p><strong>ゲームエンジン2Dがカバーしているもの:</strong></p>
+<blockquote>
+<p>GameEngine2Dのライブラリは2つの名前空間に分割されています。</p>
+<p><strong>Sce.PlayStation.HighLevel.GameEngine2D.Base</strong></p>
+<blockquote>
+Sce.PlayStation.HighLevel.GameEngine2D.Base は、拡張数学ライブラリ、描画機能（スプライトの描画とイミーディエイトモード)、入力支援、カメラ、フォントマップ、行列スタックといった、様々な2Dの機能を含んでいます。</blockquote>
+<p><strong>Sce.PlayStation.HighLevel.GameEngine2D</strong></p>
+<blockquote>
+<p>Sce.PlayStation.HighLevel.GameEngine2D は、Sce.PlayStation.HighLevel.GameEngine2D.Baseの上に構築された、いわゆるゲームエンジン(シーングラフ、スケジューラ、アクションなど)を含んでいます。</p>
+<p>ゲームエンジン2DライブラリのHighLevelは、Cocos2D (<a class="reference external" href="http://www.cocos2d-iphone.org/">http://www.cocos2d-iphone.org/</a>) を参考に作られています。とりわけ、Director, Scheduler, ActionManager クラスはCocos2Dに相似したつくりになっています。</p>
+<p>ゲームエンジン2Dライブラリはソースコードが提供されていますので、ふせてご覧ください。</p>
+</blockquote>
+</blockquote>
+<p><strong>ゲームエンジン2Dがカバーしていないもの:</strong></p>
+<blockquote>
+<ul class="simple">
+<li>ゲームエンジン2Dは、Sce.PlayStation.HighLevel.GameEngine2D.Base.Math内にある2、3のシンプルな汎用ルーチンを除き、衝突判定を提供していません。</li>
+<li>物理エンジン、サウンド、ネットワークなどの機能は提供していません。。</li>
+<li>UIシステムは提供していません。（ただし、サンプルで示されている例のように、シンプルなテキスト表示機能やスプライト描画機能の能力を使って、UI要素は容易に実装することができます）。</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="id2">
+<h1><a class="toc-backref" href="#id13">基本的な使い方</a></h1>
+<p><strong>ライブラリをソリューションに登録する</strong></p>
+<blockquote>
+<blockquote>
+<p>GameEngine2Dを利用するには、ライブラリ Sce.PlayStation.HighLevel.GameEngine2D をソリューションに追加します。</p>
+<p>ライブラリをソリューションに追加する方法は、 <a class="reference external" href="./programing_guide05_ja.html">統合開発環境PSM Studioの基本的な使い方 - コンパイル済みのライブラリ (dll) をソリューションに追加する</a> を参照してください。</p>
+</blockquote>
+</blockquote>
+<p><strong>初期化</strong></p>
+<blockquote>
+<p>HelloSprite サンプルでは基本的な使い方を説明します。</p>
+<p>最初のステップはDirectorの初期化です。
+Directorは、Directorのインスタンスを経由して、全てのゲームエンジン2Dのグローバルオブジェクトにアクセスするためのシングルトンクラスです。</p>
+<div class="highlight"><pre><span class="c1">//グラフィックスコンテキストを作成します。（選択可)</span>
+<span class="n">Sce</span><span class="p">.</span><span class="n">PlayStation</span><span class="p">.</span><span class="n">Core</span><span class="p">.</span><span class="n">Graphics</span><span class="p">.</span><span class="n">GraphicsContext</span> <span class="n">context</span>
+     <span class="p">=</span> <span class="k">new</span> <span class="n">Sce</span><span class="p">.</span><span class="n">PlayStation</span><span class="p">.</span><span class="n">Core</span><span class="p">.</span><span class="n">Graphics</span><span class="p">.</span><span class="n">GraphicsContext</span><span class="p">();</span>
+
+<span class="c1">// 利用予定の最大スプライト数(パーティクルは含みません)。</span>
+<span class="kt">uint</span> <span class="n">sprites_capacity</span> <span class="p">=</span> <span class="m">500</span><span class="p">;</span>
+
+<span class="c1">// デバッグ描画で利用することのできる最大頂点数。</span>
+<span class="kt">uint</span> <span class="n">draw_helpers_capacity</span> <span class="p">=</span> <span class="m">400</span><span class="p">;</span>
+
+<span class="c1">// 外部からのコンテキストを通じて、GameEngine2Dシングルトンクラスの初期化します。</span>
+<span class="n">Director</span><span class="p">.</span><span class="n">Initialize</span><span class="p">(</span> <span class="n">sprites_capacity</span><span class="p">,</span> <span class="n">draw_helpers_capacity</span><span class="p">,</span> <span class="n">context</span> <span class="p">);</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<p><strong>空のシーンを作る</strong></p>
+<blockquote>
+<p>初期化後、シーングラフが必要になります。最もシンプルなシーンは、ルートノードとなる、ひとつのシーンオブジェクトで構成されます。</p>
+<div class="highlight"><pre><span class="n">var</span> <span class="n">scene</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Scene</span><span class="p">();</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<p><strong>ループ</strong></p>
+<blockquote>
+<p>シーンを実行する用意ができました。下記のソースコードでメインループを実行します。</p>
+<div class="highlight"><pre><span class="n">Director</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">RunWithScene</span><span class="p">(</span> <span class="n">scene</span> <span class="p">);</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<p><strong>進化したループ</strong></p>
+<blockquote>
+<p>もう一つの方法として、ループを手動で扱うこともできます。この場合、DirectorインスタンスのUpdate()とRender()、PostSwap()を適切な順番で呼び出す必要があります。</p>
+<div class="highlight"><pre><span class="n">Director</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">RunWithScene</span><span class="p">(</span> <span class="n">scene</span><span class="p">,</span> <span class="k">true</span> <span class="p">);</span>
+
+<span class="k">while</span> <span class="p">(</span> <span class="k">true</span> <span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">Sce</span><span class="p">.</span><span class="n">PlayStation</span><span class="p">.</span><span class="n">Core</span><span class="p">.</span><span class="n">Environment</span><span class="p">.</span><span class="n">SystemEvents</span><span class="p">.</span><span class="n">CheckEvents</span><span class="p">();</span>
+
+    <span class="n">Director</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">Update</span><span class="p">();</span>
+    <span class="n">Director</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">Render</span><span class="p">();</span>
+
+    <span class="n">Director</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">GL</span><span class="p">.</span><span class="n">Context</span><span class="p">.</span><span class="n">SwapBuffers</span><span class="p">();</span>
+    <span class="n">Director</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">PostSwap</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+</div>
+<div class="section" id="id3">
+<h1><a class="toc-backref" href="#id14">シーングラフについて</a></h1>
+<p><strong>一般的な構造</strong></p>
+<blockquote>
+<p>ゲームエンジン2Dのシーングラフは、ゲーム世界のノード階層を保持したり、描画対象を巡回したりするのに使用します。その他の用途には使用しません。例えば、Update()関数を呼び出すための巡回機能はありません（これはSchedulerで行います）</p>
+<p>それぞれのシーングラフのルートノードは、Sceneノードです。Sceneのナビゲーションは、Directorのインスタンスシングルトン経由でシーンスタックにより扱われます。</p>
+<p>加えてゲームエンジン2Dでは、Directorオブジェクトは、ゲームエンジン2Dライブラリで利用する、他のグローバルオブジェクトの多くを保持します。</p>
+<p>基本的なNodeオブジェクトは子ノードのリストと多くとも一つの親ノードを持っています。子ノードはChildrenプロパティを経由してアクセス可能であり、親ノードはParentプロパティを経由してアクセス可能です。ParentプロパティやChildrenプロパティは、AddChild()、RemoveChild()、RemoveAllChidren()を使って操作します。</p>
+</blockquote>
+<p><strong>ノードの更新</strong></p>
+<blockquote>
+<p>各ノードは「アクション」を持つことができます。アクションはActionManagerインスタンスによって管理されますが、主にNodeのメンバ関数を経由して実行されます。</p>
+<p>各ノードは、インスタンスに対するUpdate関数といった、スケジュール関数を持つことができます。スケジュール関数はSchedulerインスタンスによって管理されますが、主にNodeのメンバ関数を経由して実行されます。</p>
+<p>ゲームエンジン2DのActionManagerとSchedulerはCocos2DのActionManagerとSchedulerに相当します。</p>
+</blockquote>
+<p><strong>ノードの位置プロパティ</strong></p>
+<blockquote>
+<p>NodeはPosition/Rotation/Scale/Skew(歪曲)からなる2D変換行列を持ちます。PivotはRotation/Scale/Skewを行う際に、中心軸として利用されます。この「ローカル」の変換行列はGetTransform()によって取得します。
+ソースコードでは、ノードの変換行列は次に相当します。</p>
+<blockquote>
+<div class="highlight"><pre>  <span class="n">Matrix3</span><span class="p">.</span><span class="n">Translation</span><span class="p">(</span> <span class="n">Position</span> <span class="p">)</span>
+<span class="p">*</span> <span class="n">Matrix3</span><span class="p">.</span><span class="n">Translation</span><span class="p">(</span> <span class="n">Pivot</span> <span class="p">)</span>
+<span class="p">*</span> <span class="n">Matrix3</span><span class="p">.</span><span class="n">Rotation</span><span class="p">(</span> <span class="n">Rotation</span> <span class="p">)</span>
+<span class="p">*</span> <span class="n">Matrix3</span><span class="p">.</span><span class="n">Scale</span><span class="p">(</span> <span class="n">Scale</span> <span class="p">)</span>
+<span class="p">*</span> <span class="n">Matrix3</span><span class="p">.</span><span class="n">Skew</span><span class="p">(</span> <span class="k">new</span> <span class="n">Vector2</span><span class="p">(</span> <span class="n">FMath</span><span class="p">.</span><span class="n">Tan</span><span class="p">(</span> <span class="n">Skew</span><span class="p">.</span><span class="n">X</span> <span class="p">),</span> <span class="n">FMath</span><span class="p">.</span><span class="n">Tan</span><span class="p">(</span> <span class="n">Skew</span><span class="p">.</span><span class="n">Y</span> <span class="p">)</span> <span class="p">)</span> <span class="p">)</span>
+<span class="p">*</span> <span class="n">Matrix3</span><span class="p">.</span><span class="n">Translation</span><span class="p">(</span> <span class="p">-</span><span class="n">Pivot</span> <span class="p">)</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<p>上のプロパティの設定を行うと、ノードとその配下のサブツリーが移動、回転、拡縮、歪曲します。</p>
+</blockquote>
+<p><strong>ノードオブジェクトの階層構造</strong></p>
+<blockquote>
+<p>次の図は、シーングラフノードの階層図です。灰色のノードは、直接利用しない中間タイプのノードです。</p>
+<blockquote>
+<div align="center" class="align-center"><img alt="image/gameengine2d/graph.png" class="align-center" src="image/gameengine2d/graph.png" style="width: 678.0px; height: 276.0px;" /></div>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="id4">
+<h1><a class="toc-backref" href="#id15">スプライトの動かし方</a></h1>
+<blockquote>
+<p>SpriteUVとSpriteTiledを使うと、ノードから派生した個々のスプライトオブジェクトを操作することができます。</p>
+<p>ベースノードの変換行列プロパティ（それはスプライトノードへの機能でもある）に加えて、SpriteUVとSpriteTiledは、幾何情報を決定するQuadプロパティを持ちます。</p>
+<p>TRSオブジェクト (移動(T), 回転(R) スケーリング(S))であるQuadプロパティは、スプライトに対する第2のローカル変換行列とみなすこともできます。</p>
+<p>しかし、明確化のため、それをQuadの「幾何情報」と宣言します。</p>
+</blockquote>
+<p><strong>スケジューラを使ってノードを移動させる</strong></p>
+<blockquote>
+<p>たいてい場合、スケジュール関数の内部でノードオブジェクトを動かします。</p>
+<p>与えられたノードに対して、毎フレーム呼び出す関数を登録する簡単な方法は、Scheduler内のNode.Scheduleを使ってラムダ関数を登録することです。</p>
+<div class="highlight"><pre><span class="n">sprite</span> <span class="p">=</span> <span class="k">new</span> <span class="n">SpriteUV</span><span class="p">();</span>
+
+<span class="c1">// 初期位置の設定。</span>
+<span class="n">sprite</span><span class="p">.</span><span class="n">Position</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Vector2</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">);</span>
+
+<span class="n">sprite</span><span class="p">.</span><span class="n">Schedule</span><span class="p">(</span> <span class="p">(</span> <span class="n">dt</span> <span class="p">)</span> <span class="p">=&gt;</span>
+    <span class="p">{</span>
+        <span class="c1">// 毎フレーム呼び出す。</span>
+        <span class="kt">float</span> <span class="n">period_in_seconds</span> <span class="p">=</span> <span class="m">3.0f</span><span class="p">;</span>
+        <span class="kt">float</span> <span class="n">wave</span> <span class="p">=</span> <span class="p">(</span> <span class="p">(</span> <span class="m">1.0f</span> <span class="p">+</span> <span class="n">FMath</span><span class="p">.</span><span class="n">Sin</span><span class="p">(</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">Director</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">CurrentScene</span><span class="p">.</span><span class="n">SceneTime</span>
+                    <span class="p">*</span> <span class="n">Math</span><span class="p">.</span><span class="n">Pi</span> <span class="p">/</span> <span class="n">period_in_seconds</span> <span class="p">)</span> <span class="p">)</span> <span class="p">*</span> <span class="m">0.5f</span> <span class="p">);</span>
+
+        <span class="n">sprite</span><span class="p">.</span><span class="n">Rotation</span> <span class="p">=</span> <span class="n">Vector2</span><span class="p">.</span><span class="n">Rotation</span><span class="p">(</span> <span class="n">Math</span><span class="p">.</span><span class="n">Pi</span> <span class="p">*</span> <span class="m">2.0f</span> <span class="p">*</span> <span class="n">wave</span> <span class="p">);</span>
+        <span class="n">sprite</span><span class="p">.</span><span class="n">Scale</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Vector2</span><span class="p">(</span> <span class="m">1.0f</span> <span class="p">+</span> <span class="m">2.0f</span> <span class="p">*</span> <span class="n">wave</span> <span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">);</span>
+</pre></div>
+<!-- end-of-code-block -->
+<p>ノード関数を毎フレーム呼び出すもう一つの方法は、Spriteクラスからクラスを派生させ、Update()関数をオーバーライドし、Node.ScheduleUpdate()でそれをスケジュールすることです。</p>
+</blockquote>
+<p><strong>アクションを使ってノードを移動させる</strong></p>
+<blockquote>
+<p>アクションはノードを移動させるのに使用します。次のソースコードでは、スプライトを0.1秒で座標(10,5)に移動させるアニメーションをキック（起動）しています。</p>
+<div class="highlight"><pre><span class="n">sprite</span><span class="p">.</span><span class="n">RunAction</span><span class="p">(</span> <span class="k">new</span> <span class="n">MoveTo</span><span class="p">(</span> <span class="k">new</span> <span class="n">Vector2</span><span class="p">(</span><span class="m">10.0f</span><span class="p">,</span><span class="m">5.0f</span><span class="p">),</span> <span class="m">0.1f</span> <span class="p">)</span> <span class="p">);</span>
+</pre></div>
+<!-- end-of-code-block -->
+<p>特殊アクションであるTweenプロパティを設定することで、補間曲線を変更することができます。</p>
+<div class="highlight"><pre><span class="n">sprite</span><span class="p">.</span><span class="n">RunAction</span><span class="p">(</span> <span class="k">new</span> <span class="n">MoveTo</span><span class="p">(</span> <span class="k">new</span> <span class="n">Vector2</span><span class="p">(</span><span class="m">10.0f</span><span class="p">,</span><span class="m">5.0f</span><span class="p">),</span> <span class="m">0.1f</span> <span class="p">)</span> <span class="p">{</span> <span class="n">Tween</span> <span class="p">=</span> <span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">Math</span><span class="p">.</span><span class="n">PowEaseIn</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="m">4.0f</span><span class="p">)</span> <span class="p">}</span> <span class="p">);</span>
+</pre></div>
+<!-- end-of-code-block -->
+<p>Cocos2DのMoveTo, MoveBy, ScaleTo, ScaleByなどに相当するアクションや、より一般的なActionTweenGenericVector2, ActionTweenGenericVector4, ActionTweenGenericVector2Scale, ActionTweenGenericVector2Rotationといったアクションも、位置プロパティに影響を与えます。</p>
+</blockquote>
+<p><strong>スプライトの幾何情報について :TRS</strong></p>
+<blockquote>
+<p>スプライトのQuadプロパティ（TRSオブジェクト）を使用すると、ノードのローカル空間のサイズ、位置と向きを設定することにより、スプライトの幾何情報を指定することができます。</p>
+<ul class="simple">
+<li>Tプロパティ（Tは移動の略）は、四角形の&quot;左下&quot;ポイントの座標です。</li>
+<li>Sプロパティ（Sはスケールの略）は、矩形のサイズです。</li>
+<li>Rプロパティ（Rは回転の略）の四角形の向きを表します。これは四角形のローカルx軸とみなすことができます。</li>
+</ul>
+<p>TRSの回転は、角度をあわわしたスカラーではなく、単位ベクトルとして直接あらわされることに注意してください。(ただし、角度としてのRを設定、取得するインターフェースも存在します。)</p>
+<p>TRSはRを正規化しません。正規化するかどうかは、開発者が判断します。Rの代わりにRotationNormalize経由でRプロパティの設定し、正規化を行います。</p>
+<blockquote>
+No rotationはRが(1,0)、すなわちX軸に設定されていることを意味します。</blockquote>
+<p>T、R、Sの量が何を意味しているか、例をあげておきます。
+これらの画像では、ワールド座標系のxとy軸が太い黒線で表示されています。
+スプライトのコンテキストでは、これらのラインをノードのローカル座標系（すなわちGetTransform()のあとに来る空間として）として見ることもできます。</p>
+<p>最も単純なTRSは、おそらく TRS.Quad0_1 と呼ばれる単位クワッドです。</p>
+<div class="highlight"><pre><span class="n">TRS</span> <span class="n">trs</span> <span class="p">=</span> <span class="n">TRS</span><span class="p">.</span><span class="n">Quad0_1</span><span class="p">;</span> <span class="c1">// the unit quad</span>
+</pre></div>
+<!-- end-of-code-block -->
+<div align="center" class="align-center"><img alt="image/gameengine2d/trs1.png" class="align-center" src="image/gameengine2d/trs1.png" /></div>
+<p>次は回転の例です。</p>
+<div class="highlight"><pre><span class="n">TRS</span> <span class="n">trs</span> <span class="p">=</span> <span class="k">new</span> <span class="n">TRS</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">T</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Vector2</span><span class="p">(</span> <span class="m">5.0f</span><span class="p">,-</span><span class="m">3.0f</span> <span class="p">),</span>
+    <span class="n">R</span> <span class="p">=</span> <span class="n">Vector2</span><span class="p">.</span><span class="n">Rotation</span><span class="p">(</span>  <span class="n">Math</span><span class="p">.</span><span class="n">Deg2Rad</span><span class="p">(</span> <span class="m">45.0f</span> <span class="p">)</span> <span class="p">),</span>
+    <span class="n">S</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Vector2</span><span class="p">(</span> <span class="m">1.0f</span><span class="p">,</span> <span class="m">2.0f</span> <span class="p">)</span> <span class="p">*</span> <span class="n">FMath</span><span class="p">.</span><span class="n">Sqrt</span><span class="p">(</span><span class="m">2.0f</span><span class="p">)</span>
+<span class="p">};</span>
+</pre></div>
+<!-- end-of-code-block -->
+<div align="center" class="align-center"><img alt="image/gameengine2d/trs2.png" class="align-center" src="image/gameengine2d/trs2.png" /></div>
+<p><strong>スプライトとシーングラフの変換</strong></p>
+<p>グラフの巡回時に連結されていく変換行列情報は、Node.GetTranform()のみです。
+スプライトオブジェクトのQuadプロパティは子の位置に影響を与えません。影響をあたえるのはスプライトの幾何情報(長方形)のみです。</p>
+</blockquote>
+</div>
+<div class="section" id="spriteuv-spritetile-spritelist-rawspritetile">
+<h1><a class="toc-backref" href="#id16">SpriteUV, SpriteTile, SpriteList, RawSpriteTileの選択</a></h1>
+<p><strong>どのスプライトタイプを使うか</strong></p>
+<blockquote>
+<p>&nbsp;SpriteUVは、手動で頂点UVを設定できるスプライトのノードを提供します。</p>
+<p>SpriteTiledは、スプライトのアニメーションを行うため、グリッド上に規則的に配置された画像を扱うのに利用します。
+これは2Dゲームでは効率的といえます。</p>
+</blockquote>
+<p><strong>パフォーマンス</strong></p>
+<blockquote>
+<p>しかしSpriteUVとSpriteTiledは、「独立的」に描画処理を行います。これは、セットアップのために大きなオーバーヘッドがかかり、かつ高価なオブジェクトであることを意味します。</p>
+<p>パフォーマンス的に賢明なのは、一つのスプライトを描画するのにいちいちDrawArraysを呼び出さないようにすることです。可能な限り、描画を一括しておこなうことが重要になります。</p>
+<p>これはつまり、同じcolor/texture/blend モードを使って描画するという制約のもとで、SpriteListを実行することです。</p>
+<p>これを行うには、SpriteUVとSpriteTiledオブジェクトをグループ化し、SpriteListオブジェクトに少数の子として配置します。</p>
+<p>SpriteListオブジェクトのすべての子が、一度のDrawArraysの呼び出しで描画されます。</p>
+<p>個別の描画処理:</p>
+<div align="center" class="align-center"><img alt="image/gameengine2d/scene1.png" class="align-center" src="image/gameengine2d/scene1.png" style="width: 413.25px; height: 102.0px;" /></div>
+<p>一括化された描画処理:</p>
+<div align="center" class="align-center"><img alt="image/gameengine2d/scene2.png" class="align-center" src="image/gameengine2d/scene2.png" style="width: 413.25px; height: 159.75px;" /></div>
+<p>SpriteListについては、次の制限事項に注意してください。</p>
+<ul class="simple">
+<li>SpriteListノードの子のあとに、シーングラフの階層構造を1レベル継続すると、不安定な動作になります。</li>
+<li>SpriteListノードの子は、SpriteUVかSpriteTiledのみにしてください。</li>
+</ul>
+<p>次の図は、無効なシーングラフです:</p>
+<div align="center" class="align-center"><img alt="image/gameengine2d/scene3.png" class="align-center" src="image/gameengine2d/scene3.png" style="width: 414.0px; height: 218.25px;" /></div>
+<p>一括して描画するときに、スプライトの一部がCPU上で変換する必要があることに注意してください。しかし、これは個別にスプライトを描画するためのコストと比較して、安価であるといえます。</p>
+<p>余分なCPU変換はスキップすることもできます。その場合、配置するスプライトのクワッド·プロパティに依存する必要があります。</p>
+<p>SpriteListパフォーマンスが優れている場合でも、ノードのオブジェクトとして各スプライトを処理するのは、いくつかのケースでは無駄かもしれません。なぜなら、ノードが比較的重いオブジェクトであるためです。</p>
+<p>RawSpriteTileは、スプライトごとに、はるかに軽いデータ構造を持つスプライトのリストをレンダリングすることができます。</p>
+</blockquote>
+</div>
+<div class="section" id="id5">
+<h1><a class="toc-backref" href="#id17">テクスチャについて</a></h1>
+<blockquote>
+<p>TextureInfoはGameEngine2Dのテクスチャ情報を格納するためのオブジェクトです。これは、Texture2Dオブジェクトとそれに関連付けられたタイル情報を格納します。タイルグリッドのソース領域は、UV領域内で、任意の向きの長方形にすることができます。ほとんどの場合、これは（0,0）から（1,1）の長方形となります。</p>
+<p>TextureInfoは、コンストラクタから渡されるTexture2Dオブジェクトの所有権を取得します。そのため、自身のDispose()関数で、Texture2Dオブジェクトを破棄します。</p>
+<p>作成したTextureInfoオブジェクトは、開発者が廃棄(Dispose)する責任があります。</p>
+</blockquote>
+<p><strong>タイル</strong></p>
+<blockquote>
+<p>&nbsp;TextureInfoコンストラクタは、2Dタイルのサイズ、および必要に応じてUVソース領域（デフォルトではフルのUV領域、単位正方形）を取ります。</p>
+<div class="highlight"><pre><span class="n">TextureInfo</span> <span class="n">test_texture</span> <span class="p">=</span> <span class="k">new</span> <span class="n">TextureInfo</span><span class="p">(</span> <span class="k">new</span> <span class="n">Texture2D</span><span class="p">(</span><span class="s">&quot;data/king_water_drop.png&quot;</span><span class="p">,</span> <span class="k">false</span><span class="p">)</span>
+              <span class="p">,</span> <span class="k">new</span> <span class="n">Vector2i</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">),</span> <span class="n">TRS</span><span class="p">.</span><span class="n">Quad0_1</span> <span class="p">);</span>
+</pre></div>
+<!-- end-of-code-block -->
+<p>以下は、ソース領域がTRS.Quad0_1（フルスプライト）という状態で、3x4のタイル（上記のコード）のタイルのインデックスです。</p>
+<div align="center" class="align-center"><img alt="image/gameengine2d/tiling.png" class="align-center" src="image/gameengine2d/tiling.png" /></div>
+</blockquote>
+</div>
+<div class="section" id="id6">
+<h1><a class="toc-backref" href="#id18">フォント</a></h1>
+<blockquote>
+<p>文字のリストとフォントオブジェクトを含むテキストがわかれば、テクスチャと描画に使用するUVテーブルを格納した、フォントマップオブジェクトを構築することができます。
+テキスト全体のイメージを毎フレーム生成するわけにはいかないので、フォントマップが必要です。
+フォントマップのコンストラクタには、フォントマップを使ってテキストをレンダリングする際に使用される予定のすべての文字を渡す必要があります。</p>
+<p>同じようにTextureInfoは渡されるTexture2Dの所有権を取得し、フォントマップは、そのコンストラクタに渡されたFontオブジェクトの所有権を取得します。</p>
+<p>また、TextureInfoのように、作成したフォントマップオブジェクトは開発者が廃棄する責任があります。</p>
+</blockquote>
+</div>
+<div class="section" id="dispose">
+<h1><a class="toc-backref" href="#id19">Dispose()について</a></h1>
+<blockquote>
+<p>オブジェクトを破棄し忘れると、すぐにメモリ不足のエラーにつながります。例えば、シーンを頻繁に切り替えたのに、適切にグラフィックリソースを解放するのを忘れたりする場合です。</p>
+<p>次のクラスは、作成したオブジェクトを開発者が破棄する責任があります。</p>
+<ul class="simple">
+<li>TextureInfo</li>
+<li>FontMap</li>
+<li>ParticleSystem</li>
+<li>全てのシェーダー。</li>
+</ul>
+<p>GameEngine2Dは、Director.Terminate()関数で全てのリソース(デフォルトのシェーダー、内部的なテクスチャや頂点バッファ）を破棄します。</p>
+<p>例えば、オブジェクトを破棄するための合理的なタイミングは、シーンのOnExit()にあります。
+ノードのRegisterDisposeOnExit()関数を使用すると、そのノードのOnExit()内で、廃棄するオブジェクトのDispose()呼び出しをスケジュールすることができます。
+廃棄イベントの登録を忘れるリスクを減らすために、RegisterDisposeOnExitRecursive()は配下のツリーを巡回し、RegisterDisposeOnExit()で出くわした全ての破棄ノードを登録します。
+ノードの廃棄イベントのリストは、呼び出された後、クリアします。もしこの動作を望まない場合、OnExit()をオーバーライドすることができます。</p>
+</blockquote>
+</div>
+<div class="section" id="transitions">
+<h1><a class="toc-backref" href="#id20">画面遷移 (transitions) について</a></h1>
+<p><strong>画面遷移とは？</strong></p>
+<blockquote>
+画面遷移を使うと、前のシーンと次のシーンを様々な視覚効果でクロスフェードさせることができます。</blockquote>
+<p><strong>使い方</strong></p>
+<blockquote>
+<p>次のコードでは、現在のシーンをすぐに停止し、next_sceneに置き換えます（遷移なし）：</p>
+<div class="highlight"><pre><span class="n">Director</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">ReplaceScene</span><span class="p">(</span> <span class="n">next_scene</span> <span class="p">);</span>
+</pre></div>
+<!-- end-of-code-block -->
+<p>以下のコードは、スムーズな画面遷移を実行する例です。
+遷移時に、両方のシーンはアクティブになり、かつ（必要に応じて/関連して）オフスクリーンバッファに描画されます。
+後は遷移の様々なタイプを実装するためのテクスチャとして利用されます。</p>
+<div class="highlight"><pre><span class="n">Director</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">ReplaceScene</span><span class="p">(</span> <span class="k">new</span> <span class="n">TransitionCrossFade</span><span class="p">(</span> <span class="n">next_scene</span> <span class="p">)</span>
+                    <span class="p">{</span> <span class="n">Duration</span> <span class="p">=</span> <span class="m">2.0f</span><span class="p">,</span> <span class="n">Tween</span> <span class="p">=</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">Math</span><span class="p">.</span><span class="n">PowEaseOut</span><span class="p">(</span> <span class="n">x</span><span class="p">,</span> <span class="m">3.0f</span> <span class="p">)}</span> <span class="p">);</span>
+
+<span class="n">Director</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">ReplaceScene</span><span class="p">(</span> <span class="k">new</span> <span class="n">TransitionSolidFade</span><span class="p">(</span> <span class="n">next_scene</span> <span class="p">)</span>
+                    <span class="p">{</span> <span class="n">Duration</span> <span class="p">=</span> <span class="m">1.0f</span><span class="p">,</span> <span class="n">Tween</span> <span class="p">=</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">Math</span><span class="p">.</span><span class="n">PowEaseOut</span><span class="p">(</span> <span class="n">x</span><span class="p">,</span> <span class="m">3.0f</span> <span class="p">)}</span> <span class="p">);</span>
+
+<span class="n">Director</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">ReplaceScene</span><span class="p">(</span> <span class="k">new</span> <span class="n">TransitionDirectionalFade</span><span class="p">(</span> <span class="n">next_scene</span> <span class="p">)</span>
+                    <span class="p">{</span> <span class="n">Duration</span> <span class="p">=</span> <span class="m">2.0f</span><span class="p">,</span> <span class="n">Tween</span> <span class="p">=</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">Math</span><span class="p">.</span><span class="n">PowEaseOut</span><span class="p">(</span> <span class="n">x</span><span class="p">,</span> <span class="m">3.0f</span> <span class="p">)}</span> <span class="p">);</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+</div>
+<div class="section" id="id7">
+<h1><a class="toc-backref" href="#id21">サンプル</a></h1>
+<p>Several samples are provided with the library:
+いくつかのサンプルが、ライブラリとともに提供されています。</p>
+<ul class="simple">
+<li><strong>HelloSprite</strong> ではメインループとスプライトの描画を説明しています。</li>
+<li><strong>ActionGameDemo</strong> は、アリーナスタイルのシンプルなアクションゲームです。</li>
+<li><strong>FeatureCatalog</strong> はライブラリの特徴をデモンストレーションしています。</li>
+<li><strong>PuzzleGameDemo</strong> はシンプルなパズルゲームです。</li>
+</ul>
+</div>
+<div class="section" id="sce-playstation-highlevel-gameengine2d-base">
+<h1><a class="toc-backref" href="#id22">Sce.PlayStation.HighLevel.GameEngine2D.Base の基本的な概要</a></h1>
+<blockquote>
+Sce.PlayStation.HighLevel.GameEngine2Dは以下のオブジェクトの上に構築されています。</blockquote>
+<p><strong>Maths</strong></p>
+<blockquote>
+<p>Curves</p>
+<blockquote>
+いくつかの曲線に関連する関数（タンジェント評価を含む）</blockquote>
+<p>Vector2i</p>
+<blockquote>
+2整数のベクトル</blockquote>
+<p>Vector3i</p>
+<blockquote>
+3整数のベクトル</blockquote>
+<p>Bounds2i</p>
+<blockquote>
+2D、整数の境界領域（Vector2i 最小値、最大値）</blockquote>
+<p>Bounds2</p>
+<blockquote>
+2D、float型の境界領域（Vector2の最小値、最大値）</blockquote>
+<p>Plane2</p>
+<blockquote>
+2次元平面</blockquote>
+<p>Sphere2</p>
+<blockquote>
+2次元の球</blockquote>
+<p>ConvexPoly2</p>
+<blockquote>
+2D凸型のポリゴン</blockquote>
+<p>RandGenerator</p>
+<blockquote>
+ベクトル乱数の生成のために、拡張されたSystem.Random。</blockquote>
+<p>Matrix3x3</p>
+<blockquote>
+2次元変換のための3x3の行列。</blockquote>
+<p>MatrixStack</p>
+<blockquote>
+行列スタックは、GraphicsContextAlpha内のプロジェクションやモデル、ビュー行列のスタックといった、OpenGL風の実装に使用されます。</blockquote>
+<p>PitchRoll, RollPitch</p>
+<blockquote>
+3Dティルト(傾斜)機能</blockquote>
+<p>TRS</p>
+<blockquote>
+2Dの移動/回転/スケールのデータ。矩形の方向を示したり、簡単な変換のために使用されます。</blockquote>
+</blockquote>
+<p><strong>描画ヘルパー</strong></p>
+<blockquote>
+<p>EmbeddedDebugFonts.cs</p>
+<blockquote>
+埋め込まれたフォントデータ。デバッグ用。</blockquote>
+<p>ImmediateMode&lt;T&gt;</p>
+<blockquote>
+OpenGLのダイレクトモードに類似した、即時描画クラス。</blockquote>
+<p>ImmediateModeQuads&lt;T&gt;</p>
+<blockquote>
+OpenGLのダイレクトモードに類似した、即時描画クラス(Quadsに特化)。</blockquote>
+<p>SpriteRenderer</p>
+<blockquote>
+ImmediateModeQuads&lt;T&gt;の上に構築されたスプライト描画クラス。（また、埋め込まれたフォントデータを使用して、デバッグテキストの描画機能を持っています）</blockquote>
+<p>DrawHelpers</p>
+<blockquote>
+ImmediateMode&lt;T&gt;の上に構築された、デバッグ描画のための即時モード。</blockquote>
+<p>Camera2D</p>
+<blockquote>
+2Dカメラ。</blockquote>
+<p>Camera3D</p>
+<blockquote>
+2D APIの使いやすさを維持した、シンプルな3Dカメラ。</blockquote>
+</blockquote>
+</div>
+<div class="section" id="id8">
+<h1><a class="toc-backref" href="#id23">外部リソースと参考サイト</a></h1>
+<blockquote>
+<table class="docutils footnote" frame="void" id="id9" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[1]</td><td><a class="reference external" href="http://www.cocos2d-iphone.org/">http://www.cocos2d-iphone.org/</a> Cocos2D API</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id10" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[2]</td><td><a class="reference external" href="http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html">http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html</a> Daniel Cook's PlanetCute assets</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id11" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[3]</td><td><a class="reference external" href="http://opengameart.org/content/isometric-64x64-outside-tileset">http://opengameart.org/content/isometric-64x64-outside-tileset</a> isometric tiles asset by Yar</td></tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+ </div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

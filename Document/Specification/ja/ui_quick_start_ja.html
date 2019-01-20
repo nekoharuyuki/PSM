@@ -1,0 +1,366 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: クイックスタート</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('ui_quick_start_ja.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<h1>クイックスタート </h1>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><blockquote>
+<p>ここでは UI Toolkit を使用したもっとも簡単なアプリケーションの作成方法から動作確認までを解説します。</p>
+<p>開発には PSM SDK 付属の PSM Studio を使用します。 <strong>事前に</strong> <a class="reference external" href="setup_devenv_ja.html">開発環境の設定</a> <strong>を参照して PSM Studio の開発環境を設定してください。</strong></p>
+</blockquote>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#id2" id="id5">プロジェクトの作成</a></li>
+<li><a class="reference internal" href="#ui-toolkit" id="id6">UI Toolkit のコードを記述</a></li>
+<li><a class="reference internal" href="#id3" id="id7">実行とデバッグ</a></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h1><a class="toc-backref" href="#id5">プロジェクトの作成</a></h1>
+<blockquote>
+<p>PSM SDK 付属の PSM Studio には、 UI Toolkit アプリケーションを作成するためのプロジェクトテンプレートが用意されています。このテンプレートを使用してプロジェクトを作成します。</p>
+<p><strong>制限事項</strong></p>
+<blockquote>
+<p><strong>現在、UI Toolkit アプリケーションのテンプレートは準備中です。以下の手順で UI Toolkit アプリケーションの プロジェクトを作成してください。</strong></p>
+<ul>
+<li><p class="first">PSM Studio を起動します。</p>
+</li>
+<li><p class="first">PSM Studio のメインメニューから [ファイル] ([File]) &gt; [新規] ([New]) &gt; [ソリューション...] ([Solution...]) を選択してください(図1)。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/ui_quickstart/create_solution.png" src="image/uitoolkit/ui_quickstart/create_solution.png" />
+<p class="caption"><strong>図1 ソリューションの新規作成</strong></p>
+</div>
+</blockquote>
+</li>
+<li><p class="first">[新しいソリューション] ([New Solution]) ダイアログで [C#] - [PlayStation Mobile] - [PlayStation Application] を選択し、任意のプロジェクト名を入力して [OK] を選択して新しい PSM アプリケーションのソリューションを作成してください(図2)。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/ui_quickstart/create_solution2.png" src="image/uitoolkit/ui_quickstart/create_solution2.png" />
+<p class="caption"><strong>図2 ソリューションの新規作成ダイアログ</strong></p>
+</div>
+</blockquote>
+</li>
+<li><p class="first">次に、参照するアセンブリを追加します。PSM Studio のソリューションパネルの[参照] ([References]) を右クリックし、[参照アセンブリの編集...] ([Edit References...]) を選択してください (図3)。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/ui_quickstart/edit_references.png" src="image/uitoolkit/ui_quickstart/edit_references.png" />
+<p class="caption"><strong>図3 参照するアセンブリの追加</strong></p>
+</div>
+</blockquote>
+</li>
+<li><p class="first">[Edit References] ダイアログで [Packages] タブを選択し、[Sce.PlayStation.Highlevel.UI] のチェックボックスを有効にしてください(図4)。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/ui_quickstart/edit_references2.png" src="image/uitoolkit/ui_quickstart/edit_references2.png" />
+<p class="caption"><strong>図4 参照するアセンブリを追加した後のソリューション構成</strong></p>
+</div>
+</blockquote>
+</li>
+<li><p class="first">AppMain.cs を開き以下のコードを上書きしてください。</p>
+<blockquote>
+<ul class="simple">
+<li>これが UI Toolkit を使用する最低限のコードになります。</li>
+<li>このコードを適宜カスタマイズして使用してください。</li>
+</ul>
+<div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+
+<span class="k">using</span> <span class="nn">Sce.PlayStation.Core</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Sce.PlayStation.Core.Environment</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Sce.PlayStation.Core.Graphics</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Sce.PlayStation.Core.Input</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Sce.PlayStation.HighLevel.UI</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">UIToolkitApp</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">AppMain</span>
+    <span class="p">{</span>
+        <span class="k">private</span> <span class="k">static</span> <span class="n">GraphicsContext</span> <span class="n">graphics</span><span class="p">;</span>
+
+        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span> <span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Initialize</span> <span class="p">();</span>
+
+            <span class="k">while</span> <span class="p">(</span><span class="k">true</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">SystemEvents</span><span class="p">.</span><span class="n">CheckEvents</span> <span class="p">();</span>
+                <span class="n">Update</span> <span class="p">();</span>
+                <span class="n">Render</span> <span class="p">();</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Initialize</span> <span class="p">()</span>
+        <span class="p">{</span>
+            <span class="c1">// Set up the graphics system</span>
+            <span class="n">graphics</span> <span class="p">=</span> <span class="k">new</span> <span class="n">GraphicsContext</span> <span class="p">();</span>
+
+            <span class="c1">// Initialize UI Toolkit</span>
+            <span class="n">UISystem</span><span class="p">.</span><span class="n">Initialize</span><span class="p">(</span><span class="n">graphics</span><span class="p">);</span>
+
+            <span class="c1">// TODO: Create scenes and call UISystem.SetScene</span>
+            <span class="c1">// Scene myScene = new Sce.PlayStation.HighLevel.UI.Scene();</span>
+            <span class="c1">// UISystem.SetScene(myScene, null);</span>
+        <span class="p">}</span>
+
+        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Update</span> <span class="p">()</span>
+        <span class="p">{</span>
+            <span class="c1">// Query gamepad for current state</span>
+            <span class="n">var</span> <span class="n">gamePadData</span> <span class="p">=</span> <span class="n">GamePad</span><span class="p">.</span><span class="n">GetData</span> <span class="p">(</span><span class="m">0</span><span class="p">);</span>
+
+            <span class="c1">// Query touch for current state</span>
+            <span class="n">List</span><span class="p">&lt;</span><span class="n">TouchData</span><span class="p">&gt;</span> <span class="n">touchDataList</span> <span class="p">=</span> <span class="n">Touch</span><span class="p">.</span><span class="n">GetData</span> <span class="p">(</span><span class="m">0</span><span class="p">);</span>
+
+            <span class="c1">// Update UI Toolkit</span>
+            <span class="n">UISystem</span><span class="p">.</span><span class="n">Update</span><span class="p">(</span><span class="n">touchDataList</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Render</span> <span class="p">()</span>
+        <span class="p">{</span>
+            <span class="c1">// Clear the screen</span>
+            <span class="n">graphics</span><span class="p">.</span><span class="n">SetClearColor</span> <span class="p">(</span><span class="m">0.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">);</span>
+            <span class="n">graphics</span><span class="p">.</span><span class="n">Clear</span> <span class="p">();</span>
+
+            <span class="c1">// Render UI Toolkit</span>
+            <span class="n">UISystem</span><span class="p">.</span><span class="n">Render</span> <span class="p">();</span>
+
+            <span class="c1">// Present the screen</span>
+            <span class="n">graphics</span><span class="p">.</span><span class="n">SwapBuffers</span> <span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+</li>
+</ul>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="ui-toolkit">
+<h1><a class="toc-backref" href="#id6">UI Toolkit のコードを記述</a></h1>
+<blockquote>
+<p>文字列を表示するウィジェットを一つ配置したシーンを作成し、UI Toolkit にそのシーンを設定します。</p>
+<p>AppMain.cs を開いてください。main メソッドの最初の方に以下のコメントが記述されています。</p>
+<blockquote>
+<div class="highlight"><pre><span class="c1">// TODO: Create scenes and call UISystem.SetScene</span>
+<span class="c1">// Scene myScene = new Sce.PlayStation.HighLevel.UI.Scene();</span>
+<span class="c1">// UISystem.SetScene(myScene, null);</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<p>このコメントの部分を以下のように書き換えてください。</p>
+<blockquote>
+<div class="highlight"><pre><span class="c1">// Create scene</span>
+<span class="n">Scene</span> <span class="n">scene</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Sce</span><span class="p">.</span><span class="n">PlayStation</span><span class="p">.</span><span class="n">HighLevel</span><span class="p">.</span><span class="n">UI</span><span class="p">.</span><span class="n">Scene</span><span class="p">();</span>
+<span class="n">Label</span> <span class="n">label</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Label</span><span class="p">();</span>
+<span class="n">label</span><span class="p">.</span><span class="n">X</span> <span class="p">=</span> <span class="m">10.0f</span><span class="p">;</span>
+<span class="n">label</span><span class="p">.</span><span class="n">Y</span> <span class="p">=</span> <span class="m">50.0f</span><span class="p">;</span>
+<span class="n">label</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="s">&quot;Hello World!&quot;</span><span class="p">;</span>
+<span class="n">scene</span><span class="p">.</span><span class="n">RootWidget</span><span class="p">.</span><span class="n">AddChildLast</span><span class="p">(</span><span class="n">label</span><span class="p">);</span>
+<span class="c1">// Set scene</span>
+<span class="n">UISystem</span><span class="p">.</span><span class="n">SetScene</span><span class="p">(</span><span class="n">scene</span><span class="p">,</span> <span class="k">null</span><span class="p">);</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<p>AppMain.cs の全体のコードは以下のようになります。</p>
+<blockquote>
+<div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+
+<span class="k">using</span> <span class="nn">Sce.PlayStation.Core</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Sce.PlayStation.Core.Environment</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Sce.PlayStation.Core.Graphics</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Sce.PlayStation.Core.Input</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Sce.PlayStation.HighLevel.UI</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">UIToolkitApp</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">AppMain</span>
+    <span class="p">{</span>
+        <span class="k">private</span> <span class="k">static</span> <span class="n">GraphicsContext</span> <span class="n">graphics</span><span class="p">;</span>
+
+        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span> <span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Initialize</span> <span class="p">();</span>
+
+            <span class="k">while</span> <span class="p">(</span><span class="k">true</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">SystemEvents</span><span class="p">.</span><span class="n">CheckEvents</span> <span class="p">();</span>
+                <span class="n">Update</span> <span class="p">();</span>
+                <span class="n">Render</span> <span class="p">();</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Initialize</span> <span class="p">()</span>
+        <span class="p">{</span>
+            <span class="c1">// Set up the graphics system</span>
+            <span class="n">graphics</span> <span class="p">=</span> <span class="k">new</span> <span class="n">GraphicsContext</span> <span class="p">();</span>
+
+            <span class="c1">// Initialize UI Toolkit</span>
+            <span class="n">UISystem</span><span class="p">.</span><span class="n">Initialize</span><span class="p">(</span><span class="n">graphics</span><span class="p">);</span>
+
+            <span class="c1">// Create scene</span>
+            <span class="n">Scene</span> <span class="n">scene</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Sce</span><span class="p">.</span><span class="n">PlayStation</span><span class="p">.</span><span class="n">HighLevel</span><span class="p">.</span><span class="n">UI</span><span class="p">.</span><span class="n">Scene</span><span class="p">();</span>
+            <span class="n">Label</span> <span class="n">label</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Label</span><span class="p">();</span>
+            <span class="n">label</span><span class="p">.</span><span class="n">X</span> <span class="p">=</span> <span class="m">10.0f</span><span class="p">;</span>
+            <span class="n">label</span><span class="p">.</span><span class="n">Y</span> <span class="p">=</span> <span class="m">50.0f</span><span class="p">;</span>
+            <span class="n">label</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="s">&quot;Hello World!&quot;</span><span class="p">;</span>
+            <span class="n">scene</span><span class="p">.</span><span class="n">RootWidget</span><span class="p">.</span><span class="n">AddChildLast</span><span class="p">(</span><span class="n">label</span><span class="p">);</span>
+            <span class="c1">// Set scene</span>
+            <span class="n">UISystem</span><span class="p">.</span><span class="n">SetScene</span><span class="p">(</span><span class="n">scene</span><span class="p">,</span> <span class="k">null</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Update</span> <span class="p">()</span>
+        <span class="p">{</span>
+            <span class="c1">// Query gamepad for current state</span>
+            <span class="n">var</span> <span class="n">gamePadData</span> <span class="p">=</span> <span class="n">GamePad</span><span class="p">.</span><span class="n">GetData</span> <span class="p">(</span><span class="m">0</span><span class="p">);</span>
+
+            <span class="c1">// Query touch for current state</span>
+            <span class="n">List</span><span class="p">&lt;</span><span class="n">TouchData</span><span class="p">&gt;</span> <span class="n">touchDataList</span> <span class="p">=</span> <span class="n">Touch</span><span class="p">.</span><span class="n">GetData</span> <span class="p">(</span><span class="m">0</span><span class="p">);</span>
+
+            <span class="c1">// Update UI Toolkit</span>
+            <span class="n">UISystem</span><span class="p">.</span><span class="n">Update</span><span class="p">(</span><span class="n">touchDataList</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Render</span> <span class="p">()</span>
+        <span class="p">{</span>
+            <span class="c1">// Clear the screen</span>
+            <span class="n">graphics</span><span class="p">.</span><span class="n">SetClearColor</span> <span class="p">(</span><span class="m">0.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">);</span>
+            <span class="n">graphics</span><span class="p">.</span><span class="n">Clear</span> <span class="p">();</span>
+
+            <span class="c1">// Render UI Toolkit</span>
+            <span class="n">UISystem</span><span class="p">.</span><span class="n">Render</span> <span class="p">();</span>
+
+            <span class="c1">// Present the screen</span>
+            <span class="n">graphics</span><span class="p">.</span><span class="n">SwapBuffers</span> <span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="id3">
+<h1><a class="toc-backref" href="#id7">実行とデバッグ</a></h1>
+<blockquote>
+<p>作成したコードを PC 上のシミュレータで実行します。</p>
+<p>実行方法は <a class="reference external" href="setup_devenv_ja.html">開発環境の設定</a> の実行とデバッグと同じです。以下の手順に沿って実行またはデバッグ実行を行ってください。</p>
+<ul>
+<li><p class="first">PSM Studio のメインメニューから [ビルド] ([Build]) &gt; [全てビルド] ([Build All]) を選択し、アプリケーションをビルドします。右下のステータスバーでエラーがないことを確認してください。</p>
+</li>
+<li><p class="first">PSM Studio のメインメニューから [プロジェクト] ([Project]) &gt; [PSM Device Target] が [PlayStation Mobile Simulator] になっていることを確認してください。</p>
+</li>
+<li><p class="first">PSM Studio のメインメニューから [実行] ([Run]) &gt; [実行] ([Run]) または [デバッグ] ([Debug]) を選択すると、シミュレータで 実行 または デバッグ実行 することができます(図5)。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/ui_quickstart/helloworld_screenshot.png" src="image/uitoolkit/ui_quickstart/helloworld_screenshot.png" />
+<p class="caption"><strong>図5 シミュレータ上で実行した様子</strong></p>
+</div>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+</div>
+ </div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: クラス Scene</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Scene.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public メソッド</a> &#124;
+<a href="#pub-attribs">Public 変数</a> &#124;
+<a href="#properties">プロパティ</a>  </div>
+  <div class="headertitle">
+<h1>クラス Scene</h1>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="Sce::PlayStation::HighLevel::GameEngine2D::Scene" --><!-- doxytag: inherits="Sce::PlayStation::HighLevel::GameEngine2D::Node" -->
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Scene.html" title="Scene クラスはシーングラフのルートノードタイプです。 シーンスタックを操作するため Director シングルトンを使い、現在のシーンは Director.Instance.CurrentScene でアクセスします。 2つのシーンが画面遷移のためブレンディングされるときを除き、アクティブになるシーンはひとつだけです。">Scene</a> クラスはシーングラフのルートノードタイプです。 シーンスタックを操作するため <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Director.html" title="Director はシーンスタックを管理し、Scheduler と ActionManager の update ループを呼び出すシングルトンです。 開発者自身が独自にメインループを実装する場合、開発者...">Director</a> シングルトンを使い、現在のシーンは Director.Instance.CurrentScene でアクセスします。 2つのシーンが画面遷移のためブレンディングされるときを除き、アクティブになるシーンはひとつだけです。  
+<a href="#_details">[詳細]</a></p>
+<div class="dynheader">
+Sceneに対する継承グラフ</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Scene.png" usemap="#Scene_map" alt=""/>
+  <map id="Scene_map" name="Scene_map">
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html" alt="Node" shape="rect" coords="167,0,324,24"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1TransitionScene.html" alt="TransitionScene" shape="rect" coords="167,112,324,136"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1TransitionFadeBase.html" alt="TransitionFadeBase" shape="rect" coords="167,168,324,192"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1TransitionCrossFade.html" alt="TransitionCrossFade" shape="rect" coords="0,224,157,248"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1TransitionDirectionalFade.html" alt="TransitionDirectionalFade" shape="rect" coords="167,224,324,248"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1TransitionSolidFade.html" alt="TransitionSolidFade" shape="rect" coords="334,224,491,248"/>
+</map>
+ </div></div>
+
+<p><a href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Scene-members.html">すべてのメンバ一覧</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Public メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaffca5c1fbe2171ad39fd6585c314b63"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Scene::Scene" ref="aaffca5c1fbe2171ad39fd6585c314b63" args="()" -->
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Scene.html#aaffca5c1fbe2171ad39fd6585c314b63">Scene</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb761dbdfd5869624acad1411f6a7453"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Scene::OnEnter" ref="adb761dbdfd5869624acad1411f6a7453" args="()" -->
+override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Scene.html#adb761dbdfd5869624acad1411f6a7453">OnEnter</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シーンが <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Director.html" title="Director はシーンスタックを管理し、Scheduler と ActionManager の update ループを呼び出すシングルトンです。 開発者自身が独自にメインループを実装する場合、開発者...">Director</a> によって開始された時、この関数が呼び出されます。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a51bf74a0763799986e6b6c97bde9f736"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Scene::OnExit" ref="a51bf74a0763799986e6b6c97bde9f736" args="()" -->
+override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Scene.html#a51bf74a0763799986e6b6c97bde9f736">OnExit</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シーンの OnExit はデフォルトで <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a25298b27571bcec15850a63515802b30" title="このノード内の、全てのアクションとスケジュールされた関数を再帰的に停止します。">Cleanup()</a> 呼び出します。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af8fdf721ca47e6bd379b68923c32ddef"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Scene::IsTransitionScene" ref="af8fdf721ca47e6bd379b68923c32ddef" args="()" -->
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Scene.html#af8fdf721ca47e6bd379b68923c32ddef">IsTransitionScene</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シーンが <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1TransitionScene.html" title="画面遷移ノードのための基底クラス。これらのノードは2つのシーンを視覚的に遷移させます。 遷移中は、両方のシーンを Updateし、描画します。">TransitionScene</a> タイプである場合、trueを返します。 <br/></td></tr>
+<tr><td colspan="2"><h2><a name="pub-attribs"></a>
+Public 変数</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46a086f9465d2b648887773cc8671dc9"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Scene::NoClear" ref="a46a086f9465d2b648887773cc8671dc9" args="" -->
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Scene.html#a46a086f9465d2b648887773cc8671dc9">NoClear</a> = false</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">通常、シーンは内部的な描画関数内でスクリーンをクリアします。 開発者はこの NoClear を trueに設定することで、自動クリアを抑制することができます。 自動クリアを無効にした場合、いくつかの <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1TransitionScene.html" title="画面遷移ノードのための基底クラス。これらのノードは2つのシーンを視覚的に遷移させます。 遷移中は、両方のシーンを Updateし、描画します。">TransitionScene</a> の効果が正常に動作しないことに注意してください。 ( いくつかの画面遷移は、2つの遷移するシーンを、ブレンドのためオフスクリーンで描画する必要があるためです。) <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a63efb48b43358132e066b8d19768156d"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Scene::DrawGridStep" ref="a63efb48b43358132e066b8d19768156d" args="" -->
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Scene.html#a63efb48b43358132e066b8d19768156d">DrawGridStep</a> = -1.0f</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1DebugFlags.html#a18892d16ee481f39901db9130717f5af" title="軸を黒、ルーラーを灰色で、デバッグワールドグリッドを描画します。">DebugFlags.DrawGrid</a> が Director.Instance.DebugFlags に設定されているときに描画される、デバッググリッドのセルサイズ。 値が -1.0f（デフォルト）である場合、デバッググリッドセルのサイズが、 DrawGridAutoStepMaxCells での分割数以上を表示しないよう、自動的に調整されます。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Scene.html#a733480d72eddb3f66e97ad794e39af6a">DrawGridAutoStepMaxCells</a> = 32</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">DrawGridStepが-1に設定されている場合、デバッググリッドのセルサイズは自動的に計算されます。 ズームアウトすると、DrawGridAutoStepMaxCellsの分割よりも多くならないように、2のべき乗でセルサイズが増加します。  <a href="#a733480d72eddb3f66e97ad794e39af6a"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="properties"></a>
+プロパティ</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad9f9cbaba0c23854b295048ef4ebc084"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Scene::SceneTime" ref="ad9f9cbaba0c23854b295048ef4ebc084" args="" -->
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Scene.html#ad9f9cbaba0c23854b295048ef4ebc084">SceneTime</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シーンの開始時から経過した時間の総計。秒単位。 <br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>説明</h2>
+<div class="textblock"><p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Scene.html" title="Scene クラスはシーングラフのルートノードタイプです。 シーンスタックを操作するため Director シングルトンを使い、現在のシーンは Director.Instance.CurrentScene でアクセスします。 2つのシーンが画面遷移のためブレンディングされるときを除き、アクティブになるシーンはひとつだけです。">Scene</a> クラスはシーングラフのルートノードタイプです。 シーンスタックを操作するため <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Director.html" title="Director はシーンスタックを管理し、Scheduler と ActionManager の update ループを呼び出すシングルトンです。 開発者自身が独自にメインループを実装する場合、開発者...">Director</a> シングルトンを使い、現在のシーンは Director.Instance.CurrentScene でアクセスします。 2つのシーンが画面遷移のためブレンディングされるときを除き、アクティブになるシーンはひとつだけです。 </p>
+<p>また、シーンはメインカメラを保持しています。 </p>
+</div><hr/><h2>変数</h2>
+<a class="anchor" id="a733480d72eddb3f66e97ad794e39af6a"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Scene::DrawGridAutoStepMaxCells" ref="a733480d72eddb3f66e97ad794e39af6a" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Scene.html#a733480d72eddb3f66e97ad794e39af6a">DrawGridAutoStepMaxCells</a> = 32</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>DrawGridStepが-1に設定されている場合、デバッググリッドのセルサイズは自動的に計算されます。 ズームアウトすると、DrawGridAutoStepMaxCellsの分割よりも多くならないように、2のべき乗でセルサイズが増加します。 </p>
+<p>警告：あまりにも多くこの値を増やすと、非常に多くの線が描画されることにつながり、 DrawHelpers のイミーディエイトモードで使用する頂点配列をオーバーフローしてしまう可能性があります。 自動的に計算されたステップサイズが 2 ^ 15より大きくなった場合、デバッググリッドの描画を停止します。 </p>
+
+</div>
+</div>
+</div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><b>Sce</b>      </li>
+      <li class="navelem"><b>PlayStation</b>      </li>
+      <li class="navelem"><b>HighLevel</b>      </li>
+      <li class="navelem"><a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D.html">GameEngine2D</a>      </li>
+      <li class="navelem"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Scene.html">Scene</a>      </li>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

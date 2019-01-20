@@ -1,0 +1,732 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: 基本構成</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('tool_basic_concepts_ja.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<h1>基本構成 </h1>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><p>UI Composerは、PlayStation(R)Mobile(PSM)上で動作するアプリケーション（ウィンドウやメニューなど）のGUIをレイアウトするためのツールです。</p>
+<p>ウィジェットや画像などのオブジェクトをドラッグ操作で直感的にレイアウトすることが可能です。</p>
+<p>また、各オブジェクトの位置、サイズ、および属性の設定を行うことができます。</p>
+<p>本章では、UI Composer の構成、各画面の役割および機能について説明します。</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#id2" id="id17">ファイル構成</a></li>
+<li><a class="reference internal" href="#id3" id="id18">ツールの構成</a></li>
+<li><a class="reference internal" href="#id4" id="id19">レイアウトウィンドウ</a></li>
+<li><a class="reference internal" href="#id5" id="id20">ウィジェットリストウィンドウ</a></li>
+<li><a class="reference internal" href="#id6" id="id21">プロパティウィンドウ</a></li>
+<li><a class="reference internal" href="#id7" id="id22">オブジェクトツリーウィンドウ</a></li>
+<li><a class="reference internal" href="#id8" id="id23">アセットウィンドウ</a></li>
+<li><a class="reference internal" href="#id9" id="id24">オーバービューウィンドウ</a></li>
+<li><a class="reference internal" href="#id10" id="id25">言語テーブルウィンドウ</a></li>
+<li><a class="reference internal" href="#id11" id="id26">ツールバー</a></li>
+<li><a class="reference internal" href="#id12" id="id27">各種設定画面</a><ul>
+<li><a class="reference internal" href="#id13" id="id28">プロジェクト設定</a></li>
+<li><a class="reference internal" href="#id14" id="id29">ツールの環境設定</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h1><a class="toc-backref" href="#id17">ファイル構成</a></h1>
+<blockquote>
+<p>UI Composer は複数の画面を1つのプロジェクトファイル( xxxxx.uic )にまとめて管理します。各画面のレイアウト情報に加えて、クラス出力先のフォルダー設定やクラスが属する namespace の情報もこのファイルに保存されます。UI Composer を利用してアプリケーションを実装する場合のファイル構成は下記のようになります。:</p>
+<pre class="literal-block">
+SampleApp/
+          SampleApp.csproj
+
+          SampleApp.uic               : UI Composer プロジェクトファイル
+          SampleApp_LanguageTable.csv : 文字列データの格納ファイル(ユーザー編集用)
+
+          AppMain.cs                  : アプリケーションのメインロジック
+
+          SampleA.cs                  : ユーザー定義クラスA
+          SampleB.cs                  : ユーザー定義クラスB
+          SampleC.cs                  : ユーザー定義クラスC
+
+          SampleScene.cs              : SampleScene のロジック、イベントハンドラを定義したファイル (UI Composer が出力)
+          SampleScene.composer.cs     : SampleScene のレイアウト情報を定義したファイル (UI Composer が出力)
+          SamplePanel.cs              : SamplePanel のロジック、イベントハンドラを定義したファイル (UI Composer が出力)
+          SamplePanel.composer.cs     : SamplePanel のレイアウト情報を定義したファイル (UI Composer が出力)
+          SampleDialog.cs             : SampleDialog のロジック、イベントハンドラを定義したファイル (UI Composer が出力)
+          SampleDialog.composer.cs    : SampleDialog のレイアウト情報を定義したファイル (UI Composer が出力)
+          UIStringTable.cs            : 文字列管理クラス (UI Composer が出力)
+
+          assets/                     : UI Composer が参照するアセットフォルダー
+                 AAA.png
+                 BBB.png
+</pre>
+</blockquote>
+</div>
+<div class="section" id="id3">
+<h1><a class="toc-backref" href="#id18">ツールの構成</a></h1>
+<blockquote>
+<p>UI Composer は 複数のウィンドウから構成されています(図1, 表1)。各ウィンドウはタブの部分をドラッグすることで、ドッキングもしくはドッキングの解除が可能です。以下、順に各ウィンドウについて説明していきます。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/composer/tool_overview.png" src="image/uitoolkit/composer/tool_overview.png" style="width: 1024px;" />
+<p class="caption"><strong>図1 ツール全体図</strong></p>
+<div class="legend">
+<table border="1" class="docutils">
+<caption>表1 各ウィンドウの一覧</caption>
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">名称</th>
+<th class="head">内容</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>メインメニュー (Main Menu)</td>
+<td>メインメニューです。</td>
+</tr>
+<tr><td>ツールバー (Toolbar)</td>
+<td>よく使う機能をまとめたボタン群です。</td>
+</tr>
+<tr><td>レイアウトウィンドウ (Layout Window)</td>
+<td>ウィジェットをレイアウトするためのウィンドウです。</td>
+</tr>
+<tr><td>ウィジェットリストウィンドウ (Widget List Window)</td>
+<td>レイアウトキャンバス上に配置できるウィジェットが表示されます。</td>
+</tr>
+<tr><td>プロパティウィンドウ (Property Window)</td>
+<td>各ウィジェットのプロパティ設定が表示されます。</td>
+</tr>
+<tr><td>オブジェクトツリーウィンドウ (Object Tree Window)</td>
+<td>レイアウトキャンバス上に配置されたウィジェットをツリー状に表示します。</td>
+</tr>
+<tr><td>アセットウィンドウ (Asset Window)</td>
+<td>アセットディレクトリ内にあるイメージアセットが表示されます。</td>
+</tr>
+<tr><td>オーバービューウィンドウ (Overview Window)</td>
+<td>レイアウトキャンバスの俯瞰図を表示します。</td>
+</tr>
+<tr><td>言語テーブルウィンドウ (Language Table Window)</td>
+<td>多言語に対応したGUIを作成する際に使用します。</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</blockquote>
+</div>
+<div class="section" id="id4">
+<h1><a class="toc-backref" href="#id19">レイアウトウィンドウ</a></h1>
+<blockquote>
+<p>レイアウトウィンドウは、レイアウトキャンバス上に各種ウィジェットを配置し、アプリケーションの画面を構成していくための画面です。ウィジェットリストウィンドウ(後述)からドラッグアンドドロップして追加したウィジェットを自由に配置することが可能です。</p>
+<p>レイアウトウィンドウは下記のような構成となっています(図2, 表2)。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/composer/layout_window.png" src="image/uitoolkit/composer/layout_window.png" />
+<p class="caption"><strong>図2 レイアウトウィンドウの概要</strong></p>
+<div class="legend">
+<table border="1" class="docutils">
+<caption>表2 レイアウトウィンドウの説明</caption>
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">名称</th>
+<th class="head">説明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>ガイド (Guide)</td>
+<td>ウィジェットの位置を揃えるためのガイド線です。ガイド線を任意に設定することが可能です。</td>
+</tr>
+<tr><td>スマートガイド (Smart Guide)</td>
+<td>レイアウトキャンバスに配置されているウィジェットを基準として揃えるためのガイド線です。</td>
+</tr>
+<tr><td>グリッド (Grid)</td>
+<td>キャンバスに表示されているグリッド線です。</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>レイアウトウィンドウでは、ウィジェットのレイアウト編集、操作などを行うことができます。</p>
+<p>ウィジェットを選択するとリサイズハンドルが表示されます(図3)。リサイズハンドルをドラッグすることでサイズの変更が可能です。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/composer/widget_select.png" src="image/uitoolkit/composer/widget_select.png" />
+<p class="caption"><strong>図3 Widget Select</strong></p>
+</div>
+</blockquote>
+<p>またウィジェットを選択し配置を調整する際に、ガイドやスマートガイドにウィジェットを吸着させることも可能です(図4)。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/composer/snap_to_guide.png" src="image/uitoolkit/composer/snap_to_guide.png" />
+<p class="caption"><strong>図4 ガイド線への吸着</strong></p>
+</div>
+</blockquote>
+<p>レイアウトを整列する機能としてツールバーなどにウィジェット の水平方向、垂直方向の位置ぞろえや等間隔機能などの機能を提供しています。</p>
+<p>より詳細な解説は、 <a class="reference external" href="tool_layout_ja.html">UI Composer ユーザーガイド - レイアウトガイド</a> を参照して下さい。</p>
+</blockquote>
+</div>
+<div class="section" id="id5">
+<h1><a class="toc-backref" href="#id20">ウィジェットリストウィンドウ</a></h1>
+<blockquote>
+<p>ウィジェットリストウィンドウは、レイアウトキャンバス上に配置できるウィジェットの一覧です。ここからドラッグアンドドロップすることで、画面を作成します。</p>
+<p>PSM UI Toolkitには様々なウィジェットが用意されています。UI Composer でレイアウトできるウィジェットはこのウィジェットリストウィンドウに一覧表示されます(図5)。</p>
+<p>ウィジェットリストウィンドウ上のウィジェットを選択し、レイアウトキャンバスへ向かってドラッグアンドドロップすることで、選択したウィジェットを配置することができます。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/composer/widget_list_window.png" src="image/uitoolkit/composer/widget_list_window.png" />
+<p class="caption"><strong>図5 ウィジェットリストウィンドウ</strong></p>
+</div>
+<p>ウィジェットは下記の種類にグループ分けされて表示されています。</p>
+<ul class="simple">
+<li>標準ウィジェット (ButtonやLabelなどの広く一般的なウィジェット)</li>
+<li>パネルウィジェット (標準ウィジェットなどを格納するウィジェット)</li>
+<li>PSM オリジナルウィジェット (PSM UI Toolkit独自のウィジェット)</li>
+<li>すべてのウィジェット（上記ウィジェットを全て表示します）</li>
+</ul>
+<p>ウィジェットのラインナップや詳細については <a class="reference external" href="ui_widget_ja.html">UI Toolkitプログラミングガイド - ウィジェット</a> を参照して下さい。</p>
+</blockquote>
+</div>
+<div class="section" id="id6">
+<h1><a class="toc-backref" href="#id21">プロパティウィンドウ</a></h1>
+<blockquote>
+<p>プロパティウィンドウには、各ウィジェットに対して設定可能なプロパティが、全ウィジェット共通項目とウィジェット固有項目に分かれて表示されます(図6)。</p>
+<p>プロパティウィンドウ上での設定値が変更されると、レイアウトキャンバス上のウィジェットの表示もそれに伴って変化します。ただし、一部設定値がレイアウトキャンバス上に反映されない属性もあります。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/composer/property_window.png" src="image/uitoolkit/composer/property_window.png" />
+<p class="caption"><strong>図6 プロパティウィンドウ</strong></p>
+</div>
+<p>各ウィジェットの設定項目については <a class="reference external" href="tool_widgets_ja.html">UI Composer ユーザーガイド - ウィジェット</a> を参照して下さい。</p>
+</blockquote>
+</div>
+<div class="section" id="id7">
+<h1><a class="toc-backref" href="#id22">オブジェクトツリーウィンドウ</a></h1>
+<blockquote>
+<p>オブジェクトツリーウィンドウは、プロジェクト内に存在するウィジェットをレイアウト画面ごとにツリー表示するウィンドウです(図7, 表3)。</p>
+<p>各レイアウト画面内のウィジェットの関係を俯瞰し、ツリー内の構成の編集や、表示の切り替えを行うことができます。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/composer/object_tree_window.png" src="image/uitoolkit/composer/object_tree_window.png" />
+<p class="caption"><strong>図7 オブジェクトツリーウィンドウ</strong></p>
+<div class="legend">
+<table border="1" class="docutils">
+<caption>表3 オブジェクトツリーウィンドウの説明</caption>
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">名称</th>
+<th class="head">説明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>レイアウト画面 (Layout Screen)</td>
+<td>プロジェクト内に存在するレイアウトのクラス名が表示されています。</td>
+</tr>
+<tr><td>ウィジェット (Widget)</td>
+<td>各レイアウトに配置されているウィジェットの変数名が表示されています。</td>
+</tr>
+<tr><td>表示アイコン (Visible Icon)</td>
+<td><p class="first">レイアウトキャンバス上で表示するかどうかを表しています。クリックすることで切り替えることができます。</p>
+<ul class="last simple">
+<li><img alt="visible-image" src="image/uitoolkit/composer/visible.png" /> : 表示</li>
+<li><img alt="invisible-image" src="image/uitoolkit/composer/invisible.png" /> : 非表示</li>
+<li><img alt="invisible-by-parent-image" src="image/uitoolkit/composer/invisible_by_parent.png" /> : 親ウィジェットが非表示</li>
+</ul>
+</td>
+</tr>
+<tr><td>ロックアイコン (Lock Icon)</td>
+<td><p class="first">レイアウトキャンバス上でウィジェットを選択できるかどうかを表しています。クリックすることで切り替えることができます。</p>
+<ul class="last simple">
+<li><img alt="lock-image" src="image/uitoolkit/composer/lock.png" /> : ロック状態</li>
+<li><img alt="unlock-image" src="image/uitoolkit/composer/unlock.png" /> : アンロック状態</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>ツリー内の順序は、Zオーダーに対応しており、下にあるウィジェットほどレイアウト画面で手前に表示されます。</p>
+<p>オブジェクトツリー内で、ウィジェットをドラッグアンドドロップすることで、Zオーダーの変更や親子関係の変更を行うことができます。また、コンテキストメニューから複製、切り取り、貼り付け、削除などの操作を行うことができます。</p>
+<p>なお、表示アイコンはプロパティウィンドウのVisibleとは異なり、出力されるコードには影響しません。</p>
+</blockquote>
+</div>
+<div class="section" id="id8">
+<h1><a class="toc-backref" href="#id23">アセットウィンドウ</a></h1>
+<blockquote>
+<p>アセットウィンドウは、アセットフォルダーの中に保存されている画像データを表示します(図8)。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/composer/asset_list_window.png" src="image/uitoolkit/composer/asset_list_window.png" />
+<p class="caption"><strong>図8 アセットウィンドウ</strong></p>
+</div>
+<p><em>(プロジェクトファイルのあるフォルダー)/assets</em> を参照しています。そのため、OS側から　*(プロジェクトファイルのあるフォルダー)/assets* 以下にアセットを追加した場合でもアセットリストの表示に反映されます。</p>
+<p>対応している画像フォーマットは .jpg .png です。</p>
+<p>アセットウィンドウは、表4の3つの表示から構成されています。</p>
+<blockquote>
+<table border="1" class="docutils">
+<caption>表4 アセットウィンドウの説明</caption>
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">名称</th>
+<th class="head">説明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>画像データのプレビュー</td>
+<td>選択した画像データのプレビュー表示です。プレビューとリストの間にあるセパレーターを調整することで、プレビュー画像の大きさが変化します。</td>
+</tr>
+<tr><td>画像データの一覧</td>
+<td>プロジェクト設定で指定されたアセットフォルダーを参照し、そのフォルダー内の画像データをツリー形式で表示しています。</td>
+</tr>
+<tr><td>各種操作ボタン</td>
+<td>アセットフォルダーへの画像/フォルダーの追加・削除を行うためのボタンです。</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p>通常、レイアウト画面にImage Boxを追加する場合、ウィジェットリストウィンドウからレイアウトキャンバスに配置し、Imageプロパティに任意の画像を設定することになります。アセットウィンドウを利用するとこの一連の作業を簡易化することが可能で、画像データの一覧から直接レイアウトキャンバスにドラッグアンドドロップすることで、Imageプロパティに選択した画像が割り当てられたImage Boxをレイアウト画面に追加することが可能になります。</p>
+</blockquote>
+</div>
+<div class="section" id="id9">
+<h1><a class="toc-backref" href="#id24">オーバービューウィンドウ</a></h1>
+<blockquote>
+<p>オーバービューウィンドウは、レイアウトキャンバスの全体を俯瞰するためのウィンドウです。</p>
+<p>レイアウトウィンドウ内のレイアウトキャンバスの拡大率を制御したり、レイアウトキャンバスの表示する領域を変更することが可能です。</p>
+<p>オーバービューウィンドウは下記2つの要素で構成されています(図9)。</p>
+<ul class="simple">
+<li>レイアウトキャンバスの俯瞰図</li>
+<li>拡大/縮小率変更用のコントロール</li>
+</ul>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/composer/overview_window.png" src="image/uitoolkit/composer/overview_window.png" />
+<p class="caption"><strong>図9 オーバービューウィンドウ</strong></p>
+</div>
+<p>レイアウトキャンバスの俯瞰図には、レイアウトウィンドウに表示される領域(View Area)を青枠線で表示しています。俯瞰図上でクリックもしくはドラッグ操作を行うことで、レイアウトキャンバスの表示領域を変更することができます。</p>
+<p>拡大/縮小率を変更するには、既定値を選択するためのドロップダウンリストとユーザーが自由に倍率を変更できるスライダーが利用可能です。ドロップダウンリストに直接倍率を入力することも可能です。</p>
+</blockquote>
+</div>
+<div class="section" id="id10">
+<h1><a class="toc-backref" href="#id25">言語テーブルウィンドウ</a></h1>
+<blockquote>
+<p>他の言語をサポートするアプリケーションの開発用に各種文字列を表示するために文字列を管理するためのウィンドウです。</p>
+<p>そのために、言語テーブルウィンドウは、アプリケーションの中で使用する文字列を複数設定するための画面です。</p>
+<p>初期状態では英語の文字列設定をすることが可能です。また、その他の言語を拡張して設定することができます。</p>
+<p>言語テーブルウィンドウは下記2つの要素で構成されています(図10)。</p>
+<ul class="simple">
+<li>言語テーブル</li>
+<li>各種ボタン</li>
+</ul>
+<p>行には各言語、列には文字列IDが表示され、各行と列に対応したセルに文字列IDに対応した各言語の文字列が表示されます。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/composer/language_table.png" src="image/uitoolkit/composer/language_table.png" />
+<p class="caption"><strong>図10 言語テーブルウィンドウ</strong></p>
+</div>
+<p>言語テーブルでは、文字列IDとそれに対応する文字列を入力・編集することができます。文字列IDと表示する文字列の追加削除、対応する言語の追加削除を行うことができます。
+また、csvファイルの読み込み・書き出しをサポートしています。</p>
+<p>詳細は、 <a class="reference external" href="tool_localization_ja.html">UI Composer ユーザーガイド - アプリケーションの多言語対応</a> を参照して下さい。</p>
+</blockquote>
+</div>
+<div class="section" id="id11">
+<h1><a class="toc-backref" href="#id26">ツールバー</a></h1>
+<blockquote>
+<p>すべての操作はメニューから操作することが可能ですが、特によく使う機能は、ツールバーにも機能が用意されています。</p>
+<p>ツールバーでは各操作を迅速に使うことができます。表5に用意されている機能の説明を行います。</p>
+<blockquote>
+<table border="1" class="docutils">
+<caption>表5 ツールバーの説明</caption>
+<colgroup>
+<col width="6%" />
+<col width="24%" />
+<col width="71%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">アイコン</th>
+<th class="head">名称</th>
+<th class="head">説明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><div class="first last figure">
+<img alt="image/toolbar/arrow_cursor.png" src="image/toolbar/arrow_cursor.png" />
+</div>
+</td>
+<td>Arrow Cursor</td>
+<td>Cursor ツールにて、Widgetの拡大、縮小、移動などの操作をすることができます</td>
+</tr>
+<tr><td><div class="first last figure">
+<img alt="image/toolbar/hand_cursor.png" src="image/toolbar/hand_cursor.png" />
+</div>
+</td>
+<td>HandModeButton</td>
+<td>Hand ツールにて、キャンバスの移動をすることができます</td>
+</tr>
+<tr><td><div class="first last figure">
+<img alt="image/toolbar/save.png" src="image/toolbar/save.png" />
+</div>
+</td>
+<td>Save</td>
+<td>レイアウトした結果を UI Composer プロジェクトファイルに保存します</td>
+</tr>
+<tr><td><div class="first last figure">
+<img alt="image/toolbar/open.png" src="image/toolbar/open.png" />
+</div>
+</td>
+<td>Open</td>
+<td>既存の UI Composer プロジェクトファイルを開きます</td>
+</tr>
+<tr><td><div class="first last figure">
+<img alt="image/toolbar/new_project.png" src="image/toolbar/new_project.png" />
+</div>
+</td>
+<td>New</td>
+<td>新しい Layout を作ることができます</td>
+</tr>
+<tr><td><div class="first last figure">
+<img alt="image/toolbar/cut.png" src="image/toolbar/cut.png" />
+</div>
+</td>
+<td>Cut</td>
+<td>キャンバス上のウィジェットを Cut します</td>
+</tr>
+<tr><td><div class="first last figure">
+<img alt="image/toolbar/copy.png" src="image/toolbar/copy.png" />
+</div>
+</td>
+<td>Copy</td>
+<td>キャンバス上のウィジェットを Copy します</td>
+</tr>
+<tr><td><div class="first last figure">
+<img alt="image/toolbar/paste.png" src="image/toolbar/paste.png" />
+</div>
+</td>
+<td>Paste</td>
+<td>コピーしたウィジェットを Paste します</td>
+</tr>
+<tr><td><div class="first last figure">
+<img alt="image/toolbar/undo.png" src="image/toolbar/undo.png" />
+</div>
+</td>
+<td>Undo</td>
+<td>キャンバス上の操作を一つ前の操作に戻します</td>
+</tr>
+<tr><td><div class="first last figure">
+<img alt="image/toolbar/redo.png" src="image/toolbar/redo.png" />
+</div>
+</td>
+<td>Redo</td>
+<td>キャンバス上で一つ戻した操作を前の操作に戻します</td>
+</tr>
+<tr><td><div class="first last figure">
+<img alt="image/toolbar/align_left.png" src="image/toolbar/align_left.png" />
+</div>
+</td>
+<td>Align Left</td>
+<td>二つ以上のウィジェットを選んだ状態で左合わせの状態にします</td>
+</tr>
+<tr><td><div class="first last figure">
+<img alt="image/toolbar/align_center.png" src="image/toolbar/align_center.png" />
+</div>
+</td>
+<td>Align Center (Horizontal)</td>
+<td>二つ以上のウィジェットを選んだ状態で横方向の中央合わせの状態にします</td>
+</tr>
+<tr><td><div class="first last figure">
+<img alt="image/toolbar/align_right.png" src="image/toolbar/align_right.png" />
+</div>
+</td>
+<td>Align Right</td>
+<td>二つ以上のウィジェットを選んだ状態で右合わせの状態にします</td>
+</tr>
+<tr><td><div class="first last figure">
+<img alt="image/toolbar/align_top.png" src="image/toolbar/align_top.png" />
+</div>
+</td>
+<td>Align Top</td>
+<td>二つ以上のウィジェットを選んだ状態で上合わせの状態にします</td>
+</tr>
+<tr><td><div class="first last figure">
+<img alt="image/toolbar/align_center_vertical.png" src="image/toolbar/align_center_vertical.png" />
+</div>
+</td>
+<td>Align Center (Vertical)</td>
+<td>二つ以上のウィジェットを選んだ状態で縦方向の中央合わせの状態にします</td>
+</tr>
+<tr><td><div class="first last figure">
+<img alt="image/toolbar/align_bottom.png" src="image/toolbar/align_bottom.png" />
+</div>
+</td>
+<td>Align Bottom</td>
+<td>二つ以上のウィジェットを選んだ状態で下合わせの状態にします</td>
+</tr>
+<tr><td><div class="first last figure">
+<img alt="image/toolbar/align_horizontal_center.png" src="image/toolbar/align_horizontal_center.png" />
+</div>
+</td>
+<td>Align Horizontal Center in Container</td>
+<td>ウィジェットを親のウィジェットの水平方向の中央に合わせます</td>
+</tr>
+<tr><td><div class="first last figure">
+<img alt="image/toolbar/align_vertical_center.png" src="image/toolbar/align_vertical_center.png" />
+</div>
+</td>
+<td>Align Vertical Center in Container</td>
+<td>ウィジェットを親のウィジェットの上下方向の中央に合わせます</td>
+</tr>
+<tr><td><div class="first last figure">
+<img alt="image/toolbar/make_same_width.png" src="image/toolbar/make_same_width.png" />
+</div>
+</td>
+<td>Make Same Width</td>
+<td>二つ以上のウィジェットの幅を同じにします。</td>
+</tr>
+<tr><td><div class="first last figure">
+<img alt="image/toolbar/make_same_height.png" src="image/toolbar/make_same_height.png" />
+</div>
+</td>
+<td>Make Same Height</td>
+<td>二つ以上のウィジェットの高さを同じにします</td>
+</tr>
+<tr><td><div class="first last figure">
+<img alt="image/toolbar/make_same_size.png" src="image/toolbar/make_same_size.png" />
+</div>
+</td>
+<td>Make Same Size</td>
+<td>二つ以上のウィジェットのサイズを同じにします</td>
+</tr>
+<tr><td><div class="first last figure">
+<img alt="image/toolbar/make_horizontal_space_equal.png" src="image/toolbar/make_horizontal_space_equal.png" />
+</div>
+</td>
+<td>Make Horizontal Space Equal</td>
+<td>三つ以上のウィジェットの横の間隔を同じにします</td>
+</tr>
+<tr><td><div class="first last figure">
+<img alt="image/toolbar/make_vertical_space_equal.png" src="image/toolbar/make_vertical_space_equal.png" />
+</div>
+</td>
+<td>Make Vertical Space Equal</td>
+<td>三つ以上のウィジェットの縦の間隔を同じにします</td>
+</tr>
+<tr><td><div class="first last figure">
+<img alt="image/toolbar/send_to_back.png" src="image/toolbar/send_to_back.png" />
+</div>
+</td>
+<td>Send to Back</td>
+<td>ウィジェットの重なる順番を一番下にします</td>
+</tr>
+<tr><td><div class="first last figure">
+<img alt="image/toolbar/send_to_front.png" src="image/toolbar/send_to_front.png" />
+</div>
+</td>
+<td>Send to Front</td>
+<td>ウィジェットの重なる順番を一番上にします</td>
+</tr>
+<tr><td><div class="first last figure">
+<img alt="image/toolbar/send_to_backward.png" src="image/toolbar/send_to_backward.png" />
+</div>
+</td>
+<td>Send Backward</td>
+<td>ウィジェットの重なる順番を一つ下にします</td>
+</tr>
+<tr><td><div class="first last figure">
+<img alt="image/toolbar/send_to_forward.png" src="image/toolbar/send_to_forward.png" />
+</div>
+</td>
+<td>Send Forward</td>
+<td>ウィジェットの重なる順番を一つ上にします</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="id12">
+<h1><a class="toc-backref" href="#id27">各種設定画面</a></h1>
+<blockquote>
+<p>本アプリケーションには、プロジェクト設定とツールの環境設定の２つの画面があります。</p>
+<p>下記に各設定画面で設定できるものの説明を行います。</p>
+</blockquote>
+<div class="section" id="id13">
+<h2><a class="toc-backref" href="#id28">プロジェクト設定</a></h2>
+<blockquote>
+<p>メインメニューから [ファイル] - [プロジェクト設定] を選択し、プロジェクトの環境設定を行うことができます(図11, 表6)。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/composer/projectsettings.png" src="image/uitoolkit/composer/projectsettings.png" />
+<p class="caption"><strong>図11 Project Property</strong></p>
+<div class="legend">
+<table border="1" class="docutils">
+<caption>表6 プロジェクト設定の説明</caption>
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">設定項目</th>
+<th class="head">説明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>Sources output folder</td>
+<td>ビルド時に生成されるソースファイルが出力されるフォルダーを指定できます。</td>
+</tr>
+<tr><td>namespace</td>
+<td>出力されるクラスの namespace が指定できます。</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</blockquote>
+</div>
+<div class="section" id="id14">
+<h2><a class="toc-backref" href="#id29">ツールの環境設定</a></h2>
+<blockquote>
+<p>メインメニューから [ファイル] - [環境設定] を選択し、ツールの環境設定を行うことができます(図12, 表7)。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/composer/preferences_dialog.png" src="image/uitoolkit/composer/preferences_dialog.png" />
+<p class="caption"><strong>図12 ツールの環境設定</strong></p>
+<div class="legend">
+<table border="1" class="docutils">
+<caption>表7 ツールの環境設定の説明</caption>
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">設定項目</th>
+<th class="head">説明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>ガイド線の色</td>
+<td>ユーザーが任意の場所に設定できるガイド線の色です。</td>
+</tr>
+<tr><td>スマートガイド線の色</td>
+<td>ウィジェットをドラッグ＆ドロップする際などに自動的に表示されるスマートガイドの色です。</td>
+</tr>
+<tr><td>グリッド線の色</td>
+<td>レイアウトキャンバスに等間隔で表示されるグリッド線の色です。</td>
+</tr>
+<tr><td>グリッド線の間隔</td>
+<td>グリッド線の間隔を設定することができます。</td>
+</tr>
+<tr><td>レイアウトキャンバスの背景色</td>
+<td>レイアウトキャンバスの背景色を設定できます。</td>
+</tr>
+<tr><td>レイアウトキャンバスの境界線の表示</td>
+<td>レイアウトキャンバスの境界線の表示の有無を設定できます。</td>
+</tr>
+<tr><td>UI 表示言語</td>
+<td>UIComposer 内の UI の表示文言の言語を設定できます。</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</blockquote>
+</div>
+</div>
+ </div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: 用語集</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('tool_glossary_ja.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<h1>用語集 </h1>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="71%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">用語</th>
+<th class="head">意味</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>レイアウトキャンバス (Layout Canvas)</td>
+<td>ウィジェットを配置するエリア。複数追加することができ、レイアウトウィンドウのタブで表示するレイアウトキャンバスを切り替えることができる。</td>
+</tr>
+<tr><td>ウィジェット (Widget)</td>
+<td>UI Toolkit で扱う UI 部品の単位。</td>
+</tr>
+<tr><td>レイアウトウィンドウ (Layout Window)</td>
+<td>開発するユーザーインターフェースのレイアウトを作成するためのウィンドウ。レイアウトキャンバスが表示される。</td>
+</tr>
+<tr><td>アセットウィンドウ (Asset Window)</td>
+<td>開発するユーザーインターフェースで使用するアセットフォルダー内を表示するウィンドウ。</td>
+</tr>
+<tr><td>オブジェクトツリー (Object Tree Window)</td>
+<td>レイアウトキャンバス上に配置されている UI 部品をツリー状に表示するウィンドウ。</td>
+</tr>
+<tr><td>ウィジェットリストウィンドウ (Widget List Window)</td>
+<td>UI Composer 内で配置できるウィジェットをリスト状に表示するウィンドウ。</td>
+</tr>
+<tr><td>オーバービューウィンドウ (Overview Window)</td>
+<td>レイアウトウィンドウに現在表示しているレイアウトキャンバスの全体像と表示領域を表示するウィンドウ。</td>
+</tr>
+<tr><td>プロパティウィンドウ (Property Window)</td>
+<td>各ウィジェットで設定可能な項目を表示するウィンドウ。</td>
+</tr>
+<tr><td>言語テーブルウィンドウ (Language Table Window)</td>
+<td>複数言語の文字列を ID 管理するためのウィンドウ。</td>
+</tr>
+<tr><td>ビルド (Build)</td>
+<td>作成したレイアウトが .cs ファイルのコードとして出力される。</td>
+</tr>
+<tr><td>xxx.composer.cs ファイル</td>
+<td>レイアウト情報が記述された C# のソースコードファイル。</td>
+</tr>
+<tr><td>xxx.cs ファイル</td>
+<td>イベントハンドラなどを記述するための.C# のソースコードファイル。ユーザーが作成していなければ、ビルド時に自動で作成される。</td>
+</tr>
+<tr><td>xxx.uic ファイル</td>
+<td>UI Composer のプロジェクトファイル。プロジェクトの設定や、各レイアウト情報などが保存されている。</td>
+</tr>
+<tr><td>ガイド (Guide)</td>
+<td>ユーザーが設定するガイド線。ウィジェットを整列させる際に使用される。</td>
+</tr>
+<tr><td>スマートガイド (Smart Guide)</td>
+<td>ウィジェット間に表示されるガイド線。すでにレイアウトキャンバス内に配置されているウィジェットに対して位置やサイズを揃える際に有効な機能。</td>
+</tr>
+<tr><td>グリッド (Grid)</td>
+<td>レイアウトキャンバス上に表示される格子状の線。</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+ </div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: Imaging 概要</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('overview_imaging_ja.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<h1>Imaging 概要 </h1>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><p>Sce.PlayStation.Core.Imaging は、画像処理関連の機能を提供します。画像ファイルをロードしたり、画像の中に文字をレンダリングしたりすることができます。</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#id1" id="id6">画像</a></li>
+<li><a class="reference internal" href="#id2" id="id7">フォントと文字の描画</a><ul>
+<li><a class="reference internal" href="#psm" id="id8">PSMが標準で搭載しているフォントを使う</a></li>
+<li><a class="reference internal" href="#id3" id="id9">フォントを指定して使う</a></li>
+<li><a class="reference internal" href="#id4" id="id10">文字の情報</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id5" id="id11">関連項目</a></li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h1><a class="toc-backref" href="#id6">画像</a></h1>
+<p>Image クラスは、画像を表すクラスです。Image は、PNG, JPG, BMP, GIF画像ファイル(ただしアニメーションGIFは非対応)から作成したり、色とサイズから単色で塗られた画像を作成することができます。</p>
+<p>Image.Resize() や Image.Crop() など、画像を変換するメソッドが提供されます。また、Image.DrawText() や Image.DrawImage() など、画像の中に文字や他の画像を貼り付けるメソッドが提供されます。</p>
+<p>Imageからテクスチャを作成するには、Image.ToBuffer()を使用して画像のメモリイメージを取得し、Texture2D.SetPixels()に渡します。</p>
+</div>
+<div class="section" id="id2">
+<h1><a class="toc-backref" href="#id7">フォントと文字の描画</a></h1>
+<p>Image.DrawText() を呼び出すことで、画像の中に文字を描画することができます。Image.DrawText() に Font オブジェクトを渡して、文字の描画に使用するフォントを指定することができます。</p>
+<p>フォントの利用には次の２つの方法があります。</p>
+<ul class="simple">
+<li>PSMが標準で搭載しているフォントを使う。</li>
+<li>フォントを指定して使う。</li>
+</ul>
+<div class="section" id="psm">
+<h2><a class="toc-backref" href="#id8">PSMが標準で搭載しているフォントを使う</a></h2>
+<p>PSMが標準で搭載しているフォントを使うには、Fontクラスのインスタンスを生成する時、FontのコンストラクタにFontAlias.Systemを指定します。現在、システムフォントとして提供されているのはFontAlias.System のみです。</p>
+<blockquote>
+例: new Font(FontAlias.System, size, FontStyle.Regular),</blockquote>
+</div>
+<div class="section" id="id3">
+<h2><a class="toc-backref" href="#id9">フォントを指定して使う</a></h2>
+<p>フォントを指定して使うには以下のようにします。</p>
+<ol class="arabic simple">
+<li>使用したいTrueType形式のフォントファイルをプロジェクトに登録し、ビルドアクションにContentを設定します。</li>
+<li>Fontクラスのコンストラクタ Font( string  filename, int  size, FontStyle  style ) を使い、filenameにフォントファイル名を渡してインスタンスを生成します。</li>
+</ol>
+</div>
+<div class="section" id="id4">
+<h2><a class="toc-backref" href="#id10">文字の情報</a></h2>
+<p>Font.GetTextWidth() は、文字の描画に必要な画像の横幅を取得するメソッドです。文字列の長さに応じて、画像のサイズを決定するためにこのメソッドを使用します。</p>
+<p>また、Font.GetTextMetrics() は、文字ごとのメトリクス情報(尺情報)を取得するメソッドです。これは文字ごとの幅や高さなどを取得するために使用します。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="./image/metrics.PNG" src="./image/metrics.PNG" style="width: 898.0px; height: 476.0px;" />
+<p class="caption"><strong>図1 文字のメトリクス情報(尺情報)</strong></p>
+</div>
+</blockquote>
+<p>詳しくは、
+<a class="reference external" href="./structSce_1_1PlayStation_1_1Core_1_1Imaging_1_1CharMetrics.html">Sce.PlayStation.Core.Imaging.CharMetrics</a> 、
+<a class="reference external" href="./structSce_1_1PlayStation_1_1Core_1_1Imaging_1_1FontMetrics.html">Sce.PlayStation.Core.Imaging.FontMetrics</a>
+をご覧ください。</p>
+</div>
+</div>
+<div class="section" id="id5">
+<h1><a class="toc-backref" href="#id11">関連項目</a></h1>
+<ul class="simple">
+<li><a class="reference external" href="./namespaceSce_1_1PlayStation_1_1Core_1_1Imaging.html">Sce.PlayStation.Core.Imaging</a></li>
+<li><a class="reference external" href="./classSce_1_1PlayStation_1_1Core_1_1Imaging_1_1Image.html">Sce.PlayStation.Core.Imaging.Image</a></li>
+<li><a class="reference external" href="./classSce_1_1PlayStation_1_1Core_1_1Imaging_1_1Font.html">Sce.PlayStation.Core.Imaging.Font</a></li>
+<li><a class="reference external" href="./structSce_1_1PlayStation_1_1Core_1_1Imaging_1_1CharMetrics.html">Sce.PlayStation.Core.Imaging.CharMetrics</a></li>
+<li><a class="reference external" href="./structSce_1_1PlayStation_1_1Core_1_1Imaging_1_1FontMetrics.html">Sce.PlayStation.Core.Imaging.FontMetrics</a></li>
+</ul>
+</div>
+ </div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

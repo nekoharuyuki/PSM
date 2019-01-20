@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: 7. ガベージコレクションとインスタンスの解放</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('programing_guide07_ja.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<h1>7. ガベージコレクションとインスタンスの解放 </h1>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><blockquote>
+この文書ではガベージコレクションとインスタンスの解放について説明します。</blockquote>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#id2" id="id8">不要になったインスタンスの解放</a></li>
+<li><a class="reference internal" href="#id3" id="id9">アクターシステムにインスタンス解放の仕組みを実装する</a></li>
+<li><a class="reference internal" href="#id4" id="id10">強制的にガベージコレクションを呼び出す</a></li>
+<li><a class="reference internal" href="#id5" id="id11">意図どおり解放されているか確認するには</a></li>
+<li><a class="reference internal" href="#id6" id="id12">アンマネージドリソースを解放する</a><ul>
+<li><a class="reference internal" href="#id7" id="id13">アンマネージドリソースとは</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h1><a class="toc-backref" href="#id8">不要になったインスタンスの解放</a></h1>
+<blockquote>
+<p>前の章では自機から発射される弾を実装しました。
+しかし、画面外に出て不要になった弾をそのまま放置していると、次から次に発射される弾でメモリがどんどん消費されていってしまいます。</p>
+<p>そのためメモリの消費を抑えるために、不要になった弾のインスタンスを解放する必要があります。</p>
+<p>C++ではnewで確保したメモリをdeleteを呼び出して解放します。
+それに対して、C#ではC++のように明示的に解放するのではなく、そのインスタンスへの参照をプログラム上のどこからも参照されないようにし、ガベージコレクションに解放してもらうようにします。</p>
+<p>C#でのインスタンスの解放は以下のイメージになります。</p>
+<p>弾を発射したとき、アクターツリーは以下の状態になっています。</p>
+<div align="center" class="figure">
+<img alt="image/program_guide/Remove01.JPG" src="image/program_guide/Remove01.JPG" />
+<p class="caption"><strong>弾を発射したときのアクターツリー</strong></p>
+</div>
+<p>画面外に出たbulltet0を解放したいとします。
+この場合、親のbulletManager内のchildrenがbulltet0を参照している箇所を削除すればよいわけです。</p>
+<div align="center" class="figure">
+<img alt="image/program_guide/Remove02.JPG" src="image/program_guide/Remove02.JPG" />
+<p class="caption"><strong>bulltet0への参照を削除</strong></p>
+</div>
+<p>children内の参照を削除すると、bullet0はどこからも参照されていない状態になります。
+この状態で、ガベージコレクションが発動すると、bullet0のメモリが回収され、メモリ領域が再び利用可能になります。</p>
+<div align="center" class="figure">
+<img alt="image/program_guide/Remove03.JPG" src="image/program_guide/Remove03.JPG" />
+<p class="caption"><strong>ガベージコレクションの発動で、インスタンスを解放</strong></p>
+</div>
+</blockquote>
+</div>
+<div class="section" id="id3">
+<h1><a class="toc-backref" href="#id9">アクターシステムにインスタンス解放の仕組みを実装する</a></h1>
+<blockquote>
+<p>では、不要になったインスタンスを解放する仕組みをアクターシステムに実装してみましょう。</p>
+<p>まず、アクターの状態を表す列挙型変数を用意します。</p>
+<p>sample/Tutorial/TutoLib/Actor.cs</p>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">enum</span> <span class="n">ActorStatus</span>
+<span class="p">{</span>
+    <span class="n">Action</span><span class="p">,</span>
+    <span class="n">UpdateOnly</span><span class="p">,</span>
+    <span class="n">RenderOnly</span><span class="p">,</span>
+    <span class="n">Rest</span><span class="p">,</span>
+    <span class="n">NoUse</span><span class="p">,</span>
+    <span class="n">Dead</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">public</span> <span class="n">ActorStatus</span> <span class="n">Status</span><span class="p">;</span>
+</pre></div>
+<!-- end-of-code-block -->
+<p>行動中の場合、ActorStatus StatusにActorStatus.Actionを、不要になった場合はActorStatus.Deadを代入するようにします。</p>
+<p>次にActorStatus.Deadの状態のアクターをList&lt;Actor&gt; childrenから削除するメソッドを実装します。</p>
+<p>sample/Tutorial/TutoLib/Actor.cs</p>
+<div class="highlight"><pre><span class="k">virtual</span> <span class="k">public</span> <span class="k">void</span> <span class="nf">CheckStatus</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">status</span> <span class="p">!=</span> <span class="k">this</span><span class="p">.</span><span class="n">StatusNextFrame</span><span class="p">)</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">status</span> <span class="p">=</span> <span class="k">this</span><span class="p">.</span><span class="n">StatusNextFrame</span><span class="p">;</span>
+
+    <span class="k">if</span><span class="p">(</span> <span class="k">this</span><span class="p">.</span><span class="n">Status</span> <span class="p">==</span> <span class="n">ActorStatus</span><span class="p">.</span><span class="n">Dead</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">foreach</span><span class="p">(</span><span class="n">Actor</span> <span class="n">actorChild</span> <span class="k">in</span> <span class="n">children</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">actorChild</span><span class="p">.</span><span class="n">Status</span> <span class="p">=</span> <span class="n">ActorStatus</span><span class="p">.</span><span class="n">Dead</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">foreach</span><span class="p">(</span><span class="n">Actor</span> <span class="n">actorChild</span> <span class="k">in</span> <span class="n">children</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">actorChild</span><span class="p">.</span><span class="n">CheckStatus</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="n">children</span><span class="p">.</span><span class="n">RemoveAll</span><span class="p">(</span><span class="n">CheckDeadActor</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">static</span> <span class="kt">bool</span> <span class="nf">CheckDeadActor</span><span class="p">(</span><span class="n">Actor</span> <span class="n">actor</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">//@j この条件で真になる要素を削除。</span>
+    <span class="c1">//@e Delete the elements to be proper with this condition.</span>
+    <span class="k">return</span> <span class="n">actor</span><span class="p">.</span><span class="n">Status</span> <span class="p">==</span> <span class="n">ActorStatus</span><span class="p">.</span><span class="n">Dead</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+<p>RemoveAll()はリストから要素を削除するメソッドです。
+上の例では、引数に渡したCheckDeadActor()メソッドで条件判定し、真の場合、リストからその要素を削除します。</p>
+<p>次に、このCheckStatus()をGameFrameworkSample.csのUpdate()内で呼び出します。</p>
+<p>sample/Tutorial/Sample06_01/GameFrameworkSample.cs</p>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">Update</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">base</span><span class="p">.</span><span class="n">Update</span><span class="p">();</span>
+
+    <span class="p">...</span>
+
+    <span class="n">Root</span><span class="p">.</span><span class="n">Update</span><span class="p">();</span>
+
+    <span class="n">Root</span><span class="p">.</span><span class="n">CheckStatus</span><span class="p">();</span><span class="c1">//&lt;--here</span>
+
+    <span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+<p>こうしておくと、毎フレームごとにCheckStatus()がアクターツリーを巡回し、死亡フラグのたっているアクターをツリーから削除してくれます。</p>
+<p>弾のクラスを見てみましょう。</p>
+<p>sample/Tutorial/Sample06_01/Bullet.cs</p>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">Bullet</span> <span class="p">:</span> <span class="n">GameActor</span>
+<span class="p">{</span>
+    <span class="k">static</span> <span class="kt">int</span> <span class="n">idNum</span><span class="p">=</span><span class="m">0</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">speed</span><span class="p">=</span><span class="m">8</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="nf">Bullet</span><span class="p">(</span><span class="n">GameFrameworkSample</span> <span class="n">gs</span><span class="p">,</span> <span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="n">Texture2D</span> <span class="n">textrue</span><span class="p">,</span> <span class="n">Vector3</span> <span class="n">position</span><span class="p">)</span> <span class="p">:</span> <span class="k">base</span> <span class="p">(</span><span class="n">gs</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Name</span> <span class="p">=</span> <span class="n">name</span> <span class="p">+</span> <span class="n">idNum</span><span class="p">.</span><span class="n">ToString</span><span class="p">();</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">sprite</span> <span class="p">=</span> <span class="k">new</span> <span class="n">SimpleSprite</span><span class="p">(</span> <span class="n">gs</span><span class="p">.</span><span class="n">Graphics</span><span class="p">,</span> <span class="n">textrue</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">sprite</span><span class="p">.</span><span class="n">Center</span><span class="p">.</span><span class="n">X</span> <span class="p">=</span> <span class="m">0.5f</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">sprite</span><span class="p">.</span><span class="n">Center</span><span class="p">.</span><span class="n">Y</span> <span class="p">=</span> <span class="m">0.5f</span><span class="p">;</span>
+
+        <span class="n">idNum</span><span class="p">++;</span>
+
+        <span class="k">this</span><span class="p">.</span><span class="n">sprite</span><span class="p">.</span><span class="n">Position</span> <span class="p">=</span> <span class="n">position</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">Update</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">sprite</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">Y</span> <span class="p">-=</span> <span class="n">speed</span><span class="p">;</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">sprite</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">Y</span> <span class="p">&lt;</span> <span class="m">0</span> <span class="p">)</span><span class="c1">//&lt;--here</span>
+        <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="n">Status</span> <span class="p">=</span> <span class="n">Actor</span><span class="p">.</span><span class="n">ActorStatus</span><span class="p">.</span><span class="n">Dead</span><span class="p">;</span>   <span class="c1">//&lt;--here</span>
+        <span class="p">}</span>
+
+        <span class="k">base</span><span class="p">.</span><span class="n">Update</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+<p>&lt;--hereの部分に注目してください。
+毎フレーム座標を更新し、画面の外に出た場合(つまりsprite.Position.Y &lt; 0が真のとき)、Statusに死亡フラグを立てます。
+こうしておくと、CheckStatus()がこのアクターを自動的にリストから削除してくれます。</p>
+</blockquote>
+</div>
+<div class="section" id="id4">
+<h1><a class="toc-backref" href="#id10">強制的にガベージコレクションを呼び出す</a></h1>
+<blockquote>
+<p>ゲームのプレイ中にガベージコレクションが発生すると、メモリ回収のために処理時間が割かれ、処理落ちしてしまうことがあります。</p>
+<p>C#にはSystem.GC.Collect()という関数が用意されており、これを呼び出すと強制的にガベージコレクションを呼び出すことができます。</p>
+<p>ステージとステージの合間にSystem.GC.Collect()を呼び出せば、ゲームプレイ中のガベージコレクションの発生を低減させることができます。</p>
+<p>System.GC.Collect()の実装は次章で行います。</p>
+</blockquote>
+</div>
+<div class="section" id="id5">
+<h1><a class="toc-backref" href="#id11">意図どおり解放されているか確認するには</a></h1>
+<blockquote>
+<p>ところで今の状態では、インスタンスをリストから削除するところまでは確認できますが、ガベージコレクションが意図どおりインスタンスを解放してくれているかは確認できません。
+これは少し不安なので、確認する方法を例示しておきます。</p>
+<p>クラスにデストラクタを実装しておくと、ガベージコレクションがインスタンスを解放するとき、デストラクタを呼び出します。
+そこでActorにデストラクタを実装して確認の処理を書いておけば、解放されたことが確認できます。</p>
+<p>sample/Tutorial/TutoLib/Actor.cs</p>
+<div class="highlight"><pre><span class="cp">#if DEBUG</span>
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// デストラクタ。</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="p">~</span><span class="n">Actor</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;~&quot;</span><span class="p">+</span><span class="n">Name</span><span class="p">);</span>
+        <span class="p">}</span>
+<span class="cp">#endif</span>
+</pre></div>
+<!-- end-of-code-block -->
+<p>上のように処理を書いておくと、ガベージコレクションが発動してインスタンスが解放されたとき、出力ウィンドウに ~bullet01のように文字列が出力されます。</p>
+<p>ガベージコレクションが発生したのに文字列が出力されない場合、そのインスタンスがどこかから参照されていることが考えられますので、ソースコードを見直してみましょう。</p>
+<p>なお、この処理は確認用のものなので、解放されていることが確認できたらコメントアウトしておきましょう。</p>
+<p>※ このサンプルでは、インスタンスの解放を例示するためにインスタンスの生成と解放を繰り返しています。
+しかし処理時間のことを考慮にいれると、生成と解放を繰り返すのではなく、不要になったインスタンスをそのまま保持しておき、インスタンスが必要になったら値を初期化して使いまわしたほうが効率はよくなります。</p>
+</blockquote>
+</div>
+<div class="section" id="id6">
+<h1><a class="toc-backref" href="#id12">アンマネージドリソースを解放する</a></h1>
+<div class="section" id="id7">
+<h2><a class="toc-backref" href="#id13">アンマネージドリソースとは</a></h2>
+<blockquote>
+<p>C#ではマネージドメモリ(C#のnewで確保したメモリ)以外のリソースのことをアンマネージドリソースと呼びます。</p>
+<p>アンマネージドリソースを確保するクラスで、PSMアプリでよく利用されるものには次のものがあります。</p>
+<ul class="simple">
+<li>Texture2D</li>
+<li>Sound, SoundPlayer</li>
+<li>Bgm, BgmPlayer</li>
+<li>Image</li>
+</ul>
+<p>アンマネージドリソースはマネージドメモリとは違い、プログラムからの参照がなくなっても、基本的にガベージコレクションによって回収されません。そのためこれらのクラスを利用した場合、明示的にリソースを解放する必要があります。</p>
+<p>これらのクラスはIDisposableインタフェースを継承しており、リソースを解放するためのDisposeメソッドが実装されています。</p>
+<p>IDisposableインタフェースを継承しているクラスは、不要になった時点でDisposeメソッドを呼び出し、確保したリソースを解放してください。</p>
+<blockquote>
+<p>sample/Tutorial/Sample06_01/GameFrameworkSample.cs</p>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">Terminate</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">texturePlayer</span><span class="p">.</span><span class="n">Dispose</span><span class="p">();</span>
+    <span class="n">textureStar</span><span class="p">.</span><span class="n">Dispose</span><span class="p">();</span>
+    <span class="n">textureBullet</span><span class="p">.</span><span class="n">Dispose</span><span class="p">();</span>
+
+    <span class="n">soundBullet</span><span class="p">.</span><span class="n">Dispose</span><span class="p">();</span>
+    <span class="n">soundPlayerBullet</span><span class="p">.</span><span class="n">Dispose</span><span class="p">();</span>
+
+    <span class="n">bgm</span><span class="p">.</span><span class="n">Dispose</span><span class="p">();</span>
+    <span class="n">bgmPlayer</span><span class="p">.</span><span class="n">Dispose</span><span class="p">();</span>
+
+    <span class="k">base</span><span class="p">.</span><span class="n">Terminate</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<p>上の例ではプログラム終了時にDispose()を呼び出し、確保したアンマネージドリソースの解放をおこなっています。</p>
+<p>このサンプルではアンマネージドリソースの利用が少ないのでリソース不足になる恐れはほとんどありませんが、テクスチャの作成を頻繁におこなうプログラムでDispose()の解放を忘れると、容易にリソース不足になります。リソースが枯渇するとプログラムが異常終了するので、Dispose()の呼び出しを忘れないよう注意してください。</p>
+<p>※ プログラムが終了すると、アンマネージドリソースは自動的に解放されます。</p>
+</blockquote>
+</div>
+</div>
+ </div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: エフェクトとトランジション</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('ui_effect_transition_ja.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<h1>エフェクトとトランジション </h1>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><blockquote>
+Effect クラス、Transition クラスの概要と使用方法について解説します。
+CatalogSample も並行して参照してください。</blockquote>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#effects" id="id2">Effects</a><ul>
+<li><a class="reference internal" href="#slideineffect-slideouteffect" id="id3">SlideInEffect, SlideOutEffect</a></li>
+<li><a class="reference internal" href="#fadeineffect-fadeouteffect" id="id4">FadeInEffect, FadeOutEffect</a></li>
+<li><a class="reference internal" href="#zoomeffect" id="id5">ZoomEffect</a></li>
+<li><a class="reference internal" href="#jumpflipeffect" id="id6">JumpFlipEffect</a></li>
+<li><a class="reference internal" href="#bunjeejumpeffect" id="id7">BunjeeJumpEffect</a></li>
+<li><a class="reference internal" href="#tiltdropeffect" id="id8">TiltDropEffect</a></li>
+<li><a class="reference internal" href="#flipboardeffect" id="id9">FlipBoardEffect</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#transitions" id="id10">Transitions</a><ul>
+<li><a class="reference internal" href="#slidetransition" id="id11">SlideTransition</a></li>
+<li><a class="reference internal" href="#pushtransition" id="id12">PushTransition</a></li>
+<li><a class="reference internal" href="#crossfadetransition" id="id13">CrossFadeTransition</a></li>
+<li><a class="reference internal" href="#jumpfliptransition" id="id14">JumpFlipTransition</a></li>
+<li><a class="reference internal" href="#bunjeejumptransition" id="id15">BunjeeJumpTransition</a></li>
+<li><a class="reference internal" href="#tiltdroptransition" id="id16">TiltDropTransition</a></li>
+<li><a class="reference internal" href="#flipboardtransition" id="id17">FlipBoardTransition</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="effects">
+<h1><a class="toc-backref" href="#id2">Effects</a></h1>
+<blockquote>
+<p>Effect は、Scene に配置されている個々の Widget に対して、スライドアニメーションやフェードインといった演出効果を付与するためのクラスです。</p>
+<p>Effect は下記のようにして利用します。</p>
+<blockquote>
+<div class="highlight"><pre><span class="n">SlideOutEffect</span> <span class="n">effect</span> <span class="p">=</span> <span class="k">new</span> <span class="n">SlideOutEffect</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="m">300</span><span class="p">);</span>
+<span class="n">effect</span><span class="p">.</span><span class="n">EffectStopped</span> <span class="p">+=</span> <span class="n">HandleEffectEffectStopped</span><span class="p">;</span>
+<span class="n">effect</span><span class="p">.</span><span class="n">Start</span><span class="p">();</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<p>Effect オブジェクトの Start() メソッドを呼び出すと、UISystem にその Effect オブジェクトが登録されます。</p>
+<p>UISystem は、UISystem.Update() が呼び出されるタイミングで、登録済みの Effect オブジェクトの更新処理を行います。各 Effect が終了条件に達すると、Effect の終了ハンドラ EffectStopped() が呼び出され、UISystem への登録が解除されます。なお、このタイミングでは Effect に対して明示的に Dispose() メソッドは呼び出されません。</p>
+<p>また、Effect に対して、明示的に Stop() メソッドを呼び出した場合も同様で、終了ハンドラ EffectStopped() の呼び出しと UISystem からの登録解除が行われます。</p>
+<p>Effect クラスは独自に作成・カスタマイズすることも可能です。以下では、標準で用意している Effect について説明していきます。</p>
+</blockquote>
+<div class="section" id="slideineffect-slideouteffect">
+<h2><a class="toc-backref" href="#id3">SlideInEffect, SlideOutEffect</a></h2>
+<blockquote>
+<p>SlideInEffect は、指定した Widget を画面の外から X、Y プロパティで指定した位置に移動させる Effect です(図1)。SlideOutEffect は逆に、指定した Widget を X Y プロパティで指定した位置から画面の外へ移動させる Effect です(図1)。
+Visible プロパティが false の時は ture に変更されて Effect が実行されます。
+移動する際のアニメーションカーブは変更可能です。</p>
+<blockquote>
+<div class="highlight"><pre><span class="n">SlideInEffect</span> <span class="n">slideInEffect</span> <span class="p">=</span> <span class="k">new</span> <span class="n">SlideInEffect</span><span class="p">();</span>
+<span class="n">slideInEffect</span><span class="p">.</span><span class="n">Start</span><span class="p">();</span>
+</pre></div>
+<!-- end-of-code-block -->
+<div align="center" class="figure">
+<img alt="image/uitoolkit/effect_slideinout.png" src="image/uitoolkit/effect_slideinout.png" style="width: 600px;" />
+<p class="caption"><strong>図1 SlideInEffect と SlideOutEffect</strong></p>
+</div>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="fadeineffect-fadeouteffect">
+<h2><a class="toc-backref" href="#id4">FadeInEffect, FadeOutEffect</a></h2>
+<blockquote>
+<p>いわゆるフェードイン、フェードアウトを行う Effect です(図2)。
+Alpha プロパティが現在の値から 255 もしくは 0 に遷移します。
+FadeInEffect の場合、現在の Visible プロパティは true にします。
+FadeOutEffect の場合、Effect 終了時には、Visible プロパティを false にし、Alpha プロパティは 255 にリセットされます。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/effect_fadeinout.png" src="image/uitoolkit/effect_fadeinout.png" style="width: 700px;" />
+<p class="caption"><strong>図2 FadeInEffect と FadeOutEffect</strong></p>
+</div>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="zoomeffect">
+<h2><a class="toc-backref" href="#id5">ZoomEffect</a></h2>
+<blockquote>
+<p>指定した拡大率に Widget を拡大・縮小させる Effect です(図3)。
+拡大・縮小にかける時間と、補間関数を指定することが可能です。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/effect_zoom.png" src="image/uitoolkit/effect_zoom.png" style="width: 400px;" />
+<p class="caption"><strong>図3 ZoomEffect</strong></p>
+</div>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="jumpflipeffect">
+<h2><a class="toc-backref" href="#id6">JumpFlipEffect</a></h2>
+<blockquote>
+<p>currentWidget と nextWidget の2つの Widget を指定可能な Effect で、currentWidget が画面手前方向にジャンプして回転し、nextWidget に切り替わります(図4)。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/effect_jumpflip.png" src="image/uitoolkit/effect_jumpflip.png" style="width: 700px;" />
+<p class="caption"><strong>図4 JumpFlipEffect</strong></p>
+</div>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="bunjeejumpeffect">
+<h2><a class="toc-backref" href="#id7">BunjeeJumpEffect</a></h2>
+<blockquote>
+<p>指定した Widget が画面外上方から、Widget を配置した位置に向かってスライドして移動する Effect です(図5)。
+バンジージャンプのように、ある程度跳ねた後に、配置した位置に静止します。
+跳ねる度合いを Elasticity の値で調節することが可能です。
+Dialog などを表示する際に利用することを想定しています。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/effect_bunjeejump.png" src="image/uitoolkit/effect_bunjeejump.png" style="width: 800px;" />
+<p class="caption"><strong>図5 BunjeeJumpEffect</strong></p>
+</div>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="tiltdropeffect">
+<h2><a class="toc-backref" href="#id8">TiltDropEffect</a></h2>
+<blockquote>
+<p>指定した Widget が傾きながら落下するように移動する Effect です(図6)。
+落下する方向も指定することができます。
+BunjeeJumpEffect で表示した Dialog を、TiltDropEffect で画面外に移動させる、というように組み合わせても面白いでしょう。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/effect_tiltdrop.png" src="image/uitoolkit/effect_tiltdrop.png" style="width: 800px;" />
+<p class="caption"><strong>図6 TiltDropEffect</strong></p>
+</div>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="flipboardeffect">
+<h2><a class="toc-backref" href="#id9">FlipBoardEffect</a></h2>
+<blockquote>
+<p>currentWidget と nextWidget の2つの Widget を指定することが可能な Effect で、フリップ時計のように、currentWidget が上下の中心で半分に折れ、回転し、nextWidget が裏から現れます(図7)。
+時計やテキスト表示、写真のスライドショーなどへの応用を想定しています。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/effect_flipboard.png" src="image/uitoolkit/effect_flipboard.png" style="width: 1000px;" />
+<p class="caption"><strong>図7 FlipBoardEffect</strong></p>
+</div>
+</blockquote>
+</blockquote>
+</div>
+</div>
+<div class="section" id="transitions">
+<h1><a class="toc-backref" href="#id10">Transitions</a></h1>
+<blockquote>
+<p>Transition は、Scene を切り替える際に演出効果を付与するためのクラスです。</p>
+<p>Transition は下記のようにして利用します。</p>
+<blockquote>
+<div class="highlight"><pre><span class="n">Scene</span> <span class="n">nextScene</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Scene</span><span class="p">();</span>
+
+<span class="n">CrossFadeTransition</span> <span class="n">transition</span> <span class="p">=</span> <span class="k">new</span> <span class="n">CrossFadeTransition</span><span class="p">();</span>
+<span class="n">transition</span><span class="p">.</span><span class="n">TransitionStopped</span> <span class="p">+=</span> <span class="n">HandleTransitionStopped</span><span class="p">;</span>
+
+<span class="n">UISystem</span><span class="p">.</span><span class="n">SetScene</span><span class="p">(</span><span class="n">nextScene</span><span class="p">,</span> <span class="n">transition</span><span class="p">);</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<p>もしくは下記のようにしても利用可能です。</p>
+<blockquote>
+<div class="highlight"><pre><span class="n">Scene</span> <span class="n">nextScene</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Scene</span><span class="p">();</span>
+
+<span class="n">CrossFadeTransition</span> <span class="n">transition</span> <span class="p">=</span> <span class="k">new</span> <span class="n">CrossFadeTransition</span><span class="p">();</span>
+<span class="n">transition</span><span class="p">.</span><span class="n">TransitionStopped</span> <span class="p">+=</span> <span class="n">HandleTransitionStopped</span><span class="p">;</span>
+<span class="n">nextScene</span><span class="p">.</span><span class="n">Transition</span> <span class="p">=</span> <span class="n">transition</span><span class="p">;</span>
+
+<span class="n">UISystem</span><span class="p">.</span><span class="n">SetScene</span><span class="p">(</span><span class="n">nextScene</span><span class="p">);</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<p>Transition クラスは独自に作成・カスタマイズすることも可能です。以下では、標準で用意している Transition について説明していきます。</p>
+</blockquote>
+<div class="section" id="slidetransition">
+<h2><a class="toc-backref" href="#id11">SlideTransition</a></h2>
+<blockquote>
+SlideInEffect、SlideOutEffect と同様の効果を持つ Transition です。</blockquote>
+</div>
+<div class="section" id="pushtransition">
+<h2><a class="toc-backref" href="#id12">PushTransition</a></h2>
+<blockquote>
+現在表示されている Scene を押し出すように新しい Scene が移動する Transition です。</blockquote>
+</div>
+<div class="section" id="crossfadetransition">
+<h2><a class="toc-backref" href="#id13">CrossFadeTransition</a></h2>
+<blockquote>
+現在表示されている Scene がフェードアウトすると同時に、新しい Scene がフェードインする Transition です。
+現在表示されている Scene と新しい Scene のどちらを前面にするかを、NextSceneForward プロパティで設定することが可能です。</blockquote>
+</div>
+<div class="section" id="jumpfliptransition">
+<h2><a class="toc-backref" href="#id14">JumpFlipTransition</a></h2>
+<blockquote>
+JumpFlipEffect と同様の効果を持つ Transition で、画面手前方向にジャンプして回転して新しい Scene に切り替わります。</blockquote>
+</div>
+<div class="section" id="bunjeejumptransition">
+<h2><a class="toc-backref" href="#id15">BunjeeJumpTransition</a></h2>
+<blockquote>
+BunjeeJumpEffect と同様の効果を持つ Transition です。</blockquote>
+</div>
+<div class="section" id="tiltdroptransition">
+<h2><a class="toc-backref" href="#id16">TiltDropTransition</a></h2>
+<blockquote>
+TiltDropEffect と同様の効果を持つ Transition です。</blockquote>
+</div>
+<div class="section" id="flipboardtransition">
+<h2><a class="toc-backref" href="#id17">FlipBoardTransition</a></h2>
+<blockquote>
+FlipBoardEffect と同様の効果を持つ Transition です。</blockquote>
+</div>
+</div>
+ </div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

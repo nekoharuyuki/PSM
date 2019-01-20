@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: PSM SDK について</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('about_psm_ja.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<h1>PSM SDK について </h1>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><p>この文書では、PlayStation(R)Mobileの概要について説明します。</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#id1" id="id5">PlayStation(R)Mobileとは</a><ul>
+<li><a class="reference internal" href="#id2" id="id6">開発環境</a></li>
+<li><a class="reference internal" href="#psm" id="id7">PSMアプリケーションが実行可能なデバイス</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id3" id="id8">PlayStation(R)Mobile開発の概要</a><ul>
+<li><a class="reference internal" href="#id4" id="id9">開発に使用するツール</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#api" id="id10">API</a><ul>
+<li><a class="reference internal" href="#core-api" id="id11">Core API</a></li>
+<li><a class="reference internal" href="#highlevel-api" id="id12">HighLevel API</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h1><a class="toc-backref" href="#id5">PlayStation(R)Mobileとは</a></h1>
+<blockquote>
+<p>PlayStation(R)Mobile SDK(PlayStation(R)Mobile  Software Development Kit)は、複数のプラットフォームで実行可能なアプリケーションの開発環境です。</p>
+<p>PSM SDKでは、ひとつのプロジェクト・ひとつのバイナリファイルで、PS VitaやAndroidデバイスなどの異なるデバイスで実行可能なアプリケーションを作成することが可能です。</p>
+<p>そのため、開発者は各デバイス毎に異なるコードを書く必要がなく、アプリケーション開発において大幅な効率化を図ることができます。</p>
+<!-- //image/psm_family.JPG -->
+<p>またPSM SDKは、プロトタイプ開発環境としてWindows上でのシミュレータをサポートしており、各デバイス上で動作させる前に、Windows PC上でシミュレーションしながら効率的に開発を進めることができます。</p>
+</blockquote>
+<div class="section" id="id2">
+<h2><a class="toc-backref" href="#id6">開発環境</a></h2>
+<blockquote>
+<ul class="simple">
+<li>PSMアプリはWindows PC上で開発をおこないます。OSはWindows 7とWindows 8をサポートしています。</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="psm">
+<h2><a class="toc-backref" href="#id7">PSMアプリケーションが実行可能なデバイス</a></h2>
+<blockquote>
+<p>PSMアプリケーションは以下のデバイスで実行可能です。</p>
+<ul class="simple">
+<li>PlayStation(R)Vita</li>
+<li>Androidデバイス (PlayStation(TM)Certified対応デバイス)</li>
+<li>Windows PC(OpenGL 3.0 以上をサポートしたビデオカードが必要。)</li>
+</ul>
+<p>※ PlayStation(TM)Certified対応デバイスについては、以下のサイトをご覧ください。</p>
+<blockquote>
+<a class="reference external" href="http://www.playstation.com/psm/">http://www.playstation.com/psm/</a></blockquote>
+</blockquote>
+</div>
+</div>
+<div class="section" id="id3">
+<h1><a class="toc-backref" href="#id8">PlayStation(R)Mobile開発の概要</a></h1>
+<blockquote>
+<ul class="simple">
+<li>PSM SDKでは統合開発環境PSM Studio上で、C#を用いて開発を行います。</li>
+<li>C#のソースコードはC#コンパイラでマネージドコード(PSMアプリケーション)にコンパイルします。</li>
+<li>作成されたPSMアプリケーションをPSM Studioから各デバイスに転送します。</li>
+<li>転送されたPSMアプリケーションを、Monoランタイムと呼ばれる.NET Framework互換の仮想マシンがJITコンパイル(Just In Time Compile)を行い、プログラムを実行します。</li>
+</ul>
+<div align="center" class="figure">
+<img alt="./image/introduction/MonoVM.PNG" src="./image/introduction/MonoVM.PNG" />
+<p class="caption"><strong>図1 PSMアプリケーションと仮想マシン</strong></p>
+</div>
+</blockquote>
+<div class="section" id="id4">
+<h2><a class="toc-backref" href="#id9">開発に使用するツール</a></h2>
+<blockquote>
+<p><strong>PSM Studio</strong></p>
+<blockquote>
+<p>統合開発環境(IDE)として、PSM Studioを使用します。</p>
+<p>ソースコードの編集、ビルド、デバイスへのPSMアプリの転送、デバッグなどの作業をPSM Studioで一括して行うことができます。</p>
+</blockquote>
+<p><strong>UI Toolkit, PSM UI Composer</strong></p>
+<blockquote>
+<p>UI Toolkit は、PSM 上でユーザーインターフェースを作成するための仕組みやウィジェット(GUI部品)をまとめたライブラリです。</p>
+<p>PSM UI Composer (以降、本SDKドキュメントではUI Composerと略記します) は、ユーザーインタフェースのデザインを支援するためのツールで、ボタンやラベルなどのウィジェットをレイアウトしたり、各ウィジェットのプロパティを設定することが可能です。</p>
+<p>詳しくは <a class="reference external" href="ui_overview_ja.html">UI Toolkit</a> をご覧ください。</p>
+</blockquote>
+<p><strong>Publishing Utility</strong></p>
+<blockquote>
+Publishing UtilityはPSMアプリのメタデータの設定、マスターパッケージの作成、鍵の管理などをおこなうツールです。</blockquote>
+</blockquote>
+</div>
+</div>
+<div class="section" id="api">
+<h1><a class="toc-backref" href="#id10">API</a></h1>
+<blockquote>
+PSM SDKのAPI(Application Programming Interface) は C#ベースのクラスライブラリとして提供されます。</blockquote>
+<div class="section" id="core-api">
+<h2><a class="toc-backref" href="#id11">Core API</a></h2>
+<blockquote>
+Sce.PlayStation.Coreでは、描画やサウンド再生などのゲーム開発の基盤となるAPIが提供されます。</blockquote>
+</div>
+<div class="section" id="highlevel-api">
+<h2><a class="toc-backref" href="#id12">HighLevel API</a></h2>
+<blockquote>
+<p>Sce.PlayStation.HighLevelでは、3Dモデルの描画や物理エンジンといった高度な機能を持つAPIが提供されます。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="./image/introduction/AppLayer.PNG" src="./image/introduction/AppLayer.PNG" />
+<p class="caption"><strong>図2 ライブラリの階層</strong></p>
+</div>
+<p>APIの詳細については APIリファレンスを参照してください。</p>
+</blockquote>
+</blockquote>
+</div>
+</div>
+ </div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

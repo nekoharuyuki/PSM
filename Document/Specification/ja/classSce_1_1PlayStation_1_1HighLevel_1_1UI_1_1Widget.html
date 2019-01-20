@@ -1,0 +1,1473 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: クラス Widget</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public メソッド</a> &#124;
+<a href="#pro-methods">Protected メソッド</a> &#124;
+<a href="#properties">プロパティ</a> &#124;
+<a href="#events">イベント</a>  </div>
+  <div class="headertitle">
+<h1>クラス Widget</h1>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="Sce::PlayStation::HighLevel::UI::Widget" -->
+<p>ウィジェットの基底クラス  
+<a href="#_details">[詳細]</a></p>
+<div class="dynheader">
+Widgetに対する継承グラフ</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.png" usemap="#Widget_map" alt=""/>
+  <map id="Widget_map" name="Widget_map">
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1AnimationImageBox.html" alt="AnimationImageBox" shape="rect" coords="131,56,252,80"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1BusyIndicator.html" alt="BusyIndicator" shape="rect" coords="131,112,252,136"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Button.html" alt="Button" shape="rect" coords="131,168,252,192"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1CheckBox.html" alt="CheckBox" shape="rect" coords="131,224,252,248"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ContainerWidget.html" alt="ContainerWidget" shape="rect" coords="131,280,252,304"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1DatePicker.html" alt="DatePicker" shape="rect" coords="131,336,252,360"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1EditableText.html" alt="EditableText" shape="rect" coords="131,392,252,416"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ImageBox.html" alt="ImageBox" shape="rect" coords="131,448,252,472"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Label.html" alt="Label" shape="rect" coords="131,504,252,528"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveFlipPanel.html" alt="LiveFlipPanel" shape="rect" coords="131,560,252,584"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveListPanel.html" alt="LiveListPanel" shape="rect" coords="131,616,252,640"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveSphere.html" alt="LiveSphere" shape="rect" coords="131,672,252,696"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1PagePanel.html" alt="PagePanel" shape="rect" coords="131,728,252,752"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1PopupList.html" alt="PopupList" shape="rect" coords="131,784,252,808"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ProgressBar.html" alt="ProgressBar" shape="rect" coords="131,840,252,864"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollBar.html" alt="ScrollBar" shape="rect" coords="131,896,252,920"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Slider.html" alt="Slider" shape="rect" coords="131,952,252,976"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1TimePicker.html" alt="TimePicker" shape="rect" coords="131,1008,252,1032"/>
+</map>
+ </div></div>
+
+<p><a href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget-members.html">すべてのメンバ一覧</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Public メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4aecdb998b8b28b278843eaa1644998b"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::Widget" ref="a4aecdb998b8b28b278843eaa1644998b" args="()" -->
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a4aecdb998b8b28b278843eaa1644998b">Widget</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a6e2d745cdb7a7b983f861ed6a9a541a7">Dispose</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">このウィジェット、および子ウィジェットの所有するアンマネージドリソースを解放する  <a href="#a6e2d745cdb7a7b983f861ed6a9a541a7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a259080b5bc5f7bff0312d63c6751148f">SetPosition</a> (float x, float y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">親の座標系での位置を設定する。  <a href="#a259080b5bc5f7bff0312d63c6751148f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#ac7df8736a200314a50917b2059eef1de">SetSize</a> (float width, float height)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">サイズを設定する。  <a href="#ac7df8736a200314a50917b2059eef1de"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a539165fd8b2bef52e5bf25664bd73862">SetFocus</a> (bool active)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">自分自身にフォーカスをあてる  <a href="#a539165fd8b2bef52e5bf25664bd73862"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#adaffa2f2abedeb5cbfb228c0f0cb74fe">HitTest</a> (<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a> screenPoint)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した座標でこのウィジェットがヒットするかどうかを取得する  <a href="#adaffa2f2abedeb5cbfb228c0f0cb74fe"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#af56cabdeb3875a0d978222ff63b9105d">ConvertScreenToLocal</a> (<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a> screenPoint)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した座標をスクリーン座標系からローカル座標系に変換する。  <a href="#af56cabdeb3875a0d978222ff63b9105d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a86631d439f959e27661b48394cf0fa34">ConvertScreenToLocal</a> (float screenX, float screenY)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した座標をスクリーン座標系からローカル座標系に変換する。  <a href="#a86631d439f959e27661b48394cf0fa34"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#abed6a290a5891108342c3ec847ff61ce">ConvertLocalToScreen</a> (<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a> localPoint)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した座標をローカル座標系からスクリーン座標系に変換する。  <a href="#abed6a290a5891108342c3ec847ff61ce"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#aec8b4ab555ec5cc7a39e5205293c4f07">ConvertLocalToScreen</a> (float localX, float localY)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した座標をローカル座標系からスクリーン座標系に変換する。  <a href="#aec8b4ab555ec5cc7a39e5205293c4f07"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#aa1cca1ccd423a9d83f34867a845339d3">ConvertLocalToOtherWidget</a> (<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a> localPoint, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a> targetWidget)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した座標を自身のローカル座標系から他のWidgetのローカル座標系に変換する。  <a href="#aa1cca1ccd423a9d83f34867a845339d3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a8586afe6ea9d4da5154101c022b97f91">ConvertLocalToOtherWidget</a> (float x, float y, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a> targetWidget)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した座標を自身のローカル座標系から他のWidgetのローカル座標系に変換する。  <a href="#a8586afe6ea9d4da5154101c022b97f91"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#aa3b07f7c6486550f64501e96116dc9ea">RenderToTexture</a> (<a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1Texture2D.html">Texture2D</a> texture)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャへ描画する。  <a href="#aa3b07f7c6486550f64501e96116dc9ea"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#acf9eb2029d297696ae9242f030c6d1f3">RenderToTexture</a> (<a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1Texture2D.html">Texture2D</a> texture, <a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Matrix4.html">Matrix4</a> transform)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャへ描画する。  <a href="#acf9eb2029d297696ae9242f030c6d1f3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a1f13a580cb1d3bbda0bfe4250985b34e">RenderToFrameBuffer</a> (<a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1FrameBuffer.html">FrameBuffer</a> frameBuffer)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">フレームバッファへ描画する。  <a href="#a1f13a580cb1d3bbda0bfe4250985b34e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a4c9b645e2a815d884f26eabd83168f46">RenderToFrameBuffer</a> (<a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1FrameBuffer.html">FrameBuffer</a> frameBuffer, <a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Matrix4.html">Matrix4</a> transform)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">フレームバッファへ描画する。  <a href="#a4c9b645e2a815d884f26eabd83168f46"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#ad49f267b6e41a580c24f0b07075e296d">AddGestureDetector</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1GestureDetector.html">GestureDetector</a> gestureDetector)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ジェスチャー検出機構を追加する。  <a href="#ad49f267b6e41a580c24f0b07075e296d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#afdc13eb615e02623c586981d2c947936">RemoveGestureDetector</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1GestureDetector.html">GestureDetector</a> gestureDetector)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ジェスチャ検出機能を削除する。  <a href="#afdc13eb615e02623c586981d2c947936"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">override string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#aa73e7c4dd1df5fd5fbf81c7764ee1533">ToString</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列を返す  <a href="#aa73e7c4dd1df5fd5fbf81c7764ee1533"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-methods"></a>
+Protected メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a8ad4348ef0f9969025bab397e7e27e26">Dispose</a> (bool disposing)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">このウィジェット、および子ウィジェットの所有するアンマネージドリソースを解放する  <a href="#a8ad4348ef0f9969025bab397e7e27e26"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#aba5cc52f2deff810ae62500f26bf8126">DisposeSelf</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">このウィジェットの所有するアンマネージドリソースを解放する  <a href="#aba5cc52f2deff810ae62500f26bf8126"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a8ee9fc59f3e5528a3c21df9d40896874">AddChildFirst</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a> child)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">子ウィジェットを先頭に追加する。  <a href="#a8ee9fc59f3e5528a3c21df9d40896874"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a30d2230637640df873b6b68a14ec220c">AddChildLast</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a> child)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">子ウィジェットを末尾に追加する。  <a href="#a30d2230637640df873b6b68a14ec220c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#adc41819ffb26e89c018618b5ec0bffb9">InsertChildBefore</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a> child, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a> nextChild)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した子ウィジェットの直前に挿入する。  <a href="#adc41819ffb26e89c018618b5ec0bffb9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a8c54f0d0eb1f0468bd24b2a23954d663">InsertChildAfter</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a> child, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a> prevChild)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した子ウィジェットの直後に挿入する。  <a href="#a8c54f0d0eb1f0468bd24b2a23954d663"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a57ced37590bcd7d7efcaec5c99373db8">RemoveChild</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a> child)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">指定された子ウィジェットを削除する。  <a href="#a57ced37590bcd7d7efcaec5c99373db8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual internal void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#abd28ba62ef15bca7d0ac21b94d2e536d">OnTouchEvent</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1TouchEventCollection.html">TouchEventCollection</a> touchEvents)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">タッチイベントハンドラ  <a href="#abd28ba62ef15bca7d0ac21b94d2e536d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual internal void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a18f2a07a72d3163402ad7f16f0b3e4e9">OnKeyEvent</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1KeyEvent.html">KeyEvent</a> keyEvent)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">キーイベントハンドラ  <a href="#a18f2a07a72d3163402ad7f16f0b3e4e9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual internal void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a05b9bbd469ddb38469b50b3e386df8f5">OnPreviewKeyEvent</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1KeyEvent.html">KeyEvent</a> keyEvent)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">事前キーイベントのハンドラ  <a href="#a05b9bbd469ddb38469b50b3e386df8f5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">internal <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a6dcf4dc39b4212a0551a3f6cc632f0f6">SearchNextFocus</a> (<a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1UI.html#ab57171fe29396f7ba7bcb47885b285bc">FourWayDirection</a> direction)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">次にフォーカスの当たるウィジェットを探す  <a href="#a6dcf4dc39b4212a0551a3f6cc632f0f6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">internal <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#ae81f5c2b62e1aef282f9967e1110e4ab">SearchNextFocusFromChild</a> (<a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1UI.html#ab57171fe29396f7ba7bcb47885b285bc">FourWayDirection</a> direction, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a> currentFocusWidget)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">自分の子ウィジェット（子孫を含む）の中から次にフォーカスの当たるウィジェットを探す  <a href="#ae81f5c2b62e1aef282f9967e1110e4ab"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual internal void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a349d9cddf27607c163365f7f355e2938">OnMotionEvent</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1MotionEvent.html">MotionEvent</a> motionEvent)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">モーションイベントハンドラ  <a href="#a349d9cddf27607c163365f7f355e2938"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab0879af5c6d50b95dd41d0da456df947"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::OnResetState" ref="ab0879af5c6d50b95dd41d0da456df947" args="()" -->
+virtual internal void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#ab0879af5c6d50b95dd41d0da456df947">OnResetState</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">状態リセットハンドラ <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a0635f3ec717eab9930522f4b1feef401">OnUpdate</a> (float elapsedTime)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">更新処理  <a href="#a0635f3ec717eab9930522f4b1feef401"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a74264222e7720e4bfd39bb6ab31e17db"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::Render" ref="a74264222e7720e4bfd39bb6ab31e17db" args="()" -->
+virtual internal void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a74264222e7720e4bfd39bb6ab31e17db">Render</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シーングラフを描画する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">internal void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#ac976c3d7f4d4e395259b53f0d3df957a">ResetState</a> (bool includeSelf)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">自分以下の全ウィジェットの状態をリセットする。  <a href="#ac976c3d7f4d4e395259b53f0d3df957a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac166a7d0acd56b894d5a4dff2832ee6f"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::SetupFinalAlpha" ref="ac166a7d0acd56b894d5a4dff2832ee6f" args="()" -->
+virtual internal void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#ac166a7d0acd56b894d5a4dff2832ee6f">SetupFinalAlpha</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">最終的なアルファ値を計算する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f926fd7dea77bada13f79f306ff98f9"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::OnFocusChanged" ref="a1f926fd7dea77bada13f79f306ff98f9" args="(FocusChangedEventArgs args)" -->
+internal virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a1f926fd7dea77bada13f79f306ff98f9">OnFocusChanged</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1FocusChangedEventArgs.html">FocusChangedEventArgs</a> args)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">このウィジェットがフォーカスを取得または喪失したときに呼び出される <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#ac7c77fb040aeb97a6d9c51738c2876fa">OnPressStateChanged</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1PressStateChangedEventArgs.html">PressStateChangedEventArgs</a> e)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">プレス状態が変化したときに呼び出される  <a href="#ac7c77fb040aeb97a6d9c51738c2876fa"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="properties"></a>
+プロパティ</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a934fa09ba291a97f43720640e4d83f25">Name</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィジェットの名前を取得・設定する。  <a href="#a934fa09ba291a97f43720640e4d83f25"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c70312231e71ed253aeb87d62bd26ff"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::RootUIElement" ref="a5c70312231e71ed253aeb87d62bd26ff" args="" -->
+internal <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1RootUIElement.html">RootUIElement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a5c70312231e71ed253aeb87d62bd26ff">RootUIElement</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">エレメントツリーのルートを取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2adbc34afadcae9ab09e20d7782933bb"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::X" ref="a2adbc34afadcae9ab09e20d7782933bb" args="" -->
+virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a2adbc34afadcae9ab09e20d7782933bb">X</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">親の座標系でのX座標を取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a64ae2ff5279f9f0e9dd9eda7ddafef0c"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::Y" ref="a64ae2ff5279f9f0e9dd9eda7ddafef0c" args="" -->
+virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a64ae2ff5279f9f0e9dd9eda7ddafef0c">Y</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">親の座標系でのY座標を取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a43acf2f345f5a99520d034758dca69e8"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::Width" ref="a43acf2f345f5a99520d034758dca69e8" args="" -->
+virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a43acf2f345f5a99520d034758dca69e8">Width</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">幅を取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae33e404d6440bb66136c7059e4d8640c"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::Height" ref="ae33e404d6440bb66136c7059e4d8640c" args="" -->
+virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#ae33e404d6440bb66136c7059e4d8640c">Height</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">高さを取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae007dc0ebc7eec5b1bf415878e8b6623"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::Transform3D" ref="ae007dc0ebc7eec5b1bf415878e8b6623" args="" -->
+virtual <a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Matrix4.html">Matrix4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#ae007dc0ebc7eec5b1bf415878e8b6623">Transform3D</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">親の座標系への変換行列を取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a763bd6d3cfcc8c671945abcc2db0232d">Alpha</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">透明度を取得・設定する。（０～１）  <a href="#a763bd6d3cfcc8c671945abcc2db0232d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1UI.html#ac7e6b465c8b4d238230a6d3bf90a2096">PivotType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a9505ef58bf49ec70c8499eeaea512957">PivotType</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィジェットの原点を取得・設定する。  <a href="#a9505ef58bf49ec70c8499eeaea512957"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73a4d459f07df48d940614850f1fd71b"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::ZSort" ref="a73a4d459f07df48d940614850f1fd71b" args="" -->
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a73a4d459f07df48d940614850f1fd71b">ZSort</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Zソートするかどうかを取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6054f2af27b9e6edd1c27ae7af7dfa81"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::ZSortOffset" ref="a6054f2af27b9e6edd1c27ae7af7dfa81" args="" -->
+virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a6054f2af27b9e6edd1c27ae7af7dfa81">ZSortOffset</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Zソートオフセットを取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abafb4f67efa2b94f06136981368ef552"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::Anchors" ref="abafb4f67efa2b94f06136981368ef552" args="" -->
+virtual <a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1UI.html#a863180ed5fd4795578e532951d1f9fad">Anchors</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#abafb4f67efa2b94f06136981368ef552">Anchors</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">親のリサイズ時にどこを固定するかを取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a36475f79e60899b57f04714ec0d12761"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::Visible" ref="a36475f79e60899b57f04714ec0d12761" args="" -->
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a36475f79e60899b57f04714ec0d12761">Visible</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">表示するかどうかを取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a543db72690e8029db3534ca91c359eec"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::TouchResponse" ref="a543db72690e8029db3534ca91c359eec" args="" -->
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a543db72690e8029db3534ca91c359eec">TouchResponse</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">子ウィジェットも含めてタッチイベントに応答するかを取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">internal bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#abc02fe8506b85face79e3488434b4cbc">Clip</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">子要素(Widget、UIElement)をクリップするかどうかを取得・設定する。  <a href="#abc02fe8506b85face79e3488434b4cbc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c79552586f04be2011968e7bd96e075"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::HookChildTouchEvent" ref="a1c79552586f04be2011968e7bd96e075" args="" -->
+internal bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a1c79552586f04be2011968e7bd96e075">HookChildTouchEvent</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">子ウィジェットのタッチイベントをフックするかどうかを取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada6ad145da81776e699e3bf1577de3cb"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::Parent" ref="ada6ad145da81776e699e3bf1577de3cb" args="" -->
+<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#ada6ad145da81776e699e3bf1577de3cb">Parent</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">親ウィジェットを取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#ab44200b4507839ee136670fb981e4743">Children</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">子ウィジェットを取得する。  <a href="#ab44200b4507839ee136670fb981e4743"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7a0c51ff91727df130b3144b823c7f08"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::Focused" ref="a7a0c51ff91727df130b3144b823c7f08" args="" -->
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a7a0c51ff91727df130b3144b823c7f08">Focused</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">現在自分にフォーカスが当たっているかどうかを取得する <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4266307c6687a42b923e8de4f1392b8"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::LocalToWorld" ref="ab4266307c6687a42b923e8de4f1392b8" args="" -->
+<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Matrix4.html">Matrix4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#ab4266307c6687a42b923e8de4f1392b8">LocalToWorld</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ローカル座標系からワールド座標系に変換する行列を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08c1657ea8246d308c6b8bb891a3d96a"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::PriorityHit" ref="a08c1657ea8246d308c6b8bb891a3d96a" args="" -->
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a08c1657ea8246d308c6b8bb891a3d96a">PriorityHit</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">優先してタッチに反応するかどうかを取得・設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a2990b19b5633fd33b7cad6e157957478">Focusable</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">フォーカスが当たるかどうかを取得・設定する  <a href="#a2990b19b5633fd33b7cad6e157957478"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2d2e63207716ffecb539770fbc4fc56a"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::FocusCustomSettings" ref="a2d2e63207716ffecb539770fbc4fc56a" args="" -->
+virtual <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1FocusCustomSettings.html">FocusCustomSettings</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a2d2e63207716ffecb539770fbc4fc56a">FocusCustomSettings</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">フォーカスの設定情報を取得・設定する <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af59bde5eb347dda9e651b0e1c07c29a9"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::FocusStyle" ref="af59bde5eb347dda9e651b0e1c07c29a9" args="" -->
+<a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1UI.html#a90149b0a55c8396dbdaba6d006cb3906">FocusStyle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#af59bde5eb347dda9e651b0e1c07c29a9">FocusStyle</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">フォーカスの表示スタイルを取得・設定する <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a25302c7ce9746ab7d034555937600fb9"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::Pressable" ref="a25302c7ce9746ab7d034555937600fb9" args="" -->
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a25302c7ce9746ab7d034555937600fb9">Pressable</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">タッチやキーでプレスできるかどうかを取得・設定する <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a89d0060878a7949a48c6fa96e5e7b472"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::PressState" ref="a89d0060878a7949a48c6fa96e5e7b472" args="" -->
+virtual <a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1UI.html#ad3c83558cdeb274b035570e2cd885f41">PressState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a89d0060878a7949a48c6fa96e5e7b472">PressState</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">このウィジェットが押されているかどうかの状態を取得・設定する <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1UI.html#abbfcd156a561c21a37fd44ac85579ffd">PressStateTouchLeaveBehavior</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a49f0b6897532d42927a8967707666c4c">TouchLeaveBehavior</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">タッチが領域の内側から外側に移動した場合のプレス状態の挙動を取得・設定する  <a href="#a49f0b6897532d42927a8967707666c4c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac05e9cd102b0e3c2851f452bad563717"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::Enabled" ref="ac05e9cd102b0e3c2851f452bad563717" args="" -->
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#ac05e9cd102b0e3c2851f452bad563717">Enabled</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">機能を有効にするかどうかを取得・設定する <br/></td></tr>
+<tr><td colspan="2"><h2><a name="events"></a>
+イベント</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1905b824324754ae3422546a02aaea88"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::TouchEventReceived" ref="a1905b824324754ae3422546a02aaea88" args="" -->
+EventHandler&lt; <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1TouchEventArgs.html">TouchEventArgs</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a1905b824324754ae3422546a02aaea88">TouchEventReceived</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">タッチイベントを受け取ったときに呼び出されるハンドラ <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af47101d3e3ba46865ab1e02f9797df0e"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::KeyEventReceived" ref="af47101d3e3ba46865ab1e02f9797df0e" args="" -->
+EventHandler&lt; <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1KeyEventArgs.html">KeyEventArgs</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#af47101d3e3ba46865ab1e02f9797df0e">KeyEventReceived</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">キーイベントを受け取ったときに呼び出されるハンドラ <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f5c52d092870d1ed5f396e8a4153e50"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::PreviewKeyEventReceived" ref="a3f5c52d092870d1ed5f396e8a4153e50" args="" -->
+EventHandler&lt; <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1KeyEventArgs.html">KeyEventArgs</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a3f5c52d092870d1ed5f396e8a4153e50">PreviewKeyEventReceived</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">事前キーイベントを受け取ったときに呼び出されるハンドラ <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afad08ed04aa49b38523727d8c19b1581"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::MotionEventReceived" ref="afad08ed04aa49b38523727d8c19b1581" args="" -->
+EventHandler&lt; <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1MotionEventArgs.html">MotionEventArgs</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#afad08ed04aa49b38523727d8c19b1581">MotionEventReceived</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">モーションイベントを受け取ったときに呼び出されるハンドラ <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0f23194e5314cb7086ad40c466549a30"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::FocusChanged" ref="a0f23194e5314cb7086ad40c466549a30" args="" -->
+EventHandler<br class="typebreak"/>
+&lt; <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1FocusChangedEventArgs.html">FocusChangedEventArgs</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a0f23194e5314cb7086ad40c466549a30">FocusChanged</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">このウィジェットがフォーカスを取得または喪失したときに呼び出されるイベント <br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>説明</h2>
+<div class="textblock"><p>ウィジェットの基底クラス </p>
+</div><hr/><h2>メソッド</h2>
+<a class="anchor" id="a8ee9fc59f3e5528a3c21df9d40896874"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::AddChildFirst" ref="a8ee9fc59f3e5528a3c21df9d40896874" args="(Widget child)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddChildFirst </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>&#160;</td>
+          <td class="paramname"><em>child</em></td><td>)</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>子ウィジェットを先頭に追加する。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td>追加する子ウィジェット</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>既に追加されている場合は先頭に移動する。 </p>
+
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ContainerWidget.html#a2e0fcc7c6b36a5c70ae50de56cde5d80">ContainerWidget</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveScrollPanel.html#a390da2cfa7428b13584bbfe96e598286">LiveScrollPanel</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveSpringPanel.html#a390da2cfa7428b13584bbfe96e598286">LiveSpringPanel</a>, と <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.html#a390da2cfa7428b13584bbfe96e598286">ScrollPanel</a>で再定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a30d2230637640df873b6b68a14ec220c"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::AddChildLast" ref="a30d2230637640df873b6b68a14ec220c" args="(Widget child)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddChildLast </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>&#160;</td>
+          <td class="paramname"><em>child</em></td><td>)</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>子ウィジェットを末尾に追加する。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td>追加する子ウィジェット</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>既に追加されている場合は末尾に移動する。 </p>
+
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ContainerWidget.html#a36440387c91892f0b65f8ecdb7ad9a67">ContainerWidget</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveScrollPanel.html#ac08c7ec5c103d13a2c82620baac05247">LiveScrollPanel</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveSpringPanel.html#ac08c7ec5c103d13a2c82620baac05247">LiveSpringPanel</a>, と <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.html#ac08c7ec5c103d13a2c82620baac05247">ScrollPanel</a>で再定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ad49f267b6e41a580c24f0b07075e296d"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::AddGestureDetector" ref="ad49f267b6e41a580c24f0b07075e296d" args="(GestureDetector gestureDetector)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AddGestureDetector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1GestureDetector.html">GestureDetector</a>&#160;</td>
+          <td class="paramname"><em>gestureDetector</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>ジェスチャー検出機構を追加する。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gestureDetector</td><td>ジェスチャ検出機構</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl><dt><b>例外:</b></dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentNullException</td><td>GestureDetectorがnull</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>追加できたかどうか</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa1cca1ccd423a9d83f34867a845339d3"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::ConvertLocalToOtherWidget" ref="aa1cca1ccd423a9d83f34867a845339d3" args="(Vector2 localPoint, Widget targetWidget)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a> ConvertLocalToOtherWidget </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td>
+          <td class="paramname"><em>localPoint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>&#160;</td>
+          <td class="paramname"><em>targetWidget</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>指定した座標を自身のローカル座標系から他のWidgetのローカル座標系に変換する。 </p>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>targetWidget のローカル座標系に変換された座標</dd></dl>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">targetWidget</td><td>変換先の <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html" title="ウィジェットの基底クラス">Widget</a></td></tr>
+    <tr><td class="paramname">localPoint</td><td>自身のローカル座標系の座標</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a8586afe6ea9d4da5154101c022b97f91"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::ConvertLocalToOtherWidget" ref="a8586afe6ea9d4da5154101c022b97f91" args="(float x, float y, Widget targetWidget)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a> ConvertLocalToOtherWidget </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>&#160;</td>
+          <td class="paramname"><em>targetWidget</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>指定した座標を自身のローカル座標系から他のWidgetのローカル座標系に変換する。 </p>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>targetWidget のローカル座標系に変換された座標</dd></dl>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">targetWidget</td><td>変換先の <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html" title="ウィジェットの基底クラス">Widget</a></td></tr>
+    <tr><td class="paramname">x</td><td>自身のローカル座標系の座標 X</td></tr>
+    <tr><td class="paramname">y</td><td>自身のローカル座標系の座標 Y</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="abed6a290a5891108342c3ec847ff61ce"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::ConvertLocalToScreen" ref="abed6a290a5891108342c3ec847ff61ce" args="(Vector2 localPoint)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a> ConvertLocalToScreen </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td>
+          <td class="paramname"><em>localPoint</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>指定した座標をローカル座標系からスクリーン座標系に変換する。 </p>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>スクリーン座標系に変換された座標</dd></dl>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">localPoint</td><td>ーカル座標系の座標</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aec8b4ab555ec5cc7a39e5205293c4f07"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::ConvertLocalToScreen" ref="aec8b4ab555ec5cc7a39e5205293c4f07" args="(float localX, float localY)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a> ConvertLocalToScreen </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>localX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>localY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>指定した座標をローカル座標系からスクリーン座標系に変換する。 </p>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>スクリーン座標系に変換された座標</dd></dl>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">localX</td><td>ローカル座標系の座標 X</td></tr>
+    <tr><td class="paramname">localY</td><td>ローカル座標系の座標 Y</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af56cabdeb3875a0d978222ff63b9105d"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::ConvertScreenToLocal" ref="af56cabdeb3875a0d978222ff63b9105d" args="(Vector2 screenPoint)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a> ConvertScreenToLocal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td>
+          <td class="paramname"><em>screenPoint</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>指定した座標をスクリーン座標系からローカル座標系に変換する。 </p>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>ローカル座標系に変換された座標</dd></dl>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">screenPoint</td><td>スクリーン座標系の座標</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a86631d439f959e27661b48394cf0fa34"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::ConvertScreenToLocal" ref="a86631d439f959e27661b48394cf0fa34" args="(float screenX, float screenY)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a> ConvertScreenToLocal </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>screenX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>screenY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>指定した座標をスクリーン座標系からローカル座標系に変換する。 </p>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>ローカル座標系に変換された座標</dd></dl>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">screenX</td><td>スクリーン座標系の座標 X</td></tr>
+    <tr><td class="paramname">screenY</td><td>スクリーン座標系の座標 Y</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a8ad4348ef0f9969025bab397e7e27e26"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::Dispose" ref="a8ad4348ef0f9969025bab397e7e27e26" args="(bool disposing)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Dispose </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>disposing</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>このウィジェット、および子ウィジェットの所有するアンマネージドリソースを解放する </p>
+<p>親ウィジェットから自身を削除し、子ウィジェットに対して <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#aba5cc52f2deff810ae62500f26bf8126" title="このウィジェットの所有するアンマネージドリソースを解放する">DisposeSelf()</a> を再帰的に呼び出します。 派生クラスでDisposeを実装する場合は <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#aba5cc52f2deff810ae62500f26bf8126" title="このウィジェットの所有するアンマネージドリソースを解放する">DisposeSelf()</a> をオーバーライドしてください。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">disposing</td><td><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a6e2d745cdb7a7b983f861ed6a9a541a7" title="このウィジェット、および子ウィジェットの所有するアンマネージドリソースを解放する">Dispose()</a> から呼び出された場合 true</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a6e2d745cdb7a7b983f861ed6a9a541a7"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::Dispose" ref="a6e2d745cdb7a7b983f861ed6a9a541a7" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Dispose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>このウィジェット、および子ウィジェットの所有するアンマネージドリソースを解放する </p>
+<p>このウィジェットとそのツリー以下のすべてのウィジェット、およびそれぞれの <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1RootUIElement.html" title="エレメントツリーのルート">RootUIElement</a> のツリーに所属するすべての <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1UIElement.html" title="描画要素の基底クラス">UIElement</a> を再帰的に解放します。 一度 <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a6e2d745cdb7a7b983f861ed6a9a541a7" title="このウィジェット、および子ウィジェットの所有するアンマネージドリソースを解放する">Dispose()</a> が呼ばれたウィジェットは再利用することはできません。 ウィジェット派生クラスでツリーに所属しないウィジェットやUIElement、その他の Dispose が必要なオブジェクトを作成した場合は、 <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#aba5cc52f2deff810ae62500f26bf8126" title="このウィジェットの所有するアンマネージドリソースを解放する">DisposeSelf()</a> をオーバーライドしてそれらの Dispose を呼ばなければなりません。 </p>
+
+</div>
+</div>
+<a class="anchor" id="aba5cc52f2deff810ae62500f26bf8126"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::DisposeSelf" ref="aba5cc52f2deff810ae62500f26bf8126" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void DisposeSelf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>このウィジェットの所有するアンマネージドリソースを解放する </p>
+<p>このメソッドは <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html#a6e2d745cdb7a7b983f861ed6a9a541a7" title="このウィジェット、および子ウィジェットの所有するアンマネージドリソースを解放する">Dispose()</a> からその子ウィジェットに対して再帰的に呼び出されます。 ウィジェット派生クラスでツリーに所属しないウィジェットやUIElement、その他の Dispose が必要なオブジェクトを作成した場合は、 このメソッドをオーバーライドしてそれらの Dispose を呼ばなければなりません。 </p>
+
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1BusyIndicator.html#a64b7a39120fa9fc9f946b694478b3889">BusyIndicator</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Button.html#a64b7a39120fa9fc9f946b694478b3889">Button</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1CheckBox.html#a64b7a39120fa9fc9f946b694478b3889">CheckBox</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Dialog.html#a64b7a39120fa9fc9f946b694478b3889">Dialog</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1EditableText.html#a64b7a39120fa9fc9f946b694478b3889">EditableText</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Label.html#a64b7a39120fa9fc9f946b694478b3889">Label</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ListPanelItem.html#a64b7a39120fa9fc9f946b694478b3889">ListPanelItem</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveFlipPanel.html#a64b7a39120fa9fc9f946b694478b3889">LiveFlipPanel</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveScrollPanel.html#a64b7a39120fa9fc9f946b694478b3889">LiveScrollPanel</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1MessageDialog.html#a64b7a39120fa9fc9f946b694478b3889">MessageDialog</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1PagePanel.html#a64b7a39120fa9fc9f946b694478b3889">PagePanel</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1PopupList.html#a64b7a39120fa9fc9f946b694478b3889">PopupList</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ProgressBar.html#a64b7a39120fa9fc9f946b694478b3889">ProgressBar</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollBar.html#a64b7a39120fa9fc9f946b694478b3889">ScrollBar</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Slider.html#a64b7a39120fa9fc9f946b694478b3889">Slider</a>, と <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1UIAnimationPlayer.html#a64b7a39120fa9fc9f946b694478b3889">UIAnimationPlayer</a>で再定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="adaffa2f2abedeb5cbfb228c0f0cb74fe"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::HitTest" ref="adaffa2f2abedeb5cbfb228c0f0cb74fe" args="(Vector2 screenPoint)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool HitTest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td>
+          <td class="paramname"><em>screenPoint</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>指定した座標でこのウィジェットがヒットするかどうかを取得する </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">screenPoint</td><td>スクリーン座標系での位置</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>ヒットしている場合はtrue。ヒットしていない場合はfalse。</dd></dl>
+
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1DatePicker.html#a8f0c76eb6da5b555bf3e53ca2aa69a82">DatePicker</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1RootWidget.html#a8f0c76eb6da5b555bf3e53ca2aa69a82">RootWidget</a>, と <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1TimePicker.html#a8f0c76eb6da5b555bf3e53ca2aa69a82">TimePicker</a>で再定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a8c54f0d0eb1f0468bd24b2a23954d663"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::InsertChildAfter" ref="a8c54f0d0eb1f0468bd24b2a23954d663" args="(Widget child, Widget prevChild)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InsertChildAfter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>&#160;</td>
+          <td class="paramname"><em>child</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>&#160;</td>
+          <td class="paramname"><em>prevChild</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>指定した子ウィジェットの直後に挿入する。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td>挿入する子ウィジェット</td></tr>
+    <tr><td class="paramname">prevChild</td><td>挿入する子ウィジェットの直前となる子ウィジェット</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>既に追加されている場合は指定した子ウィジェットの直後に移動する。 </p>
+
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ContainerWidget.html#abcf83a8798825d6386d3052d20fefbfd">ContainerWidget</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveScrollPanel.html#a3dabdb24fc56148b87b54e054da95816">LiveScrollPanel</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveSpringPanel.html#a3dabdb24fc56148b87b54e054da95816">LiveSpringPanel</a>, と <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.html#a3dabdb24fc56148b87b54e054da95816">ScrollPanel</a>で再定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="adc41819ffb26e89c018618b5ec0bffb9"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::InsertChildBefore" ref="adc41819ffb26e89c018618b5ec0bffb9" args="(Widget child, Widget nextChild)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InsertChildBefore </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>&#160;</td>
+          <td class="paramname"><em>child</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>&#160;</td>
+          <td class="paramname"><em>nextChild</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>指定した子ウィジェットの直前に挿入する。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td>挿入する子ウィジェット</td></tr>
+    <tr><td class="paramname">nextChild</td><td>挿入する子ウィジェットの直後となる子ウィジェット</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>既に追加されている場合は指定した子ウィジェットの直前に移動する。 </p>
+
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ContainerWidget.html#ae610b581ca1b434adbb08dd5627ab9af">ContainerWidget</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveScrollPanel.html#a811c74198ad10347ed4edc0fc8e20fe6">LiveScrollPanel</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveSpringPanel.html#a811c74198ad10347ed4edc0fc8e20fe6">LiveSpringPanel</a>, と <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.html#a811c74198ad10347ed4edc0fc8e20fe6">ScrollPanel</a>で再定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a18f2a07a72d3163402ad7f16f0b3e4e9"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::OnKeyEvent" ref="a18f2a07a72d3163402ad7f16f0b3e4e9" args="(KeyEvent keyEvent)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual internal void OnKeyEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1KeyEvent.html">KeyEvent</a>&#160;</td>
+          <td class="paramname"><em>keyEvent</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>キーイベントハンドラ </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">keyEvent</td><td>キーイベント</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a349d9cddf27607c163365f7f355e2938"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::OnMotionEvent" ref="a349d9cddf27607c163365f7f355e2938" args="(MotionEvent motionEvent)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual internal void OnMotionEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1MotionEvent.html">MotionEvent</a>&#160;</td>
+          <td class="paramname"><em>motionEvent</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>モーションイベントハンドラ </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">motionEvent</td><td>モーションイベント</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveSpringPanel.html#a1a132d01d3563a7504195cb38be4f55c">LiveSpringPanel</a>で再定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ac7c77fb040aeb97a6d9c51738c2876fa"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::OnPressStateChanged" ref="ac7c77fb040aeb97a6d9c51738c2876fa" args="(PressStateChangedEventArgs e)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void OnPressStateChanged </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1PressStateChangedEventArgs.html">PressStateChangedEventArgs</a>&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>プレス状態が変化したときに呼び出される </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>イベント引数</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Button.html#a7ed7877bc924a22a5c0be18e6e54966c">Button</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1CheckBox.html#a7ed7877bc924a22a5c0be18e6e54966c">CheckBox</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1EditableText.html#a7ed7877bc924a22a5c0be18e6e54966c">EditableText</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ListPanelItem.html#a7ed7877bc924a22a5c0be18e6e54966c">ListPanelItem</a>, と <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1PopupList.html#a7ed7877bc924a22a5c0be18e6e54966c">PopupList</a>で再定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a05b9bbd469ddb38469b50b3e386df8f5"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::OnPreviewKeyEvent" ref="a05b9bbd469ddb38469b50b3e386df8f5" args="(KeyEvent keyEvent)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual internal void OnPreviewKeyEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1KeyEvent.html">KeyEvent</a>&#160;</td>
+          <td class="paramname"><em>keyEvent</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>事前キーイベントのハンドラ </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">keyEvent</td><td>キーイベント</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1GridListPanel.html#a5d5b5b7076275c437fdb988a2c0bbc29">GridListPanel</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ListPanel.html#a5d5b5b7076275c437fdb988a2c0bbc29">ListPanel</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveListPanel.html#a5d5b5b7076275c437fdb988a2c0bbc29">LiveListPanel</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1PagePanel.html#a5d5b5b7076275c437fdb988a2c0bbc29">PagePanel</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.html#a5d5b5b7076275c437fdb988a2c0bbc29">ScrollPanel</a>, と <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Slider.html#a5d5b5b7076275c437fdb988a2c0bbc29">Slider</a>で再定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="abd28ba62ef15bca7d0ac21b94d2e536d"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::OnTouchEvent" ref="abd28ba62ef15bca7d0ac21b94d2e536d" args="(TouchEventCollection touchEvents)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual internal void OnTouchEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1TouchEventCollection.html">TouchEventCollection</a>&#160;</td>
+          <td class="paramname"><em>touchEvents</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>タッチイベントハンドラ </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">touchEvents</td><td>タッチイベント</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1GridListPanel.html#a7c6ee38d499de41cb696bc07aa9acb31">GridListPanel</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ListPanel.html#a7c6ee38d499de41cb696bc07aa9acb31">ListPanel</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveFlipPanel.html#a7c6ee38d499de41cb696bc07aa9acb31">LiveFlipPanel</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveListPanel.html#a7c6ee38d499de41cb696bc07aa9acb31">LiveListPanel</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveScrollPanel.html#a7c6ee38d499de41cb696bc07aa9acb31">LiveScrollPanel</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveSphere.html#a7c6ee38d499de41cb696bc07aa9acb31">LiveSphere</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1PagePanel.html#a7c6ee38d499de41cb696bc07aa9acb31">PagePanel</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Panel.html#a7c6ee38d499de41cb696bc07aa9acb31">Panel</a>, と <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.html#a7c6ee38d499de41cb696bc07aa9acb31">ScrollPanel</a>で再定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a0635f3ec717eab9930522f4b1feef401"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::OnUpdate" ref="a0635f3ec717eab9930522f4b1feef401" args="(float elapsedTime)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void OnUpdate </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>elapsedTime</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>更新処理 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">elapsedTime</td><td>前回のUpdateからの経過時間（ミリ秒）</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1AnimationImageBox.html#a6e215133d6ee42486ffbb7e88cdceb1c">AnimationImageBox</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Button.html#a6e215133d6ee42486ffbb7e88cdceb1c">Button</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1EditableText.html#a6e215133d6ee42486ffbb7e88cdceb1c">EditableText</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1GridListPanel.html#a6e215133d6ee42486ffbb7e88cdceb1c">GridListPanel</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ListPanel.html#a6e215133d6ee42486ffbb7e88cdceb1c">ListPanel</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveFlipPanel.html#a6e215133d6ee42486ffbb7e88cdceb1c">LiveFlipPanel</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveJumpPanel.html#a6e215133d6ee42486ffbb7e88cdceb1c">LiveJumpPanel</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveListPanel.html#a6e215133d6ee42486ffbb7e88cdceb1c">LiveListPanel</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveScrollPanel.html#a6e215133d6ee42486ffbb7e88cdceb1c">LiveScrollPanel</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveSphere.html#a6e215133d6ee42486ffbb7e88cdceb1c">LiveSphere</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveSpringPanel.html#a6e215133d6ee42486ffbb7e88cdceb1c">LiveSpringPanel</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1PagePanel.html#a6e215133d6ee42486ffbb7e88cdceb1c">PagePanel</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ProgressBar.html#a6e215133d6ee42486ffbb7e88cdceb1c">ProgressBar</a>, と <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.html#a6e215133d6ee42486ffbb7e88cdceb1c">ScrollPanel</a>で再定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a57ced37590bcd7d7efcaec5c99373db8"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::RemoveChild" ref="a57ced37590bcd7d7efcaec5c99373db8" args="(Widget child)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RemoveChild </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>&#160;</td>
+          <td class="paramname"><em>child</em></td><td>)</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>指定された子ウィジェットを削除する。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td>削除する子ウィジェット</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ContainerWidget.html#a6ec59edc5bd68f69f1c3f563a583bf46">ContainerWidget</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveScrollPanel.html#a92367a79e37cdac1691bc0d9584f9abf">LiveScrollPanel</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveSpringPanel.html#a92367a79e37cdac1691bc0d9584f9abf">LiveSpringPanel</a>, と <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.html#a92367a79e37cdac1691bc0d9584f9abf">ScrollPanel</a>で再定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="afdc13eb615e02623c586981d2c947936"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::RemoveGestureDetector" ref="afdc13eb615e02623c586981d2c947936" args="(GestureDetector gestureDetector)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RemoveGestureDetector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1GestureDetector.html">GestureDetector</a>&#160;</td>
+          <td class="paramname"><em>gestureDetector</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>ジェスチャ検出機能を削除する。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gestureDetector</td><td>ジェスチャ検出機構</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl><dt><b>例外:</b></dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentNullException</td><td>GestureDetectorがnull</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>削除できたかどうか</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1f13a580cb1d3bbda0bfe4250985b34e"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::RenderToFrameBuffer" ref="a1f13a580cb1d3bbda0bfe4250985b34e" args="(FrameBuffer frameBuffer)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderToFrameBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1FrameBuffer.html">FrameBuffer</a>&#160;</td>
+          <td class="paramname"><em>frameBuffer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>フレームバッファへ描画する。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frameBuffer</td><td>フレームバッファ</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a4c9b645e2a815d884f26eabd83168f46"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::RenderToFrameBuffer" ref="a4c9b645e2a815d884f26eabd83168f46" args="(FrameBuffer frameBuffer, Matrix4 transform)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderToFrameBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1FrameBuffer.html">FrameBuffer</a>&#160;</td>
+          <td class="paramname"><em>frameBuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Matrix4.html">Matrix4</a>&#160;</td>
+          <td class="paramname"><em>transform</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>フレームバッファへ描画する。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frameBuffer</td><td>フレームバッファ</td></tr>
+    <tr><td class="paramname">transform</td><td>変換行列</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aa3b07f7c6486550f64501e96116dc9ea"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::RenderToTexture" ref="aa3b07f7c6486550f64501e96116dc9ea" args="(Texture2D texture)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderToTexture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1Texture2D.html">Texture2D</a>&#160;</td>
+          <td class="paramname"><em>texture</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>テクスチャへ描画する。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">texture</td><td>2Dのテクスチャ</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="acf9eb2029d297696ae9242f030c6d1f3"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::RenderToTexture" ref="acf9eb2029d297696ae9242f030c6d1f3" args="(Texture2D texture, Matrix4 transform)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderToTexture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1Texture2D.html">Texture2D</a>&#160;</td>
+          <td class="paramname"><em>texture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Matrix4.html">Matrix4</a>&#160;</td>
+          <td class="paramname"><em>transform</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>テクスチャへ描画する。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">texture</td><td>2Dのテクスチャ</td></tr>
+    <tr><td class="paramname">transform</td><td>変換行列</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac976c3d7f4d4e395259b53f0d3df957a"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::ResetState" ref="ac976c3d7f4d4e395259b53f0d3df957a" args="(bool includeSelf)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">internal void ResetState </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>includeSelf</em></td><td>)</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>自分以下の全ウィジェットの状態をリセットする。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">includeSelf</td><td>自分をリセットする場合はtrue。自分をリセットしない場合はfalse。</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a6dcf4dc39b4212a0551a3f6cc632f0f6"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::SearchNextFocus" ref="a6dcf4dc39b4212a0551a3f6cc632f0f6" args="(FourWayDirection direction)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">internal <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a> SearchNextFocus </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1UI.html#ab57171fe29396f7ba7bcb47885b285bc">FourWayDirection</a>&#160;</td>
+          <td class="paramname"><em>direction</em></td><td>)</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>次にフォーカスの当たるウィジェットを探す </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">direction</td><td>方向キーの方向</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>見つからない場合は null</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae81f5c2b62e1aef282f9967e1110e4ab"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::SearchNextFocusFromChild" ref="ae81f5c2b62e1aef282f9967e1110e4ab" args="(FourWayDirection direction, Widget currentFocusWidget)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">internal <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a> SearchNextFocusFromChild </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1UI.html#ab57171fe29396f7ba7bcb47885b285bc">FourWayDirection</a>&#160;</td>
+          <td class="paramname"><em>direction</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>&#160;</td>
+          <td class="paramname"><em>currentFocusWidget</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>自分の子ウィジェット（子孫を含む）の中から次にフォーカスの当たるウィジェットを探す </p>
+<p>自分自身は検索対象から除きます。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">direction</td><td>方向キーの方向</td></tr>
+    <tr><td class="paramname">currentFocusWidget</td><td>現在フォーカスのあるウィジェット</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>見つからない場合は null</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a539165fd8b2bef52e5bf25664bd73862"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::SetFocus" ref="a539165fd8b2bef52e5bf25664bd73862" args="(bool active)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetFocus </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>active</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>自分自身にフォーカスをあてる </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">active</td><td>true: フォーカスをアクティブにする false: 現状維持</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Focusable、Visible、Enabledプロパティおよび表示範囲内にあるかにかかわらずフォーカスを設定します。 active を true に設定した場合でも、所属するSceneがフォーカス対象のSceneでない場合はフォーカスがアクティブになりません。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a259080b5bc5f7bff0312d63c6751148f"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::SetPosition" ref="a259080b5bc5f7bff0312d63c6751148f" args="(float x, float y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void SetPosition </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>親の座標系での位置を設定する。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>親の座標系でのX座標</td></tr>
+    <tr><td class="paramname">y</td><td>親の座標系でのY座標</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac7df8736a200314a50917b2059eef1de"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::SetSize" ref="ac7df8736a200314a50917b2059eef1de" args="(float width, float height)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void SetSize </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>サイズを設定する。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>幅</td></tr>
+    <tr><td class="paramname">height</td><td>高さ</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveSphere.html#a5a9fecd4d2cfdaded4ab306440ddfef6">LiveSphere</a>で再定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aa73e7c4dd1df5fd5fbf81c7764ee1533"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::ToString" ref="aa73e7c4dd1df5fd5fbf81c7764ee1533" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override string ToString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>文字列を返す </p>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>"Name : 型名" 形式の文字列（Nameプロパティが設定されている場合）</dd></dl>
+
+</div>
+</div>
+<hr/><h2>プロパティ</h2>
+<a class="anchor" id="a763bd6d3cfcc8c671945abcc2db0232d"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::Alpha" ref="a763bd6d3cfcc8c671945abcc2db0232d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual float Alpha<code> [get, set]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>透明度を取得・設定する。（０～１） </p>
+<p>すべての子Widgetに透明度が乗算されて表示される。 </p>
+
+</div>
+</div>
+<a class="anchor" id="ab44200b4507839ee136670fb981e4743"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::Children" ref="ab44200b4507839ee136670fb981e4743" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>&gt; Children<code> [get, protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>子ウィジェットを取得する。 </p>
+<p>コレクションを反復処理する列挙子を返す。 </p>
+
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ContainerWidget.html#a0f7dc4f70a8e53150102a86ea22efc82">ContainerWidget</a>, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1LiveScrollPanel.html#aa133bdda01c1cb0b08ff094989582df8">LiveScrollPanel</a>, と <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.html#aa133bdda01c1cb0b08ff094989582df8">ScrollPanel</a>で再定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="abc02fe8506b85face79e3488434b4cbc"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::Clip" ref="abc02fe8506b85face79e3488434b4cbc" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">internal bool Clip<code> [get, set, protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>子要素(Widget、UIElement)をクリップするかどうかを取得・設定する。 </p>
+<p>クリップ領域は2次元の座標として計算される。 </p>
+
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Panel.html#a164ecc1d3991478d5644d9d91767747c">Panel</a>で再定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a2990b19b5633fd33b7cad6e157957478"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::Focusable" ref="a2990b19b5633fd33b7cad6e157957478" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Focusable<code> [get, set]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>フォーカスが当たるかどうかを取得・設定する </p>
+<p>親ウィジェットが false でも、子ウィジェットが true であれば子ウィジェットにフォーカスが当たる可能性があります。 </p>
+
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1PagePanel.html#aa8e403727c8a51b9a4ef15a31e1eef46">PagePanel</a>, と <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1ScrollPanel.html#aa8e403727c8a51b9a4ef15a31e1eef46">ScrollPanel</a>で再定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a934fa09ba291a97f43720640e4d83f25"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::Name" ref="a934fa09ba291a97f43720640e4d83f25" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String Name<code> [get, set]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>ウィジェットの名前を取得・設定する。 </p>
+<p>このプロパティはアプリケーションで任意に使用可能。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a9505ef58bf49ec70c8499eeaea512957"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::PivotType" ref="a9505ef58bf49ec70c8499eeaea512957" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1UI.html#ac7e6b465c8b4d238230a6d3bf90a2096">PivotType</a> <a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1UI.html#ac7e6b465c8b4d238230a6d3bf90a2096">PivotType</a><code> [get, set]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>ウィジェットの原点を取得・設定する。 </p>
+<p>移動、回転、スケーリングするときの中心となる点。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a49f0b6897532d42927a8967707666c4c"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::UI::Widget::TouchLeaveBehavior" ref="a49f0b6897532d42927a8967707666c4c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1UI.html#abbfcd156a561c21a37fd44ac85579ffd">PressStateTouchLeaveBehavior</a> TouchLeaveBehavior<code> [get, set, protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>タッチが領域の内側から外側に移動した場合のプレス状態の挙動を取得・設定する </p>
+<p>この値は Pressable プロパティがtrueの場合のみ有効です。 </p>
+
+</div>
+</div>
+</div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><b>Sce</b>      </li>
+      <li class="navelem"><b>PlayStation</b>      </li>
+      <li class="navelem"><b>HighLevel</b>      </li>
+      <li class="navelem"><a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1UI.html">UI</a>      </li>
+      <li class="navelem"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1UI_1_1Widget.html">Widget</a>      </li>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

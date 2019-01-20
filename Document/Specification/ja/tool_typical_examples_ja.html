@@ -1,0 +1,517 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: Application Development Scenario</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('tool_typical_examples_ja.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<h1>Application Development Scenario </h1>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><p>UI Composer では、Scene、Dialog、Panel、ListPanelItem の4つのクラスをレイアウトすることが可能です。</p>
+<p>この章では、これら4つをどのようなシナリオで利用するかについて順に説明していきます(図1)。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/app_dev_scenario/tool_typical_examples_table.png" src="image/app_dev_scenario/tool_typical_examples_table.png" />
+<p class="caption"><strong>図1 4つのシナリオ</strong></p>
+</div>
+</blockquote>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#scene" id="id1">Scene</a></li>
+<li><a class="reference internal" href="#dialog" id="id2">Dialog</a></li>
+<li><a class="reference internal" href="#pagepanel" id="id3">PagePanel</a></li>
+<li><a class="reference internal" href="#listpanel" id="id4">ListPanel</a></li>
+</ul>
+</div>
+<div class="section" id="scene">
+<h1><a class="toc-backref" href="#id1">Scene</a></h1>
+<p>Sceneのレイアウトについて説明します。</p>
+<p>Scene に ImageBox や Button を配置したシンプルな画面レイアウトを作成します(図2)。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/app_dev_scenario/tool_scene_layout_overview.png" src="image/app_dev_scenario/tool_scene_layout_overview.png" />
+<p class="caption"><strong>図2 Scene のレイアウト概要</strong></p>
+</div>
+</blockquote>
+<p>まず、UI Composer で Scene を新規作成します(図3)。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/composer/createnewlayout_dialog.png" src="image/uitoolkit/composer/createnewlayout_dialog.png" />
+<p class="caption"><strong>図3 Scene の新規作成</strong></p>
+</div>
+</blockquote>
+<p>作成した Scene に ImageBox と Button を配置します(図4)。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/app_dev_scenario/tool_scene_layout_complete.png" src="image/app_dev_scenario/tool_scene_layout_complete.png" />
+<p class="caption"><strong>図4 Scene のレイアウト結果</strong></p>
+</div>
+</blockquote>
+<p>この状態で Build すると 下記のようなコードが出力されます。</p>
+<blockquote>
+<div class="highlight"><pre><span class="k">partial</span> <span class="k">class</span> <span class="nc">MyScene</span>
+<span class="p">{</span>
+    <span class="n">ImageBox</span> <span class="n">ImageBox_1</span><span class="p">;</span>
+    <span class="n">Button</span> <span class="n">Button_1</span><span class="p">;</span>
+
+    <span class="k">private</span> <span class="k">void</span> <span class="nf">InitializeWidget</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">InitializeWidget</span><span class="p">(</span><span class="n">LayoutOrientation</span><span class="p">.</span><span class="n">Horizontal</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">private</span> <span class="k">void</span> <span class="nf">InitializeWidget</span><span class="p">(</span><span class="n">LayoutOrientation</span> <span class="n">orientation</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">ImageBox_1</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ImageBox</span><span class="p">();</span>
+        <span class="n">ImageBox_1</span><span class="p">.</span><span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;ImageBox_1&quot;</span><span class="p">;</span>
+        <span class="n">Button_1</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Button</span><span class="p">();</span>
+        <span class="n">Button_1</span><span class="p">.</span><span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;Button_1&quot;</span><span class="p">;</span>
+
+        <span class="c1">// ImageBox_1</span>
+        <span class="n">ImageBox_1</span><span class="p">.</span><span class="n">Image</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ImageAsset</span><span class="p">(</span><span class="s">&quot;/Application/assets/photo05.png&quot;</span><span class="p">);</span>
+
+        <span class="c1">// Button_1</span>
+        <span class="n">Button_1</span><span class="p">.</span><span class="n">TextColor</span> <span class="p">=</span> <span class="k">new</span> <span class="n">UIColor</span><span class="p">(</span><span class="m">0f</span> <span class="p">/</span> <span class="m">255f</span><span class="p">,</span> <span class="m">0f</span> <span class="p">/</span> <span class="m">255f</span><span class="p">,</span> <span class="m">0f</span> <span class="p">/</span> <span class="m">255f</span><span class="p">,</span> <span class="m">255f</span> <span class="p">/</span> <span class="m">255f</span><span class="p">);</span>
+        <span class="n">Button_1</span><span class="p">.</span><span class="n">TextFont</span> <span class="p">=</span> <span class="k">new</span> <span class="n">UIFont</span><span class="p">(</span> <span class="n">FontAlias</span><span class="p">.</span><span class="n">System</span><span class="p">,</span> <span class="m">25</span><span class="p">,</span> <span class="n">FontStyle</span><span class="p">.</span><span class="n">Regular</span><span class="p">);</span>
+        <span class="n">Button_1</span><span class="p">.</span><span class="n">BackgroundColor</span> <span class="p">=</span> <span class="k">new</span> <span class="n">UIColor</span><span class="p">(</span><span class="m">255f</span> <span class="p">/</span> <span class="m">255f</span><span class="p">,</span> <span class="m">255f</span> <span class="p">/</span> <span class="m">255f</span><span class="p">,</span> <span class="m">255f</span> <span class="p">/</span> <span class="m">255f</span><span class="p">,</span> <span class="m">255f</span> <span class="p">/</span> <span class="m">255f</span><span class="p">);</span>
+
+        <span class="c1">// Scene</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">RootWidget</span><span class="p">.</span><span class="n">AddChildLast</span><span class="p">(</span><span class="n">ImageBox_1</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">RootWidget</span><span class="p">.</span><span class="n">AddChildLast</span><span class="p">(</span><span class="n">Button_1</span><span class="p">);</span>
+
+        <span class="n">SetWidgetLayout</span><span class="p">(</span><span class="n">orientation</span><span class="p">);</span>
+
+        <span class="n">UpdateLanguage</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="k">private</span> <span class="n">LayoutOrientation</span> <span class="n">_currentLayoutOrientation</span><span class="p">;</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">SetWidgetLayout</span><span class="p">(</span><span class="n">LayoutOrientation</span> <span class="n">orientation</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">switch</span> <span class="p">(</span><span class="n">orientation</span><span class="p">)</span>
+        <span class="p">{</span>
+
+<span class="c1">// --snip--</span>
+
+        <span class="k">default</span><span class="p">:</span>
+            <span class="k">this</span><span class="p">.</span><span class="n">DesignWidth</span> <span class="p">=</span> <span class="m">854</span><span class="p">;</span>
+            <span class="k">this</span><span class="p">.</span><span class="n">DesignHeight</span> <span class="p">=</span> <span class="m">480</span><span class="p">;</span>
+
+            <span class="n">ImageBox_1</span><span class="p">.</span><span class="n">SetPosition</span><span class="p">(</span><span class="m">212</span><span class="p">,</span> <span class="m">45</span><span class="p">);</span>
+            <span class="n">ImageBox_1</span><span class="p">.</span><span class="n">SetSize</span><span class="p">(</span><span class="m">429</span><span class="p">,</span> <span class="m">286</span><span class="p">);</span>
+            <span class="n">ImageBox_1</span><span class="p">.</span><span class="n">Anchors</span> <span class="p">=</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Top</span> <span class="p">|</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Height</span> <span class="p">|</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Left</span> <span class="p">|</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Width</span><span class="p">;</span>
+            <span class="n">ImageBox_1</span><span class="p">.</span><span class="n">Visible</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+
+            <span class="n">Button_1</span><span class="p">.</span><span class="n">SetPosition</span><span class="p">(</span><span class="m">319</span><span class="p">,</span> <span class="m">374</span><span class="p">);</span>
+            <span class="n">Button_1</span><span class="p">.</span><span class="n">SetSize</span><span class="p">(</span><span class="m">214</span><span class="p">,</span> <span class="m">56</span><span class="p">);</span>
+            <span class="n">Button_1</span><span class="p">.</span><span class="n">Anchors</span> <span class="p">=</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Top</span> <span class="p">|</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Height</span> <span class="p">|</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Left</span> <span class="p">|</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Width</span><span class="p">;</span>
+            <span class="n">Button_1</span><span class="p">.</span><span class="n">Visible</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+
+            <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">_currentLayoutOrientation</span> <span class="p">=</span> <span class="n">orientation</span><span class="p">;</span>
+    <span class="p">}</span>
+
+<span class="c1">// --snip--</span>
+
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<p>作成したレイアウトを使用する場合は、Program.cs の Main関数内に下記のように記述します。</p>
+<blockquote>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">AppMain</span>
+<span class="p">{</span>
+
+<span class="c1">// --snip--</span>
+
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Initialize</span> <span class="p">()</span>
+    <span class="p">{</span>
+        <span class="c1">// Set up the graphics system</span>
+        <span class="n">graphics</span> <span class="p">=</span> <span class="k">new</span> <span class="n">GraphicsContext</span> <span class="p">();</span>
+
+        <span class="c1">// Initialize UI Toolkit</span>
+        <span class="n">UISystem</span><span class="p">.</span><span class="n">Initialize</span><span class="p">(</span><span class="n">graphics</span><span class="p">);</span>
+
+        <span class="c1">// Create scene</span>
+        <span class="n">var</span> <span class="n">scene</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MyScene</span><span class="p">();</span>
+        <span class="c1">// Set scene</span>
+        <span class="n">UISystem</span><span class="p">.</span><span class="n">SetScene</span><span class="p">(</span><span class="n">scene</span><span class="p">,</span> <span class="k">null</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="c1">// --snip--</span>
+
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<p>この状態でビルド、実行することで、レイアウトした通りエミュレータ上で動作します(図5)。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/app_dev_scenario/tool_scene_layout_complete_onemulator.png" src="image/app_dev_scenario/tool_scene_layout_complete_onemulator.png" />
+<p class="caption"><strong>図5 エミュレーター上での実行結果</strong></p>
+</div>
+</blockquote>
+</div>
+<div class="section" id="dialog">
+<h1><a class="toc-backref" href="#id2">Dialog</a></h1>
+<p>Dialog のレイアウトとその利用方法について説明します。</p>
+<p>Scene に配置された Button を押すと、レイアウトした Dialog を表示する例を示します(図6)。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/app_dev_scenario/tool_dialog_layout_overview.png" src="image/app_dev_scenario/tool_dialog_layout_overview.png" />
+<p class="caption"><strong>図6 Dialog 表示の例</strong></p>
+</div>
+</blockquote>
+<p>前節と同様に、Scene と Dialog をそれぞれ作成します(図7)。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/app_dev_scenario/tool_dialog_layout_complete.png" src="image/app_dev_scenario/tool_dialog_layout_complete.png" />
+<p class="caption"><strong>図7 Dialog のレイアウト結果</strong></p>
+</div>
+</blockquote>
+<dl class="docutils">
+<dt>これらを Build すると、下記のソースコードが出力されます。</dt>
+<dd><ul class="first last simple">
+<li>MyScene.cs</li>
+<li>MyScene.composer.cs</li>
+<li>MyDialog.cs</li>
+<li>MyDialog.composer.cs</li>
+</ul>
+</dd>
+</dl>
+<p>MyScene に配置した Button を押すと Dialog を表示するように、MyScene.cs に以下のように記述します。</p>
+<blockquote>
+<p>MyScene に MyDialog を追加します。</p>
+<blockquote>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">partial</span> <span class="k">class</span> <span class="nc">MyScene</span> <span class="p">:</span> <span class="n">Scene</span>
+<span class="p">{</span>
+    <span class="k">static</span> <span class="k">private</span> <span class="n">MyDialog</span> <span class="n">dialog</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="nf">MyScene</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">InitializeWidget</span><span class="p">();</span>
+
+        <span class="n">dialog</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MyDialog</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<p>Button_1 に dialog を表示するためのイベントを追加します。</p>
+<blockquote>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">partial</span> <span class="k">class</span> <span class="nc">MyScene</span> <span class="p">:</span> <span class="n">Scene</span>
+<span class="p">{</span>
+    <span class="n">MyDialog</span> <span class="n">dialog</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="nf">MyScene</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">InitializeWidget</span><span class="p">();</span>
+
+        <span class="n">dialog</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MyDialog</span><span class="p">();</span>
+
+        <span class="n">Button_1</span><span class="p">.</span><span class="n">ButtonAction</span> <span class="p">+=</span> <span class="n">HandleButton_1ButtonAction</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">void</span> <span class="nf">HandleButton_1ButtonAction</span> <span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">TouchEventArgs</span> <span class="n">e</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">dialog</span><span class="p">.</span><span class="n">Show</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<p>MyDialog の Button についても同様にイベントを登録します。</p>
+<blockquote>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">partial</span> <span class="k">class</span> <span class="nc">MyDialog</span> <span class="p">:</span> <span class="n">Dialog</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="nf">MyDialog</span><span class="p">()</span>
+        <span class="p">:</span> <span class="k">base</span><span class="p">(</span><span class="k">null</span><span class="p">,</span> <span class="k">null</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">InitializeWidget</span><span class="p">();</span>
+
+        <span class="n">Button_1</span><span class="p">.</span><span class="n">ButtonAction</span> <span class="p">+=</span> <span class="n">HandleButton_1ButtonAction</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">void</span> <span class="nf">HandleButton_1ButtonAction</span> <span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">TouchEventArgs</span> <span class="n">e</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">Hide</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+</blockquote>
+<p>前節同様に MyScene を表示させ、Buttonをタップすると Dialog が表示されます(図8)。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/app_dev_scenario/tool_dialog_layout_complete_onemulator.png" src="image/app_dev_scenario/tool_dialog_layout_complete_onemulator.png" />
+<p class="caption"><strong>図8 エミュレータ上での実行結果</strong></p>
+</div>
+</blockquote>
+</div>
+<div class="section" id="pagepanel">
+<h1><a class="toc-backref" href="#id3">PagePanel</a></h1>
+<p>PagePanel を使用して複数の Panel を表示する例について説明します(図9)。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/app_dev_scenario/tool_pagepanel_layout_overview.png" src="image/app_dev_scenario/tool_pagepanel_layout_overview.png" />
+<p class="caption"><strong>図9 PagePanel概要図</strong></p>
+</div>
+</blockquote>
+<p>MyScene、MyPanel1、MyPanel2を作成します(図10)。</p>
+<p>MyScene には PagePanel を配置します。</p>
+<p>MyPanel1、MyPanel2は、PagePanel の大きさに合わせ新規作成します(図11)。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/app_dev_scenario/tool_pagepanel_layout_elements.png" src="image/app_dev_scenario/tool_pagepanel_layout_elements.png" />
+<p class="caption"><strong>図10 PagePanel のレイアウト結果</strong></p>
+</div>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/composer/createnewlayout_panel.png" src="image/uitoolkit/composer/createnewlayout_panel.png" />
+<p class="caption"><strong>図11 Panel の新規作成</strong></p>
+</div>
+</blockquote>
+<p>MyScene に配置した PagePanel に MyPanel1、MyPanel2 を設定します。PagePanel のプロパティウィンドウに作成した Panel を設定します。(図12)。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/app_dev_scenario/tool_pagepanel_set_panels.png" src="image/app_dev_scenario/tool_pagepanel_set_panels.png" />
+<p class="caption"><strong>図12 作成した Panel の指定方法</strong></p>
+</div>
+</blockquote>
+<dl class="docutils">
+<dt>Buildすると、下記のソースコードが出力されます。</dt>
+<dd><ul class="first last simple">
+<li>MyScene.cs</li>
+<li>MyScene.composer.cs</li>
+<li>MyPanel1.cs</li>
+<li>MyPanel1.composer.cs</li>
+<li>MyPanel2.cs</li>
+<li>MyPanel2.composer.cs</li>
+</ul>
+</dd>
+</dl>
+<p>MyScene.composer.cs で PagePanelで表示する MyPanel1、MyPanel2 が指定されます。</p>
+<blockquote>
+<div class="highlight"><pre><span class="k">private</span> <span class="k">void</span> <span class="nf">InitializeWidget</span><span class="p">()</span>
+<span class="p">{</span>
+
+<span class="c1">// --snip--</span>
+
+    <span class="c1">// PagePanel_1</span>
+    <span class="n">PagePanel_1</span><span class="p">.</span><span class="n">AddPageLast</span><span class="p">(</span><span class="k">new</span> <span class="n">MyPanel1</span><span class="p">());</span>
+    <span class="n">PagePanel_1</span><span class="p">.</span><span class="n">AddPageLast</span><span class="p">(</span><span class="k">new</span> <span class="n">MyPanel2</span><span class="p">());</span>
+
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<p>ビルドし実行すると レイアウト通り PagePanel が動作します(図13)。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/app_dev_scenario/tool_pagepanel_layout_complete_onemulator.png" src="image/app_dev_scenario/tool_pagepanel_layout_complete_onemulator.png" />
+<p class="caption"><strong>図13 エミュレーター上での実行結果</strong></p>
+</div>
+</blockquote>
+</div>
+<div class="section" id="listpanel">
+<h1><a class="toc-backref" href="#id4">ListPanel</a></h1>
+<p>Listのレイアウトとその利用方法について説明します(図14)。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/app_dev_scenario/tool_listpanel_layout_overview.png" src="image/app_dev_scenario/tool_listpanel_layout_overview.png" />
+<p class="caption"><strong>図14 ListPanel の概要図</strong></p>
+</div>
+</blockquote>
+<p>前節の PagePanel 同様、MyScene に ListPanel を配置します。</p>
+<p>ListPanel に配置する要素 MyListPanelItem を作成します(図15)。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/app_dev_scenario/tool_listpanel_layout_elements.png" src="image/app_dev_scenario/tool_listpanel_layout_elements.png" />
+<p class="caption"><strong>図15 List のレイアウト結果</strong></p>
+</div>
+</blockquote>
+<p>ListPanel に作成した MyListPanelItem を設定します(図16)。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/app_dev_scenario/tool_listpanel_set_panel.png" src="image/app_dev_scenario/tool_listpanel_set_panel.png" />
+<p class="caption"><strong>図16 作成した ListPanelItem の指定方法</strong></p>
+</div>
+</blockquote>
+<dl class="docutils">
+<dt>Build すると、下記のソースコードが出力されます。</dt>
+<dd><ul class="first last simple">
+<li>MyScene.cs</li>
+<li>MyScene.composer.cs</li>
+<li>MyListPanelItem.cs</li>
+<li>MyListPanelItem.composer.cs</li>
+</ul>
+</dd>
+</dl>
+<p>MyScene.composer.cs で ListPanel_1 で表示する MyListPanelItem が指定されます。</p>
+<blockquote>
+<div class="highlight"><pre><span class="k">private</span> <span class="k">void</span> <span class="nf">InitializeWidget</span><span class="p">(</span><span class="n">LayoutOrientation</span> <span class="n">orientation</span><span class="p">)</span>
+<span class="p">{</span>
+
+<span class="c1">// --snip--</span>
+
+    <span class="c1">// ListPanel_1</span>
+    <span class="n">ListPanel_1</span><span class="p">.</span><span class="n">ScrollBarVisibility</span> <span class="p">=</span> <span class="n">ScrollBarVisibility</span><span class="p">.</span><span class="n">Visible</span><span class="p">;</span>
+    <span class="n">ListPanel_1</span><span class="p">.</span><span class="n">SetListItemCreator</span><span class="p">(</span><span class="n">MyListPanelItem</span><span class="p">.</span><span class="n">Creator</span><span class="p">);</span>
+
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<p>MyListPanelItem.composer.cs には Creator メソッドが自動生成されます。</p>
+<blockquote>
+<div class="highlight"><pre><span class="k">partial</span> <span class="k">class</span> <span class="nc">MyListPanelItem</span>
+<span class="p">{</span>
+
+<span class="c1">// --snip--</span>
+
+    <span class="k">public</span> <span class="k">static</span> <span class="n">ListPanelItem</span> <span class="nf">Creator</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">MyListPanelItem</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<p>MyListPanelItem の更新とListPanel_1のアイテム数を指定するために、MyScene.cs に以下のようなに記述します。
+MyListPanelItem の更新内容に関する記述は、ListItemUpdater 内に追加します。ここでは、Label の文字列として数字を表示する例を示します。</p>
+<blockquote>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">partial</span> <span class="k">class</span> <span class="nc">MyScene</span> <span class="p">:</span> <span class="n">Scene</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="nf">MyScene</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">InitializeWidget</span><span class="p">();</span>
+
+        <span class="n">ListPanel_1</span><span class="p">.</span><span class="n">SetListItemUpdater</span><span class="p">(</span><span class="n">ListItemUpdater</span><span class="p">);</span>
+        <span class="n">ListPanel_1</span><span class="p">.</span><span class="n">Sections</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ListSectionCollection</span> <span class="p">{</span> <span class="k">new</span> <span class="n">ListSection</span><span class="p">(</span><span class="s">&quot;Section&quot;</span><span class="p">,</span> <span class="m">10</span><span class="p">)</span> <span class="p">};</span>
+
+    <span class="p">}</span>
+
+    <span class="k">void</span> <span class="nf">ListItemUpdater</span><span class="p">(</span><span class="n">ListPanelItem</span> <span class="n">item</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Label</span> <span class="n">label</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
+        <span class="k">foreach</span> <span class="p">(</span><span class="n">var</span> <span class="n">w</span> <span class="k">in</span> <span class="n">item</span><span class="p">.</span><span class="n">Children</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">label</span> <span class="p">=</span> <span class="n">w</span> <span class="k">as</span> <span class="n">Label</span><span class="p">;</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">label</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span> <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">label</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">label</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="n">item</span><span class="p">.</span><span class="n">Index</span><span class="p">.</span><span class="n">ToString</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<p>ビルドし実行すると レイアウト通り ListPanel が動作します(図17)。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/app_dev_scenario/tool_listpanel_layout_complete_onemulator.png" src="image/app_dev_scenario/tool_listpanel_layout_complete_onemulator.png" />
+<p class="caption"><strong>図17 エミュレーター上での実行結果</strong></p>
+</div>
+</blockquote>
+</div>
+ </div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

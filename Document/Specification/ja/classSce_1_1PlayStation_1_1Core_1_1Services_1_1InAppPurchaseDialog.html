@@ -1,0 +1,484 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: クラス InAppPurchaseDialog</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('classSce_1_1PlayStation_1_1Core_1_1Services_1_1InAppPurchaseDialog.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public メソッド</a> &#124;
+<a href="#properties">プロパティ</a>  </div>
+  <div class="headertitle">
+<h1>クラス InAppPurchaseDialog</h1>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="Sce::PlayStation::Core::Services::InAppPurchaseDialog" --><!-- doxytag: inherits="Sce::PlayStation::Core::Environment::ICommonDialog" -->
+<p>アプリ内課金を処理するためのダイアログをあらわすクラス  
+<a href="#_details">[詳細]</a></p>
+<div class="dynheader">
+InAppPurchaseDialogに対する継承グラフ</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classSce_1_1PlayStation_1_1Core_1_1Services_1_1InAppPurchaseDialog.png" usemap="#InAppPurchaseDialog_map" alt=""/>
+  <map id="InAppPurchaseDialog_map" name="InAppPurchaseDialog_map">
+<area href="interfaceSce_1_1PlayStation_1_1Core_1_1Environment_1_1ICommonDialog.html" alt="ICommonDialog" shape="rect" coords="0,0,135,24"/>
+</map>
+ </div></div>
+
+<p><a href="classSce_1_1PlayStation_1_1Core_1_1Services_1_1InAppPurchaseDialog-members.html">すべてのメンバ一覧</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Public メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Services_1_1InAppPurchaseDialog.html#a09fbd9323c31557130e5501b31123929">InAppPurchaseDialog</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ダイアログを作成する  <a href="#a09fbd9323c31557130e5501b31123929"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Services_1_1InAppPurchaseDialog.html#a6e2d745cdb7a7b983f861ed6a9a541a7">Dispose</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ダイアログのアンマネージドリソースを解放する  <a href="#a6e2d745cdb7a7b983f861ed6a9a541a7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Services_1_1InAppPurchaseDialog.html#a3d7ed61946616ba296b734d116881d27">GetProductInfo</a> (string[] labels)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ダイアログを開き、プロダクト情報をサーバーから取得する  <a href="#a3d7ed61946616ba296b734d116881d27"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Services_1_1InAppPurchaseDialog.html#ae0dd81c03921115ee8049da383f8df1b">GetTicketInfo</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ダイアログを開き、チケット情報をサーバーから取得する  <a href="#ae0dd81c03921115ee8049da383f8df1b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Services_1_1InAppPurchaseDialog.html#a0663f7c6053124533363323bde5fb690">Purchase</a> (string label)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ダイアログを開き、プロダクトを購入する  <a href="#a0663f7c6053124533363323bde5fb690"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Services_1_1InAppPurchaseDialog.html#a76354572ec46904b6935a8c9a8a3b9d0">Consume</a> (string label)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ダイアログを開き、チケットを消費する  <a href="#a76354572ec46904b6935a8c9a8a3b9d0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Services_1_1InAppPurchaseDialog.html#a5e53001785ff30ae485a113b9b8a0ddc">Open</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ダイアログを開く (この関数はサポートされません)  <a href="#a5e53001785ff30ae485a113b9b8a0ddc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Services_1_1InAppPurchaseDialog.html#a12b9283f52eaf7610afe4b04fbca2ff0">Abort</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ダイアログを中断する (現在未対応です)  <a href="#a12b9283f52eaf7610afe4b04fbca2ff0"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="properties"></a>
+プロパティ</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSce_1_1PlayStation_1_1Core_1_1Environment.html#a47d5af4ed11941a057788dcb7574d289">CommonDialogState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Services_1_1InAppPurchaseDialog.html#ae665d6f2d706a75979d735206b122700">State</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ダイアログ処理の状態  <a href="#ae665d6f2d706a75979d735206b122700"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSce_1_1PlayStation_1_1Core_1_1Environment.html#ab7ae44f19b929d05c25d1a944291f242">CommonDialogResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Services_1_1InAppPurchaseDialog.html#aeb5ed5c073ef8bb29dfd4d5630487986">Result</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ダイアログ処理の結果  <a href="#aeb5ed5c073ef8bb29dfd4d5630487986"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSce_1_1PlayStation_1_1Core_1_1Services.html#a3736410dee0b16e86742d40243746ec6">InAppPurchaseCommand</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Services_1_1InAppPurchaseDialog.html#a8d548a5eeb4197fe9b6e852f489d512b">Command</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ダイアログ処理のコマンド  <a href="#a8d548a5eeb4197fe9b6e852f489d512b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Services_1_1InAppPurchaseDialog.html#a0b011cf99678058c910536e515b7cfe5">Arguments</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ダイアログ処理の引数  <a href="#a0b011cf99678058c910536e515b7cfe5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Services_1_1InAppPurchaseProductList.html">InAppPurchaseProductList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Services_1_1InAppPurchaseDialog.html#ac8bf480a4b1ddf5bcba3ac55e99ee627">ProductList</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">プロダクトのリスト  <a href="#ac8bf480a4b1ddf5bcba3ac55e99ee627"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Services_1_1InAppPurchaseDialog.html#aab9dd1bf2410248d5934e6e466465864">IsProductInfoComplete</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">プロダクト情報がすべて取得されているかどうか  <a href="#aab9dd1bf2410248d5934e6e466465864"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Services_1_1InAppPurchaseDialog.html#a3c98ae2d7eb499774a9875cd175f785f">IsTicketInfoComplete</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">チケット情報がすべて取得されているかどうか  <a href="#a3c98ae2d7eb499774a9875cd175f785f"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>説明</h2>
+<div class="textblock"><p>アプリ内課金を処理するためのダイアログをあらわすクラス </p>
+</div><hr/><h2>コンストラクタとデストラクタ</h2>
+<a class="anchor" id="a09fbd9323c31557130e5501b31123929"></a><!-- doxytag: member="Sce::PlayStation::Core::Services::InAppPurchaseDialog::InAppPurchaseDialog" ref="a09fbd9323c31557130e5501b31123929" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Services_1_1InAppPurchaseDialog.html">InAppPurchaseDialog</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>ダイアログを作成する </p>
+<p>ダイアログクラスが作成され、プロダクトのリストがメタデータから読み込まれます。 </p>
+
+</div>
+</div>
+<hr/><h2>メソッド</h2>
+<a class="anchor" id="a12b9283f52eaf7610afe4b04fbca2ff0"></a><!-- doxytag: member="Sce::PlayStation::Core::Services::InAppPurchaseDialog::Abort" ref="a12b9283f52eaf7610afe4b04fbca2ff0" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Abort </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>ダイアログを中断する (現在未対応です) </p>
+<p>ダイアログの処理を中断して、ダイアログを閉じます。 </p>
+
+<p><a class="el" href="interfaceSce_1_1PlayStation_1_1Core_1_1Environment_1_1ICommonDialog.html#a12b9283f52eaf7610afe4b04fbca2ff0">ICommonDialog</a>を実装しています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a76354572ec46904b6935a8c9a8a3b9d0"></a><!-- doxytag: member="Sce::PlayStation::Core::Services::InAppPurchaseDialog::Consume" ref="a76354572ec46904b6935a8c9a8a3b9d0" args="(string label)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Consume </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>label</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>ダイアログを開き、チケットを消費する </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">label</td><td>プロダクトのラベル</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>ダイアログを開いてサーバーに接続し、指定されたプロダクトのチケットを消費します。なお、あらかじめチケット情報を取得しておく必要があります。以下の場合には例外が発生します。 </p>
+<ul>
+<li>
+指定されたプロダクトがリストに登録されていない </li>
+<li>
+チケット情報が取得されていない </li>
+<li>
+指定されたプロダクトが消費型ではない </li>
+<li>
+指定されたプロダクトの残り回数がゼロ </li>
+</ul>
+<p>ダイアログ処理が完了すると、結果が OK の場合はチケット情報がすべて更新されます。結果が Error または Aborted の場合はチケット情報は更新されず、IsTicketInfoComplete プロパティが false になります。その場合、あらためて GetTicketInfo 関数でチケット情報を取得し、処理が成功したか失敗したかを確認してください。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a6e2d745cdb7a7b983f861ed6a9a541a7"></a><!-- doxytag: member="Sce::PlayStation::Core::Services::InAppPurchaseDialog::Dispose" ref="a6e2d745cdb7a7b983f861ed6a9a541a7" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Dispose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>ダイアログのアンマネージドリソースを解放する </p>
+<p>ダイアログのアンマネージドリソースを解放します。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a3d7ed61946616ba296b734d116881d27"></a><!-- doxytag: member="Sce::PlayStation::Core::Services::InAppPurchaseDialog::GetProductInfo" ref="a3d7ed61946616ba296b734d116881d27" args="(string[] labels)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GetProductInfo </td>
+          <td>(</td>
+          <td class="paramtype">string[]&#160;</td>
+          <td class="paramname"><em>labels</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>ダイアログを開き、プロダクト情報をサーバーから取得する </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">labels</td><td>プロダクトのラベルの配列 (nullならばすべて選択)</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>ダイアログを開いてサーバーに接続し、指定されたプロダクトのプロダクト情報を取得します。この関数はプロダクトごとにサーバーにリクエストを送信するため、一度に大量の情報を取得する場合は非常に時間がかかる可能性がありますのでご注意ください。 </p>
+
+</div>
+</div>
+<a class="anchor" id="ae0dd81c03921115ee8049da383f8df1b"></a><!-- doxytag: member="Sce::PlayStation::Core::Services::InAppPurchaseDialog::GetTicketInfo" ref="ae0dd81c03921115ee8049da383f8df1b" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GetTicketInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>ダイアログを開き、チケット情報をサーバーから取得する </p>
+<p>ダイアログを開いてサーバーに接続し、すべてのプロダクトのチケット情報を取得します。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a5e53001785ff30ae485a113b9b8a0ddc"></a><!-- doxytag: member="Sce::PlayStation::Core::Services::InAppPurchaseDialog::Open" ref="a5e53001785ff30ae485a113b9b8a0ddc" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Open </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>ダイアログを開く (この関数はサポートされません) </p>
+<p>この関数はサポートされません。ダイアログを開くには GetProductInfo, GetTicketInfo, Purchase, Consume 関数を使用してください。 </p>
+
+<p><a class="el" href="interfaceSce_1_1PlayStation_1_1Core_1_1Environment_1_1ICommonDialog.html#a5e53001785ff30ae485a113b9b8a0ddc">ICommonDialog</a>を実装しています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a0663f7c6053124533363323bde5fb690"></a><!-- doxytag: member="Sce::PlayStation::Core::Services::InAppPurchaseDialog::Purchase" ref="a0663f7c6053124533363323bde5fb690" args="(string label)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Purchase </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>label</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>ダイアログを開き、プロダクトを購入する </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">label</td><td>プロダクトのラベル</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>ダイアログを開いてサーバーに接続し、指定されたプロダクトを購入します。なお、あらかじめプロダクト情報とチケット情報を取得しておく必要があります。以下の場合には例外が発生します。 </p>
+<ul>
+<li>
+指定されたプロダクトがリストに登録されていない </li>
+<li>
+プロダクト情報かチケット情報が取得されていない </li>
+<li>
+指定されたプロダクトが通常型かつ購入ずみ </li>
+</ul>
+<p>ダイアログ処理が完了すると、結果が OK の場合はチケット情報がすべて更新されます。結果が Error または Aborted の場合はチケット情報は更新されず、IsTicketInfoComplete プロパティが false になります。その場合、あらためて GetTicketInfo 関数でチケット情報を取得し、処理が成功したか失敗したかを確認してください。 </p>
+
+</div>
+</div>
+<hr/><h2>プロパティ</h2>
+<a class="anchor" id="a0b011cf99678058c910536e515b7cfe5"></a><!-- doxytag: member="Sce::PlayStation::Core::Services::InAppPurchaseDialog::Arguments" ref="a0b011cf99678058c910536e515b7cfe5" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string [] Arguments<code> [get]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>ダイアログ処理の引数 </p>
+<p>最後に実行されたダイアログ処理の引数を取得します。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a8d548a5eeb4197fe9b6e852f489d512b"></a><!-- doxytag: member="Sce::PlayStation::Core::Services::InAppPurchaseDialog::Command" ref="a8d548a5eeb4197fe9b6e852f489d512b" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceSce_1_1PlayStation_1_1Core_1_1Services.html#a3736410dee0b16e86742d40243746ec6">InAppPurchaseCommand</a> Command<code> [get]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>ダイアログ処理のコマンド </p>
+<p>最後に実行されたダイアログ処理のコマンドを取得します。 </p>
+
+</div>
+</div>
+<a class="anchor" id="aab9dd1bf2410248d5934e6e466465864"></a><!-- doxytag: member="Sce::PlayStation::Core::Services::InAppPurchaseDialog::IsProductInfoComplete" ref="aab9dd1bf2410248d5934e6e466465864" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsProductInfoComplete<code> [get]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>プロダクト情報がすべて取得されているかどうか </p>
+<p>プロダクト情報がすべて取得されていれば true を返します。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a3c98ae2d7eb499774a9875cd175f785f"></a><!-- doxytag: member="Sce::PlayStation::Core::Services::InAppPurchaseDialog::IsTicketInfoComplete" ref="a3c98ae2d7eb499774a9875cd175f785f" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsTicketInfoComplete<code> [get]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>チケット情報がすべて取得されているかどうか </p>
+<p>チケット情報がすべて取得されていれば true を返します。チケット情報がまだ取得されていない場合、またはエラーによって最新状態に更新できなかった場合は false を返します。 </p>
+
+</div>
+</div>
+<a class="anchor" id="ac8bf480a4b1ddf5bcba3ac55e99ee627"></a><!-- doxytag: member="Sce::PlayStation::Core::Services::InAppPurchaseDialog::ProductList" ref="ac8bf480a4b1ddf5bcba3ac55e99ee627" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Services_1_1InAppPurchaseProductList.html">InAppPurchaseProductList</a> ProductList<code> [get]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>プロダクトのリスト </p>
+<p>購入可能なプロダクトのリストを取得します。 </p>
+
+</div>
+</div>
+<a class="anchor" id="aeb5ed5c073ef8bb29dfd4d5630487986"></a><!-- doxytag: member="Sce::PlayStation::Core::Services::InAppPurchaseDialog::Result" ref="aeb5ed5c073ef8bb29dfd4d5630487986" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceSce_1_1PlayStation_1_1Core_1_1Environment.html#ab7ae44f19b929d05c25d1a944291f242">CommonDialogResult</a> Result<code> [get]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>ダイアログ処理の結果 </p>
+<p>最後に実行されたダイアログ処理の結果を取得します。 </p>
+
+<p><a class="el" href="interfaceSce_1_1PlayStation_1_1Core_1_1Environment_1_1ICommonDialog.html#aeb5ed5c073ef8bb29dfd4d5630487986">ICommonDialog</a>を実装しています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ae665d6f2d706a75979d735206b122700"></a><!-- doxytag: member="Sce::PlayStation::Core::Services::InAppPurchaseDialog::State" ref="ae665d6f2d706a75979d735206b122700" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceSce_1_1PlayStation_1_1Core_1_1Environment.html#a47d5af4ed11941a057788dcb7574d289">CommonDialogState</a> State<code> [get]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>ダイアログ処理の状態 </p>
+<p>最後に実行されたダイアログ処理の状態を取得します。 </p>
+
+<p><a class="el" href="interfaceSce_1_1PlayStation_1_1Core_1_1Environment_1_1ICommonDialog.html#ae665d6f2d706a75979d735206b122700">ICommonDialog</a>を実装しています。</p>
+
+</div>
+</div>
+</div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><b>Sce</b>      </li>
+      <li class="navelem"><b>PlayStation</b>      </li>
+      <li class="navelem"><a class="el" href="namespaceSce_1_1PlayStation_1_1Core.html">Core</a>      </li>
+      <li class="navelem"><a class="el" href="namespaceSce_1_1PlayStation_1_1Core_1_1Services.html">Services</a>      </li>
+      <li class="navelem"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Services_1_1InAppPurchaseDialog.html">InAppPurchaseDialog</a>      </li>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

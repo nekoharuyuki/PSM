@@ -1,0 +1,743 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: ウィジェット</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('ui_widget_ja.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<h1>ウィジェット </h1>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><blockquote>
+この章では、UI Toolkit に標準で組み込まれているウィジェットの概要を紹介します。</blockquote>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#id2" id="id7">ウィジェットツリー</a><ul>
+<li><a class="reference internal" href="#widget" id="id8">Widget</a></li>
+<li><a class="reference internal" href="#rootwidget" id="id9">RootWidget</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id3" id="id10">汎用ウィジェット</a><ul>
+<li><a class="reference internal" href="#label" id="id11">Label</a></li>
+<li><a class="reference internal" href="#imagebox" id="id12">ImageBox</a></li>
+<li><a class="reference internal" href="#button" id="id13">Button</a></li>
+<li><a class="reference internal" href="#checkbox" id="id14">CheckBox</a></li>
+<li><a class="reference internal" href="#slider" id="id15">Slider</a></li>
+<li><a class="reference internal" href="#progressbar" id="id16">ProgressBar</a></li>
+<li><a class="reference internal" href="#editabletext" id="id17">EditableText</a></li>
+<li><a class="reference internal" href="#busyindicator" id="id18">BusyIndicator</a></li>
+<li><a class="reference internal" href="#animationimagebox" id="id19">AnimationImageBox</a></li>
+<li><a class="reference internal" href="#popuplist" id="id20">PopupList</a></li>
+<li><a class="reference internal" href="#datepicker" id="id21">DatePicker</a></li>
+<li><a class="reference internal" href="#timepicker" id="id22">TimePicker</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id4" id="id23">コンテナウィジェット</a><ul>
+<li><a class="reference internal" href="#containerwidget" id="id24">ContainerWidget</a></li>
+<li><a class="reference internal" href="#panel" id="id25">Panel</a></li>
+<li><a class="reference internal" href="#scrollpanel" id="id26">ScrollPanel</a></li>
+<li><a class="reference internal" href="#pagepanel" id="id27">PagePanel</a></li>
+<li><a class="reference internal" href="#listpanel-listpanelitem" id="id28">ListPanel、ListPanelItem</a></li>
+<li><a class="reference internal" href="#gridlistpanel-listpanelitem" id="id29">GridListPanel、ListPanelItem</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id5" id="id30">ダイアログウィジェット</a><ul>
+<li><a class="reference internal" href="#dialog" id="id31">Dialog</a></li>
+<li><a class="reference internal" href="#messagedialog" id="id32">MessageDialog</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#live" id="id33">Live ウィジェット</a><ul>
+<li><a class="reference internal" href="#livelistpanel" id="id34">LiveListPanel</a></li>
+<li><a class="reference internal" href="#livejumppanel" id="id35">LiveJumpPanel</a></li>
+<li><a class="reference internal" href="#liveflippanel" id="id36">LiveFlipPanel</a></li>
+<li><a class="reference internal" href="#livescrollpanel" id="id37">LiveScrollPanel</a></li>
+<li><a class="reference internal" href="#livesphere" id="id38">LiveSphere</a></li>
+<li><a class="reference internal" href="#livespringpanel" id="id39">LiveSpringPanel</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h1><a class="toc-backref" href="#id7">ウィジェットツリー</a></h1>
+<blockquote>
+<p>シーンを構成するウィジェットは RootWidget をルートにしたツリー構造になっています(図1)。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/ui_widget_scene_composition.png" src="image/ui_widget_scene_composition.png" style="width: 600px;" />
+<p class="caption"><strong>図1 シーンを構成するウィジェットの構造</strong></p>
+</div>
+</blockquote>
+</blockquote>
+<div class="section" id="widget">
+<h2><a class="toc-backref" href="#id8">Widget</a></h2>
+<blockquote>
+<p>Widget クラスはすべての ウィジェット (ユーザーインターフェース部品) の基底となる抽象クラスです。</p>
+<p>すべての種類のウィジェットに共通した機能である、位置やサイズ、表示・非表示などを取得、設定することが出来ます。</p>
+<blockquote>
+<div class="highlight"><pre><span class="n">Widget</span> <span class="n">widget</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ConcreteWidget</span><span class="p">();</span>
+<span class="n">widget</span><span class="p">.</span><span class="n">X</span> <span class="p">=</span> <span class="m">100.0f</span><span class="p">;</span>
+<span class="n">widget</span><span class="p">.</span><span class="n">Y</span> <span class="p">=</span> <span class="m">50.0f</span><span class="p">;</span>
+<span class="n">widget</span><span class="p">.</span><span class="n">Width</span> <span class="p">=</span> <span class="m">200.0f</span><span class="p">;</span>
+<span class="n">widget</span><span class="p">.</span><span class="n">Height</span> <span class="p">=</span> <span class="m">100.0f</span><span class="p">;</span>
+<span class="n">widget</span><span class="p">.</span><span class="n">Visible</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+<span class="n">widget</span><span class="p">.</span><span class="n">Anchors</span> <span class="p">=</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Top</span> <span class="p">|</span>
+                 <span class="n">Anchors</span><span class="p">.</span><span class="n">Bottom</span> <span class="p">|</span>
+                 <span class="n">Anchors</span><span class="p">.</span><span class="n">Left</span> <span class="p">|</span>
+                 <span class="n">Anchors</span><span class="p">.</span><span class="n">Right</span><span class="p">;</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<p>Anchors プロパティについては「基本概念」の「レイアウト」節を参照してください。</p>
+<p>独自のウィジェットを作成するためには、 <em>Widget</em> クラス、または派生クラスの <em>ContainerWidget</em> クラス、 <em>Dialog</em> クラスなどを継承してください。詳しくは <a class="reference external" href="ui_custom_widget_ja.html">カスタムウィジェットの作成方法</a> を参照してください。</p>
+</blockquote>
+</div>
+<div class="section" id="rootwidget">
+<h2><a class="toc-backref" href="#id9">RootWidget</a></h2>
+<blockquote>
+<p>シーンを構成するウィジェットツリーのルートになる特殊なウィジェットです。</p>
+<p>シーンを作成したときに自動的に作成され、 <em>Scene</em> の RootWidget プロパティで取得することが出来ます。アプリケーションから <em>RootWidget</em> クラスのインスタンスを作成することは出来ません。</p>
+<p>ウィジェットを画面に表示する場合は、このルートウィジェットの子供に配置する必要があります。</p>
+<blockquote>
+<div class="highlight"><pre><span class="n">Scene</span> <span class="n">scene</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Scene</span><span class="p">();</span>
+<span class="n">Label</span> <span class="n">label</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Label</span><span class="p">();</span>
+<span class="n">label</span><span class="p">.</span><span class="n">SetPosition</span><span class="p">(</span><span class="m">10.0f</span><span class="p">,</span> <span class="m">50.0f</span><span class="p">);</span>
+<span class="n">label</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="s">&quot;Hello World!&quot;</span><span class="p">;</span>
+<span class="n">scene</span><span class="p">.</span><span class="n">RootWidget</span><span class="p">.</span><span class="n">AddChildLast</span><span class="p">(</span><span class="n">label</span><span class="p">);</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<p>RootWidget オブジェクトの 幅 (Width) と高さ (Height) はスクリーンバッファのサイズに一致し、変更することが出来ません。また、位置 (X, Y) は (0, 0) で変更できません。</p>
+</blockquote>
+</div>
+</div>
+<div class="section" id="id3">
+<h1><a class="toc-backref" href="#id10">汎用ウィジェット</a></h1>
+<div class="section" id="label">
+<h2><a class="toc-backref" href="#id11">Label</a></h2>
+<blockquote>
+<p>テキストを表示するためのウィジェットです。</p>
+<p>テキストは文字列中の改行コードを反映して表示されますが、それでもテキストがラベルの幅に収まらない場合、LineBreak プロパティを設定することでテキストを折り返して表示することが出来ます。各設定値の表示結果は以下のようになります。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/label_linebreak.png" src="image/uitoolkit/label_linebreak.png" style="width: 800px;" />
+<p class="caption"><strong>図2 Label の LineBreak プロパティ</strong></p>
+</div>
+</blockquote>
+<p>改行しても矩形内に収まらない場合、最終行の右端の表示方法は TextTrimming プロパティで指定することが出来ます。各設定値の表示結果は図3 のようになります。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/label_texttrimming.png" src="image/uitoolkit/label_texttrimming.png" style="width: 800px;" />
+<p class="caption"><strong>図3 Label の TextTrimming プロパティ</strong></p>
+</div>
+<div class="highlight"><pre><span class="n">Label</span> <span class="n">label1</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Label</span><span class="p">();</span>
+<span class="n">label1</span><span class="p">.</span><span class="n">SetPosition</span><span class="p">(</span><span class="m">0.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">);</span>
+<span class="n">label1</span><span class="p">.</span><span class="n">SetSize</span><span class="p">(</span><span class="m">100.0f</span><span class="p">,</span> <span class="m">80.0f</span><span class="p">);</span>
+<span class="n">label1</span><span class="p">.</span><span class="n">Font</span> <span class="p">=</span> <span class="k">new</span> <span class="n">UIFont</span><span class="p">(</span><span class="n">FontAlias</span><span class="p">.</span><span class="n">System</span><span class="p">,</span> <span class="m">32</span><span class="p">,</span> <span class="n">FontStyle</span><span class="p">.</span><span class="n">Regular</span><span class="p">);</span>
+<span class="n">label1</span><span class="p">.</span><span class="n">TextColor</span> <span class="p">=</span> <span class="k">new</span> <span class="n">UIColor</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">255</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">255</span><span class="p">);</span>
+<span class="n">label1</span><span class="p">.</span><span class="n">TextTrimming</span> <span class="p">=</span> <span class="n">TextTrimming</span><span class="p">.</span><span class="n">EllipsisCharacter</span><span class="p">;</span>
+<span class="n">label1</span><span class="p">.</span><span class="n">LineBreak</span> <span class="p">=</span> <span class="n">LineBreak</span><span class="p">.</span><span class="n">Word</span><span class="p">;</span>
+<span class="n">label1</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="s">&quot;Hello world!&quot;</span><span class="p">;</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="imagebox">
+<h2><a class="toc-backref" href="#id12">ImageBox</a></h2>
+<blockquote>
+<p>画像を表示するためのウィジェットです。</p>
+<p>画像は ImageAsset クラスのオブジェクトとして設定します。</p>
+<blockquote>
+<div class="highlight"><pre><span class="n">ImageBox</span> <span class="n">imageBox1</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ImageBox</span><span class="p">();</span>
+<span class="n">imageBox1</span><span class="p">.</span><span class="n">Image</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ImageAsset</span><span class="p">(</span><span class="s">&quot;/Application/assets/img.png&quot;</span><span class="p">);</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<p>画像を表示する際のスケーリング方法を図4 の5パターンで指定できます。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/imagebox_scale.png" src="image/uitoolkit/imagebox_scale.png" style="width: 800px;" />
+<p class="caption"><strong>図4 画像のスケーリング方法</strong></p>
+</div>
+</blockquote>
+<p>9-patch 画像では、NinePatchMargin プロパティを指定する事で四隅を固定してスケーリングできます(図5)。</p>
+<blockquote>
+<div class="highlight"><pre><span class="n">ImageBox</span> <span class="n">imageBox1</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ImageBox</span><span class="p">();</span>
+<span class="n">imageBox1</span><span class="p">.</span><span class="n">Image</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ImageAsset</span><span class="p">(</span><span class="s">&quot;/Application/assets/img.png&quot;</span><span class="p">);</span>
+<span class="n">imageBox1</span><span class="p">.</span><span class="n">ImageScaleType</span> <span class="p">=</span> <span class="n">ImageScaleType</span><span class="p">.</span><span class="n">NinePatch</span><span class="p">;</span>
+<span class="n">imageBox1</span><span class="p">.</span><span class="n">NinePatchMargin</span> <span class="p">=</span> <span class="k">new</span> <span class="n">NinePatchMargin</span><span class="p">(</span><span class="m">24</span><span class="p">,</span> <span class="m">24</span><span class="p">,</span> <span class="m">24</span><span class="p">,</span> <span class="m">24</span><span class="p">);</span>
+</pre></div>
+<!-- end-of-code-block -->
+<div align="center" class="figure">
+<img alt="image/uitoolkit/imagebox_ninepatch.png" src="image/uitoolkit/imagebox_ninepatch.png" style="width: 600px;" />
+<p class="caption"><strong>図5 ImageBox の 9-patch によるスケーリング</strong></p>
+</div>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="button">
+<h2><a class="toc-backref" href="#id13">Button</a></h2>
+<blockquote>
+<p>タッチ操作に反応するボタンウィジェットです。</p>
+<p>ボタンには画像か1行のテキストを表示することが出来ます(図6)。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/button.png" src="image/uitoolkit/button.png" style="width: 400px;" />
+<p class="caption"><strong>図6 テキストを表示したButtonと、画像を表示したButton</strong></p>
+</div>
+<div class="highlight"><pre><span class="n">Button</span> <span class="n">textButton</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Button</span><span class="p">();</span>
+<span class="n">textButton</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="s">&quot;OK&quot;</span><span class="p">;</span>
+
+<span class="n">Button</span> <span class="n">imageButton</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Button</span><span class="p">();</span>
+<span class="n">imageButton</span><span class="p">.</span><span class="n">IconImage</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ImageAsset</span><span class="p">(</span><span class="s">&quot;/Application/assets/img.png&quot;</span><span class="p">);</span>
+</pre></div>
+<!-- end-of-code-block -->
+<p>このウィジェットをタップするか Enterキーを押下すると、任意のコードを実行できます。</p>
+<p>ボタンが押された場合に実行するコードは ButtonAction イベントを使用します。以下のように、実行したいコードを記述したイベントハンドラを用意し、ButtonAction イベントに登録します。</p>
+<blockquote>
+<div class="highlight"><pre><span class="n">Button</span> <span class="n">button1</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Button</span><span class="p">();</span>
+<span class="n">button1</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="s">&quot;Start&quot;</span><span class="p">;</span>
+<span class="n">button1</span><span class="p">.</span><span class="n">ButtonAction</span> <span class="p">+=</span> <span class="n">HandleButton1ButtonAction</span><span class="p">;</span>
+</pre></div>
+<!-- end-of-code-block -->
+<div class="highlight"><pre><span class="k">void</span> <span class="nf">HandleButton1ButtonAction</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">TouchEventArgs</span> <span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">button1</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="s">&quot;Stop&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<p>なお、PSM Studio のコードテンプレート機能を使用すれば、イベントの代入式を記述するだけで自動でイベントハンドラを生成可能です(図7)。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/ui_eventhandler.png" src="image/ui_eventhandler.png" />
+<p class="caption"><strong>図7 イベントハンドラの自動生成</strong></p>
+</div>
+</blockquote>
+<p>ボタンの背景画像を変更したい場合は、CustomButtonSettings プロパティを使用します。通常、押下、無効の３つの状態の背景画像と、これらの9-patch のマージンを指定できます(図8)。</p>
+<blockquote>
+<div class="highlight"><pre><span class="n">Button</span> <span class="n">customButton</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Button</span><span class="p">();</span>
+<span class="n">customButton</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="s">&quot;Custom Button&quot;</span><span class="p">;</span>
+<span class="n">CustomImageSettings</span> <span class="n">customImage</span> <span class="p">=</span>  <span class="k">new</span> <span class="n">CustomImageSettings</span><span class="p">();</span>
+<span class="n">customImage</span><span class="p">.</span><span class="n">BackgroundNormalImage</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ImageAsset</span><span class="p">(</span><span class="s">&quot;/Application/assets/BackgroundNormalImage.png&quot;</span><span class="p">);</span>
+<span class="n">customImage</span><span class="p">.</span><span class="n">BackgroundPressedImage</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ImageAsset</span><span class="p">(</span><span class="s">&quot;/Application/assets/BackgroundPressedImage.png&quot;</span><span class="p">);</span>
+<span class="n">customImage</span><span class="p">.</span><span class="n">BackgroundDisabledImage</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ImageAsset</span><span class="p">(</span><span class="s">&quot;/Application/assets/BackgroundDisabledImage.png&quot;</span><span class="p">);</span>
+<span class="n">customImage</span><span class="p">.</span><span class="n">BackgroundNinePatchMargin</span> <span class="p">=</span> <span class="k">new</span> <span class="n">NinePatchMargin</span><span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="m">10</span><span class="p">,</span><span class="m">10</span><span class="p">,</span><span class="m">10</span><span class="p">);</span>
+<span class="n">customButton</span><span class="p">.</span><span class="n">CustomImage</span> <span class="p">=</span> <span class="n">customImage</span><span class="p">;</span>
+<span class="n">customButton</span><span class="p">.</span><span class="n">Style</span> <span class="p">=</span> <span class="n">ButtonStyle</span><span class="p">.</span><span class="n">Custom</span><span class="p">;</span>
+</pre></div>
+<!-- end-of-code-block -->
+<div align="center" class="figure">
+<img alt="image/uitoolkit/button_custom.png" src="image/uitoolkit/button_custom.png" style="width: 700px;" />
+<p class="caption"><strong>図8 背景画像をカスタマイズしたButton</strong></p>
+</div>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="checkbox">
+<h2><a class="toc-backref" href="#id14">CheckBox</a></h2>
+<blockquote>
+<p>いわゆるチェックボックスやラジオボタン用のウィジェットで、真偽値を保持します(図9)。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/checkbox_radiobutton.png" src="image/uitoolkit/checkbox_radiobutton.png" />
+<p class="caption"><strong>図9 CheckBox</strong></p>
+</div>
+<p>このウィジェットをタップするか Enterキーを押下すると、真偽値が切り替わります。</p>
+<p>真偽値は Checked プロパティで取得と設定ができます。また、Style プロパティによってチェックボックスかラジオボタンの画像を切り替えることが出来ます。</p>
+<blockquote>
+<div class="highlight"><pre><span class="n">CheckBox</span> <span class="n">check1</span> <span class="p">=</span> <span class="k">new</span> <span class="n">CheckBox</span><span class="p">();</span>
+<span class="n">check1</span><span class="p">.</span><span class="n">Checked</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+<span class="n">check1</span><span class="p">.</span><span class="n">CheckedChanged</span> <span class="p">+=</span> <span class="n">HandleCheck1CheckedChange</span><span class="p">;</span>
+</pre></div>
+<!-- end-of-code-block -->
+<div class="highlight"><pre><span class="n">CheckBox</span> <span class="n">radio1</span> <span class="p">=</span> <span class="k">new</span> <span class="n">CheckBox</span><span class="p">();</span>
+<span class="n">radio1</span><span class="p">.</span><span class="n">Style</span> <span class="p">=</span> <span class="n">CheckBoxStyle</span><span class="p">.</span><span class="n">RadioButton</span><span class="p">;</span>
+<span class="n">radio1</span><span class="p">.</span><span class="n">CheckedChange</span> <span class="p">+=</span> <span class="n">HandleRadio1CheckedChange</span><span class="p">;</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="slider">
+<h2><a class="toc-backref" href="#id15">Slider</a></h2>
+<blockquote>
+<p>数値などの調整を行うためのウィジェットです(図10)。</p>
+<div align="center" class="figure">
+<img alt="image/ui_widget_slider1.png" src="image/ui_widget_slider1.png" />
+<p class="caption"><strong>図10 Slider</strong></p>
+</div>
+<p>中央のノブをドラッグして動かすか左右（または上下）キーを押下することによって値を調整できます。この値は Value プロパティで取得することができます。値の範囲は MinValue および MaxValue プロパティで設定することができ、ノブが左端にある場合に最小値となります。</p>
+<p>Orientation プロパティでスライダーを縦方向にすることができ、この場合、ノブが下に来たときに Value が最小値となります。</p>
+<p>値が変更になった場合のイベントは、ValueChanged と ValueChanging の2種類あります。ValueChanged イベントは、ノブをドラッグして指が離されたとき、および アプリケーションコードから Value プロパティの値を変更したときに発行されます。ValueChanging イベントは、ValueChanged イベントの発行タイミングに加えて、ノブをドラッグ中でも値が変更されていれば毎フレーム発行されます。</p>
+<p>アプリケーションコードから Value プロパティを設定する場合など、ValueChanged および ValueChanging イベントを一時的に発行させたくない場合は、ValueChangeEventEnabled プロパティを false に設定してください。</p>
+<p>左右キー（縦方向表示の場合は上下キー）ではフォーカスが移動されないので、このウィジェットの左右にフォーカスのあたるウィジェットを配置しないようにしてください。</p>
+<blockquote>
+<div class="highlight"><pre><span class="n">Slider</span> <span class="n">slider1</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Slider</span><span class="p">();</span>
+<span class="n">slider1</span><span class="p">.</span><span class="n">Orientation</span> <span class="p">=</span> <span class="n">SliderOrientation</span><span class="p">.</span><span class="n">Horizontal</span><span class="p">;</span>
+<span class="n">slider1</span><span class="p">.</span><span class="n">MinValue</span> <span class="p">=</span> <span class="p">-</span><span class="m">127</span><span class="p">;</span>
+<span class="n">slider1</span><span class="p">.</span><span class="n">MaxValue</span> <span class="p">=</span> <span class="m">128</span><span class="p">;</span>
+<span class="n">slider1</span><span class="p">.</span><span class="n">ValueStep</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
+<span class="n">slider1</span><span class="p">.</span><span class="n">Value</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+<span class="n">slider1</span><span class="p">.</span><span class="n">ValueChanged</span> <span class="p">+=</span> <span class="n">HandleSlider1ValueChanged</span><span class="p">;</span>
+<span class="n">slider1</span><span class="p">.</span><span class="n">ValueChanging</span> <span class="p">+=</span> <span class="n">HandleSlider1ValueChanging</span><span class="p">;</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="progressbar">
+<h2><a class="toc-backref" href="#id16">ProgressBar</a></h2>
+<blockquote>
+<p>進捗の度合いを表示するウィジェットです(図11)。</p>
+<div align="center" class="figure">
+<img alt="image/ui_widget_progress1.png" src="image/ui_widget_progress1.png" />
+<p class="caption"><strong>図11 ProgressBar</strong></p>
+</div>
+<p>表示のスタイルは通常とアニメーションの2種類あり、Style プロパティで設定できます。アニメーションのスタイルは、進捗の比較的遅い処理を行う際に有用です。</p>
+<p>進捗度合いは Progress プロパティに 0 から 1 の範囲で設定します。</p>
+<blockquote>
+<div class="highlight"><pre><span class="n">progressBar</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ProgressBar</span><span class="p">();</span>
+<span class="n">progressBar</span><span class="p">.</span><span class="n">Style</span> <span class="p">=</span> <span class="n">ProgressBarStyle</span><span class="p">.</span><span class="n">Animation</span><span class="p">;</span>
+</pre></div>
+<!-- end-of-code-block -->
+<div class="highlight"><pre><span class="k">void</span> <span class="nf">OnUpdate</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">progressBar</span><span class="p">.</span><span class="n">Progress</span> <span class="p">=</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">processedItemCount</span> <span class="p">/</span> <span class="n">allItemCount</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="editabletext">
+<h2><a class="toc-backref" href="#id17">EditableText</a></h2>
+<blockquote>
+<p>テキストの表示と編集ができるウィジェットです(図12)。</p>
+<div align="center" class="figure">
+<img alt="image/ui_widget_edit1.png" src="image/ui_widget_edit1.png" />
+<p class="caption"><strong>図12 EditableText</strong></p>
+</div>
+<p>このウィジェットをタップするか Enterキーを押下すると、システム標準のオンスクリーンキーボードが起動し、テキストの入力や編集ができます。</p>
+<p>テキスト未入力時のデフォルトテキストの表示、パスワード入力用のマスク表示、オンスクリーンキーボードの入力モードの選択ができます。</p>
+<blockquote>
+<div class="highlight"><pre><span class="n">EditableText</span> <span class="n">progressBar</span> <span class="p">=</span> <span class="k">new</span> <span class="n">EditableText</span><span class="p">();</span>
+<span class="n">EditableText</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="s">&quot;&quot;</span><span class="p">;</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="busyindicator">
+<h2><a class="toc-backref" href="#id18">BusyIndicator</a></h2>
+<blockquote>
+<p>何らかの処理が進行中であることを表示するウィジェットです(図13)。</p>
+<div align="center" class="figure">
+<img alt="image/ui_widget_busy1.png" src="image/ui_widget_busy1.png" />
+<p class="caption"><strong>図13 BusyIndicator</strong></p>
+</div>
+<p>初期状態では非表示になっています。Start メソッドを呼ぶことで表示され、処理中を示すアニメーションを行います。また、Stop メソッドで非表示になります。</p>
+<p>初期化後からインジケータを表示させておきたい場合は、インスタンスの作成時に autoStart 引数をとるコンストラクタを使用し、autoStart に true を設定してください。</p>
+</blockquote>
+</div>
+<div class="section" id="animationimagebox">
+<h2><a class="toc-backref" href="#id19">AnimationImageBox</a></h2>
+<blockquote>
+<p>コマ送りのアニメーションイメージを表示するウィジェットです(図14)。</p>
+<p>使用するアセット画像は、各コマの画像をまとめて一つの画像にする必要があります。各コマは左上から右方向に並べ、列数や行数に制約はありません。コマ数、およびコマの幅と高さは、それぞれ、FrameCount, FrameWidth, FrameHeight プロパティで指定します。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/square_animation.png" src="image/uitoolkit/square_animation.png" />
+<p class="caption"><strong>図14 AnimationImageBox 用アセット画像の例</strong></p>
+</div>
+</blockquote>
+<p>Start メソッドでアニメーションを開始し、Stop メソッドで停止します。コマの表示間隔は FrameInterval プロパティにミリ秒単位で指定できます。</p>
+</blockquote>
+</div>
+<div class="section" id="popuplist">
+<h2><a class="toc-backref" href="#id20">PopupList</a></h2>
+<blockquote>
+<p>PopupList は複数の選択肢の中から1つを選ぶために利用する部品です(図15)。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/popuplist.png" src="image/uitoolkit/popuplist.png" style="width: 800px;" />
+<p class="caption"><strong>図15 PopupList</strong></p>
+</div>
+<p>PopupList をタップするか Enterキーを押下すると、タイトルとリストを持つ Dialog が表示されます。リストの中から１つを選択(タップ / 上下およびEnterキー)すると、Dialog が閉じ、選択した項目が PopupList に表示されます。Dialogの外側をタップするか Backキーを押下すると選択がキャンセルされて Dialog が閉じます。</p>
+<p>リストに表示する中身は、ListItems プロパティで設定できます。また、Dialog のタイトルは、ListTitle プロパティで設定できます。</p>
+</blockquote>
+</div>
+<div class="section" id="datepicker">
+<h2><a class="toc-backref" href="#id21">DatePicker</a></h2>
+<blockquote>
+<p>日付を選択するためのウィジェットです(図16)。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/datepicker.png" src="image/uitoolkit/datepicker.png" />
+<p class="caption"><strong>図16 DatePicker</strong></p>
+</div>
+<p>アイテムを上下にドラッグするか、各列にフォーカスを合わせて上下キーを押すことで日付を変更できます。</p>
+<p>上下キーではフォーカスが移動されないので、このウィジェットの上下にフォーカスのあたるウィジェットを配置しないようにしてください。</p>
+</blockquote>
+</div>
+<div class="section" id="timepicker">
+<h2><a class="toc-backref" href="#id22">TimePicker</a></h2>
+<blockquote>
+<p>時刻を選択するためのウィジェットです(図17)。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/timepicker.png" src="image/uitoolkit/timepicker.png" />
+<p class="caption"><strong>図17 TimePicker</strong></p>
+</div>
+<p>DatePickerと同じ操作ができます。</p>
+</blockquote>
+</div>
+</div>
+<div class="section" id="id4">
+<h1><a class="toc-backref" href="#id23">コンテナウィジェット</a></h1>
+<div class="section" id="containerwidget">
+<h2><a class="toc-backref" href="#id24">ContainerWidget</a></h2>
+<blockquote>
+<p>任意のウィジェットを載せることの出来るウィジェットの基底クラスです。</p>
+<p>AddChildFirst、AddChildLast メソッドで Widget を先頭および末尾に追加することが出来ます。追加された子ウィジェットは Children プロパティで取得することが出来ます。登録されている子ウィジェットは最後に追加されたのもが前面に表示されます。</p>
+<p>一旦登録した子ウィジェットを削除したい場合は RemoveChild を使用します。単純に子ウィジェットを非表示にするのみであれば Visible プロパティを使用してください。</p>
+<p>同じウィジェットのインスタンスを複数のコンテナウィジェットに所属させることは出来ません。</p>
+<p>コンテナウィジェットに所属する子ウィジェットはアンカーを使用することができます。アンカーについての詳細は UI Composer のドキュメントを参照してください。</p>
+</blockquote>
+</div>
+<div class="section" id="panel">
+<h2><a class="toc-backref" href="#id25">Panel</a></h2>
+<blockquote>
+<p>任意の UI 部品を載せることができるコンテナウィジェットです。</p>
+<p>もっともシンプルなコンテナウィジェットで、背景色を指定することが出来ます。</p>
+</blockquote>
+</div>
+<div class="section" id="scrollpanel">
+<h2><a class="toc-backref" href="#id26">ScrollPanel</a></h2>
+<blockquote>
+<p>スクロール可能な領域を持つパネルです(図18)。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/scrollpanel.png" src="image/uitoolkit/scrollpanel.png" style="width: 600px;" />
+<p class="caption"><strong>図18 ScrollPanel</strong></p>
+</div>
+<p>子ウィジェットとして Panel を一つ持っており、その一部分をクリッピングして表示します。タッチ操作で上下や左右方向にスクロールさせることが可能です。スクロール可能な方向を制限することも可能です。</p>
+<div class="highlight"><pre><span class="n">panel1</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ScrollPanel</span><span class="p">();</span>
+<span class="n">panel1</span><span class="p">.</span><span class="n">X</span> <span class="p">=</span> <span class="m">300.0f</span><span class="p">;</span>
+<span class="n">panel1</span><span class="p">.</span><span class="n">Y</span> <span class="p">=</span> <span class="m">0.0f</span><span class="p">;</span>
+<span class="n">panel1</span><span class="p">.</span><span class="n">Width</span> <span class="p">=</span> <span class="m">400.0f</span><span class="p">;</span>
+<span class="n">panel1</span><span class="p">.</span><span class="n">Height</span> <span class="p">=</span> <span class="m">280.0f</span><span class="p">;</span>
+<span class="n">panel1</span><span class="p">.</span><span class="n">PanelWidth</span> <span class="p">=</span> <span class="m">400.0f</span><span class="p">;</span>
+<span class="n">panel1</span><span class="p">.</span><span class="n">PanelHeight</span> <span class="p">=</span> <span class="m">2000.0f</span><span class="p">;</span>
+<span class="n">panel1</span><span class="p">.</span><span class="n">PanelColor</span> <span class="p">=</span> <span class="k">new</span> <span class="n">UIColor</span><span class="p">(</span><span class="m">0.2f</span><span class="p">,</span> <span class="m">0.2f</span><span class="p">,</span> <span class="m">0.2f</span><span class="p">,</span> <span class="m">0.8f</span><span class="p">);</span>
+<span class="n">panel1</span><span class="p">.</span><span class="n">PanelX</span> <span class="p">=</span> <span class="m">10.0f</span><span class="p">;</span>
+<span class="n">panel1</span><span class="p">.</span><span class="n">PanelY</span> <span class="p">=</span> <span class="m">10.0f</span><span class="p">;</span>
+<span class="n">panel1</span><span class="p">.</span><span class="n">ScrollBarVisibility</span> <span class="p">=</span> <span class="n">ScrollBarVisibility</span><span class="p">.</span><span class="n">Visible</span><span class="p">;</span>
+<span class="n">panel1</span><span class="p">.</span><span class="n">HorizontalScroll</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+
+<span class="n">Label</span> <span class="n">label1</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Label</span><span class="p">();</span>
+<span class="n">panel1</span><span class="p">.</span><span class="n">AddChildLast</span><span class="p">(</span><span class="n">label1</span><span class="p">);</span>
+<span class="n">label1</span><span class="p">.</span><span class="n">X</span> <span class="p">=</span> <span class="m">310</span><span class="p">;</span>
+<span class="n">label1</span><span class="p">.</span><span class="n">Y</span> <span class="p">=</span> <span class="m">10</span><span class="p">;</span>
+<span class="n">label1</span><span class="p">.</span><span class="n">Width</span> <span class="p">=</span> <span class="m">340.0f</span><span class="p">;</span>
+<span class="n">label1</span><span class="p">.</span><span class="n">Height</span> <span class="p">=</span> <span class="m">1000.0f</span><span class="p">;</span>
+<span class="n">label1</span><span class="p">.</span><span class="n">Text</span>  <span class="p">=</span> <span class="s">&quot; ... &quot;</span><span class="p">;</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+</div>
+<div class="section" id="pagepanel">
+<h2><a class="toc-backref" href="#id27">PagePanel</a></h2>
+<blockquote>
+<p>ページ単位でスクロールすることのできるパネルです(図19)。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/pagepanel.png" src="image/uitoolkit/pagepanel.png" style="width: 600px;" />
+<p class="caption"><strong>図19 PagePanel</strong></p>
+</div>
+<p>PagePanel は AddPageLast メソッドにより複数のページを追加でき、ページごとにPanelオブジェクトを持ちます。GetPage メソッドで指定したページのパネルを取得できます。</p>
+<div class="highlight"><pre><span class="n">pagePanel</span> <span class="p">=</span> <span class="k">new</span> <span class="n">PagePanel</span><span class="p">();</span>
+<span class="n">pagePanel</span><span class="p">.</span><span class="n">X</span> <span class="p">=</span> <span class="m">0.0f</span><span class="p">;</span>
+<span class="n">pagePanel</span><span class="p">.</span><span class="n">Y</span> <span class="p">=</span> <span class="m">0.0f</span><span class="p">;</span>
+<span class="n">pagePanel</span><span class="p">.</span><span class="n">Width</span> <span class="p">=</span> <span class="m">800.0f</span><span class="p">;</span>
+<span class="n">pagePanel</span><span class="p">.</span><span class="n">Height</span> <span class="p">=</span> <span class="m">400.0f</span><span class="p">;</span>
+
+<span class="n">MyCustomPanel</span> <span class="n">panelA</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MyCustomPanel</span><span class="p">(</span><span class="s">&quot;Tokyo&quot;</span><span class="p">);</span>
+<span class="n">MyCustomPanel</span> <span class="n">panelB</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MyCustomPanel</span><span class="p">(</span><span class="s">&quot;London&quot;</span><span class="p">);</span>
+<span class="n">pagePanel</span><span class="p">.</span><span class="n">AddPageLast</span><span class="p">(</span><span class="n">panelA</span><span class="p">);</span>
+<span class="n">pagePanel</span><span class="p">.</span><span class="n">AddPageLast</span><span class="p">(</span><span class="n">panelB</span><span class="p">);</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+</div>
+<div class="section" id="listpanel-listpanelitem">
+<h2><a class="toc-backref" href="#id28">ListPanel、ListPanelItem</a></h2>
+<blockquote>
+<p>縦方向のみスクロール可能なリストウィジェットです。各項目に表示する内容は ListPanelItem またはその派生クラスで指定します。</p>
+<p>ListPanelItem のインスタンスは、ListPanel に一度に表示される個数しか作成されません。スクロールにより隠れた項目は次に表示される項目に再利用されます。そのため、ListPanel には、各項目で共通に用いる ListPanelItem オブジェクトを生成するデリゲートメソッドと、各項目に特化した内容に更新するデリゲートメソッドを登録する必要があります。登録には ListPanel の SetListItemCreator/SetListItemUpdate メソッドを呼び出して下さい。</p>
+<p>項目数とセクションのタイトル文字列は ListPanel の Sections プロパティで設定してください。</p>
+<p>項目が選択されたことをハンドルする場合は SelectItemChanged イベントを使用してください。</p>
+<blockquote>
+<div class="highlight"><pre><span class="c1">// data to show on the items</span>
+<span class="n">itemTextList</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">string</span><span class="p">[]</span> <span class="p">{</span>
+    <span class="s">&quot;Item 0-0&quot;</span><span class="p">,</span> <span class="s">&quot;Item 0-1&quot;</span><span class="p">,</span> <span class="s">&quot;Item 0-2&quot;</span><span class="p">,</span> <span class="s">&quot;Item 1-0&quot;</span><span class="p">,</span> <span class="s">&quot;Item 1-1&quot;</span> <span class="p">};</span>
+
+<span class="n">listPanel</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ListPanel</span><span class="p">();</span>
+<span class="c1">// set the section titles and item counts</span>
+<span class="n">listPanel</span><span class="p">.</span><span class="n">Sections</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ListSectionCollection</span> <span class="p">{</span>
+        <span class="k">new</span> <span class="nf">ListSection</span><span class="p">(</span><span class="s">&quot;Section1&quot;</span><span class="p">,</span> <span class="m">3</span><span class="p">),</span>
+        <span class="k">new</span> <span class="nf">ListSection</span><span class="p">(</span><span class="s">&quot;Section2&quot;</span><span class="p">,</span> <span class="m">2</span><span class="p">)};</span>
+
+<span class="c1">// set the creator delegate</span>
+<span class="n">listPanel</span><span class="p">.</span><span class="n">SetListItemCreator</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="k">new</span> <span class="n">MyListPanelItem</span><span class="p">());</span>
+<span class="c1">// set the updater delegate</span>
+<span class="n">listPanel</span><span class="p">.</span><span class="n">SetListItemUpdater</span><span class="p">((</span><span class="n">item</span><span class="p">)</span> <span class="p">=&gt;</span>
+    <span class="p">((</span><span class="n">MyListPanelItem</span><span class="p">)</span><span class="n">item</span><span class="p">).</span><span class="n">label</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="n">itemTextList</span><span class="p">[</span><span class="n">item</span><span class="p">.</span><span class="n">Index</span><span class="p">]);</span>
+
+<span class="n">listPanel</span><span class="p">.</span><span class="n">SelectItemChanged</span> <span class="p">+=</span> <span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span> <span class="p">=&gt;</span>
+    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;selected index:{0}&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">Index</span><span class="p">);</span>
+</pre></div>
+<!-- end-of-code-block -->
+<div class="highlight"><pre><span class="k">class</span> <span class="nc">MyListPanelItem</span> <span class="p">:</span> <span class="n">ListPanelItem</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="n">Label</span> <span class="n">label</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nf">MyListPanelItem</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">Height</span> <span class="p">=</span> <span class="m">60</span><span class="p">;</span>
+        <span class="n">label</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Label</span><span class="p">();</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">AddChildLast</span><span class="p">(</span><span class="n">label</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="gridlistpanel-listpanelitem">
+<h2><a class="toc-backref" href="#id29">GridListPanel、ListPanelItem</a></h2>
+<blockquote>
+<p>縦方向もしくは横方向にスクロール可能で、格子状に項目が並ぶリストウィジェットです。写真の一覧画面などで利用することを想定しています。各項目に表示する内容は ListPanelItem で指定します。</p>
+<p>ListPanel と同様の方法で、ListPanelItem を 生成/更新するデリゲートメソッドを設定して使用して下さい。</p>
+<p>GridListPanel にはセクションがないため、ListPanelItem の SectionIndex と IndexInSection プロパティは使用されません。</p>
+<blockquote>
+<div class="highlight"><pre><span class="n">gridListPanel</span> <span class="p">=</span> <span class="k">new</span> <span class="n">GridListPanel</span><span class="p">();</span>
+<span class="n">gridListPanel</span><span class="p">.</span><span class="n">SetListItemCreator</span><span class="p">(</span><span class="n">ListItemCreator</span><span class="p">);</span>
+<span class="n">gridListPanel</span><span class="p">.</span><span class="n">SetListItemUpdater</span><span class="p">(</span><span class="n">ListItemUpdator</span><span class="p">);</span>
+<span class="n">gridListPanel</span><span class="p">.</span><span class="n">ItemCount</span> <span class="p">=</span> <span class="m">100</span><span class="p">;</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+</blockquote>
+</div>
+</div>
+<div class="section" id="id5">
+<h1><a class="toc-backref" href="#id30">ダイアログウィジェット</a></h1>
+<blockquote>
+<p>ダイアログはモーダルなダイアログを表示することの出来る特殊なウィジェットです。</p>
+<p>ダイアログのみシーンに登録せずに画面に表示することができます。</p>
+</blockquote>
+<div class="section" id="dialog">
+<h2><a class="toc-backref" href="#id31">Dialog</a></h2>
+<blockquote>
+<p>モーダルなダイアログボックスを表示するためのコンテナウィジェットです(図20)。Panel と同様に任意のUI部品を格納することが可能です。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/dialog.png" src="image/uitoolkit/dialog.png" style="width: 700px;" />
+<p class="caption"><strong>図20 Dialog</strong></p>
+</div>
+<p>ダイアログが表示されている際に Backボタンを押すとダイアログが閉じます。また、HideOnTouchOutsideプロパティをtrueにしておけば、ダイアログの外側をタップするとダイアログが閉じます。Backボタンかダイアログの外側をタップして閉じた場合は、Result プロパティが Cancel になります。</p>
+<p>表示/非表示にする際のアニメーション効果(Effect)を指定することが可能です。</p>
+<div class="highlight"><pre><span class="n">Dialog</span> <span class="n">dialog</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Dialog</span><span class="p">();</span>
+<span class="n">dialog</span><span class="p">.</span><span class="n">ShowEffect</span> <span class="p">=</span> <span class="k">new</span> <span class="n">BunjeeJumpEffect</span><span class="p">(</span><span class="n">dialog</span><span class="p">,</span> <span class="m">0.4f</span><span class="p">);</span>
+<span class="n">dialog</span><span class="p">.</span><span class="n">HideEffect</span> <span class="p">=</span> <span class="k">new</span> <span class="n">TiltDropEffect</span><span class="p">();</span>
+<span class="n">dialog</span><span class="p">.</span><span class="n">Show</span><span class="p">();</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+</div>
+<div class="section" id="messagedialog">
+<h2><a class="toc-backref" href="#id32">MessageDialog</a></h2>
+<blockquote>
+<p>警告メッセージの表示や、処理実行の確認などを行うためのダイアログです(図21)。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/messagedialog.png" src="image/uitoolkit/messagedialog.png" style="width: 700px;" />
+<p class="caption"><strong>図21 MessageDialog</strong></p>
+</div>
+<p>タイトルテキスト、メッセージテキスト、OK/キャンセルボタンがあります。</p>
+<div class="highlight"><pre><span class="n">dialog</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MessageDialog</span><span class="p">();</span>
+<span class="n">dialog</span><span class="p">.</span><span class="n">Title</span> <span class="p">=</span> <span class="s">&quot;Title&quot;</span><span class="p">;</span>
+<span class="n">dialog</span><span class="p">.</span><span class="n">Message</span> <span class="p">=</span> <span class="s">&quot;This is a samle message.&quot;</span><span class="p">;</span>
+<span class="n">dialog</span><span class="p">.</span><span class="n">Style</span> <span class="p">=</span> <span class="n">MessageDialogStyle</span><span class="p">.</span><span class="n">OkCancel</span><span class="p">;</span>
+<span class="n">dialog</span><span class="p">.</span><span class="n">ButtonPressed</span> <span class="p">+=</span> <span class="k">new</span> <span class="n">EventHandler</span><span class="p">&lt;</span><span class="n">MessageDialogButtonEventArgs</span><span class="p">&gt;(</span><span class="n">ButtonDownHandler</span><span class="p">);</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+</div>
+</div>
+<div class="section" id="live">
+<h1><a class="toc-backref" href="#id33">Live ウィジェット</a></h1>
+<blockquote>
+Live ウィジェットは、さまざまなインタラクションが実装された PSM 独自のウィジェットです。</blockquote>
+<div class="section" id="livelistpanel">
+<h2><a class="toc-backref" href="#id34">LiveListPanel</a></h2>
+<blockquote>
+<p>タッチした項目に対して、時間差を伴って他の項目がスクロールするリストウィジェットです(図22)。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/LiveListPanel.png" src="image/uitoolkit/LiveListPanel.png" style="width: 700px;" />
+<p class="caption"><strong>図22 LiveListPanel</strong></p>
+</div>
+</blockquote>
+</div>
+<div class="section" id="livejumppanel">
+<h2><a class="toc-backref" href="#id35">LiveJumpPanel</a></h2>
+<blockquote>
+パネル内に配置したウィジェットを画面手前にジャンプさせることのできるパネルウィジェットです。
+加速度センサーの値変化やボタンの押下など任意のタイミングで子ウィジェットをジャンプさせることが可能です。</blockquote>
+</div>
+<div class="section" id="liveflippanel">
+<h2><a class="toc-backref" href="#id36">LiveFlipPanel</a></h2>
+<blockquote>
+<p>左右のフリックで回転するパネルウィジェットです(図23)。表と裏のウィジェットを指定することが可能です。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/LiveFlipPanel.png" src="image/uitoolkit/LiveFlipPanel.png" style="width: 700px;" />
+<p class="caption"><strong>図23 LiveFlipPanel</strong></p>
+</div>
+</blockquote>
+</div>
+<div class="section" id="livescrollpanel">
+<h2><a class="toc-backref" href="#id37">LiveScrollPanel</a></h2>
+<blockquote>
+<p>タッチした点を起点として、ゆがみながらスクロールするパネルウィジェットです(図24)。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/LiveScrollPanel.png" src="image/uitoolkit/LiveScrollPanel.png" style="width: 700px;" />
+<p class="caption"><strong>図24 LiveScrollPanel</strong></p>
+</div>
+</blockquote>
+</div>
+<div class="section" id="livesphere">
+<h2><a class="toc-backref" href="#id38">LiveSphere</a></h2>
+<blockquote>
+<p>球体状のウィジェットです(図25)。左右にフリックすることで回転できます。またタップに対するイベントハンドラも定義されており、ボタンとしても利用できます。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/LiveSphere.png" src="image/uitoolkit/LiveSphere.png" style="width: 600px;" />
+<p class="caption"><strong>図25 LiveSphere</strong></p>
+</div>
+</blockquote>
+</div>
+<div class="section" id="livespringpanel">
+<h2><a class="toc-backref" href="#id39">LiveSpringPanel</a></h2>
+<blockquote>
+<blockquote>
+<p>加速度センサーやパネルの動きに応じて子ウィジェットが揺れるパネルです(図26)。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/LiveSpringPanel.png" src="image/uitoolkit/LiveSpringPanel.png" style="width: 700px;" />
+<p class="caption"><strong>図26 LiveSpringPanel</strong></p>
+</div>
+<p>ウィジェット毎にばね定数や減衰定数を指定することが可能です。</p>
+<div class="highlight"><pre><span class="n">liveSpringPanel</span> <span class="p">=</span> <span class="k">new</span> <span class="n">LiveSpringPanel</span><span class="p">();</span>
+<span class="n">liveSpringPanel</span><span class="p">.</span><span class="n">ReflectSensorAcceleration</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+<span class="n">liveSpringPanel</span><span class="p">.</span><span class="n">ReflectMotionAcceleration</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+<span class="n">liveSpringPanel</span><span class="p">.</span><span class="n">SetPosition</span><span class="p">(</span><span class="m">0.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">);</span>
+<span class="n">liveSpringPanel</span><span class="p">.</span><span class="n">SetSize</span><span class="p">(</span><span class="m">200.0f</span><span class="p">,</span> <span class="m">200.0f</span><span class="p">);</span>
+
+<span class="n">button</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Button</span><span class="p">();</span>
+<span class="n">liveSpringPanel</span><span class="p">.</span><span class="n">AddChildLast</span><span class="p">(</span><span class="n">button</span><span class="p">);</span>
+<span class="n">liveSpringPanel</span><span class="p">.</span><span class="n">SetSpringConstant</span><span class="p">(</span><span class="n">button</span><span class="p">,</span> <span class="n">SpringType</span><span class="p">.</span><span class="n">All</span><span class="p">,</span> <span class="m">0.5f</span><span class="p">);</span>
+<span class="n">liveSpringPanel</span><span class="p">.</span><span class="n">SetDampingConstant</span><span class="p">(</span><span class="n">button</span><span class="p">,</span> <span class="n">SpringType</span><span class="p">.</span><span class="n">All</span><span class="p">,</span> <span class="m">0.3f</span><span class="p">);</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+</blockquote>
+</div>
+</div>
+ </div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

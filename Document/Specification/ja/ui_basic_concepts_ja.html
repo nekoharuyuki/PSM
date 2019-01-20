@@ -1,0 +1,841 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: 基本概念</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('ui_basic_concepts_ja.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<h1>基本概念 </h1>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><blockquote>
+<p>この章では、UI Toolkit の基本概念を解説します。</p>
+<p>UI Toolkit のプロジェクトの作成方法は <a class="reference external" href="ui_quick_start_ja.html">UI Toolkit プログラミングガイド - クイックスタート</a> を参照してください。</p>
+</blockquote>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#ui-toolkit" id="id18">UI Toolkit のクラス構成</a></li>
+<li><a class="reference internal" href="#id2" id="id19">アプリケーションのライフサイクル</a></li>
+<li><a class="reference internal" href="#id3" id="id20">シーングラフ</a></li>
+<li><a class="reference internal" href="#id4" id="id21">レイアウト</a></li>
+<li><a class="reference internal" href="#id5" id="id22">ピクセル密度</a></li>
+<li><a class="reference internal" href="#id6" id="id23">画面の向き</a></li>
+<li><a class="reference internal" href="#id7" id="id24">アニメーション</a></li>
+<li><a class="reference internal" href="#id8" id="id25">画像アセット</a></li>
+<li><a class="reference internal" href="#id9" id="id26">モーダルダイアログ</a></li>
+<li><a class="reference internal" href="#id10" id="id27">タッチイベントの配信</a></li>
+<li><a class="reference internal" href="#id11" id="id28">ゲームパッドによる操作</a></li>
+<li><a class="reference internal" href="#id12" id="id29">キーイベントの配信</a></li>
+<li><a class="reference internal" href="#id13" id="id30">モーションイベントの配信</a></li>
+<li><a class="reference internal" href="#id14" id="id31">マルチスレッド</a></li>
+</ul>
+</div>
+<div class="section" id="ui-toolkit">
+<h1><a class="toc-backref" href="#id18">UI Toolkit のクラス構成</a></h1>
+<blockquote>
+<p>UI Toolkit を使用したアプリケーションでの主なオブジェクトの種類と関係を図1と表1に示します。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/ui_object_diagram.png" src="image/ui_object_diagram.png" />
+<p class="caption"><strong>図1 UI Toolkit を使用したアプリケーションの主要オブジェクト</strong></p>
+</div>
+<table border="1" class="docutils">
+<caption>表1 主要オブジェクトの一覧</caption>
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">オブジェクト</th>
+<th class="head">説明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>UISystem</td>
+<td>UI Toolkit のシステム全体を管理するオブジェクト</td>
+</tr>
+<tr><td>シーン (Scene)</td>
+<td>画面を表すオブジェクト</td>
+</tr>
+<tr><td>ウィジェット (Widget)</td>
+<td>ユーザーインターフェースを構成する部品（ボタンやラベルなど）</td>
+</tr>
+<tr><td>コンテナウィジェット (Container widget)</td>
+<td>内部に別のウィジェットを格納することが出来るウィジェット（パネルやダイアログなど）</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p>UISystem は UI Toolkit のシステム全体を管理するオブジェクトで、UI Toolkit の初期化やフレームの更新、描画、画面の遷移などを行います。UISystem は静的クラスになっており、ひとつのアプリケーション上で複数の UI Toolkit システムを使うことは出来ません。</p>
+<p>シーンは画面を表しており、UISystem に設定することで画面が表示されます。ひとつのアプリケーションで複数のシーンを作成することができ、UISystemに設定するシーンを切り替えれば画面遷移を行えます。なお、通常は同時にひとつのシーンしか表示できません。</p>
+<p>シーンには複数のウィジェットを配置することが出来ます。コンテナウィジェットはウィジェットの一種で、内部に別のウィジェットを配置することが出来ます。このコンテナウィジェットを用いることで、ウィジェットのツリー構造を構築できます。Scene 内の Widget のレイアウトは UI Composer を使用することで、視覚的に行うことが出来ます。</p>
+</blockquote>
+</div>
+<div class="section" id="id2">
+<h1><a class="toc-backref" href="#id19">アプリケーションのライフサイクル</a></h1>
+<blockquote>
+<p>ここでは UI Toolkit を利用したアプリケーションが開始してから終了するまでのフローを説明します(図2)。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/ui_sequence.png" src="image/uitoolkit/ui_sequence.png" />
+<p class="caption"><strong>図2 UI Toolkit を使用したアプリケーションのライフサイクル</strong></p>
+</div>
+</blockquote>
+<p>青のブロックが UI Toolkit の処理、白のブロックがロジックやゲームなどのその他の処理になります。</p>
+<p>まず初めにアプリケーション側の初期化処理、および UISystem の初期化処理が行われます。次にシーンが作成され、そのシーンへのウィジェットのレイアウトも行われます。その後、メインループに入り、各フレームの更新と描画処理が行われます。更新の際にウィジェットなどからイベントが発行され、各イベントハンドラが実行されます。最後に、アプリケーションが終了状態になると、メインループから抜けてアプリケーションが終了します。</p>
+<p>UISystem の描画の前にアプリケーション側の描画を行うことで、ゲームと UI を重ねて描画することも可能です。</p>
+</blockquote>
+</div>
+<div class="section" id="id3">
+<h1><a class="toc-backref" href="#id20">シーングラフ</a></h1>
+<blockquote>
+<p>UI Toolkit では以下のようなシーングラフを構成しています(図3)。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/ui_scene_graph.png" src="image/ui_scene_graph.png" />
+<p class="caption"><strong>図3 UI Toolkit のシーングラフ</strong></p>
+</div>
+</blockquote>
+<ul>
+<li><p class="first"><em>Scene</em></p>
+<blockquote>
+<p>画面をあらわしています。ひとつのアプリケーションで複数のシーンを作成することができますが、通常は同時にひとつのシーンしか表示できません。</p>
+</blockquote>
+</li>
+<li><p class="first"><em>Widget</em></p>
+<blockquote>
+<p>ユーザーインターフェースを構成する部品 (ウィジェット) です。ボタンやラベルなどにあたります。ウィジェットはツリー構造を構築でき、シーンひとつにこのツリーがひとつ配置されています。複数のウィジェットをまとめてひとつのウィジェットとして扱うことも出来ます。標準のウィジェットについての詳細は <a class="reference external" href="ui_widget_ja.html">UI Toolkit プログラミングガイド - ウィジェット</a> を参照してください。</p>
+</blockquote>
+</li>
+<li><p class="first"><em>RootWidget</em></p>
+<blockquote>
+<p>ウィジェットのツリーのルートとなる特殊なウィジェットです。シーンにひとつだけ存在します。RootWidgetのオブジェクトはユーザーが作成することはできず、シーンの作成時に自動で作られます。画面に表示する場合はこのルートウィジェットに表示したいウィジェットをぶら下げる必要があります。</p>
+</blockquote>
+</li>
+<li><p class="first"><em>UIElement</em></p>
+<blockquote>
+<p>描画要素です。UIElement もツリー構造を構築できます。ウィジェットは この UIElement のツリーで構成されています。</p>
+</blockquote>
+</li>
+<li><p class="first"><em>RootUIElement</em></p>
+<blockquote>
+<p>UIElement のツリーのルートとなる UIElement です。ウィジェットにひとつだけ表示されます。</p>
+</blockquote>
+</li>
+</ul>
+<p>シーングラフの描画順序</p>
+<p>ルートウィジェットから深さ優先で描画されます。末端のウィジェットが一番手前に表示されます。ウィジェットが描画される際には UIElement ルートの UIElement から順に描画されます。</p>
+<p>先ほどのシーングラフの例では次の順番で描画されます(図4)。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/ui_scene_graph_order.png" src="image/ui_scene_graph_order.png" />
+<p class="caption"><strong>図4 描画順序</strong></p>
+</div>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="id4">
+<h1><a class="toc-backref" href="#id21">レイアウト</a></h1>
+<blockquote>
+<p>ウィジェットを配置する際の座標系は、左上が原点となります。</p>
+<p>また、ウィジェットがツリーを構築している場合、子ウィジェットの座標は親ウィジェットからの相対座標になります(図5)。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/ui_widget_coordinate.png" src="image/ui_widget_coordinate.png" />
+<p class="caption"><strong>図5 ウィジェットの座標系</strong></p>
+</div>
+</blockquote>
+<p>ウィジェットを3次元で配置することも可能です。詳細は <a class="reference external" href="ui_3d_system_ja.html">UI Toolkit プログラミングガイド - UI Toolkitの描画の仕組み</a> を参照してください。</p>
+<p>シーンやパネルなどのコンテナウィジェットは、内部に配置したウィジェットのサイズや、マージンを動的に調節する機能を持っています(レイアウトアンカー機能)。</p>
+<p>例えば、背景などに用いるパネルはマージンを固定にし、サイズを自動的に変化するように設定しておけば、異なるディバイスごとにレイアウトを指定する必要はありません(図6)。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/ui_layout_margin_fixed.png" src="image/ui_layout_margin_fixed.png" style="width: 800px;" />
+<p class="caption"><strong>図6 マージンを固定にした Panel を異なるサイズの Scene に配置した例</strong></p>
+</div>
+</blockquote>
+<p>レイアウトアンカーはウィジェットの Anchors プロパティで指定可能です。</p>
+<p>コードでは以下のように、Top, Bottom, Left, Right, Width, Height のうちどのサイズを固定するかを指定します。</p>
+<blockquote>
+<div class="highlight"><pre><span class="n">widget</span><span class="p">.</span><span class="n">Anchos</span> <span class="p">=</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Top</span> <span class="p">|</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Left</span> <span class="p">|</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Width</span> <span class="p">|</span> <span class="n">Anchors</span><span class="p">.</span><span class="n">Height</span><span class="p">;</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<p>以下に代表的なパターンを示します(図7)。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/ui_layout_anchor_flag_examples.png" src="image/ui_layout_anchor_flag_examples.png" style="width: 800px;" />
+<p class="caption"><strong>図7 Anchorsの設定例</strong></p>
+</div>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="id5">
+<h1><a class="toc-backref" href="#id22">ピクセル密度</a></h1>
+<blockquote>
+<p>ピクセル密度を指定し、スクリーンサイズをスケーリングさせる方法について説明します。</p>
+<p>レイアウトアンカー機能ももちいてディスプレイのサイズに合わせてウィジェットの位置やサイズを変更した場合でも、同じインチサイズで異なる解像度のディスプレイでは、フォントサイズや9-patch 画像の見た目が変わってしまいます（図8）。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/different_resolution_display.png" src="image/uitoolkit/different_resolution_display.png" />
+<p class="caption"><strong>図8 解像度の異なるディスプレイで表示した例</strong></p>
+</div>
+</blockquote>
+<p>ピクセル密度を指定すると、UI Toolkit上での仮想的なディスプレイサイズをスケーリングすることができます。</p>
+<p>例えば、ディスプレイのサイズが1280x720ピクセルのディバイスでピクセル密度に1.5に指定すると、UI Toolkit上では仮想的に853x480ピクセルのディスプレイとして扱われます。</p>
+<p>ウィジェットの位置やサイズ、フォントサイズなども853x480ピクセルのディスプレイで配置する場合と同じ値になり、最終的にディスプレイに描画されるときに1.5倍されます。</p>
+<p>ピクセル密度はUI Toolkitの初期化時に指定します。以下のコードを参考に、ピクセル密度を算出して指定してください。</p>
+<blockquote>
+<div class="highlight"><pre><span class="c1">// AppMain.cs</span>
+
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Initialize</span> <span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">// Set up the graphics system</span>
+    <span class="n">graphics</span> <span class="p">=</span> <span class="k">new</span> <span class="n">GraphicsContext</span> <span class="p">();</span>
+
+    <span class="c1">// Get pixel-density</span>
+    <span class="kt">float</span> <span class="n">pixelDensity</span> <span class="p">=</span> <span class="n">getPixelDensity</span><span class="p">(</span><span class="n">graphics</span><span class="p">);</span>
+
+    <span class="c1">// Initialize UI Toolkit with pixelDensity</span>
+    <span class="n">UISystem</span><span class="p">.</span><span class="n">Initialize</span> <span class="p">(</span><span class="n">graphics</span><span class="p">,</span> <span class="n">pixelDensity</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// get pixel-density from actual screen size and DPI</span>
+<span class="k">static</span> <span class="kt">float</span> <span class="nf">getPixelDensity</span><span class="p">(</span><span class="n">GraphicsContext</span> <span class="n">graphics</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">float</span> <span class="n">pixelDensity</span><span class="p">;</span>
+
+    <span class="kt">float</span> <span class="n">w</span> <span class="p">=</span> <span class="n">graphics</span><span class="p">.</span><span class="n">Screen</span><span class="p">.</span><span class="n">Width</span> <span class="p">/</span> <span class="n">SystemParameters</span><span class="p">.</span><span class="n">DisplayDpiX</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">h</span> <span class="p">=</span> <span class="n">graphics</span><span class="p">.</span><span class="n">Screen</span><span class="p">.</span><span class="n">Height</span> <span class="p">/</span> <span class="n">SystemParameters</span><span class="p">.</span><span class="n">DisplayDpiY</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">inchDiagSq</span> <span class="p">=</span> <span class="n">w</span> <span class="p">*</span> <span class="n">w</span> <span class="p">+</span> <span class="n">h</span> <span class="p">*</span> <span class="n">h</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">inchDiagSq</span> <span class="p">&lt;</span> <span class="m">6</span> <span class="p">*</span> <span class="m">6</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// normal size display ( &lt; 6 inch)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">SystemParameters</span><span class="p">.</span><span class="n">DisplayDpiX</span> <span class="p">&lt;</span> <span class="m">300</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">// normal resolution</span>
+            <span class="n">pixelDensity</span> <span class="p">=</span> <span class="m">1.0f</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="c1">// high resolution</span>
+            <span class="n">pixelDensity</span> <span class="p">=</span> <span class="m">1.5f</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="c1">// large size display ( &gt; 6 inch)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">SystemParameters</span><span class="p">.</span><span class="n">DisplayDpiX</span> <span class="p">&lt;</span> <span class="m">200</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">// normal resolution</span>
+            <span class="n">pixelDensity</span> <span class="p">=</span> <span class="m">1.0f</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="c1">// high resolution</span>
+            <span class="n">pixelDensity</span> <span class="p">=</span> <span class="m">1.5f</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">pixelDensity</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<p>なお、UI Toolkit上でFontクラスやTexture2Dクラスを直接扱う場合、ピクセル密度の値を考慮する必要があるので注意してください。</p>
+</blockquote>
+</div>
+<div class="section" id="id6">
+<h1><a class="toc-backref" href="#id23">画面の向き</a></h1>
+<blockquote>
+<p>画面の向きを変更する方法を説明します。</p>
+<p>図9のようにデバイスの把持方向に応じた画面表示ができます。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/screenorientation.png" src="image/uitoolkit/screenorientation.png" style="width: 600px;" />
+<p class="caption"><strong>図9 ディバイスの方向に応じた画面の向き</strong></p>
+</div>
+</blockquote>
+<p>Scene クラスの ScreenOrientation プロパティを設定することによって、シーンごとに表示する方向を変更できます。</p>
+<p>以下のコード例では、ScreenOrientation プロパティを設定後、UI Composerで出力したメソッドを利用して再レイアウトし、UISystem.SetScene を呼び出しています。</p>
+<blockquote>
+<div class="highlight"><pre><span class="c1">// Set ScreenOrientation property</span>
+<span class="n">TargetScene</span><span class="p">.</span><span class="n">ScreenOrientation</span> <span class="p">=</span> <span class="n">ScreenOrientation</span><span class="p">.</span><span class="n">Portrait</span><span class="p">;</span>
+
+<span class="c1">// Relayout (UI Composer output method)</span>
+<span class="n">TargetScene</span><span class="p">.</span><span class="n">SetWidgetLayout</span><span class="p">(</span><span class="n">LayoutOrientation</span><span class="p">.</span><span class="n">Vertical</span><span class="p">);</span>
+
+<span class="c1">// Set this scene</span>
+<span class="n">UISystem</span><span class="p">.</span><span class="n">SetScene</span><span class="p">(</span><span class="n">TargetScene</span><span class="p">);</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<p>ScreenOrientation の各設定値の表示結果は以下のようになります(図10)。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/screenorientation_value.png" src="image/uitoolkit/screenorientation_value.png" style="width: 600px;" />
+<p class="caption"><strong>図10 ScreenOrientation の表示例</strong></p>
+</div>
+</blockquote>
+<p>ScreenOrientation を指定すると、座標系、タッチパネルの座標、方向キーの向き、モーションセンサーの向きも同時に変更されます。</p>
+<p>UISystem.FramebufferWidth、FramebufferHeight プロパティの値は ScreenOrientation に依存せず、常に Landscape 状態の値を返します。</p>
+<p>また、Transition も Landscape を基準に動作します。たとえば、Portraite のシーンから ReversePortrait のシーンに PushTransition の Left を実行すると、それぞれのシーンは Portraite、ReversePortrait で表示されますが、遷移アニメーションは Landscape 状態で左方向に移動します。</p>
+<p><strong>制限事項</strong></p>
+<blockquote>
+<ul class="simple">
+<li>現在表示中のシーンの ScreenOrientation は変更できません。あらかじめ Scene.ScreenOrientation プロパティを設定したあとに UISystem.SetScene をしてください。</li>
+<li>UI Toolkit 以外で描画しているもの（テキスト入力ダイアログ、オンスクリーンコントローラーなど）は回転しません。</li>
+<li>シミュレータのウインドウは回転しません。内部の画面が回転します。</li>
+</ul>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="id7">
+<h1><a class="toc-backref" href="#id24">アニメーション</a></h1>
+<blockquote>
+<p>アニメーションを実現する機能として Effect があります。 Effect はアニメーションを部品として扱い、ウィジェットなどのアニメーションを簡単に行うことが出来ます。</p>
+<p>標準で用意されている Effect については、 <a class="reference external" href="ui_effect_transition_ja.html">UI Toolkit プログラミングガイド - Effect と Transition</a> を参照してください。また、Effect クラスを派生することによって、ユーザー独自のアニメーションを作成することが出来ます。</p>
+<p>Effect とは別に、画面遷移の際のアニメーションである Transition があります。UISystem に新しいシーンを設定する際に指定することで、画面遷移にアニメーションを適用できます。標準の Transition の詳細については、 <a class="reference external" href="ui_effect_transition_ja.html">UI Toolkit プログラミングガイド - Effect と Transition</a> を参照してください。</p>
+</blockquote>
+</div>
+<div class="section" id="id8">
+<h1><a class="toc-backref" href="#id25">画像アセット</a></h1>
+<blockquote>
+<p>UI Toolkit で画像を扱う場合は ImageAsset オブジェクトを使用します。</p>
+<p>ImageAsset オブジェクトは以下のような特徴があります。</p>
+<blockquote>
+<ul class="simple">
+<li>画像ファイルのキャッシュ</li>
+<li>画像ファイルの非同期読み込み</li>
+<li>システム組み込みの画像の読み込み</li>
+<li>Texture2D オブジェクトの生成と解放</li>
+</ul>
+</blockquote>
+<p>ウィジェットへ画像（テクスチャ）を設定する場合はすべて ImageAsset オブジェクトで行います。また、ウィジェット内部の描画要素である UIElement への設定も ImageAsset オブジェクトで行います。</p>
+<p>ImageAsset オブジェクトは、画像ファイルのパス、Image オブジェクト、Texture2D オブジェクトから作ることが出来ます。</p>
+<blockquote>
+<div class="highlight"><pre><span class="c1">// Create from the image filepath.</span>
+<span class="n">ImageAsset</span> <span class="n">imageAsset1</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ImageAsset</span><span class="p">(</span><span class="s">&quot;/Application/assets/photo01.png&quot;</span><span class="p">);</span>
+
+<span class="c1">// Create from Image object.</span>
+<span class="n">Image</span> <span class="n">image</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Image</span><span class="p">(</span><span class="s">&quot;/Application/assets/photo02.png&quot;</span><span class="p">);</span>
+<span class="n">ImageAsset</span> <span class="n">imageAsset2</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ImageAsset</span><span class="p">(</span><span class="n">image</span><span class="p">);</span>
+<span class="n">image</span><span class="p">.</span><span class="n">Dispose</span><span class="p">();</span>
+
+<span class="c1">// Create from Texture2D object.</span>
+<span class="n">Texture2D</span> <span class="n">texture2d</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Texture2D</span><span class="p">(</span><span class="s">&quot;/Application/assets/photo03.png&quot;</span><span class="p">,</span> <span class="k">false</span><span class="p">)</span>
+<span class="n">ImageAsset</span> <span class="n">imageAsset3</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ImageAsset</span><span class="p">(</span><span class="n">texture2d</span><span class="p">);</span>
+<span class="n">texture2d</span><span class="p">.</span><span class="n">Dispose</span><span class="p">();</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<p>ファイルパスは &quot;/Application/(<em>プロジェクトファイルからの相対パス</em>)&quot; と指定してください。</p>
+<pre class="literal-block">
+SampleApp/
+    SampleApp.csproj
+    AppMain.cs
+    app.cfg
+    MyClass.cs
+
+    assets/
+        photo01.png    : アセットファイル
+</pre>
+<p>上記のようなファイル構成のプロジェクトの場合、アセットファイルのパスは以下のようになります。</p>
+<blockquote>
+<div class="highlight"><pre><span class="s">&quot;/Application/assets/photo01.png&quot;</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="id9">
+<h1><a class="toc-backref" href="#id26">モーダルダイアログ</a></h1>
+<blockquote>
+<p>モーダルなダイアログウィンドウを表示するためには Dialog ウィジェットを使用します。</p>
+<p>Dialog ウィジェット、およびその派生クラスのウィジェットは他のウィジェットと異なり、シーンに登録することなく画面上に表示することが出来ます。</p>
+<blockquote>
+<div class="highlight"><pre><span class="n">Dialog</span> <span class="n">dialog</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Dialog</span><span class="p">();</span>
+<span class="n">dialog</span><span class="p">.</span><span class="n">Show</span><span class="p">();</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="id10">
+<h1><a class="toc-backref" href="#id27">タッチイベントの配信</a></h1>
+<blockquote>
+<p>UI Toolkit のタッチイベント配信フローについて説明します。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/eventflow.png" src="image/uitoolkit/eventflow.png" style="width: 800px;" />
+<p class="caption"><strong>図11 UI Toolkit のタッチイベント配信フロー</strong></p>
+</div>
+</blockquote>
+<p>図11のオレンジ矢印が指1本分のタッチデータの流れを示しており、下記のように処理が進みます。</p>
+<ol class="arabic simple">
+<li>タッチ操作が行われると、画面内にある Widget とヒット判定が行われます。</li>
+<li>ヒットした Widget に登録されている GestureDetector にイベントが配信されます。</li>
+<li>ジェスチャが認識された場合、ジェスチャイベントが発行され、GestureDetector に登録されているイベントハンドラに配信されます。</li>
+<li>GestureDetector による判定後、TouchEventReceived イベントハンドラにタッチイベントが配信されます。</li>
+</ol>
+<p>ヒット判定は、指毎に行われ、同じ Widget を複数の指でタッチしていれば、タッチデータはまとめて配信されます。ヒット判定はタッチダウンしたときにのみ行い、タッチパネルから指が離されるか、キャンセルされるまで同じ Widget にタッチイベントが配信されます。指で Widget をドラッグする際などに、Widget 領域から指が外れた場合でも、指が離されるまではその Widget にタッチイベントが配信され続けることになります。</p>
+<p>複数の指のタッチデータは TouchEventCollection にまとめて配信されます。TouchEventCollection.PrimaryTouchEvent に一番最初にその Widget に触れた指のタッチデータが格納されていますので、一本分の指のタッチデータだけで処理を行いたい場合はこちらをお使いください。</p>
+<p>通常、子Widget にイベントが配信されると、親Widget には配信されません。タッチされている Widget にのみ配信されます。ただし、子Widget のタッチイベントをフックすることも可能です。Widget.HookChildTouchEvent でフックを有効にするかを指定可能で、有効にすると子Widget に配信される前に親Widget のタッチイベント処理が行われます。配信された TouchEventCollection の Forward フラグを変更することで、子Widget に配信するかどうかを制御できます。</p>
+<p>Widget に GestureDetector を登録することで、Widget 対して行われたジェスチャイベントを処理することができます。一つの Widget には複数の GestureDetector を登録することができますが、同一の GestureDetector を複数の Widget に登録することはできません。</p>
+<blockquote>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">SampleScene</span> <span class="p">:</span> <span class="n">Scene</span>
+<span class="p">{</span>
+    <span class="n">ImageBox</span> <span class="n">imageBox</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="nf">SampleScene</span> <span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">imageBox</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ImageBox</span><span class="p">();</span>
+
+        <span class="n">DragGestureDetector</span> <span class="n">drag</span> <span class="p">=</span> <span class="k">new</span> <span class="n">DragGestureDetector</span><span class="p">();</span>
+        <span class="n">drag</span><span class="p">.</span><span class="n">DragDetected</span> <span class="p">+=</span> <span class="n">DragEventHandler</span><span class="p">;</span>
+        <span class="n">imageBox</span><span class="p">.</span><span class="n">AddGestureDetector</span><span class="p">(</span><span class="n">drag</span><span class="p">);</span>
+
+        <span class="n">FlickGestureDetector</span> <span class="n">flick</span> <span class="p">=</span> <span class="k">new</span> <span class="n">FlickGestureDetector</span><span class="p">();</span>
+        <span class="n">flick</span><span class="p">.</span><span class="n">FlickDetected</span> <span class="p">+=</span> <span class="n">FlickEventHandler</span><span class="p">;</span>
+        <span class="n">imageBox</span><span class="p">.</span><span class="n">AddGestureDetector</span><span class="p">(</span><span class="n">flick</span><span class="p">);</span>
+
+        <span class="k">this</span><span class="p">.</span><span class="n">RootWidget</span><span class="p">.</span><span class="n">AddChildLast</span><span class="p">(</span><span class="n">imageBox</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">private</span> <span class="k">void</span> <span class="nf">DragEventHandler</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">DragEventArgs</span> <span class="n">e</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">DoSomething</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">private</span> <span class="k">void</span> <span class="nf">FlickEventHandler</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">FlickEventArgs</span> <span class="n">e</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">DoSomething</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<p>Widget に TouchEventReceived イベントハンドラを登録することで、Widget に配信されたタッチイベントを処理することができます。</p>
+<blockquote>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">SampleScene</span> <span class="p">:</span> <span class="n">Scene</span>
+<span class="p">{</span>
+    <span class="n">ImageBox</span> <span class="n">imageBox</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="nf">SampleScene</span> <span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">imageBox</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ImageBox</span><span class="p">();</span>
+        <span class="n">imageBox</span><span class="p">.</span><span class="n">TouchEventReceived</span> <span class="p">+=</span> <span class="k">new</span> <span class="n">EventHandler</span><span class="p">&lt;</span><span class="n">TouchEventArgs</span><span class="p">&gt;(</span><span class="n">ImageBoxTouchEventReceived</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">RootWidget</span><span class="p">.</span><span class="n">AddChildLast</span><span class="p">(</span><span class="n">imageBox</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">private</span> <span class="k">void</span> <span class="nf">ImageBoxTouchEventReceived</span> <span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">TouchEventArgs</span> <span class="n">eventArgs</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">TouchEventCollection</span> <span class="n">touchEvents</span> <span class="p">=</span> <span class="n">eventArgs</span><span class="p">.</span><span class="n">TouchEvents</span><span class="p">;</span>
+
+        <span class="c1">// With single finger</span>
+        <span class="p">{</span>
+            <span class="n">TouchEvent</span> <span class="n">e</span> <span class="p">=</span> <span class="n">touchEvents</span><span class="p">.</span><span class="n">PrimaryTouchEvent</span><span class="p">;</span>
+            <span class="n">DoSomething</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">// With multi-fingers</span>
+        <span class="p">{</span>
+            <span class="k">foreach</span> <span class="p">(</span><span class="n">TouchEvent</span> <span class="n">e</span> <span class="k">in</span> <span class="n">touchEvents</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">DoSomething</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="n">touchEvents</span><span class="p">.</span><span class="n">Forward</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<p>カスタムウィジェットを作成した場合は、Widget.OnTouchEvent() をオーバーライドすることによってタッチイベントを処理することができます。</p>
+<blockquote>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">SampleWidget</span> <span class="p">:</span> <span class="n">Widget</span>
+<span class="p">{</span>
+    <span class="k">protected</span> <span class="k">internal</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">OnTouchEvent</span><span class="p">(</span><span class="n">TouchEventCollection</span> <span class="n">touchEvents</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">base</span><span class="p">.</span><span class="n">OnTouchEvent</span><span class="p">(</span><span class="n">touchEvents</span><span class="p">);</span>
+
+        <span class="c1">// With single finger</span>
+        <span class="p">{</span>
+            <span class="n">TouchEvent</span> <span class="n">e</span> <span class="p">=</span> <span class="n">touchEvents</span><span class="p">.</span><span class="n">PrimaryTouchEvent</span><span class="p">;</span>
+            <span class="n">DoSomething</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">// With multi-fingers</span>
+        <span class="p">{</span>
+            <span class="k">foreach</span> <span class="p">(</span><span class="n">TouchEvent</span> <span class="n">e</span> <span class="k">in</span> <span class="n">touchEvents</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">DoSomething</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="n">touchEvents</span><span class="p">.</span><span class="n">Forward</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<p>なお、タッチイベントを使用する場合は、Main Loop の中で UISystem.Update メソッドを List&lt;TouchData&gt; を含む引数付きで呼び出してください。</p>
+</blockquote>
+</div>
+<div class="section" id="id11">
+<h1><a class="toc-backref" href="#id28">ゲームパッドによる操作</a></h1>
+<blockquote>
+<p>ここではゲームパッドによるUI操作を行う方法や注意点について説明します。</p>
+<p>UI Toolkitでゲームパッドキーによる操作を有効にするには、UISystem.Update メソッドを呼び出す際に、 引数にGamePadData を含めるようにしてください。GamePadDataを含めることで、方向キーによるフォーカス操作、Enter、Backボタン(×または○ボタン)による操作が有効になります。</p>
+<blockquote>
+<div class="highlight"><pre><span class="c1">// in main loop</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Update</span> <span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">GamePadData</span> <span class="n">gamePadData</span> <span class="p">=</span> <span class="n">GamePad</span><span class="p">.</span><span class="n">GetData</span> <span class="p">(</span><span class="m">0</span><span class="p">);</span>
+    <span class="n">List</span><span class="p">&lt;</span><span class="n">TouchData</span><span class="p">&gt;</span> <span class="n">touchDataList</span> <span class="p">=</span> <span class="n">Touch</span><span class="p">.</span><span class="n">GetData</span> <span class="p">(</span><span class="m">0</span><span class="p">);</span>
+
+    <span class="c1">// Update UI Toolkit</span>
+    <span class="n">UISystem</span><span class="p">.</span><span class="n">Update</span><span class="p">(</span><span class="n">touchDataList</span><span class="p">,</span> <span class="n">gamePadData</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<p>フォーカスが非アクティブな状態（フォーカスが表示されていない状態）でいずれかのゲームパッドのボタンを押すとフォーカスがアクティブ（フォーカスが表示された状態）になり、ゲームパッドでの操作が可能になります。フォーカスがアクティブな状態で一定時間経過するか、画面をタッチするとフォーカスが非アクティブになります。</p>
+<ul>
+<li><p class="first">方向キーによる操作</p>
+<blockquote>
+<p>フォーカスがアクティブな状態で方向キーを操作すると通常はフォーカスが移動します。ただし、表2 に示すウィジェットでは方向キーでフォーカスが移動しない場合があるので、ウィジェットのレイアウトに注意してください。</p>
+<blockquote>
+<table border="1" class="docutils">
+<caption>表2 レイアウトに注意が必要なウィジェット</caption>
+<colgroup>
+<col width="20%" />
+<col width="40%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head"><p class="first last">ウィジェット</p>
+</th>
+<th class="head"><p class="first last">方向キーによる操作</p>
+</th>
+<th class="head"><p class="first last">レイアウトの注意事項</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><p class="first last">Slider(水平表示)</p>
+</td>
+<td><p class="first last">左右キーで値が変化します。</p>
+</td>
+<td><p class="first last">Sliderの左右にフォーカスの当たるウィジェットを配置しないようにして下さい。</p>
+</td>
+</tr>
+<tr><td><p class="first last">Slider(垂直表示)</p>
+</td>
+<td><p class="first last">上下キーで値が変化します。</p>
+</td>
+<td><p class="first last">Sliderの上下にフォーカスの当たるウィジェットを配置しないようにして下さい。</p>
+</td>
+</tr>
+<tr><td><p class="first last">DatePicker / TimePicker</p>
+</td>
+<td><p class="first last">上下キーで値が変化し、左右キーで列および左右のウィジェットへフォーカスが移動します。</p>
+</td>
+<td><p class="first last">DatePickerとTimePickerの上下にフォーカスの当たるウィジェットを配置しないようにして下さい。</p>
+</td>
+</tr>
+<tr><td><p class="first last">ListPanel / GridListPanel（垂直表示）</p>
+</td>
+<td><p class="first last">上下キーでアイテムのフォーカスが移動し、上端下端ではスクロールします。フォーカスが最下端か最上端のアイテムにある場合は上下のウィジェットに移動します。</p>
+</td>
+<td><p class="first last">アイテム数が多い場合、ListPanelやGridListPanelの上下にはフォーカスの当たるウィジェットを配置しないようにして下さい。</p>
+</td>
+</tr>
+<tr><td><p class="first last">GridListPanel（水平表示）</p>
+</td>
+<td><p class="first last">左右キーでアイテムのフォーカスが移動し、右端左端ではスクロールします。フォーカスが最右端か最左端のアイテムにある場合は左右のウィジェットに移動します。</p>
+</td>
+<td><p class="first last">アイテム数が多い場合、GridListPanelの左右にはフォーカスの当たるウィジェットを配置しないようにして下さい。</p>
+</td>
+</tr>
+<tr><td><p class="first last">ScrollPanel</p>
+</td>
+<td><p class="first last">方向キーで内部に配置したウィジェットのフォーカスが移動できる場合はフォーカスが移動し、それ以外の場合はスクロールします。スクロールが端までいった場合には上下左右のウィジェットに移動します。</p>
+</td>
+<td><p class="first last">スクロール量が多い場合はScrollPanelのスクロール方向にフォーカスの当たるウィジェットを配置しないようにして下さい。</p>
+</td>
+</tr>
+<tr><td><p class="first last">PagePanel</p>
+</td>
+<td><p class="first last">方向キーで内部に配置したウィジェットのフォーカスが移動し、右端か左端ではページが切り替わります。最初または最後のページではページパネルの左右のウィジェットにフォーカスが移動します。</p>
+</td>
+<td><p class="first last">PagePanelの左右にフォーカスの当たるウィジェットを配置しないようにして下さい。</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/focus_layout.png" src="image/uitoolkit/focus_layout.png" />
+<p class="caption"><strong>図12 Sliderのレイアウト例</strong></p>
+</div>
+</blockquote>
+</blockquote>
+</li>
+<li><p class="first">Enter、Backボタンによる操作</p>
+<blockquote>
+<p>Button や PopupList などのタップで操作できるウィジェットは、フォーカスのあたっている状態で Enter (×または○) ボタンを押すとタップ相当の操作ができます。</p>
+<p>ダイアログは、Back (○または×) ボタンを押すとダイアログが閉じます。</p>
+<p>ナビゲーションシーンは、Back ボタンを押すと前のシーンに戻ります。</p>
+</blockquote>
+</li>
+</ul>
+<p>フォーカスやキー操作のカスタマイズについては、 <a class="reference external" href="ui_key_focus_ja.html">UI Toolkit プログラミングガイド - キーイベントとフォーカス</a> を参照してください。</p>
+</blockquote>
+</div>
+<div class="section" id="id12">
+<h1><a class="toc-backref" href="#id29">キーイベントの配信</a></h1>
+<blockquote>
+<p>UI Toolkit のキーイベント配信とそのフローについて説明します。</p>
+<p>キーイベントの種類は図13の4つと EachFrameRepeat があります。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/key_event_type_timing.png" src="image/uitoolkit/key_event_type_timing.png" />
+<p class="caption"><strong>図13 キーイベントの種類とタイミング</strong></p>
+</div>
+</blockquote>
+<p>また、キーイベントは GamePadButton クラスと異なり、各ボタンごとにイベントが配信されます。</p>
+<p>キーイベントの配信フローはフォーカスがアクティブかどうかによって変わります。</p>
+<ul>
+<li><p class="first">フォーカスがアクティブな場合</p>
+<blockquote>
+<p>カレントシーンの RootWidget からウィジェットツリーに沿って現在フォーカスがあるウィジェットまでプレビューキーイベントが配信されます。そのあと、方向キーのイベントがフォーカスように処理され、今度はフォーカスがあるウィジェットから RootWidget に向けて通常のキーイベントが配信されます(図14)。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/key_event_flow.png" src="image/uitoolkit/key_event_flow.png" />
+<p class="caption"><strong>図14 キーイベントの配信フロー</strong></p>
+</div>
+</blockquote>
+<p>プレビューキーイベントと通常のキーイベントをハンドルするには、ウィジェットの OnPreviewKeyEvent および OnKeyEvent メソッドをオーバーライドするか、PreviewKeyEventReceived および KeyEventReceived イベントにイベントハンドラを登録してください。</p>
+<blockquote>
+<div class="highlight"><pre><span class="p">{</span>
+    <span class="c1">// add event handler</span>
+    <span class="n">anyWidget</span><span class="p">.</span><span class="n">KeyEventReceived</span> <span class="p">+=</span> <span class="k">new</span> <span class="n">EventHandler</span><span class="p">&lt;</span><span class="n">KeyEventArgs</span><span class="p">&gt;(</span><span class="n">KeyEventReceivedHandler</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">void</span> <span class="nf">KeyEventReceivedHandler</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">KeyEventArgs</span> <span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">switch</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">KeyEventType</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">case</span> <span class="n">KeyEventType</span><span class="p">.</span><span class="n">Up</span><span class="p">:</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">KeyType</span> <span class="p">==</span> <span class="n">KeyType</span><span class="p">.</span><span class="n">Triangle</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">DoSomething</span><span class="p">();</span>
+                <span class="n">e</span><span class="p">.</span><span class="n">Handled</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">break</span><span class="p">;</span>
+
+        <span class="k">case</span> <span class="n">KeyEventType</span><span class="p">.</span><span class="n">Down</span><span class="p">:</span>
+        <span class="k">case</span> <span class="n">KeyEventType</span><span class="p">.</span><span class="n">LongPress</span><span class="p">:</span>
+        <span class="k">case</span> <span class="n">KeyEventType</span><span class="p">.</span><span class="n">Repeat</span><span class="p">:</span>
+        <span class="k">default</span><span class="p">:</span>
+            <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<p>各イベントハンドラでイベント引数の Handled プロパティを true に設定すると、それ以降のツリーの配信は行わなくなります(図15)。ただし、Handled プロパティは異なるキーやキーイベントの種類、および異なるフレームのキーイベントに対して影響を与えません。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/key_event_handled.png" src="image/uitoolkit/key_event_handled.png" />
+<p class="caption"><strong>図15 キーイベントのハンドルによる配信中断</strong></p>
+</div>
+</blockquote>
+</blockquote>
+</li>
+<li><p class="first">フォーカスが非アクティブな場合</p>
+<blockquote>
+<p>カレントシーンの RootWidget にプレビューキーイベントが配信され、このイベントがハンドルされなかった場合は、フォーカス用にイベントがハンドルされ、フォーカスがアクティブになります。</p>
+</blockquote>
+</li>
+</ul>
+<p>より詳細なキーイベントの扱い方については、 <a class="reference external" href="ui_key_focus_ja.html">UI Toolkit プログラミングガイド - キーイベントとフォーカス</a> を参照してください。</p>
+</blockquote>
+</div>
+<div class="section" id="id13">
+<h1><a class="toc-backref" href="#id30">モーションイベントの配信</a></h1>
+<blockquote>
+<p>UI Toolkit のモーションイベント配信フローについて説明します。</p>
+<p>デバイスに内蔵された加速度センサー等の値が変化した場合に、現在の Scene に登録されている Widget のうち、Widget.OnMotionEvent をオーバーライドしている、もしくは、Widget.MotionEventReceived にイベントハンドラが登録されている Widget 全てにモーションイベントが配信されます。</p>
+<p>Widget に MotionEventReceived イベントハンドラを登録することで、Widget に配信されたモーションイベントを処理することができます。</p>
+<blockquote>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">SampleScene</span> <span class="p">:</span> <span class="n">Scene</span>
+<span class="p">{</span>
+    <span class="n">ImageBox</span> <span class="n">imageBox</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="nf">SampleScene</span> <span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">imageBox</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ImageBox</span><span class="p">();</span>
+        <span class="n">imageBox</span><span class="p">.</span><span class="n">MotionEventReceived</span> <span class="p">+=</span> <span class="k">new</span> <span class="n">EventHandler</span><span class="p">&lt;</span><span class="n">MotionEventArgs</span><span class="p">&gt;(</span><span class="n">ImageBoxMotionEventReceived</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">RootWidget</span><span class="p">.</span><span class="n">AddChildLast</span><span class="p">(</span><span class="n">imageBox</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">private</span> <span class="k">void</span> <span class="nf">ImageBoxMotionEventReceived</span> <span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">MotionEventArgs</span> <span class="n">eventArgs</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">DoSomething</span><span class="p">(</span><span class="n">eventArgs</span><span class="p">):</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<p>カスタムウィジェットを作成した場合は、Widget.OnMotionEvent() をオーバーライドすることによってモーションイベントを処理することができます。</p>
+<blockquote>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">SampleWidget</span> <span class="p">:</span> <span class="n">Widget</span>
+<span class="p">{</span>
+    <span class="k">protected</span> <span class="k">internal</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">OnMotionEvent</span><span class="p">(</span><span class="n">MotionEvent</span> <span class="n">motionEvent</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">base</span><span class="p">.</span><span class="n">OnMotionEvent</span><span class="p">(</span><span class="n">motionEvent</span><span class="p">);</span>
+
+        <span class="n">DoSomething</span><span class="p">(</span><span class="n">motionEvent</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<p>なお、モーションイベントを使用する場合は、Main Loop の中で UISystem.Update メソッドを MotionData を含む引数付きで呼び出してください。</p>
+</blockquote>
+</div>
+<div class="section" id="id14">
+<h1><a class="toc-backref" href="#id31">マルチスレッド</a></h1>
+<blockquote>
+<p>UI Toolkit では、AnimationUtility クラスを除くすべてのクラスにおいてスレッドセーフではありません。</p>
+<p>UISystem やウィジェットなどのメンバを操作する場合はメインスレッドから行うようにしてください。これは、Scene の OnUpdate メソッドなどを用い、フレーム毎にサブスレッドを監視して処理を行うことで実現できます。なお、Sce.PlayStation.Core.Graphics 名前空間に対する処理も同様にメインスレッドから行うようにしてください。</p>
+<blockquote>
+<div class="highlight"><pre><span class="k">class</span> <span class="nc">MyScene</span> <span class="p">:</span> <span class="n">Scene</span>
+<span class="p">{</span>
+    <span class="n">Label</span> <span class="n">label</span><span class="p">;</span>
+    <span class="kt">object</span> <span class="n">SysncObject</span><span class="p">;</span>
+    <span class="kt">string</span> <span class="n">AsyscText</span><span class="p">;</span>
+
+    <span class="k">protected</span> <span class="k">internal</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">OnUpdate</span><span class="p">(</span><span class="kt">float</span> <span class="n">elapsedTime</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">base</span><span class="p">.</span><span class="n">OnUpdate</span><span class="p">(</span><span class="n">elapsedTime</span><span class="p">);</span>
+
+        <span class="k">lock</span> <span class="p">(</span><span class="n">SyncObject</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">AsyncText</span> <span class="p">!=</span> <span class="n">label</span><span class="p">.</span><span class="n">Text</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">label</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="n">AsyncText</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Initialize and Multithread processing</span>
+    <span class="p">.....</span>
+
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+</blockquote>
+</div>
+ </div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

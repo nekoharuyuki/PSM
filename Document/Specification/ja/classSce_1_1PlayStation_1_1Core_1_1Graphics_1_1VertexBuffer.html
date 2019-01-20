@@ -1,0 +1,756 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: クラス VertexBuffer</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1VertexBuffer.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public メソッド</a> &#124;
+<a href="#pro-methods">Protected メソッド</a> &#124;
+<a href="#properties">プロパティ</a>  </div>
+  <div class="headertitle">
+<h1>クラス VertexBuffer</h1>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="Sce::PlayStation::Core::Graphics::VertexBuffer" -->
+<p>頂点バッファを表すクラス  
+<a href="#_details">[詳細]</a></p>
+
+<p><a href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1VertexBuffer-members.html">すべてのメンバ一覧</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Public メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1VertexBuffer.html#a6b42624db4a8521bc89eb5cb7d95a22c">VertexBuffer</a> (int vertexCount, params <a class="el" href="namespaceSce_1_1PlayStation_1_1Core_1_1Graphics.html#a02462ddeb9bda77e4f70274d2ec972ca">VertexFormat</a>[] formats)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点バッファを作成する  <a href="#a6b42624db4a8521bc89eb5cb7d95a22c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1VertexBuffer.html#a709b05370768a6931e94cfa3e78e6268">VertexBuffer</a> (int vertexCount, int indexCount, params <a class="el" href="namespaceSce_1_1PlayStation_1_1Core_1_1Graphics.html#a02462ddeb9bda77e4f70274d2ec972ca">VertexFormat</a>[] formats)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点バッファを作成する (インデクス配列あり)  <a href="#a709b05370768a6931e94cfa3e78e6268"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual Object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1VertexBuffer.html#a9bccc51a0523852af41816bc0a3fa0c8">ShallowClone</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点バッファを複製する  <a href="#a9bccc51a0523852af41816bc0a3fa0c8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e2d745cdb7a7b983f861ed6a9a541a7"></a><!-- doxytag: member="Sce::PlayStation::Core::Graphics::VertexBuffer::Dispose" ref="a6e2d745cdb7a7b983f861ed6a9a541a7" args="()" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1VertexBuffer.html#a6e2d745cdb7a7b983f861ed6a9a541a7">Dispose</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点バッファのアンマネージドリソースを解放する <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1VertexBuffer.html#ae2d21e4699c85406fd1a682bbee7f452">SetVertices</a> (Array vertices)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点データをセットする  <a href="#ae2d21e4699c85406fd1a682bbee7f452"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1VertexBuffer.html#a556832d15dd675497278451c2367fbc3">SetVertices</a> (Array vertices, int to, int from, int count)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点データをセットする (範囲あり)  <a href="#a556832d15dd675497278451c2367fbc3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1VertexBuffer.html#a4ac63ebf0dbdbd0799f8b15b38e697f8">SetVertices</a> (int stream, Array vertices)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点データをセットする (単一ストリーム用)  <a href="#a4ac63ebf0dbdbd0799f8b15b38e697f8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1VertexBuffer.html#ac3f3a2a1e2f469bc6d5444c32e5775b6">SetVertices</a> (int stream, Array vertices, int to, int from, int count)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点データをセットする (単一ストリーム用、範囲あり)  <a href="#ac3f3a2a1e2f469bc6d5444c32e5775b6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1VertexBuffer.html#a14e1994498145221926b4b1ae00dd1c8">SetVertices</a> (int stream, Array vertices, int offset, int stride)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点データをセットする (単一ストリーム用、バイトオフセットあり)  <a href="#a14e1994498145221926b4b1ae00dd1c8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1VertexBuffer.html#a4cea9387c1126d592aace455cdf566cc">SetVertices</a> (int stream, Array vertices, <a class="el" href="namespaceSce_1_1PlayStation_1_1Core_1_1Graphics.html#a02462ddeb9bda77e4f70274d2ec972ca">VertexFormat</a> format, <a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector4.html">Vector4</a> trans, <a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector4.html">Vector4</a> scale)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点データをセットする (単一ストリーム用、フォーマット変換あり)  <a href="#a4cea9387c1126d592aace455cdf566cc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1VertexBuffer.html#a63eff5bea5d92ba1afa74739e86b29bc">SetVertices</a> (int stream, Array vertices, <a class="el" href="namespaceSce_1_1PlayStation_1_1Core_1_1Graphics.html#a02462ddeb9bda77e4f70274d2ec972ca">VertexFormat</a> format, <a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector4.html">Vector4</a> trans, <a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector4.html">Vector4</a> scale, int offset, int stride, int to, int from, int count)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点データをセットする (単一ストリーム用、フォーマット変換あり、バイトオフセットあり、範囲あり)  <a href="#a63eff5bea5d92ba1afa74739e86b29bc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1VertexBuffer.html#ab6aeb56aa5b486191e3e5558de672e93">SetIndices</a> (ushort[] indices)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">インデクスデータをセットする  <a href="#ab6aeb56aa5b486191e3e5558de672e93"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1VertexBuffer.html#ae7ab665ca5d5587fd14473ab936ae91e">SetIndices</a> (ushort[] indices, int to, int from, int count)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">インデクスデータをセットする (範囲あり)  <a href="#ae7ab665ca5d5587fd14473ab936ae91e"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-methods"></a>
+Protected メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1VertexBuffer.html#ad0592cbafefc341b794b7c0a16f55175">VertexBuffer</a> (<a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1VertexBuffer.html">VertexBuffer</a> buffer)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点バッファを複製する  <a href="#ad0592cbafefc341b794b7c0a16f55175"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="properties"></a>
+プロパティ</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af5669d1027d5ff4d7a0fafbbf5b20c4c"></a><!-- doxytag: member="Sce::PlayStation::Core::Graphics::VertexBuffer::Formats" ref="af5669d1027d5ff4d7a0fafbbf5b20c4c" args="" -->
+<a class="el" href="namespaceSce_1_1PlayStation_1_1Core_1_1Graphics.html#a02462ddeb9bda77e4f70274d2ec972ca">VertexFormat</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1VertexBuffer.html#af5669d1027d5ff4d7a0fafbbf5b20c4c">Formats</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点フォーマット <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afba2babe5ed95730645b2ed3cfb451d8"></a><!-- doxytag: member="Sce::PlayStation::Core::Graphics::VertexBuffer::VertexCount" ref="afba2babe5ed95730645b2ed3cfb451d8" args="" -->
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1VertexBuffer.html#afba2babe5ed95730645b2ed3cfb451d8">VertexCount</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abbd8d5a05536d24f4388b9ab89d2341c"></a><!-- doxytag: member="Sce::PlayStation::Core::Graphics::VertexBuffer::IndexCount" ref="abbd8d5a05536d24f4388b9ab89d2341c" args="" -->
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1VertexBuffer.html#abbd8d5a05536d24f4388b9ab89d2341c">IndexCount</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">インデクス数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7ec33e5ba7fd2a66c73ce3704d90c9d5"></a><!-- doxytag: member="Sce::PlayStation::Core::Graphics::VertexBuffer::StreamCount" ref="a7ec33e5ba7fd2a66c73ce3704d90c9d5" args="" -->
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1VertexBuffer.html#a7ec33e5ba7fd2a66c73ce3704d90c9d5">StreamCount</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ストリーム数 <br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>説明</h2>
+<div class="textblock"><p>頂点バッファを表すクラス </p>
+</div><hr/><h2>コンストラクタとデストラクタ</h2>
+<a class="anchor" id="a6b42624db4a8521bc89eb5cb7d95a22c"></a><!-- doxytag: member="Sce::PlayStation::Core::Graphics::VertexBuffer::VertexBuffer" ref="a6b42624db4a8521bc89eb5cb7d95a22c" args="(int vertexCount, params VertexFormat[] formats)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1VertexBuffer.html">VertexBuffer</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vertexCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params <a class="el" href="namespaceSce_1_1PlayStation_1_1Core_1_1Graphics.html#a02462ddeb9bda77e4f70274d2ec972ca">VertexFormat</a>[]&#160;</td>
+          <td class="paramname"><em>formats</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>頂点バッファを作成する </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertexCount</td><td>頂点数 (0ならば頂点配列なし)</td></tr>
+    <tr><td class="paramname">formats</td><td>頂点フォーマット</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>頂点バッファを作成します。頂点フォーマットには頂点ストリームごとのデータ型を指定してください。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a709b05370768a6931e94cfa3e78e6268"></a><!-- doxytag: member="Sce::PlayStation::Core::Graphics::VertexBuffer::VertexBuffer" ref="a709b05370768a6931e94cfa3e78e6268" args="(int vertexCount, int indexCount, params VertexFormat[] formats)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1VertexBuffer.html">VertexBuffer</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vertexCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>indexCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params <a class="el" href="namespaceSce_1_1PlayStation_1_1Core_1_1Graphics.html#a02462ddeb9bda77e4f70274d2ec972ca">VertexFormat</a>[]&#160;</td>
+          <td class="paramname"><em>formats</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>頂点バッファを作成する (インデクス配列あり) </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertexCount</td><td>頂点数 (0ならば頂点配列なし)</td></tr>
+    <tr><td class="paramname">indexCount</td><td>インデクス数 (0ならばインデクス配列なし)</td></tr>
+    <tr><td class="paramname">formats</td><td>頂点フォーマット</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>頂点バッファを作成します。インデクス数を指定することでインデクス配列が使用可能になります。頂点フォーマットには頂点ストリームごとのデータ型を指定してください。 </p>
+
+</div>
+</div>
+<a class="anchor" id="ad0592cbafefc341b794b7c0a16f55175"></a><!-- doxytag: member="Sce::PlayStation::Core::Graphics::VertexBuffer::VertexBuffer" ref="ad0592cbafefc341b794b7c0a16f55175" args="(VertexBuffer buffer)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1VertexBuffer.html">VertexBuffer</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1VertexBuffer.html">VertexBuffer</a>&#160;</td>
+          <td class="paramname"><em>buffer</em></td><td>)</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>頂点バッファを複製する </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>頂点バッファ</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>頂点バッファを複製します。複製された頂点バッファはアンマネージドリソースを共有します。すべての複製に対して <a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1VertexBuffer.html#a6e2d745cdb7a7b983f861ed6a9a541a7" title="頂点バッファのアンマネージドリソースを解放する">Dispose()</a> が呼び出されたとき、共有されたアンマネージドリソースが解放されます。 </p>
+
+</div>
+</div>
+<hr/><h2>メソッド</h2>
+<a class="anchor" id="ab6aeb56aa5b486191e3e5558de672e93"></a><!-- doxytag: member="Sce::PlayStation::Core::Graphics::VertexBuffer::SetIndices" ref="ab6aeb56aa5b486191e3e5558de672e93" args="(ushort[] indices)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetIndices </td>
+          <td>(</td>
+          <td class="paramtype">ushort[]&#160;</td>
+          <td class="paramname"><em>indices</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>インデクスデータをセットする </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">indices</td><td>インデクスデータ</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>インデクスデータをセットします。 </p>
+<p>このオーバーロードはすべてのインデクスに対してデータをセットします。配列のサイズが必要なサイズと異なる場合は例外をスローします。配列のサイズが必要なサイズより大きい場合は、別のオーバーロードを使用してください。</p>
+
+</div>
+</div>
+<a class="anchor" id="ae7ab665ca5d5587fd14473ab936ae91e"></a><!-- doxytag: member="Sce::PlayStation::Core::Graphics::VertexBuffer::SetIndices" ref="ae7ab665ca5d5587fd14473ab936ae91e" args="(ushort[] indices, int to, int from, int count)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetIndices </td>
+          <td>(</td>
+          <td class="paramtype">ushort[]&#160;</td>
+          <td class="paramname"><em>indices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>to</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>インデクスデータをセットする (範囲あり) </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">indices</td><td>インデクスデータ</td></tr>
+    <tr><td class="paramname">to</td><td>転送先のインデクス番号</td></tr>
+    <tr><td class="paramname">from</td><td>転送元のインデクス番号</td></tr>
+    <tr><td class="paramname">count</td><td>転送されるインデクス数</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>インデクスデータをセットします。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a4cea9387c1126d592aace455cdf566cc"></a><!-- doxytag: member="Sce::PlayStation::Core::Graphics::VertexBuffer::SetVertices" ref="a4cea9387c1126d592aace455cdf566cc" args="(int stream, Array vertices, VertexFormat format, Vector4 trans, Vector4 scale)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetVertices </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Array&#160;</td>
+          <td class="paramname"><em>vertices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceSce_1_1PlayStation_1_1Core_1_1Graphics.html#a02462ddeb9bda77e4f70274d2ec972ca">VertexFormat</a>&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector4.html">Vector4</a>&#160;</td>
+          <td class="paramname"><em>trans</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector4.html">Vector4</a>&#160;</td>
+          <td class="paramname"><em>scale</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>頂点データをセットする (単一ストリーム用、フォーマット変換あり) </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream</td><td>ストリーム番号 (0～StreamCount-1)</td></tr>
+    <tr><td class="paramname">vertices</td><td>頂点データ</td></tr>
+    <tr><td class="paramname">format</td><td>頂点フォーマット</td></tr>
+    <tr><td class="paramname">trans</td><td>トランスレーション値</td></tr>
+    <tr><td class="paramname">scale</td><td>スケール値</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>指定されたストリームに頂点データをセットします。頂点フォーマットには、頂点バッファと同じフォーマットまたは同じ次元数のfloatベクトルフォーマットを指定できます。頂点フォーマットにfloatベクトルフォーマットを指定した場合は、頂点データを(vertex-trans)/scaleの計算式で変換することができます。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a556832d15dd675497278451c2367fbc3"></a><!-- doxytag: member="Sce::PlayStation::Core::Graphics::VertexBuffer::SetVertices" ref="a556832d15dd675497278451c2367fbc3" args="(Array vertices, int to, int from, int count)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetVertices </td>
+          <td>(</td>
+          <td class="paramtype">Array&#160;</td>
+          <td class="paramname"><em>vertices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>to</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>頂点データをセットする (範囲あり) </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertices</td><td>頂点データ</td></tr>
+    <tr><td class="paramname">to</td><td>転送先の頂点番号</td></tr>
+    <tr><td class="paramname">from</td><td>転送元の頂点番号</td></tr>
+    <tr><td class="paramname">count</td><td>転送される頂点数</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>頂点データをセットします。頂点データはインターリーブ形式で指定してください。 </p>
+
+</div>
+</div>
+<a class="anchor" id="ac3f3a2a1e2f469bc6d5444c32e5775b6"></a><!-- doxytag: member="Sce::PlayStation::Core::Graphics::VertexBuffer::SetVertices" ref="ac3f3a2a1e2f469bc6d5444c32e5775b6" args="(int stream, Array vertices, int to, int from, int count)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetVertices </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Array&#160;</td>
+          <td class="paramname"><em>vertices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>to</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>頂点データをセットする (単一ストリーム用、範囲あり) </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream</td><td>ストリーム番号 (0～StreamCount-1)</td></tr>
+    <tr><td class="paramname">vertices</td><td>頂点データ</td></tr>
+    <tr><td class="paramname">to</td><td>転送先の頂点番号</td></tr>
+    <tr><td class="paramname">from</td><td>転送元の頂点番号</td></tr>
+    <tr><td class="paramname">count</td><td>転送される頂点数</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>指定されたストリームに頂点データをセットします。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a4ac63ebf0dbdbd0799f8b15b38e697f8"></a><!-- doxytag: member="Sce::PlayStation::Core::Graphics::VertexBuffer::SetVertices" ref="a4ac63ebf0dbdbd0799f8b15b38e697f8" args="(int stream, Array vertices)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetVertices </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Array&#160;</td>
+          <td class="paramname"><em>vertices</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>頂点データをセットする (単一ストリーム用) </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream</td><td>ストリーム番号 (0～StreamCount-1)</td></tr>
+    <tr><td class="paramname">vertices</td><td>頂点データ</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>指定されたストリームに頂点データをセットします。 </p>
+<p>このオーバーロードはすべての頂点に対してデータをセットします。配列のサイズが必要なサイズと異なる場合は例外をスローします。配列のサイズが必要なサイズより大きい場合は、別のオーバーロードを使用してください。</p>
+
+</div>
+</div>
+<a class="anchor" id="ae2d21e4699c85406fd1a682bbee7f452"></a><!-- doxytag: member="Sce::PlayStation::Core::Graphics::VertexBuffer::SetVertices" ref="ae2d21e4699c85406fd1a682bbee7f452" args="(Array vertices)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetVertices </td>
+          <td>(</td>
+          <td class="paramtype">Array&#160;</td>
+          <td class="paramname"><em>vertices</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>頂点データをセットする </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertices</td><td>頂点データ</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>頂点データをセットします。頂点データはインターリーブ形式で指定してください。 </p>
+<p>このオーバーロードはすべての頂点にデータをセットします。配列のサイズが必要なサイズと異なる場合は例外をスローします。配列のサイズが必要なサイズより大きい場合は、別のオーバーロードを使用してください。</p>
+
+</div>
+</div>
+<a class="anchor" id="a14e1994498145221926b4b1ae00dd1c8"></a><!-- doxytag: member="Sce::PlayStation::Core::Graphics::VertexBuffer::SetVertices" ref="a14e1994498145221926b4b1ae00dd1c8" args="(int stream, Array vertices, int offset, int stride)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetVertices </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Array&#160;</td>
+          <td class="paramname"><em>vertices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>stride</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>頂点データをセットする (単一ストリーム用、バイトオフセットあり) </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream</td><td>ストリーム番号 (0～StreamCount-1)</td></tr>
+    <tr><td class="paramname">vertices</td><td>頂点データ</td></tr>
+    <tr><td class="paramname">offset</td><td>頂点データのバイトオフセット</td></tr>
+    <tr><td class="paramname">stride</td><td>頂点データのバイトストライド</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>指定されたストリームに頂点データをセットします。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a63eff5bea5d92ba1afa74739e86b29bc"></a><!-- doxytag: member="Sce::PlayStation::Core::Graphics::VertexBuffer::SetVertices" ref="a63eff5bea5d92ba1afa74739e86b29bc" args="(int stream, Array vertices, VertexFormat format, Vector4 trans, Vector4 scale, int offset, int stride, int to, int from, int count)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetVertices </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Array&#160;</td>
+          <td class="paramname"><em>vertices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceSce_1_1PlayStation_1_1Core_1_1Graphics.html#a02462ddeb9bda77e4f70274d2ec972ca">VertexFormat</a>&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector4.html">Vector4</a>&#160;</td>
+          <td class="paramname"><em>trans</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector4.html">Vector4</a>&#160;</td>
+          <td class="paramname"><em>scale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>stride</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>to</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>頂点データをセットする (単一ストリーム用、フォーマット変換あり、バイトオフセットあり、範囲あり) </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream</td><td>ストリーム番号 (0～StreamCount-1)</td></tr>
+    <tr><td class="paramname">vertices</td><td>頂点データ</td></tr>
+    <tr><td class="paramname">format</td><td>頂点フォーマット</td></tr>
+    <tr><td class="paramname">trans</td><td>トランスレーション値</td></tr>
+    <tr><td class="paramname">scale</td><td>スケール値</td></tr>
+    <tr><td class="paramname">offset</td><td>頂点データのバイトオフセット</td></tr>
+    <tr><td class="paramname">stride</td><td>頂点データのバイトストライド</td></tr>
+    <tr><td class="paramname">to</td><td>転送先の頂点番号</td></tr>
+    <tr><td class="paramname">from</td><td>転送元の頂点番号</td></tr>
+    <tr><td class="paramname">count</td><td>転送される頂点数</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>指定されたストリームに頂点データをセットします。頂点フォーマットには、頂点バッファと同じフォーマットまたは同じ次元数のfloatベクトルフォーマットを指定できます。頂点フォーマットにfloatベクトルフォーマットを指定した場合は、頂点データを(vertex-trans)/scaleの計算式で変換することができます。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a9bccc51a0523852af41816bc0a3fa0c8"></a><!-- doxytag: member="Sce::PlayStation::Core::Graphics::VertexBuffer::ShallowClone" ref="a9bccc51a0523852af41816bc0a3fa0c8" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Object ShallowClone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>頂点バッファを複製する </p>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>頂点バッファの複製</dd></dl>
+<p>頂点バッファを複製します。複製された頂点バッファはアンマネージドリソースを共有します。すべての複製に対して <a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1VertexBuffer.html#a6e2d745cdb7a7b983f861ed6a9a541a7" title="頂点バッファのアンマネージドリソースを解放する">Dispose()</a> が呼び出されたとき、共有されたアンマネージドリソースが解放されます。 </p>
+
+</div>
+</div>
+</div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><b>Sce</b>      </li>
+      <li class="navelem"><b>PlayStation</b>      </li>
+      <li class="navelem"><a class="el" href="namespaceSce_1_1PlayStation_1_1Core.html">Core</a>      </li>
+      <li class="navelem"><a class="el" href="namespaceSce_1_1PlayStation_1_1Core_1_1Graphics.html">Graphics</a>      </li>
+      <li class="navelem"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1VertexBuffer.html">VertexBuffer</a>      </li>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

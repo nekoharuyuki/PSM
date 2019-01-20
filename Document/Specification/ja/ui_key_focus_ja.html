@@ -1,0 +1,456 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: キーイベントとフォーカス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('ui_key_focus_ja.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<h1>キーイベントとフォーカス </h1>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><blockquote>
+この章では、キーイベントおよびフォーカスの詳細を解説します。基本的な事項は <a class="reference external" href="ui_basic_concepts_ja.html">UI Toolkit プログラミングガイド - 基本概念</a> の <a class="reference external" href="ui_basic_concepts_ja.html#id9">ゲームパッドによる操作</a> と <a class="reference external" href="ui_basic_concepts_ja.html#id10">キーイベントの配信</a> を参照してください。</blockquote>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#id2" id="id17">フォーカスの移動方法</a><ul>
+<li><a class="reference internal" href="#id3" id="id18">フォーカスの移動対象</a></li>
+<li><a class="reference internal" href="#id4" id="id19">もっとも近いウィジェットの探し方</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id5" id="id20">フォーカスの移動をカスタマイズする</a><ul>
+<li><a class="reference internal" href="#focuscustomsetting" id="id21">FocusCustomSetting を使用する方法</a></li>
+<li><a class="reference internal" href="#id6" id="id22">事前キーイベントをハンドルする方法</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id7" id="id23">フォーカスのデザイン</a><ul>
+<li><a class="reference internal" href="#id8" id="id24">フォーカスの描画方法</a></li>
+<li><a class="reference internal" href="#id9" id="id25">フォーカスイメージのカスタマイズ</a></li>
+<li><a class="reference internal" href="#id10" id="id26">フォーカスデザインの高度なカスタマイズ</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id11" id="id27">その他のキーイベント、フォーカスの使用方法</a><ul>
+<li><a class="reference internal" href="#id12" id="id28">ボタンを組み合わせて使う場合</a></li>
+<li><a class="reference internal" href="#id13" id="id29">フォーカス状態に関係なくキーイベントをハンドルする場合</a></li>
+<li><a class="reference internal" href="#id14" id="id30">フォーカス機能を使用せずにキーイベント使用する場合</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#api" id="id31">関連するAPIの一覧</a></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h1><a class="toc-backref" href="#id17">フォーカスの移動方法</a></h1>
+<blockquote>
+フォーカスは方向キーを押すことで自動でウィジェットを移動します。ここでは、方向キーが押されたときに、どのウィジェットにフォーカスが移動するかを解説します。</blockquote>
+<div class="section" id="id3">
+<h2><a class="toc-backref" href="#id18">フォーカスの移動対象</a></h2>
+<blockquote>
+<p>フォーカスが移動する対象となるウィジェットは以下の全てを満たす必要があります。</p>
+<ul class="simple">
+<li>画面内に表示されている</li>
+<li>Focusable プロパティが true</li>
+<li>親を含むすべての Enabled プロパティが true</li>
+</ul>
+<p>たとえば、親ウィジェットにクリップされて完全に見えないウィジェットや、Visible が false のウィジェットにはフォーカスは移動しません。</p>
+<p>Focusable プロパティは親ウィジェットが false でも子ウィジェットが true であれば、この子ウィジェットにフォーカスが移動することができます。Button ウィジェットなどキー操作できるウィジェットはデフォルトで Focusable が true になっています。逆に ImageBox や Label、Panel ウィジェット、および Widget 基底クラスなどは Focusable が false になっているので、必要に応じて値を設定してください。</p>
+<p>方向キーが押された場合、これらのウィジェットのうち、そのキーの方向にもっとも近いウィジェットにフォーカスが移ります。</p>
+</blockquote>
+</div>
+<div class="section" id="id4">
+<h2><a class="toc-backref" href="#id19">もっとも近いウィジェットの探し方</a></h2>
+<blockquote>
+<p>次にキーの方向にもっとも近いウィジェットの探索方法を解説します。これ以降は、右キーが押された場合のみを解説しますが、その他の方向キーも同等に動作します。</p>
+<p>距離の求め方は、現在フォーカスのあるウィジェット(以降 「フォーカスウィジェット」とします)と検索対象のウィジェットの位置関係によって以下の3種類に分類されます。</p>
+<ol class="arabic simple">
+<li>フォーカスウィジェットの内側にあるウィジェット</li>
+<li>フォーカスウィジェットを内包するウィジェット</li>
+<li>フォーカスウィジェットと重ならないウィジェット</li>
+</ol>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/focus_distance.png" src="image/uitoolkit/focus_distance.png" />
+<p class="caption"><strong>図1 ウィジェットの位置関係の分類</strong></p>
+</div>
+<p>フォーカスウィジェットの内側にウィジェットが存在する場合(1)はこれらのウィジェットが優先的にフォーカスの移動対象になります。それ以外の場合は、距離が最も短いものにフォーカスが移動します。</p>
+<p>それぞれのウィジェットの距離の求め方は以下の通りです。</p>
+<ol class="arabic">
+<li><p class="first">フォーカスウィジェットの内側にあるウィジェット</p>
+<blockquote>
+<p>中心点が、フォーカスウィジェットの中心から角度が上下50度の範囲（図2 の Focus Target Area）に含まれているウィジェットがフォーカスの移動対象のウィジェットになります。</p>
+<p>フォーカスウィジェットとの中心点の距離が最も短いものがフォーカスの移動先になります。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/focus_innerwidget.png" src="image/uitoolkit/focus_innerwidget.png" />
+<p class="caption"><strong>図2 フォーカスウィジェットの内側にあるウィジェットの距離</strong></p>
+</div>
+</blockquote>
+</li>
+<li><p class="first">フォーカスウィジェットを内包するウィジェット</p>
+<blockquote>
+<p>中心点が、フォーカスウィジェットの中心から角度が上下50度の範囲（図3 の Focus Target Area）に含まれているウィジェットがフォーカスの移動対象のウィジェットになります。</p>
+<p>右辺とフォーカスウィジェットの右辺の最短距離（図3 の矢印の距離）が最も短いものがフォーカスの移動先になります。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/focus_outerwidget.png" src="image/uitoolkit/focus_outerwidget.png" />
+<p class="caption"><strong>図3 フォーカスウィジェットを内包するウィジェットの距離</strong></p>
+</div>
+</blockquote>
+</li>
+<li><p class="first">フォーカスウィジェットと重ならないウィジェット</p>
+<blockquote>
+<p>左辺が、フォーカスウィジェットの角度が上下50度の範囲（図4 の Focus Target Area）に少し手も含まれているウィジェットのみがフォーカスの移動対象のウィジェットになります。</p>
+<p>左辺とフォーカスウィジェットの右辺との距離（図4 の矢印の距離）が最も短いものがフォーカスの移動先になります。</p>
+<p>ただし、同一の距離のウィジェットが複数ある場合は、中心点どうしの距離が一番短いものが優先されます。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/focus_neighborwidget.png" src="image/uitoolkit/focus_neighborwidget.png" />
+<p class="caption"><strong>図4 フォーカスウィジェットと重ならないウィジェットの距離</strong></p>
+</div>
+</blockquote>
+</li>
+</ol>
+</blockquote>
+</div>
+</div>
+<div class="section" id="id5">
+<h1><a class="toc-backref" href="#id20">フォーカスの移動をカスタマイズする</a></h1>
+<div class="section" id="focuscustomsetting">
+<h2><a class="toc-backref" href="#id21">FocusCustomSetting を使用する方法</a></h2>
+<blockquote>
+<p>ウィジェットの FocusCustomSettings プロパティを使用することで、ウィジェットごとにフォーカスに関する機能をカスタマイズすることができます。</p>
+<p>FocusCustomSettings の LeftCandidate、RightCandidate、UpCandidate、DownCandidate プロパティにウィジェットを設定すると、対応する方向キーが押された場合にそのウィジェットにフォーカスが移動します。</p>
+<p>FocusCustomSetting の初期値は null なので、以下のようにインスタンスを設定してから、各値を設定してください。</p>
+<div class="highlight"><pre><span class="n">button1</span><span class="p">.</span><span class="n">FocusCustomSetting</span> <span class="p">=</span> <span class="k">new</span> <span class="n">FocusCustomSetting</span><span class="p">();</span>
+<span class="n">button1</span><span class="p">.</span><span class="n">FocusCustomSetting</span><span class="p">.</span><span class="n">RightCandidate</span> <span class="p">=</span> <span class="n">button2</span><span class="p">;</span>
+</pre></div>
+<!-- end-of-code-block -->
+<p>この例では、button1 にフォーカスがあるときに右キーが押されると、button2にフォーカスが移動します。</p>
+<p>xxxCandidate に設定されたウィジェットは同一のシーンに存在し手入れさえすれば、Focusable や Visible が false でもそのウィジェットにフォーカスが移動します。</p>
+</blockquote>
+</div>
+<div class="section" id="id6">
+<h2><a class="toc-backref" href="#id22">事前キーイベントをハンドルする方法</a></h2>
+<blockquote>
+<p>ウィジェットの PreviewKeyEventReceived イベント、または OnPreviewKeyEvent メソッドで方向キーをハンドルすることで、フォーカスの移動先を変更することもできます。</p>
+<p>フォーカスを移動するには移動させたいウィジェットの SetFocus メソッドを呼び出してください。</p>
+<p>以下の例では、前述の FocusCustomSetting.RightCandidate を設定する場合と同じ挙動になりますが、より複雑な移動アルゴリズムを作成することもできます。</p>
+<div class="highlight"><pre><span class="n">button1</span><span class="p">.</span><span class="n">PreviewKeyEventReceived</span> <span class="p">=</span> <span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">KeyEventType</span> <span class="p">==</span> <span class="n">KeyEventType</span><span class="p">.</span><span class="n">Down</span> <span class="p">||</span>
+        <span class="n">e</span><span class="p">.</span><span class="n">KeyEventType</span> <span class="p">==</span> <span class="n">KeyEventType</span><span class="p">.</span><span class="n">Repeat</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">KeyType</span> <span class="p">==</span> <span class="n">KeyType</span><span class="p">.</span><span class="n">Left</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">button2</span><span class="p">.</span><span class="n">SetFocus</span><span class="p">(</span><span class="k">true</span><span class="p">);</span>
+            <span class="n">e</span><span class="p">.</span><span class="n">Handled</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+</div>
+</div>
+<div class="section" id="id7">
+<h1><a class="toc-backref" href="#id23">フォーカスのデザイン</a></h1>
+<blockquote>
+フォーカスのデザインとそのカスタマイズ方法について説明します。</blockquote>
+<div class="section" id="id8">
+<h2><a class="toc-backref" href="#id24">フォーカスの描画方法</a></h2>
+<blockquote>
+<p>初期状態ではフォーカスのイメージは青色が乗算され、かつ加算描画されます(図5)。これらは、それぞれ UISystem.FocusFilterColor、UISystem.FocusBlendMode プロパティで変更することができます。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/focus_design.png" src="image/uitoolkit/focus_design.png" />
+<p class="caption"><strong>図5 フォーカスの描画方法</strong></p>
+</div>
+</blockquote>
+</div>
+<div class="section" id="id9">
+<h2><a class="toc-backref" href="#id25">フォーカスイメージのカスタマイズ</a></h2>
+<blockquote>
+<p>フォーカスのイメージは標準で4種類用意されており、ウィジェットの FocusStyle プロパティを指定することで変更できます(図6)。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/focus_focusstyle.png" src="image/uitoolkit/focus_focusstyle.png" />
+<p class="caption"><strong>図6 FocusStyle のデザイン</strong></p>
+</div>
+<p>FocusStyle 以外のイメージを使用する場合は、FocusCustomSettings.FocusImage を使用してください。また、フォーカスのサイズはウィジェットのWidthとHeightを基準にしますが、ウィジェットの FocusCustomSettings.FocusImageRectangle プロパティを指定して変更することもできます。</p>
+</blockquote>
+</div>
+<div class="section" id="id10">
+<h2><a class="toc-backref" href="#id26">フォーカスデザインの高度なカスタマイズ</a></h2>
+<blockquote>
+<p>フォーカスのデザインはシーンやダイアログの最前面に表示されます。またウィジェットが変形している場合は、外接する矩形として表示されます(図7)。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/focus_draw.png" src="image/uitoolkit/focus_draw.png" />
+<p class="caption"><strong>図7 フォーカスの表示のされ方</strong></p>
+</div>
+<p>フォーカスのイメージをウィジェットの背面に表示したり、ウィジェットの変形に合わせる必要がある場合は、カスタムウィジェットを作成して独自に描画する必要があります。この場合、FocusStyle を None に設定して、ウィジェット自身にフォーカス用の描画要素を追加し、OnFocusChangedをハンドルしてその描画要素の表示を切り替えてください。</p>
+</blockquote>
+</div>
+</div>
+<div class="section" id="id11">
+<h1><a class="toc-backref" href="#id27">その他のキーイベント、フォーカスの使用方法</a></h1>
+<div class="section" id="id12">
+<h2><a class="toc-backref" href="#id28">ボタンを組み合わせて使う場合</a></h2>
+<blockquote>
+<p>ボタンを組み合わせて使いたい場合は UISytem.GamePadData プロパティを使用して以下のようにハンドルしてください。UISytem.GamePadData プロパティの値は、UISytem.Update の引数で渡された GamePadData の値がそのまま取得できます。</p>
+<blockquote>
+<div class="highlight"><pre><span class="c1">// handle &quot;L&quot; + &quot;Triangle&quot; key</span>
+<span class="k">void</span> <span class="nf">KeyEventReceivedHandler</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">KeyEventArgs</span> <span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// check &quot;L&quot; button as alternate key</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">UISystem</span><span class="p">.</span><span class="n">GamePadData</span><span class="p">.</span><span class="n">Buttons</span><span class="p">.</span><span class="n">HasFlag</span><span class="p">(</span><span class="n">GamePadButtons</span><span class="p">.</span><span class="n">L</span><span class="p">))</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">KeyType</span> <span class="p">==</span> <span class="n">KeyType</span><span class="p">.</span><span class="n">Triangle</span> <span class="p">&amp;&amp;</span> <span class="n">e</span><span class="p">.</span><span class="n">KeyEventType</span> <span class="p">==</span> <span class="n">KeyEventType</span><span class="p">.</span><span class="n">Down</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">DoSomething</span><span class="p">();</span>
+            <span class="n">e</span><span class="p">.</span><span class="n">Handled</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="id13">
+<h2><a class="toc-backref" href="#id29">フォーカス状態に関係なくキーイベントをハンドルする場合</a></h2>
+<blockquote>
+あるキーを押したとき、シーン内のどのウィジェットにフォーカスが当たっているか関係なく操作を行いたい場合は、RootWidget の KeyEventReceived または PreviewKeyEventReceived イベントにイベントハンドラを登録してください。</blockquote>
+</div>
+<div class="section" id="id14">
+<h2><a class="toc-backref" href="#id30">フォーカス機能を使用せずにキーイベント使用する場合</a></h2>
+<blockquote>
+UISystem.EnabledFocus プロパティを false にすることで、フォーカスの機能を無効にすることができます。この場合、方向キーによるフォーカスの操作や、フォーカスの表示は出来ませんが、RootWidget へのイベント配信は行われます。さらに、Widget.SetFocus メソッドを用いて手動でフォーカス設定をすれば、そのウィジェットと親ウィジェットに対してキーイベントが配信されます。</blockquote>
+</div>
+</div>
+<div class="section" id="api">
+<h1><a class="toc-backref" href="#id31">関連するAPIの一覧</a></h1>
+<blockquote>
+<p><strong>表1 キーイベントに関連するAPI一覧</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="14%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">クラス名</th>
+<th class="head">メンバー名</th>
+<th class="head">説明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td rowspan="2">UISystem</td>
+<td>Update</td>
+<td>キーイベントを有効にするために、メインループから引数に GamePadData を指定して呼び出す必要があります。</td>
+</tr>
+<tr><td>GamePadData</td>
+<td>Update で渡された GamePadData を返すプロパティです。</td>
+</tr>
+<tr><td rowspan="4">Widget</td>
+<td>OnPreviewKeyevent</td>
+<td>事前キーイベントを受け取った時に呼び出される仮想関数です。</td>
+</tr>
+<tr><td>PreviewKeyEventReceived</td>
+<td>事前キーイベントを受け取った時に呼び出されるイベントです。</td>
+</tr>
+<tr><td>OnKeyEvent</td>
+<td>キーイベントを受け取った時に呼び出される仮想関数です。</td>
+</tr>
+<tr><td>KeyEventReceived</td>
+<td>キーイベントを受け取った時に呼び出されるイベントです。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>表2 キーフォーカスに関連するAPI一覧</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="14%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">クラス名</th>
+<th class="head">メンバー名</th>
+<th class="head">説明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td rowspan="5">UISystem</td>
+<td>FocusActive</td>
+<td>フォーカスが現在アクティブかどうかを設定するプロパティです。</td>
+</tr>
+<tr><td>EnabledFocus</td>
+<td>フォーカス機能を有効にするかどうかを設定するプロパティです。</td>
+</tr>
+<tr><td>SuppressFocusKeyEvent</td>
+<td>フォーカスのキーイベント配信を一時停止させるかどうかを設定するプロパティです。</td>
+</tr>
+<tr><td>FocusFilterColor</td>
+<td>フォーカスイメージのフィルターカラーを設定するプロパティです。</td>
+</tr>
+<tr><td>FocusBlendMode</td>
+<td>フォーカスイメージのブレンドモードを設定するプロパティです。</td>
+</tr>
+<tr><td rowspan="2">Scene</td>
+<td>FocusWidget</td>
+<td>現在このシーンでフォーカスが当たっているウィジェットを取得するプロパティです。</td>
+</tr>
+<tr><td>DefaultFocusWidget</td>
+<td>最初にフォーカスが当たるウィジェットを設定するプロパティです。</td>
+</tr>
+<tr><td rowspan="9">Widget</td>
+<td>Focused</td>
+<td>現在自分にフォーカスが当たっているかどうかを取得するプロパティです。</td>
+</tr>
+<tr><td>Focusable</td>
+<td>フォーカスが当たるかどうかを設定するプロパティです。</td>
+</tr>
+<tr><td>SetFocus</td>
+<td>自分自身にフォーカスをあてるメソッドです。</td>
+</tr>
+<tr><td>SearchNextFocus</td>
+<td>次にフォーカスの当たるウィジェットを探すメソッドです。</td>
+</tr>
+<tr><td>SearchNextFocusFromChild</td>
+<td>子ウィジェットの中から次にフォーカスの当たるウィジェットを探すメソッドです。</td>
+</tr>
+<tr><td>OnFocusChanged</td>
+<td>フォーカスを取得または喪失したときに呼び出される仮想関数です。</td>
+</tr>
+<tr><td>FocusChanged</td>
+<td>フォーカスを取得または喪失したときに呼び出されるイベントです。</td>
+</tr>
+<tr><td>FocusStyle</td>
+<td>フォーカスの表示スタイルを設定するプロパティです。</td>
+</tr>
+<tr><td>FocusCustomSettings</td>
+<td>ウィジェットごとにフォーカスをカスタマイズするための情報のプロパティです。</td>
+</tr>
+<tr><td rowspan="9">FocusCustomSettings</td>
+<td>LeftCandidate</td>
+<td>左キーを押した場合のフォーカスの移動先ウィジェットを指定するプロパティです。</td>
+</tr>
+<tr><td>RightCandidate</td>
+<td>右キーを押した場合のフォーカスの移動先ウィジェットを指定するプロパティです。</td>
+</tr>
+<tr><td>UpCandidate</td>
+<td>上キーを押した場合のフォーカスの移動先ウィジェットを指定するプロパティです。</td>
+</tr>
+<tr><td>DownCandidate</td>
+<td>下キーを押した場合のフォーカスの移動先ウィジェットを指定するプロパティです。</td>
+</tr>
+<tr><td>SearchHintRectangle</td>
+<td>フォーカスを検索する場合の矩形を指定するプロパティです。</td>
+</tr>
+<tr><td>FocusImageRectangle</td>
+<td>フォーカスを表示する際の矩形(位置とサイズ)を指定するプロパティです。</td>
+</tr>
+<tr><td>FocusImage</td>
+<td>フォーカスのカスタムイメージを指定するプロパティです。</td>
+</tr>
+<tr><td>FocusImageNinePatchMargin</td>
+<td>フォーカスのカスタムイメージの9パッチマージンを指定するプロパティです。</td>
+</tr>
+<tr><td>FocusImagePadding</td>
+<td>フォーカスのカスタムイメージを外側に広げる大きさを指定するプロパティです。</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+ </div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

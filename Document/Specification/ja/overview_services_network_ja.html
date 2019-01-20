@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: Services.Network 概要</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('overview_services_network_ja.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<h1>Services.Network 概要 </h1>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#id1" id="id10">スコアボード</a><ul>
+<li><a class="reference internal" href="#id2" id="id11">スコアボードについて</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id3" id="id12">開発プロセス</a><ul>
+<li><a class="reference internal" href="#psm-devportal" id="id13">PSM DevPortalフロー</a></li>
+<li><a class="reference internal" href="#id4" id="id14">アプリケーションとスコアボード管理の概要</a></li>
+<li><a class="reference internal" href="#id5" id="id15">パブリッシュの概要</a></li>
+<li><a class="reference internal" href="#id6" id="id16">プログラムのフロー</a></li>
+<li><a class="reference internal" href="#api" id="id17">スコアボードAPIの概要</a></li>
+<li><a class="reference internal" href="#get" id="id18">Get機能</a></li>
+<li><a class="reference internal" href="#set" id="id19">Set機能</a></li>
+<li><a class="reference internal" href="#id7" id="id20">フレンドスコアボードAPIの概要</a></li>
+<li><a class="reference internal" href="#id8" id="id21">フレンドAPIの概要</a></li>
+<li><a class="reference internal" href="#id9" id="id22">エラー対応</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h1><a class="toc-backref" href="#id10">スコアボード</a></h1>
+<blockquote>
+PSMスコアボードはPSM Netowrk APIを介してアクセスできます。この文書ではその実装と使用について説明しています。</blockquote>
+<div class="section" id="id2">
+<h2><a class="toc-backref" href="#id11">スコアボードについて</a></h2>
+<blockquote>
+<p>スコアボードは、アプリケーションのトップユーザーをカテゴリに分けてリストに表示します。各スコアボードは通算したスコアをトラックし、各ユーザーの最高点のスコアを与えられたエントリーに記録します。更に、開発者はスコアボードの作成時に日間・週間・月間（どの値の組合せでも可）でスコアのトラッキングのサポートを設定することができます。 例として、開発者が日間のみのスコアのトラッキングを選択すると、選んだスコアボードに対して日間と通算のスコアボードが作成されます。</p>
+<p>スコアボードAPIはフレンドのスコアボードを取り込み、PlayStation(R)Networkのフレンドリストにあるユーザーと比較することもできます。フレンドのスコアボードは通算のスコアボードから検索されます。</p>
+<p>1つのPSM開発者アカウントで、1年に10個までネットワークを使うアプリケーションを作成することができます。各アプリケーションでは合計8のスコアボードを作ることができます。（各アプリケーションは日間・週間・月間・通算のスコアがトラックできます。）ユーザーがPSNにログインしてスコアボードのデータを送ったり読み込んだりするには、オンラインIDが必要になります。</p>
+</blockquote>
+</div>
+</div>
+<div class="section" id="id3">
+<h1><a class="toc-backref" href="#id12">開発プロセス</a></h1>
+<div class="section" id="psm-devportal">
+<h2><a class="toc-backref" href="#id13">PSM DevPortalフロー</a></h2>
+<blockquote>
+<p>スコアボードの作成は以下のフローになります。</p>
+<ol class="arabic simple">
+<li>こちらからDevPortalにログインします。https://psm.playstation.net/portal/</li>
+<li>&quot;PSNサービス設定&quot;オプションをクリックします。</li>
+<li>&quot;アプリケーションリスト&quot;画面で&quot;新規作成&quot;ボタンをクリックして新規アプリケーションを追加します。</li>
+</ol>
+<blockquote>
+<div class="figure">
+<img alt="./image/psn/ApplicationAddNew.png" src="./image/psn/ApplicationAddNew.png" />
+</div>
+</blockquote>
+<ol class="arabic simple" start="4">
+<li>&quot;スコアボード&quot;画面で&quot;管理&quot;ボタンをクリックします。</li>
+</ol>
+<blockquote>
+<div class="figure">
+<img alt="./image/psn/ScoreBoardManage.png" src="./image/psn/ScoreBoardManage.png" />
+</div>
+</blockquote>
+<ol class="arabic simple" start="5">
+<li>&quot;スコアボード一覧&quot;画面で&quot;新規作成&quot;ボタンをクリックし、新規スコアボードを追加します。</li>
+</ol>
+<blockquote>
+<div class="figure">
+<img alt="./image/psn/ScoreBoardAddNew.png" src="./image/psn/ScoreBoardAddNew.png" />
+</div>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="id4">
+<h2><a class="toc-backref" href="#id14">アプリケーションとスコアボード管理の概要</a></h2>
+<blockquote>
+<p>アプリケーションとスコアボードが新規作成されると、固有のトークンがそれぞれ1つ与えられます。このトークンはスコアボードネットワークAPIにアクセスするときに使用するもので、開発者はアプリケーションに埋め込む必要があります。</p>
+<p>重要：開発者はアプリケーションとスコアボードのトークンを秘密の鍵として扱い、開発チームの外では共有しないでください。</p>
+<p>開発環境のスコアは&quot;スコアボード一覧&quot;画面で&quot;スコアの表示&quot;ボタンをクリックすると、DevPortalで閲覧することができます。Portalでは開発者がテストのデータセットをリセットできるように、スコアの削除を行うことができます。</p>
+</blockquote>
+</div>
+<div class="section" id="id5">
+<h2><a class="toc-backref" href="#id15">パブリッシュの概要</a></h2>
+<blockquote>
+<p>開発者は各々の責任で、DevPortalを介して作成したアプリケーションもパブリッシュしてください。アプリケーションは&quot;アプリケーションリスト&quot;画面で&quot;、パブリッシュ&quot;ボタンをクリックするとパブリッシュされます。これによりアプリケーションとアプリケーションの全スコアボードが、QA環境に送られ最終申請されます。アプリケーションのパブリッシュはマスターパッケージを提出するときに行ってください。</p>
+<p>重要：開発者はアプリケーションをパブリッシュするまでは、自由にアプリケーションとスコアボードを追加・削除することができます。パブリッシュ後は削除はできません。アプリケーションとスコアボードのフィールドの一部は、パブリッシュ後に変更を加えることができますが、スコアボードの名前、説明、最小値/最大値のスコアの範囲に限られます。スコアボードのフィールドの種類（integer）と時間設定（日間・週間・月間）は作成時の設定以降は変更できません。</p>
+</blockquote>
+</div>
+<div class="section" id="id6">
+<h2><a class="toc-backref" href="#id16">プログラムのフロー</a></h2>
+<blockquote>
+<p>スコアボードのプロセスはNetworkクラスを使用します。</p>
+<ol class="arabic simple">
+<li>Call Network::Initialize with appToken.</li>
+<li>Call Call Network::AuthGetTicket().</li>
+</ol>
+<dl class="docutils">
+<dt>ワークフロー：</dt>
+<dd><ul class="first last simple">
+<li>ユーザーの承認情報はPSNより取得します。これにより、デバイスにユーザーのログイン情報が既に保存されていない限り、ユーザーはログインを促されます。ログインが成功すると、承認情報は検証のためにPSM Network Servicesサーバーへ送られます。問題がない場合は、サーバーはネットワークサービスチケットをアプリケーションに戻します。</li>
+<li>ネットワークサービスチケットを受信すると、Network.StateはNetworkState.NetworkServicesServerReadyとなります。</li>
+<li>その後Network Servicesサーバーに対してNetworkRequestsをすることができます。</li>
+</ul>
+</dd>
+</dl>
+</blockquote>
+</div>
+<div class="section" id="api">
+<h2><a class="toc-backref" href="#id17">スコアボードAPIの概要</a></h2>
+<blockquote>
+全てのリクエストとレスポンスはJSONフォーマットで行います。開発を簡易化するためにレスポンスパーサーが使用されています。</blockquote>
+</div>
+<div class="section" id="get">
+<h2><a class="toc-backref" href="#id18">Get機能</a></h2>
+<blockquote>
+<p>&quot;get&quot; NetworkRequestを以下のパラメーターと&quot;score_board&quot;のサービスの種類と共に送ってください：</p>
+<ul>
+<li><p class="first">DevPortalから抽出されたアプリケーションのトークン</p>
+<div class="figure">
+<img alt="./image/psn/ApplicationToken.png" src="./image/psn/ApplicationToken.png" />
+</div>
+</li>
+<li><p class="first">DevPortaから抽出されたスコアボードのトークン</p>
+<div class="figure">
+<img alt="./image/psn/ScoreBoardToken.png" src="./image/psn/ScoreBoardToken.png" />
+</div>
+</li>
+<li><p class="first">スコアボードの種類のセット</p>
+<dl class="docutils">
+<dt>有効な種類：</dt>
+<dd><p class="first last">1: 日間
+2: 週間
+3: 月間
+4: 通算</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">制限 - 有効な値は[50-500]（任意、デフォルト 50）の整数です。</p>
+</li>
+<li><p class="first">整数のオフセット（任意）</p>
+</li>
+</ul>
+<p>NetworkResponseを、以下のパラメーターと共に受信します：</p>
+<ul class="simple">
+<li>ログイン中のユーザー名</li>
+<li>スコアボードの結果一覧 - 一覧のフォーマット： [score_board_token: {time_variant: [username, score, date achieved, metadata], ...}]</li>
+<li>ユーザーのランク</li>
+<li>通算スコアの合計数</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="set">
+<h2><a class="toc-backref" href="#id19">Set機能</a></h2>
+<blockquote>
+<p>&quot;set&quot; NetworkRequestを、以下のパラメーターと&quot;score_board&quot;のサービスの種類と共に送ってください：</p>
+<ul>
+<li><p class="first">DevPortalから抽出されたアプリケーションのトークン</p>
+<div class="figure">
+<img alt="./image/psn/ApplicationToken.png" src="./image/psn/ApplicationToken.png" />
+</div>
+</li>
+<li><p class="first">DevPortalから抽出されたスコアボードのトークン</p>
+<div class="figure">
+<img alt="./image/psn/ScoreBoardToken.png" src="./image/psn/ScoreBoardToken.png" />
+</div>
+</li>
+<li><p class="first">ユーザーのスコア</p>
+</li>
+<li><p class="first">スコアに関連するメタデータの一連</p>
+</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="id7">
+<h2><a class="toc-backref" href="#id20">フレンドスコアボードAPIの概要</a></h2>
+<blockquote>
+<p>&quot;get&quot; NetworkRequestを、以下のパラーメーターと&quot;friend_score_board&quot;のサービスの種類と共に送ってください：</p>
+<ul>
+<li><p class="first">DevPortalから抽出されたアプリケーションのトークン</p>
+<div class="figure">
+<img alt="./image/psn/ApplicationToken.png" src="./image/psn/ApplicationToken.png" />
+</div>
+</li>
+<li><p class="first">DevPortalから抽出されたスコアボードのトークン</p>
+<div class="figure">
+<img alt="./image/psn//ScoreBoardToken.png" src="./image/psn//ScoreBoardToken.png" />
+</div>
+</li>
+</ul>
+<p>フレンドスコアボードは一度に1つしかクエリーできません。</p>
+<p>NetworkResponseを、以下のパラメーターと共に受信します：</p>
+<ul class="simple">
+<li>ログイン中のユーザー名</li>
+<li>スコアボードの結果一覧 - 一覧のフォーマット：[score_board_token: {time_variant: [username, score, date achieved, metadata], ...}]</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="id8">
+<h2><a class="toc-backref" href="#id21">フレンドAPIの概要</a></h2>
+<blockquote>
+<p>&quot;get&quot; NetworkRequestを、以下のパラーメーターと&quot;friend_list&quot;のサービスの種類と共に送ってください。</p>
+<p>NetworkResponseを、以下のパラメーターと共に受信します：</p>
+<ul class="simple">
+<li>ログイン中のユーザー名</li>
+<li>ログイン中のユーザーのPSNフレンドリスト</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="id9">
+<h2><a class="toc-backref" href="#id22">エラー対応</a></h2>
+<blockquote>
+<p>NetworkServerエラーはJSONレスポンスで送られます。</p>
+<p>重要：スコアを送信時にデバイスがオフラインのときは、ネットワークがタイムアウトを伝えた後にアプリケーションが&quot;例外&quot;を受け取ります。このようにならないように、開発者がスコアをサーバーに送るときには非同期の送信を行うことを強く推奨します。また、スコアを送れずエラーになるときは、開発者の責任でスコアの送信を持続、完了してしてください。開発者はNetworkクラスのNetwork.Stateプロパティにて、デバイスのオンライン状況を確認することが出来ます。デバイスがネットワーク接続していればNetworkState.NetworkServicesServerReadyが戻され、接続されていなければNetworkState.NotConnectedが戻されます。</p>
+</blockquote>
+</div>
+</div>
+ </div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

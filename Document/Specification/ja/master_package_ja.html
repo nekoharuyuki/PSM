@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: マスターの作成と提出 概要</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('master_package_ja.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<h1>マスターの作成と提出 概要 </h1>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><p>この文書では完成したPSMアプリをマスターパッケージとして作成する方法と、それを弊社に提出する方法について説明します。</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#id2" id="id7">マスター、マスターパッケージとは</a></li>
+<li><a class="reference internal" href="#id3" id="id8">マスターの作成と提出の手順</a><ul>
+<li><a class="reference internal" href="#psm" id="id9">PSMアプリケーション開発ガイドライン</a></li>
+<li><a class="reference internal" href="#publishing-utility" id="id10">Publishing Utility</a></li>
+<li><a class="reference internal" href="#id5" id="id11">マスターパッケージを作成する</a></li>
+<li><a class="reference internal" href="#id6" id="id12">マスターを提出する</a></li>
+<li><a class="reference internal" href="#devportal" id="id13">DevPortalでの作業</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h1><a class="toc-backref" href="#id7">マスター、マスターパッケージとは</a></h1>
+<blockquote>
+<p>マスターパッケージとは、PSMアプリをPS Storeで配信するために必要なファイル群をひとまとめにしたファイルをいいます。</p>
+<p>マスターパッケージは、単にマスターと略して呼ばれることがあります。</p>
+<p>弊社には、このマスターパッケージ形式でPSMアプリを提出します。</p>
+</blockquote>
+</div>
+<div class="section" id="id3">
+<h1><a class="toc-backref" href="#id8">マスターの作成と提出の手順</a></h1>
+<blockquote>
+<p>マスターの作成と提出は以下の手順で行います。</p>
+<ol class="arabic simple">
+<li>PSMアプリケーション開発ガイドラインを読み、PSMアプリに求められる要件をあらかじめ確認しておきます。</li>
+<li>PSMアプリを作成します。</li>
+<li>作成したPSMアプリがPSMアプリケーション開発ガイドラインの条項を遵守しているか確認します。</li>
+<li>Publishing Utilityでアプリケーション情報 app.xml のMetaDataカテゴリを設定します。</li>
+<li>PSMアプリに対応するアプリ鍵を作成し、実機での動作を確認します。</li>
+<li>PSM Studioで、PSMアプリをマスターパッケージ形式でビルドします。</li>
+<li>マスターパッケージを弊社に提出します。</li>
+<li>DevPortalでPSMアプリおよびアプリ内課金の価格を設定します。</li>
+</ol>
+<p>※ sample/Tutorial/Sample08_02 は、app.xmlにマスターパッケージを作成するための設定がなされています。マスターパッケージを作成するときの参考にしてください。</p>
+<p>※ マスターパッケージは、パブリッシャライセンスを購入し、銀行口座情報の確認が完了してからでないと作成できません。</p>
+</blockquote>
+<div class="section" id="psm">
+<h2><a class="toc-backref" href="#id9">PSMアプリケーション開発ガイドライン</a></h2>
+<blockquote>
+<p>PSMアプリケーション開発ガイドライン(以下、ガイドライン)は、PSMアプリに求められる要件をまとめたドキュメントです。</p>
+<p>PSMアプリをPS Storeで配信する場合、このガイドラインの条項を遵守する必要あります。</p>
+<p>マスターの提出前にガイドラインの条項を満たしていることを確認の上、マスターを提出してください。</p>
+</blockquote>
+</div>
+<div class="section" id="publishing-utility">
+<h2><a class="toc-backref" href="#id10">Publishing Utility</a></h2>
+<blockquote>
+<p>Publishing Utilityでアプリケーション情報 app.xmlのMetaDataカテゴリを設定します。</p>
+<p>Publishing Utilityの詳細は <a class="reference external" href="publishing_utility_ja.html">Publishing Utilityの使い方</a> を参照してください。</p>
+</blockquote>
+</div>
+<div class="section" id="id5">
+<h2><a class="toc-backref" href="#id11">マスターパッケージを作成する</a></h2>
+<blockquote>
+<p>アプリケーション情報 app.xmlの設定が完了したら、マスターパッケージを作成します。</p>
+<p>※1 マスターパッケージの作成前に、PSMアプリに対応するアプリ鍵を作成し、実機での動作を確認しておいてください。</p>
+<p>※2 銀行口座の登録とその後のSCEによる手続きが完了するまで、マスターパッケージを作成することはできません。</p>
+<p>マスターパッケージを作成するには、PSM Studioを起動し、ビルド設定で[Release]を選択し、 [メニュー] - [Project] - [Compose PSM Master Package]を選択します。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="./image/user_guide/create_master.JPG" src="./image/user_guide/create_master.JPG" style="width: 462.4px; height: 357.6px;" />
+<p class="caption"><strong>図1 マスターパッケージの作成</strong></p>
+</div>
+</blockquote>
+<p>ビルドが成功すると、プロジェクトのbin/Release フォルダー内に、拡張子psmpの付いたマスターパッケージが作成されます。</p>
+<p><strong>注意</strong> : マスターパッケージを提出する時、SENアカウントとパブリッシャ鍵はマスターパッケージ作成時に利用したものと同じものである必要があります。またPlayStation(R)StoreでPSMアプリの配信が開始されるまで、パブリッシャ鍵を更新しないよう注意してください。</p>
+</blockquote>
+</div>
+<div class="section" id="id6">
+<h2><a class="toc-backref" href="#id12">マスターを提出する</a></h2>
+<blockquote>
+<p>マスターを提出するには、[メニュー] - [Project] - [Submit PSM Master Package]を選択します。ダイアログが表示されるので、指示に従って入力をおこなってください。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="./image/user_guide/create_master02.JPG" src="./image/user_guide/create_master02.JPG" style="width: 462.4px; height: 357.6px;" />
+<p class="caption"><strong>図2 マスターパッケージの提出</strong></p>
+</div>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="devportal">
+<h2><a class="toc-backref" href="#id13">DevPortalでの作業</a></h2>
+<blockquote>
+<p>マスター提出が完了したら、DevPortalで以下の設定を行ってください。 <a class="reference external" href="https://psm.playstation.net">https://psm.playstation.net</a></p>
+<ul class="simple">
+<li>提出したPSMアプリの価格設定。</li>
+<li>アプリ内課金の価格設定。</li>
+<li>スクリーンショットの設定。</li>
+<li>バナーの設定。</li>
+</ul>
+</blockquote>
+</div>
+</div>
+ </div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

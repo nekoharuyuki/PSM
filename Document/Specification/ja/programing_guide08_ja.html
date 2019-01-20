@@ -1,0 +1,555 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: 8. ゲームの完成</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('programing_guide08_ja.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<h1>8. ゲームの完成 </h1>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><p>この文書では2Dシューティングゲームの完成まで説明します。</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#id2" id="id8">敵・敵弾・敵のコマンダー</a><ul>
+<li><a class="reference internal" href="#enemy" id="id9">Enemyクラス</a></li>
+<li><a class="reference internal" href="#enemybullet" id="id10">EnemyBulletクラス</a></li>
+<li><a class="reference internal" href="#enemycommander" id="id11">EnemyCommanderクラス</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id3" id="id12">あたり判定と爆発エフェクト</a><ul>
+<li><a class="reference internal" href="#collisioncheck" id="id13">CollisionCheck</a></li>
+<li><a class="reference internal" href="#player" id="id14">Playerクラスの改造</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id4" id="id15">ゲームの進行を管理するクラス</a><ul>
+<li><a class="reference internal" href="#gamemanager" id="id16">GameManager</a></li>
+<li><a class="reference internal" href="#id5" id="id17">ステージの合間にガベージコレクションを呼び出す</a></li>
+<li><a class="reference internal" href="#id6" id="id18">アクターツリーの完成形</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id7" id="id19">ゲームの完成</a></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h1><a class="toc-backref" href="#id8">敵・敵弾・敵のコマンダー</a></h1>
+<blockquote>
+<p>ではゲームに必要なキャラクターのクラスをどんどん実装していきましょう。</p>
+<p>クラスの実装は星や自機の弾と同じ要領でおこなえば大丈夫です。</p>
+<p>sample/Tutorial/Sample08_01/Sample08_01.slnを開いてください。</p>
+</blockquote>
+<div class="section" id="enemy">
+<h2><a class="toc-backref" href="#id9">Enemyクラス</a></h2>
+<blockquote>
+<p>まずは敵のクラスです。</p>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">Enemy</span> <span class="p">:</span> <span class="n">GameActor</span>
+<span class="p">{</span>
+    <span class="k">static</span> <span class="kt">int</span> <span class="n">idNum</span><span class="p">=</span><span class="m">0</span><span class="p">;</span>
+
+    <span class="kt">float</span> <span class="n">speed</span><span class="p">=</span><span class="m">4</span><span class="p">;</span>
+    <span class="n">Int32</span> <span class="n">cnt</span><span class="p">=</span><span class="m">0</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="nf">Enemy</span><span class="p">(</span><span class="n">GameFrameworkSample</span> <span class="n">gs</span><span class="p">,</span> <span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="n">Texture2D</span> <span class="n">textrue</span><span class="p">,</span> <span class="n">Vector3</span> <span class="n">position</span><span class="p">)</span> <span class="p">:</span> <span class="k">base</span> <span class="p">(</span><span class="n">gs</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Name</span> <span class="p">=</span> <span class="n">name</span> <span class="p">+</span> <span class="n">idNum</span><span class="p">.</span><span class="n">ToString</span><span class="p">();</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">sprite</span> <span class="p">=</span> <span class="k">new</span> <span class="n">SimpleSprite</span><span class="p">(</span> <span class="n">gs</span><span class="p">.</span><span class="n">Graphics</span><span class="p">,</span> <span class="n">textrue</span> <span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">sprite</span><span class="p">.</span><span class="n">Center</span><span class="p">.</span><span class="n">X</span> <span class="p">=</span> <span class="m">0.5f</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">sprite</span><span class="p">.</span><span class="n">Center</span><span class="p">.</span><span class="n">Y</span> <span class="p">=</span> <span class="m">0.5f</span><span class="p">;</span>
+
+        <span class="n">idNum</span><span class="p">++;</span>
+
+        <span class="k">this</span><span class="p">.</span><span class="n">sprite</span><span class="p">.</span><span class="n">Position</span> <span class="p">=</span> <span class="n">position</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">Update</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">sprite</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">Y</span> <span class="p">+=</span> <span class="n">speed</span><span class="p">;</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">sprite</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">Y</span> <span class="p">&gt;</span> <span class="n">gs</span><span class="p">.</span><span class="n">rectScreen</span><span class="p">.</span><span class="n">Height</span> <span class="p">+</span> <span class="n">sprite</span><span class="p">.</span><span class="n">Height</span> <span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="n">Status</span> <span class="p">=</span> <span class="n">Actor</span><span class="p">.</span><span class="n">ActorStatus</span><span class="p">.</span><span class="n">Dead</span><span class="p">;</span><span class="c1">//画面外にでたら死亡。</span>
+        <span class="p">}</span>
+
+        <span class="c1">// 弾発射。</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">cnt</span> <span class="p">==</span> <span class="m">60</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">GameActor</span> <span class="n">player</span> <span class="p">=(</span><span class="n">GameActor</span><span class="p">)</span><span class="n">gs</span><span class="p">.</span><span class="n">Root</span><span class="p">.</span><span class="n">Search</span><span class="p">(</span><span class="s">&quot;Player&quot;</span><span class="p">);</span>
+
+            <span class="n">Vector2</span> <span class="n">direction</span><span class="p">;</span>
+            <span class="n">direction</span><span class="p">.</span><span class="n">X</span><span class="p">=</span> <span class="n">player</span><span class="p">.</span><span class="n">Sprite</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">X</span> <span class="p">-</span> <span class="k">this</span><span class="p">.</span><span class="n">sprite</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">X</span><span class="p">;</span>
+            <span class="n">direction</span><span class="p">.</span><span class="n">Y</span><span class="p">=</span> <span class="n">player</span><span class="p">.</span><span class="n">Sprite</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">Y</span> <span class="p">-</span> <span class="k">this</span><span class="p">.</span><span class="n">sprite</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">Y</span><span class="p">;</span>
+            <span class="n">direction</span><span class="p">=</span><span class="n">direction</span><span class="p">.</span><span class="n">Normalize</span><span class="p">();</span>
+
+            <span class="n">gs</span><span class="p">.</span><span class="n">Root</span><span class="p">.</span><span class="n">Search</span><span class="p">(</span><span class="s">&quot;enemyBulletManager&quot;</span><span class="p">).</span><span class="n">AddChild</span><span class="p">(</span><span class="k">new</span> <span class="n">EnemyBullet</span><span class="p">(</span><span class="n">gs</span><span class="p">,</span> <span class="s">&quot;enemyBullet&quot;</span><span class="p">,</span> <span class="n">gs</span><span class="p">.</span><span class="n">textureEnemyBullet</span><span class="p">,</span>
+                <span class="k">new</span> <span class="nf">Vector3</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">sprite</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">X</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="n">sprite</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">Y</span><span class="p">,</span> <span class="m">0.5f</span><span class="p">),</span> <span class="n">direction</span><span class="p">));</span>
+        <span class="p">}</span>
+
+        <span class="p">++</span><span class="n">cnt</span><span class="p">;</span>
+
+        <span class="k">base</span><span class="p">.</span><span class="n">Update</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+<p>出現から60フレーム経過したら、自機に向かって弾を発射するようにしています。</p>
+<p>direction=direction.Normalize()で方向ベクトルを単位ベクトルにしています。</p>
+<p>画面外に出たら死亡フラグを立てます。</p>
+</blockquote>
+</div>
+<div class="section" id="enemybullet">
+<h2><a class="toc-backref" href="#id10">EnemyBulletクラス</a></h2>
+<blockquote>
+<p>次に敵弾のクラスです。</p>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">EnemyBullet</span> <span class="p">:</span> <span class="n">GameActor</span>
+<span class="p">{</span>
+    <span class="k">static</span> <span class="kt">int</span> <span class="n">idNum</span><span class="p">=</span><span class="m">0</span><span class="p">;</span>
+
+    <span class="kt">float</span> <span class="n">speed</span><span class="p">=</span><span class="m">6</span><span class="p">;</span>
+
+    <span class="n">Vector3</span> <span class="n">trans</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="nf">EnemyBullet</span><span class="p">(</span><span class="n">GameFrameworkSample</span> <span class="n">gs</span><span class="p">,</span> <span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="n">Texture2D</span> <span class="n">textrue</span><span class="p">,</span> <span class="n">Vector3</span> <span class="n">position</span><span class="p">,</span> <span class="n">Vector2</span> <span class="n">direction</span><span class="p">)</span> <span class="p">:</span> <span class="k">base</span> <span class="p">(</span><span class="n">gs</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Name</span> <span class="p">=</span> <span class="n">name</span> <span class="p">+</span> <span class="n">idNum</span><span class="p">.</span><span class="n">ToString</span><span class="p">();</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">sprite</span> <span class="p">=</span> <span class="k">new</span> <span class="n">SimpleSprite</span><span class="p">(</span> <span class="n">gs</span><span class="p">.</span><span class="n">Graphics</span><span class="p">,</span> <span class="n">textrue</span> <span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">sprite</span><span class="p">.</span><span class="n">Center</span><span class="p">.</span><span class="n">X</span> <span class="p">=</span> <span class="m">0.5f</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">sprite</span><span class="p">.</span><span class="n">Center</span><span class="p">.</span><span class="n">Y</span> <span class="p">=</span> <span class="m">0.5f</span><span class="p">;</span>
+
+        <span class="n">idNum</span><span class="p">++;</span>
+
+        <span class="k">this</span><span class="p">.</span><span class="n">trans</span><span class="p">.</span><span class="n">X</span><span class="p">=</span><span class="n">direction</span><span class="p">.</span><span class="n">X</span><span class="p">*</span><span class="n">speed</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">trans</span><span class="p">.</span><span class="n">Y</span><span class="p">=</span><span class="n">direction</span><span class="p">.</span><span class="n">Y</span><span class="p">*</span><span class="n">speed</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">trans</span><span class="p">.</span><span class="n">Z</span><span class="p">=</span><span class="m">0.0f</span><span class="p">;</span>
+
+        <span class="k">this</span><span class="p">.</span><span class="n">sprite</span><span class="p">.</span><span class="n">Position</span> <span class="p">=</span> <span class="n">position</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">Update</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">sprite</span><span class="p">.</span><span class="n">Position</span> <span class="p">+=</span> <span class="n">trans</span><span class="p">;</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">sprite</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">X</span> <span class="p">&lt;</span> <span class="m">0</span> <span class="p">-</span><span class="n">sprite</span><span class="p">.</span><span class="n">Width</span> <span class="p">||</span>
+            <span class="n">sprite</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">Y</span> <span class="p">&lt;</span> <span class="m">0</span> <span class="p">-</span><span class="n">sprite</span><span class="p">.</span><span class="n">Height</span><span class="p">||</span>
+            <span class="n">gs</span><span class="p">.</span><span class="n">rectScreen</span><span class="p">.</span><span class="n">Width</span> <span class="p">+</span> <span class="n">sprite</span><span class="p">.</span><span class="n">Width</span> <span class="p">&lt;</span> <span class="n">sprite</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">X</span> <span class="p">||</span>
+            <span class="n">gs</span><span class="p">.</span><span class="n">rectScreen</span><span class="p">.</span><span class="n">Height</span> <span class="p">+</span> <span class="n">sprite</span><span class="p">.</span><span class="n">Height</span> <span class="p">&lt;</span> <span class="n">sprite</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">Y</span>  <span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="n">Status</span> <span class="p">=</span> <span class="n">Actor</span><span class="p">.</span><span class="n">ActorStatus</span><span class="p">.</span><span class="n">Dead</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">base</span><span class="p">.</span><span class="n">Update</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+<p>引数の方向ベクトルに速度を乗算して移動ベクトルを算出し、Update()で毎フレーム移動ベクトルを加算しています。</p>
+<p>画面外に出たら死亡フラグを立てます。</p>
+</blockquote>
+</div>
+<div class="section" id="enemycommander">
+<h2><a class="toc-backref" href="#id11">EnemyCommanderクラス</a></h2>
+<blockquote>
+<p>次は敵を出現させる管理クラスです。</p>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">EnemyCommander</span> <span class="p">:</span> <span class="n">GameActor</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="nf">EnemyCommander</span><span class="p">(</span><span class="n">GameFrameworkSample</span> <span class="n">gs</span><span class="p">,</span> <span class="kt">string</span> <span class="n">name</span><span class="p">)</span> <span class="p">:</span> <span class="k">base</span> <span class="p">(</span><span class="n">gs</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>    <span class="p">{}</span>
+
+    <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">Update</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span> <span class="n">gs</span><span class="p">.</span><span class="n">appCounter</span> <span class="p">%</span> <span class="m">30</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Vector3</span> <span class="n">position</span><span class="p">;</span>
+
+            <span class="n">position</span><span class="p">.</span><span class="n">X</span> <span class="p">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)(</span><span class="n">gs</span><span class="p">.</span><span class="n">rectScreen</span><span class="p">.</span><span class="n">Width</span> <span class="p">*</span> <span class="n">gs</span><span class="p">.</span><span class="n">rand</span><span class="p">.</span><span class="n">NextDouble</span><span class="p">());</span>
+            <span class="n">position</span><span class="p">.</span><span class="n">Y</span> <span class="p">=</span> <span class="m">0.0f</span><span class="p">;</span>
+            <span class="n">position</span><span class="p">.</span><span class="n">Z</span> <span class="p">=</span> <span class="m">0.2f</span><span class="p">;</span>
+
+            <span class="n">gs</span><span class="p">.</span><span class="n">Root</span><span class="p">.</span><span class="n">Search</span><span class="p">(</span><span class="s">&quot;enemyManager&quot;</span><span class="p">).</span><span class="n">AddChild</span><span class="p">(</span><span class="k">new</span> <span class="n">Enemy</span><span class="p">(</span><span class="n">gs</span><span class="p">,</span> <span class="s">&quot;enemy&quot;</span><span class="p">,</span> <span class="n">gs</span><span class="p">.</span><span class="n">textureEnemy</span><span class="p">,</span> <span class="n">position</span><span class="p">));</span>
+        <span class="p">}</span>
+
+        <span class="k">base</span><span class="p">.</span><span class="n">Update</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+<p>30フレームに一度、画面上方向から敵を出現させるようにしています。</p>
+<p>あとはGameFrameworkSample.csで次のようにアクターツリーを構成します。</p>
+<img alt="image/program_guide/actor_tree_sample08.JPG" src="image/program_guide/actor_tree_sample08.JPG" />
+<p>では実行してみましょう。</p>
+<img alt="image/program_guide/sample08.png" src="image/program_guide/sample08.png" />
+<p>敵が画面上から出現し、自機に向けて弾を撃ってきます。</p>
+<p>まだあたり判定をつけていないので弾が素通りしていますね。</p>
+</blockquote>
+</div>
+</div>
+<div class="section" id="id3">
+<h1><a class="toc-backref" href="#id12">あたり判定と爆発エフェクト</a></h1>
+<div class="section" id="collisioncheck">
+<h2><a class="toc-backref" href="#id13">CollisionCheck</a></h2>
+<blockquote>
+<p>次はあたり判定をつけ、命中したら爆発エフェクトを出すようにしましょう。</p>
+<p>sample/Tutorial/Sample08_01/Sample08_02.slnを開いてください。</p>
+<p>sample/Tutorial/Sample08_02/CollisionCheck.cs</p>
+<div class="highlight"><pre><span class="c1">//@j あたり判定をおこなうクラス。</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">CollisionCheck</span> <span class="p">:</span> <span class="n">GameActor</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="nf">CollisionCheck</span><span class="p">(</span><span class="n">GameFrameworkSample</span> <span class="n">gs</span><span class="p">,</span> <span class="kt">string</span> <span class="n">name</span><span class="p">)</span> <span class="p">:</span> <span class="k">base</span> <span class="p">(</span><span class="n">gs</span><span class="p">,</span> <span class="n">name</span><span class="p">){}</span>
+
+    <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">Update</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">Player</span> <span class="n">player</span> <span class="p">=(</span><span class="n">Player</span><span class="p">)</span><span class="n">gs</span><span class="p">.</span><span class="n">Root</span><span class="p">.</span><span class="n">Search</span><span class="p">(</span><span class="s">&quot;Player&quot;</span><span class="p">);</span>
+        <span class="n">Actor</span> <span class="n">bulletManager</span><span class="p">=</span><span class="n">gs</span><span class="p">.</span><span class="n">Root</span><span class="p">.</span><span class="n">Search</span><span class="p">(</span><span class="s">&quot;bulletManager&quot;</span><span class="p">);</span>
+        <span class="n">Actor</span> <span class="n">enemyManager</span> <span class="p">=</span><span class="n">gs</span><span class="p">.</span><span class="n">Root</span><span class="p">.</span><span class="n">Search</span><span class="p">(</span><span class="s">&quot;enemyManager&quot;</span><span class="p">);</span>
+        <span class="n">Actor</span> <span class="n">bulletEnemyManager</span><span class="p">=</span><span class="n">gs</span><span class="p">.</span><span class="n">Root</span><span class="p">.</span><span class="n">Search</span><span class="p">(</span><span class="s">&quot;enemyBulletManager&quot;</span><span class="p">);</span>
+        <span class="n">Actor</span> <span class="n">effectManager</span> <span class="p">=</span><span class="n">gs</span><span class="p">.</span><span class="n">Root</span><span class="p">.</span><span class="n">Search</span><span class="p">(</span><span class="s">&quot;effectManager&quot;</span><span class="p">);</span>
+
+        <span class="c1">//@j 弾と敵のあたり判定。</span>
+        <span class="k">foreach</span><span class="p">(</span> <span class="n">Bullet</span> <span class="n">bullet</span> <span class="k">in</span>  <span class="n">bulletManager</span><span class="p">.</span><span class="n">Children</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">bullet</span><span class="p">.</span><span class="n">Status</span> <span class="p">==</span> <span class="n">Actor</span><span class="p">.</span><span class="n">ActorStatus</span><span class="p">.</span><span class="n">Action</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">foreach</span><span class="p">(</span> <span class="n">Enemy</span> <span class="n">enemy</span> <span class="k">in</span>  <span class="n">enemyManager</span><span class="p">.</span><span class="n">Children</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="k">if</span><span class="p">(</span><span class="n">enemy</span><span class="p">.</span><span class="n">Status</span> <span class="p">==</span>  <span class="n">Actor</span><span class="p">.</span><span class="n">ActorStatus</span><span class="p">.</span><span class="n">Action</span> <span class="p">&amp;&amp;</span>
+                       <span class="n">Math</span><span class="p">.</span><span class="n">Abs</span><span class="p">(</span><span class="n">bullet</span><span class="p">.</span><span class="n">Sprite</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">X</span> <span class="p">-</span><span class="n">enemy</span><span class="p">.</span><span class="n">Sprite</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">X</span> <span class="p">)</span> <span class="p">&lt;</span> <span class="m">30</span> <span class="p">&amp;&amp;</span>
+                        <span class="n">Math</span><span class="p">.</span><span class="n">Abs</span><span class="p">(</span><span class="n">bullet</span><span class="p">.</span><span class="n">Sprite</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">Y</span> <span class="p">-</span><span class="n">enemy</span><span class="p">.</span><span class="n">Sprite</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">Y</span> <span class="p">)</span> <span class="p">&lt;</span> <span class="m">30</span>
+                            <span class="p">)</span>
+                    <span class="p">{</span>
+                        <span class="n">bullet</span><span class="p">.</span><span class="n">Status</span> <span class="p">=</span> <span class="n">Actor</span><span class="p">.</span><span class="n">ActorStatus</span><span class="p">.</span><span class="n">Dead</span><span class="p">;</span>
+                        <span class="n">enemy</span><span class="p">.</span><span class="n">Status</span> <span class="p">=</span> <span class="n">Actor</span><span class="p">.</span><span class="n">ActorStatus</span><span class="p">.</span><span class="n">Dead</span><span class="p">;</span>
+                        <span class="n">effectManager</span><span class="p">.</span><span class="n">AddChild</span><span class="p">(</span><span class="k">new</span> <span class="n">Explosion</span><span class="p">(</span><span class="n">gs</span><span class="p">,</span> <span class="s">&quot;explosion&quot;</span><span class="p">,</span> <span class="n">gs</span><span class="p">.</span><span class="n">textureExplosion</span><span class="p">,</span>
+                            <span class="k">new</span> <span class="nf">Vector3</span><span class="p">(</span><span class="n">enemy</span><span class="p">.</span><span class="n">Sprite</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">X</span><span class="p">,</span> <span class="n">enemy</span><span class="p">.</span><span class="n">Sprite</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">Y</span><span class="p">,</span> <span class="m">0.3f</span><span class="p">)));</span>
+
+                        <span class="n">gs</span><span class="p">.</span><span class="n">Score</span> <span class="p">+=</span> <span class="m">100</span><span class="p">;</span>
+                        <span class="n">gs</span><span class="p">.</span><span class="n">soundPlayerExplosion</span><span class="p">.</span><span class="n">Play</span><span class="p">();</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">player</span><span class="p">.</span><span class="n">playerStatus</span><span class="p">==</span> <span class="n">Player</span><span class="p">.</span><span class="n">PlayerStatus</span><span class="p">.</span><span class="n">Normal</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">//@j 自機と敵のあたり判定。</span>
+            <span class="k">foreach</span><span class="p">(</span> <span class="n">Enemy</span> <span class="n">enemy</span> <span class="k">in</span>  <span class="n">enemyManager</span><span class="p">.</span><span class="n">Children</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">enemy</span><span class="p">.</span><span class="n">Status</span> <span class="p">==</span>  <span class="n">Actor</span><span class="p">.</span><span class="n">ActorStatus</span><span class="p">.</span><span class="n">Action</span> <span class="p">&amp;&amp;</span>
+                   <span class="n">Math</span><span class="p">.</span><span class="n">Abs</span><span class="p">(</span><span class="n">player</span><span class="p">.</span><span class="n">Sprite</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">X</span> <span class="p">-</span><span class="n">enemy</span><span class="p">.</span><span class="n">Sprite</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">X</span> <span class="p">)</span> <span class="p">&lt;</span> <span class="m">42</span> <span class="p">&amp;&amp;</span>
+                    <span class="n">Math</span><span class="p">.</span><span class="n">Abs</span><span class="p">(</span><span class="n">player</span><span class="p">.</span><span class="n">Sprite</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">Y</span> <span class="p">-</span><span class="n">enemy</span><span class="p">.</span><span class="n">Sprite</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">Y</span> <span class="p">)</span> <span class="p">&lt;</span> <span class="m">42</span>
+                        <span class="p">)</span>
+                <span class="p">{</span>
+
+                    <span class="n">effectManager</span><span class="p">.</span><span class="n">AddChild</span><span class="p">(</span><span class="k">new</span> <span class="n">Explosion</span><span class="p">(</span><span class="n">gs</span><span class="p">,</span> <span class="s">&quot;explosion&quot;</span><span class="p">,</span> <span class="n">gs</span><span class="p">.</span><span class="n">textureExplosion</span><span class="p">,</span>
+                        <span class="k">new</span> <span class="nf">Vector3</span><span class="p">(</span><span class="n">player</span><span class="p">.</span><span class="n">Sprite</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">X</span><span class="p">,</span> <span class="n">player</span><span class="p">.</span><span class="n">Sprite</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">Y</span><span class="p">,</span> <span class="m">0.3f</span><span class="p">)));</span>
+
+                    <span class="n">player</span><span class="p">.</span><span class="n">playerStatus</span> <span class="p">=</span> <span class="n">Player</span><span class="p">.</span><span class="n">PlayerStatus</span><span class="p">.</span><span class="n">Explosion</span><span class="p">;</span>
+
+                    <span class="n">gs</span><span class="p">.</span><span class="n">soundPlayerExplosion</span><span class="p">.</span><span class="n">Play</span><span class="p">();</span>
+
+                    <span class="n">gs</span><span class="p">.</span><span class="n">NumShips</span><span class="p">--;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+
+
+            <span class="c1">//@j 自機と敵弾のあたり判定。</span>
+            <span class="k">foreach</span><span class="p">(</span> <span class="n">EnemyBullet</span> <span class="n">enemyBullet</span> <span class="k">in</span>  <span class="n">bulletEnemyManager</span><span class="p">.</span><span class="n">Children</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">enemyBullet</span><span class="p">.</span><span class="n">Status</span> <span class="p">==</span>  <span class="n">Actor</span><span class="p">.</span><span class="n">ActorStatus</span><span class="p">.</span><span class="n">Action</span> <span class="p">&amp;&amp;</span>
+                   <span class="n">Math</span><span class="p">.</span><span class="n">Abs</span><span class="p">(</span><span class="n">player</span><span class="p">.</span><span class="n">Sprite</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">X</span> <span class="p">-</span><span class="n">enemyBullet</span><span class="p">.</span><span class="n">Sprite</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">X</span> <span class="p">)</span> <span class="p">&lt;</span> <span class="m">26</span> <span class="p">&amp;&amp;</span>
+                    <span class="n">Math</span><span class="p">.</span><span class="n">Abs</span><span class="p">(</span><span class="n">player</span><span class="p">.</span><span class="n">Sprite</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">Y</span> <span class="p">-</span><span class="n">enemyBullet</span><span class="p">.</span><span class="n">Sprite</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">Y</span> <span class="p">)</span> <span class="p">&lt;</span> <span class="m">26</span>
+                        <span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="n">enemyBullet</span><span class="p">.</span><span class="n">Status</span> <span class="p">=</span> <span class="n">Actor</span><span class="p">.</span><span class="n">ActorStatus</span><span class="p">.</span><span class="n">Dead</span><span class="p">;</span>
+                    <span class="n">effectManager</span><span class="p">.</span><span class="n">AddChild</span><span class="p">(</span><span class="k">new</span> <span class="n">Explosion</span><span class="p">(</span><span class="n">gs</span><span class="p">,</span> <span class="s">&quot;explosion&quot;</span><span class="p">,</span> <span class="n">gs</span><span class="p">.</span><span class="n">textureExplosion</span><span class="p">,</span>
+                        <span class="k">new</span> <span class="nf">Vector3</span><span class="p">(</span><span class="n">player</span><span class="p">.</span><span class="n">Sprite</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">X</span><span class="p">,</span> <span class="n">player</span><span class="p">.</span><span class="n">Sprite</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">Y</span><span class="p">,</span> <span class="m">0.3f</span><span class="p">)));</span>
+
+                    <span class="n">player</span><span class="p">.</span><span class="n">playerStatus</span> <span class="p">=</span> <span class="n">Player</span><span class="p">.</span><span class="n">PlayerStatus</span><span class="p">.</span><span class="n">Explosion</span><span class="p">;</span>
+                    <span class="n">gs</span><span class="p">.</span><span class="n">soundPlayerExplosion</span><span class="p">.</span><span class="n">Play</span><span class="p">();</span>
+                    <span class="n">gs</span><span class="p">.</span><span class="n">NumShips</span><span class="p">--;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">base</span><span class="p">.</span><span class="n">Update</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+<p>あたり判定を行う各アクターのManagerクラスをアクターツリーの中から検索し、foreachでそれぞれの座標をもとに命中判定をおこなっています。</p>
+<p>Managerクラスでツリー状に管理しておくと、あたり判定を行わなくてよいアクター（星、爆発エフェクト）を始めから除外できるので、処理効率がよいといえるでしょう。</p>
+<p>命中判定が真ならそのアクターに死亡フラグを立て、爆発エフェクトを発生させます。</p>
+<p>爆発エフェクトの発生も、他と同じ要領で行えばよいでしょう。</p>
+</blockquote>
+</div>
+<div class="section" id="player">
+<h2><a class="toc-backref" href="#id14">Playerクラスの改造</a></h2>
+<blockquote>
+<p>ところで、自機が爆発したときやその後の無敵時間のときは、あたり判定を行う必要がありません。</p>
+<p>そのためPlayerの状態を表す変数を実装しておき、処理の場合分けを行いましょう。</p>
+<p>sample/Tutorial/Sample08_02/Player.cs</p>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">enum</span> <span class="n">PlayerStatus</span>
+<span class="p">{</span>
+    <span class="n">Normal</span><span class="p">,</span>
+    <span class="n">Explosion</span><span class="p">,</span>
+    <span class="n">Invincible</span><span class="p">,</span>
+    <span class="n">GameOver</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="k">public</span> <span class="n">PlayerStatus</span> <span class="n">playerStatus</span><span class="p">;</span>
+</pre></div>
+<!-- end-of-code-block -->
+<p>あとはあたり判定時にplayerStatusを見て、処理を行うとよいでしょう。</p>
+</blockquote>
+</div>
+</div>
+<div class="section" id="id4">
+<h1><a class="toc-backref" href="#id15">ゲームの進行を管理するクラス</a></h1>
+<div class="section" id="gamemanager">
+<h2><a class="toc-backref" href="#id16">GameManager</a></h2>
+<blockquote>
+<p>あとは、簡単なオープニング画面とゲームオーバー画面、点数表示をつくっておきましょう。</p>
+<p>ここではゲームの進行を管理するクラスをつくります。</p>
+<p>sample/Tutorial/Sample08_02/GameManager.cs</p>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">GameManager</span> <span class="p">:</span> <span class="n">GameActor</span>
+<span class="p">{</span>
+    <span class="n">Int32</span> <span class="n">cnt</span><span class="p">=</span><span class="m">0</span><span class="p">;</span>
+
+    <span class="n">SimpleSprite</span> <span class="n">spriteTitle</span><span class="p">;</span>
+    <span class="n">SimpleSprite</span> <span class="n">spritePressStart</span><span class="p">;</span>
+    <span class="n">SimpleSprite</span> <span class="n">spriteGameOver</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="nf">GameManager</span><span class="p">(</span><span class="n">GameFrameworkSample</span> <span class="n">gs</span><span class="p">,</span> <span class="kt">string</span> <span class="n">name</span><span class="p">)</span> <span class="p">:</span> <span class="k">base</span> <span class="p">(</span><span class="n">gs</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">spriteTitle</span><span class="p">=</span><span class="k">new</span> <span class="n">SimpleSprite</span><span class="p">(</span><span class="n">gs</span><span class="p">.</span><span class="n">Graphics</span><span class="p">,</span> <span class="n">gs</span><span class="p">.</span><span class="n">textureTitle</span><span class="p">);</span>
+        <span class="n">spriteTitle</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">X</span> <span class="p">=</span> <span class="n">gs</span><span class="p">.</span><span class="n">rectScreen</span><span class="p">.</span><span class="n">Width</span><span class="p">/</span><span class="m">2</span><span class="p">-</span><span class="n">gs</span><span class="p">.</span><span class="n">textureTitle</span><span class="p">.</span><span class="n">Width</span><span class="p">/</span><span class="m">2</span><span class="p">;</span>
+        <span class="n">spriteTitle</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">Y</span> <span class="p">=</span> <span class="n">gs</span><span class="p">.</span><span class="n">rectScreen</span><span class="p">.</span><span class="n">Height</span><span class="p">/</span><span class="m">2</span><span class="p">-</span><span class="n">gs</span><span class="p">.</span><span class="n">textureTitle</span><span class="p">.</span><span class="n">Height</span><span class="p">;</span>
+
+        <span class="n">spritePressStart</span><span class="p">=</span><span class="k">new</span> <span class="n">SimpleSprite</span><span class="p">(</span><span class="n">gs</span><span class="p">.</span><span class="n">Graphics</span><span class="p">,</span> <span class="n">gs</span><span class="p">.</span><span class="n">texturePressStart</span><span class="p">);</span>
+        <span class="n">spritePressStart</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">X</span> <span class="p">=</span> <span class="n">gs</span><span class="p">.</span><span class="n">rectScreen</span><span class="p">.</span><span class="n">Width</span><span class="p">/</span><span class="m">2</span><span class="p">-</span><span class="n">gs</span><span class="p">.</span><span class="n">texturePressStart</span><span class="p">.</span><span class="n">Width</span><span class="p">/</span><span class="m">2</span><span class="p">;</span>
+        <span class="n">spritePressStart</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">Y</span> <span class="p">=</span> <span class="n">gs</span><span class="p">.</span><span class="n">rectScreen</span><span class="p">.</span><span class="n">Height</span><span class="p">/</span><span class="m">2</span><span class="p">+</span><span class="n">gs</span><span class="p">.</span><span class="n">texturePressStart</span><span class="p">.</span><span class="n">Height</span><span class="p">;</span>
+
+        <span class="n">spriteGameOver</span><span class="p">=</span><span class="k">new</span> <span class="n">SimpleSprite</span><span class="p">(</span><span class="n">gs</span><span class="p">.</span><span class="n">Graphics</span><span class="p">,</span> <span class="n">gs</span><span class="p">.</span><span class="n">textureGameOver</span><span class="p">);</span>
+        <span class="n">spriteGameOver</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">X</span> <span class="p">=</span> <span class="n">gs</span><span class="p">.</span><span class="n">rectScreen</span><span class="p">.</span><span class="n">Width</span><span class="p">/</span><span class="m">2</span><span class="p">-</span><span class="n">gs</span><span class="p">.</span><span class="n">textureGameOver</span><span class="p">.</span><span class="n">Width</span><span class="p">/</span><span class="m">2</span><span class="p">;</span>
+        <span class="n">spriteGameOver</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">Y</span> <span class="p">=</span> <span class="n">gs</span><span class="p">.</span><span class="n">rectScreen</span><span class="p">.</span><span class="n">Height</span><span class="p">/</span><span class="m">2</span><span class="p">-</span><span class="n">gs</span><span class="p">.</span><span class="n">textureGameOver</span><span class="p">.</span><span class="n">Height</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">Update</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">gs</span><span class="p">.</span><span class="n">debugStringScore</span><span class="p">.</span><span class="n">Clear</span><span class="p">();</span>
+        <span class="n">gs</span><span class="p">.</span><span class="n">debugStringShip</span><span class="p">.</span><span class="n">Clear</span><span class="p">();</span>
+
+        <span class="kt">string</span> <span class="n">str</span> <span class="p">=</span> <span class="n">String</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;Score: {0:d8}&quot;</span><span class="p">,</span> <span class="n">gs</span><span class="p">.</span><span class="n">Score</span><span class="p">);</span>
+        <span class="n">gs</span><span class="p">.</span><span class="n">debugStringScore</span><span class="p">.</span><span class="n">SetPosition</span><span class="p">(</span><span class="k">new</span> <span class="n">Vector3</span><span class="p">(</span> <span class="n">gs</span><span class="p">.</span><span class="n">rectScreen</span><span class="p">.</span><span class="n">Width</span><span class="p">/</span><span class="m">2</span><span class="p">-(</span><span class="n">str</span><span class="p">.</span><span class="n">Length</span><span class="p">*</span><span class="m">10</span><span class="p">/</span><span class="m">2</span><span class="p">),</span> <span class="m">2</span><span class="p">,</span> <span class="m">0</span><span class="p">));</span>
+        <span class="n">gs</span><span class="p">.</span><span class="n">debugStringScore</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+
+        <span class="n">str</span> <span class="p">=</span> <span class="n">String</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;Ships:{0}&quot;</span><span class="p">,</span> <span class="n">gs</span><span class="p">.</span><span class="n">NumShips</span><span class="p">);</span>
+        <span class="n">gs</span><span class="p">.</span><span class="n">debugStringShip</span><span class="p">.</span><span class="n">SetPosition</span><span class="p">(</span><span class="k">new</span> <span class="n">Vector3</span><span class="p">(</span> <span class="n">gs</span><span class="p">.</span><span class="n">rectScreen</span><span class="p">.</span><span class="n">Width</span><span class="p">-(</span><span class="n">str</span><span class="p">.</span><span class="n">Length</span><span class="p">*</span><span class="m">10</span><span class="p">),</span> <span class="m">2</span><span class="p">,</span> <span class="m">0</span><span class="p">));</span>
+        <span class="n">gs</span><span class="p">.</span><span class="n">debugStringShip</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+
+        <span class="k">switch</span><span class="p">(</span><span class="n">gs</span><span class="p">.</span><span class="n">Step</span><span class="p">)</span>
+        <span class="p">{</span>
+        <span class="k">case</span> <span class="n">GameFrameworkSample</span><span class="p">.</span><span class="n">StepType</span><span class="p">.</span><span class="n">Opening</span><span class="p">:</span>
+            <span class="n">gs</span><span class="p">.</span><span class="n">debugString</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Opening&quot;</span><span class="p">);</span>
+
+            <span class="k">if</span><span class="p">((</span><span class="n">gs</span><span class="p">.</span><span class="n">PadData</span><span class="p">.</span><span class="n">ButtonsDown</span> <span class="p">&amp;</span> <span class="n">GamePadButtons</span><span class="p">.</span><span class="n">Start</span><span class="p">)</span> <span class="p">!=</span> <span class="m">0</span>  <span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">Player</span> <span class="n">player</span> <span class="p">=(</span><span class="n">Player</span><span class="p">)</span><span class="n">gs</span><span class="p">.</span><span class="n">Root</span><span class="p">.</span><span class="n">Search</span><span class="p">(</span><span class="s">&quot;Player&quot;</span><span class="p">);</span>
+                <span class="n">player</span><span class="p">.</span><span class="n">Status</span> <span class="p">=</span> <span class="n">Actor</span><span class="p">.</span><span class="n">ActorStatus</span><span class="p">.</span><span class="n">Action</span><span class="p">;</span>
+                <span class="n">player</span><span class="p">.</span><span class="n">Initilize</span><span class="p">();</span>
+
+                <span class="n">gs</span><span class="p">.</span><span class="n">GameCounter</span><span class="p">=</span><span class="m">0</span><span class="p">;</span>
+                <span class="n">gs</span><span class="p">.</span><span class="n">NumShips</span><span class="p">=</span><span class="m">3</span><span class="p">;</span>
+                <span class="n">gs</span><span class="p">.</span><span class="n">Score</span><span class="p">=</span><span class="m">0</span><span class="p">;</span>
+                <span class="n">gs</span><span class="p">.</span><span class="n">soundPlayerButton</span><span class="p">.</span><span class="n">Play</span><span class="p">();</span>
+                <span class="n">gs</span><span class="p">.</span><span class="n">bgmPlayer</span><span class="p">.</span><span class="n">Play</span><span class="p">();</span>
+                <span class="n">gs</span><span class="p">.</span><span class="n">Step</span><span class="p">=</span> <span class="n">GameFrameworkSample</span><span class="p">.</span><span class="n">StepType</span><span class="p">.</span><span class="n">GamePlay</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="n">GameFrameworkSample</span><span class="p">.</span><span class="n">StepType</span><span class="p">.</span><span class="n">GamePlay</span><span class="p">:</span>
+            <span class="n">gs</span><span class="p">.</span><span class="n">debugString</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;GamePlay&quot;</span><span class="p">);</span>
+
+            <span class="c1">//@j 残機が0になったらゲームオーバーへ。</span>
+            <span class="c1">//@e Game over when player stock falls to zero.</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">gs</span><span class="p">.</span><span class="n">NumShips</span> <span class="p">&lt;=</span> <span class="m">0</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">gs</span><span class="p">.</span><span class="n">Step</span><span class="p">=</span> <span class="n">GameFrameworkSample</span><span class="p">.</span><span class="n">StepType</span><span class="p">.</span><span class="n">GameOver</span><span class="p">;</span>
+                <span class="n">gs</span><span class="p">.</span><span class="n">bgmPlayer</span><span class="p">.</span><span class="n">Stop</span><span class="p">();</span>
+                <span class="n">cnt</span><span class="p">=</span><span class="m">0</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="p">++</span><span class="n">gs</span><span class="p">.</span><span class="n">GameCounter</span><span class="p">;</span>
+
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="n">GameFrameworkSample</span><span class="p">.</span><span class="n">StepType</span><span class="p">.</span><span class="n">GameOver</span><span class="p">:</span>
+            <span class="n">gs</span><span class="p">.</span><span class="n">debugString</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;GameOver&quot;</span><span class="p">);</span>
+
+            <span class="k">if</span><span class="p">((</span><span class="n">gs</span><span class="p">.</span><span class="n">PadData</span><span class="p">.</span><span class="n">ButtonsDown</span> <span class="p">&amp;</span> <span class="n">GamePadButtons</span><span class="p">.</span><span class="n">Start</span><span class="p">)</span> <span class="p">!=</span> <span class="m">0</span> <span class="p">||</span> <span class="p">++</span><span class="n">cnt</span> <span class="p">&gt;</span> <span class="m">300</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">gs</span><span class="p">.</span><span class="n">Step</span><span class="p">=</span> <span class="n">GameFrameworkSample</span><span class="p">.</span><span class="n">StepType</span><span class="p">.</span><span class="n">Opening</span><span class="p">;</span>
+                <span class="n">System</span><span class="p">.</span><span class="n">GC</span><span class="p">.</span><span class="n">Collect</span><span class="p">(</span><span class="m">2</span><span class="p">);</span>
+            <span class="p">}</span>
+
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">default</span><span class="p">:</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nf">Exception</span><span class="p">(</span><span class="s">&quot;default in StepType.&quot;</span><span class="p">);</span>
+
+        <span class="p">}</span>
+
+        <span class="k">base</span><span class="p">.</span><span class="n">Update</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">Render</span> <span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">gs</span><span class="p">.</span><span class="n">debugStringScore</span><span class="p">.</span><span class="n">Render</span><span class="p">();</span>
+        <span class="n">gs</span><span class="p">.</span><span class="n">debugStringShip</span><span class="p">.</span><span class="n">Render</span><span class="p">();</span>
+
+        <span class="k">switch</span><span class="p">(</span><span class="n">gs</span><span class="p">.</span><span class="n">Step</span><span class="p">)</span>
+        <span class="p">{</span>
+        <span class="k">case</span> <span class="n">GameFrameworkSample</span><span class="p">.</span><span class="n">StepType</span><span class="p">.</span><span class="n">Opening</span><span class="p">:</span>
+            <span class="n">spriteTitle</span><span class="p">.</span><span class="n">Render</span><span class="p">();</span>
+            <span class="n">spritePressStart</span><span class="p">.</span><span class="n">Render</span><span class="p">();</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="n">GameFrameworkSample</span><span class="p">.</span><span class="n">StepType</span><span class="p">.</span><span class="n">GamePlay</span><span class="p">:</span>
+
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="n">GameFrameworkSample</span><span class="p">.</span><span class="n">StepType</span><span class="p">.</span><span class="n">GameOver</span><span class="p">:</span>
+            <span class="n">spriteGameOver</span><span class="p">.</span><span class="n">Render</span><span class="p">();</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">default</span><span class="p">:</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nf">Exception</span><span class="p">(</span><span class="s">&quot;default in StepType.&quot;</span><span class="p">);</span>
+
+        <span class="p">}</span>
+
+        <span class="k">base</span><span class="p">.</span><span class="n">Render</span> <span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<!-- end-of-code-block -->
+<p>GameManager クラスでは、以下の流れでゲームを進行させます。</p>
+<ul class="simple">
+<li>オープニング画面で、ボタンを押してゲーム開始。</li>
+<li>ゲーム中、残機が0になったらゲームオーバー。</li>
+<li>ゲームオーバー画面で一定時間経過、もしくはボタンが押されたら、再びオープニング画面へ。</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="id5">
+<h2><a class="toc-backref" href="#id17">ステージの合間にガベージコレクションを呼び出す</a></h2>
+<blockquote>
+ゲームオーバー画面からオープニング画面に移行するとき、System.GC.Collect(2)でガベージコレクションを強制的に呼び出し、メモリを回収しています。画面が遷移する場所ならガベージコレクションによる処理落ちが発生してもそれほど気になりません。また、ここで呼び出しておくことでプレイ中のガベージコレクションの発生を低減させることができます。</blockquote>
+</div>
+<div class="section" id="id6">
+<h2><a class="toc-backref" href="#id18">アクターツリーの完成形</a></h2>
+<blockquote>
+<p>アクターツリーの完成形は以下のようなイメージになります。</p>
+<img alt="image/program_guide/actor_tree_sample08_02.JPG" src="image/program_guide/actor_tree_sample08_02.JPG" />
+</blockquote>
+</div>
+</div>
+<div class="section" id="id7">
+<h1><a class="toc-backref" href="#id19">ゲームの完成</a></h1>
+<blockquote>
+<p>ようやくゲームの完成です。F5を押して実行してみてください。</p>
+<img alt="image/program_guide/sample08_02.JPG" src="image/program_guide/sample08_02.JPG" />
+<p>sample/Tutorial/Sample08_02 は、app.xmlにマスターパッケージを作成するための設定がなされています。マスターパッケージを作成するときの参考にしてみてください。</p>
+<p>シンプルなゲームですが、ゲームの進行に必要な構造はひと通りそろっているので、あとは好みに応じてどんどん改造していくとよいでしょう。</p>
+</blockquote>
+</div>
+ </div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

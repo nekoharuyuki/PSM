@@ -1,0 +1,601 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: ウィジェット</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('tool_widgets_ja.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<h1>ウィジェット </h1>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><blockquote>
+<p>この章では、UI Toolkitで利用可能なウィジェットについて説明します。</p>
+<p>各プロパティの詳細については <a class="reference external" href="ui_widget_ja.html">UI Toolkit プログラミングガイド - ウィジェット</a> を参照してください。</p>
+</blockquote>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#id2" id="id6">レイアウトのルートとして使用できるウィジェット</a><ul>
+<li><a class="reference internal" href="#scene" id="id7">Scene</a></li>
+<li><a class="reference internal" href="#panel" id="id8">Panel</a></li>
+<li><a class="reference internal" href="#dialog" id="id9">Dialog</a></li>
+<li><a class="reference internal" href="#listpanelitem" id="id10">ListPanelItem</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id3" id="id11">汎用ウィジェット</a><ul>
+<li><a class="reference internal" href="#widget" id="id12">Widget</a></li>
+<li><a class="reference internal" href="#label" id="id13">Label</a></li>
+<li><a class="reference internal" href="#imagebox" id="id14">ImageBox</a></li>
+<li><a class="reference internal" href="#button" id="id15">Button</a></li>
+<li><a class="reference internal" href="#checkbox" id="id16">CheckBox</a></li>
+<li><a class="reference internal" href="#slider" id="id17">Slider</a></li>
+<li><a class="reference internal" href="#progressbar" id="id18">ProgressBar</a></li>
+<li><a class="reference internal" href="#editable-text" id="id19">Editable Text</a></li>
+<li><a class="reference internal" href="#busyindicator" id="id20">BusyIndicator</a></li>
+<li><a class="reference internal" href="#popuplist" id="id21">PopupList</a></li>
+<li><a class="reference internal" href="#date-timepicker" id="id22">Date/TimePicker</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id4" id="id23">コンテナウィジェット</a><ul>
+<li><a class="reference internal" href="#id5" id="id24">Panel</a></li>
+<li><a class="reference internal" href="#scrollpanel" id="id25">ScrollPanel</a></li>
+<li><a class="reference internal" href="#pagepanel" id="id26">PagePanel</a></li>
+<li><a class="reference internal" href="#listpanel" id="id27">ListPanel</a></li>
+<li><a class="reference internal" href="#gridlistpanel" id="id28">GridListPanel</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#live" id="id29">Live ウィジェット</a><ul>
+<li><a class="reference internal" href="#livelistpanel" id="id30">LiveListPanel</a></li>
+<li><a class="reference internal" href="#livejumppanel" id="id31">LiveJumpPanel</a></li>
+<li><a class="reference internal" href="#liveflippanel" id="id32">LiveFlipPanel</a></li>
+<li><a class="reference internal" href="#livescrollpanel" id="id33">LiveScrollPanel</a></li>
+<li><a class="reference internal" href="#livesphere" id="id34">LiveSphere</a></li>
+<li><a class="reference internal" href="#livespringpanel" id="id35">LiveSpringPanel</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h1><a class="toc-backref" href="#id6">レイアウトのルートとして使用できるウィジェット</a></h1>
+<p>内部に他のウィジェットをレイアウト可能なレイアウトのルートとなるウィジェットは、Scene、Panel、Dialog、ListPanelItemの４つです。</p>
+<div class="section" id="scene">
+<h2><a class="toc-backref" href="#id7">Scene</a></h2>
+<blockquote>
+ユーザーインターフェースの&quot;画面&quot;を司るウィジェットです。</blockquote>
+<!-- UI Composerで設定可能なプロパティ
+
+- Size (width,height)
+- Transition(In)
+- Background Color,Alpha -->
+</div>
+<div class="section" id="panel">
+<h2><a class="toc-backref" href="#id8">Panel</a></h2>
+<blockquote>
+任意のUI部品を載せることができるコンテナウィジェットです。レイアウトのルートとして使用できるだけでなく、他の汎用ウィジェットなどをグルーピングする用途にも利用可能です。</blockquote>
+<!-- UI Composerで設定可能なプロパティ
+
+- Background Color
+- Background Alpha -->
+</div>
+<div class="section" id="dialog">
+<h2><a class="toc-backref" href="#id9">Dialog</a></h2>
+<blockquote>
+<blockquote>
+モーダルなダイアログボックスを表示するためのコンテナウィジェットです。Panel と同様に任意のUI部品を格納することが可能です。</blockquote>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/dialog.png" src="image/uitoolkit/dialog.png" style="width: 700px;" />
+<p class="caption"><strong>図1 Dialog</strong></p>
+</div>
+</blockquote>
+<!-- UI Composerで設定可能なプロパティ
+
+- Style
+- Background Image
+- Background ImageScale
+- Background Color
+- Background Alpha -->
+</div>
+<div class="section" id="listpanelitem">
+<h2><a class="toc-backref" href="#id10">ListPanelItem</a></h2>
+<blockquote>
+ListPanelの各項目に表示する内容をレイアウトするためのウィジェットです。</blockquote>
+<!-- UI Composerで設定可能なプロパティ
+
+- Background Color
+- Background Alpha -->
+</div>
+</div>
+<div class="section" id="id3">
+<h1><a class="toc-backref" href="#id11">汎用ウィジェット</a></h1>
+<div class="section" id="widget">
+<h2><a class="toc-backref" href="#id12">Widget</a></h2>
+<blockquote>
+<p>Widget クラスはすべての ウィジェット (ユーザーインターフェース部品) の基底となる抽象クラスです。このクラスのプロパティは全ての ウィジェット で設定可能です。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/composer/property_widget.png" src="image/uitoolkit/composer/property_widget.png" style="width: 400px;" />
+<p class="caption"><strong>図2 Widgetのプロパティ</strong></p>
+</div>
+<p>Variable Name は、ソースコードを出力した際の、対象の Widget のインスタンス名として利用されます。</p>
+<p>Widget の Position の欄には、Position Selectorで選択した位置の座標が表示されます。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/composer/widget_9positions.png" src="image/uitoolkit/composer/widget_9positions.png" style="width: 800px;" />
+<p class="caption"><strong>図3 Position Selector</strong></p>
+</div>
+<p>逆に、Position の欄に数字を入力した場合、その値は、Position Selector で選択した対象に対して適用されます。例えば、Position Selector で中心を選択し(上図(C))、Position の欄に任意の数字を入力することで、対象のウィジェットの中心の座標を直接指定することが可能です。ちなみに、最終的に出力されるソースコードでは、左上隅の座標が自動的に算出され、X、Y プロパティの値として指定されます。</p>
+<p>Scene や Panel のサイズが変わった際に、UISystem は AnchorFlag の設定に基づいて Scene や Panel 内部のウィジェットをレイアウトします。AnchorFlag では、上下左右のマージンを固定にするかどうか、幅・高さを自動的にリサイズするかどうかを設定することが可能です。UI Composer を利用すると、AnchorFlag を視覚的に設定することが可能です。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/composer/anochorflag_customizer.png" src="image/uitoolkit/composer/anochorflag_customizer.png" style="width: 400px;" />
+<p class="caption"><strong>図4 AnchorFlag Customizer</strong></p>
+</div>
+<p>AnchorFlag Customizerは、6つのトグルスイッチ群になっています。ウィジェットの親ウィジェットがリサイズされたときの挙動は、Previewer にアニメーションで表示されます。アニメーションは、マウスカーソルが AnchorFlag Customizer の上にあるときにのみ再生されます。</p>
+<p>UI Composer で設定した内容と、出力されるソースコードで指定される AnchorFlag の値の関係は下図のようになります。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/composer/layout_anchor.png" src="image/uitoolkit/composer/layout_anchor.png" style="width: 800px;" />
+<p class="caption"><strong>図5 アンカー設定とウィジェットのオートリサイズされた結果</strong></p>
+</div>
+<p>Effectは、ウィジェットが画面に登場する際のアニメーションを設定することができます。例えば、ButtonにSlideInEffectを設定した場合には、下記のようなコードが自動生成されます。ただし、レイアウトのルートとして使用したウィジェットの子ウィジェットにのみ有効です。子ウィジェット以外はユーザーコード側で制御してください。</p>
+<div class="highlight"><pre><span class="c1">// ...</span>
+<span class="k">partial</span> <span class="k">class</span> <span class="nc">MyScene</span>
+<span class="p">{</span>
+    <span class="n">Button</span> <span class="n">Button_1</span><span class="p">;</span>
+    <span class="n">Button</span> <span class="n">Button_2</span><span class="p">;</span>
+
+    <span class="c1">// ...</span>
+
+    <span class="k">private</span> <span class="k">void</span> <span class="nf">InitializeWidget</span><span class="p">(</span><span class="n">LayoutOrientation</span> <span class="n">orientation</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// ...</span>
+
+        <span class="c1">// Scene</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">RootWidget</span><span class="p">.</span><span class="n">AddChildLast</span><span class="p">(</span><span class="n">Button_1</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">RootWidget</span><span class="p">.</span><span class="n">AddChildLast</span><span class="p">(</span><span class="n">Button_2</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">Showing</span> <span class="p">+=</span> <span class="k">new</span> <span class="n">EventHandler</span><span class="p">(</span><span class="n">onShowing</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">Shown</span> <span class="p">+=</span> <span class="k">new</span> <span class="n">EventHandler</span><span class="p">(</span><span class="n">onShown</span><span class="p">);</span>
+
+        <span class="n">UpdateLanguage</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="c1">// ...</span>
+
+    <span class="k">private</span> <span class="k">void</span> <span class="nf">onShowing</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">EventArgs</span> <span class="n">e</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">switch</span> <span class="p">(</span><span class="n">_currentLayoutOrientation</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">case</span> <span class="n">LayoutOrientation</span><span class="p">.</span><span class="n">Vertical</span><span class="p">:</span>
+            <span class="p">{</span>
+                <span class="n">Button_2</span><span class="p">.</span><span class="n">Visible</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">break</span><span class="p">;</span>
+
+            <span class="k">default</span><span class="p">:</span>
+            <span class="p">{</span>
+                <span class="n">Button_2</span><span class="p">.</span><span class="n">Visible</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">private</span> <span class="k">void</span> <span class="nf">onShown</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">EventArgs</span> <span class="n">e</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">switch</span> <span class="p">(</span><span class="n">_currentLayoutOrientation</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">case</span> <span class="n">LayoutOrientation</span><span class="p">.</span><span class="n">Vertical</span><span class="p">:</span>
+            <span class="p">{</span>
+                <span class="k">new</span> <span class="nf">SlideInEffect</span><span class="p">()</span>
+                <span class="p">{</span>
+                    <span class="n">Widget</span> <span class="p">=</span> <span class="n">Button_2</span><span class="p">,</span>
+                    <span class="n">MoveDirection</span> <span class="p">=</span> <span class="n">FourWayDirection</span><span class="p">.</span><span class="n">Left</span><span class="p">,</span>
+                <span class="p">}</span>
+                <span class="p">.</span><span class="n">Start</span><span class="p">();</span>
+            <span class="p">}</span>
+            <span class="k">break</span><span class="p">;</span>
+
+            <span class="k">default</span><span class="p">:</span>
+            <span class="p">{</span>
+                <span class="k">new</span> <span class="nf">SlideInEffect</span><span class="p">()</span>
+                <span class="p">{</span>
+                    <span class="n">Widget</span> <span class="p">=</span> <span class="n">Button_2</span><span class="p">,</span>
+                    <span class="n">MoveDirection</span> <span class="p">=</span> <span class="n">FourWayDirection</span><span class="p">.</span><span class="n">Left</span><span class="p">,</span>
+                <span class="p">}</span>
+                <span class="p">.</span><span class="n">Start</span><span class="p">();</span>
+            <span class="p">}</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="c1">// ...</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<!-- UI Composerで設定可能なプロパティ
+
+- Variable Name
+- Position(x,y)
+- Size (width,height)
+- Anchor
+- AutoSizing
+- Alpha
+- Transition(IN) -->
+</div>
+<div class="section" id="label">
+<h2><a class="toc-backref" href="#id13">Label</a></h2>
+<blockquote>
+Label はテキスト表示用の部品です。単一行と、複数行を表示することが可能です。</blockquote>
+<!-- UI Composerで設定可能なプロパティ
+
+- Text
+- Text Color
+- FontFamily
+- FontSize
+- FontStyle
+- Trimming
+- LineBreaks
+- H-Alignment
+- V-Alignment
+- Shadow -->
+</div>
+<div class="section" id="imagebox">
+<h2><a class="toc-backref" href="#id14">ImageBox</a></h2>
+<blockquote>
+<p>画像を表示するためのウィジェットです。</p>
+<p>画像を表示する際のスケーリング方法を指定できます。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/imagebox_scale.png" src="image/uitoolkit/imagebox_scale.png" style="width: 700px;" />
+<p class="caption"><strong>図6 画像のスケーリング方法</strong></p>
+</div>
+</blockquote>
+</blockquote>
+<!-- UI Composerで設定可能なプロパティ
+
+- Image
+- Scale -->
+</div>
+<div class="section" id="button">
+<h2><a class="toc-backref" href="#id15">Button</a></h2>
+<blockquote>
+<p>タッチ操作に反応するボタンウィジェットです。</p>
+<p>ボタンには画像か1行のテキストを表示することが出来ます。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/button.png" src="image/uitoolkit/button.png" style="width: 400px;" />
+<p class="caption"><strong>図7 テキストを表示したButtonと、画像を表示したButton</strong></p>
+</div>
+<p>ボタンの背景画像のカスタマイズもUI Composerで可能です。</p>
+<blockquote>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/button_custom.png" src="image/uitoolkit/button_custom.png" style="width: 700px;" />
+<p class="caption"><strong>図8 背景画像をカスタマイズしたButton</strong></p>
+</div>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/composer/property_button.png" src="image/uitoolkit/composer/property_button.png" style="width: 700px;" />
+<p class="caption"><strong>図9 Buttonのプロパティウィンドウ</strong></p>
+</div>
+</blockquote>
+</blockquote>
+<!-- UI Composerで設定可能なプロパティ
+
+- Style
+- Text
+- TextColor
+- FontFamily
+- FontSize
+- FontStyle
+- Trimming
+- Shadow
+- Image
+- ImageScale
+- State
+- BackgroundImage -->
+</div>
+<div class="section" id="checkbox">
+<h2><a class="toc-backref" href="#id16">CheckBox</a></h2>
+<blockquote>
+<p>いわゆるチェックボックスやラジオボタン用のウィジェットで、真偽値を保持します。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/checkbox_radiobutton.png" src="image/uitoolkit/checkbox_radiobutton.png" />
+<p class="caption"><strong>図10 CheckBox</strong></p>
+</div>
+</blockquote>
+<!-- UI Composerで設定可能なプロパティ
+
+- Checked
+- Style
+- Enabled -->
+</div>
+<div class="section" id="slider">
+<h2><a class="toc-backref" href="#id17">Slider</a></h2>
+<blockquote>
+<p>数値などの調整を行うためのウィジェットです。</p>
+<div align="center" class="figure">
+<img alt="image/ui_widget_slider1.png" src="image/ui_widget_slider1.png" />
+<p class="caption"><strong>図11 Slider</strong></p>
+</div>
+<p>最大値、最小値、初期値、値が変化する際のステップなどを設定することが可能です。</p>
+</blockquote>
+<!-- UI Composerで設定可能なプロパティ
+
+- MinValue
+- MaxValue
+- Value
+- Step
+- Style(Horizontal or Vertical) -->
+</div>
+<div class="section" id="progressbar">
+<h2><a class="toc-backref" href="#id18">ProgressBar</a></h2>
+<blockquote>
+<p>進捗の度合いを表示するウィジェットです。</p>
+<div align="center" class="figure">
+<img alt="image/ui_widget_progress1.png" src="image/ui_widget_progress1.png" />
+<p class="caption"><strong>図12 ProgressBar</strong></p>
+</div>
+</blockquote>
+<!-- UI Composerで設定可能なプロパティ
+
+- Style
+- Progress -->
+</div>
+<div class="section" id="editable-text">
+<h2><a class="toc-backref" href="#id19">Editable Text</a></h2>
+<blockquote>
+<p>テキストの表示と編集ができるウィジェットです。</p>
+<div align="center" class="figure">
+<img alt="image/ui_widget_edit1.png" src="image/ui_widget_edit1.png" />
+<p class="caption"><strong>図13 EditableText</strong></p>
+</div>
+<p>テキスト未入力時のデフォルトテキストの表示、パスワード入力用のマスク表示、オンスクリーンキーボードの入力モードの選択ができます。</p>
+</blockquote>
+<!-- UI Composerで設定可能なプロパティ
+
+- Text
+- Placeholder
+- Text Color
+- Text Alpha
+- FontFamily
+- FontSize
+- FontStyle
+- LineBreaks
+- Horizontal Alignment
+- Vertical Alignment
+- Text Input Mode -->
+</div>
+<div class="section" id="busyindicator">
+<h2><a class="toc-backref" href="#id20">BusyIndicator</a></h2>
+<blockquote>
+<p>何らかの処理が進行中であることを表示するウィジェットです。</p>
+<div align="center" class="figure">
+<img alt="image/ui_widget_busy1.png" src="image/ui_widget_busy1.png" />
+<p class="caption"><strong>図14 BusyIndicator</strong></p>
+</div>
+</blockquote>
+<!-- UI Composerで設定可能なプロパティ
+
+- Animating -->
+</div>
+<div class="section" id="popuplist">
+<h2><a class="toc-backref" href="#id21">PopupList</a></h2>
+<blockquote>
+<p>PopupList は複数の選択肢の中から1つを選ぶために利用する部品です。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/popuplist.png" src="image/uitoolkit/popuplist.png" style="width: 700px;" />
+<p class="caption"><strong>図15 PopupList</strong></p>
+</div>
+<p>PopupListに表示する選択肢をUI Composerで設定することが可能です。</p>
+</blockquote>
+<!-- UI Composerで設定可能なプロパティ
+
+- Title
+- FontFamily
+- FontSize
+- FontStyle
+- TextTrimming
+- Shadow
+- ItemTitles
+- SelectedIndex -->
+</div>
+<div class="section" id="date-timepicker">
+<h2><a class="toc-backref" href="#id22">Date/TimePicker</a></h2>
+<blockquote>
+<p>日付もしくは時刻を選択するためのウィジェットです。</p>
+<p>表示スタイルは2つあり、日付のみ選択できるスタイル、時刻のみ選択できるスタイルの中から選択可能です。それぞれ、DatePicker、TimePicker ウィジェットが生成されます。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/spinbox.png" src="image/uitoolkit/spinbox.png" />
+<p class="caption"><strong>図16 Date/TimePicker</strong></p>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="section" id="id4">
+<h1><a class="toc-backref" href="#id23">コンテナウィジェット</a></h1>
+<div class="section" id="id5">
+<h2><a class="toc-backref" href="#id24">Panel</a></h2>
+<blockquote>
+任意のUI部品を載せることができるコンテナウィジェットです。</blockquote>
+<!-- UI Composerで設定可能なプロパティ
+
+- Background Color
+- Background Alpha -->
+</div>
+<div class="section" id="scrollpanel">
+<h2><a class="toc-backref" href="#id25">ScrollPanel</a></h2>
+<blockquote>
+<p>スクロール可能な領域を持つパネルです。子ウィジェットとしてPanelを一つ持っており、その一部分をクリッピングして表示します。タッチ操作で上下や左右方向にスクロールさせることが可能です。スクロール可能な方向を制限することも可能です。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/scrollpanel.png" src="image/uitoolkit/scrollpanel.png" style="width: 600px;" />
+<p class="caption"><strong>図17 ScrollPanel</strong></p>
+</div>
+<p>ユーザーがレイアウトしたPanelクラスをScrollPanelに追加することが可能です。</p>
+</blockquote>
+<!-- UI Composerで設定可能なプロパティ
+
+- Horizontal Scrollable
+- Vertical Scrollable
+- Scrollbar Visibility
+- Panel Class Name -->
+</div>
+<div class="section" id="pagepanel">
+<h2><a class="toc-backref" href="#id26">PagePanel</a></h2>
+<blockquote>
+<p>ページ単位でスクロールすることのできるパネルです。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/pagepanel.png" src="image/uitoolkit/pagepanel.png" style="width: 600px;" />
+<p class="caption"><strong>図18 PagePanel</strong></p>
+</div>
+<p>ユーザーがレイアウトしたPanelクラスをPagePanelに追加することが可能です。</p>
+</blockquote>
+<!-- UI Composerで設定可能なプロパティ
+
+- Panels -->
+</div>
+<div class="section" id="listpanel">
+<h2><a class="toc-backref" href="#id27">ListPanel</a></h2>
+<blockquote>
+縦方向のみスクロール可能なリストウィジェットです。各項目に表示する内容は ListPanelItem で指定します。
+ユーザーがレイアウトしたListPanelItemを設定することが可能です。</blockquote>
+<!-- UI Composerで設定可能なプロパティ
+
+- Scrollbar Visibility
+- ListPanelItem -->
+</div>
+<div class="section" id="gridlistpanel">
+<h2><a class="toc-backref" href="#id28">GridListPanel</a></h2>
+<blockquote>
+縦方向もしくは横方向にスクロール可能で、格子状に項目が並ぶリストウィジェットです。</blockquote>
+<!-- UI Composerで設定可能なプロパティ
+
+- Direction
+- ScrollBar Visibility -->
+</div>
+</div>
+<div class="section" id="live">
+<h1><a class="toc-backref" href="#id29">Live ウィジェット</a></h1>
+<blockquote>
+Live ウィジェットは、さまざまなインタラクションが実装された PSM 独自のウィジェットです。</blockquote>
+<div class="section" id="livelistpanel">
+<h2><a class="toc-backref" href="#id30">LiveListPanel</a></h2>
+<blockquote>
+タッチした項目に対して、時間差を伴って他の項目がスクロールするリストウィジェットです。</blockquote>
+</div>
+<div class="section" id="livejumppanel">
+<h2><a class="toc-backref" href="#id31">LiveJumpPanel</a></h2>
+<blockquote>
+パネル内に配置したウィジェットを画面手前にジャンプさせることのできるパネルウィジェットです。
+加速度センサーの値変化やボタンの押下など任意のタイミングで子ウィジェットをジャンプさせることが可能です。</blockquote>
+</div>
+<div class="section" id="liveflippanel">
+<h2><a class="toc-backref" href="#id32">LiveFlipPanel</a></h2>
+<blockquote>
+左右のフリックで回転するパネルウィジェットです。表と裏のウィジェットを指定することが可能です。</blockquote>
+</div>
+<div class="section" id="livescrollpanel">
+<h2><a class="toc-backref" href="#id33">LiveScrollPanel</a></h2>
+<blockquote>
+タッチした点を起点として、ゆがみながらスクロールするパネルウィジェットです。</blockquote>
+</div>
+<div class="section" id="livesphere">
+<h2><a class="toc-backref" href="#id34">LiveSphere</a></h2>
+<blockquote>
+球体状のウィジェットです。左右にフリックすることで回転できます。またタップに対するイベントハンドラも定義されており、ボタンとしても利用できます。</blockquote>
+</div>
+<div class="section" id="livespringpanel">
+<h2><a class="toc-backref" href="#id35">LiveSpringPanel</a></h2>
+<blockquote>
+加速度センサーやパネルの動きに応じて子ウィジェットが揺れるパネルです。</blockquote>
+</div>
+</div>
+ </div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

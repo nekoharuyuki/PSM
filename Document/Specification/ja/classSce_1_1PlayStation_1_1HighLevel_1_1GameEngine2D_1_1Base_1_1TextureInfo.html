@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: クラス TextureInfo</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TextureInfo.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">構成</a> &#124;
+<a href="#pub-methods">Public メソッド</a> &#124;
+<a href="#pub-attribs">Public 変数</a> &#124;
+<a href="#properties">プロパティ</a>  </div>
+  <div class="headertitle">
+<h1>クラス TextureInfo</h1>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="Sce::PlayStation::HighLevel::GameEngine2D::Base::TextureInfo" -->
+<p>TextureInfoは、Texture2Dオブジェクトを保持し、関連付けられたタイルのUVデータをキャッシュします。 タイルの転送元領域はテクスチャ全体である必要はなく、UV領域内の任意の大きさのボックスで指定することができます。 TextureInfoは、渡されるTexture2Dオブジェクトの所有権を取得し、Dispose関数で破棄します。  
+<a href="#_details">[詳細]</a></p>
+
+<p><a href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TextureInfo-members.html">すべてのメンバ一覧</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="nested-classes"></a>
+構成</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TextureInfo_1_1CachedTileData.html">CachedTileData</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">各タイルのキャッシュされたUV情報。  <a href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TextureInfo_1_1CachedTileData.html#_details">[詳細]</a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Public メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a512607c54c4c3146a58dbf512101d865"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TextureInfo::GetCachedTiledData" ref="a512607c54c4c3146a58dbf512101d865" args="(ref Vector2i tile_index)" -->
+<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TextureInfo_1_1CachedTileData.html">CachedTileData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TextureInfo.html#a512607c54c4c3146a58dbf512101d865">GetCachedTiledData</a> (ref <a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Vector2i.html">Vector2i</a> tile_index)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">引数で指定されたタイルのCachedTileData（タイルのUV情報が含まれている）を返します。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac56964f7628abb9fa7d9995a816814d4"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TextureInfo::TextureInfo" ref="ac56964f7628abb9fa7d9995a816814d4" args="()" -->
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TextureInfo.html#ac56964f7628abb9fa7d9995a816814d4">TextureInfo</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac534c271e2637f8f10f61b4636d67e87"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TextureInfo::TextureInfo" ref="ac534c271e2637f8f10f61b4636d67e87" args="(string filename)" -->
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TextureInfo.html#ac534c271e2637f8f10f61b4636d67e87">TextureInfo</a> (string filename)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5e8cb462b8ac3ea8cf12f46e25aca18"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TextureInfo::TextureInfo" ref="ac5e8cb462b8ac3ea8cf12f46e25aca18" args="(Texture2D texture)" -->
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TextureInfo.html#ac5e8cb462b8ac3ea8cf12f46e25aca18">TextureInfo</a> (<a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1Texture2D.html">Texture2D</a> texture)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ。 注意: TextureInfoは、このコンストラクタに渡されるTexture2Dの所有権を取得し、Disposeでそれを破棄します。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TextureInfo.html#aed0aac95f9360f7fc4cca14a88aeabf7">TextureInfo</a> (<a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1Texture2D.html">Texture2D</a> texture, <a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Vector2i.html">Vector2i</a> num_tiles)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ。 注意: TextureInfoは、このコンストラクタに渡されるTexture2Dの所有権を取得し、Disposeでそれを破棄します。  <a href="#aed0aac95f9360f7fc4cca14a88aeabf7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TextureInfo.html#a1e377e4e48a5d854fbe50afdc3dc350a">TextureInfo</a> (<a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1Texture2D.html">Texture2D</a> texture, <a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Vector2i.html">Vector2i</a> num_tiles, <a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS.html">TRS</a> source_area)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ。 注意: TextureInfoは、このコンストラクタに渡されるTexture2Dの所有権を取得し、Disposeでそれを破棄します。  <a href="#a1e377e4e48a5d854fbe50afdc3dc350a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e2d745cdb7a7b983f861ed6a9a541a7"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TextureInfo::Dispose" ref="a6e2d745cdb7a7b983f861ed6a9a541a7" args="()" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TextureInfo.html#a6e2d745cdb7a7b983f861ed6a9a541a7">Dispose</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">オブジェクトの破棄。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TextureInfo.html#a2b78ca98115152178ec31ec5ddced7e8">Initialize</a> (<a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1Texture2D.html">Texture2D</a> texture, <a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Vector2i.html">Vector2i</a> num_tiles, <a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS.html">TRS</a> source_area)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">TextureInfoコンストラクタによって呼び出される、実質的な初期化関数。  <a href="#a2b78ca98115152178ec31ec5ddced7e8"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pub-attribs"></a>
+Public 変数</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e8680a38cf4c13921614b78865e9a61"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TextureInfo::Texture" ref="a4e8680a38cf4c13921614b78865e9a61" args="" -->
+<a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1Texture2D.html">Texture2D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TextureInfo.html#a4e8680a38cf4c13921614b78865e9a61">Texture</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャのオブジェクト。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adbf507bbb1983681bdb3693f7de377cb"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TextureInfo::TileSizeInUV" ref="adbf507bbb1983681bdb3693f7de377cb" args="" -->
+<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TextureInfo.html#adbf507bbb1983681bdb3693f7de377cb">TileSizeInUV</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">UV単位でタイルのサイズを返します。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3234769d11882299ea158d7c0b1fe0a3"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TextureInfo::NumTiles" ref="a3234769d11882299ea158d7c0b1fe0a3" args="" -->
+<a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Vector2i.html">Vector2i</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TextureInfo.html#a3234769d11882299ea158d7c0b1fe0a3">NumTiles</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">タイルグリッドの数を返します。 <br/></td></tr>
+<tr><td colspan="2"><h2><a name="properties"></a>
+プロパティ</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc0d734e903193f95b85896897012724"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TextureInfo::TextureSizef" ref="adc0d734e903193f95b85896897012724" args="" -->
+<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TextureInfo.html#adc0d734e903193f95b85896897012724">TextureSizef</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ピクセル単位のテクスチャのサイズをVector2で返します。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a999866214da4a9a817863bf324dd62ee"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TextureInfo::TextureSizei" ref="a999866214da4a9a817863bf324dd62ee" args="" -->
+<a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Vector2i.html">Vector2i</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TextureInfo.html#a999866214da4a9a817863bf324dd62ee">TextureSizei</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ピクセル単位のテクスチャのサイズをVector2iで返します。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1fc7bc64fe4b892437263b308901324d"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TextureInfo::TileSizeInPixelsf" ref="a1fc7bc64fe4b892437263b308901324d" args="" -->
+<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TextureInfo.html#a1fc7bc64fe4b892437263b308901324d">TileSizeInPixelsf</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ピクセル単位のタイルサイズを、Vector2で返します。すべてのタイルは同じサイズを持っています。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7bc8a607ae8023e9f33321121dd669c"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TextureInfo::Disposed" ref="af7bc8a607ae8023e9f33321121dd669c" args="" -->
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TextureInfo.html#af7bc8a607ae8023e9f33321121dd669c">Disposed</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">このオブジェクトが破棄されている場合、trueを返します。 <br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>説明</h2>
+<div class="textblock"><p>TextureInfoは、Texture2Dオブジェクトを保持し、関連付けられたタイルのUVデータをキャッシュします。 タイルの転送元領域はテクスチャ全体である必要はなく、UV領域内の任意の大きさのボックスで指定することができます。 TextureInfoは、渡されるTexture2Dオブジェクトの所有権を取得し、Dispose関数で破棄します。 </p>
+</div><hr/><h2>コンストラクタとデストラクタ</h2>
+<a class="anchor" id="aed0aac95f9360f7fc4cca14a88aeabf7"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TextureInfo::TextureInfo" ref="aed0aac95f9360f7fc4cca14a88aeabf7" args="(Texture2D texture, Vector2i num_tiles)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TextureInfo.html">TextureInfo</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1Texture2D.html">Texture2D</a>&#160;</td>
+          <td class="paramname"><em>texture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Vector2i.html">Vector2i</a>&#160;</td>
+          <td class="paramname"><em>num_tiles</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>コンストラクタ。 注意: TextureInfoは、このコンストラクタに渡されるTexture2Dの所有権を取得し、Disposeでそれを破棄します。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">texture</td><td>テクスチャ。</td></tr>
+    <tr><td class="paramname">num_tiles</td><td>xとyのタイル分割数。</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1e377e4e48a5d854fbe50afdc3dc350a"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TextureInfo::TextureInfo" ref="a1e377e4e48a5d854fbe50afdc3dc350a" args="(Texture2D texture, Vector2i num_tiles, TRS source_area)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TextureInfo.html">TextureInfo</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1Texture2D.html">Texture2D</a>&#160;</td>
+          <td class="paramname"><em>texture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Vector2i.html">Vector2i</a>&#160;</td>
+          <td class="paramname"><em>num_tiles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS.html">TRS</a>&#160;</td>
+          <td class="paramname"><em>source_area</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>コンストラクタ。 注意: TextureInfoは、このコンストラクタに渡されるTexture2Dの所有権を取得し、Disposeでそれを破棄します。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">texture</td><td>テクスチャ。</td></tr>
+    <tr><td class="paramname">num_tiles</td><td>xとyのタイル分割数。</td></tr>
+    <tr><td class="paramname">source_area</td><td>UV領域内の転送元矩形。この矩形内を分割してタイルを構築します。左下が(0,0)になります。</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/><h2>メソッド</h2>
+<a class="anchor" id="a2b78ca98115152178ec31ec5ddced7e8"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TextureInfo::Initialize" ref="a2b78ca98115152178ec31ec5ddced7e8" args="(Texture2D texture, Vector2i num_tiles, TRS source_area)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Initialize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1Texture2D.html">Texture2D</a>&#160;</td>
+          <td class="paramname"><em>texture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Vector2i.html">Vector2i</a>&#160;</td>
+          <td class="paramname"><em>num_tiles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS.html">TRS</a>&#160;</td>
+          <td class="paramname"><em>source_area</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>TextureInfoコンストラクタによって呼び出される、実質的な初期化関数。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">texture</td><td>テクスチャ。</td></tr>
+    <tr><td class="paramname">num_tiles</td><td>セル内のタイル数。水平方向と垂直方向の数を指定します。</td></tr>
+    <tr><td class="paramname">source_area</td><td>UV領域内の転送元矩形。この矩形内を分割してタイルを構築します。左下が(0,0)になります。</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><b>Sce</b>      </li>
+      <li class="navelem"><b>PlayStation</b>      </li>
+      <li class="navelem"><b>HighLevel</b>      </li>
+      <li class="navelem"><a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D.html">GameEngine2D</a>      </li>
+      <li class="navelem"><a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base.html">Base</a>      </li>
+      <li class="navelem"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TextureInfo.html">TextureInfo</a>      </li>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

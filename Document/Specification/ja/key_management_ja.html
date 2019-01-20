@@ -1,0 +1,399 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: 鍵管理</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('key_management_ja.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<h1>鍵管理 </h1>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><blockquote>
+この文書では、PSMアプリを実機上で実行するために必要な鍵の作成手順、および鍵の依存関係について説明します。</blockquote>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#id2" id="id14">鍵について</a></li>
+<li><a class="reference internal" href="#publishing-utility" id="id15">Publishing Utilityでの鍵の作成手順</a><ul>
+<li><a class="reference internal" href="#id3" id="id16">1. パブリッシャ鍵の作成</a></li>
+<li><a class="reference internal" href="#id4" id="id17">2. デバイスシードの作成</a></li>
+<li><a class="reference internal" href="#id5" id="id18">3. アプリ鍵の作成</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id6" id="id19">鍵の依存関係</a><ul>
+<li><a class="reference internal" href="#id7" id="id20">鍵の更新に関する注意事項</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#application-id" id="id21">Application IDのアスタリスク指定</a></li>
+<li><a class="reference internal" href="#id8" id="id22">補足事項</a><ul>
+<li><a class="reference internal" href="#psm" id="id23">PSMアプリの実行に関する補足事項</a></li>
+<li><a class="reference internal" href="#id9" id="id24">パブリッシャ鍵の補足事項</a></li>
+<li><a class="reference internal" href="#id10" id="id25">デバイスシードの補足事項</a></li>
+<li><a class="reference internal" href="#id11" id="id26">アプリ鍵の補足事項</a></li>
+<li><a class="reference internal" href="#id12" id="id27">チーム開発での鍵管理</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h1><a class="toc-backref" href="#id14">鍵について</a></h1>
+<blockquote>
+<p>この文書内で「鍵」とは、パブリッシャ鍵、デバイスシード、アプリ鍵を意味します。</p>
+<p>実機でPSMアプリを実行するためには、次の手順で鍵を作成します。</p>
+<ul class="simple">
+<li>パブリッシャ鍵を作成する。</li>
+<li>実行したい実機からデバイスシードを作成する。</li>
+<li>実行したいPSMアプリのApplicationIDを登録し、パブリッシャ鍵とデバイスシードをもとに、アプリ鍵を作成する。</li>
+</ul>
+<p>※ 鍵の作成にはSony Entertainment Network(旧 PlayStation(R)Network) のアカウントと、パブリッシャライセンスが必要です。パブリッシャライセンスは弊社のサイト DevPortal で取得してください。</p>
+<blockquote>
+<a class="reference external" href="https://psm.playstation.net">https://psm.playstation.net</a></blockquote>
+</blockquote>
+</div>
+<div class="section" id="publishing-utility">
+<h1><a class="toc-backref" href="#id15">Publishing Utilityでの鍵の作成手順</a></h1>
+<blockquote>
+<p>鍵の作成は、以下の手順でおこないます。</p>
+<p>※ この手順で作成される鍵は、PSM Studioのメニュー - [Key] - [Update Device Seed and App Key] で自動作成されるものと同じです。</p>
+<div align="center" class="figure">
+<img alt="./image/key_management/generate_key.PNG" src="./image/key_management/generate_key.PNG" style="width: 535.0px; height: 414.0px;" />
+<p class="caption"><strong>図1 鍵の作成手順</strong></p>
+</div>
+</blockquote>
+<div class="section" id="id3">
+<h2><a class="toc-backref" href="#id16">1. パブリッシャ鍵の作成</a></h2>
+<blockquote>
+<p>パブリッシャ鍵とは、パブリッシャライセンスを持つ人に割り当てられる鍵です。</p>
+<p>パブリッシャ鍵の作成は以下の手順で行います。</p>
+<ol class="arabic simple">
+<li>デスクトップ上の [Publishing Utility]のアイコンをダブルクリックしてPublishing Utilityを起動してください。</li>
+</ol>
+<blockquote>
+<div class="figure">
+<img alt="./image/program_guide/PublishingUtilityShortCut.PNG" src="./image/program_guide/PublishingUtilityShortCut.PNG" style="width: 105.0px; height: 68.0px;" />
+<p class="caption"><strong>図2 Publishing Utility</strong></p>
+</div>
+</blockquote>
+<ol class="arabic simple" start="2">
+<li>鍵の作成時に弊社のサーバーと通信をおこなうため、PCをインターネットに接続しておきます。社内LAN環境などでプロキシサーバーを利用している場合、[メニュー] - [ファイル] - [プロキシサーバーの設定]を選択し、接続の設定をおこなってください。</li>
+<li>Publishing Utilityで[Key Management]パネルを選択し、[Generate Publisher Key]ボタンを押します。</li>
+</ol>
+<div align="center" class="figure">
+<img alt="./image/key_management/GeneratePublihserKey.png" src="./image/key_management/GeneratePublihserKey.png" style="width: 664.5px; height: 465.0px;" />
+<p class="caption"><strong>図3 [Generate Publisher Key]ボタン</strong></p>
+</div>
+<ol class="arabic simple" start="4">
+<li>表示されるダイアログの指示に従って入力をおこなってください。</li>
+<li>作成に成功すると、Key NameとDate of Creation の欄にパブリッシャ鍵のデータが表示されます。</li>
+</ol>
+</blockquote>
+</div>
+<div class="section" id="id4">
+<h2><a class="toc-backref" href="#id17">2. デバイスシードの作成</a></h2>
+<blockquote>
+<p>デバイスシードとはアプリ鍵を作成するために使用されるデータです。デバイスシードはデバイスから取得し、デバイスごとに異なる値を持ちます。</p>
+<p>デバイスシードの作成は以下の手順で行います。</p>
+<ol class="arabic simple">
+<li>デバイスをUSBケーブルでPCに接続します。接続するとそのデバイスが[Device List &amp; App Key]リストに表示されます。</li>
+<li>PS Vitaの場合、PS Vita上でDevAssistantを起動しておきます。</li>
+<li>対象のデバイスを選択し、[Generate Device Seed]ボタンを押すと、デバイスシードの作成を開始します。</li>
+</ol>
+<div align="center" class="figure">
+<img alt="./image/key_management/GenerateDeviceSeed.png" src="./image/key_management/GenerateDeviceSeed.png" style="width: 664.5px; height: 465.0px;" />
+<p class="caption"><strong>図4 デバイスシードの作成</strong></p>
+</div>
+<ol class="arabic simple" start="4">
+<li>デバイスシードの作成に成功すると、[Seed]の列に種のアイコンが表示されます。</li>
+</ol>
+<p>※ なお、デバイスシードを削除するには、デバイスシードを選択し、 [右クリック] - [Delete Device Seed]を選択して削除します。</p>
+</blockquote>
+</div>
+<div class="section" id="id5">
+<h2><a class="toc-backref" href="#id18">3. アプリ鍵の作成</a></h2>
+<blockquote>
+<p>アプリ鍵はPSMアプリを実機で実行するために使用される鍵です。</p>
+<ul class="simple">
+<li>アプリ鍵は各ApplicationIDと各デバイスごとに作成する必要があります。</li>
+<li>アプリ鍵はパブリッシャ鍵とデバイスシード、PSMアプリのApplicationIDを元に作成されます。</li>
+<li>アプリ鍵には「アプリ開発鍵」と「アプリ実行鍵」の２つがあります。アプリ鍵を作成すると、この２つが自動的に作成されます。<ul>
+<li>アプリ開発鍵はプロジェクトのビルド時に使用されます。</li>
+<li>アプリ実行鍵は実機に転送され、PSMアプリの実行時に使用されます。</li>
+</ul>
+</li>
+</ul>
+<p>アプリ鍵の作成は以下の手順で行います。</p>
+<ol class="arabic simple">
+<li>まず実機で実行したいPSMアプリのApplicationIDを登録します。鍵管理パネルの[+]ボタンを押してください。</li>
+</ol>
+<div align="center" class="figure">
+<img alt="./image/key_management/RegisterApplicationID.png" src="./image/key_management/RegisterApplicationID.png" style="width: 652.5px; height: 465.0px;" />
+<p class="caption"><strong>図5 Application IDの登録</strong></p>
+</div>
+<ol class="arabic simple" start="2">
+<li>ダイアログが表示されるので[...]ボタンを押し、PSMプロジェクトのapp.xmlを選択します。[OK]ボタンを押すとapp.xml内の Application ID がリストボックスに登録されます。</li>
+</ol>
+<div align="center" class="figure">
+<img alt="./image/program_guide/GenerateAppKey01.png" src="./image/program_guide/GenerateAppKey01.png" />
+<p class="caption"><strong>図6 Application ID</strong></p>
+</div>
+<div align="center" class="figure">
+<img alt="./image/program_guide/SelectAppXml.png" src="./image/program_guide/SelectAppXml.png" style="width: 623.25px; height: 145.5px;" />
+<p class="caption"><strong>図7 プロジェクト内のapp.xmlを開く</strong></p>
+</div>
+<ol class="arabic simple" start="3">
+<li>リストボックス内に表示されている ApplicationIDとデバイスを選択し、[Generate App Key]ボタンを押します。</li>
+</ol>
+<div align="center" class="figure">
+<img alt="./image/key_management/GenerateAppKeyButton.png" src="./image/key_management/GenerateAppKeyButton.png" style="width: 664.5px; height: 465.0px;" />
+<p class="caption"><strong>図8 [Generate App Key]ボタン</strong></p>
+</div>
+<ol class="arabic simple" start="3">
+<li>表示されるダイアログの指示に従って入力をおこなってください。</li>
+<li>アプリ鍵の作成に成功すると[App Key]の列にアプリ鍵が表示され、作業完了です。</li>
+</ol>
+<div align="center" class="figure">
+<img alt="./image/key_management/FinishGeneratingAppKey.png" src="./image/key_management/FinishGeneratingAppKey.png" style="width: 681.0px; height: 450.75px;" />
+<p class="caption"><strong>図9 App Key</strong></p>
+</div>
+<ol class="arabic simple" start="5">
+<li>アプリ鍵作成後、ソリューションをリビルドしてください。以降、アプリ鍵が作成されているPSMアプリが、そのデバイス上で実行可能になります。</li>
+</ol>
+<p>※ なお、アプリ鍵を削除するには、アプリ鍵を選択し [右クリック] - [Delete App Key]を選択して削除します。</p>
+</blockquote>
+</div>
+</div>
+<div class="section" id="id6">
+<h1><a class="toc-backref" href="#id19">鍵の依存関係</a></h1>
+<blockquote>
+<p>鍵の依存関係は以下の図のようになります。親の要素を更新した場合、依存関係をもつ子の要素を更新する必要があります。</p>
+<div align="center" class="figure">
+<img alt="./image/key_management/key_dependency.PNG" src="./image/key_management/key_dependency.PNG" style="width: 780.3px; height: 675.0px;" />
+<p class="caption"><strong>図10 鍵の依存関係</strong></p>
+</div>
+</blockquote>
+<div class="section" id="id7">
+<h2><a class="toc-backref" href="#id20">鍵の更新に関する注意事項</a></h2>
+<blockquote>
+<ul class="simple">
+<li>パブリッシャ鍵・アプリ鍵・デバイスシードは、作成ごとに毎回違うものが作成されます。</li>
+<li>実機にインストールするDevAssistant のバージョンが更新されると、デバイスシード、アプリ鍵を再作成する必要があります。</li>
+</ul>
+<p>例:</p>
+<ul class="simple">
+<li>パブリッシャ鍵を作り直した。-&gt; アプリ鍵を削除し、アプリ鍵を再作成します。</li>
+<li>デバイスシードを作り直した。 -&gt; アプリ鍵を削除し、アプリ鍵を再作成します。</li>
+<li>AndroidのOSをアップデートした。 -&gt; デバイスシードとアプリ鍵を削除し、再作成します。</li>
+</ul>
+</blockquote>
+</div>
+</div>
+<div class="section" id="application-id">
+<h1><a class="toc-backref" href="#id21">Application IDのアスタリスク指定</a></h1>
+<blockquote>
+<p>Application IDにアスタリスク&quot;*&quot;を指定することで、複数のプロジェクトで使いまわしが可能なアプリ鍵を作成することができます。</p>
+<p>アスタリスクのアプリ鍵を作成しておくと、PSMアプリごとにアプリ鍵をつくる手間を省くことができます。</p>
+<p>※ ただし、マスターパッケージの作成時には&quot;*&quot;は使用できません。</p>
+<p>※ 新しいソリューションを作成すると、Application IDはデフォルトで&quot;*&quot;に設定されています。</p>
+<p>アスタリスクの指定は以下の手順で行います。</p>
+<ol class="arabic simple">
+<li>Publishing Utilityを起動し、MetaDataタブを選択します。</li>
+<li>[メニュー] - [File] - [Load] で任意のapp.xmlを開きます。</li>
+<li>[Application ID] に [*] 一文字を入力し、セーブします。</li>
+</ol>
+<div align="center" class="figure">
+<img alt="./image/program_guide/wildcard_appID.png" src="./image/program_guide/wildcard_appID.png" style="width: 537.0px; height: 474.0px;" />
+<p class="caption"><strong>図11 アスタリスクの指定</strong></p>
+</div>
+<ol class="arabic simple" start="4">
+<li>次に[Key Management]パネルを選択し、[+]ボタンを押します。</li>
+</ol>
+<div align="center" class="figure">
+<img alt="./image/key_management/RegisterApplicationID.png" src="./image/key_management/RegisterApplicationID.png" style="width: 652.5px; height: 465.0px;" />
+<p class="caption"><strong>図12 ApplicationIDの登録ボタン</strong></p>
+</div>
+<ol class="arabic simple" start="5">
+<li>上記でアスタリスクを指定したapp.xmlを選択します。</li>
+<li>リストボックス内に表示されている ApplicationIDとデバイスを選択し、[Update Device Seed &amp; App Key]ボタンを押します。</li>
+<li>アプリ鍵の作成に成功すると [App Key]列にアプリ鍵のアイコンが表示されます。以後、ApplicationIDに[*]が付けられたプロジェクトは、アプリ鍵を作成することなく、その実機でアプリを実行することができます。</li>
+</ol>
+<div align="center" class="figure">
+<img alt="./image/key_management/AppKeyAsterrisk.png" src="./image/key_management/AppKeyAsterrisk.png" style="width: 698.25px; height: 443.25px;" />
+<p class="caption"><strong>図13 作成されたアプリ鍵</strong></p>
+</div>
+</blockquote>
+</div>
+<div class="section" id="id8">
+<h1><a class="toc-backref" href="#id22">補足事項</a></h1>
+<div class="section" id="psm">
+<h2><a class="toc-backref" href="#id23">PSMアプリの実行に関する補足事項</a></h2>
+<blockquote>
+<ul>
+<li><p class="first">PSMアプリが実行可能な実機は、ひとつのSony Entertainment Networkアカウントにつき100台までです。</p>
+<ul>
+<li><p class="first">PS Vita で実行する場合、ひとつのSony Entertainment Networkアカウントにつき使用出来る台数の上限は2台までとなります。</p>
+<p>参考: <a class="reference external" href="http://manuals.playstation.net/document/jp/psvita/psn/aboutactivate.html">http://manuals.playstation.net/document/jp/psvita/psn/aboutactivate.html</a></p>
+</li>
+</ul>
+</li>
+<li><p class="first">PCシミュレータで実行する場合、パブリッシャライセンスおよび鍵は必要ありません。</p>
+</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="id9">
+<h2><a class="toc-backref" href="#id24">パブリッシャ鍵の補足事項</a></h2>
+<blockquote>
+<ul class="simple">
+<li>パブリッシャ鍵の作成は1度だけで構いません。SDKバージョンが更新されても継続して使用することができます。</li>
+<li>パブリッシャ鍵に有効期限はありません。</li>
+<li>パブリッシャ鍵は作成時にSCEサーバーに登録されます。</li>
+<li>パブリッシャ鍵はひとつのSony Entertainment Networkアカウントに対して、最後に作成されたひとつのパブリッシャ鍵のみ有効です。</li>
+<li>Sony Entertainment Networkアカウントとパブリッシャ鍵をチームで共有するときは、パブリッシャ鍵の上書きに注意してください。</li>
+</ul>
+<blockquote>
+<dl class="docutils">
+<dt>例:</dt>
+<dd><ol class="first arabic simple">
+<li>開発メンバーAが、SENアカウント P_team でパブリッシャ鍵 A_pub_key を作成。</li>
+<li>その後、開発メンバーBが、同じアカウントでパブリッシャ鍵 B_pub_keyを作成。このとき、B_pub_keyが有効になり、上書きされた A_pub_key は無効になります。またこのとき、パブリッシャ鍵 A_pub_keyで作成したアプリ鍵も無効になります。</li>
+</ol>
+<p class="last">この場合、開発メンバーBは パブリッシャ鍵 B_pub_key をエクスポートして、開発メンバーAに渡してください。</p>
+</dd>
+</dl>
+</blockquote>
+<ul class="simple">
+<li>開発者が保持するパブリッシャ鍵の有効性は、[Check Publisher Key]コマンドで確認することができます。</li>
+</ul>
+<blockquote>
+<ul class="simple">
+<li>PSM Studio なら- [Menu] - [Key] - [Check Publisher Key]で実行。</li>
+<li>Publishing Utilityなら - [Key Management]パネル - [Check Publisher Key]で実行。</li>
+</ul>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="id10">
+<h2><a class="toc-backref" href="#id25">デバイスシードの補足事項</a></h2>
+<blockquote>
+<ul class="simple">
+<li>DevAssistant の新しいバージョンをインストールした場合、それ以前に作成したデバイスシードは無効になります。デバイスシードを削除後、新しいデバイスシードを作成してください。</li>
+<li>AndroidデバイスのOSを更新した場合、更新以前に作成したデバイスシードは無効になります。デバイスシードを削除後、新しいデバイスシードを作成してください。</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="id11">
+<h2><a class="toc-backref" href="#id26">アプリ鍵の補足事項</a></h2>
+<blockquote>
+<ul class="simple">
+<li>アプリ鍵はSDKを再インストールすると使えなくなります。再インストール時、鍵を削除するダイアログが表示されるので、[はい]を選択して削除し、再作成してください。</li>
+<li>アプリ鍵の有効期限は3ヶ月です。</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="id12">
+<h2><a class="toc-backref" href="#id27">チーム開発での鍵管理</a></h2>
+<blockquote>
+<p>複数人で鍵を運用する場合は、 <a class="reference external" href="key_management_team_ja.html">開発チームでの鍵の運用</a> をご覧ください。</p>
+<blockquote>
+</blockquote>
+</blockquote>
+</div>
+</div>
+ </div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

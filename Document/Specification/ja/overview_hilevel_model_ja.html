@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: Model 概要</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('overview_hilevel_model_ja.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<h1>Model 概要 </h1>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><p>Sce.PlayStation.HighLevel.Model は基本的なモデル表示の機能を提供します。</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#id1" id="id11">モデル</a></li>
+<li><a class="reference internal" href="#id2" id="id12">プログラム</a></li>
+<li><a class="reference internal" href="#id3" id="id13">パラメータ</a></li>
+<li><a class="reference internal" href="#id4" id="id14">プログラムコンテナ</a></li>
+<li><a class="reference internal" href="#id5" id="id15">テクスチャコンテナ</a></li>
+<li><a class="reference internal" href="#id6" id="id16">コンバータの使用方法について</a></li>
+<li><a class="reference internal" href="#id7" id="id17">コンバータのオプションについて</a></li>
+<li><a class="reference internal" href="#id8" id="id18">コンバータの入力ファイルについて</a></li>
+<li><a class="reference internal" href="#id9" id="id19">モデルファイルフォーマットについて</a></li>
+<li><a class="reference internal" href="#id10" id="id20">関連項目</a></li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h1><a class="toc-backref" href="#id11">モデル</a></h1>
+<p>BasicModelは基本的なモデルデータを表すクラスであり、モデルデータが格納されたファイルをロードして作成します。</p>
+<p>BasicModelにはワールド行列設定、カレントモーション設定、アニメーション計算、行列計算、グラフィクス描画などのAPIがあり、それらを呼び出すことでモデルを表示することができます。</p>
+<p>モデルファイルの拡張子は .mdx であり、FBX XSI X COLLADA などの一般的なモデルデータから変換されたバイナリ形式です。
+モデルファイルには階層構造、形状データ、マテリアル、テクスチャ、アニメーションなどの情報が格納されています。</p>
+</div>
+<div class="section" id="id2">
+<h1><a class="toc-backref" href="#id12">プログラム</a></h1>
+<p>BasicProgramは基本的なシェーダープログラムを表すクラスであり、ライティング、フォグ、スキニングなど基本的な効果を適用することができます。</p>
+<p>BasicProgramには行列、マテリアル、ライト、フォグ、描画モードなどのパラメータがあり、それらを設定することでシェーダー機能を制御することができます。</p>
+<p>シェーダーファイルは設定されたパラメータに応じて自動的にロードされます。そのため、BasicProgramが必要とするすべてのシェーダーファイルをアプリケーションのディレクトリにコピーしておく必要があります。</p>
+</div>
+<div class="section" id="id3">
+<h1><a class="toc-backref" href="#id13">パラメータ</a></h1>
+<p>BasicParametersはBasicProgramのパラメータを管理するクラスであり、上述のパラメータはこのクラスに格納されています。</p>
+<p>BasicProgramは一つのBasicParametersを持ちますが、必要ならば、複数のBasicProgramが一つのBasicParametersを共有することもできます。これはカメラやライトなどグローバルなパラメータの設定に便利です。</p>
+</div>
+<div class="section" id="id4">
+<h1><a class="toc-backref" href="#id14">プログラムコンテナ</a></h1>
+<p>BasicProgramContainerはロードずみのプログラムを管理するクラスであり、文字列をキーとする辞書にプログラムを登録することができます。</p>
+<p>モデルをロードした後、このクラスを使用してプログラムをモデルに関連づけます。
+それにより、キー文字列に応じて適切なプログラムをモデルに適用することができ、またロードずみのプログラムを複数のモデルが共有することができます。</p>
+</div>
+<div class="section" id="id5">
+<h1><a class="toc-backref" href="#id15">テクスチャコンテナ</a></h1>
+<p>BasicTextureContainerはロードずみのテクスチャを管理するクラスであり、文字列をキーとする辞書にテクスチャを登録することができます。</p>
+<p>モデルをロードした後、このクラスを使用してテクスチャをモデルに関連づけます。
+それにより、キー文字列に応じて適切なテクスチャをモデルに適用することができ、またロードずみのテクスチャを複数のモデルが共有することができます。</p>
+</div>
+<div class="section" id="id6">
+<h1><a class="toc-backref" href="#id16">コンバータの使用方法について</a></h1>
+<p>ModelConverter と ModelViewer は、以下のフォルダーにあります。</p>
+<blockquote>
+%SCE_PSM_SDK%/tools/ModelConverter</blockquote>
+<p>ModelConverter と ModelViewer のショートカットをデスクトップに作成してください。</p>
+<p>ModelConverter に入力ファイルをドラッグ＆ドロップすると、同じフォルダーに出力ファイルが作成されます。</p>
+<blockquote>
+<img alt="./image/model_converter_usage.png" src="./image/model_converter_usage.png" />
+</blockquote>
+<p>ModelViewer に出力ファイルをドラッグ＆ドロップすると、モデルデータを表示することができます。</p>
+<blockquote>
+<img alt="./image/model_viewer_usage.png" src="./image/model_viewer_usage.png" />
+</blockquote>
+<p>モデルを変換するとき、もし存在すれば、テクスチャの画像ファイルが読み込まれ、出力ファイルに格納されます。</p>
+<p>画像ファイルは、入力モデルファイルの中で記述されたテクスチャファイル名のフォルダーだけでなく、入力モデルファイルが存在するフォルダーからも検索されます。画像ファイル拡張子は、入力モデルファイルの中で指定されたテクスチャファイル名の拡張子にかかわらず、PNG, JPG, BMP, GIF など利用可能な拡張子から自動的に選択されます。</p>
+</div>
+<div class="section" id="id7">
+<h1><a class="toc-backref" href="#id17">コンバータのオプションについて</a></h1>
+<p>コントロールキーを押しながらドラッグ＆ドロップすると、プロンプトが表示されキー入力が可能になります。</p>
+<p>そこで、以下のようなオプションを指定することができます。</p>
+<dl class="docutils">
+<dt><strong>-o &lt;filename&gt;</strong></dt>
+<dd>出力ファイル名を指定します。</dd>
+<dt><strong>-s &lt;scale&gt;</strong></dt>
+<dd>モデルデータのサイズをスケールします。</dd>
+<dt><strong>-t &lt;scale&gt;</strong></dt>
+<dd>アニメーションの速度をスケールします。</dd>
+<dt><strong>-S</strong></dt>
+<dd>テキスト形式で出力します。拡張子は .mds です。</dd>
+<dt><strong>-N</strong></dt>
+<dd>最適化をおこないません。</dd>
+<dt><strong>-B</strong></dt>
+<dd>BLENDINDICES を使用しません。</dd>
+<dt><strong>-models</strong></dt>
+<dd>複数ファイルのモデルを、一つのファイルに出力します。</dd>
+<dt><strong>-motions</strong></dt>
+<dd>複数ファイルのモーションを、一つのファイルに出力します。</dd>
+</dl>
+</div>
+<div class="section" id="id8">
+<h1><a class="toc-backref" href="#id18">コンバータの入力ファイルについて</a></h1>
+<p>以下のファイル形式が利用可能です。</p>
+<dl class="docutils">
+<dt><strong>FBX</strong></dt>
+<dd>動作確認は Autodesk Maya 2013 でおこなっています。利用可能であることが確認されているフォーマットバージョンは FBX 2013 です。コンバータが使用しているツールキットは Autodesk FBXSDK 2011.3 です。
+なお FBX ファイルに対応する Maya ASCII ファイルが同じフォルダーにあれば、さらにいくつかのパラメータを取得できます。</dd>
+<dt><strong>XSI</strong></dt>
+<dd>動作確認は Autodesk SoftImage 2013 でおこなっています。利用可能であることが確認されているフォーマットバージョンは 3.6 と 6.0 です。コンバータが使用しているツールキットは Autodesk Crosswalk 2013.0 です。
+なお XSI ファイルを変換するには、Autodesk Crosswalk 2013.0 が PC にインストールされている必要があります。</dd>
+<dt><strong>X</strong></dt>
+<dd>動作確認は NewTek LightWave 11 でおこなっています。利用可能であることが確認されているフォーマットバージョンは 3.3 (DirectX8 形式) です。コンバータが使用しているツールキットは Microsoft DirectX SDK (June 2010) です。</dd>
+<dt><strong>COLLADA</strong></dt>
+<dd>動作確認は Autodesk Maya 2009 でおこなっています。利用可能であることが確認されているフォーマットバージョンは COLLADA 1.4.1 です。コンバータが使用しているツールキットは OpenCOLLADA 2011 です。</dd>
+<dt><strong>MDX / MDS</strong></dt>
+<dd>これらのファイル形式は、入出力が可能です。</dd>
+</dl>
+<p>テストデータは、以下のフォルダーにあります。</p>
+<blockquote>
+%SCE_PSM_SDK%/tools/ModelConverter/testdata</blockquote>
+<p>変換可能なモデルパラメータは、以下のとおりです。</p>
+<blockquote>
+<img alt="./image/model_param_list.png" src="./image/model_param_list.png" />
+</blockquote>
+<p>&quot;Maya ASCII&quot; と書かれたパラメータは、同じフォルダーにある Maya ASCII ファイルから取得することができます。</p>
+</div>
+<div class="section" id="id9">
+<h1><a class="toc-backref" href="#id19">モデルファイルフォーマットについて</a></h1>
+<p>モデルファイルフォーマットについての詳細は、以下のページに記述されています。</p>
+<blockquote>
+<a class="reference external" href="mdx_format_ja.html">PlayStation(R)Mobile MDX ファイル形式</a></blockquote>
+</div>
+<div class="section" id="id10">
+<h1><a class="toc-backref" href="#id20">関連項目</a></h1>
+<ul class="simple">
+<li><a class="reference external" href="./namespaceSce_1_1PlayStation_1_1HighLevel_1_1Model.html">Sce.PlayStation.HighLevel.Model</a></li>
+<li><a class="reference external" href="./classSce_1_1PlayStation_1_1HighLevel_1_1Model_1_1BasicModel.html">Sce.PlayStation.HighLevel.Model.BasicModel</a></li>
+<li><a class="reference external" href="./classSce_1_1PlayStation_1_1HighLevel_1_1Model_1_1BasicProgram.html">Sce.PlayStation.HighLevel.Model.BasicProgram</a></li>
+<li><a class="reference external" href="./classSce_1_1PlayStation_1_1HighLevel_1_1Model_1_1BasicParameters.html">Sce.PlayStation.HighLevel.Model.BasicParameters</a></li>
+<li><a class="reference external" href="./classSce_1_1PlayStation_1_1HighLevel_1_1Model_1_1BasicProgramContainer.html">Sce.PlayStation.HighLevel.Model.BasicProgramContainer</a></li>
+<li><a class="reference external" href="./classSce_1_1PlayStation_1_1HighLevel_1_1Model_1_1BasicTextureContainer.html">Sce.PlayStation.HighLevel.Model.BasicTextureContainer</a></li>
+</ul>
+</div>
+ </div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

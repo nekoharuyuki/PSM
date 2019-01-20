@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: 構造体 TRS</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">構成</a> &#124;
+<a href="#pub-methods">Public メソッド</a> &#124;
+<a href="#pub-static-methods">Static Public メソッド</a> &#124;
+<a href="#pub-attribs">Public 変数</a> &#124;
+<a href="#pub-static-attribs">Static Public 変数</a> &#124;
+<a href="#properties">プロパティ</a>  </div>
+  <div class="headertitle">
+<h1>構造体 TRS</h1>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="Sce::PlayStation::HighLevel::GameEngine2D::Base::TRS" -->
+<p>TRSはシーングラフの専門用語です。TRSは平行移動/回転/スケールの2D変換行列を標準的な方法で格納するのために使用されています。 また、向きをもった境界ボックスを定義します。 TRSはスプライトの配置/サイズとスプライトUVの両方を格納するためにも使用します。  
+<a href="#_details">[詳細]</a></p>
+
+<p><a href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS-members.html">すべてのメンバ一覧</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="nested-classes"></a>
+構成</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS_1_1Local.html">Local</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">エイリアス。一般的にCenteringに渡すために使用します。  <a href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS_1_1Local.html#_details">[詳細]</a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Public メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS.html#ae2fef5465eea77d118dce7f7ae4604b7">Rotate</a> (float angle)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">角度を指定してオブジェクトを回転させます。  <a href="#ae2fef5465eea77d118dce7f7ae4604b7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS.html#acf4e4e8f461704fd07f929e4223e9eea">Rotate</a> (<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a> rotation)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">角度を指定してオブジェクトを回転させます。  <a href="#acf4e4e8f461704fd07f929e4223e9eea"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af08f837e3c9487009fe7249a12facaac"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TRS::TRS" ref="af08f837e3c9487009fe7249a12facaac" args="(Bounds2 a_bounds)" -->
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS.html#af08f837e3c9487009fe7249a12facaac">TRS</a> (<a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Bounds2.html">Bounds2</a> a_bounds)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Bounds2からの変換 : a_bounds.Min は T になり、a_bounds.Size は Sになります(回転なし)。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab3eb7bc0cb602d9e1c65f515e27d36c0"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TRS::Bounds2" ref="ab3eb7bc0cb602d9e1c65f515e27d36c0" args="()" -->
+<a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Bounds2.html">Bounds2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS.html#ab3eb7bc0cb602d9e1c65f515e27d36c0">Bounds2</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Bounds2に変換します。回転がある場合は、エンドポイントが一致しないことに注意してください。しかし、すべてのケースで、返された境界は完全にTRSを含んでいます。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS.html#ae53cf2b5bf3ee1b3c96ab22595e1cff5">Centering</a> (<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a> normalized_pos)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">入力で与えられる、正規化された点が（0,0）になるようにTRSを変換します。TRS.Localで事前に定義され、正規化された点です。  <a href="#ae53cf2b5bf3ee1b3c96ab22595e1cff5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">override string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS.html#aa73e7c4dd1df5fd5fbf81c7764ee1533">ToString</a> ()</td></tr>
+<tr><td colspan="2"><h2><a name="pub-static-methods"></a>
+Static Public メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4fbb8780f15974be0cfdfb57cb6106c2"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TRS::Tile" ref="a4fbb8780f15974be0cfdfb57cb6106c2" args="(Vector2i num_tiles, Vector2i tile_index, TRS source_area)" -->
+static <a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS.html">TRS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS.html#a4fbb8780f15974be0cfdfb57cb6106c2">Tile</a> (<a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Vector2i.html">Vector2i</a> num_tiles, <a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Vector2i.html">Vector2i</a> tile_index, <a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS.html">TRS</a> source_area)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">タイル数とタイルのインデックスを指定し、引数 source_area からサブ領域を取得します。 一般的にsource_areaはQuad0_1（単位クワッド、全体のテクスチャを意味する）になります。 タイルのテクスチャ内で、指定されたタイルのUV情報を返します。 <br/></td></tr>
+<tr><td colspan="2"><h2><a name="pub-attribs"></a>
+Public 変数</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada2e9d8d2b3280a6a38d168ba69f3d44"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TRS::T" ref="ada2e9d8d2b3280a6a38d168ba69f3d44" args="" -->
+<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS.html#ada2e9d8d2b3280a6a38d168ba69f3d44">T</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">平行移動。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a686249a582d6732c95c053eda87de54a"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TRS::R" ref="a686249a582d6732c95c053eda87de54a" args="" -->
+<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS.html#a686249a582d6732c95c053eda87de54a">R</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">回転。単位ベクトル (cos,sin) として格納します。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a534bc29320c564991a933b27c7bd48fd"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TRS::S" ref="a534bc29320c564991a933b27c7bd48fd" args="" -->
+<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS.html#a534bc29320c564991a933b27c7bd48fd">S</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">スケール (またはサイズ)。 <br/></td></tr>
+<tr><td colspan="2"><h2><a name="pub-static-attribs"></a>
+Static Public 変数</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2922151681f9210f180fd506ac29b3a0"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TRS::Quad0_1" ref="a2922151681f9210f180fd506ac29b3a0" args="" -->
+static <a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS.html">TRS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS.html#a2922151681f9210f180fd506ac29b3a0">Quad0_1</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">（0,0）（1,1）からなる単位クワッドをカバーするTRS。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a885172e929503baf76e2958e83878654"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TRS::QuadMinus1_1" ref="a885172e929503baf76e2958e83878654" args="" -->
+static <a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS.html">TRS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS.html#a885172e929503baf76e2958e83878654">QuadMinus1_1</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">（-1,-1）（1,1）からなるクワッドをカバーするTRS。 <br/></td></tr>
+<tr><td colspan="2"><h2><a name="properties"></a>
+プロパティ</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f8cc0590de50be49ce4caab8e8cc96b"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TRS::X" ref="a5f8cc0590de50be49ce4caab8e8cc96b" args="" -->
+<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS.html#a5f8cc0590de50be49ce4caab8e8cc96b">X</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">左下から右下に向かう、サポートXベクトル。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af01c5b54298a1414fab42a02de05d5c9"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TRS::Y" ref="af01c5b54298a1414fab42a02de05d5c9" args="" -->
+<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS.html#af01c5b54298a1414fab42a02de05d5c9">Y</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">左下から左上に向かう、サポートYベクトル。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a45653e5111742a3c7f6d4970e63b98ed"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TRS::Point00" ref="a45653e5111742a3c7f6d4970e63b98ed" args="" -->
+<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS.html#a45653e5111742a3c7f6d4970e63b98ed">Point00</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ロカール座標での左下の点 (基準点), (0,0)。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a9bbee3bec7d4d4c8b7e45dd9f6693e"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TRS::Point10" ref="a3a9bbee3bec7d4d4c8b7e45dd9f6693e" args="" -->
+<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS.html#a3a9bbee3bec7d4d4c8b7e45dd9f6693e">Point10</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ロカール座標での右下の点 (1,0)。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a02539d9e55ba7bad9e0fb1ce5fc13127"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TRS::Point01" ref="a02539d9e55ba7bad9e0fb1ce5fc13127" args="" -->
+<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS.html#a02539d9e55ba7bad9e0fb1ce5fc13127">Point01</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ロカール座標での左上の点 (0,1)。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afbc337db9c0622de9538cc4cf83861ac"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TRS::Point11" ref="afbc337db9c0622de9538cc4cf83861ac" args="" -->
+<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS.html#afbc337db9c0622de9538cc4cf83861ac">Point11</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ロカール座標での右上の点 (1,1)。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa790d59296f437e1fbfa8d5237318e09"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TRS::Center" ref="aa790d59296f437e1fbfa8d5237318e09" args="" -->
+<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS.html#aa790d59296f437e1fbfa8d5237318e09">Center</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">このTRSによって定義された向きを持ったボックスの中心を返します。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a92854421ebdcf6ea74198a9b801f7011"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TRS::RotationNormalize" ref="a92854421ebdcf6ea74198a9b801f7011" args="" -->
+<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS.html#a92854421ebdcf6ea74198a9b801f7011">RotationNormalize</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">RotationNormalize は Rotation に似ています。しかし RotationNormalize は誤差の蓄積を防ぐために、単位ベクトルを正規化します。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a77219e3a8b4750baa3ba320d772b9d04"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TRS::Angle" ref="a77219e3a8b4750baa3ba320d772b9d04" args="" -->
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS.html#a77219e3a8b4750baa3ba320d772b9d04">Angle</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">このプロパティは角度で回転を設定/取得します。これは重い処理であり、通常角度の不連続性の問題をもたらします。角度は常に格納され、-pi,piの範囲で値を返します。 <br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>説明</h2>
+<div class="textblock"><p>TRSはシーングラフの専門用語です。TRSは平行移動/回転/スケールの2D変換行列を標準的な方法で格納するのために使用されています。 また、向きをもった境界ボックスを定義します。 TRSはスプライトの配置/サイズとスプライトUVの両方を格納するためにも使用します。 </p>
+</div><hr/><h2>メソッド</h2>
+<a class="anchor" id="ae53cf2b5bf3ee1b3c96ab22595e1cff5"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TRS::Centering" ref="ae53cf2b5bf3ee1b3c96ab22595e1cff5" args="(Vector2 normalized_pos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Centering </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td>
+          <td class="paramname"><em>normalized_pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>入力で与えられる、正規化された点が（0,0）になるようにTRSを変換します。TRS.Localで事前に定義され、正規化された点です。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">normalized_pos</td><td>新しい中心になる、正規化された位置。たとえば、実際のサイズ、位置、TRSの向きに関係なく、( 0.5, 0.5 ) はTRSの中心を表しています。 ( 0, 0 )は左下の点、( 1, 1 )は右上の点です。</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="acf4e4e8f461704fd07f929e4223e9eea"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TRS::Rotate" ref="acf4e4e8f461704fd07f929e4223e9eea" args="(Vector2 rotation)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Rotate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td>
+          <td class="paramname"><em>rotation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>角度を指定してオブジェクトを回転させます。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rotation</td><td>回転を表す(cos(angle),sin(angle))の単位ベクトル。</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This lets you precompute the cos,sin needed during rotation. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae2fef5465eea77d118dce7f7ae4604b7"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TRS::Rotate" ref="ae2fef5465eea77d118dce7f7ae4604b7" args="(float angle)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Rotate </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>角度を指定してオブジェクトを回転させます。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">angle</td><td>Rotation angle in radian.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aa73e7c4dd1df5fd5fbf81c7764ee1533"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Base::TRS::ToString" ref="aa73e7c4dd1df5fd5fbf81c7764ee1533" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override string ToString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+</div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><b>Sce</b>      </li>
+      <li class="navelem"><b>PlayStation</b>      </li>
+      <li class="navelem"><b>HighLevel</b>      </li>
+      <li class="navelem"><a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D.html">GameEngine2D</a>      </li>
+      <li class="navelem"><a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base.html">Base</a>      </li>
+      <li class="navelem"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1TRS.html">TRS</a>      </li>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

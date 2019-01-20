@@ -1,0 +1,1602 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: ２次元物理シミュレーションPhysics2Dライブラリの基本的な使い方</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('physics2d_overview_ja.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<h1>２次元物理シミュレーションPhysics2Dライブラリの基本的な使い方 </h1>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><p>この文書では２次元物理シミュレーションPhysics2Dライブラリの基本的な使い方について説明します。</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#id1" id="id29">物理シミュレーションシーンを作る最小限の流れ</a><ul>
+<li><a class="reference internal" href="#id2" id="id30">剛体オブジェクトの初期配置</a></li>
+<li><a class="reference internal" href="#id3" id="id31">衝突形状データを作成する</a><ul>
+<li><a class="reference internal" href="#id4" id="id32">ボックス形状の設定例</a></li>
+<li><a class="reference internal" href="#id5" id="id33">球形状の設定例</a></li>
+<li><a class="reference internal" href="#id6" id="id34">凸多角形の設定例</a></li>
+<li><a class="reference internal" href="#id7" id="id35">衝突形状の数の設定例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id8" id="id36">衝突形状データと関連付けた剛体オブジェクトを作成する</a><ul>
+<li><a class="reference internal" href="#dynamic" id="id37">Dynamic剛体</a></li>
+<li><a class="reference internal" href="#static" id="id38">Static剛体</a></li>
+<li><a class="reference internal" href="#kinematic" id="id39">Kinematic剛体</a></li>
+<li><a class="reference internal" href="#trigger" id="id40">Trigger剛体</a></li>
+<li><a class="reference internal" href="#id9" id="id41">剛体の初期設定に良く使われる属性値</a></li>
+<li><a class="reference internal" href="#id10" id="id42">Static剛体の設定例</a></li>
+<li><a class="reference internal" href="#id11" id="id43">Dynamic剛体の設定例</a></li>
+<li><a class="reference internal" href="#id12" id="id44">Kinematic剛体の設定例</a></li>
+<li><a class="reference internal" href="#id13" id="id45">シーンの特性の設定</a></li>
+<li><a class="reference internal" href="#id14" id="id46">剛体のスリープについて</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id15" id="id47">剛体オブジェクトの描画ついにて</a><ul>
+<li><a class="reference internal" href="#id16" id="id48">頂点バッファの準備</a></li>
+<li><a class="reference internal" href="#physicsshape" id="id49">衝突形状PhysicsShapeの構造</a></li>
+<li><a class="reference internal" href="#id17" id="id50">球の場合の頂点データの取得</a></li>
+<li><a class="reference internal" href="#id18" id="id51">ボックスや一般の凸多角形の場合の頂点データの取得</a></li>
+<li><a class="reference internal" href="#id19" id="id52">剛体形状の描画コード</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id20" id="id53">デバッグ情報の描画について</a><ul>
+<li><a class="reference internal" href="#id21" id="id54">衝突点のデバッグ描画</a></li>
+<li><a class="reference internal" href="#id22" id="id55">バウンディングボックスのデバッグ描画</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id23" id="id56">２次元物理シミュレーションPhysics2Dライブラリ各機能の使い方</a><ul>
+<li><a class="reference internal" href="#id24" id="id57">ジョイントの設定</a><ul>
+<li><a class="reference internal" href="#id25" id="id58">回転方向、並進方向ともに固定の例</a></li>
+<li><a class="reference internal" href="#id26" id="id59">回転方向における角度制約の例</a></li>
+<li><a class="reference internal" href="#id27" id="id60">垂直方向における移動制約の例</a></li>
+<li><a class="reference internal" href="#id28" id="id61">水平方向における移動制約の例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h1><a class="toc-backref" href="#id29">物理シミュレーションシーンを作る最小限の流れ</a></h1>
+<p>２次元物理シミュレーションPhysics2Dライブラリの基本的な使い方を学ぶためにサンプルシーンPrimitiveSceneを例に物理シーンの設定方法を見ていきます。</p>
+<p>&quot;sample/Physics2D/Physics2DSample/BasicScene/PrimitiveScene.cs&quot;を参照してください。</p>
+<div align="left" class="figure">
+<img alt="alternate text" src="image/physics2d/primitive_sample01.png" style="width: 597.0px; height: 335.0px;" />
+</div>
+<p>物理シミュレーションのシーンを作る最小限の流れは以下の形になります。</p>
+<ol class="arabic simple">
+<li>PhysicsSceneを継承したシーンクラスを作る</li>
+<li>継承したシーンクラスにおいてInitScene()をオーバーライドする</li>
+<li>InitScene()が継承したシーンクラスのコンストラクタで呼ばれるようにする</li>
+</ol>
+<p>実際にPrimitiveSceneを例としてシーン生成のコードの流れを見てみます。</p>
+<ol class="arabic simple">
+<li>PhysicsSceneを継承したクラスを作る</li>
+</ol>
+<div class="highlight"><pre>using System;
+using System.Text;
+
+using Sce.PlayStation.Core;
+using Sce.PlayStation.Core.Graphics;
+using Sce.PlayStation.Core.Input;
+using Sce.PlayStation.Core.Environment;
+
+// Include 2D Physics Framework
+using Sce.PlayStation.HighLevel.Physics2D;
+
+public class PrimitiveScene : PhysicsScene
+{
+
+}
+</pre></div>
+<!-- end-of-code-block -->
+<ol class="arabic simple" start="2">
+<li>継承したシーンクラスにおいてInitScene()をオーバーライドする</li>
+</ol>
+<div class="highlight"><pre>using System;
+using System.Text;
+
+using Sce.PlayStation.Core;
+using Sce.PlayStation.Core.Graphics;
+using Sce.PlayStation.Core.Input;
+using Sce.PlayStation.Core.Environment;
+
+// Include 2D Physics Framework
+using Sce.PlayStation.HighLevel.Physics2D;
+
+public class PrimitiveScene : PhysicsScene
+{
+        public override void InitScene ()
+        {
+                // Create an empty simulation scene
+                base.InitScene();
+        }
+}
+</pre></div>
+<!-- end-of-code-block -->
+<ol class="arabic simple" start="3">
+<li>InitScene()が継承したシーンクラスのコンストラクタで呼ばれるようにする</li>
+</ol>
+<div class="highlight"><pre>using System;
+using System.Text;
+
+using Sce.PlayStation.Core;
+using Sce.PlayStation.Core.Graphics;
+using Sce.PlayStation.Core.Input;
+using Sce.PlayStation.Core.Environment;
+
+// Include 2D Physics Framework
+using Sce.PlayStation.HighLevel.Physics2D;
+
+public class PrimitiveScene : PhysicsScene
+{
+        public PrimitiveScene()
+        {
+            InitScene();
+        }
+
+        public override void InitScene ()
+        {
+                // Create an empty simulation scene
+                base.InitScene();
+        }
+}
+</pre></div>
+<!-- end-of-code-block -->
+<div class="line-block">
+<div class="line">以上で最小限の物理シミュレーションシーンのセットアップは完了です。</div>
+<div class="line"><br /></div>
+<div class="line">ただし、このままでは物理オブジェクトをシーンの中に何も配置していないので、シミュレーションは何も行われません。</div>
+<div class="line">そこで実際にはInitScene()の中で、必要な剛体オブジェクトの初期配置が必要になります。</div>
+<div class="line"><br /></div>
+<div class="line">それでは、InitScene()での剛体オブジェクトの初期配置を見ていきます。</div>
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id2">
+<h2><a class="toc-backref" href="#id30">剛体オブジェクトの初期配置</a></h2>
+<p>剛体オブジェクトの初期配置の基本的な流れは以下の形になります。</p>
+<ol class="arabic simple">
+<li>衝突形状データを作成する</li>
+<li>衝突形状データと関連付けた剛体オブジェクトを作成する</li>
+</ol>
+</div>
+<div class="section" id="id3">
+<h2><a class="toc-backref" href="#id31">衝突形状データを作成する</a></h2>
+<div class="line-block">
+<div class="line">衝突形状として設定可能なのは基本的に凸形状のみです。球、ボックス、凸多角形などを含みます。</div>
+<div class="line">凸多角形の頂点数の制限は30頂点に設定されています。ただし、これはソースコードを改変することで上限を変えることは可能です。</div>
+<div class="line">しかしながら、頂点数が増えるほど、衝突判定のための計算コストは大きくなりますので気をつけてください。</div>
+<div class="line"><br /></div>
+</div>
+<div align="left" class="figure">
+<img alt="alternate text" src="image/physics2d/collision_shape01_j.png" style="width: 600.0px; height: 219.0px;" />
+</div>
+<div class="line-block">
+<div class="line">凹形形状は直接に衝突形状に設定することはできません。</div>
+<div class="line">凹形状を衝突形状として持つ剛体オブジェクトは剛体を複合させる必要があります。</div>
+</div>
+<div align="left" class="figure">
+<img alt="alternate text" src="image/physics2d/collision_shape02_j.png" style="width: 600.0px; height: 234.0px;" />
+</div>
+<div class="line-block">
+<div class="line">シーンの衝突形状はシーンのメンバ変数sceneShapesに登録をしていきます。</div>
+<div class="line">また、その際、シーンに登録されている衝突形状の数をnumShapeに設定するのを忘れないようにしてください。</div>
+<div class="line"><br /></div>
+<div class="line">それでは実際にPrimitiveSceneではどのように形状を設定していくのかを見ていきます。</div>
+</div>
+<div class="highlight"><pre>public override void InitScene ()
+{
+        // Create an empty simulation scene
+        base.InitScene();
+
+        ...
+        ...
+        ...
+
+        // Box Shape Setting PhysicsShape( &quot;width&quot;, &quot;height&quot; )
+        Vector2 wall_width = new Vector2(50, 8);
+        sceneShapes[0] = new PhysicsShape(wall_width);
+
+        Vector2 wall_height = new Vector2(8, 30);
+        sceneShapes[1] = new PhysicsShape(wall_height);
+
+        Vector2 box_width = new Vector2(2.0f, 2.0f);
+        sceneShapes[2] = new PhysicsShape(box_width);
+
+        // Sphere Shape Setting PhysicsShape( &quot;radius&quot; )
+        float sphere_width = 2.0f;
+        sceneShapes[3] = new PhysicsShape(sphere_width);
+
+
+        Vector2[] test_point = new Vector2[10];
+
+        for (int i = 0; i &lt; 10; i++)
+        {
+            test_point[i] = new Vector2(rand_gen.Next(-1000, 1000), rand_gen.Next(-1000, 1000)) * 2.0f / 1000.0f;
+        }
+
+        // Convex Shape Setting (by using random points)
+        sceneShapes[4] = PhysicsShape.CreateConvexHull(test_point, 10);
+
+        numShape = 5;
+
+        ...
+        ...
+        ...
+}
+</pre></div>
+<!-- end-of-code-block -->
+<div class="section" id="id4">
+<h3><a class="toc-backref" href="#id32">ボックス形状の設定例</a></h3>
+<p>ボックスの縦横半分の長さをPhysicsShapeコンストラクタの引数に与えます。</p>
+<div class="highlight"><pre>Vector2 wall_width = new Vector2(50, 8);
+sceneShapes[0] = new PhysicsShape(wall_width);
+</pre></div>
+<!-- end-of-code-block -->
+</div>
+<div class="section" id="id5">
+<h3><a class="toc-backref" href="#id33">球形状の設定例</a></h3>
+<p>球の半径を設定したfloat値をPhysicsShapeコンストラクタの引数に与えます。</p>
+<div class="highlight"><pre>float sphere_width = 2.0f;
+sceneShapes[3] = new PhysicsShape(sphere_width);
+</pre></div>
+<!-- end-of-code-block -->
+</div>
+<div class="section" id="id6">
+<h3><a class="toc-backref" href="#id34">凸多角形の設定例</a></h3>
+<p>ランダムな頂点を10個作り、ランダムな10個の頂点をもとに凸包を作って凸多角形を生成しています。</p>
+<div class="highlight"><pre>Vector2[] test_point = new Vector2[10];
+
+for (int i = 0; i &lt; 10; i++)
+{
+        test_point[i] = new Vector2(rand_gen.Next(-1000, 1000), rand_gen.Next(-1000, 1000)) * 2.0f / 1000.0f;
+}
+
+sceneShapes[4] = PhysicsShape.CreateConvexHull(test_point, 10);
+</pre></div>
+<!-- end-of-code-block -->
+<p>ここでCreateConvexHullは任意の頂点列を与えて、凸包を生成するAPIです。</p>
+</div>
+<div class="section" id="id7">
+<h3><a class="toc-backref" href="#id35">衝突形状の数の設定例</a></h3>
+<p>１つずつ衝突形状を登録するたびにnumShapeをインクリメントしてもいいですが、PrimitiveSceneでは衝突形状を登録した後でnumShapeを設定しています。</p>
+<div class="highlight"><pre>numShape = 5;
+</pre></div>
+<!-- end-of-code-block -->
+<div class="line-block">
+<div class="line">以上で、シーンPrimitiveSceneにおける衝突形状の登録が完了です。</div>
+<div class="line"><br /></div>
+<div class="line">ただし、ここまでは衝突形状を登録しただけで、実際の剛体が存在している訳ではありません。</div>
+<div class="line">次に登録された衝突形状にもとづいて、剛体オブジェクトの作成を行っていきます。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2><a class="toc-backref" href="#id36">衝突形状データと関連付けた剛体オブジェクトを作成する</a></h2>
+<p>まず、剛体にはいくつかのタイプがあります。</p>
+<div class="section" id="dynamic">
+<h3><a class="toc-backref" href="#id37">Dynamic剛体</a></h3>
+<ul class="simple">
+<li>通常の良く使われる剛体です</li>
+<li>速度や加速度を持ち、シーンの中を移動します</li>
+</ul>
+</div>
+<div class="section" id="static">
+<h3><a class="toc-backref" href="#id38">Static剛体</a></h3>
+<ul class="simple">
+<li>シーンの開始から終了まで全く動かない剛体です</li>
+<li>無限大の質量を持つと仮定して計算されます</li>
+</ul>
+</div>
+<div class="section" id="kinematic">
+<h3><a class="toc-backref" href="#id39">Kinematic剛体</a></h3>
+<ul class="simple">
+<li>一時的に強制的に静止状態、または意図的に移動させられる剛体です</li>
+<li>一時的に無限大の質量を持つと仮定して計算されます</li>
+</ul>
+</div>
+<div class="section" id="trigger">
+<h3><a class="toc-backref" href="#id40">Trigger剛体</a></h3>
+<ul class="simple">
+<li>シーンの中のある領域に入ったかどうかの検出目的に用いられる特殊な剛体です</li>
+<li>衝突判定はありますが、衝突による反発計算は行われません</li>
+</ul>
+<div class="line-block">
+<div class="line">まずは上記どのタイプの剛体を作りたいのかを明確にしておく必要があります。</div>
+<div class="line">動かない壁や床を作る時にはStatic剛体を用い、床の上を転がる球を作る時にはDynamic剛体を用いることになります。</div>
+<div class="line"><br /></div>
+<div class="line">剛体を生成する際には上記の剛体のタイプと、以下の値を設定して初期配置することが一般的です。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id9">
+<h3><a class="toc-backref" href="#id41">剛体の初期設定に良く使われる属性値</a></h3>
+<ul class="simple">
+<li>質量</li>
+<li>位置</li>
+<li>角度</li>
+<li>速度（並進方向の速度）</li>
+<li>角速度（回転方向の速度）</li>
+</ul>
+<div align="left" class="figure">
+<img alt="alternate text" src="image/physics2d/rigid_body_j.png" style="width: 600.0px; height: 325.0px;" />
+</div>
+<div class="line-block">
+<div class="line">それでは実際にPrimitiveSceneではどのように剛体オブジェクトを初期配置していくのかを見ていきます。</div>
+<div class="line">まずはシーンの中に壁、床、天井となる剛体オブジェクトをStatic剛体として生成します。これらの剛体はシーンの開始から終了まで動かないためです。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id10">
+<h3><a class="toc-backref" href="#id42">Static剛体の設定例</a></h3>
+<div class="highlight"><pre>public override void InitScene()
+{
+        ...
+        ...
+        ...
+
+    // Create static walls to limit the range of action of active rigid sceneBodies
+    {
+        // new PhysicsBody( &quot;shape of the body&quot;,  &quot;mass of the body(kg)&quot; )
+        sceneBodies[numBody] = new PhysicsBody(sceneShapes[0], PhysicsUtility.FltMax);
+
+        // Set the position &amp; the rotation
+        sceneBodies[numBody].position = new Vector2(0, -wall_height.Y);
+        sceneBodies[numBody].rotation = 0;
+
+        // Make shapeIndex consistent with what we set as convex shape
+        sceneBodies[numBody].shapeIndex = 0;
+        numBody++;
+
+        sceneBodies[numBody] = new PhysicsBody(sceneShapes[1], PhysicsUtility.FltMax);
+        sceneBodies[numBody].position = new Vector2(wall_width.X, 0);
+        sceneBodies[numBody].rotation = 0;
+        sceneBodies[numBody].shapeIndex = 1;
+        numBody++;
+
+        sceneBodies[numBody] = new PhysicsBody(sceneShapes[1], PhysicsUtility.FltMax);
+        sceneBodies[numBody].position = new Vector2(-wall_width.X, 0);
+        sceneBodies[numBody].rotation = 0;
+        sceneBodies[numBody].shapeIndex = 1;
+        numBody++;
+
+        sceneBodies[numBody] = new PhysicsBody(sceneShapes[0], PhysicsUtility.FltMax);
+        sceneBodies[numBody].position = new Vector2(0, wall_height.Y);
+        sceneBodies[numBody].rotation = 0;
+        sceneBodies[numBody].shapeIndex = 0;
+        numBody++;
+    }
+
+        ...
+        ...
+        ...
+}
+</pre></div>
+<!-- end-of-code-block -->
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">ここでは床となるStatic剛体の設定を行っています。</div>
+</div>
+<div class="highlight"><pre>sceneBodies[numBody] = new PhysicsBody(sceneShapes[0], PhysicsUtility.FltMax);
+sceneBodies[numBody].position = new Vector2(0, -wall_height.Y);
+sceneBodies[numBody].rotation = 0;
+sceneBodies[numBody].shapeIndex = 0;
+numBody++;
+</pre></div>
+<!-- end-of-code-block -->
+<ol class="arabic simple">
+<li>衝突形状のボックス形状sceneShape[0]、およびStaticタイプであるため質量無限大PhysicsUtility.FltMaxを引数としてPhysicsBodyのコンストラクタを呼び出す</li>
+<li>position属性として位置にVector2(0, -wall_height.Y)を設定</li>
+<li>rotation属性として角度に0を設定</li>
+<li>shapeIndexとしてPhysicsBodyのコンストラクタに与えた形状のインデックスを与えています</li>
+<li>シーン中の剛体オブジェクトの数を保持する変数numBodyをインクリメントしておきます</li>
+</ol>
+<div class="line-block">
+<div class="line">壁、天井となるStatic剛体の設定も同様です。</div>
+<div class="line"><br /></div>
+<div class="line">ここで床と天井の剛体の衝突形状は同じなので、関連付けられている衝突形状が同じになります。</div>
+<div class="line">衝突形状は複数の剛体と関連付けることが可能ですので、同じ衝突形状を複数作成しないように気をつけてください。</div>
+<div class="line"><br /></div>
+</div>
+<div align="left" class="figure">
+<img alt="alternate text" src="image/physics2d/collision_shape03_j.png" style="width: 600.0px; height: 301.0px;" />
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">次にシーンの中に自由に動き回れる球、ボックス、凸多角形のDynamic剛体を作っていきます。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id11">
+<h3><a class="toc-backref" href="#id43">Dynamic剛体の設定例</a></h3>
+<div class="highlight"><pre>// Create dynamic rigid sceneBodies
+{
+    // Create a box-shaped dynamic rigid body
+    {
+        sceneBodies[numBody] = new PhysicsBody(sceneShapes[2], 1.0f);
+        sceneBodies[numBody].position = new Vector2(-10.0f, -5.0f);
+        sceneBodies[numBody].rotation = PhysicsUtility.GetRadian(30.0f);
+        sceneBodies[numBody].shapeIndex = 2;
+        numBody++;
+    }
+
+    // Create a sphere-shaped dynamic rigid body
+    {
+        sceneBodies[numBody] = new PhysicsBody(sceneShapes[3], 1.0f);
+        sceneBodies[numBody].position = new Vector2(0.0f, -5.0f);
+        sceneBodies[numBody].rotation = 0;
+        sceneBodies[numBody].shapeIndex = 3;
+        sceneBodies[numBody].colFriction = 0.01f;
+        numBody++;
+    }
+
+    // Create a convex-shaped dynamic rigid body
+    {
+        sceneBodies[numBody] = new PhysicsBody(sceneShapes[4], 1.0f);
+        sceneBodies[numBody].position = new Vector2(10.0f, -5.0f);
+        sceneBodies[numBody].rotation = 0;
+        sceneBodies[numBody].shapeIndex = 4;
+        numBody++;
+    }
+}
+</pre></div>
+<!-- end-of-code-block -->
+<p>ここではボックスとなるDynamic剛体の設定を行っています。</p>
+<div class="highlight"><pre>sceneBodies[numBody] = new PhysicsBody(sceneShapes[2], 1.0f);
+sceneBodies[numBody].position = new Vector2(-10.0f, -5.0f);
+sceneBodies[numBody].rotation = PhysicsUtility.GetRadian(30.0f);
+sceneBodies[numBody].shapeIndex = 2;
+numBody++;
+</pre></div>
+<!-- end-of-code-block -->
+<ol class="arabic simple">
+<li>衝突形状となるボックス形状sceneShape[2]、および質量1.0fを引数としてPhysicsBodyのコンストラクタを呼び出す</li>
+<li>position属性として位置にVector2(-10.0f, -5.0f)を設定</li>
+<li>rotation属性として角度にPhysicsUtility.GetRadian(30.0f)を設定（ラジアン指定）</li>
+<li>shapeIndexとしてPhysicsBodyのコンストラクタに与えた形状のインデックスを与える</li>
+<li>シーン中の剛体オブジェクトの数を保持する変数numBodyをインクリメント</li>
+</ol>
+<div class="line-block">
+<div class="line">球、凸多角形の形状を持つDynamic剛体の設定も同様です。</div>
+<div class="line"><br /></div>
+<div class="line">ここでは球となるDynamic剛体の設定を行っています。</div>
+</div>
+<div class="highlight"><pre>sceneBodies[numBody] = new PhysicsBody(sceneShapes[3], 1.0f);
+sceneBodies[numBody].position = new Vector2(0.0f, -5.0f);
+sceneBodies[numBody].rotation = 0;
+sceneBodies[numBody].shapeIndex = 3;
+sceneBodies[numBody].colFriction = 0.01f;
+numBody++;
+</pre></div>
+<!-- end-of-code-block -->
+<ol class="arabic simple">
+<li>衝突形状となるボックス形状sceneShape[3]、および質量1.0fを引数としてPhysicsBodyのコンストラクタを呼び出す</li>
+<li>position属性として位置にVector2(0.0f, -5.0f)を設定</li>
+<li>rotation属性として角度に0を設定</li>
+<li>shapeIndexとしてPhysicsBodyのコンストラクタに与えた形状のインデックスを与える</li>
+<li>衝突摩擦係数0.01fを設定</li>
+<li>シーン中の剛体オブジェクトの数を保持する変数numBodyをインクリメント</li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">ここでは凸多角形となるDynamic剛体の設定を行っています。</div>
+</div>
+<div class="highlight"><pre>sceneBodies[numBody] = new PhysicsBody(sceneShapes[4], 1.0f);
+sceneBodies[numBody].position = new Vector2(10.0f, -5.0f);
+sceneBodies[numBody].rotation = 0;
+sceneBodies[numBody].shapeIndex = 4;
+numBody++;
+</pre></div>
+<!-- end-of-code-block -->
+<ol class="arabic simple">
+<li>衝突形状となるボックス形状sceneShape[4]、および質量1.0fを引数としてPhysicsBodyのコンストラクタを呼び出す</li>
+<li>position属性として位置にVector2(10.0f, -5.0f)を設定</li>
+<li>rotation属性として角度に0を設定</li>
+<li>shapeIndexとしてPhysicsBodyのコンストラクタに与えた形状のインデックスを与える</li>
+<li>シーン中の剛体オブジェクトの数を保持する変数numBodyをインクリメント</li>
+</ol>
+<div class="line-block">
+<div class="line">なお、Dynamic剛体の場合、質量を含む剛体のスケールについては注意が必要です。</div>
+<div class="line"><br /></div>
+</div>
+<div align="left" class="figure">
+<img alt="alternate text" src="image/physics2d/sim_instability_j.png" style="width: 600.0px; height: 307.0px;" />
+</div>
+<div class="line-block">
+<div class="line">質量差の激しい剛体同士が衝突した場合には、計算の不安定性が生じることがあります。</div>
+<div class="line">Dynamic剛体の場合、大まかな目安として以下の範囲で剛体を生成することが望ましいです。</div>
+</div>
+<ul class="simple">
+<li>質量スケール : 0.2[Kg] - 20.0[Kg]</li>
+<li>長さスケール : 0.2[m] - 20.0[m]</li>
+</ul>
+<div class="line-block">
+<div class="line">では、次に一時的に強制的に静止されられたりするKinematic剛体を作っていきます。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id12">
+<h3><a class="toc-backref" href="#id44">Kinematic剛体の設定例</a></h3>
+<div class="highlight"><pre> // Create a kinematic rigid body whose shape is box
+{
+    sceneBodies[numBody] = new PhysicsBody(sceneShapes[2], 1.0f);
+    sceneBodies[numBody].position = new Vector2(-10.0f, 15.0f);
+    sceneBodies[numBody].rotation = PhysicsUtility.GetRadian(30.0f);
+    sceneBodies[numBody].shapeIndex = 2;
+    sceneBodies[numBody].SetBodyKinematic();
+    index0 = numBody++;
+}
+
+// Create a sphere-shaped kinematic rigid body
+{
+    sceneBodies[numBody] = new PhysicsBody(sceneShapes[3], 1.0f);
+    sceneBodies[numBody].position = new Vector2(0.0f, 15.0f);
+    sceneBodies[numBody].rotation = 0;
+    sceneBodies[numBody].shapeIndex = 3;
+    sceneBodies[numBody].colFriction = 0.01f;
+    sceneBodies[numBody].SetBodyKinematic();
+    index1 = numBody++;
+}
+
+// Create a convex-shaped kinematic rigid body
+{
+    sceneBodies[numBody] = new PhysicsBody(sceneShapes[4], 1.0f);
+    sceneBodies[numBody].position = new Vector2(10.0f, 15.0f);
+    sceneBodies[numBody].rotation = 0;
+    sceneBodies[numBody].shapeIndex = 4;
+    sceneBodies[numBody].SetBodyKinematic();
+    index2 = numBody++;
+}
+</pre></div>
+<!-- end-of-code-block -->
+<div class="line-block">
+<div class="line">ここではボックスとなるKinematic剛体の設定を行っていますが、実はDynamic剛体の設定とほぼ同じ手順です。違いはSetBodyKinematic()を呼び出す部分です。</div>
+</div>
+<div class="highlight"><pre>sceneBodies[numBody] = new PhysicsBody(sceneShapes[2], 1.0f);
+sceneBodies[numBody].position = new Vector2(-10.0f, 15.0f);
+sceneBodies[numBody].rotation = PhysicsUtility.GetRadian(30.0f);
+sceneBodies[numBody].shapeIndex = 2;
+sceneBodies[numBody].SetBodyKinematic();
+index0 = numBody++;
+</pre></div>
+<!-- end-of-code-block -->
+<ol class="arabic simple">
+<li>衝突形状となるボックス形状sceneShape[2]、および質量1.0fを引数としてPhysicsBodyのコンストラクタを呼び出す</li>
+<li>position属性として位置にVector2(-10.0f, 15.0f)を設定</li>
+<li>rotation属性として角度にPhysicsUtility.GetRadian(30.0f)を設定（ラジアン指定）</li>
+<li>shapeIndexとしてPhysicsBodyのコンストラクタに与えた形状のインデックスを与える</li>
+<li>Kinematic剛体にするためにSetBodyKinematic()を呼び出すことでDynamic剛体として一度設定された情報を退避する</li>
+<li>シーン中の剛体オブジェクトの数を保持する変数numBodyをインクリメント</li>
+</ol>
+<div class="line-block">
+<div class="line">球、凸多角形の形状を持つKinematic剛体の設定も同様です。</div>
+<div class="line"><br /></div>
+<div class="line">なお、Kinematic剛体と設定された剛体はDynamic剛体に戻す（退避した情報）ことが可能です。</div>
+<div class="line"><br /></div>
+<div class="line">PrimitiveSceneではボタン入力によって一度Kinematic剛体に設定された剛体をDynamic剛体に戻したり、再びKinematic剛体にしたりしています。</div>
+<div class="line">Kinematic剛体の設定でindex0にインデックスを保存していたのはこのためです。</div>
+</div>
+<div class="highlight"><pre>// Game controller handling
+public override void KeyboradFunc(GamePadButtons button)
+{
+    switch (button)
+    {
+        case GamePadButtons.Square:
+
+                //
+            // isKinematicOrStatic() checks the mass of the rigid body and determines whether a body is kinematic or static
+            // backToDynamic() cannot be called for rigid sceneBodies not set up with setKinematic()
+            //
+
+            if (sceneBodies[index0].IsKinematic())
+                sceneBodies[index0].BackToDynamic();
+            else
+                sceneBodies[index0].SetBodyKinematic();
+
+            if (sceneBodies[index1].IsKinematic())
+                sceneBodies[index1].BackToDynamic();
+            else
+                sceneBodies[index1].SetBodyKinematic();
+
+            if (sceneBodies[index2].IsKinematic())
+                sceneBodies[index2].BackToDynamic();
+            else
+                sceneBodies[index2].SetBodyKinematic();
+
+            break;
+        default:
+            break;
+    }
+}
+</pre></div>
+<!-- end-of-code-block -->
+<div class="line-block">
+<div class="line">IsKinematic APIによって剛体がKinematic剛体であるかを判定して、Kinematic剛体であれば、退避していた情報を戻してDynamic剛体に変化させています。</div>
+<div class="line">退避していた情報を戻すためにもKinamtic剛体も最初はDynamic剛体に設定しておく必要があります。Dynamic剛体に戻す可能性がない剛体は最初からStatic剛体として設定してください。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id13">
+<h3><a class="toc-backref" href="#id45">シーンの特性の設定</a></h3>
+<p>さて、InitScene()の中で剛体の初期配置について見てきましたが、InitScene()で使われているシーンの特性の設定について説明します。</p>
+<div class="highlight"><pre>public override void InitScene ()
+{
+        // Create an empty simulation scene
+        base.InitScene();
+        sceneName = &quot;PrimitiveScene&quot;;
+
+        // Set the restitution coefficient a bit stronger
+        this.restitutionCoeff = 0.8f;
+</pre></div>
+<!-- end-of-code-block -->
+<p>sceneNameはシーン名を保持する文字列の変数で&quot;PrimitiveScene&quot;をセットしています。</p>
+<div class="highlight"><pre>this.restitutionCoeff = 0.8f;
+</pre></div>
+<!-- end-of-code-block -->
+<p>シーンの特性である反発に対する反発係数の設定をしていて、反発をきちんと生じるシーンに設定しています。</p>
+<p>シーン内での衝突の特性を決めるパラメータとしては以下の値が設定可能です。</p>
+<ul class="simple">
+<li>float penetrationRepulse (default 0.2f) ... めり込みに対する反発力の加速係数</li>
+<li>float penetLimit (default 0.03f) ... めり込みに対する許容度</li>
+<li>float tangentFriction (default 0.3f) ... 反発に対する接線方向の摩擦係数</li>
+<li>float restitutionCoeff (default 0.0f) ... 反発に対する反発係数</li>
+</ul>
+<div align="left" class="figure">
+<img alt="alternate text" src="image/physics2d/scene_prop_j.png" style="width: 600.0px; height: 313.0px;" />
+</div>
+<div class="line-block">
+<div class="line">これらの値を変えることで、反発のしやすいシーンになったり、反発のしにくいシーンになったり、摩擦のないシーンにすることが可能です。</div>
+<div class="line">シーンの特性のパラメータについては&quot;sample/Physics2D/Physics2DSample/TutorialScene/ScenePropertyScene.cs&quot;にサンプルがありますので、参考にしてください。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id14">
+<h3><a class="toc-backref" href="#id46">剛体のスリープについて</a></h3>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">計算コストを抑えるため、剛体がほぼ動いておらず静止していると見なせる状態になっている時には、剛体はスリープ状態に入ります。</div>
+<div class="line">剛体がスリープに入っている状態では、衝突点検出、衝突反発の計算は行われなくなります。</div>
+<div class="line"><br /></div>
+<div class="line">PrimitiveSceneにおいても床と接触している剛体の間の衝突点計算がスリープ状態に入ると行われなくなります。</div>
+<div class="line">しかし、新たな衝突が発生して速度を生じる時点で剛体はスリープ状態から抜けだします。</div>
+<div class="line"><br /></div>
+</div>
+<div align="left" class="figure">
+<img alt="alternate text" src="image/physics2d/sleep_status_j.png" style="width: 600.0px; height: 298.0px;" />
+</div>
+<div class="line-block">
+<div class="line">なお、Static剛体やKinematic剛体については強制的に静止状態になっている時は、常にスリープ状態と見なされます。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="id15">
+<h2><a class="toc-backref" href="#id47">剛体オブジェクトの描画ついにて</a></h2>
+<div class="line-block">
+<div class="line">剛体オブジェクトの描画について簡単に解説をします。描画方法そのものについての説明はGraphicsサンプルのドキュメントを参照してください。</div>
+<div class="line">ここではPhysics2Dと関係のある部分についてのみ解説します。</div>
+<div class="line"><br /></div>
+<div class="line">通常、剛体オブジェクトの描画は剛体に設定された衝突形状にもとづいて描画されます。</div>
+<div class="line">例で見てきた通り、衝突形状オブジェクトはsceneShapesに保存されていました。sceneShapesはPhsyicsShapeの配列です。</div>
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id16">
+<h3><a class="toc-backref" href="#id48">頂点バッファの準備</a></h3>
+<p>まずはシェーダープログラムに与える頂点バッファが必要になります。</p>
+<div class="highlight"><pre>public class PrimitiveScene : PhysicsScene
+{
+    // Vertex Buffer for Body Rendering
+    private VertexBuffer[] vertices = new VertexBuffer[100];
+</pre></div>
+<!-- end-of-code-block -->
+<div class="line-block">
+<div class="line">PrimitiveSceneでは100個の衝突形状は出てきませんが、ここではとりあえず100個分の衝突形状を描画できるように頂点バッファを宣言します。</div>
+<div class="line">なお、頂点バッファは剛体ごとに使用するのではなく、同じ衝突形状を持つ剛体間でシェアしています。</div>
+<div class="line">これはPrimitiveSceneのためであり、テクスチャを剛体ごとに変える場合には剛体ごとに頂点バッファを確保する必要になることもあります。</div>
+<div class="line"><br /></div>
+<div class="line">次に頂点バッファのコンストラクタで頂点数、頂点のフォーマットを指定して頂点バッファを作成します。</div>
+</div>
+<div class="highlight"><pre>public PrimitiveScene()
+{
+    // Simulation Scene Set Up
+    InitScene();
+
+    // Setup for Rendering Object
+    for (int i = 0; i &lt; numShape; i++)
+    {
+        if (sceneShapes[i].numVert == 0)
+        {
+            vertices[i] = new VertexBuffer(37, VertexFormat.Float3);
+        }
+        else
+        {
+            vertices[i] = new VertexBuffer(sceneShapes[i].numVert + 1, VertexFormat.Float3);
+        }
+</pre></div>
+<!-- end-of-code-block -->
+</div>
+<div class="section" id="physicsshape">
+<h3><a class="toc-backref" href="#id49">衝突形状PhysicsShapeの構造</a></h3>
+<p>ここでPhysicsShapeの構造を確認しておきます。</p>
+<div class="highlight"><pre>public partial class PhysicsShape
+{
+    public int numVert;
+
+    public Vector2[] vertList = new Vector2[30];
+        ...
+        ...
+        ...
+}
+</pre></div>
+<!-- end-of-code-block -->
+<div class="line-block">
+<div class="line">これは定義の一部ですが、PhysicsShapeは頂点数を保存するnumVertと、実際に頂点列を保存するvertListを保持しています。</div>
+<div class="line">この頂点列の情報にもとづいて描画をすれば良いのですが、numVert==0の場合は球として設定されており、vertList[0].Xに半径が保存されている点に注意が必要です。</div>
+</div>
+<div align="left" class="figure">
+<img alt="alternate text" src="image/physics2d/physics_render_j.png" style="width: 600.0px; height: 341.0px;" />
+</div>
+<p>PhysicsShapeの構造にもとづき、頂点バッファに頂点をセットしている部分は以下です。</p>
+<div class="highlight"><pre>// Line Rendering for Object
+private void MakeLineListConvex(PhysicsShape con, VertexBuffer vertices)
+{
+
+    if (con.numVert == 0)
+    {
+        float[] vertex = new float[3 * 37];
+
+        int i = 0;
+        float rad = con.vertList[0].X;
+
+        for (float th1 = 0.0f; th1 &lt; 360.0f; th1 = th1 + 10.0f)
+        {
+            float th1_rad = th1 / 180.0f * PhysicsUtility.Pi;
+
+            float x1 = rad * (float)Math.Cos(th1_rad);
+            float y1 = rad * (float)Math.Sin(th1_rad);
+
+            vertex[3 * i + 0] = x1;
+            vertex[3 * i + 1] = y1;
+            vertex[3 * 　i + 2] = 0.0f;
+            i++;
+        }
+
+        vertex[3 * i + 0] = vertex[3 * 0 + 0];
+        vertex[3 * i + 1] = vertex[3 * 0 + 1];
+        vertex[3 * i + 2] = vertex[3 * 0 + 2];
+
+        vertices.SetVertices(0, vertex);
+
+    }
+    else
+    {
+        float[] vertex = new float[3 * (con.numVert + 1)];
+
+        int i;
+
+        for (i = 0; i &lt; con.numVert; i++)
+        {
+            Vector2 v1;
+            v1 = con.vertList[i];
+
+            vertex[3 * i + 0] = v1.X;
+            vertex[3 * i + 1] = v1.Y;
+            vertex[3 * i + 2] = 0.0f;
+        }
+
+        vertex[3 * i + 0] = vertex[3 * 0 + 0];
+        vertex[3 * i + 1] = vertex[3 * 0 + 1];
+        vertex[3 * i + 2] = vertex[3 * 0 + 2];
+
+        vertices.SetVertices(0, vertex);
+    }
+}
+</pre></div>
+<!-- end-of-code-block -->
+<div class="line-block">
+<div class="line">con.numVert == 0の場合と、それ以外で場合分けをしています。これは述べたように、球の場合は特殊な形で情報が保持されているからです。</div>
+<div class="line">球の場合は半径の情報のみがPhysicsShapeインスタンスに保存されているため、自分で描画用の頂点列を生成しなければなりません。</div>
+<div class="line">そこで半径をもとに円周上に何点か頂点をピックアップすることで頂点列を作ります。</div>
+<div class="line">ここでは0度から350度までの10度刻みの36頂点と、最後に最初の頂点と同じ座標に頂点を生成しているので合計37頂点になります。</div>
+<div class="line"><br /></div>
+<div class="line">一方、ボックスや一般の凸多角形ではPhysicsShapeインスタンスに保持されている頂点列を頂点バッファにセットします。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id17">
+<h3><a class="toc-backref" href="#id50">球の場合の頂点データの取得</a></h3>
+<div class="highlight"><pre>if (con.numVert == 0)
+{
+    float[] vertex = new float[3 * 37];
+
+    int i = 0;
+    float rad = con.vertList[0].X;
+
+    for (float th1 = 0.0f; th1 &lt; 360.0f; th1 = th1 + 10.0f)
+    {
+        float th1_rad = th1 / 180.0f * PhysicsUtility.Pi;
+
+        float x1 = rad * (float)Math.Cos(th1_rad);
+        float y1 = rad * (float)Math.Sin(th1_rad);
+
+        vertex[3 * i + 0] = x1;
+        vertex[3 * i + 1] = y1;
+        vertex[3 * i + 2] = 0.0f;
+        i++;
+    }
+
+    vertex[3 * i + 0] = vertex[3 * 0 + 0];
+    vertex[3 * i + 1] = vertex[3 * 0 + 1];
+    vertex[3 * i + 2] = vertex[3 * 0 + 2];
+
+    vertices.SetVertices(0, vertex);
+
+}
+</pre></div>
+<!-- end-of-code-block -->
+<div class="line-block">
+<div class="line">描画のために使用する頂点のバッファは3次元の頂点座標を持ちますが、Z方向を無視するために常に0.0fをZ座標に指定しています。</div>
+<div class="line">形状をライン描画するために最後の頂点として最初の頂点と同じ座標を与えています。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id18">
+<h3><a class="toc-backref" href="#id51">ボックスや一般の凸多角形の場合の頂点データの取得</a></h3>
+<div class="highlight"><pre>else
+{
+    float[] vertex = new float[3 * (con.numVert + 1)];
+
+    int i;
+
+    for (i = 0; i &lt; con.numVert; i++)
+    {
+        Vector2 v1;
+        v1 = con.vertList[i];
+
+        vertex[3 * i + 0] = v1.X;
+        vertex[3 * i + 1] = v1.Y;
+        vertex[3 * i + 2] = 0.0f;
+    }
+
+    vertex[3 * i + 0] = vertex[3 * 0 + 0];
+    vertex[3 * i + 1] = vertex[3 * 0 + 1];
+    vertex[3 * i + 2] = vertex[3 * 0 + 2];
+
+    vertices.SetVertices(0, vertex);
+}
+</pre></div>
+<!-- end-of-code-block -->
+<p>形状をライン描画するために最後の頂点として最初の頂点と同じ座標を与えています。</p>
+</div>
+<div class="section" id="id19">
+<h3><a class="toc-backref" href="#id52">剛体形状の描画コード</a></h3>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">実際のシーンの描画は、単に形状を描画するだけでなく、剛体オブジェクトの各フレームにおける位置や角度の変化に合わせて描画する必要があります。</div>
+<div class="line">そのため、剛体オブジェクトのposition, rotation, localPosition, localRotationの値を使って、描画に用いられる変換行列を設定する必要があります。</div>
+<div class="line">この行列とは、もとの形状を示す頂点列から実際に剛体の位置、角度などを反映した頂点列に変換するための行列です。</div>
+<div class="line">複合形状でなければ、localPositionとlocalRotationは考えなくて良く、position, rotationのみの考慮でかまいません。</div>
+<div class="line"><br /></div>
+</div>
+<div align="left" class="figure">
+<img alt="alternate text" src="image/physics2d/rigid_body_j.png" style="width: 600.0px; height: 325.0px;" />
+</div>
+<div class="highlight"><pre>// Draw objects
+public override void DrawAllBody(ref GraphicsContext graphics, ref ShaderProgram program, Matrix4 renderMatrix, int click_index)
+{
+    for (int j = 0; j &lt; numShape; j++)
+    {
+        graphics.SetVertexBuffer(0, vertices[j]);
+
+        for (int i = 0; i &lt; numBody; i++)
+        {
+            uint index = sceneBodies[i].shapeIndex;
+
+            if (j != index) continue;
+
+            Matrix4 rotationMatrix = Matrix4.RotationZ(sceneBodies[i].rotation);
+
+            Matrix4 transMatrix = Matrix4.Translation(
+                new Vector3(sceneBodies[i].position.X, sceneBodies[i].position.Y, 0.0f));
+
+            Matrix4 local_rotationMatrix = Matrix4.RotationZ(sceneBodies[i].localRotation);
+
+            Matrix4 local_transMatrix = Matrix4.Translation(
+                new Vector3(sceneBodies[i].localPosition.X, sceneBodies[i].localPosition.Y, 0.0f));
+
+            Matrix4 WorldMatrix = renderMatrix * transMatrix * rotationMatrix * local_transMatrix * local_rotationMatrix;
+
+            program.SetUniformValue(0, ref WorldMatrix);
+
+            if (i == click_index)
+            {
+                Vector3 color = new Vector3(1.0f, 0.0f, 0.0f);
+                program.SetUniformValue(1, ref color);
+            }
+            else
+            {
+                Vector3 color = new Vector3(0.0f, 1.0f, 1.0f);
+                program.SetUniformValue(1, ref color);
+            }
+
+            if (sceneShapes[index].numVert == 0)
+                graphics.DrawArrays(DrawMode.LineStrip, 0, 37);
+            else
+                graphics.DrawArrays(DrawMode.LineStrip, 0, sceneShapes[index].numVert + 1);
+
+        }
+
+    }
+}
+</pre></div>
+<!-- end-of-code-block -->
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">順番に内容を見ていきます。前半はシェーダープログラムの設定のためのワールド行列やビュー行列の設定になっています。</div>
+<div class="line">シェーダープログラムそのものの設定方法についてはGraphicsサンプルを参照してください。</div>
+<div class="line"><br /></div>
+</div>
+<div class="highlight"><pre>Matrix4 rotationMatrix = Matrix4.RotationZ(sceneBodies[i].rotation);
+
+Matrix4 transMatrix = Matrix4.Translation(
+    new Vector3(sceneBodies[i].position.X, sceneBodies[i].position.Y, 0.0f));
+
+Matrix4 local_rotationMatrix = Matrix4.RotationZ(sceneBodies[i].localRotation);
+
+Matrix4 local_transMatrix = Matrix4.Translation(
+    new Vector3(sceneBodies[i].localPosition.X, sceneBodies[i].localPosition.Y, 0.0f));
+
+Matrix4 WorldMatrix = renderMatrix * transMatrix * rotationMatrix * local_transMatrix * local_rotationMatrix;
+
+program.SetUniformValue(0, ref WorldMatrix);
+</pre></div>
+<!-- end-of-code-block -->
+<div class="line-block">
+<div class="line">上記の行列演算において、(transMatrix * rotationMatrix * local_transMatrix * local_rotationMatrix)で乗算が行われています。</div>
+<div class="line">複合形状でなければ、(transMatrix * rotationMatrix)のみの考慮でかまいません。</div>
+<div class="line"><br /></div>
+<div class="line">描画において剛体に設定された衝突形状の元の各頂点は次の順で乗算が行われ、現在の剛体の位置や角度などを反映した頂点に変換されることになります。</div>
+</div>
+<ol class="arabic simple">
+<li>local_rotationMatrix</li>
+<li>local_transMatrix</li>
+<li>rotationMatrix</li>
+<li>transMatrix</li>
+</ol>
+<p>変換の行列を設定したら、後は元の衝突形状の頂点をシェーダーに与えて描画を行うだけで良いのです。</p>
+<div class="highlight"><pre>if (sceneShapes[index].numVert == 0)
+    graphics.DrawArrays(DrawMode.LineStrip, 0, 37);
+else
+    graphics.DrawArrays(DrawMode.LineStrip, 0, sceneShapes[index].numVert + 1);
+</pre></div>
+<!-- end-of-code-block -->
+</div>
+</div>
+<div class="section" id="id20">
+<h2><a class="toc-backref" href="#id53">デバッグ情報の描画について</a></h2>
+<div class="line-block">
+<div class="line">正しく物理シミュレーションが行われているかデバッグ描画を行って状態を確認したい場合があります。</div>
+<div class="line">デバッグ描画に良く使われるのが衝突点の位置情報です。他にもオブジェクトのバウンディングボックスやジョイントの情報がデバッグ描画に良く使われます。</div>
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id21">
+<h3><a class="toc-backref" href="#id54">衝突点のデバッグ描画</a></h3>
+<div align="left" class="figure">
+<img alt="alternate text" src="image/physics2d/coll_info_j.png" style="width: 600.0px; height: 386.0px;" />
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">剛体Ａと剛体Ｂが衝突している状態の時、衝突点の情報は剛体Ａと剛体Ｂのそれぞれに生成されます。</div>
+<div class="line">通常は剛体Ａと剛体Ｂの衝突点情報の位置座標はほぼ同じですが、強い外力などにより、</div>
+<div class="line">一瞬、剛体Ａと剛体Ｂの間にめり込みが生じた場合は、剛体Ａと剛体Ｂに対する衝突点情報の位置座標にずれが生じます。</div>
+<div class="line"><br /></div>
+<div class="line">実際に衝突点を描画するコードを見てます。まずは衝突点を描画するために、小さい正方形をデバッグ描画用の頂点バッファにセットしておきます。</div>
+<div class="line"><br /></div>
+</div>
+<div class="highlight"><pre>public class PrimitiveScene : PhysicsScene
+    {
+            ...
+            ...
+            ...
+
+    private VertexBuffer colVert = null;
+
+            ...
+            ...
+            ...
+
+
+    public PrimitiveScene()
+    {
+
+            ...
+            ...
+            ...
+
+        // VertexBuffer for contact points debug rendering
+        {
+            colVert = new VertexBuffer(4, VertexFormat.Float3);
+
+            const float scale = 0.2f;
+
+            float[] vertex = new float[]
+            {
+                -1.0f, -1.0f, 0.0f,
+                1.0f, -1.0f, 0.0f,
+                1.0f, 1.0f, 0.0f,
+                -1.0f, 1.0f, 0.0f
+            };
+
+            for (int i = 0; i &lt; 12; i++)
+                vertex[i] = vertex[i] * scale;
+
+            colVert.SetVertices(0, vertex);
+        }
+</pre></div>
+<!-- end-of-code-block -->
+<div class="line-block">
+<div class="line">衝突点を描画するための描画オブジェクトは正方形でなくとも良いのですが、ここでは簡易な情報でかまわないので正方形としています。</div>
+</div>
+<div class="highlight"><pre>// Debug rendering for contact points(RigidBody A &lt;=&gt; RigidBody B) and AABB(Axis Aligned Bounding Box)
+public override void DrawAdditionalInfo(ref GraphicsContext graphics, ref ShaderProgram program, Matrix4 renderMatrix)
+{
+    // Draw contact points
+    graphics.SetVertexBuffer(0, colVert);
+
+    for (uint i = 0; i &lt; numPhysicsSolverPair; i++)
+    {
+        // Collision point for RigidBody A
+        {
+            Matrix4 transMatrix = Matrix4.Translation(
+                new Vector3(solverPair[i].resA.X, solverPair[i].resA.Y, 0.0f));
+
+            Matrix4 WorldMatrix = renderMatrix * transMatrix;
+            program.SetUniformValue(0, ref WorldMatrix);
+
+            Vector3 color = new Vector3(1.0f, 0.0f, 0.0f);
+            program.SetUniformValue(1, ref color);
+
+            graphics.DrawArrays(DrawMode.TriangleFan, 0, 4);
+        }
+
+        // Collision point for RigidBody B
+        {
+            Matrix4 transMatrix = Matrix4.Translation(
+                new Vector3(solverPair[i].resB.X, solverPair[i].resB.Y, 0.0f));
+
+            Matrix4 WorldMatrix = renderMatrix * transMatrix;
+            program.SetUniformValue(0, ref WorldMatrix);
+
+            Vector3 color = new Vector3(1.0f, 0.0f, 0.0f);
+            program.SetUniformValue(1, ref color);
+
+            graphics.DrawArrays(DrawMode.TriangleFan, 0, 4);
+        }
+    }
+</pre></div>
+<!-- end-of-code-block -->
+<div class="line-block">
+<div class="line">シーン中の衝突点の数はnumPhysicsSolverPairに保存さており、衝突点の情報はsolverPair配列に保存されているので</div>
+<div class="line">numPhysicsSolverPairの回数だけ衝突点の描画処理を順番に行っていきます。</div>
+<div class="line"><br /></div>
+<div class="line">衝突点情報における剛体Ａ側の衝突点の位置は以下によって取得しています。</div>
+<div class="line"><br /></div>
+</div>
+<div class="highlight"><pre>Matrix4 transMatrix = Matrix4.Translation(
+    new Vector3(solverPair[i].resA.X, solverPair[i].resA.Y, 0.0f));
+</pre></div>
+<!-- end-of-code-block -->
+<div class="line-block">
+<div class="line">衝突点情報における剛体Ｂ側の衝突点の位置は以下によって取得しています。</div>
+</div>
+<div class="highlight"><pre>Matrix4 transMatrix = Matrix4.Translation(
+    new Vector3(solverPair[i].resB.X, solverPair[i].resB.Y, 0.0f));
+</pre></div>
+<!-- end-of-code-block -->
+</div>
+<div class="section" id="id22">
+<h3><a class="toc-backref" href="#id55">バウンディングボックスのデバッグ描画</a></h3>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">次にバウンディングボックス情報をデバッグ描画している部分について見ていきます。</div>
+<div class="line">バウンディングボックスとはX軸、Y軸に平行であり、かつ剛体オブジェクトを包む最小限のボックスのことです。</div>
+</div>
+<div align="left" class="figure">
+<img alt="alternate text" src="image/physics2d/bounding_box_j.png" style="width: 600.0px; height: 263.0px;" />
+</div>
+<div class="line-block">
+<div class="line">まず衝突点描画と同様に、バウンディングボックスを描画するための頂点バッファを最初に用意します。</div>
+</div>
+<div class="highlight"><pre>public class PrimitiveScene : PhysicsScene
+    {
+            ...
+            ...
+            ...
+
+    private VertexBuffer aabbVert = null;
+
+            ...
+            ...
+            ...
+
+    public PrimitiveScene()
+    {
+
+            ...
+            ...
+            ...
+
+        // VertexBuffer for AABB debug rendering
+        {
+            aabbVert = new VertexBuffer(5, VertexFormat.Float3);
+
+            float[] vertex = new float[]
+            {
+                0.0f, 0.0f, 0.0f,
+                1.0f, 0.0f, 0.0f,
+                1.0f, 1.0f, 0.0f,
+                0.0f, 1.0f, 0.0f,
+                0.0f, 0.0f, 0.0f,
+            };
+
+            aabbVert.SetVertices(0, vertex);
+        }
+</pre></div>
+<!-- end-of-code-block -->
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">バウンディングボックスはライン描画を行うために頂点としては5点用意しておき、最後の頂点を最初の頂点と同じにしています。</div>
+<div class="line"><br /></div>
+</div>
+<div class="highlight"><pre>// Debug rendering for contact points(RigidBody A &lt;=&gt; RigidBody B) and AABB(Axis Aligned Bounding Box)
+public override void DrawAdditionalInfo(ref GraphicsContext graphics, ref ShaderProgram program, Matrix4 renderMatrix)
+{
+
+        ...
+        ...
+        ...
+
+    // Draw AABB Bounding Box
+    graphics.SetVertexBuffer(0, aabbVert);
+
+    for (uint i = 0; i &lt; numBody; i++)
+    {
+
+        Matrix4 scaleMatrix = new Matrix4(
+             sceneBodies[i].aabbMax.X - sceneBodies[i].aabbMin.X, 0.0f, 0.0f, 0.0f,
+             0.0f, sceneBodies[i].aabbMax.Y - sceneBodies[i].aabbMin.Y, 0.0f, 0.0f,
+             0.0f, 0.0f, 1.0f, 0.0f,
+             0.0f, 0.0f, 0.0f, 1.0f
+         );
+
+        Matrix4 transMatrix = Matrix4.Translation(
+            new Vector3(sceneBodies[i].aabbMin.X, sceneBodies[i].aabbMin.Y, 0.0f));
+
+        Matrix4 WorldMatrix = renderMatrix * transMatrix * scaleMatrix;
+        program.SetUniformValue(0, ref WorldMatrix);
+
+        Vector3 color = new Vector3(1.0f, 1.0f, 0.0f);
+        program.SetUniformValue(1, ref color);
+
+        graphics.DrawArrays(DrawMode.LineStrip, 0, 5);
+    }
+</pre></div>
+<!-- end-of-code-block -->
+<div class="line-block">
+<div class="line">バウンディングボックスの大きさや位置は剛体によって変わってきます。バウンディングボックスの角度は剛体によらず常にX軸、Y軸に平行になります。</div>
+<div class="line">sceneBodies配列に剛体の状態が保存されており、aabbMaxおよびaabbMinの値にバウンディングボックスの大きさの情報が保存されていますので、それを利用して描画していきます。</div>
+<div class="line"><br /></div>
+</div>
+<p>バウンディングボックスの大きさの取得</p>
+<div class="highlight"><pre>Matrix4 scaleMatrix = new Matrix4(
+     sceneBodies[i].aabbMax.X - sceneBodies[i].aabbMin.X, 0.0f, 0.0f, 0.0f,
+     0.0f, sceneBodies[i].aabbMax.Y - sceneBodies[i].aabbMin.Y, 0.0f, 0.0f,
+     0.0f, 0.0f, 1.0f, 0.0f,
+     0.0f, 0.0f, 0.0f, 1.0f
+ );
+</pre></div>
+<!-- end-of-code-block -->
+<p>バウンディングボックスの位置の取得</p>
+<div class="highlight"><pre>Matrix4 transMatrix = Matrix4.Translation(
+    new Vector3(sceneBodies[i].aabbMin.X, sceneBodies[i].aabbMin.Y, 0.0f));
+</pre></div>
+<!-- end-of-code-block -->
+<p>バウンディングボックスの大きさを調整した後に、正しい位置に描画するため、以下の順番で描画のための行列の設定を行います。</p>
+<ol class="arabic simple">
+<li>scaleMatrix</li>
+<li>transMatrix</li>
+</ol>
+<div class="highlight"><pre>Matrix4 WorldMatrix = renderMatrix * transMatrix * scaleMatrix;
+</pre></div>
+<!-- end-of-code-block -->
+<div class="line-block">
+<div class="line">なお、これらのデバッグ描画用に用意した頂点バッファなどのリソースはシーンの終了や切り替え時に解放することを忘れないようにしてください。</div>
+<div class="line">PrimitiveSceneでは以下において剛体描画用の頂点バッファ、デバッグ情報描画用の頂点バッファの解放を行っています。</div>
+</div>
+<div class="highlight"><pre>public override void ReleaseScene()
+{
+    for (int i = 0; i &lt; numShape; i++)
+        if(vertices[i] != null)
+            vertices[i].Dispose();
+
+    if(aabbVert != null) aabbVert.Dispose();
+    if(colVert != null) colVert.Dispose();
+}
+</pre></div>
+<!-- end-of-code-block -->
+<p>以上でPrimitiveSceneの概要を見てきましたが、実際にいろいろな値を変えたりすることで、
+結果がどのように変わるのかを試してみることをお勧めします。</p>
+</div>
+</div>
+</div>
+<div class="section" id="id23">
+<h1><a class="toc-backref" href="#id56">２次元物理シミュレーションPhysics2Dライブラリ各機能の使い方</a></h1>
+<div class="section" id="id24">
+<h2><a class="toc-backref" href="#id57">ジョイントの設定</a></h2>
+<div class="line-block">
+<div class="line">ジョイントの設定の例としてサンプルシーンJointSceneを見ていきます。</div>
+<div class="line">&quot;sample/Physics2D/Physics2DSample/BasicScene/JointScene.cs&quot;</div>
+<div class="line"><br /></div>
+<div class="line">ジョイントとは２つの剛体の間に設定する拘束のことです。２つの剛体間の拘束には並進方向と回転方向の拘束があります。</div>
+</div>
+<ol class="arabic simple">
+<li>回転方向の拘束（回転が自由、固定、制約付き自由）</li>
+<li>並進方向の拘束（並進移動が自由、固定、制約付き自由）</li>
+</ol>
+<div class="line-block">
+<div class="line">なお、Static剛体とStatic剛体の間のジョイントは意味を成さないため、設定をしないように気をつけてください。</div>
+</div>
+<div align="left" class="figure">
+<img alt="alternate text" src="image/physics2d/joint_anchor_j.png" style="width: 600.0px; height: 333.0px;" />
+</div>
+<div class="line-block">
+<div class="line">ジョイント接続においては、どの点で剛体と剛体を接続するかのアンカーポイントの設定と、</div>
+<div class="line">回転方向の拘束の指定、および、並進方向の拘束の指定が必要になります。</div>
+</div>
+<div align="left" class="figure">
+<img alt="alternate text" src="image/physics2d/joint_rot_pos_j.png" style="width: 600.0px; height: 355.0px;" />
+</div>
+<p>回転方向の拘束とは、ジョイントで結合された剛体Ａと剛体Ｂがアンカーポイントを中心として、</p>
+<ul class="simple">
+<li>自由に回転できる</li>
+<li>完全に固定されている</li>
+<li>角度制約の範囲内で自由に回転できる</li>
+</ul>
+<p>を設定します。</p>
+<div align="left" class="figure">
+<img alt="alternate text" src="image/physics2d/joint_rot_j.png" style="width: 600.0px; height: 319.0px;" />
+</div>
+<p>並進方向の拘束とは、ジョイントで結合された剛体Ａと剛体Ｂがアンカーポイントを中心として、</p>
+<ul class="simple">
+<li>自由に移動できる</li>
+<li>完全に固定されている</li>
+<li>移動制約の範囲内で自由に移動できる</li>
+</ul>
+<p>を設定します。</p>
+<div align="left" class="figure">
+<img alt="alternate text" src="image/physics2d/joint_pos_j.png" style="width: 600.0px; height: 345.0px;" />
+</div>
+<div class="line-block">
+<div class="line">並進方向の拘束にはお互いに直行する２つの軸に対して設定を行います。通常はX軸とY軸に対して指定しますが、</div>
+<div class="line">X軸とY軸でなくとも、お互いに直行する２つの軸であれば設定できます。例えばVector2(1, 1)の方向とVector2(-1, 1)の方向。</div>
+</div>
+<div align="left" class="figure">
+<img alt="alternate text" src="image/physics2d/joint_axis_j.png" style="width: 600.0px; height: 307.0px;" />
+</div>
+<div class="section" id="id25">
+<h3><a class="toc-backref" href="#id58">回転方向、並進方向ともに固定の例</a></h3>
+<div class="highlight"><pre>public override void InitScene ()
+{
+
+        ...
+        ...
+        ...
+
+        // Link a box rigid body to the scene with a fixed joint.
+        // If you just want to fix a rigid body to the scene perfectly, it is best simply making a static rigidbody.
+        {
+                sceneBodies[numBody] = new PhysicsBody(sceneShapes[2], 10.0f);
+                sceneBodies[numBody].position = new Vector2(-30.0f, 0.0f);
+                sceneBodies[numBody].shapeIndex = 2;
+                numBody++;
+
+                PhysicsBody b1 = sceneBodies[0];
+                PhysicsBody b2 = sceneBodies[numBody-1];
+                sceneJoints[numJoint] = new PhysicsJoint(b1, b2, (b2.position), 0, (uint)numBody-1);
+                sceneJoints[numJoint].axis1Lim = new Vector2(1, 0);
+                sceneJoints[numJoint].axis2Lim = new Vector2(0, 1);
+                sceneJoints[numJoint].angleLim = 1;
+                numJoint++;
+        }
+</pre></div>
+<!-- end-of-code-block -->
+<div class="line-block">
+<div class="line">ここでは0番目の剛体と(numBody-1)番目の剛体の間にジョイントを生成しています。0番目の剛体はシーン内の床のStatic剛体です。</div>
+<div class="line"><br /></div>
+<div class="line">ジョイントの生成方法としては、ジョイントを作る剛体ペアの指定と、アンカーポイントの指定が必要になります。</div>
+</div>
+<div class="highlight"><pre>PhysicsBody b1 = sceneBodies[0];
+PhysicsBody b2 = sceneBodies[numBody-1];
+sceneJoints[numJoint] = new PhysicsJoint(b1, b2, (b2.position), 0, (uint)numBody-1);
+</pre></div>
+<!-- end-of-code-block -->
+<div class="line-block">
+<div class="line">ここでアンカーポイントは(b2.position)と指定しているので、(numBody-1)番目の剛体の中心をアンカーポイントにしています。</div>
+<div class="line">ジョイントを生成した後に拘束条件の指定をしている部分が以下です。</div>
+</div>
+<div class="highlight"><pre>sceneJoints[numJoint].axis1Lim = new Vector2(1, 0);
+sceneJoints[numJoint].axis2Lim = new Vector2(0, 1);
+sceneJoints[numJoint].angleLim = 1;
+</pre></div>
+<!-- end-of-code-block -->
+<ol class="arabic simple">
+<li>Vector2(1, 0)方向を固定</li>
+<li>Vector2(0, 1)方向を固定</li>
+<li>回転方向を固定</li>
+</ol>
+<p>の順で指定が行われています。</p>
+<p>ここで仮に</p>
+<div class="highlight"><pre>sceneJoints[numJoint].angleLim = 0;
+</pre></div>
+<!-- end-of-code-block -->
+<p>と指定していたなら、回転方向は自由になります。</p>
+<p>同様に仮に</p>
+<div class="highlight"><pre>sceneJoints[numJoint].axis1Lim = new Vector2(0, 0);
+</pre></div>
+<!-- end-of-code-block -->
+<p>と指定していたなら、X軸方向の拘束がなくなり自由移動になります。</p>
+<p>同様に仮に</p>
+<div class="highlight"><pre>sceneJoints[numJoint].axis2Lim = new Vector2(0, 0);
+</pre></div>
+<!-- end-of-code-block -->
+<p>と指定していたなら、Y軸方向の拘束がなくなり自由移動になります。</p>
+<p>もしも仮に</p>
+<div class="highlight"><pre>sceneJoints[numJoint].axis1Lim = new Vector2(0, 0);
+sceneJoints[numJoint].axis2Lim = new Vector2(0, 0);
+sceneJoints[numJoint].angleLim = 0;
+</pre></div>
+<!-- end-of-code-block -->
+<p>とするならば、ジョイントの拘束条件を何も指定していないことになるので、ジョイントを設定していないのと同じになります。</p>
+</div>
+<div class="section" id="id26">
+<h3><a class="toc-backref" href="#id59">回転方向における角度制約の例</a></h3>
+<div class="highlight"><pre>public override void InitScene ()
+{
+
+...
+...
+...
+
+        // Link a box rigid body to the scene with a rotation joint（with angle constraints)
+        {
+                sceneBodies[numBody] = new PhysicsBody(sceneShapes[2], 10.0f);
+                sceneBodies[numBody].position = new Vector2(-20.0f, 0.0f);
+                sceneBodies[numBody].shapeIndex = 2;
+                numBody++;
+
+                PhysicsBody b1 = sceneBodies[0];
+                PhysicsBody b2 = sceneBodies[numBody-1];
+                sceneJoints[numJoint] = new PhysicsJoint(b1, b2, (b2.position), 0, (uint)numBody-1);
+                sceneJoints[numJoint].axis1Lim = new Vector2(1, 0);
+                sceneJoints[numJoint].axis2Lim = new Vector2(0, 1);
+                sceneJoints[numJoint].angleLim = 1;
+                sceneJoints[numJoint].angleLower = PhysicsUtility.GetRadian(-45.0f);
+                sceneJoints[numJoint].angleUpper = PhysicsUtility.GetRadian(45.0f);
+                numJoint++;
+        }
+</pre></div>
+<!-- end-of-code-block -->
+<p>-45度から45度の制約付き角度制限を行っているのは以下の部分です。</p>
+<div class="highlight"><pre>sceneJoints[numJoint].angleLim = 1;
+sceneJoints[numJoint].angleLower = PhysicsUtility.GetRadian(-45.0f);
+sceneJoints[numJoint].angleUpper = PhysicsUtility.GetRadian(45.0f);
+</pre></div>
+<!-- end-of-code-block -->
+<div class="line-block">
+<div class="line">回転方向の制限がかかっていますが、angleLimだけでなくangleLowerとangleUpperも指定されており、</div>
+<div class="line">それぞれ-45度と45度が指定されています。angleLowerとangleUpperは角度制限の下限と上限を設定する変数です。</div>
+<div class="line">なお、角度はラジアンで指定する必要があります。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id27">
+<h3><a class="toc-backref" href="#id60">垂直方向における移動制約の例</a></h3>
+<div class="highlight"><pre>public override void InitScene ()
+{
+
+...
+...
+...
+
+        // Link a box rigid body to the scene with a horizontal slider joint (with movement constraints)
+        {
+                sceneBodies[numBody] = new PhysicsBody(sceneShapes[2], 10.0f);
+                sceneBodies[numBody].position = new Vector2(0.0f, 0.0f);
+                sceneBodies[numBody].shapeIndex = 2;
+                numBody++;
+
+                PhysicsBody b1 = sceneBodies[0];
+                PhysicsBody b2 = sceneBodies[numBody-1];
+                sceneJoints[numJoint] = new PhysicsJoint(b1, b2, (b2.position), 0, (uint)numBody-1);
+                sceneJoints[numJoint].axis1Lim = new Vector2(1, 0);
+                sceneJoints[numJoint].axis2Lim = new Vector2(0, 1);
+                sceneJoints[numJoint].axis2Lower = -10.0f;
+                sceneJoints[numJoint].axis2Upper = 10.0f;
+                sceneJoints[numJoint].angleLim = 1;
+                numJoint++;
+        }
+</pre></div>
+<!-- end-of-code-block -->
+<p>-10mから+10mまでのＹ軸方向の制約付き拘束を行っているのは以下の部分です。</p>
+<div class="highlight"><pre>sceneJoints[numJoint].axis2Lim = new Vector2(0, 1);
+sceneJoints[numJoint].axis2Lower = -10.0f;
+sceneJoints[numJoint].axis2Upper = 10.0f;
+</pre></div>
+<!-- end-of-code-block -->
+<div class="line-block">
+<div class="line">Y軸方向の拘束がありますが、axis2Limだけでなく、axis2Lowerとaxis2Upperも指定されています。</div>
+<div class="line">これによりアンカーポイントより-10mから+10mまではY軸方向に制約付きで自由に動けるようになっています。</div>
+<div class="line">axis2Lowerとaxis2Upperは並進移動制限の下限と上限を設定する変数です。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id28">
+<h3><a class="toc-backref" href="#id61">水平方向における移動制約の例</a></h3>
+<div class="highlight"><pre>public override void InitScene ()
+{
+
+...
+...
+...
+
+// Link a box rigid body to the scene with a horizontal slider joint (with movement constraints)
+{
+        sceneBodies[numBody] = new PhysicsBody(sceneShapes[2], 10.0f);
+        sceneBodies[numBody].position = new Vector2(0.0f, 0.0f);
+        sceneBodies[numBody].shapeIndex = 2;
+        numBody++;
+
+        PhysicsBody b1 = sceneBodies[0];
+        PhysicsBody b2 = sceneBodies[numBody-1];
+        sceneJoints[numJoint] = new PhysicsJoint(b1, b2, (b2.position), 0, (uint)numBody-1);
+        sceneJoints[numJoint].axis1Lim = new Vector2(1, 0);
+        sceneJoints[numJoint].axis1Lower = -10.0f;
+        sceneJoints[numJoint].axis1Upper = 10.0f;
+        sceneJoints[numJoint].axis2Lim = new Vector2(0, 1);
+        sceneJoints[numJoint].angleLim = 1;
+        numJoint++;
+
+    // The horizontal slider joint is quite slippy,
+    // so to make the rigid body stop we add some air friction
+        b2.airFriction = 0.01f;
+}
+</pre></div>
+<!-- end-of-code-block -->
+<p>垂直方向における移動制約の例と同様に水平方向の移動制約の設定を行っています。</p>
+<div class="highlight"><pre>sceneJoints[numJoint].axis1Lim = new Vector2(1, 0);
+sceneJoints[numJoint].axis1Lower = -10.0f;
+sceneJoints[numJoint].axis1Upper = 10.0f;
+</pre></div>
+<!-- end-of-code-block -->
+<div class="line-block">
+<div class="line">これによりアンカーポイントより-10[m]から+10[m]まではX軸方向に制約付きで自由に動けるようになっています。</div>
+<div class="line"><br /></div>
+<div class="line">ここで水平方向に制約付きで移動を許可した場合、水平方向には重力がかからないため、水平方向に動いている物体がなかなか静止しない</div>
+<div class="line">ということが生じる可能性があるため、空気抵抗を剛体に与えるように設定しています。</div>
+<div class="line"><br /></div>
+</div>
+<div class="highlight"><pre>// The horizontal slider joint is quite slippy,
+// so to make the rigid body stop we add some air friction
+b2.airFriction = 0.01f;
+</pre></div>
+<!-- end-of-code-block -->
+<div class="line-block">
+<div class="line">(numBody-1)番目の剛体に対して空気抵抗係数0.01fを与え、空気抵抗によって水平方向に微小に滑り続けるのを防止しています。</div>
+</div>
+</div>
+</div>
+</div>
+ </div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

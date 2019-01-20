@@ -1,0 +1,1026 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: リリースノート</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('release_note_ja.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<h1>リリースノート </h1>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><p>リリースノートでは、バージョンごとに新規追加・変更された項目を記載しています。</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#ver-1-21-01" id="id2">ver 1.21.01</a></li>
+<li><a class="reference internal" href="#ver-1-21-00" id="id3">ver 1.21.00</a></li>
+<li><a class="reference internal" href="#ver-1-20-00" id="id4">ver 1.20.00</a></li>
+<li><a class="reference internal" href="#ver-1-11-01" id="id5">ver 1.11.01</a></li>
+<li><a class="reference internal" href="#ver-1-11-00" id="id6">ver 1.11.00</a></li>
+<li><a class="reference internal" href="#ver-1-10-00" id="id7">ver 1.10.00 ベータ版</a></li>
+</ul>
+</div>
+<div class="section" id="ver-1-21-01">
+<h1><a class="toc-backref" href="#id2">ver 1.21.01</a></h1>
+<p><strong>全体</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul class="simple">
+<li>アプリケーション動作時の安定性の問題を修正しました。</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>PSM Development Assistant (for PlayStation(R)Vita)</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul class="simple">
+<li>PSM SDK 1.21.01 に対応する PSM Development Assistant (for PlayStation(R)Vita) をパッチパッケージとしてリリースしました。PlayStation(R)Vita本体のシステムソフトウェアを最新のものにアップデートしてご利用ください。</li>
+</ul>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="ver-1-21-00">
+<h1><a class="toc-backref" href="#id3">ver 1.21.00</a></h1>
+<p><strong>全体</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul class="simple">
+<li>Android 4.3 (Jelly Bean MR2) に対応しました。</li>
+<li>TweetSharp を PSM に移植し、ソースコードと新規サンプルを追加しました。</li>
+<li>一部のAndroid デバイスで、PS3(TM)のワイヤレスコントローラ使用時に、キーが正しくアサインされない不具合を修正しました。</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>Audio</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul class="simple">
+<li>BgmPlayerを長時間使用するとリソースリークが発生する問題を修正しました。</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>ドキュメント</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul>
+<li><p class="first">次のドキュメントを新規追加・修正しました。</p>
+<blockquote>
+<ul class="simple">
+<li>[Services.Network 概要]</li>
+<li>[そのほかの情報] - [バグ情報]</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>サンプル</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul class="simple">
+<li>Network/TwitterSample</li>
+<li>Network/TwitterStreamingSample</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>ソースコード</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul class="simple">
+<li>TweetSharp</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>PSM Development Assistant (for PlayStation(R)Vita)</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul class="simple">
+<li>PSM SDK 1.21.00 に対応する PSM Development Assistant (for PlayStation(R)Vita) をパッチパッケージとしてリリースしました。PSM Development Assistant (for PlayStation(R)Vita) for PSM SDK 1.21.00 を使用するには、PlayStation(R)Vita本体のシステムソフトウェアを最新のものにアップデートする必要があります。</li>
+<li>PSM SDK 1.21.00 では、PSM Development Assistant の動作モードを切り替えるメニューは無効化されています。</li>
+</ul>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="ver-1-20-00">
+<h1><a class="toc-backref" href="#id4">ver 1.20.00</a></h1>
+<p><strong>全体</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul class="simple">
+<li>スコアボードの機能を追加しました。</li>
+<li>LuaInterface を PSM に移植し、ソースコードと新規サンプルを追加しました。</li>
+<li>鍵作成の利便性を改善しました。</li>
+<li>Windows 8 をSDKのオフィシャルサポート対象に加えました。合わせて、Windows XP をオフィシャルサポート対象外としました。</li>
+<li>Android 4.2 (Jelly Bean) から追加されたマルチユーザー機能に対応しました。</li>
+<li>Android でアプリケーションが非表示になった時に、アプリケーションが終了しないようにしました。</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>ドキュメント</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul>
+<li><p class="first">次のドキュメントを新規追加・修正しました。</p>
+<blockquote>
+<ul class="simple">
+<li>[Services.Network 概要]</li>
+<li>[PlayStation(R)Mobile Development Assistant について]</li>
+<li>[UI Toolkit] - [UI Toolkitプログラミングガイド] - [基本概念] - [画面の向き]</li>
+<li>[ユーザーガイド] - [最適化に関するヒント]</li>
+<li>[ユーザーガイド] - [アプリ内課金] - [購入フローの実装]</li>
+<li>[ユーザーガイド] - [アプリ開発の注意点] - [デバイス性能の差異について]</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>サンプル</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul>
+<li><p class="first">次のサンプルを新規追加・修正しました。各サンプルの概要については[サンプル一覧] をご覧ください。</p>
+<blockquote>
+<ul class="simple">
+<li>Scoreboard/ScoreboardSample</li>
+<li>Scoreboard/NewActionGameDemo</li>
+<li>Script/LuaSample</li>
+<li>Script/LuaTriangleSample</li>
+<li>UI/ScreenOrientation</li>
+<li>Environment/PersistentMemorySample</li>
+<li>Tips/Compatibility/SoundDelaySample</li>
+<li>Tips/Compatibility/TouchDelaySample</li>
+<li>Tips/Performance/LoadingThreadSample</li>
+<li>Tips/Performance/SpriteThreadSample</li>
+<li>Graphics/SpriteSample</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>ソースコード</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul>
+<li><p class="first">次のソースコードを新規追加しました。</p>
+<blockquote>
+<ul class="simple">
+<li>LuaInterface</li>
+<li>JsonHelper</li>
+<li>ModelConverter</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>Graphics</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul class="simple">
+<li>PS Vita上でのミップマップ生成のパフォーマンスを改善しました。</li>
+<li>PS Vita上での頂点バッファ生成・削除のパフォーマンスを改善しました。</li>
+<li>PS Vita上で深度ステンシルバッファのクリアが正しく動作していなかった問題を解決しました。</li>
+<li>PS Vita上でステンシルテストの一部のパラメータが正しく動作していなかった問題を解決しました。</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>Audio</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul class="simple">
+<li>オーディオ再生で、再生位置を正確な精度で設定できるように改善しました。</li>
+<li>オーディオ再生で、スタート位置と終了位置を正確な精度で設定できるよう改善しました。</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>Environment</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul>
+<li><p class="first">以下のクラスを再度追加しました。</p>
+<blockquote>
+<ul class="simple">
+<li>PersistentMemory</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">Android でアプリケーションが非表示になった時に、SystemEvents.OnMinimized のイベントが通知されるようになりました。</p>
+</li>
+<li><p class="first">SystemMemory.Dump() において、フォントファイルを読み込んだ状態で呼び出した場合にクラッシュする可能性がある問題を修正しました。</p>
+</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>Services</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul>
+<li><p class="first">開発者環境において、PlayStation(R)Vita 上でのアプリ内課金機能使用時のダイアログ表示を1枚に変更し、[Error occurred ?] ダイアログの表示を廃止しました。</p>
+</li>
+<li><p class="first">スコアボードの機能を追加しました。</p>
+<blockquote>
+<ul class="simple">
+<li>スコアボードを利用するアプリケーションの開発方法については、[API 概要] - [Services.Network 概要]を参照してください。</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>Device</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul class="simple">
+<li>Location.GetData() において、Bearing の値が PlayStation(R)Vita 上では正しく取得できていなかった問題を修正しました。</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>Imaging</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul class="simple">
+<li>Image.Export() において、ファイル名に制限を超える文字数を指定できてしまう問題を修正しました。</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>UI Toolkit</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul>
+<li><dl class="first docutils">
+<dt>縦画面表示に対応しました。</dt>
+<dd><ul class="first last simple">
+<li>詳しくは [UI Toolkit プログラミングガイド] - [基本概念] - [画面の向き] および、ScreenOrientationサンプルを参照してください。</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>PSM Studio</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul class="simple">
+<li>メニュー - [Key]を新規追加しました。PSM Studioから鍵の作成・管理を行えるようにしました。</li>
+<li>メニュー - [Key] - [Update Device Seed and App Key]を新規追加。デバイスシードからアプリ鍵の作成をひとつのコマンドで行うことができるようにしました。</li>
+<li>Application/ ディレクトリ配下に 7段以上のサブディレクトリ(ファイルを含む)を作成した場合、ビルドエラーとするように仕様変更しました。</li>
+<li>PSM Studioのソリューションツリーから&quot;osc.cfg&quot;を開く際、ファイル名にスペースが含まれていても&quot;osc.cfg&quot;ファイルを開く事ができるようになりました。</li>
+<li>PSM Studioにアセットを新規追加する時、ファイル名または拡張子からビルドアクションを自動的に変更する様に修正しました。</li>
+<li>マルチユーザー機能に対応したAndroidデバイスを利用している場合、ユーザー毎にデバイスシードを作成する必要があります。デバイスシードを作成していないユーザーに切り替えた場合は、Publishing Utilityによりデバイスシードを再作成してください。</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>PSM Publishing Utility</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul class="simple">
+<li>[Key Management]パネルのボタン、レイアウトを変更しました。詳しくはドキュメント [ユーザーガイド] - [鍵管理]をご参照ください。</li>
+<li>「Package &amp; App」の Installed Apps でアプリケーションのファイル数が多い場合に、アプリケーションリストの取得でタイムアウトが発生する可能性があった問題を修正しました。</li>
+<li>PSM SDK 1.11.01 以前にインストールしたアプリケーションは 「Package &amp; App」の Installed Apps の Size に &quot;N/A&quot; と表示されます。 1.20.00 以降にインストールしたアプリケーションは「Package &amp; App」の Installed Apps の Size にはアプリーケーションのサイズが表示されます。</li>
+<li>PSM Age Rating Systemの質問項目を一部変更しました。 -&gt; オンラインコミュニケーション機能 Q4</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>PSM Development Assistant (for PlayStation(R)Vita)</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul class="simple">
+<li>PSM SDK 1.20.00 に対応する PSM Development Assistant (for PlayStation(R)Vita) をパッチパッケージとしてリリースしました。PSM Development Assistant (for PlayStation(R)Vita) for PSM SDK 1.20.00 を使用するには、PlayStation(R)Vita本体のシステムソフトウェアを最新のものにアップデートする必要があります。</li>
+<li>[Debug Settings] - [Switch Development Assistant] を選択した場合、PSM SDK 1.11.01 に対応する PSM Development Assistant と PSM SDK 1.20.00 に対応する PSM Development Assistant を切り替え可能です。PSM Publishing Utility によるデバイスシード・鍵の作成、及びアプリケーションをインストール場合には、現在アクティブな PSM Development Assistant のバージョンと 使用する PSM SDK Installer のバージョンを合わせておく必要があります。</li>
+<li>[Debug Settings]画面に、インストール済みのアプリケーション全てのセーブデータを一括して削除するメニュー[Delete Documents]を追加しました。</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>PSM Development Assistant (for Android)</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul class="simple">
+<li>[Debug Settings] 画面にPlayStation(R)Network に接続するアカウントを設定するためのメニュー[SignIn] を追加しました。</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>インストーラ</strong></p>
+<blockquote>
+<p><strong>制限事項</strong></p>
+<blockquote>
+<ul class="simple">
+<li>お使いのPCがWindows 8で、かつ.NET Framework 3.5がインストールされていない場合、PSM SDKのインストール時にgtk# 2.12.10のインストールが行われません。その場合、PSM SDKのインストール終了後、次の作業をおこなってください。<ol class="arabic">
+<li>マイクロソフトのWebサイトから.NET Framework 3.5をインストールします。</li>
+<li>C:/Program Files/SCE/PSM/software/に配置されているgtk-sharp-2.12.10.msiをダブルクリックし、gtk# 2.12.10をインストールします。</li>
+</ol>
+</li>
+<li>お使いのPCにgtk# 2.12.20以上がインストールされていると、PSM Studioが正しく動作しません。その場合、以下の作業をおこなってください。<ol class="arabic">
+<li>[コントロールパネル] - [プログラムと機能] でgtk# 2.12.20を選択し、アンインストールします。</li>
+<li>[コントロールパネル] - [プログラムと機能] でgtk# 2.12.10を選択し、アンインストールします。</li>
+<li>Windows 7 - 64bitの場合、C:/Program Files (x86)/SCE/PSM/software/gtk-sharp-2.12.10.win32.msiをインストールします。Windows 7 - 32bitの場合、C:/Program Files/SCE/PSM/software/gtk-sharp-2.12.10.win32.msiをインストールします。</li>
+</ol>
+</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>その他</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul class="simple">
+<li>テクスチャ一体化ツール UnifyTexture.exe にオプション指定を追加しました。詳しくは[スプライトの効率的な描画について] - [UnifyTexture.exeのオプション]を参照してください。</li>
+</ul>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="ver-1-11-01">
+<h1><a class="toc-backref" href="#id5">ver 1.11.01</a></h1>
+<p><strong>全体</strong></p>
+<blockquote>
+<em>重要な不具合を修正する SDK リリースです</em></blockquote>
+<p><strong>Graphics</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul class="simple">
+<li>オフスクリーンレンダリングに使用された Texture2D が、FrameBuffer にアタッチされたまま削除されると、リソースリークが発生する問題を修正しました。</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>PSM Publishing Utility</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul class="simple">
+<li>ファイルサイズの大きなマスターパッケージ、またはネットワーク環境によっては、Publishing Utility からのマスターパッケージの提出に失敗する可能性があった問題を修正しました。</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>PSM Development Assistant (for PlayStation(R)Vita)</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul class="simple">
+<li>PSM SDK 1.11.01 に対応する PSM Development Assistant (for PlayStation(R)Vita) をパッチパッケージとしてリリースしました。PSM Development Assistant (for PlayStation(R)Vita) for PSM SDK 1.11.01 を使用するには、PlayStation(R)Vita本体のシステムソフトウェアを最新のものにアップデートする必要があります。</li>
+<li>サブスレッドを用いてアプリケーションを作成した際の安定性を向上しました。</li>
+</ul>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="ver-1-11-00">
+<h1><a class="toc-backref" href="#id6">ver 1.11.00</a></h1>
+<p><strong>全体</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<blockquote>
+<ul class="simple">
+<li>ver 1.11.00はver 1.10.00のオフィシャル版です。</li>
+<li>マスターパッケージの提出が可能になりました。</li>
+</ul>
+</blockquote>
+<p><strong>制限事項</strong></p>
+<blockquote>
+<ul class="simple">
+<li>アセンブリ名を&quot;files&quot;もしくは&quot;system&quot;にすると、PSM Development Assistant やPublishing Utility のアプリケーションリストに該当アプリケーションが表示されなくなくなりますので別の名前をお使いください。</li>
+</ul>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>ドキュメント</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul>
+<li><p class="first">次のドキュメントを新規追加・修正しました。</p>
+<blockquote>
+<ul class="simple">
+<li>「トラブルシューティング」</li>
+<li>「チーム開発での鍵管理」</li>
+<li>「アプリ開発の注意点」</li>
+<li>「7. ガベージコレクションとインスタンスの解放」に「強制的にガベージコレクションを呼び出す」「アンマネージドリソースを解放する」の項目を追加しました。</li>
+<li>「PlayStation(R)Mobile MDX ファイル形式」</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>Graphics</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul class="simple">
+<li>SDK 1.10 で増加していたグラフィクスメモリ消費量を削減しました。</li>
+</ul>
+</blockquote>
+<p><strong>制限事項</strong></p>
+<blockquote>
+<ul>
+<li><dl class="first docutils">
+<dt>PlayStation(R)Vita では現在、以下の制限があります。</dt>
+<dd><ul class="first last simple">
+<li>GraphicsContext.SetClearDepth() は正しく機能しません。クリア深度は 1.0 になります。</li>
+<li>Texture2D.GenerateMipmap() は SDK 1.00 より低速になっています。</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>Audio</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul class="simple">
+<li>BgmPlayer.Stop() 直後に BgmPlayer.Play() を呼び出した際に、冒頭にノイズが入る問題を修正しました。</li>
+</ul>
+</blockquote>
+<p><strong>制限事項</strong></p>
+<blockquote>
+<ul class="simple">
+<li>BgmPlayerでループ開始時刻とループ終了時刻を設定して再生する場合、VBR(Variable Bit Rate:可変ビットレート)形式のmp3ファイルを使用すると、設定した時刻がずれて再生されることがあります。</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>Services</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul>
+<li><dl class="first docutils">
+<dt>以下のクラスを追加しました。</dt>
+<dd><ul class="first last simple">
+<li>AccountInformation</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>Device</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul class="simple">
+<li>Location.GetData() において、Altitude/Speed の値が PlayStation(R)Vita 上で正しく取得できていなかった問題を修正しました。</li>
+</ul>
+</blockquote>
+<p><strong>制限事項</strong></p>
+<blockquote>
+<ul class="simple">
+<li>Location.GetData() において、Bearing の値が PlayStation(R)Vita 上では正しく取得できません。</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>PSM Studio</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul class="simple">
+<li>RootNamespace ( デフォルト ネームスペース ) と AssemblyName ( アセンブリ名 ) が異なる場合にマスターパッケージの作成に失敗する問題を修正しました。</li>
+</ul>
+</blockquote>
+<p><strong>制限事項</strong></p>
+<blockquote>
+<ul class="simple">
+<li>Windows XPではソリューションツリー内の&quot;osc.cfg&quot;ファイルを[右クリック] - [OSC Customize Toolで開く]によるOSC設定ファイルの編集をする事ができません。
+OSC Customize Tool メニューの[File(F)] - [Load(L)]からプロジェクトの&quot;osc.cfg&quot;ファイルを選択後、編集してください。</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>Publishing Utility</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul class="simple">
+<li>[Metadata]パネル - [Common Property]タブに[Max Camera Resolution Size]のカテゴリを追加しました。</li>
+</ul>
+</blockquote>
+<p><strong>制限事項</strong></p>
+<blockquote>
+<ul class="simple">
+<li>[Key Management]パネル - [デバイスシードのエクスポート]を実行時、Nicknameを変更すると正しく鍵が作成されない不具合があります。Nicknameは変更せず、そのままの値でエクスポートを行ってください。</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>PSM Development Assistant (for PlayStation(R)Vita)</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul class="simple">
+<li>PSM SDK 1.11.00 に対応する PSM Development Assistant (for PlayStation(R)Vita) をパッチパッケージとしてリリースしました。PSM Development Assistant (for PlayStation(R)Vita) for PSM SDK 1.11.00 を使用するには、PlayStation(R)Vita本体のシステムソフトウェアを 2.05 以上にアップデートする必要があります。</li>
+<li>PSM SDK 1.11.00 では、PSM Development Assistant の動作モードを切り替えるメニューは無効化されています。</li>
+<li>PSMアプリケーションを削除する機能に関して、UIを調整しました。</li>
+</ul>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="ver-1-10-00">
+<h1><a class="toc-backref" href="#id7">ver 1.10.00 ベータ版</a></h1>
+<p><strong>全体</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul class="simple">
+<li>Sce.PlayStation.HighLevelのソースコードがデフォルトでインストールされる場所を、c:/Program Files (x86)/SCE/PSM/source から c:/Users/Public/Documents/PSM に移動しました。</li>
+<li>Windows上でのPCシミュレータで、PS3(TM)のワイヤレスコントローラを使用できるようになりました。</li>
+</ul>
+</blockquote>
+<p><strong>制限事項</strong></p>
+<blockquote>
+<ul class="simple">
+<li>このSDK 1.10.00 はベータ版のため、マスターパッケージを提出することはできません。このバージョンで作成されたアプリケーションをマスター提出する場合、次回リリース予定の正式版でマスターパッケージを再作成し、提出をおこなうことになります。</li>
+<li>正式版のリリースまでにマスターパッケージの提出を希望する方は、ひとつ前のバージョンであるSDK 1.00.00をお使いください。</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>ドキュメント</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul class="simple">
+<li>次のドキュメントを追加しました。<ul>
+<li>ドキュメント「5. 統合開発環境PSM Studioの基本的な使い方」に「ライブラリを作成・利用する」の項目を追加。</li>
+<li>ドキュメント「スプライトの効率的な描画について」を追加。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>Core</strong></p>
+<blockquote>
+<dl class="docutils">
+<dt><strong>新規・変更点</strong></dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>以下の API に Vector2 を引数にとるオーバーロードを追加しました。</dt>
+<dd><ul class="first last simple">
+<li>Matrix4.Transformation()</li>
+<li>Matrix4.Translation()</li>
+<li>Matrix4.Scale()</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>以下の構造体を追加しました。</dt>
+<dd><ul class="first last simple">
+<li>Rectangle</li>
+<li>Half Half2 Half3 Half4</li>
+<li>Byte2 Byte3 Byte4 UByte2 UByte3 UByte4</li>
+<li>Short2 Short3 Short4 UShort2 UShort3 UShort4</li>
+<li>ByteN Byte2N Byte3N Byte4N UByteN UByte2N UByte3N UByte4N</li>
+<li>ShortN Short2N Short3N Short4N UShortN UShort2N UShort3N UShort4N</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</blockquote>
+<p><strong>Graphics</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul>
+<li><p class="first">PlayStation(R)Vita での、互換性と CPU パフォーマンスを改善しました。</p>
+</li>
+<li><p class="first">PC シミュレータのウィンドウサイズを、PSM Studio で指定できるようになりました。従来のように、GraphicsContext() のパラメータで指定することはできませんのでご注意ください。</p>
+</li>
+<li><p class="first">スクリーンを任意のサイズで初期化できるようになりました。指定されたサイズがデバイスのディスプレイ解像度と異なる場合、指定されたサイズの仮想的なスクリーンが作成され、描画された内容がスケーリングされて表示されます。スクリーンのアスペクト比は保持され、必要に応じてピラーボックスまたはレターボックスが表示されます。</p>
+</li>
+<li><p class="first">スクリーンサイズは最大サイズ以下に制限されます。最大サイズのデフォルト値は 1280x800 です。最大サイズは PublishingUtility で指定できます。アプリケーションはスクリーンサイズが最大サイズに等しい場合でも正しく動作することが要求されます。</p>
+</li>
+<li><dl class="first docutils">
+<dt>以下の API を追加しました。</dt>
+<dd><ul class="first last simple">
+<li>GraphicsContext.GetEnableMode()</li>
+<li>GraphicsContext.SetEnableMode()</li>
+<li>ShaderProgram.GetAttributeStream()</li>
+<li>ShaderProgram.SetAttributeStream()</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</blockquote>
+<p><strong>制限事項</strong></p>
+<blockquote>
+<ul>
+<li><dl class="first docutils">
+<dt>PlayStation(R)Vita では現在、以下の制限があります。</dt>
+<dd><ul class="first last simple">
+<li>GraphicsContext.SetClearDepth() は正しく機能しません。クリア深度は 1.0 になります。</li>
+<li>GraphicsContext.SetCullFace() はオフスクリーン描画で正しく機能しません。</li>
+<li>GraphicsContext.ReadPixels() は正しく機能しません。</li>
+<li>Texture2D.GenerateMipmap() が 1024x1024 より大きいテクスチャを処理できません。</li>
+<li>Texture2D.GenerateMipmap() は SDK 1.00 より低速になっています。</li>
+<li>Texture2D が、横幅 4 ピクセル以下の場合に正しく表示されません。</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>Audio</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul>
+<li><p class="first">Sound クラスで ADPCM も使用可能になりました。</p>
+</li>
+<li><p class="first">BGM と SE の再生時刻が設定および取得できるようになりました。</p>
+</li>
+<li><p class="first">BGM と SE の再生時間が取得できるようになりました。</p>
+</li>
+<li><p class="first">BGM の一部分がループ再生できるようなりました。</p>
+</li>
+<li><dl class="first docutils">
+<dt>以下の API を追加しました。</dt>
+<dd><ul class="first last simple">
+<li>SoundPlayer.Time</li>
+<li>SoundPlayer.Duration</li>
+<li>BgmPlayer.Time</li>
+<li>BgmPlayer.Duration</li>
+<li>BgmPlayer.LoopStart</li>
+<li>BgmPlayer.LoopEnd</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>以下の API を削除しました。</dt>
+<dd><ul class="first last simple">
+<li>BgmPlayer.Position</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</blockquote>
+<p><strong>制限事項</strong></p>
+<blockquote>
+<ul class="simple">
+<li>SoundPlayer.Time, SoundPlayer.Duration は、SoundPlayer の停止中には使用できません。</li>
+<li>SoundPlayer.Time は、SoundPlayer.Play() が呼び出されるまで更新されません。。</li>
+<li>SoundPlayer.Duration は、SoundPlayer が停止している間はゼロにリセットされます。</li>
+<li>これらの挙動は、今後のバージョンで変更される可能性があります。</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>Environment</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul class="simple">
+<li>SystemEvents.OnRestored イベントがPlayStation(R)Vita上で正しく取得できなかった問題を修正しました。</li>
+<li>システムのメモリの状態を取得する SystemMemory クラスを追加しました。</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>Services</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul class="simple">
+<li>開発者環境において、ネットワークエラー発生時のアプリ内課金の挙動を、PlayStation(R)Vita および Android でもテストできるようになりました。PlayStation(R)Vita の場合 [Error occurred ?] ダイアログ表示時に [Yes] ボタンを押下するとエラー発生時の挙動となります。</li>
+<li>開発者環境において、プロダクト価格文字列にプロダクトラベル文字列を格納するように、アプリ内課金の動作を変更しました。これは価格表示の間違いを避けるための予防措置です。</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>Device</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul>
+<li><dl class="first docutils">
+<dt>Sce.PlayStation.Core ネームスペースに Device ネームスペースを追加して以下の機能を追加しました。</dt>
+<dd><ul class="first last simple">
+<li>カメラ</li>
+<li>写真インポートダイアログ</li>
+<li>ロケーション</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">各機能については PlayStation(R)Mobile SDK ドキュメントに記載されている API の概要の中の Device の概要をお読みください。</p>
+</li>
+</ul>
+<p><strong>制限事項</strong></p>
+<blockquote>
+<ul>
+<li><dl class="first docutils">
+<dt>PlayStation(R)Vita では現在、以下の制限があります。</dt>
+<dd><ul class="first last simple">
+<li>サンプルの CameraPreviewSample を実行したときに、プレビュー解像度を何回も変更すると、まれにエラーが発生することがあります。</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>UI Toolkit</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul class="simple">
+<li>ListPanel と PopupList にフォント関連のAPI追加しました。</li>
+<li>ListPanelItem の HookChildTouchEvent プロパティの初期値を true に変更しました。</li>
+<li>フォーカスのデザインとフォーカス移動のアルゴリズムを修正しました。</li>
+<li>レイアウトアンカー機能の計算アルゴリズムを修正しました。</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>UI Composer</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul>
+<li><dl class="first docutils">
+<dt>レイアウトの切替をできないようしました。</dt>
+<dd><ul class="first last simple">
+<li>UI ToolKit で縦レイアウトについて正式対応され次第切り替えられるようにします。</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>プレビュー機能について変更を行いました。</dt>
+<dd><ul class="first last simple">
+<li>キーフォーカスが利用できるようになりました。</li>
+<li>背景色をUIComposerの設定と同じ色になるようにしました。</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>Model</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul>
+<li><p class="first">頂点データに BLENDINDICES を格納できるようにしました。スキニングされたモデル表示の CPU パフォーマンスが向上する可能性があります。</p>
+</li>
+<li><p class="first">古いランタイムで表示するために、BLENDINDICES を格納したくない場合は、ModelConverter のコマンドライン引数に -B オプションを指定してください。</p>
+</li>
+<li><p class="first">BasicProgram で使用する、既定のシェーダーの変数を一部変更しました。
+独自のシェーダーを作成して使用している場合は、ご注意ください。</p>
+</li>
+<li><dl class="first docutils">
+<dt>以下の API を追加しました。</dt>
+<dd><ul class="first last simple">
+<li>BasicProgram.ShallowClone()</li>
+<li>BasicParameters.SetVertexWeightCount()</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">一部のグラフィクスカードに関する不具合を修正しました。</p>
+</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>Physics2D</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul>
+<li><dl class="first docutils">
+<dt>Simulate関数の引数を変更しました。</dt>
+<dd><ul class="first last simple">
+<li>シミュレーションを別スレッドで実行する場合を考慮しての変更。</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Raycastの機能、サンプルを追加しました。</p>
+</li>
+<li><p class="first">Springの機能、サンプルを追加しました。</p>
+</li>
+<li><p class="first">アニメーション、テクスチャがどのように物理オブジェクトにマッピングできるかのサンプルを追加しました。</p>
+</li>
+<li><p class="first">剛体削除、ジョイント削除機能を追加しました。</p>
+</li>
+<li><dl class="first docutils">
+<dt>シミュレーションの内部アルゴリズムの計算順序に変更があります。</dt>
+<dd><ul class="first last simple">
+<li>Scene::UpdateFuncBeforeSim、Scene:UpdateFuncAfterSim、剛体のスリープ状態の扱いによっては再調整が必要になる場合があります。</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">GameEngine2Dと組み合わせる方法のサンプルを追加しました。</p>
+</li>
+<li><p class="first">シミュレーションをメインとは別のスレッドで処理するサンプルを追加しました。</p>
+</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>Network</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul class="simple">
+<li>HTTPS通信時に Unhandled Exception: System.Net.WebException: Error: ConnectFailure が発生する不具合を修正しました。</li>
+</ul>
+<p><strong>HttpWebRequestクラス</strong></p>
+<blockquote>
+<ul class="simple">
+<li>HTTP非同期通信時に指定するコールバックメソッドがコールされない不具合を修正しました。</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>制限事項</strong></p>
+<blockquote>
+<ul>
+<li><dl class="first docutils">
+<dt>SocketSampleでは現在、以下の制限があります。</dt>
+<dd><ul class="first last simple">
+<li>右の[Connect]ボタンを押した時、Statusが[Connecting]のままとなり、Statusが[Connected]へ移行しない場合があります。
+この場合、[Disconnect]ボタンを押してStatusを[None]に変更し、正常な状態に戻してから操作を行ってください。</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>PSM Studio</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul class="simple">
+<li>プロジェクト(*.csproj)と同ディレクトリに app.xml が含まれていない場合、ビルドエラーとするように仕様変更しました。</li>
+<li>PlayStation(R)Vita で実行する場合において、PSM Studio からのデバッグ起動時に PSM Development Assistant (for PlayStation(R)Vita) を PS ボタンから終了すると、PSMStudio が終了を認識しない問題を修正しました。</li>
+</ul>
+</blockquote>
+<p><strong>制限事項</strong></p>
+<blockquote>
+<ul class="simple">
+<li>マスターパッケージの作成時、プロジェクトファイルcsprojのRootNameSpaceとAssemblyNameが異なると、マスターパッケージの作成に失敗します。その場合、テキストエディタなどでプロジェクトファイルcsproj内のRootNameSpaceとAssemblyNameが同じになるよう修正してください。</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>PSM Publishing Utility</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul class="simple">
+<li>[Metadata]パネル - [Common Property]タブに[Max Screen Size]のカテゴリを追加しました。</li>
+<li>Android デバイスに対してアプリ一覧を取得した場合に、デバイスで実行中のアプリを終了させてしまう問題を修正しました。</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><strong>PSM Development Assistant (for Android)</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<ul class="simple">
+<li>Debug Settings画面を追加しました。</li>
+<li>InAppPurchaseDialogにあった[Reset]ボタンをなくし、代わりにDebug Settings画面に[Reset Ticket Information]ボタンを設けました。</li>
+<li>メニューに[Debug Settings] を追加しました。</li>
+<li>PSMアプリケーションのリストにコンテキストメニューを追加し、インストールしたPSMアプリケーションを削除する機能を追加しました。</li>
+</ul>
+</blockquote>
+<p><strong>PSM Development Assistant (for PlayStation(R)Vita)</strong></p>
+<blockquote>
+<p><strong>新規・変更点</strong></p>
+<blockquote>
+<ul class="simple">
+<li>PSM SDK 1.10.00 に対応する PSM Development Assistant (for PlayStation(R)Vita) をパッチパッケージとしてリリースしました。PSM Development Assistant (for PlayStation(R)Vita) for PSM SDK 1.10.00 を使用するには、PlayStation(R)Vita本体のシステムソフトウェアを 2.05 以上にアップデートする必要があります。</li>
+<li>PSM Development Assistant の動作モードを切り替えるメニューを追加しました。 [Debug Settings] - [Switch Development Assistant] を選択した場合、PSM SDK 1.00.00 に対応する PSM Development Assistant と PSM SDK 1.10.00 に対応する PSM Development Assistant を切り替え可能です。 PSM Publishing Utility によるデバイスシード・鍵の作成、及びアプリケーションをインストール場合には、現在アクティブな PSM Development Assistant のバージョンと 使用する PSM SDK Installer のバージョンを合わせておく必要があります。</li>
+<li>インストールしたPSMアプリケーションを削除する機能を追加しました。</li>
+<li>インストール直後に、PSMアプリケーション一覧リストを更新するようにしました。</li>
+<li>[Debug Settings] - [Reset Ticket Information] を選択した場合に、確認ダイアログを出すようにしました。</li>
+<li>PSM Studio から PlayStation(R)Vita にアプリケーションをデプロイして実行する場合、[停止]を選択した際に LiveArea(TM) ではなくリストメニューに遷移するように動作を変更しました。</li>
+</ul>
+</blockquote>
+</blockquote>
+</div>
+ </div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

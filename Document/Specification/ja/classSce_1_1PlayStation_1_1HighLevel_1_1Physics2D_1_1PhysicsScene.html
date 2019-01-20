@@ -1,0 +1,1993 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: クラス PhysicsScene</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 型</a> &#124;
+<a href="#pub-methods">Public メソッド</a> &#124;
+<a href="#pub-attribs">Public 変数</a> &#124;
+<a href="#properties">プロパティ</a>  </div>
+  <div class="headertitle">
+<h1>クラス PhysicsScene</h1>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene" -->
+<p>２Ｄ物理シミュレーションのシーン  
+<a href="#_details">[詳細]</a></p>
+
+<p><a href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene-members.html">すべてのメンバ一覧</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-types"></a>
+Public 型</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a9c3ad9cc6d693d4810829a2f403632b7">BroadOpType</a> { <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a9c3ad9cc6d693d4810829a2f403632b7">Or</a>, 
+<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a9c3ad9cc6d693d4810829a2f403632b7">And</a>
+ }</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>collisionFilterとgroupFilterの組み合わせを変更する </p>
+ <a href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a9c3ad9cc6d693d4810829a2f403632b7">[詳細]</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a427b67232043181ec98c59f2836bcba8">SleepAlgorithmType</a> { <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a427b67232043181ec98c59f2836bcba8">BroadphaseBase</a>, 
+<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a427b67232043181ec98c59f2836bcba8">NarrowphaseBase</a>
+ }</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>スリープ状態をチェックする際のアルゴリズムをスイッチする </p>
+ <a href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a427b67232043181ec98c59f2836bcba8">[詳細]</a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Public メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#ae2e448897e285284493e53ab6cc0b123">RaycastHit</a> (ref <a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1RayHit.html">RayHit</a> ray)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">レイキャストチェック  <a href="#ae2e448897e285284493e53ab6cc0b123"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a5e9bf38ce9a0d8f474b3fa2f0565d89e">RaycastHit</a> (ref <a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1RayHit.html">RayHit</a> ray, uint collisionFilter, uint groupFilter)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">レイキャストチェック  <a href="#a5e9bf38ce9a0d8f474b3fa2f0565d89e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3cab9427c8ede24e9481acfda2c3808d"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::PhysicsScene" ref="a3cab9427c8ede24e9481acfda2c3808d" args="()" -->
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a3cab9427c8ede24e9481acfda2c3808d">PhysicsScene</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">　シーンコンストラクタ <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a868cf38fedb3c52291069b74bb198bf0"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::Simulate" ref="a868cf38fedb3c52291069b74bb198bf0" args="()" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a868cf38fedb3c52291069b74bb198bf0">Simulate</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シミュレートする <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#af6166394b2d0422aac570ec5855f97c0">Simulate</a> (int click_index, <a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a> click_pos, <a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a> diff_pos)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シミュレートする  <a href="#af6166394b2d0422aac570ec5855f97c0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsShape.html">PhysicsShape</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a6318d19f12a13335904fb3fcee8592bb">AddSphereShape</a> (float radius)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シーンに球形状を追加する  <a href="#a6318d19f12a13335904fb3fcee8592bb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsShape.html">PhysicsShape</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#ab351d47403505b7f7b976b55580ab281">AddBoxShape</a> (<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a> width)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シーンにボックス形状を追加する  <a href="#ab351d47403505b7f7b976b55580ab281"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsShape.html">PhysicsShape</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a782c70feb5810a640cb5e8b1b2b67156">AddConvexShape</a> (<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>[] pos, int num)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シーンに凸形状を追加する  <a href="#a782c70feb5810a640cb5e8b1b2b67156"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsShape.html">PhysicsShape</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a4fc5ef0b48cef006d02f951800b93779">AddConvexHullShape</a> (<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>[] pos, int num)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シーンにランダム頂点列による凸包形状を追加する  <a href="#a4fc5ef0b48cef006d02f951800b93779"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsShape.html">PhysicsShape</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a50e19a5597e690c4f79a96378ae2ad16">AddLineChainShape</a> (<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>[] pos, int num)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シーンに接続したライン形状生成を追加する  <a href="#a50e19a5597e690c4f79a96378ae2ad16"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a8bbc76cf82f0f631c09a3b518fd6405f">AddBody</a> (int shapeIndex, float mass)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">剛体をシーンに追加する  <a href="#a8bbc76cf82f0f631c09a3b518fd6405f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#ad86d90c165cfcb405b26f1727d53437f">AddBody</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsShape.html">PhysicsShape</a> shape, float mass)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">剛体をシーンに追加する  <a href="#ad86d90c165cfcb405b26f1727d53437f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#af4ccc4d70e2eb0e35dc7b5498a284d57">MergeCompound</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a>[] bodyList, int num, bool flag=true)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">剛体のマージ  <a href="#af4ccc4d70e2eb0e35dc7b5498a284d57"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsJoint.html">PhysicsJoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#ac46ccf3e97180f9d7758b52fd18f6a74">AddJoint</a> (int bodyIndex1, int bodyIndex2, <a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a> anchorPos)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ジョイントをシーンに追加する  <a href="#ac46ccf3e97180f9d7758b52fd18f6a74"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsJoint.html">PhysicsJoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a85e1b1872dee923a146142b96797505e">AddJoint</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a> body1, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a> body2, <a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a> anchorPos)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ジョイントをシーンに追加する  <a href="#a85e1b1872dee923a146142b96797505e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsSpring.html">PhysicsSpring</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a9d2a2212ed688f2546055111c1b20198">AddSpring</a> (int bodyIndex1, int bodyIndex2, <a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a> anchorPos1, <a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a> anchorPos2)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ジョイントをシーンに追加する  <a href="#a9d2a2212ed688f2546055111c1b20198"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsSpring.html">PhysicsSpring</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a71e94242be16254ef1ef2cfff6f37ff3">AddSpring</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a> body1, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a> body2, <a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a> anchorPos1, <a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a> anchorPos2)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">スプリングをシーンに追加する  <a href="#a71e94242be16254ef1ef2cfff6f37ff3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a6bad03134d0de8ed9ef99b40dc96bd03">DeleteJoint</a> (int index)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ジョイント削除  <a href="#a6bad03134d0de8ed9ef99b40dc96bd03"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a5d9b5cc1fff155963941d1c880c59164">DeleteJoint</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsJoint.html">PhysicsJoint</a> joint)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ジョイント削除  <a href="#a5d9b5cc1fff155963941d1c880c59164"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a3a0b32d0ab819ddbacee00146a705c01">DeleteSpring</a> (int index)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">スプリング削除  <a href="#a3a0b32d0ab819ddbacee00146a705c01"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a9f532b94ef65bb6197ecf58ef4907af4">DeleteSpring</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsSpring.html">PhysicsSpring</a> spring)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">スプリング削除  <a href="#a9f532b94ef65bb6197ecf58ef4907af4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#aa9724e86d3b01af565e161cfa7a0d902">DeleteBody</a> (int index)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">剛体削除  <a href="#aa9724e86d3b01af565e161cfa7a0d902"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a69237fe3e7480a2eced206d9b50eea95">DeleteBody</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a> body)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">剛体削除  <a href="#a69237fe3e7480a2eced206d9b50eea95"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a4b7f609f27423b640ac7d4580e97c7b0">QueryContact</a> (uint index1, uint index2)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">２つの剛体の間に衝突があったかどうかの記録を調べる  <a href="#a4b7f609f27423b640ac7d4580e97c7b0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a04015cbfae8656b07b054bca756137d7">QueryContact</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a> body1, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a> body2)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">２つの剛体の間に衝突があったかどうかの記録を調べる  <a href="#a04015cbfae8656b07b054bca756137d7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#aaec389058b84d55317e47fb9fc9f61b1">QueryContactTrigger</a> (uint index, uint[] indexlist)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">トリガー剛体と他の剛体の間に衝突があったかチェックする  <a href="#aaec389058b84d55317e47fb9fc9f61b1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#acf58a42880951fd6d2b42b2264572cc6">GetShapeIndex</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsShape.html">PhysicsShape</a> shape)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">衝突形状のインデックスを調べる  <a href="#acf58a42880951fd6d2b42b2264572cc6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#ad72ccc17dbb4a505908e03cb0b1d0705">GetBodyIndex</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a> body)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">剛体のインデックスを調べる  <a href="#ad72ccc17dbb4a505908e03cb0b1d0705"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a52222d4ab635bb2a2ccb6c44c69fb391">GetJointIndex</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsJoint.html">PhysicsJoint</a> joint)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ジョイントのインデックスを調べる  <a href="#a52222d4ab635bb2a2ccb6c44c69fb391"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a61fc7b095ffa5a78588b1666dc63af04">GetSpringIndex</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsSpring.html">PhysicsSpring</a> spring)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">スプリングのインデックスを調べる  <a href="#a61fc7b095ffa5a78588b1666dc63af04"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsShape.html">PhysicsShape</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a9f60906bffba8e02b3bebb9a50d6fee1">GetShape</a> (int index)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">衝突形状を得る  <a href="#a9f60906bffba8e02b3bebb9a50d6fee1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a11b7135d70232cc8a04c6d2f9ac6b2fb">GetBody</a> (int index)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">剛体を得る  <a href="#a11b7135d70232cc8a04c6d2f9ac6b2fb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsJoint.html">PhysicsJoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a9845afb7b75c8f7618db8faf09dc3596">GetJoint</a> (int index)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ジョイントを得る  <a href="#a9845afb7b75c8f7618db8faf09dc3596"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsSpring.html">PhysicsSpring</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a2bf8bba7ea3ea8d3003f5db146b0653d">GetSpring</a> (int index)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">スプリングを得る  <a href="#a2bf8bba7ea3ea8d3003f5db146b0653d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a8084dfa10e73e3a87e4c41599d28cf08">AddIgnorePair</a> (uint index1, uint index2)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">衝突を無視するペアをリストに加える  <a href="#a8084dfa10e73e3a87e4c41599d28cf08"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a2e1d11fccafd192a4e3cb91743a2be0d">AddIgnorePair</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a> body1, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a> body2)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">衝突を無視するペアをリストに加える  <a href="#a2e1d11fccafd192a4e3cb91743a2be0d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a1eadd84dd2d1b4541c3a2f915fa87517">RemoveIgnorePair</a> (uint index1, uint index2)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">衝突を無視するペアをリストから削除する  <a href="#a1eadd84dd2d1b4541c3a2f915fa87517"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a4b8d41aac7abc1342629ac371e512546">RemoveIgnorePair</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a> body1, <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a> body2)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">衝突を無視するペアをリストから削除する  <a href="#a4b8d41aac7abc1342629ac371e512546"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a64c333ff48f81b9120b536c7f1d7f085">CheckOutOfBound</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a> body)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">　シミュレーションエリアを出たかどうかをチェック、出ていたらシミュレーションに考慮されない  <a href="#a64c333ff48f81b9120b536c7f1d7f085"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#ab51cf6cb7bca18129e1525135e66dac2">CheckPicking</a> (ref <a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a> click_pos, ref <a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a> diff_pos, bool rigorous_check)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">タッチポイントの下にある剛体を探す  <a href="#ab51cf6cb7bca18129e1525135e66dac2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a62b87e3f5785d216a8948112345efcf5">CheckForcePicking</a> (ref <a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a> click_pos, ref <a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a> diff_pos, bool rigorous_check)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">タッチポイントの下にある剛体を探す  <a href="#a62b87e3f5785d216a8948112345efcf5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac8ba5a92d2444df19ed9183ba3290ade"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::InitScene" ref="ac8ba5a92d2444df19ed9183ba3290ade" args="()" -->
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#ac8ba5a92d2444df19ed9183ba3290ade">InitScene</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シーンの初期化を定義する <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae8215fe43448373b90df8c0c72ca1ea"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::ReleaseScene" ref="aae8215fe43448373b90df8c0c72ca1ea" args="()" -->
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#aae8215fe43448373b90df8c0c72ca1ea">ReleaseScene</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">デバッグレンダリングリソースを含む、リソースの解放をここで定義する <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#ae819e9c596fefc95a64e343c6bbd00bb">KeyboardFunc</a> (<a class="el" href="namespaceSce_1_1PlayStation_1_1Core_1_1Input.html#adeb21419eb817548a299a914bd631975">GamePadButtons</a> ePad)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲームパッドイベントの扱いを定義  <a href="#ae819e9c596fefc95a64e343c6bbd00bb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af4aebe0e1c3d948dc1622f58a7785efa"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::UpdateFuncAfterSim" ref="af4aebe0e1c3d948dc1622f58a7785efa" args="()" -->
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#af4aebe0e1c3d948dc1622f58a7785efa">UpdateFuncAfterSim</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ポストシミュレーション処理, 衝突情報に基づく処理などを定義する <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11ca1531f35a04c7b82639cc398efb3d"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::UpdateFuncBeforeSim" ref="a11ca1531f35a04c7b82639cc398efb3d" args="()" -->
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a11ca1531f35a04c7b82639cc398efb3d">UpdateFuncBeforeSim</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">プレシミュレーション処理, 位置情報に基づき、外力を加えるなどの処理を定義する <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a3f4c38c08382ae25c043940402e12982">DrawAllBody</a> (ref <a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1GraphicsContext.html">GraphicsContext</a> graphics, ref <a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1ShaderProgram.html">ShaderProgram</a> program, <a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Matrix4.html">Matrix4</a> rendering_scale, int click_index)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">レンダリングをユーザーが定義する  <a href="#a3f4c38c08382ae25c043940402e12982"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a104991525beb2cafb85968cdac4afd4d">DrawAdditionalInfo</a> (ref <a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1GraphicsContext.html">GraphicsContext</a> graphics, ref <a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1ShaderProgram.html">ShaderProgram</a> program, <a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Matrix4.html">Matrix4</a> rendering_scale)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">デバッグレンダリングをユーザーが定義する  <a href="#a104991525beb2cafb85968cdac4afd4d"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pub-attribs"></a>
+Public 変数</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acc09bbf27d15ff9323a91e1375f19499"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::numBody" ref="acc09bbf27d15ff9323a91e1375f19499" args="" -->
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#acc09bbf27d15ff9323a91e1375f19499">numBody</a> = 0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン中の剛体数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f47cd5852ffdc4d8afda3852219f7be"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::numJoint" ref="a1f47cd5852ffdc4d8afda3852219f7be" args="" -->
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a1f47cd5852ffdc4d8afda3852219f7be">numJoint</a> = 0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン中のジョイント数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a051e5caf7569485a2d011352f0a60802"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::numSpring" ref="a051e5caf7569485a2d011352f0a60802" args="" -->
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a051e5caf7569485a2d011352f0a60802">numSpring</a> = 0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン中のスプリング数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11ead32fa169f379479686147019ed0a"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::numShape" ref="a11ead32fa169f379479686147019ed0a" args="" -->
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a11ead32fa169f379479686147019ed0a">numShape</a> = 0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン中の形状数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af8f13f05fd92ce328afd1c7e96c879d2"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::numBroadPair" ref="af8f13f05fd92ce328afd1c7e96c879d2" args="" -->
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#af8f13f05fd92ce328afd1c7e96c879d2">numBroadPair</a> = 0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">broad phase衝突判定により衝突可能性のあるペア数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a85a1954b417e073579e6da61962a63f2"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::numPhysicsSolverPair" ref="a85a1954b417e073579e6da61962a63f2" args="" -->
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a85a1954b417e073579e6da61962a63f2">numPhysicsSolverPair</a> = 0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">narrow phase衝突判定により衝突するペア数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab36612a980d804dee4764890dbadd9d"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::numOldPhysicsSolverPair" ref="aab36612a980d804dee4764890dbadd9d" args="" -->
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#aab36612a980d804dee4764890dbadd9d">numOldPhysicsSolverPair</a> = 0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">前のnarrow phase衝突判定により衝突するペア数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae33b73de67c5f332338f3ae07ace8a75"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::sceneBodies" ref="ae33b73de67c5f332338f3ae07ace8a75" args="" -->
+<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#ae33b73de67c5f332338f3ae07ace8a75">sceneBodies</a> = new <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a>[maxBody]</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン中の剛体リスト <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab72273f8b39aacf0bdd8abb7e38b828f"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::sceneShapes" ref="ab72273f8b39aacf0bdd8abb7e38b828f" args="" -->
+<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsShape.html">PhysicsShape</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#ab72273f8b39aacf0bdd8abb7e38b828f">sceneShapes</a> = new <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsShape.html">PhysicsShape</a>[maxShape]</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン中の形状リスト <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a93e03c98c36c6ea430b335866c0d0d2b"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::broadPair" ref="a93e03c98c36c6ea430b335866c0d0d2b" args="" -->
+uint[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a93e03c98c36c6ea430b335866c0d0d2b">broadPair</a> = new uint[maxContacts]</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン中のbroad phase衝突ペアリスト <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a884e4a0be04998b531d6ac5c7b5e05bf"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::solverPair" ref="a884e4a0be04998b531d6ac5c7b5e05bf" args="" -->
+<a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsSolverPair.html">PhysicsSolverPair</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a884e4a0be04998b531d6ac5c7b5e05bf">solverPair</a> = new <a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsSolverPair.html">PhysicsSolverPair</a>[maxContacts]</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン中の衝突ペアリスト <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a277d2b7f6c116497d7e3935207cdf54d"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::sceneJoints" ref="a277d2b7f6c116497d7e3935207cdf54d" args="" -->
+<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsJoint.html">PhysicsJoint</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a277d2b7f6c116497d7e3935207cdf54d">sceneJoints</a> = new <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsJoint.html">PhysicsJoint</a>[maxJoint]</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン中のジョイントリスト <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab78e34f16759e6321c7db5b31755337d"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::sceneSprings" ref="ab78e34f16759e6321c7db5b31755337d" args="" -->
+<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsSpring.html">PhysicsSpring</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#ab78e34f16759e6321c7db5b31755337d">sceneSprings</a> = new <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsSpring.html">PhysicsSpring</a>[maxSpring]</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン中のスプリングリスト <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">uint[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#aa6e06056a5c49ec4fae4567de25029f3">compoundMap</a> = new uint[maxBody]</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">　コンパウンド形状対応マップ  <a href="#aa6e06056a5c49ec4fae4567de25029f3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d85f5eed19d1700e15cb9233ffe7849"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::simDt" ref="a4d85f5eed19d1700e15cb9233ffe7849" args="" -->
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a4d85f5eed19d1700e15cb9233ffe7849">simDt</a> = 1.0f/60.0f</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シミュレーションのタイムステップ <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad700419778ad0e19638752e264624cee"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::gravity" ref="ad700419778ad0e19638752e264624cee" args="" -->
+<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#ad700419778ad0e19638752e264624cee">gravity</a> = new <a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>(0, -9.8f)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン中の重力加速度 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a85994d8f909d9d11a50212689c5edbc9"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::sceneMin" ref="a85994d8f909d9d11a50212689c5edbc9" args="" -->
+<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a85994d8f909d9d11a50212689c5edbc9">sceneMin</a> = new <a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>(-1000.0f, -1000.0f)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シミュレーションエリアの境界 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66d6028ac538bb59a9f13b9d36364913"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::sceneMax" ref="a66d6028ac538bb59a9f13b9d36364913" args="" -->
+<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a66d6028ac538bb59a9f13b9d36364913">sceneMax</a> = new <a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>(1000.0f, 1000.0f)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シミュレーションエリアの境界 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af62f5abb6379266adce2093d35cd55ef"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::sceneFrame" ref="af62f5abb6379266adce2093d35cd55ef" args="" -->
+ulong&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#af62f5abb6379266adce2093d35cd55ef">sceneFrame</a> = 0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">このシーンのシミュレーションが始まってからのフレーム数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae585b8dca8ed0ec2751ded8cd8e70a74"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::sceneName" ref="ae585b8dca8ed0ec2751ded8cd8e70a74" args="" -->
+string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#ae585b8dca8ed0ec2751ded8cd8e70a74">sceneName</a> = &quot;Scene made by Physics2DEngine&quot;</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シミュレーションのシーン名 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab334a647c8c5af5985994705eb8a7bf7"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::numIgnorePair" ref="ab334a647c8c5af5985994705eb8a7bf7" args="" -->
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#ab334a647c8c5af5985994705eb8a7bf7">numIgnorePair</a> = 0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン中の衝突を無視するペアの数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59e2c75a97c1e3c1d8173803f3a4006d"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::ignorePair" ref="a59e2c75a97c1e3c1d8173803f3a4006d" args="" -->
+uint[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a59e2c75a97c1e3c1d8173803f3a4006d">ignorePair</a> = new uint[maxIgnore]</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン中の衝突を無視するペアリスト <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8581cc1b623274597ff7bd0ef1afead1"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::printPerf" ref="a8581cc1b623274597ff7bd0ef1afead1" args="" -->
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a8581cc1b623274597ff7bd0ef1afead1">printPerf</a> = false</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シミュレーション中の各計算フェーズのパフォーマンスを出力する <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a10bb0a0855288472e9874bb446eba57d"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::uniqueProperty" ref="a10bb0a0855288472e9874bb446eba57d" args="" -->
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a10bb0a0855288472e9874bb446eba57d">uniqueProperty</a> = true</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン特性にユニークな値を使うか <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a768c45435d822c391ae7b014cf8d313b"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::penetrationRepulse" ref="a768c45435d822c391ae7b014cf8d313b" args="" -->
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a768c45435d822c391ae7b014cf8d313b">penetrationRepulse</a> = 0.2f</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">めり込みに対する反発力の加速係数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a16cdcda77863ab02eae3663dd9ee4dd5"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::penetLimit" ref="a16cdcda77863ab02eae3663dd9ee4dd5" args="" -->
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a16cdcda77863ab02eae3663dd9ee4dd5">penetLimit</a> = 0.03f</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">めり込みに対する許容度 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a28db1ed410ebee5bc58e85a8fd60b664"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::tangentFriction" ref="a28db1ed410ebee5bc58e85a8fd60b664" args="" -->
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a28db1ed410ebee5bc58e85a8fd60b664">tangentFriction</a> = 0.3f</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">反発に対する接線方向の摩擦係数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa5464be7f72ea577a6af31e6e44a1c19"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::restitutionCoeff" ref="aa5464be7f72ea577a6af31e6e44a1c19" args="" -->
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#aa5464be7f72ea577a6af31e6e44a1c19">restitutionCoeff</a> = 0.0f</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">反発に対する反発係数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e33157a66e9a91c889d5cefdfd6d9b9"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::sleepAlgorithm" ref="a6e33157a66e9a91c889d5cefdfd6d9b9" args="" -->
+<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a427b67232043181ec98c59f2836bcba8">SleepAlgorithmType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a6e33157a66e9a91c889d5cefdfd6d9b9">sleepAlgorithm</a> = SleepAlgorithmType.BroadphaseBase</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">スリープアルゴリズムがブロードフェーズによるか、ナローフェーズによるか <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a9c3ad9cc6d693d4810829a2f403632b7">BroadOpType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#af34592c903cd7fbdcdf72dda633913d8">filterOp</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">filterOp  <a href="#af34592c903cd7fbdcdf72dda633913d8"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="properties"></a>
+プロパティ</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af4bad3f3fde2f3548111e67dee876418"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::NumBody" ref="af4bad3f3fde2f3548111e67dee876418" args="" -->
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#af4bad3f3fde2f3548111e67dee876418">NumBody</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">setter and getter of numBody <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a264aa0590c92959cf68abda7c0e794a8"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::NumJoint" ref="a264aa0590c92959cf68abda7c0e794a8" args="" -->
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a264aa0590c92959cf68abda7c0e794a8">NumJoint</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">setter and getter of numJoint <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7e25266dd3b16f57759d192b89230efe"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::NumSpring" ref="a7e25266dd3b16f57759d192b89230efe" args="" -->
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a7e25266dd3b16f57759d192b89230efe">NumSpring</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">setter and getter of numSpring <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a30c1446206162ed628a9f30567724c50"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::NumShape" ref="a30c1446206162ed628a9f30567724c50" args="" -->
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a30c1446206162ed628a9f30567724c50">NumShape</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">setter and getter of numShape <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5876176d28870b7bb03df1bcf1fd7ec"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::NumBroadPair" ref="ab5876176d28870b7bb03df1bcf1fd7ec" args="" -->
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#ab5876176d28870b7bb03df1bcf1fd7ec">NumBroadPair</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">setter and getter of numBroadPair <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c5896ac9ce8a02e150e64b7230c49a4"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::NumPhysicsSolverPair" ref="a4c5896ac9ce8a02e150e64b7230c49a4" args="" -->
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a4c5896ac9ce8a02e150e64b7230c49a4">NumPhysicsSolverPair</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">setter and getter of numPhysicsSolverPair <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7a4420c6c68cb3b7eba91cdfc280be6b"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::NumOldPhysicsSolverPair" ref="a7a4420c6c68cb3b7eba91cdfc280be6b" args="" -->
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a7a4420c6c68cb3b7eba91cdfc280be6b">NumOldPhysicsSolverPair</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">setter and getter of numOldPhysicsSolverPair <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab35d70e03d5a0fd572eebdbed754a1ca"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::SceneBodies" ref="ab35d70e03d5a0fd572eebdbed754a1ca" args="" -->
+<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#ab35d70e03d5a0fd572eebdbed754a1ca">SceneBodies</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">setter and getter of sceneBodies <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a96f3fa96e8c8082caf848fb03ef6d681"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::SceneShapes" ref="a96f3fa96e8c8082caf848fb03ef6d681" args="" -->
+<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsShape.html">PhysicsShape</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a96f3fa96e8c8082caf848fb03ef6d681">SceneShapes</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">setter and getter of sceneShapes <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1576552599800c39feb288a31a0334cd"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::SceneJoints" ref="a1576552599800c39feb288a31a0334cd" args="" -->
+<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsJoint.html">PhysicsJoint</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a1576552599800c39feb288a31a0334cd">SceneJoints</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">setter and getter of sceneJoints <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab77ebede22d2d3f924347ab4729e1d9b"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::SceneSprings" ref="ab77ebede22d2d3f924347ab4729e1d9b" args="" -->
+<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsSpring.html">PhysicsSpring</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#ab77ebede22d2d3f924347ab4729e1d9b">SceneSprings</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">setter and getter of sceneSprings <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2eb3f2598799ee8f619596556576f11b"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::SimDt" ref="a2eb3f2598799ee8f619596556576f11b" args="" -->
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a2eb3f2598799ee8f619596556576f11b">SimDt</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">setter and getter of simDt <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adcfb60a0a7d7adf73b3cef6263a57dea"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::Gravity" ref="adcfb60a0a7d7adf73b3cef6263a57dea" args="" -->
+<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#adcfb60a0a7d7adf73b3cef6263a57dea">Gravity</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">setter and getter of gravity <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a79d990f068569a641f55faeede1c7223"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::SceneMin" ref="a79d990f068569a641f55faeede1c7223" args="" -->
+<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a79d990f068569a641f55faeede1c7223">SceneMin</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">setter and getter of sceneMin <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8be0c7dc3df6e7452f3bb55dcc8480d2"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::SceneMax" ref="a8be0c7dc3df6e7452f3bb55dcc8480d2" args="" -->
+<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a8be0c7dc3df6e7452f3bb55dcc8480d2">SceneMax</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">setter and getter of sceneMax <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a634581d83bd0062edc4e6bd9124a02c8"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::SceneFrame" ref="a634581d83bd0062edc4e6bd9124a02c8" args="" -->
+ulong&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a634581d83bd0062edc4e6bd9124a02c8">SceneFrame</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">setter and getter of sceneFrame <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae22895fad64266629f4a2147a26149c3"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::SceneName" ref="ae22895fad64266629f4a2147a26149c3" args="" -->
+string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#ae22895fad64266629f4a2147a26149c3">SceneName</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">setter and getter of sceneName <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a39b0efddc81c81a9559cc0c7bfa4af30"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::NumIgnorePair" ref="a39b0efddc81c81a9559cc0c7bfa4af30" args="" -->
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a39b0efddc81c81a9559cc0c7bfa4af30">NumIgnorePair</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">setter and getter of numIgnorePair <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a57d2adb2b8577bb8575ee07afa98b170"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::IgnorePair" ref="a57d2adb2b8577bb8575ee07afa98b170" args="" -->
+uint[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a57d2adb2b8577bb8575ee07afa98b170">IgnorePair</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">setter and getter of ignorePair <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa103d0945ec096ad642d56edf412765b"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::PrintPerf" ref="aa103d0945ec096ad642d56edf412765b" args="" -->
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#aa103d0945ec096ad642d56edf412765b">PrintPerf</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">setter and getter of printPerf <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab83f8733ffa5f139532036fda2bcae8e"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::UniqueProperty" ref="ab83f8733ffa5f139532036fda2bcae8e" args="" -->
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#ab83f8733ffa5f139532036fda2bcae8e">UniqueProperty</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">setter and getter of uniqueProperty <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b981f8e38746c962460fffcc651cfc0"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::PenetrationRepulse" ref="a3b981f8e38746c962460fffcc651cfc0" args="" -->
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a3b981f8e38746c962460fffcc651cfc0">PenetrationRepulse</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">setter and getter of penetrationRepulse <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa91fe3f61b3bd83d7bf0c42ab009b552"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::PenetLimit" ref="aa91fe3f61b3bd83d7bf0c42ab009b552" args="" -->
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#aa91fe3f61b3bd83d7bf0c42ab009b552">PenetLimit</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">setter and getter of penetLimit <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aad100191b4231b253d4395e0341485b4"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::TangentFriction" ref="aad100191b4231b253d4395e0341485b4" args="" -->
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#aad100191b4231b253d4395e0341485b4">TangentFriction</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">setter and getter of tangentFriction <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a250165fc0af933b3b8723f0980301076"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::RestitutionCoeff" ref="a250165fc0af933b3b8723f0980301076" args="" -->
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a250165fc0af933b3b8723f0980301076">RestitutionCoeff</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">setter and getter of restitutionCoeff <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1ce29350cd7a93995183d611ad279154"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::FilterOp" ref="a1ce29350cd7a93995183d611ad279154" args="" -->
+<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a9c3ad9cc6d693d4810829a2f403632b7">BroadOpType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a1ce29350cd7a93995183d611ad279154">FilterOp</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">setter and getter of filterOp <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab28bb5dd1ef0b320b5efb05dfe940e23"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::CompoundMap" ref="ab28bb5dd1ef0b320b5efb05dfe940e23" args="" -->
+uint[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#ab28bb5dd1ef0b320b5efb05dfe940e23">CompoundMap</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">setter and getter of compoundMap <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsSolverPair.html">PhysicsSolverPair</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a45e74ffbed7a9f968137b4cfec45ddf0">SolverPair</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">getter of solverPair  <a href="#a45e74ffbed7a9f968137b4cfec45ddf0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">uint[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a7103114f6a09839d4b7dd1eba62ab364">BroadPair</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">getter of broadPair  <a href="#a7103114f6a09839d4b7dd1eba62ab364"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2526267414735d249bf9777f4ddc0381"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::SleepAlgorithm" ref="a2526267414735d249bf9777f4ddc0381" args="" -->
+<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a427b67232043181ec98c59f2836bcba8">SleepAlgorithmType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a2526267414735d249bf9777f4ddc0381">SleepAlgorithm</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">setter and getter of sleepAlgorithm <br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>説明</h2>
+<div class="textblock"><p>２Ｄ物理シミュレーションのシーン </p>
+</div><hr/><h2>列挙型</h2>
+<a class="anchor" id="a9c3ad9cc6d693d4810829a2f403632b7"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::BroadOpType" ref="a9c3ad9cc6d693d4810829a2f403632b7" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a9c3ad9cc6d693d4810829a2f403632b7">BroadOpType</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>collisionFilterとgroupFilterの組み合わせを変更する </p>
+<dl><dt><b>列挙型の値: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="a9c3ad9cc6d693d4810829a2f403632b7"></a><!-- doxytag: member="Or" ref="a9c3ad9cc6d693d4810829a2f403632b7" args="" -->Or</em>&nbsp;</td><td>
+<p>OR操作 </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a9c3ad9cc6d693d4810829a2f403632b7"></a><!-- doxytag: member="And" ref="a9c3ad9cc6d693d4810829a2f403632b7" args="" -->And</em>&nbsp;</td><td>
+<p>AND操作 </p>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a427b67232043181ec98c59f2836bcba8"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::SleepAlgorithmType" ref="a427b67232043181ec98c59f2836bcba8" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a427b67232043181ec98c59f2836bcba8">SleepAlgorithmType</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>スリープ状態をチェックする際のアルゴリズムをスイッチする </p>
+<dl><dt><b>列挙型の値: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="a427b67232043181ec98c59f2836bcba8"></a><!-- doxytag: member="BroadphaseBase" ref="a427b67232043181ec98c59f2836bcba8" args="" -->BroadphaseBase</em>&nbsp;</td><td>
+<p>broadphase collisionに基づいて </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a427b67232043181ec98c59f2836bcba8"></a><!-- doxytag: member="NarrowphaseBase" ref="a427b67232043181ec98c59f2836bcba8" args="" -->NarrowphaseBase</em>&nbsp;</td><td>
+<p>narrowphase collisionに基づいて </p>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+</div>
+</div>
+<hr/><h2>メソッド</h2>
+<a class="anchor" id="a8bbc76cf82f0f631c09a3b518fd6405f"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::AddBody" ref="a8bbc76cf82f0f631c09a3b518fd6405f" args="(int shapeIndex, float mass)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a> AddBody </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>shapeIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>mass</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>剛体をシーンに追加する </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shapeIndex</td><td>衝突形状のインデックス </td></tr>
+    <tr><td class="paramname">mass</td><td>質量 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>　剛体への参照 </dd></dl>
+<p>シーンの剛体数が自動的にインクリメントされる </p>
+
+</div>
+</div>
+<a class="anchor" id="ad86d90c165cfcb405b26f1727d53437f"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::AddBody" ref="ad86d90c165cfcb405b26f1727d53437f" args="(PhysicsShape shape, float mass)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a> AddBody </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsShape.html">PhysicsShape</a>&#160;</td>
+          <td class="paramname"><em>shape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>mass</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>剛体をシーンに追加する </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shape</td><td>衝突形状へのリファレンス </td></tr>
+    <tr><td class="paramname">mass</td><td>質量 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>　剛体への参照 </dd></dl>
+<p>シーンの剛体数が自動的にインクリメントされる </p>
+
+</div>
+</div>
+<a class="anchor" id="ab351d47403505b7f7b976b55580ab281"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::AddBoxShape" ref="ab351d47403505b7f7b976b55580ab281" args="(Vector2 width)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsShape.html">PhysicsShape</a> AddBoxShape </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td>
+          <td class="paramname"><em>width</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>シーンにボックス形状を追加する </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>ボックスの半分の縦横長さ </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>縦横長さではなく、縦横半分の長さである <br/>
+ シーンの衝突形状数が自動的にインクリメントされる </p>
+
+</div>
+</div>
+<a class="anchor" id="a4fc5ef0b48cef006d02f951800b93779"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::AddConvexHullShape" ref="a4fc5ef0b48cef006d02f951800b93779" args="(Vector2[] pos, int num)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsShape.html">PhysicsShape</a> AddConvexHullShape </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>[]&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>シーンにランダム頂点列による凸包形状を追加する </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>ランダムな頂点列 </td></tr>
+    <tr><td class="paramname">num</td><td>頂点数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>頂点リストの数の最大は３０個 <br/>
+ シーンの衝突形状数が自動的にインクリメントされる </p>
+
+</div>
+</div>
+<a class="anchor" id="a782c70feb5810a640cb5e8b1b2b67156"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::AddConvexShape" ref="a782c70feb5810a640cb5e8b1b2b67156" args="(Vector2[] pos, int num)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsShape.html">PhysicsShape</a> AddConvexShape </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>[]&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>シーンに凸形状を追加する </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>凸形状の頂点リスト </td></tr>
+    <tr><td class="paramname">num</td><td>頂点リストの数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>頂点リストの数の最大は３０個 <br/>
+ シーンの衝突形状数が自動的にインクリメントされる </p>
+
+</div>
+</div>
+<a class="anchor" id="a8084dfa10e73e3a87e4c41599d28cf08"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::AddIgnorePair" ref="a8084dfa10e73e3a87e4c41599d28cf08" args="(uint index1, uint index2)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddIgnorePair </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>index1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>index2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>衝突を無視するペアをリストに加える </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index1</td><td>剛体ペアの一方 </td></tr>
+    <tr><td class="paramname">index2</td><td>剛体ペアのもう一方</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a2e1d11fccafd192a4e3cb91743a2be0d"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::AddIgnorePair" ref="a2e1d11fccafd192a4e3cb91743a2be0d" args="(PhysicsBody body1, PhysicsBody body2)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddIgnorePair </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a>&#160;</td>
+          <td class="paramname"><em>body1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a>&#160;</td>
+          <td class="paramname"><em>body2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>衝突を無視するペアをリストに加える </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">body1</td><td>剛体ペアの一方 </td></tr>
+    <tr><td class="paramname">body2</td><td>剛体ペアのもう一方</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac46ccf3e97180f9d7758b52fd18f6a74"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::AddJoint" ref="ac46ccf3e97180f9d7758b52fd18f6a74" args="(int bodyIndex1, int bodyIndex2, Vector2 anchorPos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsJoint.html">PhysicsJoint</a> AddJoint </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bodyIndex1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bodyIndex2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td>
+          <td class="paramname"><em>anchorPos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>ジョイントをシーンに追加する </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bodyIndex1</td><td>剛体ペアの一方のインデックス </td></tr>
+    <tr><td class="paramname">bodyIndex2</td><td>剛体ペアのもう一方のインデックス</td></tr>
+    <tr><td class="paramname">anchorPos</td><td>ジョイントのアンカーポイント </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>　ジョイントへの参照 </dd></dl>
+<p>シーンのジョイント数が自動的にインクリメントされる </p>
+
+</div>
+</div>
+<a class="anchor" id="a85e1b1872dee923a146142b96797505e"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::AddJoint" ref="a85e1b1872dee923a146142b96797505e" args="(PhysicsBody body1, PhysicsBody body2, Vector2 anchorPos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsJoint.html">PhysicsJoint</a> AddJoint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a>&#160;</td>
+          <td class="paramname"><em>body1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a>&#160;</td>
+          <td class="paramname"><em>body2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td>
+          <td class="paramname"><em>anchorPos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>ジョイントをシーンに追加する </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">body1</td><td>剛体ペアの一方のインデックス </td></tr>
+    <tr><td class="paramname">body2</td><td>剛体ペアのもう一方のインデックス</td></tr>
+    <tr><td class="paramname">anchorPos</td><td>ジョイントのアンカーポイント </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>　ジョイントへの参照 </dd></dl>
+<p>シーンのジョイント数が自動的にインクリメントされる </p>
+
+</div>
+</div>
+<a class="anchor" id="a50e19a5597e690c4f79a96378ae2ad16"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::AddLineChainShape" ref="a50e19a5597e690c4f79a96378ae2ad16" args="(Vector2[] pos, int num)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsShape.html">PhysicsShape</a> AddLineChainShape </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>[]&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>シーンに接続したライン形状生成を追加する </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>ライン形状の頂点リスト </td></tr>
+    <tr><td class="paramname">num</td><td>頂点リストの数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>頂点リストの数の最大は３０個であり、また、これによって作れるのは静的剛体のみです <br/>
+ シーンの衝突形状数が自動的にインクリメントされる </p>
+
+</div>
+</div>
+<a class="anchor" id="a6318d19f12a13335904fb3fcee8592bb"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::AddSphereShape" ref="a6318d19f12a13335904fb3fcee8592bb" args="(float radius)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsShape.html">PhysicsShape</a> AddSphereShape </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>radius</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>シーンに球形状を追加する </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">radius</td><td>球の半径 </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>シーンの衝突形状数が自動的にインクリメントされる </p>
+
+</div>
+</div>
+<a class="anchor" id="a71e94242be16254ef1ef2cfff6f37ff3"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::AddSpring" ref="a71e94242be16254ef1ef2cfff6f37ff3" args="(PhysicsBody body1, PhysicsBody body2, Vector2 anchorPos1, Vector2 anchorPos2)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsSpring.html">PhysicsSpring</a> AddSpring </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a>&#160;</td>
+          <td class="paramname"><em>body1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a>&#160;</td>
+          <td class="paramname"><em>body2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td>
+          <td class="paramname"><em>anchorPos1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td>
+          <td class="paramname"><em>anchorPos2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>スプリングをシーンに追加する </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">body1</td><td>剛体ペアの一方のインデックス </td></tr>
+    <tr><td class="paramname">body2</td><td>剛体ペアのもう一方のインデックス</td></tr>
+    <tr><td class="paramname">anchorPos1</td><td>スプリングのアンカーポイントの１つ </td></tr>
+    <tr><td class="paramname">anchorPos2</td><td>スプリングのアンカーポイントのもう１つ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>　スプリングへの参照 </dd></dl>
+<p>シーンのスプリング数が自動的にインクリメントされる </p>
+
+</div>
+</div>
+<a class="anchor" id="a9d2a2212ed688f2546055111c1b20198"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::AddSpring" ref="a9d2a2212ed688f2546055111c1b20198" args="(int bodyIndex1, int bodyIndex2, Vector2 anchorPos1, Vector2 anchorPos2)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsSpring.html">PhysicsSpring</a> AddSpring </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bodyIndex1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bodyIndex2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td>
+          <td class="paramname"><em>anchorPos1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td>
+          <td class="paramname"><em>anchorPos2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>ジョイントをシーンに追加する </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bodyIndex1</td><td>剛体ペアの一方のインデックス </td></tr>
+    <tr><td class="paramname">bodyIndex2</td><td>剛体ペアのもう一方のインデックス</td></tr>
+    <tr><td class="paramname">anchorPos</td><td>ジョイントのアンカーポイント </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>　ジョイントへの参照 </dd></dl>
+<p>シーンのジョイント数が自動的にインクリメントされる </p>
+
+</div>
+</div>
+<a class="anchor" id="a62b87e3f5785d216a8948112345efcf5"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::CheckForcePicking" ref="a62b87e3f5785d216a8948112345efcf5" args="(ref Vector2 click_pos, ref Vector2 diff_pos, bool rigorous_check)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CheckForcePicking </td>
+          <td>(</td>
+          <td class="paramtype">ref <a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td>
+          <td class="paramname"><em>click_pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref <a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td>
+          <td class="paramname"><em>diff_pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>rigorous_check</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>タッチポイントの下にある剛体を探す </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">click_pos</td><td>タッチポイント </td></tr>
+    <tr><td class="paramname">diff_pos</td><td>剛体中心とタッチポイントの差 </td></tr>
+    <tr><td class="paramname">rigorous_check</td><td>厳密なチェックを行うかどうか </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>タッチされている剛体があれば、そのインデックスをなければ-1を返す <br/>
+ 剛体がStaticであってもピッキングデータを返すことに注意 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a64c333ff48f81b9120b536c7f1d7f085"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::CheckOutOfBound" ref="a64c333ff48f81b9120b536c7f1d7f085" args="(PhysicsBody body)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CheckOutOfBound </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a>&#160;</td>
+          <td class="paramname"><em>body</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>　シミュレーションエリアを出たかどうかをチェック、出ていたらシミュレーションに考慮されない </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">body</td><td>　剛体 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>シミュレーションエリア外なら真を返す </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab51cf6cb7bca18129e1525135e66dac2"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::CheckPicking" ref="ab51cf6cb7bca18129e1525135e66dac2" args="(ref Vector2 click_pos, ref Vector2 diff_pos, bool rigorous_check)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CheckPicking </td>
+          <td>(</td>
+          <td class="paramtype">ref <a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td>
+          <td class="paramname"><em>click_pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref <a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td>
+          <td class="paramname"><em>diff_pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>rigorous_check</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>タッチポイントの下にある剛体を探す </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">click_pos</td><td>タッチポイント </td></tr>
+    <tr><td class="paramname">diff_pos</td><td>剛体中心とタッチポイントの差 </td></tr>
+    <tr><td class="paramname">rigorous_check</td><td>厳密なチェックを行うかどうか </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>タッチされている剛体があれば、そのインデックスをなければ-1を返す </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa9724e86d3b01af565e161cfa7a0d902"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::DeleteBody" ref="aa9724e86d3b01af565e161cfa7a0d902" args="(int index)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DeleteBody </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>剛体削除 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>剛体インデックス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>　剛体の総数 </dd></dl>
+<p>シミュレーション内で使用しているキャッシュデータの再構築が必要になるために計算負荷がかかります<br/>
+ 同フレームで多くの剛体を削除する場合は注意が必要で、削除でなくシミュレーション領域外へ置くなどの方法も検討してください<br/>
+ Compound剛体を削除する場合は、compound剛体に関わる剛体が全て削除されます </p>
+
+</div>
+</div>
+<a class="anchor" id="a69237fe3e7480a2eced206d9b50eea95"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::DeleteBody" ref="a69237fe3e7480a2eced206d9b50eea95" args="(PhysicsBody body)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DeleteBody </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a>&#160;</td>
+          <td class="paramname"><em>body</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>剛体削除 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">body</td><td>剛体への参照 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>　剛体の総数 </dd></dl>
+<p>シミュレーション内で使用しているキャッシュデータの再構築が必要になるために計算負荷がかかります<br/>
+ 同フレームで多くの剛体を削除する場合は注意が必要で、削除でなくシミュレーション領域外へ置くなどの方法も検討してください<br/>
+ Compound剛体を削除する場合は、compound剛体に関わる剛体が全て削除されます </p>
+
+</div>
+</div>
+<a class="anchor" id="a6bad03134d0de8ed9ef99b40dc96bd03"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::DeleteJoint" ref="a6bad03134d0de8ed9ef99b40dc96bd03" args="(int index)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DeleteJoint </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>ジョイント削除 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>ジョイントのインデックス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>　削除後のジョイントの総数 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5d9b5cc1fff155963941d1c880c59164"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::DeleteJoint" ref="a5d9b5cc1fff155963941d1c880c59164" args="(PhysicsJoint joint)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DeleteJoint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsJoint.html">PhysicsJoint</a>&#160;</td>
+          <td class="paramname"><em>joint</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>ジョイント削除 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">joint</td><td>ジョイントへの参照 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>　削除後のジョイントの総数 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9f532b94ef65bb6197ecf58ef4907af4"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::DeleteSpring" ref="a9f532b94ef65bb6197ecf58ef4907af4" args="(PhysicsSpring spring)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DeleteSpring </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsSpring.html">PhysicsSpring</a>&#160;</td>
+          <td class="paramname"><em>spring</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>スプリング削除 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spring</td><td>スプリングへの参照 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>　削除後のスプリングの総数 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3a0b32d0ab819ddbacee00146a705c01"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::DeleteSpring" ref="a3a0b32d0ab819ddbacee00146a705c01" args="(int index)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DeleteSpring </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>スプリング削除 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>スプリングのインデックス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>　削除後のスプリングの総数 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a104991525beb2cafb85968cdac4afd4d"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::DrawAdditionalInfo" ref="a104991525beb2cafb85968cdac4afd4d" args="(ref GraphicsContext graphics, ref ShaderProgram program, Matrix4 rendering_scale)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void DrawAdditionalInfo </td>
+          <td>(</td>
+          <td class="paramtype">ref <a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1GraphicsContext.html">GraphicsContext</a>&#160;</td>
+          <td class="paramname"><em>graphics</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref <a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1ShaderProgram.html">ShaderProgram</a>&#160;</td>
+          <td class="paramname"><em>program</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Matrix4.html">Matrix4</a>&#160;</td>
+          <td class="paramname"><em>rendering_scale</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>デバッグレンダリングをユーザーが定義する </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graphics</td><td>グラフィックスコンテキスト </td></tr>
+    <tr><td class="paramname">program</td><td>シェーダープログラム </td></tr>
+    <tr><td class="paramname">rendering_scale</td><td>レンダリングスケール </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3f4c38c08382ae25c043940402e12982"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::DrawAllBody" ref="a3f4c38c08382ae25c043940402e12982" args="(ref GraphicsContext graphics, ref ShaderProgram program, Matrix4 rendering_scale, int click_index)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void DrawAllBody </td>
+          <td>(</td>
+          <td class="paramtype">ref <a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1GraphicsContext.html">GraphicsContext</a>&#160;</td>
+          <td class="paramname"><em>graphics</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref <a class="el" href="classSce_1_1PlayStation_1_1Core_1_1Graphics_1_1ShaderProgram.html">ShaderProgram</a>&#160;</td>
+          <td class="paramname"><em>program</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Matrix4.html">Matrix4</a>&#160;</td>
+          <td class="paramname"><em>rendering_scale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>click_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>レンダリングをユーザーが定義する </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graphics</td><td>グラフィックスコンテキスト </td></tr>
+    <tr><td class="paramname">program</td><td>シェーダープログラム </td></tr>
+    <tr><td class="paramname">rendering_scale</td><td>レンダリングスケール </td></tr>
+    <tr><td class="paramname">click_index</td><td>クリックした剛体インデックス </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a11b7135d70232cc8a04c6d2f9ac6b2fb"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::GetBody" ref="a11b7135d70232cc8a04c6d2f9ac6b2fb" args="(int index)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a> GetBody </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>剛体を得る </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>剛体のインデックス</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>見つからない時はnullが返される </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad72ccc17dbb4a505908e03cb0b1d0705"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::GetBodyIndex" ref="ad72ccc17dbb4a505908e03cb0b1d0705" args="(PhysicsBody body)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetBodyIndex </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a>&#160;</td>
+          <td class="paramname"><em>body</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>剛体のインデックスを調べる </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">body</td><td>剛体</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>見つからない時は-1が返される </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9845afb7b75c8f7618db8faf09dc3596"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::GetJoint" ref="a9845afb7b75c8f7618db8faf09dc3596" args="(int index)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsJoint.html">PhysicsJoint</a> GetJoint </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>ジョイントを得る </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>ジョイントのインデックス</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>見つからない時はnullが返される </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a52222d4ab635bb2a2ccb6c44c69fb391"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::GetJointIndex" ref="a52222d4ab635bb2a2ccb6c44c69fb391" args="(PhysicsJoint joint)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetJointIndex </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsJoint.html">PhysicsJoint</a>&#160;</td>
+          <td class="paramname"><em>joint</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>ジョイントのインデックスを調べる </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">joint</td><td>ジョイント </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>見つからない時は-1が返される </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9f60906bffba8e02b3bebb9a50d6fee1"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::GetShape" ref="a9f60906bffba8e02b3bebb9a50d6fee1" args="(int index)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsShape.html">PhysicsShape</a> GetShape </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>衝突形状を得る </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>衝突形状のインデックス</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>見つからない時はnullが返される </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acf58a42880951fd6d2b42b2264572cc6"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::GetShapeIndex" ref="acf58a42880951fd6d2b42b2264572cc6" args="(PhysicsShape shape)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetShapeIndex </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsShape.html">PhysicsShape</a>&#160;</td>
+          <td class="paramname"><em>shape</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>衝突形状のインデックスを調べる </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shape</td><td>衝突形状</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>見つからない時は-1が返される </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2bf8bba7ea3ea8d3003f5db146b0653d"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::GetSpring" ref="a2bf8bba7ea3ea8d3003f5db146b0653d" args="(int index)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsSpring.html">PhysicsSpring</a> GetSpring </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>スプリングを得る </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>スプリングのインデックス</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>見つからない時はnullが返される </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a61fc7b095ffa5a78588b1666dc63af04"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::GetSpringIndex" ref="a61fc7b095ffa5a78588b1666dc63af04" args="(PhysicsSpring spring)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetSpringIndex </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsSpring.html">PhysicsSpring</a>&#160;</td>
+          <td class="paramname"><em>spring</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>スプリングのインデックスを調べる </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spring</td><td>スプリング </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>見つからない時は-1が返される </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae819e9c596fefc95a64e343c6bbd00bb"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::KeyboardFunc" ref="ae819e9c596fefc95a64e343c6bbd00bb" args="(GamePadButtons ePad)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void KeyboardFunc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceSce_1_1PlayStation_1_1Core_1_1Input.html#adeb21419eb817548a299a914bd631975">GamePadButtons</a>&#160;</td>
+          <td class="paramname"><em>ePad</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>ゲームパッドイベントの扱いを定義 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ePad</td><td>ゲームパッド入力 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af4ccc4d70e2eb0e35dc7b5498a284d57"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::MergeCompound" ref="af4ccc4d70e2eb0e35dc7b5498a284d57" args="(PhysicsBody[] bodyList, int num, bool flag=true)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a> MergeCompound </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a>[]&#160;</td>
+          <td class="paramname"><em>bodyList</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>flag</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>剛体のマージ </p>
+<p>複数の剛体 (コンパウンド形状)をマージするために、インデックスが昇順で与えられている</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bodyList</td><td>シーンの剛体リスト</td></tr>
+    <tr><td class="paramname">num</td><td>マージするための剛体の数 </td></tr>
+    <tr><td class="paramname">flag</td><td>剛体の位置をマージ後に再調整するかどうか </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a4b7f609f27423b640ac7d4580e97c7b0"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::QueryContact" ref="a4b7f609f27423b640ac7d4580e97c7b0" args="(uint index1, uint index2)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool QueryContact </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>index1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>index2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>２つの剛体の間に衝突があったかどうかの記録を調べる </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index1</td><td>剛体ペアの一方 </td></tr>
+    <tr><td class="paramname">index2</td><td>剛体ペアのもう一方 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>　剛体ペアに衝突があった記録があれば真を返す </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a04015cbfae8656b07b054bca756137d7"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::QueryContact" ref="a04015cbfae8656b07b054bca756137d7" args="(PhysicsBody body1, PhysicsBody body2)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool QueryContact </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a>&#160;</td>
+          <td class="paramname"><em>body1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a>&#160;</td>
+          <td class="paramname"><em>body2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>２つの剛体の間に衝突があったかどうかの記録を調べる </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">body1</td><td>剛体ペアの一方 </td></tr>
+    <tr><td class="paramname">body2</td><td>剛体ペアのもう一方 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>　剛体ペアに衝突があった記録があれば真を返す </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aaec389058b84d55317e47fb9fc9f61b1"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::QueryContactTrigger" ref="aaec389058b84d55317e47fb9fc9f61b1" args="(uint index, uint[] indexlist)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int QueryContactTrigger </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint[]&#160;</td>
+          <td class="paramname"><em>indexlist</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>トリガー剛体と他の剛体の間に衝突があったかチェックする </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>トリガー剛体のインデックス </td></tr>
+    <tr><td class="paramname">indexlist</td><td>トリガー剛体との衝突を検出された剛体インデックスが格納される </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>　トリガー剛体との衝突を検出された剛体の数 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5e9bf38ce9a0d8f474b3fa2f0565d89e"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::RaycastHit" ref="a5e9bf38ce9a0d8f474b3fa2f0565d89e" args="(ref RayHit ray, uint collisionFilter, uint groupFilter)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RaycastHit </td>
+          <td>(</td>
+          <td class="paramtype">ref <a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1RayHit.html">RayHit</a>&#160;</td>
+          <td class="paramname"><em>ray</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>collisionFilter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>groupFilter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>レイキャストチェック </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ray</td><td>レイキャスト用のレイ情報 </td></tr>
+    <tr><td class="paramname">collisionFilter</td><td>通常の衝突判定と同様のコリジョンフィルター </td></tr>
+    <tr><td class="paramname">groupFilter</td><td>通常の衝突判定と同様のグループフィルター </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>レイの交差があるかないかを返す </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae2e448897e285284493e53ab6cc0b123"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::RaycastHit" ref="ae2e448897e285284493e53ab6cc0b123" args="(ref RayHit ray)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RaycastHit </td>
+          <td>(</td>
+          <td class="paramtype">ref <a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1RayHit.html">RayHit</a>&#160;</td>
+          <td class="paramname"><em>ray</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>レイキャストチェック </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ray</td><td>レイキャスト用のレイ情報 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>戻り値:</b></dt><dd>レイの交差があるかないかを返す </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4b8d41aac7abc1342629ac371e512546"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::RemoveIgnorePair" ref="a4b8d41aac7abc1342629ac371e512546" args="(PhysicsBody body1, PhysicsBody body2)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RemoveIgnorePair </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a>&#160;</td>
+          <td class="paramname"><em>body1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsBody.html">PhysicsBody</a>&#160;</td>
+          <td class="paramname"><em>body2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>衝突を無視するペアをリストから削除する </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">body1</td><td>剛体ペアの一方 </td></tr>
+    <tr><td class="paramname">body2</td><td>剛体ペアのもう一方</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1eadd84dd2d1b4541c3a2f915fa87517"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::RemoveIgnorePair" ref="a1eadd84dd2d1b4541c3a2f915fa87517" args="(uint index1, uint index2)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RemoveIgnorePair </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>index1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>index2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>衝突を無視するペアをリストから削除する </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index1</td><td>剛体ペアの一方 </td></tr>
+    <tr><td class="paramname">index2</td><td>剛体ペアのもう一方</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af6166394b2d0422aac570ec5855f97c0"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::Simulate" ref="af6166394b2d0422aac570ec5855f97c0" args="(int click_index, Vector2 click_pos, Vector2 diff_pos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Simulate </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>click_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td>
+          <td class="paramname"><em>click_pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td>
+          <td class="paramname"><em>diff_pos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>シミュレートする </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">click_index</td><td>クリックした剛体のインデックス </td></tr>
+    <tr><td class="paramname">click_pos</td><td>クリックした位置 </td></tr>
+    <tr><td class="paramname">diff_pos</td><td>クリックした位置と剛体の中心の差 </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>クリックによる影響を剛体に与えたい場合のシミュレート関数 </p>
+
+</div>
+</div>
+<hr/><h2>変数</h2>
+<a class="anchor" id="aa6e06056a5c49ec4fae4567de25029f3"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::compoundMap" ref="aa6e06056a5c49ec4fae4567de25029f3" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint [] <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#aa6e06056a5c49ec4fae4567de25029f3">compoundMap</a> = new uint[maxBody]</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>　コンパウンド形状対応マップ </p>
+<p>internal use only </p>
+
+</div>
+</div>
+<a class="anchor" id="af34592c903cd7fbdcdf72dda633913d8"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::filterOp" ref="af34592c903cd7fbdcdf72dda633913d8" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#a9c3ad9cc6d693d4810829a2f403632b7">BroadOpType</a> <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html#af34592c903cd7fbdcdf72dda633913d8">filterOp</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>filterOp </p>
+<p>ORとANDのcollision and group filter の組み合わせを変更する </p>
+
+</div>
+</div>
+<hr/><h2>プロパティ</h2>
+<a class="anchor" id="a7103114f6a09839d4b7dd1eba62ab364"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::BroadPair" ref="a7103114f6a09839d4b7dd1eba62ab364" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint [] BroadPair<code> [get]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>getter of broadPair </p>
+<p>setter is not provided </p>
+
+</div>
+</div>
+<a class="anchor" id="a45e74ffbed7a9f968137b4cfec45ddf0"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::Physics2D::PhysicsScene::SolverPair" ref="a45e74ffbed7a9f968137b4cfec45ddf0" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsSolverPair.html">PhysicsSolverPair</a> [] SolverPair<code> [get]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>getter of solverPair </p>
+<p>setter is not provided </p>
+
+</div>
+</div>
+</div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><b>Sce</b>      </li>
+      <li class="navelem"><b>PlayStation</b>      </li>
+      <li class="navelem"><b>HighLevel</b>      </li>
+      <li class="navelem"><a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1Physics2D.html">Physics2D</a>      </li>
+      <li class="navelem"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1Physics2D_1_1PhysicsScene.html">PhysicsScene</a>      </li>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

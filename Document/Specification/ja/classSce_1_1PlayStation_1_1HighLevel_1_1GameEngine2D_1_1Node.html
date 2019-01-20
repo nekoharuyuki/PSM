@@ -1,0 +1,503 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: クラス Node</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public メソッド</a> &#124;
+<a href="#pub-attribs">Public 変数</a> &#124;
+<a href="#pub-static-attribs">Static Public 変数</a> &#124;
+<a href="#properties">プロパティ</a> &#124;
+<a href="#events">イベント</a>  </div>
+  <div class="headertitle">
+<h1>クラス Node</h1>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="Sce::PlayStation::HighLevel::GameEngine2D::Node" -->
+<p>ノードは全てのシーングラフノードの基底クラスです。標準的な2D変換行列、子のリスト、親へのハンドラを持ちます。ノードは多くとも1つの親をもつことができます。  
+<a href="#_details">[詳細]</a></p>
+<div class="dynheader">
+Nodeに対する継承グラフ</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.png" usemap="#Node_map" alt=""/>
+  <map id="Node_map" name="Node_map">
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Label.html" alt="Label" shape="rect" coords="0,56,157,80"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Particles.html" alt="Particles" shape="rect" coords="167,56,324,80"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Plane3D.html" alt="Plane3D" shape="rect" coords="334,56,491,80"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1RawSpriteTileList.html" alt="RawSpriteTileList" shape="rect" coords="501,56,658,80"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Scene.html" alt="Scene" shape="rect" coords="668,56,825,80"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1SpriteBase.html" alt="SpriteBase" shape="rect" coords="918,56,1075,80"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1SpriteList.html" alt="SpriteList" shape="rect" coords="1085,56,1242,80"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1TransitionScene.html" alt="TransitionScene" shape="rect" coords="668,112,825,136"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1SpriteTile.html" alt="SpriteTile" shape="rect" coords="835,112,992,136"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1SpriteUV.html" alt="SpriteUV" shape="rect" coords="1002,112,1159,136"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1TransitionFadeBase.html" alt="TransitionFadeBase" shape="rect" coords="668,168,825,192"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1TransitionCrossFade.html" alt="TransitionCrossFade" shape="rect" coords="501,224,658,248"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1TransitionDirectionalFade.html" alt="TransitionDirectionalFade" shape="rect" coords="668,224,825,248"/>
+<area href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1TransitionSolidFade.html" alt="TransitionSolidFade" shape="rect" coords="835,224,992,248"/>
+</map>
+ </div></div>
+
+<p><a href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node-members.html">すべてのメンバ一覧</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Public メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae2fef5465eea77d118dce7f7ae4604b7"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::Rotate" ref="ae2fef5465eea77d118dce7f7ae4604b7" args="(float angle)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#ae2fef5465eea77d118dce7f7ae4604b7">Rotate</a> (float angle)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">引数 'angle' でオブジェクトを回転します。 この関数は単に Rotation / Angle プロパティに影響を与えることに注意してください。( Pivot や Positionに関わらず、角度をインクリメントします。それらのすべては <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a37a40f2c261382ca529e19b7e8d00bf4" title="親空間で表現される、このノードの変換行列を返します。">GetTransform()</a> で結合されます。) 変換行列の構築の詳細は、GetTransform() を参考にしてください。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acf4e4e8f461704fd07f929e4223e9eea"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::Rotate" ref="acf4e4e8f461704fd07f929e4223e9eea" args="(Vector2 rotation)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#acf4e4e8f461704fd07f929e4223e9eea">Rotate</a> (<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a> rotation)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">単位ベクトル 'rotation' として渡される角度でオブジェクトを回転します。 これで、回転中に必要な cos,sinを事前に計算できます。 この関数は Rotation/Angle プロパティに影響を与えることに注意してください。( Pivot や Positionに関わらず、角度をインクリメントします。それらのすべては <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a37a40f2c261382ca529e19b7e8d00bf4" title="親空間で表現される、このノードの変換行列を返します。">GetTransform()</a> で結合されます。) 変換行列の構築の詳細は、GetTransform() を参考にしてください。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a638d7948ef9112607bcf5a5b3031a95c"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::DDraw" ref="a638d7948ef9112607bcf5a5b3031a95c" args="()" -->
+delegate void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a638d7948ef9112607bcf5a5b3031a95c">DDraw</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">AdHocDraw で使用されるデリゲート型。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d313fac56abd7ebe58a17f1530b879e"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::Node" ref="a0d313fac56abd7ebe58a17f1530b879e" args="()" -->
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a0d313fac56abd7ebe58a17f1530b879e">Node</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0581d0152b90c77fa380145a2b9fac9a"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::PushTransform" ref="a0581d0152b90c77fa380145a2b9fac9a" args="()" -->
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a0581d0152b90c77fa380145a2b9fac9a">PushTransform</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ノードとその子を描画する前にこの関数が呼び出されます。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f91aca82ae939686ba55410534a869e"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::PopTransform" ref="a4f91aca82ae939686ba55410534a869e" args="()" -->
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a4f91aca82ae939686ba55410534a869e">PopTransform</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ノードとその子が描画されたあとにこの関数が呼び出されます。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6858a552fddfd07f4f00055cd7ba04f1"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::OnEnter" ref="a6858a552fddfd07f4f00055cd7ba04f1" args="()" -->
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a6858a552fddfd07f4f00055cd7ba04f1">OnEnter</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シーンが <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Director.html#a22b387592d4eceda8056a90e547cd82f" title="Director のシングルトン。">Director.Instance</a> によって開始されたとき、この関数が呼び出されます。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c0b9dbcdc833f2de8ecb7c34ebcd3f5"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::DOnExitEvent" ref="a5c0b9dbcdc833f2de8ecb7c34ebcd3f5" args="()" -->
+delegate void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a5c0b9dbcdc833f2de8ecb7c34ebcd3f5">DOnExitEvent</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a432ba960371cce80994cf4e44a3f66b1" title="シーンを終了したり、子が RemoveChild() や RemoveAllChildren() で明示的に削除されたとき、この関数が呼び出されます。">OnExit()</a> イベントのデリゲート。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a432ba960371cce80994cf4e44a3f66b1"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::OnExit" ref="a432ba960371cce80994cf4e44a3f66b1" args="()" -->
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a432ba960371cce80994cf4e44a3f66b1">OnExit</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シーンを終了したり、子が <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a4ffaf80895a59802f41ba1dfb7e88c62" title="このノードから子を削除します。">RemoveChild()</a> や <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a0211a62cdab3a57fb52cb8d73ccf5768" title="この関数は、全ての子に対して、RemoveChild( dispose_flags )を呼び出すのと、等価です。">RemoveAllChildren()</a> で明示的に削除されたとき、この関数が呼び出されます。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7a5d2e3b35cb7f058bacb0a5bc9380d2"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::RegisterDisposeOnExitRecursive" ref="a7a5d2e3b35cb7f058bacb0a5bc9380d2" args="()" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a7a5d2e3b35cb7f058bacb0a5bc9380d2">RegisterDisposeOnExitRecursive</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">すべてのサブツリー(このノードを含む)を再帰し、すべての破棄可能なオブジェクトに Dispose() 関数を登録します。 実行しているオブジェクトが Dispose() してないことを最初に確認し、Cleanupを呼び出します。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2cef599c1e1251abbeebce527b687da2"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::RegisterDisposeOnExit" ref="a2cef599c1e1251abbeebce527b687da2" args="(System.IDisposable disposable)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a2cef599c1e1251abbeebce527b687da2">RegisterDisposeOnExit</a> (System.IDisposable disposable)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">このノードの <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a432ba960371cce80994cf4e44a3f66b1" title="シーンを終了したり、子が RemoveChild() や RemoveAllChildren() で明示的に削除されたとき、この関数が呼び出されます。">OnExit()</a>関数内に、Dispose() の呼び出しを登録します。 例えば、いくつかのオブジェクト(TextureInfo, FontMap, など)で Dispose() を行いたいときや、 <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Scene.html" title="Scene クラスはシーングラフのルートノードタイプです。 シーンスタックを操作するため Director シングルトンを使い、現在のシーンは Director.Instance.CurrentScene でアクセスします。 2つのシーンが画面遷移のためブレンディングされるときを除き、アクティブになるシーンはひとつだけです。">Scene</a> ノードを終了するときです。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a5a7ca91358b6bfe637db93ebce3f1bc6">AddChild</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html">Node</a> child, int order)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">子に描画プロパティを追加します。  <a href="#a5a7ca91358b6bfe637db93ebce3f1bc6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac8954a54af1e7af27e9aa43c281989b6"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::AddChild" ref="ac8954a54af1e7af27e9aa43c281989b6" args="(Node child)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#ac8954a54af1e7af27e9aa43c281989b6">AddChild</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html">Node</a> child)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">現在の順序を使って、このノードに子を追加します。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a4ffaf80895a59802f41ba1dfb7e88c62">RemoveChild</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html">Node</a> child, bool do_cleanup)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">このノードから子を削除します。  <a href="#a4ffaf80895a59802f41ba1dfb7e88c62"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0211a62cdab3a57fb52cb8d73ccf5768"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::RemoveAllChildren" ref="a0211a62cdab3a57fb52cb8d73ccf5768" args="(bool do_cleanup)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a0211a62cdab3a57fb52cb8d73ccf5768">RemoveAllChildren</a> (bool do_cleanup)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">この関数は、全ての子に対して、RemoveChild( dispose_flags )を呼び出すのと、等価です。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a76ccfd52564c7375418c465bb9b46a48"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::DVisitor" ref="a76ccfd52564c7375418c465bb9b46a48" args="(Node node, int depth)" -->
+delegate bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a76ccfd52564c7375418c465bb9b46a48">DVisitor</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html">Node</a> node, int depth)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">巡回メソッドに渡す関数の型。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a52b6997d498901ef4d78246ba59a2d23"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::Traverse" ref="a52b6997d498901ef4d78246ba59a2d23" args="(DVisitor visitor, int depth)" -->
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a52b6997d498901ef4d78246ba59a2d23">Traverse</a> (DVisitor visitor, int depth)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">このノードの引数 'visitor'関数を呼び出し、かつこのノードの全ての子を再帰的に呼び出します。 visitor が false を返した場合、巡回を中断します。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c31b711fb45afde2687c03a84375cc5"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::DrawHierarchy" ref="a5c31b711fb45afde2687c03a84375cc5" args="()" -->
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a5c31b711fb45afde2687c03a84375cc5">DrawHierarchy</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">この関数は、 <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Director.html" title="Director はシーンスタックを管理し、Scheduler と ActionManager の update ループを呼び出すシングルトンです。 開発者自身が独自にメインループを実装する場合、開発者...">Director</a> によってのみ呼び出されます。しかし、PushTransform, Draw, PopTransform は上書きすることができます。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8126df6f2de938e15bd2e35800b28d4b"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::Draw" ref="a8126df6f2de938e15bd2e35800b28d4b" args="()" -->
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a8126df6f2de938e15bd2e35800b28d4b">Draw</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">PushTransform / PopTransform 内の描画を実行します。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a8932f3b6e9300464e1b2ac06bd83ddef">Update</a> (float dt)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Update 関数。 <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Director.html" title="Director はシーンスタックを管理し、Scheduler と ActionManager の update ループを呼び出すシングルトンです。 開発者自身が独自にメインループを実装する場合、開発者...">Director</a> は1フレームあたりと経過時間あたりで、この関数を何度呼び出すか決定します。 現時点では、Update 関数は、フレーム経過時間をそのまま使って、一度呼び出されています。  <a href="#a8932f3b6e9300464e1b2ac06bd83ddef"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e3ee041b1ec1addc2b2a4efc70d064c"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::DebugDrawContentLocalBounds" ref="a8e3ee041b1ec1addc2b2a4efc70d064c" args="()" -->
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a8e3ee041b1ec1addc2b2a4efc70d064c">DebugDrawContentLocalBounds</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ノードのローカル空間内に、ローカルコンテントの境界と中心軸を描画します。 普通は、この関数を上書きする必要はありません。 <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a0c80009412610aafcf85f474ee31664a" title="ノード空間内(再帰なし)で、このノードのみのコンテント/幾何情報の境界を取得します。 任意のコンテントを持たないノードは単に false を返します。">GetlContentLocalBounds()</a>を上書きし、例えば <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1DebugFlags.html#a58b8fa4672dd9af1e3a687f3f5ec8a2d" title="GetlContentLocalBounds で定義されるノードの、コンテントローカル境界を表示します。 コンテントローカル境界は親によって変換されることを注意してください。">DebugFlags.DrawContentLocalBounds</a> が設定されたとき、この関数はそれを表示します。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad21436f04dc0600cf0f0fe245297e62f"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::DebugDrawTransform" ref="ad21436f04dc0600cf0f0fe245297e62f" args="()" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#ad21436f04dc0600cf0f0fe245297e62f">DebugDrawTransform</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">親ノードのローカル空間内での、ローカル座標系を描画します。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a54e4fa6caa2248aca3c28a1fe81313e9"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::RunAction" ref="a54e4fa6caa2248aca3c28a1fe81313e9" args="(ActionBase action)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a54e4fa6caa2248aca3c28a1fe81313e9">RunAction</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1ActionBase.html">ActionBase</a> action)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">このノードのアクションを開始します。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae06108ab9c25bd534db84fbb4499a5ed"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::StopAllActions" ref="ae06108ab9c25bd534db84fbb4499a5ed" args="()" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#ae06108ab9c25bd534db84fbb4499a5ed">StopAllActions</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">このノードの全てのアクションを停止します。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a81f9518ac06096d8a470da02352c9657"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::StopAction" ref="a81f9518ac06096d8a470da02352c9657" args="(ActionBase action)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a81f9518ac06096d8a470da02352c9657">StopAction</a> (<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1ActionBase.html">ActionBase</a> action)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">このノードのアクションを停止します。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af311800cef8f6e591d8d6a0ebb7ed2f5"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::StopActionByTag" ref="af311800cef8f6e591d8d6a0ebb7ed2f5" args="(int tag)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#af311800cef8f6e591d8d6a0ebb7ed2f5">StopActionByTag</a> (int tag)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">tag の値で、このノード内で実行している最初のアクションを検索し、停止/削除します。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8c7d36a3b6ac67876dfc044a65eba67f"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::GetActionByTag" ref="a8c7d36a3b6ac67876dfc044a65eba67f" args="(int tag, int ith=0)" -->
+<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1ActionBase.html">ActionBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a8c7d36a3b6ac67876dfc044a65eba67f">GetActionByTag</a> (int tag, int ith=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">このノード内で、実行している 'tag' の 'ith' アクションを返します。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac99d41b44ab108f429ddf0faeffe4745"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::NumRunningActions" ref="ac99d41b44ab108f429ddf0faeffe4745" args="()" -->
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#ac99d41b44ab108f429ddf0faeffe4745">NumRunningActions</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">このノード内で、実行しているアクションの数を取得します。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a25298b27571bcec15850a63515802b30"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::Cleanup" ref="a25298b27571bcec15850a63515802b30" args="()" -->
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a25298b27571bcec15850a63515802b30">Cleanup</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">このノード内の、全てのアクションとスケジュールされた関数を再帰的に停止します。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8bf643bf7a5510b8a7ef8810b28c47ff"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::ScheduleUpdate" ref="a8bf643bf7a5510b8a7ef8810b28c47ff" args="(int priority=Scheduler.DefaultPriority)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a8bf643bf7a5510b8a7ef8810b28c47ff">ScheduleUpdate</a> (int priority=Scheduler.DefaultPriority)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">スケジューラにこのノードのUpdate関数を登録します。update関数は全てのフレームで呼び出されます。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a50926399028aa8d9ea193d5b5017d786"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::UnscheduleUpdate" ref="a50926399028aa8d9ea193d5b5017d786" args="()" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a50926399028aa8d9ea193d5b5017d786">UnscheduleUpdate</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">スケジューラからUpdate関数を削除します。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a83f1cf1be8983524c3291897aa730f43"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::Schedule" ref="a83f1cf1be8983524c3291897aa730f43" args="(DSchedulerFunc func, int priority=Scheduler.DefaultPriority)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a83f1cf1be8983524c3291897aa730f43">Schedule</a> (DSchedulerFunc func, int priority=Scheduler.DefaultPriority)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">引数のノード関数 'func' をスケジュールします。関数は全てのフレームで呼び出されます。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9670b6a6d5af0659ad440f451900aebc"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::ScheduleInterval" ref="a9670b6a6d5af0659ad440f451900aebc" args="(DSchedulerFunc func, float interval, int priority=Scheduler.DefaultPriority)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a9670b6a6d5af0659ad440f451900aebc">ScheduleInterval</a> (DSchedulerFunc func, float interval, int priority=Scheduler.DefaultPriority)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">引数のノード関数 'func' を、引数 'interval'の間隔で呼び出されるようにスケジュールします。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a50f721e7e70fd860b632cfdef524cfc1"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::Unschedule" ref="a50f721e7e70fd860b632cfdef524cfc1" args="(DSchedulerFunc func)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a50f721e7e70fd860b632cfdef524cfc1">Unschedule</a> (DSchedulerFunc func)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">引数のノード関数 'func'をアンスケジュールします。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa9d43fdeaa06a4bca9e817191e9babf9"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::UnscheduleAll" ref="aa9d43fdeaa06a4bca9e817191e9babf9" args="()" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#aa9d43fdeaa06a4bca9e817191e9babf9">UnscheduleAll</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">このノードに関連する全ての関数をアンスケジュールします。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa453dd5b4924a376639a8fedcafeaafa"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::ResumeSchedulerAndActions" ref="aa453dd5b4924a376639a8fedcafeaafa" args="()" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#aa453dd5b4924a376639a8fedcafeaafa">ResumeSchedulerAndActions</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">SchedulerPaused と ActionsPaused に true をセットします。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeadf6548359cbb98e0e75f67c6c1e396"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::PauseSchedulerAndActions" ref="aeadf6548359cbb98e0e75f67c6c1e396" args="()" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#aeadf6548359cbb98e0e75f67c6c1e396">PauseSchedulerAndActions</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">SchedulerPaused と ActionsPaused に false をセットします、。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Matrix3.html">Matrix3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a37a40f2c261382ca529e19b7e8d00bf4">GetTransform</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">親空間で表現される、このノードの変換行列を返します。  <a href="#a37a40f2c261382ca529e19b7e8d00bf4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a999b5d190ae810efa4db023683a4600f"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::GetTransformInverse" ref="a999b5d190ae810efa4db023683a4600f" args="()" -->
+<a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Matrix3.html">Matrix3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a999b5d190ae810efa4db023683a4600f">GetTransformInverse</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">このノードの変換行列の逆行列を取得します。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5389a49af9f9dd328a95b4e524eda0d5"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::GetWorldTransform" ref="a5389a49af9f9dd328a95b4e524eda0d5" args="()" -->
+<a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Matrix3.html">Matrix3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a5389a49af9f9dd328a95b4e524eda0d5">GetWorldTransform</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ワールド/親 シーン空間で表される、このノードの変換行列を返します。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad1ad14a704e7589aba7d9eedeac26311"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::CalcWorldTransformInverse" ref="ad1ad14a704e7589aba7d9eedeac26311" args="()" -->
+<a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Matrix3.html">Matrix3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#ad1ad14a704e7589aba7d9eedeac26311">CalcWorldTransformInverse</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">このノードのワールド変換行列の逆行列を取得します。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0fba525cf116a3b84860c8e4c5f123fb"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::LocalToWorld" ref="a0fba525cf116a3b84860c8e4c5f123fb" args="(Vector2 local_point)" -->
+<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a0fba525cf116a3b84860c8e4c5f123fb">LocalToWorld</a> (<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a> local_point)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">LocalToWorld は ( <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a5389a49af9f9dd328a95b4e524eda0d5" title="ワールド/親 シーン空間で表される、このノードの変換行列を返します。">GetWorldTransform()</a> * local_point.Xy1 ).Xy と同じものを返します。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3bd2922f7d90997962e9d16f66394515"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::WorldToLocal" ref="a3bd2922f7d90997962e9d16f66394515" args="(Vector2 world_point)" -->
+<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a3bd2922f7d90997962e9d16f66394515">WorldToLocal</a> (<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a> world_point)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">( <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#ad1ad14a704e7589aba7d9eedeac26311" title="このノードのワールド変換行列の逆行列を取得します。">CalcWorldTransformInverse()</a> * world_point.Xy1 ).Xy と同じものを返します。 ノードのローカル空間はその幾何情報を定義した空間です。 すなわち、1レベル下の <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a5389a49af9f9dd328a95b4e524eda0d5" title="ワールド/親 シーン空間で表される、このノードの変換行列を返します。">GetWorldTransform()</a> 。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0c80009412610aafcf85f474ee31664a"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::GetlContentLocalBounds" ref="a0c80009412610aafcf85f474ee31664a" args="(ref Bounds2 bounds)" -->
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a0c80009412610aafcf85f474ee31664a">GetlContentLocalBounds</a> (ref <a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Bounds2.html">Bounds2</a> bounds)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ノード空間内(再帰なし)で、このノードのみのコンテント/幾何情報の境界を取得します。 任意のコンテントを持たないノードは単に false を返します。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa28ac236ef27aabe56c932088a6dc136"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::GetContentWorldBounds" ref="aa28ac236ef27aabe56c932088a6dc136" args="(ref Bounds2 bounds)" -->
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#aa28ac236ef27aabe56c932088a6dc136">GetContentWorldBounds</a> (ref <a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Bounds2.html">Bounds2</a> bounds)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ワールド空間(再帰なし)で、このノードのみのコンテントの境界を取得します。 任意のコンテントを持たないノードは単に false を返します。その場合、境界は扱えません。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad54a4acb71450e759aeed87b5ac9737b"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::IsWorldPointInsideContentLocalBounds" ref="ad54a4acb71450e759aeed87b5ac9737b" args="(Vector2 world_position)" -->
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#ad54a4acb71450e759aeed87b5ac9737b">IsWorldPointInsideContentLocalBounds</a> (<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a> world_position)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">引数'world_position'が、向きをもったコンテントの境界ボックス内にある場合、trueを返します。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a76ff64248c18f75d1daa8e2a5379725b"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::FindParentPlane" ref="a76ff64248c18f75d1daa8e2a5379725b" args="(ref Matrix4 mat)" -->
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a76ff64248c18f75d1daa8e2a5379725b">FindParentPlane</a> (ref <a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Matrix4.html">Matrix4</a> mat)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Plane3D.html" title="Plane3D ノードは、シーングラフ内で、ある程度まで3Dの方向性を許可します。 それは、タッチ座標を扱う方法をいくぶんか複雑にします。なのでシーン階層に Plane3D を含んでいる場合、直接 Di...">Plane3D</a> ノードが見つかるまで、親の階層構造に従い、 <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Plane3D.html" title="Plane3D ノードは、シーングラフ内で、ある程度まで3Dの方向性を許可します。 それは、タッチ座標を扱う方法をいくぶんか複雑にします。なのでシーン階層に Plane3D を含んでいる場合、直接 Di...">Plane3D</a> の平面行列に 'mat' をセットします。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05841bd87a15c4cf866014e38e4ffc4e"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::GetTouchPos" ref="a05841bd87a15c4cf866014e38e4ffc4e" args="(int nth=0, bool prev=false)" -->
+<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a05841bd87a15c4cf866014e38e4ffc4e">GetTouchPos</a> (int nth=0, bool prev=false)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Like Director.Instance.CurrentScene.Camera.GetTouchPos に似ていますが、シーングラフ内の祖先に <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Plane3D.html" title="Plane3D ノードは、シーングラフ内で、ある程度まで3Dの方向性を許可します。 それは、タッチ座標を扱う方法をいくぶんか複雑にします。なのでシーン階層に Plane3D を含んでいる場合、直接 Di...">Plane3D</a> が存在したときのケースを扱います。 <br/></td></tr>
+<tr><td colspan="2"><h2><a name="pub-attribs"></a>
+Public 変数</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad2a546e97ac55e2c29f3b805008cb3d3"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::VertexZ" ref="ad2a546e97ac55e2c29f3b805008cb3d3" args="" -->
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#ad2a546e97ac55e2c29f3b805008cb3d3">VertexZ</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">VectorZ は描画中、Z座標としての値のセットです。デフォルトでは、ortho ビューは Z範囲[-1, 1]を示し、任意で Camera.Znear と Camera.Zfar をセットします。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac1db489164cf76d8bb4b1a4a4f1604f5"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::Visible" ref="ac1db489164cf76d8bb4b1a4a4f1604f5" args="" -->
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#ac1db489164cf76d8bb4b1a4a4f1604f5">Visible</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Visible が false の場合、このノードとその子は描画されません。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e18fbceac0489983a640666d64b1e20"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::Camera" ref="a5e18fbceac0489983a640666d64b1e20" args="" -->
+<a class="el" href="interfaceSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1ICamera.html">ICamera</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a5e18fbceac0489983a640666d64b1e20">Camera</a> = null</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン内には通常ひとつのカメラしか配置されていないことの対応策として、 <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a5e18fbceac0489983a640666d64b1e20" title="シーン内には通常ひとつのカメラしか配置されていないことの対応策として、 Node.Camera を使うことができます。 Node.Camera が設定されている場合、このノードまでの全ての変換行列は無視...">Node.Camera</a> を使うことができます。 <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a5e18fbceac0489983a640666d64b1e20" title="シーン内には通常ひとつのカメラしか配置されていないことの対応策として、 Node.Camera を使うことができます。 Node.Camera が設定されている場合、このノードまでの全ての変換行列は無視...">Node.Camera</a> が設定されている場合、このノードまでの全ての変換行列は無視され、Node.Camera は、このノードを描画するたびに、プッシュ/ポップされます。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7ee9065718e6628dc7791b756fa6c0f9"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::Name" ref="a7ee9065718e6628dc7791b756fa6c0f9" args="" -->
+string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a7ee9065718e6628dc7791b756fa6c0f9">Name</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">開発者用の識別子。 <br/></td></tr>
+<tr><td colspan="2"><h2><a name="pub-static-attribs"></a>
+Static Public 変数</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a44ca5d56579309ae2b35515b11d3705f"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::DebugDrawTransformScale" ref="a44ca5d56579309ae2b35515b11d3705f" args="" -->
+static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a44ca5d56579309ae2b35515b11d3705f">DebugDrawTransformScale</a> = 1.0f</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">矢印を描画する DebugDrawTransform によって使用されるスケール係数。 デフォルトではこの値は1.0fで、矢印の単位の長さは、スクリーン上で長さ1にあたります。 スクリーン上で表示されるゲームの世界では大きすぎるので、長さ1の矢印は、1ピクセル以下であるかもしれず、それらが描画されていても見ることができないかもしれません。 その場合、DebugDrawTransform でそれらをスケールすることができます。 <br/></td></tr>
+<tr><td colspan="2"><h2><a name="properties"></a>
+プロパティ</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab84255a301f0fedbd95b8e45c63ebba"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::Position" ref="aab84255a301f0fedbd95b8e45c63ebba" args="" -->
+<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#aab84255a301f0fedbd95b8e45c63ebba">Position</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">変換行列の構築に関しての詳細は、GetTransform() を参考にしてください。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a449dea5b97a50741475ae8fcf936a14f">Rotation</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotation は (cos,sin)の単位ベクトルとして直接格納されます。  <a href="#a449dea5b97a50741475ae8fcf936a14f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a92854421ebdcf6ea74198a9b801f7011"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::RotationNormalize" ref="a92854421ebdcf6ea74198a9b801f7011" args="" -->
+<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a92854421ebdcf6ea74198a9b801f7011">RotationNormalize</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">RotationNormalize は Rotation に似ていますが、正規化を行います。 これにより、蓄積される計算誤差で単位ベクトルがドリフトするのを防ぎます。 変換行列の構築の詳細は、GetTransform() を参考にしてください。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a77219e3a8b4750baa3ba320d772b9d04"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::Angle" ref="a77219e3a8b4750baa3ba320d772b9d04" args="" -->
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a77219e3a8b4750baa3ba320d772b9d04">Angle</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">このプロパティを使うと、回転を角度として set/getすることができます。 この処理は重く、角度の不連続の問題を引き起こします。角度は常に格納され、かつ -pi,piの範囲で値を返します。 変換行列の構築の詳細は、GetTransform() を参考にしてください。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e42761a279383b73c07f8a5b66674e1"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::Scale" ref="a8e42761a279383b73c07f8a5b66674e1" args="" -->
+<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a8e42761a279383b73c07f8a5b66674e1">Scale</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">変換行列の構築の詳細は、GetTransform() を参考にしてください。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a99938a2999f028b1361030c237ec07ba"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::Skew" ref="a99938a2999f028b1361030c237ec07ba" args="" -->
+<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a99938a2999f028b1361030c237ec07ba">Skew</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">変換行列の構築の詳細は、GetTransform() を参考にしてください。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0c7cce5f98a45ae23e513e695732759"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::Pivot" ref="ad0c7cce5f98a45ae23e513e695732759" args="" -->
+<a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#ad0c7cce5f98a45ae23e513e695732759">Pivot</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Pivot はスケールや回転に使用される中心軸です。そして <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html" title="ノードは全てのシーングラフノードの基底クラスです。標準的な2D変換行列、子のリスト、親へのハンドラを持ちます。ノードは多くとも1つの親をもつことができます。">Node</a> のローカル '正規化' 空間として表現されます。 例えば、スケールに関わりなく、(0.5, 0.5)は常にオブジェクトの中心です。 変換行列の構築の詳細は、GetTransform() を参考にしてください。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31f107afb7b31f030494d67178e4bb8d"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::Parent" ref="a31f107afb7b31f030494d67178e4bb8d" args="" -->
+<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html">Node</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a31f107afb7b31f030494d67178e4bb8d">Parent</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">シーングラフ内の親ノードです。ひとつのノードは、多くともひとつの親ノードの子になります。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abaad2e59f34ddff007a40c6f47f5eecc"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::Children" ref="abaad2e59f34ddff007a40c6f47f5eecc" args="" -->
+List&lt; <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html">Node</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#abaad2e59f34ddff007a40c6f47f5eecc">Children</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">子ノードのリスト。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2893cc0f628080b1e0159778893a1add"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::Camera2D" ref="a2893cc0f628080b1e0159778893a1add" args="" -->
+<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Camera2D.html">Camera2D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a2893cc0f628080b1e0159778893a1add">Camera2D</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Camera2D としてのカメラを取得するためのショートカット。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37cfe6ad4874f8b72da7684d63076be4"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::Camera3D" ref="a37cfe6ad4874f8b72da7684d63076be4" args="" -->
+<a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Camera3D.html">Camera3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a37cfe6ad4874f8b72da7684d63076be4">Camera3D</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Camera3D としてのカメラを取得するためのショートカット。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af5cb1246be24f89c7a5f720af0c92559"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::IsRunning" ref="af5cb1246be24f89c7a5f720af0c92559" args="" -->
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#af5cb1246be24f89c7a5f720af0c92559">IsRunning</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">このノードが <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a6858a552fddfd07f4f00055cd7ba04f1" title="シーンが Director.Instance によって開始されたとき、この関数が呼び出されます。">OnEnter()</a>/OnExit() 呼び出しの合間である時、このプロパティは true になります。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a50c390aab6a4df930a876c163e793ce1"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::Order" ref="a50c390aab6a4df930a876c163e793ce1" args="" -->
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a50c390aab6a4df930a876c163e793ce1">Order</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ReorderChild() または <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a5a7ca91358b6bfe637db93ebce3f1bc6" title="子に描画プロパティを追加します。">AddChild()</a> でセットされた描画順序の値。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6aa1d4b498b6564f8d748908433d6583"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::ActionsPaused" ref="a6aa1d4b498b6564f8d748908433d6583" args="" -->
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a6aa1d4b498b6564f8d748908433d6583">ActionsPaused</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">このノードに関連する全てのアクションを、このフラグのon/offで一時停止させることができます。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad8f42b2df03c66499ff40225ad49eba9"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::SchedulerPaused" ref="ad8f42b2df03c66499ff40225ad49eba9" args="" -->
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#ad8f42b2df03c66499ff40225ad49eba9">SchedulerPaused</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">このノードに関連するスケジュールされた全ての関数を、このフラグのon/offで一時停止させることができます。 <br/></td></tr>
+<tr><td colspan="2"><h2><a name="events"></a>
+イベント</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b1cf8bcbf8bb128a1405727cef349f5"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::AdHocDraw" ref="a0b1cf8bcbf8bb128a1405727cef349f5" args="" -->
+DDraw&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#a0b1cf8bcbf8bb128a1405727cef349f5">AdHocDraw</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">セットされた場合、baseの描画関数内でAdHocDrawが呼び出されます。 描画関数の定義のためにクラスを派生させずに、シンプルなシーンをセットアップするために使用されます。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac10e8fae223461f6902f797598f4abe4"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::OnExitEvents" ref="ac10e8fae223461f6902f797598f4abe4" args="" -->
+DOnExitEvent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html#ac10e8fae223461f6902f797598f4abe4">OnExitEvents</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">OnExit が呼び出された時、実行するイベントのリスト。 実行されたあと、リストはクリアされます。 <br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>説明</h2>
+<div class="textblock"><p>ノードは全てのシーングラフノードの基底クラスです。標準的な2D変換行列、子のリスト、親へのハンドラを持ちます。ノードは多くとも1つの親をもつことができます。 </p>
+</div><hr/><h2>メソッド</h2>
+<a class="anchor" id="a5a7ca91358b6bfe637db93ebce3f1bc6"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::AddChild" ref="a5a7ca91358b6bfe637db93ebce3f1bc6" args="(Node child, int order)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddChild </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html">Node</a>&#160;</td>
+          <td class="paramname"><em>child</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>order</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>子に描画プロパティを追加します。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td>追加する子ノード。</td></tr>
+    <tr><td class="paramname">order</td><td>追加するノードの描画プロパティ。描画順序は数値順に行われます。 負の数のプロパティはこの子が親より前に描画されることを意味します。 正の数のプロパティは親より後に描画されます。</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a37a40f2c261382ca529e19b7e8d00bf4"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::GetTransform" ref="a37a40f2c261382ca529e19b7e8d00bf4" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Base_1_1Matrix3.html">Matrix3</a> GetTransform </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>親空間で表現される、このノードの変換行列を返します。 </p>
+<p>ノードの変換行列は、位置、スケール、歪み、回転/角度/ RotationNormalize、ピボットプロパティでアクセスされるデータを用いて形成されます。変換行列は次のものと等価です:</p>
+<p>Matrix3.Translation( Position ) Matrix3.Translation( Pivot ) Matrix3.Rotation( Rotation ) Matrix3.Scale( Scale ) Matrix3.Skew( Skew ) Matrix3.Translation( -Pivot )</p>
+<p>変換行列で返されるのは、純粋な2D変換であることに注意してください。 VertexZ は PushTransform 関数で別々に適用されます。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a4ffaf80895a59802f41ba1dfb7e88c62"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::RemoveChild" ref="a4ffaf80895a59802f41ba1dfb7e88c62" args="(Node child, bool do_cleanup)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RemoveChild </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html">Node</a>&#160;</td>
+          <td class="paramname"><em>child</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>do_cleanup</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>このノードから子を削除します。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td>削除する子。</td></tr>
+    <tr><td class="paramname">do_cleanup</td><td>削除するノードで Cleanup を呼び出す。</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a8932f3b6e9300464e1b2ac06bd83ddef"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::Update" ref="a8932f3b6e9300464e1b2ac06bd83ddef" args="(float dt)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Update </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>dt</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Update 関数。 <a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Director.html" title="Director はシーンスタックを管理し、Scheduler と ActionManager の update ループを呼び出すシングルトンです。 開発者自身が独自にメインループを実装する場合、開発者...">Director</a> は1フレームあたりと経過時間あたりで、この関数を何度呼び出すか決定します。 現時点では、Update 関数は、フレーム経過時間をそのまま使って、一度呼び出されています。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dt</td><td>1秒あたりの経過時間。</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Particles.html#ab8ff9ed75b9c887d0912448e9c12ecce">Particles</a>で再定義されています。</p>
+
+</div>
+</div>
+<hr/><h2>プロパティ</h2>
+<a class="anchor" id="a449dea5b97a50741475ae8fcf936a14f"></a><!-- doxytag: member="Sce::PlayStation::HighLevel::GameEngine2D::Node::Rotation" ref="a449dea5b97a50741475ae8fcf936a14f" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structSce_1_1PlayStation_1_1Core_1_1Vector2.html">Vector2</a> Rotation<code> [get, set]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Rotation は (cos,sin)の単位ベクトルとして直接格納されます。 </p>
+<p>変換行列の構築に関しての詳細は、GetTransform() を参考にしてください。 </p>
+
+</div>
+</div>
+</div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><b>Sce</b>      </li>
+      <li class="navelem"><b>PlayStation</b>      </li>
+      <li class="navelem"><b>HighLevel</b>      </li>
+      <li class="navelem"><a class="el" href="namespaceSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D.html">GameEngine2D</a>      </li>
+      <li class="navelem"><a class="el" href="classSce_1_1PlayStation_1_1HighLevel_1_1GameEngine2D_1_1Node.html">Node</a>      </li>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

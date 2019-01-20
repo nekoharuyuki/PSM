@@ -1,0 +1,317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: Adobe Flashとの連動</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('ui_external_tool_animation_ja.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<h1>Adobe Flashとの連動 </h1>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><blockquote>
+この章では、Adobe Flash を利用してウィジェットアニメーションを制作する方法を解説します。</blockquote>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#id1" id="id5">Adobe Flashとの連動</a></li>
+<li><a class="reference internal" href="#id2" id="id6">モーションデータの利用方法</a></li>
+<li><a class="reference internal" href="#id3" id="id7">アニメーションデータの利用方法</a></li>
+<li><a class="reference internal" href="#id4" id="id8">注意点</a></li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h1><a class="toc-backref" href="#id5">Adobe Flashとの連動</a></h1>
+<blockquote>
+<p>UIToolkit では、Adobe Flash で制作されたモーション(動き)を Widget に適用することや、アニメーション(複数の画像とモーションのセット)を専用 Player を用いて再生することができます。</p>
+<p>モーションやアニメーションを定義するための専用バイナリフォーマットとして、uim フォーマット、uia フォーマットを用意しています。</p>
+<p>uim フォーマットは、モーションを定義するためのフォーマットです。UIMotion クラスを用いて uim ファイルをロードし、Widget にモーションを適用することができます。</p>
+<p>uia フォーマットは、アニメーションを定義するためのフォーマットです。UIAnimationPlayer を用いて uia ファイルをロードし、アニメーションを再生することができます。</p>
+<p>PSM SDK に付属の AnimationConverter ツール を使用すれば、Adobe Flash で制作されたデータを uim、uia ファイルにコンバートすることができます。</p>
+</blockquote>
+</div>
+<div class="section" id="id2">
+<h1><a class="toc-backref" href="#id6">モーションデータの利用方法</a></h1>
+<blockquote>
+<p>モーションデータを利用する手順を解説します(図1)。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/ui_uimotion_flow.png" src="image/uitoolkit/ui_uimotion_flow.png" style="width: 800px;" />
+<p class="caption"><strong>図1 モーションデータの利用手順</strong></p>
+</div>
+<ol class="arabic">
+<li><p class="first">Adobe Flash を用いてモーションを制作</p>
+</li>
+<li><p class="first">モーションをモーションプリセットファイル(*.xml)として保存</p>
+<blockquote>
+<p>2-1. 保存したいモーションを選択し、右クリック &gt; [モーションプリセットとして保存] を選択</p>
+<p>2-2. プリセット名を入力し、[OK] を選択</p>
+<p>2-3. [ウィンドウ] &gt; [モーションプリセット] にチェックマークを追加</p>
+<p>2-4. モーションプリセットウィンドウで保存したいプリセットを選択し、右クリック &gt; [書き出し] を選択</p>
+<p>2-5. xml の名前を入力し、[保存] を選択</p>
+</blockquote>
+</li>
+<li><p class="first">AnimationConverter ツールを用いて uim ファイルに変換</p>
+<blockquote>
+<p>以下のコマンドを利用し、2. で保存した xml ファイルを uim ファイルに変換</p>
+<div class="highlight"><pre><span class="nb">cd</span> %SCE_PSM_SDK%/tools/AnimationConverter/
+AnimationConverter.exe &lt;XML file path&gt;
+</pre></div>
+<!-- end-of-code-block -->
+<p>uim ファイルへの変換時に AnimationConverter ツールで使用できるオプションは表1 の通りです。</p>
+<blockquote>
+<table border="1" class="docutils">
+<caption>表1 uim の変換時に使用できるオプション</caption>
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head"><p class="first last">オプション</p>
+</th>
+<th class="head"><p class="first last">説明</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><p class="first last">-o, --output-filename</p>
+</td>
+<td><p class="first last">出力ファイル名を指定する。指定がなかった場合、入力ファイル名の拡張子を *.uim に変換したものを出力ファイル名として使用する。</p>
+</td>
+</tr>
+<tr><td><p class="first last">--help</p>
+</td>
+<td><p class="first last">ヘルプ情報を表示する。</p>
+</td>
+</tr>
+<tr><td><p class="first last">--version</p>
+</td>
+<td><p class="first last">バージョン情報を表示する。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</blockquote>
+</li>
+<li><p class="first">UIMotion クラスを用いて、3. で作成した uim ファイルをロードし、Widget にモーションを追加</p>
+<blockquote>
+<p>uim ファイルを UIMotion クラスを用いて読み込み、Button にモーションを適用するサンプルコード</p>
+<div class="highlight"><pre><span class="n">Button</span> <span class="n">button</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Button</span><span class="p">();</span>
+<span class="n">button</span><span class="p">.</span><span class="n">SetPosition</span><span class="p">(</span><span class="m">100.0f</span><span class="p">,</span> <span class="m">100.0f</span><span class="p">);</span>
+<span class="n">scene</span><span class="p">.</span><span class="n">RootWidget</span><span class="p">.</span><span class="n">AddChildLast</span><span class="p">(</span><span class="n">button</span><span class="p">);</span>
+
+<span class="n">UIMotion</span><span class="p">.</span><span class="n">CreateAndStart</span><span class="p">(</span><span class="n">button</span><span class="p">,</span> <span class="s">&quot;/Application/sample.uim&quot;</span><span class="p">);</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+</li>
+</ol>
+</blockquote>
+</div>
+<div class="section" id="id3">
+<h1><a class="toc-backref" href="#id7">アニメーションデータの利用方法</a></h1>
+<blockquote>
+<p>アニメーションデータを利用する手順を解説します(図2)。</p>
+<div align="center" class="figure">
+<img alt="image/uitoolkit/ui_uimanimation_flow.png" src="image/uitoolkit/ui_uimanimation_flow.png" style="width: 800px;" />
+<p class="caption"><strong>図2 アニメーションデータの利用手順</strong></p>
+</div>
+<ol class="arabic">
+<li><p class="first">Adobe Flash を用いてアニメーションを制作</p>
+</li>
+<li><p class="first">制作したアニメーションを xfl 形式で保存</p>
+<blockquote>
+<p>2-1. [ファイル] &gt; [名前を付けて保存] を選択</p>
+<p>2-2. ファイルの種類 として、[Flash CS5.5 非圧縮ドキュメント (*.xfl)] もしくは、[Flash CS5 非圧縮ドキュメント (*.xfl)] を選択し、[保存] を選択</p>
+</blockquote>
+</li>
+<li><p class="first">AnimationConverter ツールを用いて uia ファイルに変換</p>
+<blockquote>
+<p>以下のコマンドを利用し、2. で保存した xfl ファイルを uia ファイルに変換</p>
+<blockquote>
+<div class="highlight"><pre><span class="nb">cd</span> %SCE_PSM_SDK%/tools/AnimationConverter/
+AnimationConverter.exe &lt;XFL file path&gt;
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+<p>uia ファイルへの変換時に AnimationConverter ツールで使用できるオプションは表2 の通りです。</p>
+<blockquote>
+<table border="1" class="docutils">
+<caption>表2 uia の変換時に使用できるオプション</caption>
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head"><p class="first last">オプション</p>
+</th>
+<th class="head"><p class="first last">説明</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><p class="first last">-o, --output-filename</p>
+</td>
+<td><p class="first last">出力ファイル名を指定する。指定がなかった場合、入力ファイル名の拡張子を *.uia に変換したものを出力ファイル名として使用する。</p>
+</td>
+</tr>
+<tr><td><p class="first last">-c, --config</p>
+</td>
+<td><p class="first last">設定ファイルを指定する。</p>
+</td>
+</tr>
+<tr><td><p class="first last">--create-config</p>
+</td>
+<td><p class="first last">デフォルトの設定ファイル(default.config)を生成する。このオプションを指定した場合は、他のオプションはすべて無視される。</p>
+</td>
+</tr>
+<tr><td><p class="first last">--help</p>
+</td>
+<td><p class="first last">ヘルプ情報を表示する。</p>
+</td>
+</tr>
+<tr><td><p class="first last">--version</p>
+</td>
+<td><p class="first last">バージョン情報を表示する。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p>AnimationConverter では、Adobe Flash のムービークリップ単位でアニメーションをループするかしないかを制御することができます。</p>
+<p>ループの制御を行う場合は、以下のような設定ファイルを用意し、uia ファイルに変換する際に指定してください。</p>
+<div class="highlight"><pre>_root,loop<span class="o">=</span>off
+sampleA,loop<span class="o">=</span>on
+sampleB,loop<span class="o">=</span>off
+sampleC,loop<span class="o">=</span>on
+</pre></div>
+<!-- end-of-code-block -->
+<p>設定ファイルは、csv 形式で記述し、先頭フィールドにムービークリップ名、二番目のフィールドにループの on/off を指定してください。</p>
+<p>ループの指定がなかった場合は、デフォルトでループします。</p>
+<p>ムービークリップ名として &quot;_root&quot; を指定した場合は、アニメーション全体をループ再生するかどうかを指定できます。</p>
+</blockquote>
+</li>
+<li><p class="first">UIAnimationPlayer クラスを用いて、3. で作成した uia ファイルをロードし、アニメーションを再生</p>
+<blockquote>
+<p>uia ファイルを UIAnimationPlayer クラスを用いて読み込み、アニメーションを再生するサンプルコード</p>
+<div class="highlight"><pre><span class="n">UIAnimationPlayer</span> <span class="n">uiaPlayer</span> <span class="p">=</span> <span class="k">new</span> <span class="n">UIAnimationPlayer</span><span class="p">(</span><span class="s">&quot;/Application/sample.uia&quot;</span><span class="p">);</span>
+<span class="n">uiaPlayer</span><span class="p">.</span><span class="n">SetPosition</span><span class="p">(</span><span class="m">100.0f</span><span class="p">,</span> <span class="m">100.0f</span><span class="p">);</span>
+<span class="n">scene</span><span class="p">.</span><span class="n">RootWidget</span><span class="p">.</span><span class="n">AddChildLast</span><span class="p">(</span><span class="n">uiaPlayer</span><span class="p">);</span>
+
+<span class="n">uiaPlayer</span><span class="p">.</span><span class="n">Play</span><span class="p">();</span>
+</pre></div>
+<!-- end-of-code-block -->
+</blockquote>
+</li>
+</ol>
+</blockquote>
+</div>
+<div class="section" id="id4">
+<h1><a class="toc-backref" href="#id8">注意点</a></h1>
+<blockquote>
+<ul class="simple">
+<li>AnimationConverter ツールは、現在、Adobe Flash CS5 以降で制作されたデータにのみ対応しています。</li>
+<li>Adobe Flash のアートワーク(bmp, jpeg, png, gif)、モーショントゥイーンのみに対応しています。クラシックトゥイーン、シェイプトゥイーン、フレームアニメーション、ベクターグラフィックス、テキスト、サウンド、ビデオ、ActionScript等には対応していません。</li>
+<li>モーショントゥイーンで使用可能なプロパティは、基本モーション(X、Y、Z、回転 X、回転 Y、回転 Z)、変形(伸縮 X、伸縮 Y)、カラー効果(アルファ)のみです。傾斜変形、フィルター等には対応していません。</li>
+<li>アニメーションのイージングカーブは、現時点では完全に再現できていない場合があります。また、カスタムイージングカーブには対応していません。</li>
+<li>複数シーンには対応していません。</li>
+</ul>
+</blockquote>
+</div>
+ </div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>

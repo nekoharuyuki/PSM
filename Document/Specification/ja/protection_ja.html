@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PlayStation(R)Mobile SDK: 署名と暗号化の設定</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+
+
+
+
+<div id="top">
+ <!------------------------1. START------------------------------>
+ 
+         <div id="sonylogo">
+             <img src="image/groupLogo.gif" />
+         </div>
+         
+          <div id="projectname">
+      <a href="index.html"> <img id="title" src="image/title.png" height="45" width="302" style="margin-left:20px; margin-top:4px;"/></a>
+          </div>
+          
+          <div id="MSearchBox" class="MSearchBoxInactive">
+               <span class="left">
+                 <img id="MSearchSelect" src="search/mag_sel.png"
+                      onmouseover="return searchBox.OnSearchSelectShow()"
+                      onmouseout="return searchBox.OnSearchSelectHide()"
+                      alt=""/>
+                 <input type="text" id="MSearchField" value="Search" accesskey="S"
+                      onfocus="searchBox.OnSearchFieldFocus(true)" 
+                      onblur="searchBox.OnSearchFieldFocus(false)" 
+                      onkeyup="searchBox.OnSearchFieldChange(event)"/>
+                 </span><span class="right">
+                   <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()">																
+                   <img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+                 </span>
+           </div>
+<!------------------------END------------------------------------->
+</div>
+
+
+
+
+
+<!-- 作成： Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+--></script>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('protection_ja.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<h1>署名と暗号化の設定 </h1>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><blockquote>
+この文書ではファイルの署名と暗号化について説明します。</blockquote>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#id2" id="id5">コンテンツの保護について</a></li>
+<li><a class="reference internal" href="#id3" id="id6">署名・暗号化の対象</a></li>
+<li><a class="reference internal" href="#psm-studio" id="id7">PSM Studio での設定方法</a></li>
+<li><a class="reference internal" href="#id4" id="id8">注意点</a></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h1><a class="toc-backref" href="#id5">コンテンツの保護について</a></h1>
+<blockquote>
+<p>PSMの開発・実行環境では、コンテンツの保護のために、ファイルを署名・暗号化する処理を行っています。</p>
+<p>署名・暗号化を行うことにより、ファイルの解析やデータの改竄、違法なコピーからコンテンツを保護することができます。</p>
+<p>なお、署名・暗号化のプロセスは実機が対象です。PCシミュレータ上では行われません。</p>
+</blockquote>
+</div>
+<div class="section" id="id3">
+<h1><a class="toc-backref" href="#id6">署名・暗号化の対象</a></h1>
+<blockquote>
+<p>アセンブリファイル (実行ファイル、dll) は必ず署名・暗号化されます。アセンブリファイルから署名・暗号化の設定を外すことはできません。</p>
+<p>開発者が署名・暗号化の設定を選択できるのは次のファイルです。</p>
+<blockquote>
+<ul class="simple">
+<li>画像ファイル、音楽ファイル、テキストファイルなど。</li>
+<li>シェーダープログラム (Plain は選択不可)</li>
+</ul>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="psm-studio">
+<h1><a class="toc-backref" href="#id7">PSM Studio での設定方法</a></h1>
+<blockquote>
+<p>ファイルに対する署名・暗号化の設定は、以下の手順で行います。</p>
+<ol class="arabic simple">
+<li>Solutionウィンドウでファイルを選択し、[右クリック] - [Properties] を選択し、プロパティウィンドウを開きます。</li>
+</ol>
+<blockquote>
+<div align="center" class="figure">
+<img alt="./image/user_guide/signed_encrypted.PNG" src="./image/user_guide/signed_encrypted.PNG" style="width: 804.0px; height: 551.25px;" />
+<p class="caption"><strong>図1</strong></p>
+</div>
+</blockquote>
+<ol class="arabic simple" start="2">
+<li>プロパティウィンドウの [PSM Option] - [Content Protection]から、次のいずれかを選択します。</li>
+</ol>
+<blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="31%" />
+<col width="69%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">List Item</th>
+<th class="head">説明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>Plain</td>
+<td>ファイルに対して署名も暗号化も行いません。</td>
+</tr>
+<tr><td>Signed</td>
+<td>ファイルに対して署名のみ行います。</td>
+</tr>
+<tr><td>SignedAndEncrypted</td>
+<td>ファイルに対して署名と暗号化を行います。</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="id4">
+<h1><a class="toc-backref" href="#id8">注意点</a></h1>
+<blockquote>
+<p>署名・暗号化されたファイルの読み込み時間は、Plainのファイルに比べて若干長くなります。
+読み込みにかかる時間は、SignedAndEncrypted &gt; Signed &gt; Plain の順です。</p>
+<p>なお、処理時間に影響があるのはファイルの読み込み時のみです。メモリ上に展開されたデータにアクセスする時間には影響はありません。</p>
+</blockquote>
+</div>
+ </div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>イベント</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<!--<div id="footer">-->
+
+
+<!--<div id="footer">-->
+<div id="footer2">
+<p>&copy;2013 Sony Computer Entertainment Inc. All Rights Reserved.</p></div>
+
+
+
+
+</body>
+</html>
