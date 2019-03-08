@@ -90,8 +90,7 @@ public class AppMain
 	public static void Main (string[] args)
 	{
 		Initialize ();
-		while (isRunning) 
-{
+		while (isRunning) {
 			SystemEvents.CheckEvents ();
 			Update ();
 			Render ();
