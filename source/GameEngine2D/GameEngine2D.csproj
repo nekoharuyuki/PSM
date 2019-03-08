@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A36CE4AC-6436-452D-A25D-9BD87A4100EA}</ProjectGuid>
+    <ProjectTypeGuids>{69878862-DA7D-4DC6-B0A1-50D8FAB4242F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Sce.PlayStation.HighLevel.GameEngine2D</RootNamespace>
+    <AssemblyName>Sce.PlayStation.HighLevel.GameEngine2D</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <NoWarn>1591,1573</NoWarn>
+    <GenerateDocumentation>true</GenerateDocumentation>
+    <DocumentationFile>bin\Release\Sce.PlayStation.HighLevel.GameEngine2d.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Sce.PlayStation.Core" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Sce\Sce.Psm.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="cs\base\Camera2D.cs" />
+    <Compile Include="cs\base\Camera3D.cs" />
+    <Compile Include="cs\base\Common.cs" />
+    <Compile Include="cs\base\DrawHelpers.cs" />
+    <Compile Include="cs\base\EmbeddedDebugFont.cs" />
+    <Compile Include="cs\base\FontMap.cs" />
+    <Compile Include="cs\base\GraphicsContextAlpha.cs" />
+    <Compile Include="cs\base\ICamera.cs" />
+    <Compile Include="cs\base\ImmediateMode.cs" />
+    <Compile Include="cs\base\Input.cs" />
+    <Compile Include="cs\base\Math.cs" />
+    <Compile Include="cs\base\Matrix3.cs" />
+    <Compile Include="cs\base\MatrixStack.cs" />
+    <Compile Include="cs\base\PitchRoll.cs" />
+    <Compile Include="cs\base\Profiler.cs" />
+    <Compile Include="cs\base\TextureInfo.cs" />
+    <Compile Include="cs\base\SpriteRenderer.cs" />
+    <Compile Include="cs\base\Timer.cs" />
+    <Compile Include="cs\base\TRS.cs" />
+    <Compile Include="cs\base\Curves.cs" />
+    <Compile Include="cs\Action.cs" />
+    <Compile Include="cs\ActionManager.cs" />
+    <Compile Include="cs\Director.cs" />
+    <Compile Include="cs\Label.cs" />
+    <Compile Include="cs\Node.cs" />
+    <Compile Include="cs\Scene.cs" />
+    <Compile Include="cs\Scheduler.cs" />
+    <Compile Include="cs\Sprite.cs" />
+    <Compile Include="cs\TransitionScene.cs" />
+    <Compile Include="cs\ParticleSystem.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedShaderProgram Include="cg\default.vcg" />
+    <EmbeddedShaderProgram Include="cg\default.fcg" />
+    <EmbeddedShaderProgram Include="cg\font.vcg" />
+    <EmbeddedShaderProgram Include="cg\font.fcg" />
+    <EmbeddedShaderProgram Include="cg\sprite.vcg" />
+    <EmbeddedShaderProgram Include="cg\sprite.fcg" />
+    <EmbeddedShaderProgram Include="cg\particles.vcg" />
+    <EmbeddedShaderProgram Include="cg\particles.fcg" />
+    <EmbeddedShaderProgram Include="cg\sprite_directional_fade.vcg" />
+    <EmbeddedShaderProgram Include="cg\sprite_directional_fade.fcg" />
+  </ItemGroup>
+</Project>

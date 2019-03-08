@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ImportDAE", "ImportDAE.vcproj", "{AD68BF5A-1B00-486D-894F-938C6C8C278C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD68BF5A-1B00-486D-894F-938C6C8C278C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AD68BF5A-1B00-486D-894F-938C6C8C278C}.Debug|Win32.Build.0 = Debug|Win32
+		{AD68BF5A-1B00-486D-894F-938C6C8C278C}.Release|Win32.ActiveCfg = Release|Win32
+		{AD68BF5A-1B00-486D-894F-938C6C8C278C}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

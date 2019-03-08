@@ -1,0 +1,25 @@
+/* PlayStation(R)Mobile SDK 1.21.01
+ * Copyright (C) 2013 Sony Computer Entertainment Inc.
+ * All Rights Reserved.
+ */
+
+void main(
+	float2 in v_TexCoord		: TEXCOORD0,
+	float4 in v_Color			: COLOR0,
+	float4 out color			: COLOR,
+	uniform sampler2D s_Texture	: TEXUNIT0,
+    uniform float2 u_touchCoord,
+    uniform float2 u_tension,
+    uniform float2 u_clipRect
+)
+{
+	float2 vp = (v_TexCoord - u_touchCoord) / u_clipRect;
+    float power = exp(-dot(vp, vp));
+	float2 factor = v_TexCoord + v_TexCoord - 1.0;
+	factor = power * saturate(0.99 - factor * factor);
+
+	float2 coord = v_TexCoord - factor * u_tension;
+
+	color = tex2D(s_Texture, coord) * v_Color;
+}
+

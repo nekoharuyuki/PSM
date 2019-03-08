@@ -1,0 +1,15 @@
+uniform sampler2D Texture0 : TEXUNIT0 ;
+uniform float3 FogColor ;
+
+void main(
+	float2 in v_TexCoord	: TEXCOORD0,
+	float4 in v_Color		: TEXCOORD1,
+	float3 in v_Color2		: TEXCOORD2,
+	float in v_FogCoord		: FOGC,
+	float4 out color		: COLOR
+)
+{
+	color = tex2D(Texture0, v_TexCoord) * v_Color;
+	color.xyz += v_Color2;
+	color.xyz = lerp(color.xyz, FogColor, clamp(v_FogCoord, 0.0, 1.0));
+}

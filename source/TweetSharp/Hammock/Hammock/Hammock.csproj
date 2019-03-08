@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{612E8DC0-1B47-4C9D-9953-216D4DF54B81}</ProjectGuid>
+    <ProjectTypeGuids>{69878862-DA7D-4DC6-B0A1-50D8FAB4242F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Hammockmine</RootNamespace>
+    <AssemblyName>Hammock</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;Mono;MONO;PSM</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <DefineConstants>Mono;MONO;PSM</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization">
+      <HintPath>..\..\..\..\..\Program Files %28x86%29\Reference Assemblies\Microsoft\Framework\Psm\v1.0\System.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <HintPath>..\..\..\..\..\Program Files %28x86%29\Reference Assemblies\Microsoft\Framework\Psm\v1.0\System.ServiceModel.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <HintPath>..\..\..\..\..\Program Files %28x86%29\Reference Assemblies\Microsoft\Framework\Psm\v1.0\System.Xml.Linq.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Sce\Sce.Psm.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Attributes\" />
+    <Folder Include="Specifications\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\BooleanToIntegerAttribute.cs" />
+    <Compile Include="Attributes\DateTimeFormatAttribute.cs" />
+    <Compile Include="Attributes\ParameterAttribute.cs" />
+    <Compile Include="Attributes\RequiredAttribute.cs" />
+    <Compile Include="Attributes\SpecificationAttribute.cs" />
+    <Compile Include="Attributes\UserAgentAttribute.cs" />
+    <Compile Include="Specifications\AndSpecification.cs" />
+    <Compile Include="Specifications\ValidEmailSpecification.cs" />
+    <Compile Include="AspNetCache.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="BasicAuthCredentials.cs" />
+    <Compile Include="BasicAuthWebQuery.cs" />
+    <Compile Include="CacheFactory.cs" />
+    <Compile Include="CacheMode.cs" />
+    <Compile Include="CacheOptions.cs" />
+    <Compile Include="CollectionExtensions.cs" />
+    <Compile Include="CompositeSpecificationBase.cs" />
+    <Compile Include="ConnectionClosed.cs" />
+    <Compile Include="EntityAttribute.cs" />
+    <Compile Include="FormatExtensions.cs" />
+    <Compile Include="GetOrDelete.cs" />
+    <Compile Include="HammockDataContractJsonSerializer.cs" />
+    <Compile Include="HammockDataContractSerializer.cs" />
+    <Compile Include="HammockJavaScriptSerializer.cs" />
+    <Compile Include="HammockSpecification.cs" />
+    <Compile Include="HammockXmlSerializer.cs" />
+    <Compile Include="HeaderAttribute.cs" />
+    <Compile Include="HttpCookieParameter.cs" />
+    <Compile Include="HttpPostParameter.cs" />
+    <Compile Include="HttpPostParameterType.cs" />
+    <Compile Include="HttpUtility.cs" />
+    <Compile Include="ICache.cs" />
+    <Compile Include="IDependencyCache.cs" />
+    <Compile Include="IDeserializer.cs" />
+    <Compile Include="IMockable.cs" />
+    <Compile Include="INamedAttribute.cs" />
+    <Compile Include="IRateLimitingRule.cs" />
+    <Compile Include="IRateLimitStatus.cs" />
+    <Compile Include="IRestClient.cs" />
+    <Compile Include="IRetryCondition.cs" />
+    <Compile Include="IRetryCustomCondition.cs" />
+    <Compile Include="ISerializer.cs" />
+    <Compile Include="ISpecification.cs" />
+    <Compile Include="ITaskOptions.cs" />
+    <Compile Include="ITaskState.cs" />
+    <Compile Include="ITimedTask.cs" />
+    <Compile Include="IValidatingAttribute.cs" />
+    <Compile Include="IWebCredentials.cs" />
+    <Compile Include="IWebQueryInfo.cs" />
+    <Compile Include="IWebResponse.cs" />
+    <Compile Include="MockHttpWebRequest.cs" />
+    <Compile Include="MockHttpWebResponse.cs" />
+    <Compile Include="MockWebRequestFactory.cs" />
+    <Compile Include="NetworkError.cs" />
+    <Compile Include="NotSpecification.cs" />
+    <Compile Include="OAuthCredentials.cs" />
+    <Compile Include="OAuthExtensions.cs" />
+    <Compile Include="OAuthParameterHandling.cs" />
+    <Compile Include="OAuthSignatureMethod.cs" />
+    <Compile Include="OAuthToken.cs" />
+    <Compile Include="OAuthTools.cs" />
+    <Compile Include="OAuthType.cs" />
+    <Compile Include="OAuthWebQuery.cs" />
+    <Compile Include="OAuthWebQueryInfo.cs" />
+    <Compile Include="OAuthWorkflow.cs" />
+    <Compile Include="ObjectExtensions.cs" />
+    <Compile Include="OrSpecification.cs" />
+    <Compile Include="Pair.cs" />
+    <Compile Include="PostOrPut.cs" />
+    <Compile Include="PropertyChangedBase.cs" />
+    <Compile Include="RateLimitingRule.cs" />
+    <Compile Include="RateLimitType.cs" />
+    <Compile Include="ReflectionExtensions.cs" />
+    <Compile Include="RestBase.cs" />
+    <Compile Include="RestCallback.cs" />
+    <Compile Include="RestClient.cs" />
+    <Compile Include="RestRequest.cs" />
+    <Compile Include="RestResponse.cs" />
+    <Compile Include="RetryCustomCondition.cs" />
+    <Compile Include="RetryErrorCondition.cs" />
+    <Compile Include="RetryPolicy.cs" />
+    <Compile Include="RetryResultCondition.cs" />
+    <Compile Include="SimpleCache.cs" />
+    <Compile Include="SpecificationExtensions.cs" />
+    <Compile Include="StreamOptions.cs" />
+    <Compile Include="StringExtensions.cs" />
+    <Compile Include="TaskOptions.cs" />
+    <Compile Include="TaskState.cs" />
+    <Compile Include="TimedTask.cs" />
+    <Compile Include="TimeExtensions.cs" />
+    <Compile Include="Timeout.cs" />
+    <Compile Include="Triplet.cs" />
+    <Compile Include="Utf8Serializer.cs" />
+    <Compile Include="ValidationAttribute.cs" />
+    <Compile Include="ValidationException.cs" />
+    <Compile Include="WebCallback.cs" />
+    <Compile Include="WebEntity.cs" />
+    <Compile Include="WebExtensions.cs" />
+    <Compile Include="WebHeader.cs" />
+    <Compile Include="WebHeaderCollection.cs" />
+    <Compile Include="WebHeaderCollection2.cs" />
+    <Compile Include="WebMethod.cs" />
+    <Compile Include="WebPair.cs" />
+    <Compile Include="WebPairCollection.cs" />
+    <Compile Include="WebParameter.cs" />
+    <Compile Include="WebParameterCollection.cs" />
+    <Compile Include="WebQuery.Async.cs" />
+    <Compile Include="WebQuery.cs" />
+    <Compile Include="WebQueryAsyncResult.cs" />
+    <Compile Include="WebQueryRequestEventArgs.cs" />
+    <Compile Include="WebQueryResponseEventArgs.cs" />
+    <Compile Include="WebQueryResult.cs" />
+  </ItemGroup>
+</Project>

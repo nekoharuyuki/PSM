@@ -1,0 +1,29 @@
+/* PlayStation(R)Mobile SDK 1.21.01
+ * Copyright (C) 2013 Sony Computer Entertainment Inc.
+ * All Rights Reserved.
+ */
+
+void main(
+	float2 in v_TexCoord		: TEXCOORD0,
+	float4 in v_Color			: COLOR0,
+	float4 out color			: COLOR,
+	uniform sampler2D s_Texture	: TEXUNIT0,
+    uniform float4 u_ShadowColor,
+    uniform float2 u_ShadowOffset,
+    uniform float u_Alpha
+)
+{
+    float shadow_a = u_ShadowColor.a * u_Alpha;
+    shadow_a *= tex2D( s_Texture, v_TexCoord - u_ShadowOffset ).a;
+
+    color = v_Color;
+    color.a *= tex2D( s_Texture, v_TexCoord ).a;
+
+    // (Cs: shadow rgb color, As: shadow alpha, Ct: text rgb color, At: text alpha.)
+    // C = (Cs*As*(1-At) + Ct*At) / A
+    // A = As*(1 - At) + At
+    float a = color.a;
+    shadow_a *= 1.0f - a;
+    color.a += shadow_a;
+    color.rgb = (u_ShadowColor.rgb * shadow_a + color.rgb * a) / (color.a + 1.0e-37);
+}

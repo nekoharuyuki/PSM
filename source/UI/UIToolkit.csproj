@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EAFF76CD-10CE-417A-B81A-88F0C87A9D2B}</ProjectGuid>
+    <ProjectTypeGuids>{69878862-DA7D-4DC6-B0A1-50D8FAB4242F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Sce.PlayStation.HighLevel.UI</RootNamespace>
+    <AssemblyName>Sce.PlayStation.HighLevel.UI</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>1571,1710</NoWarn>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>1571,1710</NoWarn>
+    <GenerateDocumentation>true</GenerateDocumentation>
+    <DocumentationFile>bin\Release\Sce.PlayStation.HighLevel.UI.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Sce.PlayStation.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="source\AnimationImageBox.cs" />
+    <Compile Include="source\BunjeeJumpEffect.cs" />
+    <Compile Include="source\BusyIndicator.cs" />
+    <Compile Include="source\Button.cs" />
+    <Compile Include="source\CheckBox.cs" />
+    <Compile Include="source\ContainerWidget.cs" />
+    <Compile Include="source\CrossFadeTransition.cs" />
+    <Compile Include="source\Dialog.cs" />
+    <Compile Include="source\DelayedExecutor.cs" />
+    <Compile Include="source\DoubleTapGestureDetector.cs" />
+    <Compile Include="source\DragGestureDetector.cs" />
+    <Compile Include="source\PopupList.cs" />
+    <Compile Include="source\EditableText.cs" />
+    <Compile Include="source\Effect.cs" />
+    <Compile Include="source\FadeInEffect.cs" />
+    <Compile Include="source\FadeOutEffect.cs" />
+    <Compile Include="source\FlickGestureDetector.cs" />
+    <Compile Include="source\FlipBoardEffect.cs" />
+    <Compile Include="source\FlipBoardTransition.cs" />
+    <Compile Include="source\GestureDetector.cs" />
+    <Compile Include="source\GridListPanel.cs" />
+    <Compile Include="source\ImageAsset.cs" />
+    <Compile Include="source\ImageBox.cs" />
+    <Compile Include="source\JumpFlipEffect.cs" />
+    <Compile Include="source\JumpFlipTransition.cs" />
+    <Compile Include="source\KeyEvent.cs" />
+    <Compile Include="source\KeyEventArgs.cs" />
+    <Compile Include="source\Label.cs" />
+    <Compile Include="source\LinkedTree.cs" />
+    <Compile Include="source\ListPanel.cs" />
+    <Compile Include="source\ListPanelItem.cs" />
+    <Compile Include="source\LiveFlipPanel.cs" />
+    <Compile Include="source\LiveJumpPanel.cs" />
+    <Compile Include="source\LiveListPanel.cs" />
+    <Compile Include="source\LiveScrollPanel.cs" />
+    <Compile Include="source\LiveSphere.cs" />
+    <Compile Include="source\LongPressGestureDetector.cs" />
+    <Compile Include="source\MessageDialog.cs" />
+    <Compile Include="source\MoveEffect.cs" />
+    <Compile Include="source\NinePatchMargin.cs" />
+    <Compile Include="source\PagePanel.cs" />
+    <Compile Include="source\Panel.cs" />
+    <Compile Include="source\PinchGestureDetector.cs" />
+    <Compile Include="source\ProgressBar.cs" />
+    <Compile Include="source\PushTransition.cs" />
+    <Compile Include="source\RootUIElement.cs" />
+    <Compile Include="source\RootWidget.cs" />
+    <Compile Include="source\Scene.cs" />
+    <Compile Include="source\ScrollBar.cs" />
+    <Compile Include="source\ScrollPanel.cs" />
+    <Compile Include="source\ShaderProgramManager.cs" />
+    <Compile Include="source\SlideInEffect.cs" />
+    <Compile Include="source\SlideOutEffect.cs" />
+    <Compile Include="source\Slider.cs" />
+    <Compile Include="source\SlideTransition.cs" />
+    <Compile Include="source\TapGestureDetector.cs" />
+    <Compile Include="source\TextRenderHelper.cs" />
+    <Compile Include="source\TiltDropEffect.cs" />
+    <Compile Include="source\TiltDropTransition.cs" />
+    <Compile Include="source\TouchEvent.cs" />
+    <Compile Include="source\TouchEventArgs.cs" />
+    <Compile Include="source\Transition.cs" />
+    <Compile Include="source\UIColor.cs" />
+    <Compile Include="source\UIElement.cs" />
+    <Compile Include="source\UIPrimitive.cs" />
+    <Compile Include="source\UIPrimitiveUtility.cs" />
+    <Compile Include="source\UIPrimitiveVertex.cs" />
+    <Compile Include="source\UISprite.cs" />
+    <Compile Include="source\UISpriteUnit.cs" />
+    <Compile Include="source\UISpriteUtility.cs" />
+    <Compile Include="source\UISystem.cs" />
+    <Compile Include="source\Widget.cs" />
+    <Compile Include="source\ZoomEffect.cs" />
+    <Compile Include="source\NavigationScene.cs" />
+    <Compile Include="source\DefaultNavigationTransition.cs" />
+    <Compile Include="source\LiveSpringPanel.cs" />
+    <Compile Include="source\TouchEventCollection.cs" />
+    <Compile Include="source\MotionEvent.cs" />
+    <Compile Include="source\MotionEventArgs.cs" />
+    <Compile Include="source\AnimationUtility.cs" />
+    <Compile Include="source\InternalSpinBox.cs" />
+    <Compile Include="source\TimePicker.cs" />
+    <Compile Include="source\DatePicker.cs" />
+    <Compile Include="source\UIAnimationPlayer.cs" />
+    <Compile Include="source\UIMotion.cs" />
+    <Compile Include="source\FocusScene.cs" />
+    <Compile Include="source\FocusChangedEventArgs.cs" />
+    <Compile Include="source\PressStateChangedEventArgs.cs" />
+    <Compile Include="source\ListPanelItemSelectChangedEventArgs.cs" />
+    <Compile Include="source\UIDebug.cs" />
+    <Compile Include="source\UIFont.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="system_assets\busy48.png" />
+    <EmbeddedResource Include="system_assets\button_9patch_disable.png" />
+    <EmbeddedResource Include="system_assets\button_9patch_normal.png" />
+    <EmbeddedResource Include="system_assets\button_9patch_press.png" />
+    <EmbeddedResource Include="system_assets\check_box_active.png" />
+    <EmbeddedResource Include="system_assets\check_box_active_disable.png" />
+    <EmbeddedResource Include="system_assets\check_box_active_press.png" />
+    <EmbeddedResource Include="system_assets\check_box_normal.png" />
+    <EmbeddedResource Include="system_assets\check_box_normal_disable.png" />
+    <EmbeddedResource Include="system_assets\check_box_normal_press.png" />
+    <EmbeddedResource Include="system_assets\list_separator_bottom_9patch.png" />
+    <EmbeddedResource Include="system_assets\list_separator_top_9patch.png" />
+    <EmbeddedResource Include="system_assets\pagepanel_point_active.png" />
+    <EmbeddedResource Include="system_assets\pagepanel_point_normal.png" />
+    <EmbeddedResource Include="system_assets\panel_9patch.png" />
+    <EmbeddedResource Include="system_assets\popup_9patch_disable.png" />
+    <EmbeddedResource Include="system_assets\popup_9patch_normal.png" />
+    <EmbeddedResource Include="system_assets\popup_9patch_press.png" />
+    <EmbeddedResource Include="system_assets\popup_focus_9patch.png" />
+    <EmbeddedResource Include="system_assets\progress_accelerator.png" />
+    <EmbeddedResource Include="system_assets\radio_bt_normal.png" />
+    <EmbeddedResource Include="system_assets\radio_bt_normal_disable.png" />
+    <EmbeddedResource Include="system_assets\radio_bt_normal_press.png" />
+    <EmbeddedResource Include="system_assets\radio_bt_selected.png" />
+    <EmbeddedResource Include="system_assets\radio_bt_selected_disable.png" />
+    <EmbeddedResource Include="system_assets\radio_bt_selected_press.png" />
+    <EmbeddedResource Include="system_assets\scroll_bar_horiz_active_9patch.png" />
+    <EmbeddedResource Include="system_assets\scroll_bar_horiz_normal_9patch.png" />
+    <EmbeddedResource Include="system_assets\scroll_bar_verti_active_9patch.png" />
+    <EmbeddedResource Include="system_assets\scroll_bar_verti_normal_9patch.png" />
+    <EmbeddedResource Include="system_assets\separator.png" />
+    <EmbeddedResource Include="system_assets\slider.png" />
+    <EmbeddedResource Include="system_assets\slider_bar_active_9patch.png" />
+    <EmbeddedResource Include="system_assets\slider_bar_active_9patch_disable.png" />
+    <EmbeddedResource Include="system_assets\slider_bar_normal_9patch.png" />
+    <EmbeddedResource Include="system_assets\slider_bar_normal_9patch_disable.png" />
+    <EmbeddedResource Include="system_assets\slider_bar_verti_active_9patch.png" />
+    <EmbeddedResource Include="system_assets\slider_bar_verti_active_9patch_disable.png" />
+    <EmbeddedResource Include="system_assets\slider_bar_verti_normal_9patch.png" />
+    <EmbeddedResource Include="system_assets\slider_bar_verti_normal_9patch_disable.png" />
+    <EmbeddedResource Include="system_assets\slider_disable.png" />
+    <EmbeddedResource Include="system_assets\slider_press.png" />
+    <EmbeddedResource Include="system_assets\slider_verti.png" />
+    <EmbeddedResource Include="system_assets\slider_verti_disable.png" />
+    <EmbeddedResource Include="system_assets\slider_verti_press.png" />
+    <EmbeddedResource Include="system_assets\spin_base.png" />
+    <EmbeddedResource Include="system_assets\spin_center.png" />
+    <EmbeddedResource Include="system_assets\text_field_9patch_disable.png" />
+    <EmbeddedResource Include="system_assets\text_field_9patch_normal.png" />
+    <EmbeddedResource Include="system_assets\title_separator_9patch.png" />
+    <EmbeddedResource Include="system_assets\back_button_9patch_disable.png" />
+    <EmbeddedResource Include="system_assets\back_button_9patch_normal.png" />
+    <EmbeddedResource Include="system_assets\back_button_9patch_press.png" />
+    <EmbeddedResource Include="system_assets\titlebar_9patch.png" />
+    <EmbeddedResource Include="system_assets\focus_list.png" />
+    <EmbeddedResource Include="system_assets\focus_circle.png" />
+    <EmbeddedResource Include="system_assets\focus_rectangle.png" />
+    <EmbeddedResource Include="system_assets\focus_rounded_corner.png" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <Policies>
+          <TextStylePolicy FileWidth="120" inheritsSet="VisualStudio" inheritsScope="text/plain" scope="text/x-csharp" />
+          <CSharpFormattingPolicy IndentSwitchBody="True" AnonymousMethodBraceStyle="NextLine" PropertyBraceStyle="NextLine" PropertyGetBraceStyle="NextLine" PropertySetBraceStyle="NextLine" EventBraceStyle="NextLine" EventAddBraceStyle="NextLine" EventRemoveBraceStyle="NextLine" StatementBraceStyle="NextLine" PlaceElseOnNewLine="True" PlaceCatchOnNewLine="True" PlaceFinallyOnNewLine="True" BeforeMethodDeclarationParentheses="False" BeforeMethodCallParentheses="False" BeforeConstructorDeclarationParentheses="False" BeforeIndexerDeclarationBracket="False" BeforeDelegateDeclarationParentheses="False" AfterDelegateDeclarationParameterComma="True" NewParentheses="False" SpacesBeforeBrackets="False" BlankLinesBeforeUsings="2" inheritsSet="Mono" inheritsScope="text/x-csharp" scope="text/x-csharp" />
+          <DotNetNamingPolicy DirectoryNamespaceAssociation="None" ResourceNamePolicy="MSBuild" />
+        </Policies>
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+  <Import Project="$(MSBuildExtensionsPath)\Sce\Sce.Psm.CSharp.targets" />
+  <ItemGroup>
+    <EmbeddedShaderProgram Include="shaders\basic.vp.cg" />
+    <EmbeddedShaderProgram Include="shaders\live_scroll.fp.cg" />
+    <EmbeddedShaderProgram Include="shaders\live_sphere.fp.cg" />
+    <EmbeddedShaderProgram Include="shaders\live_sphere.vp.cg" />
+    <EmbeddedShaderProgram Include="shaders\premultiplied.vp.cg" />
+    <EmbeddedShaderProgram Include="shaders\solid_fill.fp.cg" />
+    <EmbeddedShaderProgram Include="shaders\texture_a8.fp.cg" />
+    <EmbeddedShaderProgram Include="shaders\texture_a8_shadow.fp.cg" />
+    <EmbeddedShaderProgram Include="shaders\texture_rgba.fp.cg" />
+  </ItemGroup>
+</Project>

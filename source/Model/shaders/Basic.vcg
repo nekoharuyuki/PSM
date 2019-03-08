@@ -1,0 +1,110 @@
+uniform bool EnableLighting ;
+uniform bool EnableFog ;
+uniform int LightCount ;
+
+uniform float4x4 ViewProjection ;
+uniform float3 EyePosition ;
+uniform float4 FogVector ;
+
+uniform float4x4 WorldMatrix[ 16 ] ;
+
+uniform float3 LightDirection[ 3 ] ;
+uniform float3 LightDiffuse[ 3 ] ;
+uniform float3 LightSpecular[ 3 ] ;
+uniform float3 LightAmbient ;
+
+uniform float3 MaterialDiffuse ;
+uniform float3 MaterialSpecular ;
+uniform float3 MaterialAmbient ;
+uniform float3 MaterialEmission ;
+uniform float3 MaterialFactor ;
+
+uniform float4 VertexOffsets[ 2 ] ;
+uniform int VertexWeightCount ;
+
+void main(
+	float4 a_Position		: POSITION,
+	float3 a_Normal			: NORMAL,
+	float4 a_Color			: COLOR,
+	float2 a_TexCoord		: TEXCOORD0,
+	float4 a_Weight			: BLENDWEIGHT,
+	float4 a_Indices		: BLENDINDICES,
+
+	out float4 v_Position	: POSITION,
+	out float2 v_TexCoord	: TEXCOORD0,
+	out float4 v_Color		: TEXCOORD1,
+	out float3 v_Color2		: TEXCOORD2,
+	out float v_FogCoord	: FOGC
+)
+{
+	float4 position ;
+	position.xyz = a_Position.xyz * VertexOffsets[ 0 ].w + VertexOffsets[ 0 ].xyz ;
+	position.w = 1.0 ;
+
+	float4x4 M = WorldMatrix[ (int)a_Indices.x ] ;
+	float4 P = mul( position, M ) * a_Weight.x ;
+	float3 N = ( mul( float4( a_Normal, 0.0 ), M ) ).xyz * a_Weight.x ;
+	if ( VertexWeightCount > 1 ) {
+		M = WorldMatrix[ (int)a_Indices[ 1 ] ] ;
+		P += mul( position, M ) * a_Weight.y ;
+		N += ( mul( float4( a_Normal, 0.0 ), M ) ).xyz * a_Weight.y ;
+		if ( VertexWeightCount > 2 ) {
+			M = WorldMatrix[ (int)a_Indices[ 2 ] ] ;
+			P += mul( position, M ) * a_Weight.z ;
+			N += ( mul( float4( a_Normal, 0.0 ), M ) ).xyz * a_Weight.z ;
+			if ( VertexWeightCount > 3 ) {
+				M = WorldMatrix[ (int)a_Indices[ 3 ] ] ;
+				P += mul( position, M ) * a_Weight.w ;
+				N += ( mul( float4( a_Normal, 0.0 ), M ) ).xyz * a_Weight.w ;
+			}
+		}
+	}
+	N = normalize( N ) ;
+
+	v_Position = mul( P, ViewProjection ) ;
+	v_FogCoord = !EnableFog ? 0.0 : dot( P, FogVector ) ;
+	v_TexCoord = a_TexCoord * VertexOffsets[ 1 ].zw + VertexOffsets[ 1 ].xy ;
+
+	float3 diffuse = float3( 0.0 ) ;
+	float3 specular = float3( 0.0 ) ;
+	float3 ambient = float3( 1.0 ) ;
+	if ( EnableLighting ) {
+		ambient = LightAmbient ;
+		if ( LightCount > 0 ) {
+			float3 V = normalize( EyePosition - P.xyz ) ;
+			float3 L = -LightDirection[ 0 ] ;
+			float d = max( dot( N, L ), 0.0 ) ;
+			diffuse += LightDiffuse[ 0 ] * d ;
+			if ( d > 0.0 ) {
+				float3 H = normalize( L + V ) ;
+				float s = max( dot( N, H ), 0.000001 ) ;
+				specular += LightSpecular[ 0 ] * pow( s, MaterialFactor.y ) ;
+			}
+			if ( LightCount > 1 ) {
+				L = -LightDirection[ 1 ] ;
+				d = max( dot( N, L ), 0.0 ) ;
+				diffuse += LightDiffuse[ 1 ] * d ;
+				if ( d > 0.0 ) {
+					float3 H = normalize( L + V ) ;
+					float s = max( dot( N, H ), 0.000001 ) ;
+					specular += LightSpecular[ 1 ] * pow( s, MaterialFactor.y ) ;
+				}
+				if ( LightCount > 2 ) {
+					L = -LightDirection[ 2 ] ;
+					d = max( dot( N, L ), 0.0 ) ;
+					diffuse += LightDiffuse[ 2 ] * d ;
+					if ( d > 0.0 ) {
+						float3 H = normalize( L + V ) ;
+						float s = max( dot( N, H ), 0.000001 ) ;
+						specular += LightSpecular[ 2 ] * pow( s, MaterialFactor.y ) ;
+					}
+				}
+			}
+		}
+	}
+
+	v_Color.xyz = MaterialDiffuse * diffuse + MaterialAmbient * ambient ;
+	v_Color.w = MaterialFactor.x ;
+	v_Color2 = MaterialSpecular * specular + MaterialEmission ;
+	v_Color *= a_Color ;
+}
