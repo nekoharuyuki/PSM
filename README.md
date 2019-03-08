@@ -5,7 +5,9 @@ PlayStation Mobile はソニーコンピュータエンタテイメント（SCE�
 
 ### 図1 PlayStation Mobile
 ![図1 PlayStation Mobile](https://github.com/nekoharuyuki/PSM/blob/master/image/%E5%9B%B31%20PlayStation%20Mobile.png)  
-開発者は PlayStation Mobile Developer Program で有料の契約（年間 US$99 相当を予定）を結び、開発したアプリケーションを配信できます。ただし、本稿執筆時の2013年5月8日から、期間限定で無料で申し込み可能となっています。詳細は [PlayStation Mobile 公式サイト](https://www.jp.playstation.com/psn/psm/)をご覧ください。
+開発者は PlayStation Mobile Developer Program で有料の契約（年間 US$99 相当を予定）を結び、開発したアプリケーションを配信できます。ただし、本稿執筆時の2013年5月8日から、期間限定で無料で申し込み可能となっています。  
+
+詳細は [PlayStation Mobile 公式サイト](https://www.jp.playstation.com/psn/psm/)をご覧ください。
 
 これまで PLAYSTATION3 や PlayStation Vita のようなゲーム専用端末のコンテンツを開発するには、SCE と法人契約した企業にのみ限られていましたが、PlayStation Mobile は iOS や Android などのスマートフォンのアプリケーション配信ストアに近いビジネスモデルになると予想され、個人の開発者も PlayStation Vita などの PlayStation Mobile 対応デバイスで実行できるプログラムを開発し、PlayStation Store でコンテンツを販売できるようになるでしょう。
 
