@@ -1,0 +1,85 @@
+Mono Virtual Machine
+
+Mono Virtual Machine, EGlib, SGen Garbage Collector, strtod & dtoa, and all modifications made to the aforementioned are licensed under the terms of the GNU Library General Public License Version 2, and the source code for the programs is made available to you. For more information, please visit Sony Computer Entertainment Inc.’s official website: http://www.scei.co.jp/psvita-license/index.html. The applicable copyright notices can be found in the source code. The programs are distributed WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+The followings are the original license notices for EGlib, SGen Garbage Collector and strtod & dtoa.
+------
+EGlib
+(C) 2006 Novell, Inc.
+(C) 2010 Novell, Inc.
+Copyright (C) 2011 Jeffrey Stedfast
+(C) 2006 Jonathan Chambers
+Copyright 2011 Xamarin Inc.
+(C) 2006,2011 Novell, Inc.
+(C) 2011 Novell, Inc.
+Copyright (c) 2006-2009 Novell, Inc. 
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+SGen Garbage Collector
+sgen-gc.c: Simple generational GC.
+
+Author:
+Paolo Molaro (lupus@ximian.com)
+Rodrigo Kumpera (kumpera@gmail.com)
+
+Copyright 2005-2011 Novell, Inc (http://www.novell.com)
+Copyright 2011 Xamarin Inc (http://www.xamarin.com)
+
+Thread start/stop adapted from Boehm's GC:
+Copyright (c) 1994 by Xerox Corporation.  All rights reserved.
+Copyright (c) 1996 by Silicon Graphics.  All rights reserved.
+Copyright (c) 1998 by Fergus Henderson.  All rights reserved.
+Copyright (c) 2000-2004 by Hewlett-Packard Company.  All rights reserved.
+
+THIS MATERIAL IS PROVIDED AS IS, WITH ABSOLUTELY NO WARRANTY EXPRESSED OR IMPLIED.  ANY USE IS AT YOUR OWN RISK.
+
+
+sgen-los.c: Simple generational GC.
+sgen-major-copying.c: Simple generational GC.
+sgen-pinned-allocator.c: Simple generational GC.
+
+Author:
+Paolo Molaro (lupus@ximian.com)
+
+Copyright 2005-2010 Novell, Inc (http://www.novell.com)
+
+Thread start/stop adapted from Boehm's GC:
+Copyright (c) 1994 by Xerox Corporation.  All rights reserved.
+Copyright (c) 1996 by Silicon Graphics.  All rights reserved.
+Copyright (c) 1998 by Fergus Henderson.  All rights reserved.
+Copyright (c) 2000-2004 by Hewlett-Packard Company.  All rights reserved.
+
+THIS MATERIAL IS PROVIDED AS IS, WITH ABSOLUTELY NO WARRANTY EXPRESSED OR IMPLIED.  ANY USE IS AT YOUR OWN RISK.
+
+
+Copyright (c) 2001, 2002, 2003 Ximian, Inc and the individuals listed on the ChangeLog entries. 
+Copyright 2011 Xamarin, Inc.
+Copyright 2001-2003 Ximian, Inc
+Copyright 2003-2010 Novell, Inc.
+Copyright 2011 Novell, Inc (http://www.novell.com)
+Copyright 2011 Novell, Inc.
+Copyright 2005-2010 Novell, Inc (http://www.novell.com)
+Copyright 2009-2010 Novell, Inc.
+Copyright 2011 Xamarin Inc  (http://www.xamarin.com)
+Copyright 2010 Novell, Inc (http://www.novell.com) 
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+strtod & dtoa
+The author of this software is David M. Gay.
+
+Copyright (c) 1991, 2000, 2001 by Lucent Technologies.
+
+Permission to use, copy, modify, and distribute this software for any purpose without fee is hereby granted, provided that this entire notice is included in all copies of any software which is or includes a copy or modification of this software and in all copies of the supporting documentation for such software.
+
+THIS SOFTWARE IS BEING PROVIDED "AS IS", WITHOUT ANY EXPRESS OR IMPLIED WARRANTY.  IN PARTICULAR, NEITHER THE AUTHOR NOR LUCENT MAKES ANY REPRESENTATION OR WARRANTY OF ANY KIND CONCERNING THE MERCHANTABILITY OF THIS SOFTWARE OR ITS FITNESS FOR ANY PARTICULAR PURPOSE.
+------

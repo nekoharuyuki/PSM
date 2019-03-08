@@ -1,0 +1,28 @@
+
+The Mono files under the mono/ directory (excluding mono/lib/pss) 
+and target/win32 directory are licensed under various different 
+licenses:
+
+	GNU LGPL:  text available in the file COPYING.LIB
+	MIT X11:  text available in the file MIT.X11
+	Apache 2.0:  text available in the file APACHE.2.0
+
+	
+
+
+    * Mono Virtual Machine (libmono)
+
+		The libmono runtime is LGPL 2.0.
+		The details are available in the file LICENSE.LGPL.
+
+	* Class Libraries:
+
+		All of the core classes licensed under the terms of
+		the MIT X11 license.
+		
+		- System.Core.dll
+		MIT X11 and contains Apache 2
+
+    * PlayStation(R)Mobile Studio (MonoDevelop)
+		The End User License Agreement is shown in SDK installer 
+        and About Dialog of PlayStation(R)Mobile Studio.
