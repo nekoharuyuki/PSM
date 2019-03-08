@@ -1,0 +1,35 @@
+/* PlayStation(R)Mobile SDK 1.21.01
+ * Copyright (C) 2013 Sony Computer Entertainment Inc.
+ * All Rights Reserved.
+ */
+// 距離フォグ
+void main(	float4 in a_Position  : POSITION,
+			float3 in a_Normal    : NORMAL,
+			float4 out v_Position : POSITION,
+			float4 out v_Color	  : COLOR0,
+			
+			uniform float4  IAmbient,
+			uniform float4  IDiffuse,
+			
+			uniform float4  KAmbient,
+			uniform float4  KDiffuse,
+						
+			uniform float3  LocalLightDirection,
+			uniform float3  EyePosition,
+			uniform float	FogNear,
+			uniform float   FogFar,
+			uniform float4  FogColor,
+			uniform float4x4 WorldViewProj
+		   )
+{
+	float3	Eye			= normalize(EyePosition - a_Position.xyz);
+	float3	Refrection	= -Eye + 2.0f * dot(a_Normal, Eye) * a_Normal;
+	v_Position	= mul( a_Position, WorldViewProj );
+	
+	float3		Pos		= a_Position.xyz - EyePosition;
+	// ここで出る値は透明度。1の場合はかからない
+	float		Fog		= FogNear + length(Pos)* FogFar;
+	float4		Lambert = IAmbient * KAmbient + IDiffuse * KDiffuse * max(0, dot(a_Normal, -LocalLightDirection)) ;
+	v_Color     = Lambert + FogColor * (1 - Fog);
+}
+

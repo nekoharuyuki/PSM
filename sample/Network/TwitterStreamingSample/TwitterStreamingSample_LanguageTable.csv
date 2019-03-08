@@ -1,0 +1,9 @@
+﻿ID,English,Japanese
+RESID_LOGIN,Login,ログイン
+RESID_HOME,Home,ホーム
+RESID_CANCEL,Cancel,Cancel
+RESID_OK,OK,OK
+RESID_SETTING,Setting,設定
+RESID_CONSUMER,「TWITTER_CONSUMER_KEY」 or 「TWITTER CONSUMER_SECRET」 is not defined of Application.cs,Application.cs の 「TWITTER_CONSUMER_KEY」 または 「TWITTER_CONSUMER_SECRET」が定義されていません
+RESID_LOGOUT,SIGN OUT,ログアウト
+RESID1,,

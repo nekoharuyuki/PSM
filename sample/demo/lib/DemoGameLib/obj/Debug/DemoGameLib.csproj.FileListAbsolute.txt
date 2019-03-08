@@ -1,0 +1,4 @@
+C:\Users\Public\Documents\PSM\sample\demo\lib\DemoGameLib\bin\Debug\DemoGameLib.dll
+C:\Users\Public\Documents\PSM\sample\demo\lib\DemoGameLib\bin\Debug\DemoGameLib.pdb
+C:\Users\Public\Documents\PSM\sample\demo\lib\DemoGameLib\obj\Debug\DemoGameLib.dll
+C:\Users\Public\Documents\PSM\sample\demo\lib\DemoGameLib\obj\Debug\DemoGameLib.pdb

@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterStreamingSample", "TwitterStreamingSample.csproj", "{092BBEA8-7929-426D-81D6-FC9694742FE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hammock", "..\..\..\source\TweetSharp\Hammock\Hammock\Hammock.csproj", "{612E8DC0-1B47-4C9D-9953-216D4DF54B81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Newtonsoft.Json", "..\..\..\source\TweetSharp\Newtonsoft.Json\Newtonsoft.Json\Newtonsoft.Json.csproj", "{00625654-7ED6-4FB4-B804-79B4F92FCA8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tweetsharp", "..\..\..\source\TweetSharp\tweetsharp\tweetsharp\tweetsharp.csproj", "{FFFD6CD4-A8BA-49F3-84C8-97CFE5EBCA1F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00625654-7ED6-4FB4-B804-79B4F92FCA8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00625654-7ED6-4FB4-B804-79B4F92FCA8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00625654-7ED6-4FB4-B804-79B4F92FCA8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00625654-7ED6-4FB4-B804-79B4F92FCA8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{092BBEA8-7929-426D-81D6-FC9694742FE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{092BBEA8-7929-426D-81D6-FC9694742FE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{092BBEA8-7929-426D-81D6-FC9694742FE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{092BBEA8-7929-426D-81D6-FC9694742FE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{612E8DC0-1B47-4C9D-9953-216D4DF54B81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{612E8DC0-1B47-4C9D-9953-216D4DF54B81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{612E8DC0-1B47-4C9D-9953-216D4DF54B81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{612E8DC0-1B47-4C9D-9953-216D4DF54B81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFFD6CD4-A8BA-49F3-84C8-97CFE5EBCA1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFFD6CD4-A8BA-49F3-84C8-97CFE5EBCA1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFFD6CD4-A8BA-49F3-84C8-97CFE5EBCA1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFFD6CD4-A8BA-49F3-84C8-97CFE5EBCA1F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = TwitterStreamingSample.csproj
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = None
+		$1.ResourceNamePolicy = FileFormatDefault
+		$0.StandardHeader = $2
+		$2.Text = 
+		$2.IncludeInNewFiles = True
+		$0.VersionControlPolicy = $3
+		$3.inheritsSet = Mono
+		$0.ChangeLogPolicy = $4
+		$4.UpdateMode = None
+		$4.MessageStyle = $5
+		$5.LineAlign = 0
+		$4.inheritsSet = Mono
+	EndGlobalSection
+EndGlobal

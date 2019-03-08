@@ -1,0 +1,24 @@
+/* PlayStation(R)Mobile SDK 1.21.01
+ * Copyright (C) 2013 Sony Computer Entertainment Inc.
+ * All Rights Reserved.
+ */
+
+void main(	float4 in a_Position  : POSITION,
+			float3 in a_Normal    : NORMAL,
+			float4 out v_Position : POSITION,
+			float4 out v_Color	  : COLOR0,
+			
+			uniform float4   IAmbient,
+			uniform float4   IDiffuse,
+			
+			uniform float4   KAmbient,
+			uniform float4   KDiffuse,
+						
+			uniform float3   LocalLightDirection,
+			uniform float4x4 WorldViewProj
+		   )
+{
+	v_Position	= mul( a_Position, WorldViewProj );
+	v_Color     = IAmbient * KAmbient + IDiffuse * KDiffuse * max(0, dot(a_Normal, -LocalLightDirection));
+}
+

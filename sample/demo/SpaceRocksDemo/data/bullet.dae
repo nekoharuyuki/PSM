@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.0">
+  <asset>
+    <contributor>
+      <author></author>
+      <authoring_tool>FBX COLLADA exporter</authoring_tool>
+      <comments></comments>
+    </contributor>
+    <created>2011-02-03T21:43:32Z</created>
+    <modified>2011-02-03T21:43:32Z</modified>
+    <revision></revision>
+    <title></title>
+    <subject></subject>
+    <keywords></keywords>
+    <unit meter="0.010000"/>
+    <up_axis>Y_UP</up_axis>
+  </asset>
+  <library_materials>
+    <material id="phong1" name="phong1">
+      <instance_effect url="#phong1-fx"/>
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="phong1-fx" name="phong1">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.500000  0.500000 0.500000 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.500000  0.500000 0.500000 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">0.300000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">0.500000</float>
+            </reflectivity>
+            <transparent>
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">1.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="bullet-lib" name="bulletMesh">
+      <mesh>
+        <source id="bullet-lib-Position">
+          <float_array id="bullet-lib-Position-array" count="42">
+0.000000 -0.707107 -0.707107
+-0.707107 -0.707107 0.000000
+0.000000 -0.707107 0.707107
+0.707107 -0.707107 0.000000
+0.000000 0.000000 -1.000000
+-1.000000 0.000000 0.000000
+0.000000 0.000000 1.000000
+1.000000 0.000000 0.000000
+0.000000 0.707107 -0.707107
+-0.707107 0.707107 0.000000
+0.000000 0.707107 0.707107
+0.707107 0.707107 0.000000
+0.000000 -1.000000 0.000000
+0.000000 1.000000 0.000000
+</float_array>
+          <technique_common>
+            <accessor source="#bullet-lib-Position-array" count="14" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="bullet-lib-Normal0">
+          <float_array id="bullet-lib-Normal0-array" count="216">
+-0.678598 -0.281085 -0.678598
+-0.678598 -0.281085 -0.678598
+-0.678598 -0.281085 -0.678598
+-0.678598 -0.281085 -0.678598
+-0.678598 -0.281085 -0.678598
+-0.678598 -0.281085 -0.678598
+-0.678598 -0.281085 0.678598
+-0.678598 -0.281085 0.678598
+-0.678598 -0.281085 0.678598
+-0.678598 -0.281085 0.678598
+-0.678598 -0.281085 0.678598
+-0.678598 -0.281085 0.678598
+0.678598 -0.281085 0.678598
+0.678598 -0.281085 0.678598
+0.678598 -0.281085 0.678598
+0.678598 -0.281085 0.678598
+0.678598 -0.281085 0.678598
+0.678598 -0.281085 0.678598
+0.678598 -0.281085 -0.678598
+0.678598 -0.281085 -0.678598
+0.678598 -0.281085 -0.678598
+0.678598 -0.281085 -0.678598
+0.678598 -0.281085 -0.678598
+0.678598 -0.281085 -0.678598
+-0.678598 0.281085 -0.678598
+-0.678598 0.281085 -0.678598
+-0.678598 0.281085 -0.678598
+-0.678598 0.281085 -0.678598
+-0.678598 0.281085 -0.678598
+-0.678598 0.281085 -0.678598
+-0.678598 0.281085 0.678598
+-0.678598 0.281085 0.678598
+-0.678598 0.281085 0.678598
+-0.678598 0.281085 0.678598
+-0.678598 0.281085 0.678598
+-0.678598 0.281085 0.678598
+0.678598 0.281085 0.678598
+0.678598 0.281085 0.678598
+0.678598 0.281085 0.678598
+0.678598 0.281085 0.678598
+0.678598 0.281085 0.678598
+0.678598 0.281085 0.678598
+0.678598 0.281085 -0.678598
+0.678598 0.281085 -0.678598
+0.678598 0.281085 -0.678598
+0.678598 0.281085 -0.678598
+0.678598 0.281085 -0.678598
+0.678598 0.281085 -0.678598
+-0.357407 -0.862856 -0.357407
+-0.357407 -0.862856 -0.357407
+-0.357407 -0.862856 -0.357407
+-0.357407 -0.862856 0.357407
+-0.357407 -0.862856 0.357407
+-0.357407 -0.862856 0.357407
+0.357407 -0.862856 0.357407
+0.357407 -0.862856 0.357407
+0.357407 -0.862856 0.357407
+0.357407 -0.862856 -0.357407
+0.357407 -0.862856 -0.357407
+0.357407 -0.862856 -0.357407
+-0.357407 0.862856 -0.357407
+-0.357407 0.862856 -0.357407
+-0.357407 0.862856 -0.357407
+-0.357407 0.862856 0.357407
+-0.357407 0.862856 0.357407
+-0.357407 0.862856 0.357407
+0.357407 0.862856 0.357407
+0.357407 0.862856 0.357407
+0.357407 0.862856 0.357407
+0.357407 0.862856 -0.357407
+0.357407 0.862856 -0.357407
+0.357407 0.862856 -0.357407
+</float_array>
+          <technique_common>
+            <accessor source="#bullet-lib-Normal0-array" count="72" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="bullet-lib-UV0">
+          <float_array id="bullet-lib-UV0-array" count="34">
+0.000000 0.250000
+0.250000 0.250000
+0.500000 0.250000
+0.750000 0.250000
+1.000000 0.250000
+0.000000 0.500000
+0.250000 0.500000
+0.500000 0.500000
+0.750000 0.500000
+1.000000 0.500000
+0.000000 0.750000
+0.250000 0.750000
+0.500000 0.750000
+0.750000 0.750000
+1.000000 0.750000
+0.500000 0.000000
+0.500000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#bullet-lib-UV0-array" count="17" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="bullet-lib-Vertex">
+          <input semantic="POSITION" source="#bullet-lib-Position"/>
+        </vertices>
+        <polygons material="phong1" count="24">
+          <input semantic="VERTEX" offset="0" source="#bullet-lib-Vertex"/>
+          <input semantic="NORMAL" offset="1" source="#bullet-lib-Normal0"/>
+          <input semantic="TEXCOORD" offset="2" set="0" source="#bullet-lib-UV0"/>
+          <p>0 0 0 1 1 1 5 2 6</p>
+          <p>5 3 6 4 4 5 0 5 0</p>
+          <p>1 6 1 2 7 2 6 8 7</p>
+          <p>6 9 7 5 10 6 1 11 1</p>
+          <p>2 12 2 3 13 3 7 14 8</p>
+          <p>7 15 8 6 16 7 2 17 2</p>
+          <p>3 18 3 0 19 4 4 20 9</p>
+          <p>4 21 9 7 22 8 3 23 3</p>
+          <p>4 24 5 5 25 6 9 26 11</p>
+          <p>9 27 11 8 28 10 4 29 5</p>
+          <p>5 30 6 6 31 7 10 32 12</p>
+          <p>10 33 12 9 34 11 5 35 6</p>
+          <p>6 36 7 7 37 8 11 38 13</p>
+          <p>11 39 13 10 40 12 6 41 7</p>
+          <p>7 42 8 4 43 9 8 44 14</p>
+          <p>8 45 14 11 46 13 7 47 8</p>
+          <p>1 48 1 0 49 0 12 50 15</p>
+          <p>2 51 2 1 52 1 12 53 15</p>
+          <p>3 54 3 2 55 2 12 56 15</p>
+          <p>0 57 4 3 58 3 12 59 15</p>
+          <p>8 60 10 9 61 11 13 62 16</p>
+          <p>9 63 11 10 64 12 13 65 16</p>
+          <p>10 66 12 11 67 13 13 68 16</p>
+          <p>11 69 13 8 70 14 13 71 16</p>
+        </polygons>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="RootNode" name="RootNode">
+      <node id="bullet" name="bullet">
+        <matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix>
+        <instance_geometry url="#bullet-lib">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="phong1" target="#phong1"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#RootNode"/>
+  </scene>
+</COLLADA>
+

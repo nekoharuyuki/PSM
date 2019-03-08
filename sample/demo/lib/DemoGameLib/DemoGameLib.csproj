@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B269B495-09B8-4B06-8FC9-B4A7780BB9E9}</ProjectGuid>
+    <ProjectTypeGuids>{69878862-DA7D-4DC6-B0A1-50D8FAB4242F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DemoGameLib</RootNamespace>
+    <AssemblyName>DemoGameLib</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG, DEBUG_GEOMETORY_DRAW</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Sce.PlayStation.Core" />
+    <Reference Include="Sce.PlayStation.HighLevel.UI" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Sce\Sce.Psm.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="Application.cs" />
+    <Compile Include="InputGamePad.cs" />
+    <Compile Include="InputTouch.cs" />
+    <Compile Include="IScene.cs" />
+    <Compile Include="SceneManager.cs" />
+    <Compile Include="BasicMeshFactory.cs" />
+    <Compile Include="MeshData.cs" />
+    <Compile Include="GeometrySphere.cs" />
+    <Compile Include="GeometryPlane.cs" />
+    <Compile Include="GeometryTriangle.cs" />
+    <Compile Include="GeometryLine.cs" />
+    <Compile Include="GraphicsDevice.cs" />
+    <Compile Include="Camera.cs" />
+    <Compile Include="CommonCollision.cs" />
+    <Compile Include="GeometryCapsule.cs" />
+    <Compile Include="RenderGeometry.cs" />
+    <Compile Include="Graphics2D.cs" />
+    <Compile Include="Sprite.cs" />
+    <Compile Include="TextureRenderer.cs" />
+    <Compile Include="DepthOfFealdFilter.cs" />
+    <Compile Include="GaussianXFilter.cs" />
+    <Compile Include="GaussianYFilter.cs" />
+    <Compile Include="Fliter.cs" />
+  </ItemGroup>
+</Project>

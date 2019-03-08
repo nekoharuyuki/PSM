@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8C6ABB80-74B5-4645-96CA-AE682013A9A8}</ProjectGuid>
+    <ProjectTypeGuids>{69878862-DA7D-4DC6-B0A1-50D8FAB4242F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Physics2DSample</RootNamespace>
+    <AssemblyName>Physics2DSample</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="MainTest.cs" />
+    <Compile Include="BasicScene\CompoundScene.cs" />
+    <Compile Include="BasicScene\JointScene.cs" />
+    <Compile Include="BasicScene\PrimitiveScene.cs" />
+    <Compile Include="BasicScene\PyramidStackScene.cs" />
+    <Compile Include="BasicScene\SmallScaleScene.cs" />
+    <Compile Include="GameScene\HammerThrowerScene.cs" />
+    <Compile Include="GameScene\AirHockeyScene.cs" />
+    <Compile Include="GameScene\PinBallScene.cs" />
+    <Compile Include="TutorialScene\DifferentMassScene.cs" />
+    <Compile Include="TutorialScene\MassUnstableScene.cs" />
+    <Compile Include="TutorialScene\LargeSmallScene.cs" />
+    <Compile Include="TutorialScene\CreateConvexScene.cs" />
+    <Compile Include="TutorialScene\CollisionFilterScene.cs" />
+    <Compile Include="TutorialScene\GroupFilterScene.cs" />
+    <Compile Include="TutorialScene\CollisionGroupScene.cs" />
+    <Compile Include="TutorialScene\SleepWakeupScene.cs" />
+    <Compile Include="TutorialScene\BallJointScene.cs" />
+    <Compile Include="TutorialScene\SliderJointScene.cs" />
+    <Compile Include="TutorialScene\AnyDirSliderScene.cs" />
+    <Compile Include="TutorialScene\FixedOrStaticScene.cs" />
+    <Compile Include="TutorialScene\ChainJointScene.cs" />
+    <Compile Include="TutorialScene\WheelMakeScene.cs" />
+    <Compile Include="TutorialScene\QueryContactScene.cs" />
+    <Compile Include="TutorialScene\CreateCompoundScene.cs" />
+    <Compile Include="TutorialScene\ScenePropertyScene.cs" />
+    <Compile Include="TutorialScene\NonCenterJointScene.cs" />
+    <Compile Include="TutorialScene\TriggerObjectScene.cs" />
+    <Compile Include="TutorialScene\CompoundBallanceScene.cs" />
+    <Compile Include="TutorialScene\ChangeTensorScene.cs" />
+    <Compile Include="TutorialScene\CreateRagdollScene.cs" />
+    <Compile Include="TutorialScene\SimulationAreaScene.cs" />
+    <Compile Include="TutorialScene\LineChainScene.cs" />
+    <Compile Include="TutorialScene\VehicleMakeScene.cs" />
+    <Compile Include="TutorialScene\TextureWithScene.cs" />
+    <Compile Include="TutorialScene\JointRotatingScene.cs" />
+    <Compile Include="TutorialScene\KinematicObjectScene.cs" />
+    <Compile Include="TutorialScene\AnimationWithScene.cs" />
+    <Compile Include="TutorialScene\SpriteBatchWithScene.cs" />
+    <Compile Include="TutorialScene\RayCastScene.cs" />
+    <Compile Include="TutorialScene\ChainSpringScene.cs" />
+    <Compile Include="TutorialScene\JointSoftbodyScene.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\renga.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\blue.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\red.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\green.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\monster.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\robot.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Sce.PlayStation.Core" />
+    <Reference Include="Sce.PlayStation.HighLevel.Physics2D" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Sce\Sce.Psm.CSharp.targets" />
+  <ItemGroup>
+    <ShaderProgram Include="shaders\test.fcg" />
+    <ShaderProgram Include="shaders\test.vcg" />
+    <ShaderProgram Include="shaders\texture.fcg" />
+    <ShaderProgram Include="shaders\texture.vcg" />
+    <ShaderProgram Include="shaders\animation.fcg" />
+    <ShaderProgram Include="shaders\animation.vcg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="app.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\lib\SampleLib\SampleLib.csproj">
+      <Project>{DA12989D-8B5F-4844-A97A-278F6397CE1D}</Project>
+      <Name>SampleLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,35 @@
+/* PlayStation(R)Mobile SDK 1.21.01
+ * Copyright (C) 2013 Sony Computer Entertainment Inc.
+ * All Rights Reserved.
+ */
+
+void main( float3 in v_Normal   : TEXCOORD2,
+		   float2 in v_TexCoord : TEXCOORD0,
+		   float4 in v_PosCoord : TEXCOORD1,
+		   float4 out Color     : COLOR,
+		   uniform float3 lightPosition,
+		   uniform float3 lightAmbient,
+		   uniform float3 eyePosLocal,
+		   uniform float shininess,
+		   uniform sampler2D s_Texture : TEXUNIT0 )
+{
+	float3 N = normalize(v_Normal);
+
+	// diffuse
+	float3 lightDirection = normalize(lightPosition - v_PosCoord.xyz);
+	float diffuseLight = max(dot(N, lightDirection), 0.0);
+
+	// specular
+	float3 eyeDirection = normalize(eyePosLocal - v_PosCoord.xyz);
+	float3 halfAngle = normalize(lightDirection + eyeDirection);
+	float specularLight = pow(max(dot(halfAngle, N), 0.0), shininess);
+	if (diffuseLight <= 0.0)
+		specularLight = 0.0;
+
+	// final
+	float4 texSample = tex2D(s_Texture, v_TexCoord);
+	float3 color = (texSample.xyz * (diffuseLight + lightAmbient)) + specularLight;
+	
+	Color.xyz = color;
+	Color.w = texSample.w;
+}

@@ -1,0 +1,24 @@
+/* PlayStation(R)Mobile SDK 1.21.01
+ * Copyright (C) 2013 Sony Computer Entertainment Inc.
+ * All Rights Reserved.
+ */
+
+void main( float2 in v_TexCoord00    : TEXCOORD0,
+		   float4 in v_LocalPosition : TEXCOORD1,
+		   float4 out Color          : COLOR,
+		   uniform sampler2D Texture00,
+		   uniform float4 LocalTargetPosition,
+		   uniform float Radius )
+{
+	float3 dir = LocalTargetPosition.xyz - v_LocalPosition.xyz;
+	float len = length( dir );
+	float alpha = 0.0;
+	if( len < Radius ){
+		alpha = 1.0 - (len / Radius);
+	}
+	if( alpha > 0.0 ){
+		Color = tex2D( Texture00, v_TexCoord00 ) * float4( alpha, 0.0, 0.0, alpha );
+	}else{
+		discard;
+	}
+}

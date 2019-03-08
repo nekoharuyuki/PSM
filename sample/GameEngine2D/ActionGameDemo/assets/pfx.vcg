@@ -1,0 +1,15 @@
+
+void main(
+	uniform float4x4 MVP,
+	in float2 iPosition : POSITION,
+	in float2 iUV : TEXCOORD0,
+	in float4 iColor : TEXCOORD1,
+	out float4 oPosition : POSITION,
+	out float2 oUV : TEXCOORD0,
+	out float4 oColor : TEXCOORD1
+)
+{
+	oPosition = mul( float4(iPosition, 0.0f, 1.0f), MVP );
+	oUV = iUV;
+	oColor = iColor;
+}

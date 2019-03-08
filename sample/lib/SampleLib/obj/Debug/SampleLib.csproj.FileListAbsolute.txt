@@ -1,0 +1,4 @@
+C:\Users\Public\Documents\PSM\sample\lib\SampleLib\bin\Debug\SampleLib.dll
+C:\Users\Public\Documents\PSM\sample\lib\SampleLib\bin\Debug\SampleLib.pdb
+C:\Users\Public\Documents\PSM\sample\lib\SampleLib\obj\Debug\SampleLib.dll
+C:\Users\Public\Documents\PSM\sample\lib\SampleLib\obj\Debug\SampleLib.pdb

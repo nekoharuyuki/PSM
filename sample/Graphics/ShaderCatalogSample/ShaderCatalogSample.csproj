@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1DD33AA9-9CF5-4439-97B6-0247E5E69E87}</ProjectGuid>
+    <ProjectTypeGuids>{69878862-DA7D-4DC6-B0A1-50D8FAB4242F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ShaderCatalogSample</RootNamespace>
+    <AssemblyName>ShaderCatalogSample</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Sce.PlayStation.Core" />
+    <Reference Include="System" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Sce\Sce.Psm.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="BasicMeshFactory.cs" />
+    <Compile Include="BgModel.cs" />
+    <Compile Include="Camera.cs" />
+    <Compile Include="IScene.cs" />
+    <Compile Include="LightModel.cs" />
+    <Compile Include="MeshData.cs" />
+    <Compile Include="Model.cs" />
+    <Compile Include="ModelData.cs" />
+    <Compile Include="SceneBumpMapShader.cs" />
+    <Compile Include="SceneFogShader.cs" />
+    <Compile Include="SceneGaussianFilter.cs" />
+    <Compile Include="SceneGlossMapShader.cs" />
+    <Compile Include="SceneGouraudShader.cs" />
+    <Compile Include="SceneMultiTextureShader.cs" />
+    <Compile Include="ScenePhongShader.cs" />
+    <Compile Include="SceneProjectionShadow.cs" />
+    <Compile Include="SceneSimpleShader.cs" />
+    <Compile Include="SceneTextureShader.cs" />
+    <Compile Include="SceneToonShader.cs" />
+    <Compile Include="SceneVertexLightingShader.cs" />
+    <Compile Include="ShaderCatalog.cs" />
+    <Compile Include="TextureRenderer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ShaderProgram Include="shaders\Fog.fcg" />
+    <ShaderProgram Include="shaders\MultiTexture.fcg" />
+    <ShaderProgram Include="shaders\Fog.vcg" />
+    <ShaderProgram Include="shaders\BumpMap.vcg" />
+    <ShaderProgram Include="shaders\Simple.vcg" />
+    <ShaderProgram Include="shaders\BumpMap.fcg" />
+    <ShaderProgram Include="shaders\Phong.fcg" />
+    <ShaderProgram Include="shaders\Texture.fcg" />
+    <ShaderProgram Include="shaders\GlossMap.vcg" />
+    <ShaderProgram Include="shaders\ShadowMap.vcg" />
+    <ShaderProgram Include="shaders\BlinnPhong.fcg" />
+    <ShaderProgram Include="shaders\ProjectionShadow.fcg" />
+    <ShaderProgram Include="shaders\BlinnPhong.vcg" />
+    <ShaderProgram Include="shaders\MultiTexture.vcg" />
+    <ShaderProgram Include="shaders\Gouraud.fcg" />
+    <ShaderProgram Include="shaders\Toon.fcg" />
+    <ShaderProgram Include="shaders\VertexLighting.fcg" />
+    <ShaderProgram Include="shaders\Gouraud.vcg" />
+    <ShaderProgram Include="shaders\GlossMap.fcg" />
+    <ShaderProgram Include="shaders\VertexLighting.vcg" />
+    <ShaderProgram Include="shaders\ProjectionShadow.vcg" />
+    <ShaderProgram Include="shaders\VertexColor.vcg" />
+    <ShaderProgram Include="shaders\VertexColor.fcg" />
+    <ShaderProgram Include="shaders\Texture.vcg" />
+    <ShaderProgram Include="shaders\Toon.vcg" />
+    <ShaderProgram Include="shaders\Phong.vcg" />
+    <ShaderProgram Include="shaders\Simple.fcg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\glossmap.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\multiple_texture.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\normal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\normal01.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\renga.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\toon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\lib\SampleLib\SampleLib.csproj">
+      <Project>{DA12989D-8B5F-4844-A97A-278F6397CE1D}</Project>
+      <Name>SampleLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PsmMetadata Include="app.xml" />
+  </ItemGroup>
+</Project>

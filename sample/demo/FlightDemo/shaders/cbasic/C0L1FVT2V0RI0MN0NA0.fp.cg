@@ -1,0 +1,66 @@
+/* PlayStation(R)Mobile SDK 1.21.01
+ * Copyright (C) 2013 Sony Computer Entertainment Inc.
+ * All Rights Reserved.
+ */
+
+//------------------------------------------------------------------------------------------
+float4 ComputeLights( float3 N,
+	float3 LD0, float3 LD1, float3 LD2, float3 ED,
+	float4 KD0, float4 KS0, float4 KD1, float4 KS1, float4 KD2, float4 KS2,
+	float4 IKA, float4 ID, float4 IS, float SH )
+{
+	float4 Color;
+	float3 V = ED;
+
+	float3 L = normalize( LD0 );
+	float4 idiffuse = ID;
+	float4 ispecular = IS;
+	float4 kdiffuse = KD0;
+	float4 kspecular = KS0;
+
+	float diffuseL = max( dot( N, L ), 0.0 );
+	float4 diffuse = idiffuse * (kdiffuse * diffuseL);
+	float3 H = normalize( L + V );
+	float speclarL = pow( max( dot( N, H ), 0.0 ), SH );
+	float4 speclar = ispecular * (kspecular * speclarL);
+	Color = IKA + (diffuse + speclar);
+
+	return Color;
+}
+
+void main(
+	float3 in v_LocalEyeDir			: TEXCOORD4,
+	float3 in v_LocalLightDir00		: TEXCOORD5,
+	float3 in v_LocalLightDir01		: TEXCOORD6,
+	float3 in v_LocalLightDir02		: TEXCOORD7,
+	float2 in v_TexCoord00			: TEXCOORD0,
+
+	float4 out Color				: COLOR,
+
+	uniform float4 IKAmbient,
+	uniform float4 IDiffuse,
+	uniform float4 ISpecular,
+	uniform float Shininess,
+	uniform float4 KDiffuse00,
+	uniform float4 KSpecular00,
+	uniform float4 KDiffuse01,
+	uniform float4 KSpecular01,
+	uniform float4 KDiffuse02,
+	uniform float4 KSpecular02,
+
+	uniform sampler2D Texture00,
+	uniform sampler2D Texture01,
+
+	uniform float AlphaThreshold
+)
+{
+	float4 diffuse = IDiffuse;
+	float4 dstColor = Color;
+	float4 texColor = tex2D( Texture00, v_TexCoord00 );
+	float3 N = normalize( texColor.xyz * 2.0 - 1.0 );
+
+	dstColor = ComputeLights( N, v_LocalLightDir00, v_LocalLightDir01, v_LocalLightDir02, v_LocalEyeDir, KDiffuse00, KSpecular00, KDiffuse01, KSpecular01, KDiffuse02, KSpecular02, IKAmbient, diffuse, ISpecular, Shininess );
+	texColor = tex2D( Texture01, v_TexCoord00 );
+
+	Color = dstColor * texColor;
+}

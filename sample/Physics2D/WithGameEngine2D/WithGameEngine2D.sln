@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WithGameEngine2D", "WithGameEngine2D.csproj", "{250DB80B-2ABF-44B8-BCDF-06DA63432876}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{250DB80B-2ABF-44B8-BCDF-06DA63432876}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{250DB80B-2ABF-44B8-BCDF-06DA63432876}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{250DB80B-2ABF-44B8-BCDF-06DA63432876}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{250DB80B-2ABF-44B8-BCDF-06DA63432876}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = WithGameEngine2D.csproj
+	EndGlobalSection
+EndGlobal

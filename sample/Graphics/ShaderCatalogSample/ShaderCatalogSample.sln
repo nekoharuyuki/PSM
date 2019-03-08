@@ -1,0 +1,28 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShaderCatalogSample", "ShaderCatalogSample.csproj", "{1DD33AA9-9CF5-4439-97B6-0247E5E69E87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleLib", "..\..\lib\SampleLib\SampleLib.csproj", "{DA12989D-8B5F-4844-A97A-278F6397CE1D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1DD33AA9-9CF5-4439-97B6-0247E5E69E87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DD33AA9-9CF5-4439-97B6-0247E5E69E87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DD33AA9-9CF5-4439-97B6-0247E5E69E87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DD33AA9-9CF5-4439-97B6-0247E5E69E87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA12989D-8B5F-4844-A97A-278F6397CE1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA12989D-8B5F-4844-A97A-278F6397CE1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA12989D-8B5F-4844-A97A-278F6397CE1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA12989D-8B5F-4844-A97A-278F6397CE1D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = ShaderCatalog.csproj
+	EndGlobalSection
+EndGlobal

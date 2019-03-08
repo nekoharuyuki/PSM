@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<application project_name="SimpleShooting" version="1.00" runtime_version="1.10" sdk_version="1.10.00" default_locale="en-US">
+  <name>
+    <localized_item locale="en-US" value="Simple Shooting" />
+    <localized_item locale="en-GB" value="Simple Shooting" />
+    <localized_item locale="ja-JP" value="シンプルシューティング" />
+  </name>
+  <short_name>
+    <localized_item locale="en-US" value="Simple Shooting" />
+    <localized_item locale="en-GB" value="Simple Shooting" />
+    <localized_item locale="ja-JP" value="シンプルシューティング" />
+  </short_name>
+  <parental_control lock_level="3" />
+  <rating_list highest_age_limit="7" has_online_features="false">
+    <online_features chat="false" personal_info="false" user_location="false" exchange_content="false" />
+    <rating type="ESRB" value="3" age="3" code="ESRB_Dummy" />
+    <rating type="PEGIEX" value="7" age="7" code="PEGI_Dummy">
+      <descriptor>Language</descriptor>
+      <descriptor>Fear</descriptor>
+    </rating>
+    <rating type="SELF" value="3" age="3" />
+  </rating_list>
+  <images icon_128x128="icon_image\icon128.png" icon_256x256="icon_image\icon256.png" icon_512x512="icon_image\icon512.png" splash_854x480="icon_image\splash.png" />
+  <genre_list>
+    <genre value="Games:Shooter" />
+    <genre value="Games:Action" />
+  </genre_list>
+  <developer>
+    <name value="psm test" />
+  </developer>
+  <website href="http://FooBar.com" />
+  <copyright author="Copyright(c)2012 FooBar Inc." text="copyright.txt" />
+  <purchase>
+    <product_list />
+  </purchase>
+  <runtime_config>
+    <memory managed_heap_size="16384" resource_heap_size="32768" />
+    <display max_screen_size="1280x800" />
+  </runtime_config>
+  <feature_list>
+    <feature value="GamePad" />
+    <feature value="Touch" />
+  </feature_list>
+</application>

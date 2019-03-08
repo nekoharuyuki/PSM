@@ -1,0 +1,3 @@
+
+Copyright(C) 2012 Yamada Taro. All Rights Reserved.
+

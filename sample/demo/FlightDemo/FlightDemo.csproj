@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{658BCD10-4E7B-4D7E-B4CD-B0154983643F}</ProjectGuid>
+    <ProjectTypeGuids>{69878862-DA7D-4DC6-B0A1-50D8FAB4242F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>FlightDemo</RootNamespace>
+    <AssemblyName>FlightDemo</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="src\FlightDemo.cs" />
+    <Compile Include="src\GameMain.cs" />
+    <Compile Include="src\SceneGameMain.cs" />
+    <Compile Include="src\Renderer.cs" />
+    <Compile Include="src\PlaneHandle.cs" />
+    <Compile Include="src\InputManager.cs" />
+    <Compile Include="src\FlightRoute.cs" />
+    <Compile Include="src\GuideLightModel.cs" />
+    <Compile Include="src\PlaneModel.cs" />
+    <Compile Include="src\PlaneUnit.cs" />
+    <Compile Include="src\GuideLightUnit.cs" />
+    <Compile Include="src\GuideLightHandle.cs" />
+    <Compile Include="src\DemoUtil.cs" />
+    <Compile Include="src\GateModel.cs" />
+    <Compile Include="src\GateUnit.cs" />
+    <Compile Include="src\ItemUnit.cs" />
+    <Compile Include="src\ItemSpeedUpUnit.cs" />
+    <Compile Include="src\ItemHandle.cs" />
+    <Compile Include="src\ItemSpeedDownUnit.cs" />
+    <Compile Include="src\SceneTitle.cs" />
+    <Compile Include="sprite\LayoutAction.cs" />
+    <Compile Include="sprite\LayoutAnimation.cs" />
+    <Compile Include="sprite\LayoutAnimationList.cs" />
+    <Compile Include="sprite\NumberLayout.cs" />
+    <Compile Include="sprite\SpriteAnimation.cs" />
+    <Compile Include="src\TimerModel.cs" />
+    <Compile Include="src\TimerUnit.cs" />
+    <Compile Include="src\AddSecEffect.cs" />
+    <Compile Include="src\AddSecEffectModel.cs" />
+    <Compile Include="src\UncontrollableEffect.cs" />
+    <Compile Include="src\UncontrollableEffectModel.cs" />
+    <Compile Include="src\Effect2DHandle.cs" />
+    <Compile Include="src\GameCommonData.cs" />
+    <Compile Include="src\FlightUnitModel.cs" />
+    <Compile Include="src\BgModel.cs" />
+    <Compile Include="src\BgUnit.cs" />
+    <Compile Include="src\CameraHandle.cs" />
+    <Compile Include="src\CameraUnit.cs" />
+    <Compile Include="src\FlightUnitManager.cs" />
+    <Compile Include="src\FlightUnit.cs" />
+    <Compile Include="src\FlightUnitHandle.cs" />
+    <Compile Include="UnitSys\Unit.cs" />
+    <Compile Include="UnitSys\UnitCommonData.cs" />
+    <Compile Include="UnitSys\UnitHandle.cs" />
+    <Compile Include="UnitSys\UnitManager.cs" />
+    <Compile Include="UnitSys\UnitModel.cs" />
+    <Compile Include="src\SpeedMeterModel.cs" />
+    <Compile Include="src\SpeedMeterUnit.cs" />
+    <Compile Include="src\AltimeterModel.cs" />
+    <Compile Include="src\AltimeterUnit.cs" />
+    <Compile Include="src\TimerHandle.cs" />
+    <Compile Include="src\StartGateModel.cs" />
+    <Compile Include="src\StartGateUnit.cs" />
+    <Compile Include="src\GoalGateModel.cs" />
+    <Compile Include="src\GoalGateUnit.cs" />
+    <Compile Include="src\FlightPipeModel.cs" />
+    <Compile Include="src\FlightPipeUnit.cs" />
+    <Compile Include="src\FlightPipeHandle.cs" />
+    <Compile Include="src\EnvLightingUnit.cs" />
+    <Compile Include="src\EnvLightingHandle.cs" />
+    <Compile Include="src\Finish2DHandle.cs" />
+    <Compile Include="src\Finish2DModel.cs" />
+    <Compile Include="src\Finish2DUnit.cs" />
+    <Compile Include="src\FinishTimeHandle.cs" />
+    <Compile Include="src\FinishTimeModel.cs" />
+    <Compile Include="src\FinishTimeUnit.cs" />
+    <Compile Include="src\VirtualPadModel.cs" />
+    <Compile Include="src\VirtualPadUnit.cs" />
+    <Compile Include="src\StartGateHandle.cs" />
+    <Compile Include="src\GoalGateHandle.cs" />
+    <Compile Include="src\MotionInputHandle.cs" />
+    <Compile Include="src\MotionInputModel.cs" />
+    <Compile Include="src\MotionInputUnit.cs" />
+    <Compile Include="src\AudioManager.cs" />
+    <Compile Include="src\ItemTimeDecUnit.cs" />
+    <Compile Include="src\ItemTimeIncUnit.cs" />
+    <Compile Include="src\Timeover2DHandle.cs" />
+    <Compile Include="src\Timeover2DModel.cs" />
+    <Compile Include="src\Timeover2DUnit.cs" />
+    <Compile Include="src\EnemyHandle.cs" />
+    <Compile Include="src\EnemyUnit.cs" />
+    <Compile Include="src\EnemyPlaneUnit.cs" />
+    <Compile Include="src\DbgSphere.cs" />
+    <Compile Include="src\ItemModel.cs" />
+    <Compile Include="src\EnemyModel.cs" />
+    <Compile Include="src\EnemyBalloonUnit.cs" />
+    <Compile Include="src\EnemyAirShipUnit.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\" />
+    <Folder Include="sprite\" />
+    <Folder Include="UnitSys\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Sce.PlayStation.Core" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Sce\Sce.Psm.CSharp.targets" />
+  <ItemGroup>
+    <Content Include="res\data\flt\flt_bg.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\RenderMap.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\stg_tex03.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\balloon_normalM.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\efx_good.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\stg_tex05.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\speed_l_00.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\enemy00_01.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\stg_tex16.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\speed_l_01.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\stg_tex06.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\plane_enemy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\stg_tex15.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\time_add_01.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\time_deduct_00.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\RenderMap2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\stg_tex14.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\speed_up_00.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\efx_bad.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\time_deduct_01.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\stg_tex17.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\speed_up_01.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\stg_tex07.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\stg_tex10.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\stg_tex01.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\stg_tex18.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\stg_tex09.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\sea.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\stg_tex11.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\plane_00.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\plane_normalM.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\airship00_01.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\plane_02.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\sea_alp.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\stg_tex12.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\stg_tex08.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\RenderMap3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\balloon_albedo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\plane_tex01.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\airship00_00.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\time_add_00.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\stg_tex13.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\plane_tex03.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\enemy00_00.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\enemy00_02.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\png\plane_01.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\plane_enemy\pass_enemy.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\plane_enemy\enemy00.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\point\point.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\point\plane.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\area\area.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\opening\opening.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\time_deduct\time_deduct.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\goal\goal.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\speed_up\speed_up.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\effect\efx_good_b.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\effect\efx_good_a.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\effect\efx_bad.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\time_add\time_add.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\speed_l\speed_l.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\airship\pass_airship.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\airship\airship.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\airship\airship00.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\start\start_3.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\start\start_1.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\start\start_2.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\start\start.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\balloon\pass_ballon2.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\balloon\pass_ballon1.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\balloon\balloon.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\gate\gate.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\plane\plane01.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\plane\plane03.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\plane\plane02.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\plane\pass_plane.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\plane\plane04.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\plane\plane00.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\snd\F_GAME_SE_001.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\snd\F_GAME_SE_100.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\snd\F_GAME_SE_051.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\snd\F_GAME_SE_080.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\snd\F_GAME_SE_070.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\snd\F_GAME_SE_060.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\snd\F_GAME_SE_090.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\snd\F_SYS_SE_001.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\snd\F_GAME_SE_050.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\snd\F_GAME_SE_041.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\snd\F_GAME_BGM_001.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\snd\F_GAME_SE_022.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\snd\F_GAME_SE_071.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\snd\F_GAME_SE_061.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\snd\F_GAME_SE_010.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\snd\F_GAME_SE_020.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\snd\F_GAME_SE_000.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\snd\F_GAME_SE_011.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\snd\F_GAME_SE_021.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\snd\F_GAME_SE_040.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\2d\2d_1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\2d\2d_3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\2d\2d_2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <PsmMetadata Include="app.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ShaderProgram Include="shaders\AmbientColor.fcg" />
+    <ShaderProgram Include="shaders\AmbientColor.vcg" />
+    <ShaderProgram Include="shaders\Pipe.fcg" />
+    <ShaderProgram Include="shaders\Pipe.vcg" />
+    <ShaderProgram Include="shaders\Simple.fcg" />
+    <ShaderProgram Include="shaders\Simple.vcg" />
+    <ShaderProgram Include="shaders\Texture.fcg" />
+    <ShaderProgram Include="shaders\Texture.vcg" />
+    <ShaderProgram Include="shaders\cbasic\ASSERT.fcg" />
+    <ShaderProgram Include="shaders\cbasic\ASSERT.vcg" />
+    <ShaderProgram Include="shaders\cbasic\C0L0NNT1I0MN0NN0NA0.fp.cg" />
+    <ShaderProgram Include="shaders\cbasic\C0L0NNT1I0RN0NN0NA0.fp.cg" />
+    <ShaderProgram Include="shaders\cbasic\C0L0NNT2I0MI1MN0NA0.fp.cg" />
+    <ShaderProgram Include="shaders\cbasic\C0L1FNT1I0RN0NN0NA0.fp.cg" />
+    <ShaderProgram Include="shaders\cbasic\C0L1FVT2V0RI0MN0NA0.fp.cg" />
+    <ShaderProgram Include="shaders\cbasic\W1C0L0NNA0T1.vp.cg" />
+    <ShaderProgram Include="shaders\cbasic\W1C0L0NNA0T2.vp.cg" />
+    <ShaderProgram Include="shaders\cbasic\W1C0L0NNA1T1.vp.cg" />
+    <ShaderProgram Include="shaders\cbasic\W1C0L0NNA1T2.vp.cg" />
+    <ShaderProgram Include="shaders\cbasic\W1C0L1FNA0T1.vp.cg" />
+    <ShaderProgram Include="shaders\cbasic\W1C0L1FVA0T2.vp.cg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\lib\BasicModel\BasicModel.csproj">
+      <Project>{0859B93A-C11F-4CF7-B743-218C8C6D248B}</Project>
+      <Name>BasicModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\lib\DemoGameLib\DemoGameLib.csproj">
+      <Project>{B269B495-09B8-4B06-8FC9-B4A7780BB9E9}</Project>
+      <Name>DemoGameLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

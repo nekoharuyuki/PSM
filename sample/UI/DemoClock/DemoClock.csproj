@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{53112390-EADE-458C-A707-3F74CE4D64AA}</ProjectGuid>
+    <ProjectTypeGuids>{69878862-DA7D-4DC6-B0A1-50D8FAB4242F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>DemoClock</RootNamespace>
+    <AssemblyName>DemoClock</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="MainScene.composer.cs" />
+    <Compile Include="MainScene.cs" />
+    <Compile Include="AnalogClockPanel.cs" />
+    <Compile Include="SettingDialog.composer.cs" />
+    <Compile Include="SettingDialog.cs" />
+    <Compile Include="SettingData.cs" />
+    <Compile Include="FlipClockPanel.cs" />
+    <Compile Include="FlipPanelAnimation.cs" />
+    <Compile Include="FlipClockPanel.composer.cs" />
+    <Compile Include="AnalogClockAnimation.cs" />
+    <Compile Include="AnalogClockPanel.composer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Sce.PlayStation.Core" />
+    <Reference Include="Sce.PlayStation.HighLevel.UI" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Sce\Sce.Psm.CSharp.targets" />
+  <ItemGroup>
+    <PsmMetadata Include="app.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </PsmMetadata>
+    <Content Include="assets\bg.png" />
+    <Content Include="assets\bg_analog_clock.png" />
+    <Content Include="assets\bg_flip_clock.png" />
+    <Content Include="assets\clock_bg.png" />
+    <Content Include="assets\flip.png" />
+    <Content Include="assets\flip_bg.png" />
+    <Content Include="assets\hour_hand_10.png" />
+    <Content Include="assets\minute_hand_16.png" />
+    <Content Include="assets\num_0.png" />
+    <Content Include="assets\num_1.png" />
+    <Content Include="assets\num_2.png" />
+    <Content Include="assets\num_3.png" />
+    <Content Include="assets\num_4.png" />
+    <Content Include="assets\num_5.png" />
+    <Content Include="assets\num_6.png" />
+    <Content Include="assets\num_7.png" />
+    <Content Include="assets\num_8.png" />
+    <Content Include="assets\num_9.png" />
+    <Content Include="assets\pin_hour.png" />
+    <Content Include="assets\pin_minute.png" />
+    <Content Include="assets\pin_second.png" />
+    <Content Include="assets\second_hand.png" />
+    <Content Include="assets\setting_normal.png" />
+    <Content Include="assets\setting_press.png" />
+    <Content Include="assets\Kyoto1.JPG" />
+    <Content Include="assets\Kyoto2.JPG" />
+    <Content Include="assets\London1.JPG" />
+    <Content Include="assets\London2.JPG" />
+    <Content Include="assets\Milan.JPG" />
+    <Content Include="assets\MontSaintMichel.JPG" />
+    <Content Include="assets\Munich.JPG" />
+    <Content Include="assets\Peru.JPG" />
+    <Content Include="assets\SanFrancisco.JPG" />
+    <Content Include="assets\Venice.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DemoClock.uic" />
+  </ItemGroup>
+</Project>

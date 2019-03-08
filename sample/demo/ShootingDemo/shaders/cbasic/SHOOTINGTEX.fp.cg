@@ -1,0 +1,20 @@
+/* PlayStation(R)Mobile SDK 1.21.01
+ * Copyright (C) 2013 Sony Computer Entertainment Inc.
+ * All Rights Reserved.
+ */
+
+//------------------------------------------------------------------------------------------
+void main(
+	float2 in v_TexCoord00			: TEXCOORD0,
+	float4 out Color				: COLOR,
+
+	uniform float4 IDiffuse,
+	uniform float4 KSpecular00,
+
+	uniform sampler2D Texture01		: TEXUNIT1
+)
+{
+	float4 texColor;
+	texColor = tex2D( Texture01, v_TexCoord00 );
+	Color = texColor * IDiffuse * KSpecular00;
+}

@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+	<title>Release Note</title>
+	<link></link>
+	<description>RSS for Release Note</description>
+	<language>en-us</language>
+	<copyright> 2012 Sony Computer Entertainment Inc. All Rights Reserved.</copyright>
+	<lastBuildDate>Wed, 04 Apr 2012 15:11:36 -0400</lastBuildDate>
+<item>
+	<title>0.98 New Additions and Modifications</title>
+	<description>Dispose() in the Widget and UIElement classes has been changed from a virtual function to a non-virtual function; Dispose(bool) and DisposeSelf() have been newly added as virtual functions.&amp;#xA;&amp;#xA;The RenderToFrameBuffer method has been added to the Widget class.&amp;#xA;&amp;#xA;The UnloadFromCache instance method has been added to the ImageAsset class.&amp;#xA;&amp;#xA;Fixed the problem where display was not correct when linefeed code was included in the Label character string.&amp;#xA;&amp;#xA;Fixed the problem where the values of WorldPosition and LocalPosition of DragEventsArgs become reversed.&amp;#xA;&amp;#xA;Fixed the problem where the value of MoveTarget of SlideTransition becomes reversed.</description>
+	<link>doc/en/release_note_en.html</link>
+	<pubDate>Tue, 27 Mar 2012 00:00:00 -0400</pubDate>
+	<guid>doc/en/release_note_en.html</guid>
+
+</item>
+<item>
+	<title>0.97 New Additions and Modifications</title>
+	<description>Added a feature for playing back animation formats (*.uim and *.uia). - It can play back animation converted from motion XML or XFL (XML format Flash project file). - For details, refer to "Adobe Flash Integration" in the document.&amp;#xA;&amp;#xA;Added the coordinate conversion system API to Widget and UIElement. - Added the LocalToWorld property to Widget and UIElement. - Added the ConvertScreenToLocal, ConvertLocalToScreen, and ConvertLocalToOtherWidget methods to Widget.&amp;#xA;&amp;#xA;Eliminated SpinBox, added DatePicker and TimePicker to replace it.&amp;#xA;&amp;#xA;Added pause and repeat features to Effect. - Added the Pause, Resume, OnPause, OnResume, and OnRepeat methods. - Added the Paused and Repeating properties to Effect.&amp;#xA;&amp;#xA;Renamed the Effect.IsPlay property to Playing.&amp;#xA;&amp;#xA;Renamed the Button.BackgroundColor property to BackgroundFilterColor. - Added the Dialog.BackgroundFilterColor property.&amp;#xA;&amp;#xA;Added the ListItemsChanged event (notifies of a change in ListItems) to PopupList. - Changed the ListItems property type to PopupListItemCollection.&amp;#xA;&amp;#xA;Added to and changed the hit determination API. - Added the UISystem.FindHitWidget method. - Changed the Widget.HitTest method from protected to public.</description>
+	<link>doc/en/release_note_en.html</link>
+	<pubDate>Tue, 20 Mar 2012 00:00:00 -0400</pubDate>
+	<guid>doc/en/release_note_en.html</guid>
+
+</item>
+<item>
+	<title>0.XX New Additions and Modifications</title>
+	<description>  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  </description>
+	<link>doc/en/release_note_en.html</link>
+	<pubDate>Tue, 13 Mar 2012 00:00:00 -0400</pubDate>
+	<guid>doc/en/release_note_en.html</guid>
+
+</item>
+<item>
+	<title>0.XX New Additions and Modifications</title>
+	<description>  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  </description>
+	<link>doc/en/release_note_en.html</link>
+	<pubDate>Tue, 13 Mar 2012 00:00:00 -0400</pubDate>
+	<guid>doc/en/release_note_en.html</guid>
+
+</item>
+<item>
+	<title>0.XX New Additions and Modifications</title>
+	<description>  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  </description>
+	<link>doc/en/release_note_en.html</link>
+	<pubDate>Tue, 13 Mar 2012 00:00:00 -0400</pubDate>
+	<guid>doc/en/release_note_en.html</guid>
+
+</item>
+<item>
+	<title>0.XX New Additions and Modifications</title>
+	<description>  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  </description>
+	<link>doc/en/release_note_en.html</link>
+	<pubDate>Tue, 13 Mar 2012 00:00:00 -0400</pubDate>
+	<guid>doc/en/release_note_en.html</guid>
+
+</item>
+<item>
+	<title>0.XX New Additions and Modifications</title>
+	<description>  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  </description>
+	<link>doc/en/release_note_en.html</link>
+	<pubDate>Tue, 13 Mar 2012 00:00:00 -0400</pubDate>
+	<guid>doc/en/release_note_en.html</guid>
+
+</item>
+<item>
+	<title>0.XX New Additions and Modifications</title>
+	<description>  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  </description>
+	<link>doc/en/release_note_en.html</link>
+	<pubDate>Tue, 13 Mar 2012 00:00:00 -0400</pubDate>
+	<guid>doc/en/release_note_en.html</guid>
+
+</item>
+<item>
+	<title>0.XX New Additions and Modifications</title>
+	<description>  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  </description>
+	<link>doc/en/release_note_en.html</link>
+	<pubDate>Tue, 13 Mar 2012 00:00:00 -0400</pubDate>
+	<guid>doc/en/release_note_en.html</guid>
+
+</item>
+<item>
+	<title>0.XX New Additions and Modifications</title>
+	<description>  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  </description>
+	<link>doc/en/release_note_en.html</link>
+	<pubDate>Tue, 13 Mar 2012 00:00:00 -0400</pubDate>
+	<guid>doc/en/release_note_en.html</guid>
+
+</item>
+<item>
+	<title>0.XX New Additions and Modifications</title>
+	<description>  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  </description>
+	<link>doc/en/release_note_en.html</link>
+	<pubDate>Tue, 13 Mar 2012 00:00:00 -0400</pubDate>
+	<guid>doc/en/release_note_en.html</guid>
+
+</item>
+<item>
+	<title>0.XX New Additions and Modifications</title>
+	<description>  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  </description>
+	<link>doc/en/release_note_en.html</link>
+	<pubDate>Tue, 13 Mar 2012 00:00:00 -0400</pubDate>
+	<guid>doc/en/release_note_en.html</guid>
+
+</item>
+<item>
+	<title>0.XX New Additions and Modifications</title>
+	<description>  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  </description>
+	<link>doc/en/release_note_en.html</link>
+	<pubDate>Tue, 13 Mar 2012 00:00:00 -0400</pubDate>
+	<guid>doc/en/release_note_en.html</guid>
+
+</item>
+<item>
+	<title>0.XX New Additions and Modifications</title>
+	<description>  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  </description>
+	<link>doc/en/release_note_en.html</link>
+	<pubDate>Tue, 13 Mar 2012 00:00:00 -0400</pubDate>
+	<guid>doc/en/release_note_en.html</guid>
+
+</item>
+<item>
+	<title>0.XX New Additions and Modifications</title>
+	<description>  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  </description>
+	<link>doc/en/release_note_en.html</link>
+	<pubDate>Tue, 13 Mar 2012 00:00:00 -0400</pubDate>
+	<guid>doc/en/release_note_en.html</guid>
+
+</item>
+<item>
+	<title>0.XX New Additions and Modifications</title>
+	<description>  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  </description>
+	<link>doc/en/release_note_en.html</link>
+	<pubDate>Tue, 13 Mar 2012 00:00:00 -0400</pubDate>
+	<guid>doc/en/release_note_en.html</guid>
+
+</item>
+<item>
+	<title>0.XX New Additions and Modifications</title>
+	<description>  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  </description>
+	<link>doc/en/release_note_en.html</link>
+	<pubDate>Tue, 13 Mar 2012 00:00:00 -0400</pubDate>
+	<guid>doc/en/release_note_en.html</guid>
+
+</item>
+<item>
+	<title>0.XX New Additions and Modifications</title>
+	<description>  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  </description>
+	<link>doc/en/release_note_en.html</link>
+	<pubDate>Tue, 13 Mar 2012 00:00:00 -0400</pubDate>
+	<guid>doc/en/release_note_en.html</guid>
+
+</item>
+<item>
+	<title>0.XX New Additions and Modifications</title>
+	<description>  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  </description>
+	<link>doc/en/release_note_en.html</link>
+	<pubDate>Tue, 13 Mar 2012 00:00:00 -0400</pubDate>
+	<guid>doc/en/release_note_en.html</guid>
+
+</item>
+<item>
+	<title>0.XX New Additions and Modifications</title>
+	<description>  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  </description>
+	<link>doc/en/release_note_en.html</link>
+	<pubDate>Tue, 13 Mar 2012 00:00:00 -0400</pubDate>
+	<guid>doc/en/release_note_en.html</guid>
+
+</item>
+<item>
+	<title>0.XX New Additions and Modifications</title>
+	<description>  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  </description>
+	<link>doc/en/release_note_en.html</link>
+	<pubDate>Tue, 13 Mar 2012 00:00:00 -0400</pubDate>
+	<guid>doc/en/release_note_en.html</guid>
+
+</item>
+<item>
+	<title>0.XX New Additions and Modifications</title>
+	<description>  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  </description>
+	<link>doc/en/release_note_en.html</link>
+	<pubDate>Tue, 13 Mar 2012 00:00:00 -0400</pubDate>
+	<guid>doc/en/release_note_en.html</guid>
+
+</item>
+<item>
+	<title>0.XX New Additions and Modifications</title>
+	<description>  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  </description>
+	<link>doc/en/release_note_en.html</link>
+	<pubDate>Tue, 13 Mar 2012 00:00:00 -0400</pubDate>
+	<guid>doc/en/release_note_en.html</guid>
+
+</item>
+<item>
+	<title>0.XX New Additions and Modifications</title>
+	<description>  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  </description>
+	<link>doc/en/release_note_en.html</link>
+	<pubDate>Tue, 13 Mar 2012 00:00:00 -0400</pubDate>
+	<guid>doc/en/release_note_en.html</guid>
+
+</item>
+<item>
+	<title>0.XX New Additions and Modifications</title>
+	<description>  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  </description>
+	<link>doc/en/release_note_en.html</link>
+	<pubDate>Tue, 13 Mar 2012 00:00:00 -0400</pubDate>
+	<guid>doc/en/release_note_en.html</guid>
+
+</item>
+<item>
+	<title>0.XX New Additions and Modifications</title>
+	<description>  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  </description>
+	<link>doc/en/release_note_en.html</link>
+	<pubDate>Tue, 13 Mar 2012 00:00:00 -0400</pubDate>
+	<guid>doc/en/release_note_en.html</guid>
+
+</item>
+<item>
+	<title>0.XX New Additions and Modifications</title>
+	<description>  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  </description>
+	<link>doc/en/release_note_en.html</link>
+	<pubDate>Tue, 13 Mar 2012 00:00:00 -0400</pubDate>
+	<guid>doc/en/release_note_en.html</guid>
+
+</item>
+<item>
+	<title>0.XX New Additions and Modifications</title>
+	<description>  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  </description>
+	<link>doc/en/release_note_en.html</link>
+	<pubDate>Tue, 13 Mar 2012 00:00:00 -0400</pubDate>
+	<guid>doc/en/release_note_en.html</guid>
+
+</item>
+<item>
+	<title>0.XX New Additions and Modifications</title>
+	<description>  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  </description>
+	<link>doc/en/release_note_en.html</link>
+	<pubDate>Tue, 13 Mar 2012 00:00:00 -0400</pubDate>
+	<guid>doc/en/release_note_en.html</guid>
+
+</item>
+<item>
+	<title>0.XX New Additions and Modifications</title>
+	<description>  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  </description>
+	<link>doc/en/release_note_en.html</link>
+	<pubDate>Tue, 13 Mar 2012 00:00:00 -0400</pubDate>
+	<guid>doc/en/release_note_en.html</guid>
+
+</item>
+<item>
+	<title>0.XX New Additions and Modifications</title>
+	<description>  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  </description>
+	<link>doc/en/release_note_en.html</link>
+	<pubDate>Tue, 13 Mar 2012 00:00:00 -0400</pubDate>
+	<guid>doc/en/release_note_en.html</guid>
+
+</item>
+<item>
+	<title>0.XX New Additions and Modifications</title>
+	<description>  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  </description>
+	<link>doc/en/release_note_en.html</link>
+	<pubDate>Tue, 13 Mar 2012 00:00:00 -0400</pubDate>
+	<guid>doc/en/release_note_en.html</guid>
+
+</item>
+<item>
+	<title>0.XX New Additions and Modifications</title>
+	<description>  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  </description>
+	<link>doc/en/release_note_en.html</link>
+	<pubDate>Tue, 13 Mar 2012 00:00:00 -0400</pubDate>
+	<guid>doc/en/release_note_en.html</guid>
+
+</item>
+<item>
+	<title>0.XX New Additions and Modifications</title>
+	<description>  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  This is sample.&amp;#xA;  </description>
+	<link>doc/en/release_note_en.html</link>
+	<pubDate>Tue, 13 Mar 2012 00:00:00 -0400</pubDate>
+	<guid>doc/en/release_note_en.html</guid>
+
+</item>
+
+</channel>
+</rss>

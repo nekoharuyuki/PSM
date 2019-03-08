@@ -1,0 +1,4 @@
+C:\Users\Public\Documents\PSM\sample\demo\lib\BasicModel\bin\Debug\BasicModel.dll
+C:\Users\Public\Documents\PSM\sample\demo\lib\BasicModel\bin\Debug\BasicModel.pdb
+C:\Users\Public\Documents\PSM\sample\demo\lib\BasicModel\obj\Debug\BasicModel.dll
+C:\Users\Public\Documents\PSM\sample\demo\lib\BasicModel\obj\Debug\BasicModel.pdb

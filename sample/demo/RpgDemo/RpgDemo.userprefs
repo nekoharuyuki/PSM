@@ -1,0 +1,39 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\lib\DemoGameLib\Application.cs">
+    <Files>
+      <File FileName="src\AppDebug.cs" Line="11" Column="2" />
+      <File FileName="src\data\CharParamData.cs" Line="1" Column="1" />
+      <File FileName="src\data\CharParamDataManager.cs" Line="1" Column="1" />
+      <File FileName="..\lib\BasicModel\BasicModel.cs" Line="9" Column="34" />
+      <File FileName="..\lib\BasicModel\BasicProgram.cs" Line="1" Column="1" />
+      <File FileName="..\lib\BasicModel\BasicShaderName.cs" Line="1" Column="1" />
+      <File FileName="..\lib\BasicModel\FrameBufferContainer.cs" Line="1" Column="1" />
+      <File FileName="..\lib\BasicModel\Light.cs" Line="1" Column="1" />
+      <File FileName="..\lib\BasicModel\MdxLoader.cs" Line="1" Column="1" />
+      <File FileName="..\lib\BasicModel\ModelContainer.cs" Line="1" Column="1" />
+      <File FileName="..\lib\BasicModel\ShaderContainer.cs" Line="1" Column="1" />
+      <File FileName="..\lib\BasicModel\TexContainer.cs" Line="1" Column="1" />
+      <File FileName="..\lib\DemoGameLib\Application.cs" Line="129" Column="29" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="BasicModel" expanded="True" />
+          <Node name="DemoGameLib" expanded="True">
+            <Node name="Application.cs" selected="True" />
+          </Node>
+          <Node name="RpgDemo" expanded="True">
+            <Node name="src" expanded="True">
+              <Node name="data" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

@@ -1,0 +1,18 @@
+/* PlayStation(R)Mobile SDK 1.21.01
+ * Copyright (C) 2013 Sony Computer Entertainment Inc.
+ * All Rights Reserved.
+ */
+
+void main(	float4 in a_Position  : POSITION,
+			float3 in a_Normal    : NORMAL,
+			float4 out v_Position : POSITION,
+			float3 out v_LocalPosition : TEXCOORD0,
+			float3 out v_Normal   : TEXCOORD1,
+			uniform float4x4 WorldViewProj
+		   )
+{
+	v_Position	= mul( a_Position, WorldViewProj );
+    v_LocalPosition = a_Position.xyz;
+	v_Normal = a_Normal;
+}
+

@@ -1,0 +1,45 @@
+/* PlayStation(R)Mobile SDK 1.21.01
+ * Copyright (C) 2013 Sony Computer Entertainment Inc.
+ * All Rights Reserved.
+ */
+
+float4 ComputeMatrixPalette( float4 pos,
+	float4 a_Weight, int MTXPLT_COUNT, float4x4 World00, float4x4 World01, float4x4 World02, float4x4 World03 )
+{
+	float4 P;
+
+	if( MTXPLT_COUNT == 1 ){
+		P = mul( pos, World00 );
+	}else if( MTXPLT_COUNT >= 1 ){
+		P = mul( pos, World00 ) * a_Weight.x;
+		if( MTXPLT_COUNT >= 2 ){
+			P += mul( pos, World01 ) * a_Weight.y;
+		}
+		if( MTXPLT_COUNT >= 3 ){
+			P += mul( pos, World02 ) * a_Weight.z;
+		}
+		if( MTXPLT_COUNT >= 4 ){
+			P += mul( pos, World03 ) * a_Weight.w;
+		}
+	}
+	return P;
+}
+
+void main(
+	float4 in a_Position			: POSITION,
+	float4 in a_Weight				: TEXCOORD0,
+
+	float4 out v_Position			: POSITION,
+
+	uniform int MTXPLT_COUNT,
+	uniform float4x4 ViewProj,
+	uniform float4x4 World00,
+	uniform float4x4 World01,
+	uniform float4x4 World02,
+	uniform float4x4 World03
+)
+{
+	float4 pos = ComputeMatrixPalette( a_Position,
+		a_Weight, MTXPLT_COUNT, World00, World01, World02, World03 );
+	v_Position = mul( pos, ViewProj );
+}

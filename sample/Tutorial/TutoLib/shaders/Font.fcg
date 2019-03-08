@@ -1,0 +1,12 @@
+/* SCE CONFIDENTIAL
+ * PlayStation(R)Suite SDK 0.98.2
+ * Copyright (C) 2012 Sony Computer Entertainment Inc.
+ * All Rights Reserved.
+ */
+
+void main( float2 in v_TexCoord : TEXCOORD0,
+		   float4 out Color     : COLOR,
+		   uniform sampler2D s_Texture : TEXUNIT0 )
+{
+	Color =  tex2D(s_Texture, v_TexCoord);
+}

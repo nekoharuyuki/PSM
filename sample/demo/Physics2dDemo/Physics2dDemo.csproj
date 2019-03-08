@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E2F54BBC-95AC-49E5-91E8-B79A6B346FDB}</ProjectGuid>
+    <ProjectTypeGuids>{69878862-DA7D-4DC6-B0A1-50D8FAB4242F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Physics2dDemo</RootNamespace>
+    <AssemblyName>Physics2dDemo</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="src\AudioManager.cs" />
+    <Compile Include="src\FrameTime.cs" />
+    <Compile Include="src\GameData.cs" />
+    <Compile Include="src\GameMain.cs" />
+    <Compile Include="src\InputManager.cs" />
+    <Compile Include="src\Physics2dDemo.cs" />
+    <Compile Include="src\Player.cs" />
+    <Compile Include="src\Renderer.cs" />
+    <Compile Include="src\Scene.cs" />
+    <Compile Include="src\SceneStart.cs" />
+    <Compile Include="src\SceneTitle.cs" />
+    <Compile Include="src\Score.cs" />
+    <Compile Include="src\ScoreEffect.cs" />
+    <Compile Include="src\Stage00.cs" />
+    <Compile Include="src\Target.cs" />
+    <Compile Include="src\Enemy.cs" />
+    <Compile Include="src\SceneMain.cs" />
+    <Compile Include="src\SceneResult.cs" />
+    <Compile Include="src\Resource2d.cs" />
+    <Compile Include="src\TargetManager.cs" />
+    <Compile Include="src\sprite\LayoutAction.cs" />
+    <Compile Include="src\sprite\LayoutAnimation.cs" />
+    <Compile Include="src\sprite\LayoutAnimationList.cs" />
+    <Compile Include="src\sprite\NumberLayout.cs" />
+    <Compile Include="src\sprite\SpriteAnimation.cs" />
+    <Compile Include="src\Stage01.cs" />
+    <Compile Include="src\Stage02.cs" />
+    <Compile Include="src\sprite\FillRectAnimation.cs" />
+    <Compile Include="src\Truck.cs" />
+    <Compile Include="src\PhysicsObject.cs" />
+    <Compile Include="src\Stage.cs" />
+    <Compile Include="src\Shovel.cs" />
+    <Compile Include="src\SoundAnimation.cs" />
+    <Compile Include="src\SceneFailed.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Sce.PlayStation.Core" />
+    <Reference Include="Sce.PlayStation.HighLevel.UI" />
+    <Reference Include="Sce.PlayStation.HighLevel.Physics2D" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Sce\Sce.Psm.CSharp.targets" />
+  <ItemGroup>
+    <Content Include="res\data\2d\arrow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\2d\2d_01.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\2d\2d_ecA.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\2d\2d_ecB.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\2d\2d_ecC.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\2d\2d_ecD.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\2d\2d_ecE.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\2d\bg_st1_00.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\2d\bg_st2_00.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\2d\bg_st3_00.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\2d\bgp_bg_st1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\2d\bgp_bg_st2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\2d\bgp_bg_st3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\2d\obj_sagyo_00.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\2d\obj_st1_00.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\2d\obj_st2_00.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\2d\obj_st3_00.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\2d\panda_00.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\2d\panda_01.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\2d\dummy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\snd\S01.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\snd\S11.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\snd\S12.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\snd\S21.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\snd\S22.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\snd\S23.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\snd\S24.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\snd\S25.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\snd\S26.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\snd\S27.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\snd\S31.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\snd\S32.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\snd\S41.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\data\snd\S42.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <PsmMetadata Include="app.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ShaderProgram Include="shaders\AmbientColor.fcg">
+      <PSM-Content-Protection>SignedAndEncrypted</PSM-Content-Protection>
+    </ShaderProgram>
+    <ShaderProgram Include="shaders\AmbientColor.vcg">
+      <PSM-Content-Protection>SignedAndEncrypted</PSM-Content-Protection>
+    </ShaderProgram>
+    <ShaderProgram Include="shaders\Simple.fcg" />
+    <ShaderProgram Include="shaders\Simple.vcg" />
+    <ShaderProgram Include="shaders\test.fcg" />
+    <ShaderProgram Include="shaders\test.vcg" />
+    <ShaderProgram Include="shaders\Texture.fcg" />
+    <ShaderProgram Include="shaders\Texture.vcg" />
+    <ShaderProgram Include="shaders\VertexColor.fcg" />
+    <ShaderProgram Include="shaders\VertexColor.vcg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\lib\DemoGameLib\DemoGameLib.csproj">
+      <Project>{B269B495-09B8-4B06-8FC9-B4A7780BB9E9}</Project>
+      <Name>DemoGameLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

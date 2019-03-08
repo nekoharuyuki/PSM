@@ -1,0 +1,49 @@
+/* SCE CONFIDENTIAL
+ * PlayStation(R)Suite SDK 0.98.2
+ * Copyright (C) 2012 Sony Computer Entertainment Inc.
+ * All Rights Reserved.
+ */
+
+void main(float4 in a_Position    : POSITION,	// 0
+          float2 in a_TexCoord    : TEXCOORD0,	// 1
+          float4 in a_VertexColor : COLOR0,		// 2
+          float2 in a_SpriteWH    : TEXCOORD1,  // 3
+          float2 in a_Center      : TEXCOORD2,  // 4
+          float2  in a_Rotation   : TEXCOORD3,	// 5
+          float3  in a_SpritePosition   : COLOR1,	// 6
+          float4 out v_Position   : POSITION,
+          float2 out v_TexCoord   : TEXCOORD0,
+          float4 out v_Color      : COLOR0,
+          uniform float4x4 u_WorldMatrix)
+{
+	// 引数に追加するもの。
+	// スプライトw,h
+	// 中心座標 cx,cy 
+	// 回転角。rot
+	
+	float4 t_Position;
+	float x1=a_Position.x - a_SpriteWH.x * a_Center.x;
+	float y1=a_Position.y - a_SpriteWH.y * a_Center.y;
+	
+	//rc=FMath.Cos(spriteB.Rotation);
+	//rs=FMath.Sin(spriteB.Rotation);
+		
+    //float rc = cos( a_Rotation.x ) ;
+    //float rs = sin( a_Rotation.x ) ;
+	
+    float rc = cos( a_Rotation.x );
+    float rs = sin( a_Rotation.x );
+
+	//t_Position.x = a_SpritePosition.x + x1;
+	//t_Position.y = a_SpritePosition.y + y1;
+	t_Position.x = a_SpritePosition.x + (x1*rc - y1*rs);
+	t_Position.y = a_SpritePosition.y + (x1*rs + y1*rc);
+	//t_Position.x = a_Position.x - (x1*rc - y1*rs);
+	//t_Position.y = a_Position.y - (x1*rs + y1*rc);
+	t_Position.z = a_SpritePosition.z;
+	t_Position.w = 1.0f;
+	
+	v_Position = mul(t_Position, u_WorldMatrix);
+	v_TexCoord = a_TexCoord;
+	v_Color = a_VertexColor;
+}

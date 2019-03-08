@@ -1,0 +1,4 @@
+C:\Users\Public\Documents\PSM\sample\Tutorial\TutoLib\bin\Debug\TutoLib.dll
+C:\Users\Public\Documents\PSM\sample\Tutorial\TutoLib\bin\Debug\TutoLib.pdb
+C:\Users\Public\Documents\PSM\sample\Tutorial\TutoLib\obj\Debug\TutoLib.dll
+C:\Users\Public\Documents\PSM\sample\Tutorial\TutoLib\obj\Debug\TutoLib.pdb

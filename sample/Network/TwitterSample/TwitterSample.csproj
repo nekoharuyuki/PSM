@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{11613FB1-3AC9-4A4B-883B-6868A37C05C0}</ProjectGuid>
+    <ProjectTypeGuids>{69878862-DA7D-4DC6-B0A1-50D8FAB4242F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TwitterSample</RootNamespace>
+    <AssemblyName>TwitterSample</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Sce.PlayStation.Core" />
+    <Reference Include="Sce.PlayStation.HighLevel.UI" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="UI\LoginScene.composer.cs" />
+    <Compile Include="UI\LoginScene.cs" />
+    <Compile Include="UI\UIStringTable.cs" />
+    <Compile Include="UI\FeedListPanelItem.composer.cs" />
+    <Compile Include="UI\FeedListPanelItem.cs" />
+    <Compile Include="UI\FeedsPanel.composer.cs" />
+    <Compile Include="UI\FeedsPanel.cs" />
+    <Compile Include="UI\FooterPanel.composer.cs" />
+    <Compile Include="UI\FooterPanel.cs" />
+    <Compile Include="UI\MainScene.composer.cs" />
+    <Compile Include="UI\MainScene.cs" />
+    <Compile Include="UI\PINDialog.composer.cs" />
+    <Compile Include="UI\PINDialog.cs" />
+    <Compile Include="UI\TitlePanel.composer.cs" />
+    <Compile Include="UI\TitlePanel.cs" />
+    <Compile Include="UI\WaitingDialog.composer.cs" />
+    <Compile Include="UI\WaitingDialog.cs" />
+    <Compile Include="UI\HeaderPanel.composer.cs" />
+    <Compile Include="UI\HeaderPanel.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Dispatcher.cs" />
+    <Compile Include="TwitterUserProfileImageCacheStore.cs" />
+    <Compile Include="UI\AccountPanel.composer.cs" />
+    <Compile Include="UI\AccountPanel.cs" />
+    <Compile Include="UI\SearchOptionDialog.composer.cs" />
+    <Compile Include="UI\SearchOptionDialog.cs" />
+    <Compile Include="UI\ConsumerDialog.composer.cs" />
+    <Compile Include="UI\ConsumerDialog.cs" />
+    <Compile Include="SceneBase.cs" />
+    <Compile Include="Application.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="ScreenOrientationManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ShaderProgram Include="shaders\Simple.fcg" />
+    <ShaderProgram Include="shaders\Simple.vcg" />
+  </ItemGroup>
+  <ItemGroup>
+    <PsmMetadata Include="app.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Sce\Sce.Psm.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="assets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\default_profile_0_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\source\TweetSharp\Hammock\Hammock\Hammock.csproj">
+      <Project>{612E8DC0-1B47-4C9D-9953-216D4DF54B81}</Project>
+      <Name>Hammock</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\source\TweetSharp\Newtonsoft.Json\Newtonsoft.Json\Newtonsoft.Json.csproj">
+      <Project>{00625654-7ED6-4FB4-B804-79B4F92FCA8D}</Project>
+      <Name>Newtonsoft.Json</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\source\TweetSharp\tweetsharp\tweetsharp\tweetsharp.csproj">
+      <Project>{FFFD6CD4-A8BA-49F3-84C8-97CFE5EBCA1F}</Project>
+      <Name>tweetsharp</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIAnimationSample", "UIAnimationSample.csproj", "{EE6B6000-6ACF-4EC2-AC94-710694794831}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE6B6000-6ACF-4EC2-AC94-710694794831}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE6B6000-6ACF-4EC2-AC94-710694794831}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE6B6000-6ACF-4EC2-AC94-710694794831}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE6B6000-6ACF-4EC2-AC94-710694794831}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = UIAnimationSample.csproj
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

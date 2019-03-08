@@ -1,0 +1,40 @@
+/* PlayStation(R)Mobile SDK 1.21.01
+ * Copyright (C) 2013 Sony Computer Entertainment Inc.
+ * All Rights Reserved.
+ */
+
+void main(	float4 in a_Position  : POSITION,
+			float3 in a_Normal    : NORMAL,
+			float4 out v_Position : POSITION,
+			float4 out v_Color	  : COLOR0,
+			uniform float4 IAmbient,
+			uniform float4 IDiffuse,
+			uniform float4 KAmbient,
+			uniform float4 KDiffuse,
+            uniform float4 KSpecular,
+            uniform float Shininess,
+						
+			uniform float3   LocalLightPosition,
+			uniform float3   EyePosition,
+			uniform float4x4 WorldViewProj
+		   )
+{
+	v_Position	= mul( a_Position, WorldViewProj );
+
+    float3 L = normalize( LocalLightPosition - a_Position.xyz );
+	float3 E = normalize( EyePosition - a_Position.xyz );
+    float3 N = a_Normal;
+	float3 R = -E + 2.0f * dot(N, E) * N;
+	
+    float diffuseL = max(0, dot(N, L));
+    float4 ambient = IAmbient * KAmbient;
+    float4 diffuse = IDiffuse * KDiffuse * diffuseL;
+
+    if( diffuseL <= 0.0f ){
+        v_Color = ambient + diffuse;
+    }else{
+        float specularL = pow(max(0, dot(L, R)), Shininess);
+        v_Color = ambient + diffuse + KSpecular * specularL;
+    }
+}
+

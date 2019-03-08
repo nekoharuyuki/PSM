@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{23B57BC9-0B58-46FE-8316-5B6412BA156A}</ProjectGuid>
+    <ProjectTypeGuids>{69878862-DA7D-4DC6-B0A1-50D8FAB4242F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>UICatalog</RootNamespace>
+    <AssemblyName>UICatalog</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AnimationImageBoxScene.cs" />
+    <Compile Include="BunjeeJumpEffectScene.cs" />
+    <Compile Include="BusyIndicatorScene.cs" />
+    <Compile Include="ButtonScene.cs" />
+    <Compile Include="CheckBoxScene.cs" />
+    <Compile Include="DialogScene.cs" />
+    <Compile Include="PopupListScene.cs" />
+    <Compile Include="EditableTextScene.cs" />
+    <Compile Include="FadeInOutEffectScene.cs" />
+    <Compile Include="FlipBoardEffectScene.cs" />
+    <Compile Include="GridListPanelScene.cs" />
+    <Compile Include="ImageBoxScene.cs" />
+    <Compile Include="JumpFlipEffectScene.cs" />
+    <Compile Include="LabelScene.cs" />
+    <Compile Include="LiveFlipPanelScene.cs" />
+    <Compile Include="LiveJumpPanelScene.cs" />
+    <Compile Include="LiveListPanelScene.cs" />
+    <Compile Include="LiveScrollPanelScene.cs" />
+    <Compile Include="LiveSphereScene.cs" />
+    <Compile Include="MessageDialogScene.cs" />
+    <Compile Include="MoveEffectScene.cs" />
+    <Compile Include="PagePanelScene.cs" />
+    <Compile Include="PanelScene.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="ProgressBarScene.cs" />
+    <Compile Include="ScrollPanelScene.cs" />
+    <Compile Include="SlideInOutEffectScene.cs" />
+    <Compile Include="SliderScene.cs" />
+    <Compile Include="SpinBoxScene.cs" />
+    <Compile Include="TextCheckBox.cs" />
+    <Compile Include="TiltDropEffectScene.cs" />
+    <Compile Include="TopScene.cs" />
+    <Compile Include="ContentsScene.cs" />
+    <Compile Include="TransitionSettingDialog.cs" />
+    <Compile Include="ZoomEffectScene.cs" />
+    <Compile Include="ListPanelScene.cs" />
+    <Compile Include="AnimationImageBoxScene.composer.cs" />
+    <Compile Include="BusyIndicatorScene.composer.cs" />
+    <Compile Include="ButtonScene.composer.cs" />
+    <Compile Include="MessageDialogScene.composer.cs" />
+    <Compile Include="CheckBoxScene.composer.cs" />
+    <Compile Include="DialogScene.composer.cs" />
+    <Compile Include="SampleDialog.composer.cs" />
+    <Compile Include="SampleDialog.cs" />
+    <Compile Include="EditableTextScene.composer.cs" />
+    <Compile Include="ImageBoxScene.composer.cs" />
+    <Compile Include="LabelScene.composer.cs" />
+    <Compile Include="PanelScene.composer.cs" />
+    <Compile Include="ListPanelScene.composer.cs" />
+    <Compile Include="GridListPanelScene.composer.cs" />
+    <Compile Include="PagePanelScene.composer.cs" />
+    <Compile Include="ProgressBarScene.composer.cs" />
+    <Compile Include="SampleScrollPanelInnerPanel.composer.cs" />
+    <Compile Include="SampleScrollPanelInnerPanel.cs" />
+    <Compile Include="ScrollPanelScene.composer.cs" />
+    <Compile Include="SliderScene.composer.cs" />
+    <Compile Include="PopupListScene.composer.cs" />
+    <Compile Include="SpinBoxScene.composer.cs" />
+    <Compile Include="LiveFlipPanelScene.composer.cs" />
+    <Compile Include="LiveJumpPanelScene.composer.cs" />
+    <Compile Include="LiveListPanelScene.composer.cs" />
+    <Compile Include="LiveScrollPanelScene.composer.cs" />
+    <Compile Include="LiveSphereScene.composer.cs" />
+    <Compile Include="SlideInOutEffectScene.composer.cs" />
+    <Compile Include="FadeInOutEffectScene.composer.cs" />
+    <Compile Include="MoveEffectScene.composer.cs" />
+    <Compile Include="JumpFlipEffectScene.composer.cs" />
+    <Compile Include="FlipBoardEffectScene.composer.cs" />
+    <Compile Include="BunjeeJumpEffectScene.composer.cs" />
+    <Compile Include="TiltDropEffectScene.composer.cs" />
+    <Compile Include="ZoomEffectScene.composer.cs" />
+    <Compile Include="NavigationPanel.composer.cs" />
+    <Compile Include="NavigationPanel.cs" />
+    <Compile Include="LoadingScene.composer.cs" />
+    <Compile Include="LoadingScene.cs" />
+    <Compile Include="LiveSpringPanelScene.composer.cs" />
+    <Compile Include="LiveSpringPanelScene.cs" />
+    <Compile Include="SampleGridListPanelItem.composer.cs" />
+    <Compile Include="SampleGridListPanelItem.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Sce.PlayStation.Core" />
+    <Reference Include="Sce.PlayStation.HighLevel.UI" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\image_scale.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\list01.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\list02.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\list03.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\list04.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\list05.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\list06.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\list07.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\list08.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\list09.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\list10.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\map.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\next.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\photo01.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\photo02.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\photo03.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\photo04.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\photo05.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\photo06.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\photo07.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\photo08.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\photo09.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\photo10.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\photo-500x600.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\square_animation.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\stephanie_275x196.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\photo01_s.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\photo02_s.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\photo03_s.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\photo04_s.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\photo05_s.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\photo06_s.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\photo07_s.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\photo08_s.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\photo09_s.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\photo10_s.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\on_off_sphere.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <PsmMetadata Include="app.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </PsmMetadata>
+    <Content Include="assets\spring_panel_normal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\spring_panel_pressed.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="osc.cfg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Sce\Sce.Psm.CSharp.targets" />
+  <ItemGroup>
+    <None Include="UICatalog.uic" />
+  </ItemGroup>
+</Project>

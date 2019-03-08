@@ -1,0 +1,1033 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.5: http://docutils.sourceforge.net/" />
+<title>BgmPlayerSample</title>
+<style type="text/css">
+
+/* PSM style sheet by CDC  (chm) */
+
+
+body { 
+ /*font-family: Arial, Verdana, Helvetica; */
+ font-family: Meiryo,Helvetica Neue, Helvetica, Arial, sans-serif, Verdana,Hiragino Kaku Gothic Pro;
+ /*
+ font-size: 80%;
+  color: #000000;
+  margin: 4;
+  background: white;
+ */
+ font-size: 13px; 
+	line-height:18px; 
+	color: #000000; 
+	background: white;
+	margin: 4;
+	padding:0;
+	border:0;
+ 
+}
+
+
+
+
+
+/*
+h1 {
+	font-size: 140%;
+	color: #1b366b;
+	margin: 8px 0;
+	border-bottom:1px solid #999999;
+	padding-bottom: 3px;
+	font-weight: bold;
+}
+h2 {
+	font-size: 120%;
+	padding-bottom: 3px;
+	font-weight: bold;
+	
+}
+h3 {
+	font-size: 100%;
+	margin: 1px 0 1px 0;
+	padding: 0;
+	font-weight: bold;
+	
+}
+*/
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: inherit;
+  font-weight: bold;
+  color: #081e46;
+  text-rendering: optimizelegibility;
+}
+
+
+h1{
+	font-size: 18px;
+	/*display:block;*/
+	/*margin:10px;*/
+} 
+
+
+
+h2 {
+	margin-top: 10px;
+	margin-bottom: 5px;
+	font-size: 15px;
+}
+
+
+
+
+div.multicol {
+	-moz-column-gap: 1em;
+	-webkit-column-gap: 1em;
+	-moz-column-count: 3;
+	-webkit-column-count: 3;
+}
+
+p.startli, p.startdd, p.starttd {
+	margin-top: 2px;
+}
+
+p.endli {
+	margin-bottom: 0px;
+}
+
+p.enddd {
+	margin-bottom: 4px;
+}
+
+p.endtd {
+	margin-bottom: 2px;
+}
+
+
+
+caption {
+	font-weight: bold;
+}
+
+span.legend {
+        font-size: 70%;
+        text-align: center;
+}
+
+h3.version {
+        font-size: 90%;
+        text-align: center;
+}
+
+div.qindex, div.navtab{
+	background-color: #EBEFF6;
+	border: 1px solid #A3B4D7;
+	text-align: center;
+	margin: 2px;
+	padding: 2px;
+}
+
+div.qindex, div.navpath {
+	width: 100%;
+	line-height: 140%;
+}
+
+div.navtab {
+	margin-right: 15px;
+}
+
+/* @group Link Styling */
+
+a {
+	color: #1d79d4;
+	text-decoration: none;
+}
+
+
+.contents a:visited {
+	color: #1d79d4;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a.qindex {
+	font-weight: bold;
+}
+
+a.qindexHL {
+	font-weight: bold;
+	background-color: #9CAFD4;
+	color: #ffffff;
+	border: 1px double #869DCA;
+}
+
+.contents a.qindexHL:visited {
+        color: #ffffff;
+}
+
+a.el {
+	font-weight: bold;
+}
+
+a.elRef {
+}
+
+a.code {
+	color: #4665A2;
+}
+
+a.codeRef {
+	color: #4665A2;
+}
+
+
+
+dl.el {
+	margin-left: -1cm;
+}
+
+.fragment {
+	font-family: monospace, fixed;
+	font-size: 105%;
+}
+
+pre.fragment {
+	border: 1px solid #C4CFE5;
+	background-color: #FBFCFD;
+	padding: 4px 6px;
+	margin: 4px 8px 4px 2px;
+	overflow: auto;
+	word-wrap: break-word;
+	font-size:  9pt;
+	line-height: 125%;
+}
+
+div.ah {
+	background-color: black;
+	font-weight: bold;
+	color: #ffffff;
+	margin-bottom: 3px;
+	margin-top: 3px;
+	padding: 0.2em;
+	border: solid thin #333;
+	border-radius: 0.5em;
+	-webkit-border-radius: .5em;
+	-moz-border-radius: .5em;
+	box-shadow: 2px 2px 3px #999;
+	-webkit-box-shadow: 2px 2px 3px #999;
+	-moz-box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 2px;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#000),color-stop(0.3, #444));
+	background-image: -moz-linear-gradient(center top, #eee 0%, #444 40%, #000);
+}
+
+div.groupHeader {
+	margin-left: 16px;
+	margin-top: 12px;
+	font-weight: bold;
+}
+
+div.groupText {
+	margin-left: 16px;
+	font-style: italic;
+}
+
+
+div.contents {
+	margin-top: 10px;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+td.indexkey {
+	background-color: #EBEFF6;
+	font-weight: bold;
+	border: 1px solid #C4CFE5;
+	margin: 2px 0px 2px 0;
+	padding: 2px 10px;
+}
+
+td.indexvalue {
+	background-color: #EBEFF6;
+	border: 1px solid #C4CFE5;
+	padding: 2px 10px;
+	margin: 2px 0px;
+}
+
+tr.memlist {
+	background-color: #EEF1F7;
+}
+
+p.formulaDsp {
+	text-align: center;
+}
+
+img.formulaDsp {
+	
+}
+
+img.formulaInl {
+	vertical-align: middle;
+}
+
+div.center {
+	text-align: center;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding: 0px;
+}
+
+div.center img {
+	border: 0px;
+}
+
+address.footer {
+	text-align: right;
+	padding-right: 12px;
+}
+
+img.footer {
+	border: 0px;
+	vertical-align: middle;
+}
+
+/* @group Code Colorization */
+
+span.keyword {
+	color: #008000
+}
+
+span.keywordtype {
+	color: #604020
+}
+
+span.keywordflow {
+	color: #e08000
+}
+
+span.comment {
+	color: #800000
+}
+
+span.preprocessor {
+	color: #806020
+}
+
+span.stringliteral {
+	color: #002080
+}
+
+span.charliteral {
+	color: #008080
+}
+
+span.vhdldigit { 
+	color: #ff00ff 
+}
+
+span.vhdlchar { 
+	color: #000000 
+}
+
+span.vhdlkeyword { 
+	color: #700070 
+}
+
+span.vhdllogic { 
+	color: #ff0000 
+}
+
+/* @end */
+
+/*
+.search {
+	color: #003399;
+	font-weight: bold;
+}
+
+form.search {
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+input.search {
+	font-size: 75%;
+	color: #000080;
+	font-weight: normal;
+	background-color: #e8eef2;
+}
+*/
+
+td.tiny {
+	font-size: 75%;
+}
+
+.dirtab {
+	padding: 4px;
+	border-collapse: collapse;
+	border: 1px solid #A3B4D7;
+}
+
+th.dirtab {
+	background: #EBEFF6;
+	font-weight: bold;
+}
+
+hr {
+	height: 0px;
+	border: none;
+	border-top: 1px solid #4A6AAA;
+}
+
+hr.footer {
+	height: 1px;
+}
+
+/* @group Member Descriptions */
+
+table.memberdecls {
+	border-spacing: 0px;
+	padding: 0px;
+}
+
+.mdescLeft, .mdescRight,
+.memItemLeft, .memItemRight,
+.memTemplItemLeft, .memTemplItemRight, .memTemplParams {
+	background-color: #F9FAFC;
+	border: none;
+	margin: 4px;
+	padding: 1px 0 0 8px;
+}
+
+.mdescLeft, .mdescRight {
+	padding: 0px 8px 4px 8px;
+	color: #555;
+}
+
+.memItemLeft, .memItemRight, .memTemplParams {
+	border-top: 1px solid #C4CFE5;
+}
+
+.memItemLeft, .memTemplItemLeft {
+        white-space: nowrap;
+}
+
+.memTemplParams {
+	color: #4665A2;
+        white-space: nowrap;
+}
+
+/* @end */
+
+/* @group Member Details */
+
+/* Styles for detailed member documentation */
+
+.memtemplate {
+	font-size: 80%;
+	color: #4665A2;
+	font-weight: normal;
+	margin-left: 9px;
+}
+
+.memnav {
+	background-color: #EBEFF6;
+	border: 1px solid #A3B4D7;
+	text-align: center;
+	margin: 2px;
+	margin-right: 15px;
+	padding: 2px;
+}
+
+.memitem {
+	padding: 0;
+	margin-bottom: 10px;
+}
+
+.memname {
+        white-space: nowrap;
+        font-weight: bold;
+        margin-left: 6px;
+}
+
+.memproto {
+        border-top: 1px solid #A8B8D9;
+        border-left: 1px solid #A8B8D9;
+        border-right: 1px solid #A8B8D9;
+        padding: 6px 0px 6px 0px;
+        color: #253555;
+        font-weight: bold;
+        text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.9);
+        /* opera specific markup */
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+        /* firefox specific markup */
+        -moz-box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 5px;
+        -moz-border-radius-topright: 8px;
+        -moz-border-radius-topleft: 8px;
+        /* webkit specific markup */
+        -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+        -webkit-border-top-right-radius: 8px;
+        -webkit-border-top-left-radius: 8px;
+        background-image:url('nav_f.png');
+        background-repeat:repeat-x;
+        background-color: #E2E8F2;
+
+}
+
+.memdoc {
+        border-bottom: 1px solid #A8B8D9;      
+        border-left: 1px solid #A8B8D9;      
+        border-right: 1px solid #A8B8D9; 
+        padding: 2px 5px;
+        background-color: #FBFCFD;
+        border-top-width: 0;
+        /* opera specific markup */
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+        /* firefox specific markup */
+        -moz-border-radius-bottomleft: 8px;
+        -moz-border-radius-bottomright: 8px;
+        -moz-box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 5px;
+        background-image: -moz-linear-gradient(center top, #FFFFFF 0%, #FFFFFF 60%, #F7F8FB 95%, #EEF1F7);
+        /* webkit specific markup */
+        -webkit-border-bottom-left-radius: 8px;
+        -webkit-border-bottom-right-radius: 8px;
+        -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+        background-image: -webkit-gradient(linear,center top,center bottom,from(#FFFFFF), color-stop(0.6,#FFFFFF), color-stop(0.60,#FFFFFF), color-stop(0.95,#F7F8FB), to(#EEF1F7));
+}
+
+.paramkey {
+	text-align: right;
+}
+
+.paramtype {
+	white-space: nowrap;
+}
+
+.paramname {
+	color: #602020;
+	white-space: nowrap;
+}
+.paramname em {
+	font-style: normal;
+}
+
+.params, .retval, .exception, .tparams {
+        border-spacing: 6px 2px;
+}       
+
+.params .paramname, .retval .paramname {
+        font-weight: bold;
+        vertical-align: top;
+}
+        
+.params .paramtype {
+        font-style: italic;
+        vertical-align: top;
+}       
+        
+.params .paramdir {
+        font-family: "courier new",courier,monospace;
+        vertical-align: top;
+}
+
+
+
+
+/* @end */
+
+/* @group Directory (tree) */
+
+/* for the tree view */
+
+.ftvtree {
+	font-family: sans-serif;
+	margin: 0px;
+}
+
+/* these are for tree view when used as main index */
+
+.directory {
+	font-size: 9pt;
+	font-weight: bold;
+	margin: 5px;
+}
+
+.directory h3 {
+	margin: 0px;
+	margin-top: 1em;
+	font-size: 11pt;
+}
+
+/*
+The following two styles can be used to replace the root node title
+with an image of your choice.  Simply uncomment the next two styles,
+specify the name of your image and be sure to set 'height' to the
+proper pixel height of your image.
+*/
+
+/*
+.directory h3.swap {
+	height: 61px;
+	background-repeat: no-repeat;
+	background-image: url("yourimage.gif");
+}
+.directory h3.swap span {
+	display: none;
+}
+*/
+
+.directory > h3 {
+	margin-top: 0;
+}
+
+.directory p {
+	margin: 0px;
+	white-space: nowrap;
+}
+
+.directory div {
+	display: none;
+	margin: 0px;
+}
+
+.directory img {
+	vertical-align: -30%;
+}
+
+/* these are for tree view when not used as main index */
+
+.directory-alt {
+	font-size: 100%;
+	font-weight: bold;
+}
+
+.directory-alt h3 {
+	margin: 0px;
+	margin-top: 1em;
+	font-size: 11pt;
+}
+
+.directory-alt > h3 {
+	margin-top: 0;
+}
+
+.directory-alt p {
+	margin: 0px;
+	white-space: nowrap;
+}
+
+.directory-alt div {
+	display: none;
+	margin: 0px;
+}
+
+.directory-alt img {
+	vertical-align: -30%;
+}
+
+/* @end */
+
+div.dynheader {
+        margin-top: 8px;
+}
+
+address {
+	font-style: normal;
+	color: #2A3D61;
+}
+
+table.doxtable {
+	border-collapse:collapse;
+}
+
+table.doxtable td, table.doxtable th {
+	border: 1px solid #2D4068;
+	padding: 3px 7px 2px;
+}
+
+table.doxtable th {
+	background-color: #374F7F;
+	color: #FFFFFF;
+	font-size: 110%;
+	padding-bottom: 4px;
+	padding-top: 5px;
+	text-align:left;
+}
+
+.tabsearch {
+	top: 0px;
+	left: 10px;
+	height: 36px;
+	background-image: url('tab_b.png');
+	z-index: 101;
+	overflow: hidden;
+	font-size: 13px;
+}
+
+/* footer */
+.navpath ul
+{
+	font-size: 11px;
+	/*background-image:url('tab_b.png');*/
+	background-image:url('image/footer.jpg');
+	background-repeat:repeat-x;
+	height:30px;
+	line-height:30px;
+	/* color:#8AA0CC;*/
+	color:#FFFFFF;
+	border:solid 1px #C2CDE4;
+	overflow:hidden;
+	margin:0px;
+	padding:0px;
+}
+
+
+/* navpath gray */
+.navpath li
+{
+	list-style-type:none;
+	float:left;
+	padding-left:10px;
+	padding-right:15px;
+	background-image:url('bc_s.png');
+	background-repeat:no-repeat;
+	background-position:right;
+	/* color:#364D7C; */
+	color:#A0A0A0;
+}
+
+.navpath li.navelem a
+{
+	height:32px;
+	display:block;
+	text-decoration: none;
+	outline: none;
+	color:#FFFFFF;
+}
+
+
+.navpath li.navelem a:hover
+{
+	/* color:#6884BD; */
+	color:#FFFFFF;
+	text-decoration: underline;
+}
+
+.navpath li.footer
+{
+        list-style-type:none;
+        float:right;
+        padding-left:10px;
+        padding-right:15px;
+        background-image:none;
+        background-repeat:no-repeat;
+        background-position:right;
+        color:#364D7C;
+        font-size: 8pt;
+}
+
+
+div.summary
+{
+	float: right;
+	font-size: 8pt;
+	padding-right: 5px;
+	width: 50%;
+	text-align: right;
+}       
+
+div.summary a
+{
+	white-space: nowrap;
+}
+
+div.ingroups
+{
+	font-size: 8pt;
+	padding-left: 5px;
+	width: 50%;
+	text-align: left;
+}
+
+div.ingroups a
+{
+	white-space: nowrap;
+}
+
+/* nishino:changed. */
+div.header
+{
+    /* background-image:url('nav_h.png');*/ 
+    /* background-repeat:repeat-x;*/		
+	/* background-color: #F9FAFC;*/
+	margin:  0px;
+	/* border-bottom: 1px solid #C4CFE5; */
+}
+
+div.headertitle
+{
+	padding: 5px 5px 5px 20px;
+}
+
+dl
+{
+        padding: 0 0 0 10px;
+}
+
+dl.note, dl.warning, dl.attention, dl.pre, dl.post, dl.invariant, dl.deprecated, dl.todo, dl.test, dl.bug
+{
+        border-left:4px solid;
+        padding: 0 0 0 6px;
+}
+
+dl.note
+{
+        border-color: #D0D000;
+}
+
+dl.warning, dl.attention
+{
+        border-color: #FF0000;
+}
+
+dl.pre, dl.post, dl.invariant
+{
+        border-color: #00D000;
+}
+
+dl.deprecated
+{
+        border-color: #505050;
+}
+
+dl.todo
+{
+        border-color: #00C0E0;
+}
+
+dl.test
+{
+        border-color: #3030E0;
+}
+
+dl.bug
+{
+        border-color: #C08050;
+}
+
+#projectlogo
+{
+	text-align: center;
+	vertical-align: bottom;
+	border-collapse: separate;
+}
+ 
+#projectlogo img
+{ 
+	border: 0px none;
+}
+
+
+/* header */
+#projectname
+{
+	/*font: 200% arial,sans-serif;*/
+	font: 100% arial,sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+    
+#projectbrief
+{
+	font: 120% arial,sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+
+#projectnumber
+{
+	font: 50% arial,sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+
+/* header 2 */
+#titlearea
+{
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	border-bottom: 1px solid #5373B4;
+	/* background-color: #00276C; Vita Color (0, 39, 108)->(0,27,6C)*/
+	color: #FFFFFF;  /* text-color white */
+	background-image:url(image/footer.jpg);
+	background-repeat:repeat-xy;	
+	/*
+	background-color: #F9FAFC;*
+	margin:  0px;
+	border-bottom: 1px solid #C4CFE5;
+	*/
+	
+	
+}
+
+#MSearchBox {
+    margin-top:-10px;
+}
+
+
+div.highlight {
+  margin-left: 4em;
+  margin-right: 4em;
+  background-color: #eeeeee }
+
+.hll { background-color: #ffffcc }
+.c { color: #408080; font-style: italic } /* Comment */
+.err { border: 1px solid #FF0000 } /* Error */
+.k { color: #008000; font-weight: bold } /* Keyword */
+.o { color: #666666 } /* Operator */
+.cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.cp { color: #BC7A00 } /* Comment.Preproc */
+.c1 { color: #408080; font-style: italic } /* Comment.Single */
+.cs { color: #408080; font-style: italic } /* Comment.Special */
+.gd { color: #A00000 } /* Generic.Deleted */
+.ge { font-style: italic } /* Generic.Emph */
+.gr { color: #FF0000 } /* Generic.Error */
+.gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.gi { color: #00A000 } /* Generic.Inserted */
+.go { color: #808080 } /* Generic.Output */
+.gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.gs { font-weight: bold } /* Generic.Strong */
+.gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.gt { color: #0040D0 } /* Generic.Traceback */
+.kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.kp { color: #008000 } /* Keyword.Pseudo */
+.kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.kt { color: #B00040 } /* Keyword.Type */
+.m { color: #666666 } /* Literal.Number */
+.s { color: #BA2121 } /* Literal.String */
+.na { color: #7D9029 } /* Name.Attribute */
+.nb { color: #008000 } /* Name.Builtin */
+.nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.no { color: #880000 } /* Name.Constant */
+.nd { color: #AA22FF } /* Name.Decorator */
+.ni { color: #999999; font-weight: bold } /* Name.Entity */
+.ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.nf { color: #0000FF } /* Name.Function */
+.nl { color: #A0A000 } /* Name.Label */
+.nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.nt { color: #008000; font-weight: bold } /* Name.Tag */
+.nv { color: #19177C } /* Name.Variable */
+.ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.w { color: #bbbbbb } /* Text.Whitespace */
+.mf { color: #666666 } /* Literal.Number.Float */
+.mh { color: #666666 } /* Literal.Number.Hex */
+.mi { color: #666666 } /* Literal.Number.Integer */
+.mo { color: #666666 } /* Literal.Number.Oct */
+.sb { color: #BA2121 } /* Literal.String.Backtick */
+.sc { color: #BA2121 } /* Literal.String.Char */
+.sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.s2 { color: #BA2121 } /* Literal.String.Double */
+.se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.sh { color: #BA2121 } /* Literal.String.Heredoc */
+.si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.sx { color: #008000 } /* Literal.String.Other */
+.sr { color: #BB6688 } /* Literal.String.Regex */
+.s1 { color: #BA2121 } /* Literal.String.Single */
+.ss { color: #19177C } /* Literal.String.Symbol */
+.bp { color: #008000 } /* Name.Builtin.Pseudo */
+.vc { color: #19177C } /* Name.Variable.Class */
+.vg { color: #19177C } /* Name.Variable.Global */
+.vi { color: #19177C } /* Name.Variable.Instance */
+.il { color: #666666 } /* Literal.Number.Integer.Long */
+
+
+/* footer */
+#footer
+{
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	height: 34px;
+	color: #FFFFFF;
+	background-image:url(image/footer.jpg);
+	background-repeat:repeat-xy;
+}
+
+#footer p
+{
+	padding: 10px;
+	margin: 0px;
+	font-size:12px;
+	padding-right: 15px;
+}
+
+#footer_chm
+{
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	height: 34px;
+	color: #FFFFFF;
+	background-image:url(image/footer.jpg);
+	background-repeat:repeat-xy;
+}
+
+
+
+</style>
+</head>
+<body>
+<div class="document" id="bgmplayersample">
+<h1 class="title">BgmPlayerSample</h1>
+
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#id1" id="id4">概要</a></li>
+<li><a class="reference internal" href="#id2" id="id5">スクリーンショット</a></li>
+<li><a class="reference internal" href="#id3" id="id6">動作詳細</a></li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h1><a class="toc-backref" href="#id4">概要</a></h1>
+<blockquote>
+BGM再生のサンプルです。</blockquote>
+</div>
+<div class="section" id="id2">
+<h1><a class="toc-backref" href="#id5">スクリーンショット</a></h1>
+<blockquote>
+<img alt="screenshot/BgmPlayerSample.png" src="screenshot/BgmPlayerSample.png" />
+</blockquote>
+</div>
+<div class="section" id="id3">
+<h1><a class="toc-backref" href="#id6">動作詳細</a></h1>
+<blockquote>
+<p>サウンドの再生/停止/一時停止/再開/ボリューム変更を行います。</p>
+<p>&quot;Play&quot;ボタンをタップするとサウンドが再生されます。</p>
+<p>&quot;Stop&quot;ボタンをタップするとサウンドが停止します。</p>
+<p>&quot;Pause&quot;ボタンをタップするとサウンドが一時停止します。</p>
+<p>&quot;Resume&quot;ボタンをタップすると一時停止したサウンドの再生が再開されます。</p>
+<p>&quot;Volume&quot;部分の矩形をタップすると、タップした位置に再生ボリュームが変更されます。</p>
+<p>グレーアウトしたボタンは操作できません。</p>
+</blockquote>
+</div>
+</div>
+</body>
+</html>

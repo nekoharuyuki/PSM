@@ -1,0 +1,19 @@
+/* PlayStation(R)Mobile SDK 1.21.01
+ * Copyright (C) 2013 Sony Computer Entertainment Inc.
+ * All Rights Reserved.
+ */
+
+void main( 
+          float4 in  v_Color	  : COLOR0,
+          float3 in  v_Normal	  : TEXCOORD0,
+          float3 in  v_Eye      : TEXCOORD1,
+          float4 out Color	  : COLOR,
+          uniform sampler2D Texture0 : TEXUNIT0)
+{
+	float3 N = normalize(v_Normal);
+	float2 texcoord;
+
+	texcoord.x = v_Color.x;
+    texcoord.y = max(0, dot(N, normalize(v_Eye)));
+	Color = tex2D(Texture0, texcoord);
+}

@@ -1,0 +1,1920 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns:i="http://www.w3.org/2001/XMLSchema-instance" z:Id="i1" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/" xmlns="http://schemas.datacontract.org/2004/07/UIComposer">
+  <Parent i:nil="true" />
+  <Nodes>
+    <UICNode z:Id="i2" i:type="ObjectTreeNode">
+      <Parent z:Ref="i1" />
+      <Nodes>
+        <UICNode z:Id="i3" i:type="ObjectTreeNode">
+          <Parent z:Ref="i2" />
+          <Nodes />
+          <LayoutProperty>
+            <LayoutProperty>
+              <X>0</X>
+              <Y>0</Y>
+              <Width>854</Width>
+              <Height>480</Height>
+              <Visible>true</Visible>
+              <Anchors>Top Bottom Left Right</Anchors>
+            </LayoutProperty>
+            <LayoutProperty>
+              <X>65</X>
+              <Y>14</Y>
+              <Width>200</Width>
+              <Height>200</Height>
+              <Visible>false</Visible>
+              <Anchors>None</Anchors>
+            </LayoutProperty>
+          </LayoutProperty>
+          <Property i:type="ImageBoxProperty">
+            <Effect>None</Effect>
+            <OwnerNode z:Ref="i3" />
+            <VariableName>ImageBox_1</VariableName>
+            <Image>bg.png</Image>
+            <NinePatchMargin xmlns:d7p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+              <d7p1:ButtomRowHeight>0</d7p1:ButtomRowHeight>
+              <d7p1:LeftColumnWidth>0</d7p1:LeftColumnWidth>
+              <d7p1:RightColumnWidth>0</d7p1:RightColumnWidth>
+              <d7p1:TopRowHeight>0</d7p1:TopRowHeight>
+            </NinePatchMargin>
+            <ScaleType>Stretch</ScaleType>
+          </Property>
+          <IsRoot>false</IsRoot>
+          <PivotPos>LeftTop</PivotPos>
+          <WidgetType>ImageBox</WidgetType>
+          <ID>974387868</ID>
+          <ZIndex>14</ZIndex>
+          <LayoutAssistInfo>
+            <SnapGuidesList>
+              <ArrayOfSnapGuide />
+              <ArrayOfSnapGuide />
+            </SnapGuidesList>
+          </LayoutAssistInfo>
+          <IsHideInLayout>false</IsHideInLayout>
+          <IsLockInLayout>false</IsLockInLayout>
+        </UICNode>
+        <UICNode z:Id="i4" i:type="ObjectTreeNode">
+          <Parent z:Ref="i2" />
+          <Nodes />
+          <LayoutProperty>
+            <LayoutProperty>
+              <X>0</X>
+              <Y>0</Y>
+              <Width>854</Width>
+              <Height>480</Height>
+              <Visible>true</Visible>
+              <Anchors>Top Bottom Left Right</Anchors>
+            </LayoutProperty>
+            <LayoutProperty>
+              <X>287</X>
+              <Y>93</Y>
+              <Width>100</Width>
+              <Height>50</Height>
+              <Visible>false</Visible>
+              <Anchors>None</Anchors>
+            </LayoutProperty>
+          </LayoutProperty>
+          <Property i:type="PagePanelProperty">
+            <Effect>None</Effect>
+            <OwnerNode z:Ref="i4" />
+            <VariableName>PagePanel_1</VariableName>
+            <Panels>
+              <ObjectTreeNode i:nil="true" />
+            </Panels>
+          </Property>
+          <IsRoot>false</IsRoot>
+          <PivotPos>LeftTop</PivotPos>
+          <WidgetType>PagePanel</WidgetType>
+          <ID>2488494</ID>
+          <ZIndex>15</ZIndex>
+          <LayoutAssistInfo>
+            <SnapGuidesList>
+              <ArrayOfSnapGuide />
+              <ArrayOfSnapGuide />
+            </SnapGuidesList>
+          </LayoutAssistInfo>
+          <IsHideInLayout>false</IsHideInLayout>
+          <IsLockInLayout>false</IsLockInLayout>
+        </UICNode>
+        <UICNode z:Id="i5" i:type="ObjectTreeNode">
+          <Parent z:Ref="i2" />
+          <Nodes />
+          <LayoutProperty>
+            <LayoutProperty>
+              <X>762</X>
+              <Y>402</Y>
+              <Width>82</Width>
+              <Height>68</Height>
+              <Visible>true</Visible>
+              <Anchors>Bottom Height Right Width</Anchors>
+            </LayoutProperty>
+            <LayoutProperty>
+              <X>651</X>
+              <Y>399</Y>
+              <Width>214</Width>
+              <Height>56</Height>
+              <Visible>false</Visible>
+              <Anchors>None</Anchors>
+            </LayoutProperty>
+          </LayoutProperty>
+          <Property i:type="ButtonProperty">
+            <Effect>None</Effect>
+            <OwnerNode z:Ref="i5" />
+            <VariableName>Button_1</VariableName>
+            <BackgroundButtonImage xmlns:d7p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+              <d7p1:BackgroundDisablelImage>setting_press.png</d7p1:BackgroundDisablelImage>
+              <d7p1:BackgroundNormalImage>setting_normal.png</d7p1:BackgroundNormalImage>
+              <d7p1:BackgroundPressImage>setting_press.png</d7p1:BackgroundPressImage>
+            </BackgroundButtonImage>
+            <BackgroundType>Custom</BackgroundType>
+            <ButtonImage i:nil="true" />
+            <ButtonType>ImageButton</ButtonType>
+            <FilterColor xmlns:d7p1="http://schemas.datacontract.org/2004/07/System.Windows.Media">
+              <d7p1:A>255</d7p1:A>
+              <d7p1:B>255</d7p1:B>
+              <d7p1:G>255</d7p1:G>
+              <d7p1:R>255</d7p1:R>
+              <d7p1:ScA>1</d7p1:ScA>
+              <d7p1:ScB>1</d7p1:ScB>
+              <d7p1:ScG>1</d7p1:ScG>
+              <d7p1:ScR>1</d7p1:ScR>
+            </FilterColor>
+            <HasTextShadow>false</HasTextShadow>
+            <NinePatchMargin xmlns:d7p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+              <d7p1:ButtomRowHeight>0</d7p1:ButtomRowHeight>
+              <d7p1:LeftColumnWidth>0</d7p1:LeftColumnWidth>
+              <d7p1:RightColumnWidth>0</d7p1:RightColumnWidth>
+              <d7p1:TopRowHeight>0</d7p1:TopRowHeight>
+            </NinePatchMargin>
+            <Text>Setting</Text>
+            <TextAlpha>30</TextAlpha>
+            <TextColor xmlns:d7p1="http://schemas.datacontract.org/2004/07/System.Windows.Media">
+              <d7p1:A>255</d7p1:A>
+              <d7p1:B>252</d7p1:B>
+              <d7p1:G>252</d7p1:G>
+              <d7p1:R>252</d7p1:R>
+              <d7p1:ScA>1</d7p1:ScA>
+              <d7p1:ScB>0.9734453</d7p1:ScB>
+              <d7p1:ScG>0.9734453</d7p1:ScG>
+              <d7p1:ScR>0.9734453</d7p1:ScR>
+            </TextColor>
+            <TextFont xmlns:d7p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+              <d7p1:FontFamily>System</d7p1:FontFamily>
+              <d7p1:FontSize>25</d7p1:FontSize>
+              <d7p1:FontStyle>Regular</d7p1:FontStyle>
+            </TextFont>
+            <TextShadow xmlns:d7p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+              <d7p1:Alpha>50</d7p1:Alpha>
+              <d7p1:Color xmlns:d8p1="http://schemas.datacontract.org/2004/07/System.Windows.Media">
+                <d8p1:A>255</d8p1:A>
+                <d8p1:B>0</d8p1:B>
+                <d8p1:G>0</d8p1:G>
+                <d8p1:R>0</d8p1:R>
+                <d8p1:ScA>1</d8p1:ScA>
+                <d8p1:ScB>0</d8p1:ScB>
+                <d8p1:ScG>0</d8p1:ScG>
+                <d8p1:ScR>0</d8p1:ScR>
+              </d7p1:Color>
+              <d7p1:OffsetX>2</d7p1:OffsetX>
+              <d7p1:OffsetY>2</d7p1:OffsetY>
+            </TextShadow>
+            <TextTrimming>EllipsisCharacter</TextTrimming>
+          </Property>
+          <IsRoot>false</IsRoot>
+          <PivotPos>LeftTop</PivotPos>
+          <WidgetType>Button</WidgetType>
+          <ID>135809293</ID>
+          <ZIndex>16</ZIndex>
+          <LayoutAssistInfo>
+            <SnapGuidesList>
+              <ArrayOfSnapGuide />
+              <ArrayOfSnapGuide />
+            </SnapGuidesList>
+          </LayoutAssistInfo>
+          <IsHideInLayout>false</IsHideInLayout>
+          <IsLockInLayout>false</IsLockInLayout>
+        </UICNode>
+      </Nodes>
+      <LayoutProperty>
+        <LayoutProperty>
+          <X>1</X>
+          <Y>1</Y>
+          <Width>854</Width>
+          <Height>480</Height>
+          <Visible>false</Visible>
+          <Anchors>None</Anchors>
+        </LayoutProperty>
+        <LayoutProperty>
+          <X>1</X>
+          <Y>1</Y>
+          <Width>544</Width>
+          <Height>960</Height>
+          <Visible>false</Visible>
+          <Anchors>None</Anchors>
+        </LayoutProperty>
+      </LayoutProperty>
+      <Property i:type="SceneProperty">
+        <Effect>None</Effect>
+        <OwnerNode z:Ref="i2" />
+        <VariableName>MainScene</VariableName>
+        <BackgroundAlpha>0</BackgroundAlpha>
+        <BackgroundColor xmlns:d5p1="http://schemas.datacontract.org/2004/07/System.Windows.Media">
+          <d5p1:A>255</d5p1:A>
+          <d5p1:B>255</d5p1:B>
+          <d5p1:G>255</d5p1:G>
+          <d5p1:R>255</d5p1:R>
+          <d5p1:ScA>1</d5p1:ScA>
+          <d5p1:ScB>1</d5p1:ScB>
+          <d5p1:ScG>1</d5p1:ScG>
+          <d5p1:ScR>1</d5p1:ScR>
+        </BackgroundColor>
+        <ShowNavigationBar>false</ShowNavigationBar>
+        <Title></Title>
+        <TransitionIn>None</TransitionIn>
+      </Property>
+      <IsRoot>true</IsRoot>
+      <PivotPos>LeftTop</PivotPos>
+      <WidgetType>Scene</WidgetType>
+      <ID>2086556328</ID>
+      <ZIndex>0</ZIndex>
+      <LayoutAssistInfo>
+        <SnapGuidesList>
+          <ArrayOfSnapGuide />
+          <ArrayOfSnapGuide />
+        </SnapGuidesList>
+        <OwnerNode z:Ref="i2" />
+      </LayoutAssistInfo>
+      <IsHideInLayout>false</IsHideInLayout>
+      <IsLockInLayout>false</IsLockInLayout>
+    </UICNode>
+    <UICNode z:Id="i6" i:type="ObjectTreeNode">
+      <Parent z:Ref="i1" />
+      <Nodes>
+        <UICNode z:Id="i7" i:type="ObjectTreeNode">
+          <Parent z:Ref="i6" />
+          <Nodes />
+          <LayoutProperty>
+            <LayoutProperty>
+              <X>0</X>
+              <Y>0</Y>
+              <Width>854</Width>
+              <Height>480</Height>
+              <Visible>true</Visible>
+              <Anchors>None</Anchors>
+            </LayoutProperty>
+            <LayoutProperty>
+              <X>176.23691460055102</X>
+              <Y>-100.39807162534433</Y>
+              <Width>200</Width>
+              <Height>200</Height>
+              <Visible>true</Visible>
+              <Anchors>None</Anchors>
+            </LayoutProperty>
+          </LayoutProperty>
+          <Property i:type="ImageBoxProperty">
+            <Effect>None</Effect>
+            <OwnerNode z:Ref="i7" />
+            <VariableName>ImageBox_10</VariableName>
+            <Image>Kyoto2.JPG</Image>
+            <NinePatchMargin xmlns:d7p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+              <d7p1:ButtomRowHeight>0</d7p1:ButtomRowHeight>
+              <d7p1:LeftColumnWidth>0</d7p1:LeftColumnWidth>
+              <d7p1:RightColumnWidth>0</d7p1:RightColumnWidth>
+              <d7p1:TopRowHeight>0</d7p1:TopRowHeight>
+            </NinePatchMargin>
+            <ScaleType>AspectOutside</ScaleType>
+          </Property>
+          <IsRoot>false</IsRoot>
+          <PivotPos>LeftTop</PivotPos>
+          <WidgetType>ImageBox</WidgetType>
+          <ID>312013827</ID>
+          <ZIndex>1</ZIndex>
+          <LayoutAssistInfo>
+            <SnapGuidesList>
+              <ArrayOfSnapGuide />
+              <ArrayOfSnapGuide />
+            </SnapGuidesList>
+          </LayoutAssistInfo>
+          <IsHideInLayout>false</IsHideInLayout>
+          <IsLockInLayout>false</IsLockInLayout>
+        </UICNode>
+        <UICNode z:Id="i8" i:type="ObjectTreeNode">
+          <Parent z:Ref="i6" />
+          <Nodes />
+          <LayoutProperty>
+            <LayoutProperty>
+              <X>20.0745856440098</X>
+              <Y>19.999999999999986</Y>
+              <Width>350</Width>
+              <Height>164</Height>
+              <Visible>true</Visible>
+              <Anchors>Top Height Left Width</Anchors>
+            </LayoutProperty>
+            <LayoutProperty>
+              <X>347.78950230078692</X>
+              <Y>96.013903877951847</Y>
+              <Width>200</Width>
+              <Height>200</Height>
+              <Visible>true</Visible>
+              <Anchors>None</Anchors>
+            </LayoutProperty>
+          </LayoutProperty>
+          <Property i:type="ImageBoxProperty">
+            <Effect>None</Effect>
+            <OwnerNode z:Ref="i8" />
+            <VariableName>ImageBox_11</VariableName>
+            <Image>flip_bg.png</Image>
+            <NinePatchMargin xmlns:d7p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+              <d7p1:ButtomRowHeight>0</d7p1:ButtomRowHeight>
+              <d7p1:LeftColumnWidth>0</d7p1:LeftColumnWidth>
+              <d7p1:RightColumnWidth>0</d7p1:RightColumnWidth>
+              <d7p1:TopRowHeight>0</d7p1:TopRowHeight>
+            </NinePatchMargin>
+            <ScaleType>AspectInside</ScaleType>
+          </Property>
+          <IsRoot>false</IsRoot>
+          <PivotPos>LeftTop</PivotPos>
+          <WidgetType>ImageBox</WidgetType>
+          <ID>1485394831</ID>
+          <ZIndex>2</ZIndex>
+          <LayoutAssistInfo>
+            <SnapGuidesList>
+              <ArrayOfSnapGuide />
+              <ArrayOfSnapGuide />
+            </SnapGuidesList>
+          </LayoutAssistInfo>
+          <IsHideInLayout>false</IsHideInLayout>
+          <IsLockInLayout>false</IsLockInLayout>
+        </UICNode>
+        <UICNode z:Id="i9" i:type="ObjectTreeNode">
+          <Parent z:Ref="i6" />
+          <Nodes />
+          <LayoutProperty>
+            <LayoutProperty>
+              <X>39.05785123966956</X>
+              <Y>39.571513262661995</Y>
+              <Width>92</Width>
+              <Height>102</Height>
+              <Visible>true</Visible>
+              <Anchors>Top Height Left Width</Anchors>
+            </LayoutProperty>
+            <LayoutProperty>
+              <X>320</X>
+              <Y>105</Y>
+              <Width>200</Width>
+              <Height>200</Height>
+              <Visible>false</Visible>
+              <Anchors>None</Anchors>
+            </LayoutProperty>
+          </LayoutProperty>
+          <Property i:type="ImageBoxProperty">
+            <Effect>None</Effect>
+            <OwnerNode z:Ref="i9" />
+            <VariableName>ImageBox_1</VariableName>
+            <Image>flip.png</Image>
+            <NinePatchMargin xmlns:d7p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+              <d7p1:ButtomRowHeight>0</d7p1:ButtomRowHeight>
+              <d7p1:LeftColumnWidth>0</d7p1:LeftColumnWidth>
+              <d7p1:RightColumnWidth>0</d7p1:RightColumnWidth>
+              <d7p1:TopRowHeight>0</d7p1:TopRowHeight>
+            </NinePatchMargin>
+            <ScaleType>AspectInside</ScaleType>
+          </Property>
+          <IsRoot>false</IsRoot>
+          <PivotPos>LeftTop</PivotPos>
+          <WidgetType>ImageBox</WidgetType>
+          <ID>879047517</ID>
+          <ZIndex>3</ZIndex>
+          <LayoutAssistInfo>
+            <SnapGuidesList>
+              <ArrayOfSnapGuide />
+              <ArrayOfSnapGuide />
+            </SnapGuidesList>
+          </LayoutAssistInfo>
+          <IsHideInLayout>false</IsHideInLayout>
+          <IsLockInLayout>false</IsLockInLayout>
+        </UICNode>
+        <UICNode z:Id="i10" i:type="ObjectTreeNode">
+          <Parent z:Ref="i6" />
+          <Nodes />
+          <LayoutProperty>
+            <LayoutProperty>
+              <X>149.07458564400986</X>
+              <Y>39.571513262661995</Y>
+              <Width>92</Width>
+              <Height>102</Height>
+              <Visible>true</Visible>
+              <Anchors>Height Width</Anchors>
+            </LayoutProperty>
+            <LayoutProperty>
+              <X>292</X>
+              <Y>104</Y>
+              <Width>200</Width>
+              <Height>200</Height>
+              <Visible>false</Visible>
+              <Anchors>None</Anchors>
+            </LayoutProperty>
+          </LayoutProperty>
+          <Property i:type="ImageBoxProperty">
+            <Effect>None</Effect>
+            <OwnerNode z:Ref="i10" />
+            <VariableName>ImageBox_2</VariableName>
+            <Image>flip.png</Image>
+            <NinePatchMargin xmlns:d7p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+              <d7p1:ButtomRowHeight>0</d7p1:ButtomRowHeight>
+              <d7p1:LeftColumnWidth>0</d7p1:LeftColumnWidth>
+              <d7p1:RightColumnWidth>0</d7p1:RightColumnWidth>
+              <d7p1:TopRowHeight>0</d7p1:TopRowHeight>
+            </NinePatchMargin>
+            <ScaleType>Stretch</ScaleType>
+          </Property>
+          <IsRoot>false</IsRoot>
+          <PivotPos>LeftTop</PivotPos>
+          <WidgetType>ImageBox</WidgetType>
+          <ID>20365160</ID>
+          <ZIndex>4</ZIndex>
+          <LayoutAssistInfo>
+            <SnapGuidesList>
+              <ArrayOfSnapGuide />
+              <ArrayOfSnapGuide />
+            </SnapGuidesList>
+          </LayoutAssistInfo>
+          <IsHideInLayout>false</IsHideInLayout>
+          <IsLockInLayout>false</IsLockInLayout>
+        </UICNode>
+        <UICNode z:Id="i11" i:type="ObjectTreeNode">
+          <Parent z:Ref="i6" />
+          <Nodes />
+          <LayoutProperty>
+            <LayoutProperty>
+              <X>259.11575359418021</X>
+              <Y>39.571513262661995</Y>
+              <Width>92</Width>
+              <Height>102</Height>
+              <Visible>true</Visible>
+              <Anchors>Height Width</Anchors>
+            </LayoutProperty>
+            <LayoutProperty>
+              <X>598</X>
+              <Y>102</Y>
+              <Width>200</Width>
+              <Height>200</Height>
+              <Visible>false</Visible>
+              <Anchors>None</Anchors>
+            </LayoutProperty>
+          </LayoutProperty>
+          <Property i:type="ImageBoxProperty">
+            <Effect>None</Effect>
+            <OwnerNode z:Ref="i11" />
+            <VariableName>ImageBox_3</VariableName>
+            <Image>flip.png</Image>
+            <NinePatchMargin xmlns:d7p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+              <d7p1:ButtomRowHeight>0</d7p1:ButtomRowHeight>
+              <d7p1:LeftColumnWidth>0</d7p1:LeftColumnWidth>
+              <d7p1:RightColumnWidth>0</d7p1:RightColumnWidth>
+              <d7p1:TopRowHeight>0</d7p1:TopRowHeight>
+            </NinePatchMargin>
+            <ScaleType>Stretch</ScaleType>
+          </Property>
+          <IsRoot>false</IsRoot>
+          <PivotPos>LeftTop</PivotPos>
+          <WidgetType>ImageBox</WidgetType>
+          <ID>534713605</ID>
+          <ZIndex>5</ZIndex>
+          <LayoutAssistInfo>
+            <SnapGuidesList>
+              <ArrayOfSnapGuide />
+              <ArrayOfSnapGuide />
+            </SnapGuidesList>
+          </LayoutAssistInfo>
+          <IsHideInLayout>false</IsHideInLayout>
+          <IsLockInLayout>false</IsLockInLayout>
+        </UICNode>
+        <UICNode z:Id="i12" i:type="ObjectTreeNode">
+          <Parent z:Ref="i6" />
+          <Nodes />
+          <LayoutProperty>
+            <LayoutProperty>
+              <X>42</X>
+              <Y>58</Y>
+              <Width>40</Width>
+              <Height>64</Height>
+              <Visible>true</Visible>
+              <Anchors>Height Width</Anchors>
+            </LayoutProperty>
+            <LayoutProperty>
+              <X>-21</X>
+              <Y>127</Y>
+              <Width>200</Width>
+              <Height>200</Height>
+              <Visible>false</Visible>
+              <Anchors>None</Anchors>
+            </LayoutProperty>
+          </LayoutProperty>
+          <Property i:type="ImageBoxProperty">
+            <Effect>None</Effect>
+            <OwnerNode z:Ref="i12" />
+            <VariableName>ImageBox_4</VariableName>
+            <Image>num_1.png</Image>
+            <NinePatchMargin xmlns:d7p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+              <d7p1:ButtomRowHeight>0</d7p1:ButtomRowHeight>
+              <d7p1:LeftColumnWidth>0</d7p1:LeftColumnWidth>
+              <d7p1:RightColumnWidth>0</d7p1:RightColumnWidth>
+              <d7p1:TopRowHeight>0</d7p1:TopRowHeight>
+            </NinePatchMargin>
+            <ScaleType>Stretch</ScaleType>
+          </Property>
+          <IsRoot>false</IsRoot>
+          <PivotPos>LeftTop</PivotPos>
+          <WidgetType>ImageBox</WidgetType>
+          <ID>303452284</ID>
+          <ZIndex>6</ZIndex>
+          <LayoutAssistInfo>
+            <SnapGuidesList>
+              <ArrayOfSnapGuide />
+              <ArrayOfSnapGuide />
+            </SnapGuidesList>
+          </LayoutAssistInfo>
+          <IsHideInLayout>false</IsHideInLayout>
+          <IsLockInLayout>false</IsLockInLayout>
+        </UICNode>
+        <UICNode z:Id="i13" i:type="ObjectTreeNode">
+          <Parent z:Ref="i6" />
+          <Nodes />
+          <LayoutProperty>
+            <LayoutProperty>
+              <X>87</X>
+              <Y>58</Y>
+              <Width>40</Width>
+              <Height>64</Height>
+              <Visible>true</Visible>
+              <Anchors>Height Width</Anchors>
+            </LayoutProperty>
+            <LayoutProperty>
+              <X>254</X>
+              <Y>135</Y>
+              <Width>200</Width>
+              <Height>200</Height>
+              <Visible>false</Visible>
+              <Anchors>None</Anchors>
+            </LayoutProperty>
+          </LayoutProperty>
+          <Property i:type="ImageBoxProperty">
+            <Effect>None</Effect>
+            <OwnerNode z:Ref="i13" />
+            <VariableName>ImageBox_5</VariableName>
+            <Image>num_2.png</Image>
+            <NinePatchMargin xmlns:d7p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+              <d7p1:ButtomRowHeight>0</d7p1:ButtomRowHeight>
+              <d7p1:LeftColumnWidth>0</d7p1:LeftColumnWidth>
+              <d7p1:RightColumnWidth>0</d7p1:RightColumnWidth>
+              <d7p1:TopRowHeight>0</d7p1:TopRowHeight>
+            </NinePatchMargin>
+            <ScaleType>Stretch</ScaleType>
+          </Property>
+          <IsRoot>false</IsRoot>
+          <PivotPos>LeftTop</PivotPos>
+          <WidgetType>ImageBox</WidgetType>
+          <ID>1912004606</ID>
+          <ZIndex>7</ZIndex>
+          <LayoutAssistInfo>
+            <SnapGuidesList>
+              <ArrayOfSnapGuide />
+              <ArrayOfSnapGuide />
+            </SnapGuidesList>
+          </LayoutAssistInfo>
+          <IsHideInLayout>false</IsHideInLayout>
+          <IsLockInLayout>false</IsLockInLayout>
+        </UICNode>
+        <UICNode z:Id="i14" i:type="ObjectTreeNode">
+          <Parent z:Ref="i6" />
+          <Nodes />
+          <LayoutProperty>
+            <LayoutProperty>
+              <X>152</X>
+              <Y>58</Y>
+              <Width>46</Width>
+              <Height>64</Height>
+              <Visible>true</Visible>
+              <Anchors>Height Width</Anchors>
+            </LayoutProperty>
+            <LayoutProperty>
+              <X>252</X>
+              <Y>127</Y>
+              <Width>200</Width>
+              <Height>200</Height>
+              <Visible>false</Visible>
+              <Anchors>None</Anchors>
+            </LayoutProperty>
+          </LayoutProperty>
+          <Property i:type="ImageBoxProperty">
+            <Effect>None</Effect>
+            <OwnerNode z:Ref="i14" />
+            <VariableName>ImageBox_6</VariableName>
+            <Image>num_3.png</Image>
+            <NinePatchMargin xmlns:d7p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+              <d7p1:ButtomRowHeight>0</d7p1:ButtomRowHeight>
+              <d7p1:LeftColumnWidth>0</d7p1:LeftColumnWidth>
+              <d7p1:RightColumnWidth>0</d7p1:RightColumnWidth>
+              <d7p1:TopRowHeight>0</d7p1:TopRowHeight>
+            </NinePatchMargin>
+            <ScaleType>Stretch</ScaleType>
+          </Property>
+          <IsRoot>false</IsRoot>
+          <PivotPos>LeftTop</PivotPos>
+          <WidgetType>ImageBox</WidgetType>
+          <ID>2064754003</ID>
+          <ZIndex>8</ZIndex>
+          <LayoutAssistInfo>
+            <SnapGuidesList>
+              <ArrayOfSnapGuide />
+              <ArrayOfSnapGuide />
+            </SnapGuidesList>
+          </LayoutAssistInfo>
+          <IsHideInLayout>false</IsHideInLayout>
+          <IsLockInLayout>false</IsLockInLayout>
+        </UICNode>
+        <UICNode z:Id="i15" i:type="ObjectTreeNode">
+          <Parent z:Ref="i6" />
+          <Nodes />
+          <LayoutProperty>
+            <LayoutProperty>
+              <X>198</X>
+              <Y>58</Y>
+              <Width>40</Width>
+              <Height>64</Height>
+              <Visible>true</Visible>
+              <Anchors>Height Width</Anchors>
+            </LayoutProperty>
+            <LayoutProperty>
+              <X>382</X>
+              <Y>117</Y>
+              <Width>200</Width>
+              <Height>200</Height>
+              <Visible>false</Visible>
+              <Anchors>None</Anchors>
+            </LayoutProperty>
+          </LayoutProperty>
+          <Property i:type="ImageBoxProperty">
+            <Effect>None</Effect>
+            <OwnerNode z:Ref="i15" />
+            <VariableName>ImageBox_7</VariableName>
+            <Image>num_4.png</Image>
+            <NinePatchMargin xmlns:d7p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+              <d7p1:ButtomRowHeight>0</d7p1:ButtomRowHeight>
+              <d7p1:LeftColumnWidth>0</d7p1:LeftColumnWidth>
+              <d7p1:RightColumnWidth>0</d7p1:RightColumnWidth>
+              <d7p1:TopRowHeight>0</d7p1:TopRowHeight>
+            </NinePatchMargin>
+            <ScaleType>Stretch</ScaleType>
+          </Property>
+          <IsRoot>false</IsRoot>
+          <PivotPos>LeftTop</PivotPos>
+          <WidgetType>ImageBox</WidgetType>
+          <ID>809740086</ID>
+          <ZIndex>9</ZIndex>
+          <LayoutAssistInfo>
+            <SnapGuidesList>
+              <ArrayOfSnapGuide />
+              <ArrayOfSnapGuide />
+            </SnapGuidesList>
+          </LayoutAssistInfo>
+          <IsHideInLayout>false</IsHideInLayout>
+          <IsLockInLayout>false</IsLockInLayout>
+        </UICNode>
+        <UICNode z:Id="i16" i:type="ObjectTreeNode">
+          <Parent z:Ref="i6" />
+          <Nodes />
+          <LayoutProperty>
+            <LayoutProperty>
+              <X>265</X>
+              <Y>58</Y>
+              <Width>40</Width>
+              <Height>64</Height>
+              <Visible>true</Visible>
+              <Anchors>Height Width</Anchors>
+            </LayoutProperty>
+            <LayoutProperty>
+              <X>534</X>
+              <Y>127</Y>
+              <Width>200</Width>
+              <Height>200</Height>
+              <Visible>false</Visible>
+              <Anchors>None</Anchors>
+            </LayoutProperty>
+          </LayoutProperty>
+          <Property i:type="ImageBoxProperty">
+            <Effect>None</Effect>
+            <OwnerNode z:Ref="i16" />
+            <VariableName>ImageBox_8</VariableName>
+            <Image>num_5.png</Image>
+            <NinePatchMargin xmlns:d7p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+              <d7p1:ButtomRowHeight>0</d7p1:ButtomRowHeight>
+              <d7p1:LeftColumnWidth>0</d7p1:LeftColumnWidth>
+              <d7p1:RightColumnWidth>0</d7p1:RightColumnWidth>
+              <d7p1:TopRowHeight>0</d7p1:TopRowHeight>
+            </NinePatchMargin>
+            <ScaleType>Stretch</ScaleType>
+          </Property>
+          <IsRoot>false</IsRoot>
+          <PivotPos>LeftTop</PivotPos>
+          <WidgetType>ImageBox</WidgetType>
+          <ID>405589012</ID>
+          <ZIndex>10</ZIndex>
+          <LayoutAssistInfo>
+            <SnapGuidesList>
+              <ArrayOfSnapGuide />
+              <ArrayOfSnapGuide />
+            </SnapGuidesList>
+          </LayoutAssistInfo>
+          <IsHideInLayout>false</IsHideInLayout>
+          <IsLockInLayout>false</IsLockInLayout>
+        </UICNode>
+        <UICNode z:Id="i17" i:type="ObjectTreeNode">
+          <Parent z:Ref="i6" />
+          <Nodes />
+          <LayoutProperty>
+            <LayoutProperty>
+              <X>305</X>
+              <Y>58</Y>
+              <Width>40</Width>
+              <Height>64</Height>
+              <Visible>true</Visible>
+              <Anchors>Height Width</Anchors>
+            </LayoutProperty>
+            <LayoutProperty>
+              <X>654</X>
+              <Y>127</Y>
+              <Width>200</Width>
+              <Height>200</Height>
+              <Visible>false</Visible>
+              <Anchors>None</Anchors>
+            </LayoutProperty>
+          </LayoutProperty>
+          <Property i:type="ImageBoxProperty">
+            <Effect>None</Effect>
+            <OwnerNode z:Ref="i17" />
+            <VariableName>ImageBox_9</VariableName>
+            <Image>num_6.png</Image>
+            <NinePatchMargin xmlns:d7p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+              <d7p1:ButtomRowHeight>0</d7p1:ButtomRowHeight>
+              <d7p1:LeftColumnWidth>0</d7p1:LeftColumnWidth>
+              <d7p1:RightColumnWidth>0</d7p1:RightColumnWidth>
+              <d7p1:TopRowHeight>0</d7p1:TopRowHeight>
+            </NinePatchMargin>
+            <ScaleType>Stretch</ScaleType>
+          </Property>
+          <IsRoot>false</IsRoot>
+          <PivotPos>LeftTop</PivotPos>
+          <WidgetType>ImageBox</WidgetType>
+          <ID>2018564701</ID>
+          <ZIndex>11</ZIndex>
+          <LayoutAssistInfo>
+            <SnapGuidesList>
+              <ArrayOfSnapGuide />
+              <ArrayOfSnapGuide />
+            </SnapGuidesList>
+          </LayoutAssistInfo>
+          <IsHideInLayout>false</IsHideInLayout>
+          <IsLockInLayout>false</IsLockInLayout>
+        </UICNode>
+        <UICNode z:Id="i18" i:type="ObjectTreeNode">
+          <Parent z:Ref="i6" />
+          <Nodes />
+          <LayoutProperty>
+            <LayoutProperty>
+              <X>39.05785123966956</X>
+              <Y>141.571513262662</Y>
+              <Width>312.05790235451065</Width>
+              <Height>36</Height>
+              <Visible>true</Visible>
+              <Anchors>Top Height Left Width</Anchors>
+            </LayoutProperty>
+            <LayoutProperty>
+              <X>434</X>
+              <Y>93</Y>
+              <Width>214</Width>
+              <Height>36</Height>
+              <Visible>false</Visible>
+              <Anchors>None</Anchors>
+            </LayoutProperty>
+          </LayoutProperty>
+          <Property i:type="LabelProperty">
+            <Effect>None</Effect>
+            <OwnerNode z:Ref="i18" />
+            <VariableName>Label_1</VariableName>
+            <H_Alignment>Center</H_Alignment>
+            <HasTextShadow>false</HasTextShadow>
+            <LineBreaks>Word</LineBreaks>
+            <Text>label</Text>
+            <TextAlpha>100</TextAlpha>
+            <TextColor xmlns:d7p1="http://schemas.datacontract.org/2004/07/System.Windows.Media">
+              <d7p1:A>255</d7p1:A>
+              <d7p1:B>255</d7p1:B>
+              <d7p1:G>255</d7p1:G>
+              <d7p1:R>255</d7p1:R>
+              <d7p1:ScA>1</d7p1:ScA>
+              <d7p1:ScB>1</d7p1:ScB>
+              <d7p1:ScG>1</d7p1:ScG>
+              <d7p1:ScR>1</d7p1:ScR>
+            </TextColor>
+            <TextFont xmlns:d7p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+              <d7p1:FontFamily>System</d7p1:FontFamily>
+              <d7p1:FontSize>25</d7p1:FontSize>
+              <d7p1:FontStyle>Regular</d7p1:FontStyle>
+            </TextFont>
+            <TextShadow xmlns:d7p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+              <d7p1:Alpha>0</d7p1:Alpha>
+              <d7p1:Color xmlns:d8p1="http://schemas.datacontract.org/2004/07/System.Windows.Media">
+                <d8p1:A>0</d8p1:A>
+                <d8p1:B>0</d8p1:B>
+                <d8p1:G>0</d8p1:G>
+                <d8p1:R>0</d8p1:R>
+                <d8p1:ScA>0</d8p1:ScA>
+                <d8p1:ScB>0</d8p1:ScB>
+                <d8p1:ScG>0</d8p1:ScG>
+                <d8p1:ScR>0</d8p1:ScR>
+              </d7p1:Color>
+              <d7p1:OffsetX>0</d7p1:OffsetX>
+              <d7p1:OffsetY>0</d7p1:OffsetY>
+            </TextShadow>
+            <TextTrimming>EllipsisCharacter</TextTrimming>
+            <V_Alignment>Middle</V_Alignment>
+          </Property>
+          <IsRoot>false</IsRoot>
+          <PivotPos>LeftTop</PivotPos>
+          <WidgetType>Label</WidgetType>
+          <ID>243456103</ID>
+          <ZIndex>12</ZIndex>
+          <LayoutAssistInfo>
+            <SnapGuidesList>
+              <ArrayOfSnapGuide />
+              <ArrayOfSnapGuide />
+            </SnapGuidesList>
+          </LayoutAssistInfo>
+          <IsHideInLayout>false</IsHideInLayout>
+          <IsLockInLayout>false</IsLockInLayout>
+        </UICNode>
+      </Nodes>
+      <LayoutProperty>
+        <LayoutProperty>
+          <X>0</X>
+          <Y>0</Y>
+          <Width>854</Width>
+          <Height>480</Height>
+          <Visible>false</Visible>
+          <Anchors>None</Anchors>
+        </LayoutProperty>
+        <LayoutProperty>
+          <X>1</X>
+          <Y>1</Y>
+          <Width>480</Width>
+          <Height>854</Height>
+          <Visible>false</Visible>
+          <Anchors>None</Anchors>
+        </LayoutProperty>
+      </LayoutProperty>
+      <Property i:type="PanelProperty">
+        <Effect>None</Effect>
+        <OwnerNode z:Ref="i6" />
+        <VariableName>FlipClockPanel</VariableName>
+        <BackgroundAlpha>100</BackgroundAlpha>
+        <BackgroundColor xmlns:d5p1="http://schemas.datacontract.org/2004/07/System.Windows.Media">
+          <d5p1:A>255</d5p1:A>
+          <d5p1:B>32</d5p1:B>
+          <d5p1:G>32</d5p1:G>
+          <d5p1:R>162</d5p1:R>
+          <d5p1:ScA>1</d5p1:ScA>
+          <d5p1:ScB>0.0147654573</d5p1:ScB>
+          <d5p1:ScG>0.0147654573</d5p1:ScG>
+          <d5p1:ScR>0.36190477</d5p1:ScR>
+        </BackgroundColor>
+      </Property>
+      <IsRoot>true</IsRoot>
+      <PivotPos>LeftTop</PivotPos>
+      <WidgetType>Panel</WidgetType>
+      <ID>1934752132</ID>
+      <ZIndex>0</ZIndex>
+      <LayoutAssistInfo>
+        <SnapGuidesList>
+          <ArrayOfSnapGuide />
+          <ArrayOfSnapGuide />
+        </SnapGuidesList>
+        <OwnerNode z:Ref="i6" />
+      </LayoutAssistInfo>
+      <IsHideInLayout>false</IsHideInLayout>
+      <IsLockInLayout>false</IsLockInLayout>
+    </UICNode>
+    <UICNode z:Id="i19" i:type="ObjectTreeNode">
+      <Parent z:Ref="i1" />
+      <Nodes>
+        <UICNode z:Id="i20" i:type="ObjectTreeNode">
+          <Parent z:Ref="i19" />
+          <Nodes />
+          <LayoutProperty>
+            <LayoutProperty>
+              <X>0</X>
+              <Y>0</Y>
+              <Width>854</Width>
+              <Height>480</Height>
+              <Visible>true</Visible>
+              <Anchors>None</Anchors>
+            </LayoutProperty>
+            <LayoutProperty>
+              <X>-35.039944903581272</X>
+              <Y>-130.59641873278233</Y>
+              <Width>200</Width>
+              <Height>200</Height>
+              <Visible>true</Visible>
+              <Anchors>None</Anchors>
+            </LayoutProperty>
+          </LayoutProperty>
+          <Property i:type="ImageBoxProperty">
+            <Effect>None</Effect>
+            <OwnerNode z:Ref="i20" />
+            <VariableName>ImageBox_5</VariableName>
+            <Image>Kyoto1.JPG</Image>
+            <NinePatchMargin xmlns:d7p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+              <d7p1:ButtomRowHeight>0</d7p1:ButtomRowHeight>
+              <d7p1:LeftColumnWidth>0</d7p1:LeftColumnWidth>
+              <d7p1:RightColumnWidth>0</d7p1:RightColumnWidth>
+              <d7p1:TopRowHeight>0</d7p1:TopRowHeight>
+            </NinePatchMargin>
+            <ScaleType>AspectOutside</ScaleType>
+          </Property>
+          <IsRoot>false</IsRoot>
+          <PivotPos>LeftTop</PivotPos>
+          <WidgetType>ImageBox</WidgetType>
+          <ID>1817359909</ID>
+          <ZIndex>1</ZIndex>
+          <LayoutAssistInfo>
+            <SnapGuidesList>
+              <ArrayOfSnapGuide />
+              <ArrayOfSnapGuide />
+            </SnapGuidesList>
+          </LayoutAssistInfo>
+          <IsHideInLayout>false</IsHideInLayout>
+          <IsLockInLayout>false</IsLockInLayout>
+        </UICNode>
+        <UICNode z:Id="i21" i:type="ObjectTreeNode">
+          <Parent z:Ref="i19" />
+          <Nodes>
+            <UICNode z:Id="i22" i:type="ObjectTreeNode">
+              <Parent z:Ref="i21" />
+              <Nodes />
+              <LayoutProperty>
+                <LayoutProperty>
+                  <X>0</X>
+                  <Y>0</Y>
+                  <Width>212</Width>
+                  <Height>212</Height>
+                  <Visible>true</Visible>
+                  <Anchors>Height Width</Anchors>
+                </LayoutProperty>
+                <LayoutProperty>
+                  <X>-447</X>
+                  <Y>-151</Y>
+                  <Width>200</Width>
+                  <Height>200</Height>
+                  <Visible>false</Visible>
+                  <Anchors>None</Anchors>
+                </LayoutProperty>
+              </LayoutProperty>
+              <Property i:type="ImageBoxProperty">
+                <Effect>None</Effect>
+                <OwnerNode z:Ref="i22" />
+                <VariableName>ImageBox_1</VariableName>
+                <Image>clock_bg.png</Image>
+                <NinePatchMargin xmlns:d9p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+                  <d9p1:ButtomRowHeight>0</d9p1:ButtomRowHeight>
+                  <d9p1:LeftColumnWidth>0</d9p1:LeftColumnWidth>
+                  <d9p1:RightColumnWidth>0</d9p1:RightColumnWidth>
+                  <d9p1:TopRowHeight>0</d9p1:TopRowHeight>
+                </NinePatchMargin>
+                <ScaleType>AspectOutside</ScaleType>
+              </Property>
+              <IsRoot>false</IsRoot>
+              <PivotPos>LeftTop</PivotPos>
+              <WidgetType>ImageBox</WidgetType>
+              <ID>382271453</ID>
+              <ZIndex>9</ZIndex>
+              <LayoutAssistInfo>
+                <SnapGuidesList>
+                  <ArrayOfSnapGuide />
+                  <ArrayOfSnapGuide />
+                </SnapGuidesList>
+              </LayoutAssistInfo>
+              <IsHideInLayout>false</IsHideInLayout>
+              <IsLockInLayout>false</IsLockInLayout>
+            </UICNode>
+            <UICNode z:Id="i23" i:type="ObjectTreeNode">
+              <Parent z:Ref="i21" />
+              <Nodes />
+              <LayoutProperty>
+                <LayoutProperty>
+                  <X>0</X>
+                  <Y>127</Y>
+                  <Width>212</Width>
+                  <Height>25</Height>
+                  <Visible>true</Visible>
+                  <Anchors>Top Height Left Width</Anchors>
+                </LayoutProperty>
+                <LayoutProperty>
+                  <X>-374</X>
+                  <Y>-135</Y>
+                  <Width>214</Width>
+                  <Height>36</Height>
+                  <Visible>false</Visible>
+                  <Anchors>None</Anchors>
+                </LayoutProperty>
+              </LayoutProperty>
+              <Property i:type="LabelProperty">
+                <Effect>None</Effect>
+                <OwnerNode z:Ref="i23" />
+                <VariableName>Label_1</VariableName>
+                <H_Alignment>Center</H_Alignment>
+                <HasTextShadow>false</HasTextShadow>
+                <LineBreaks>Word</LineBreaks>
+                <Text>label</Text>
+                <TextAlpha>100</TextAlpha>
+                <TextColor xmlns:d9p1="http://schemas.datacontract.org/2004/07/System.Windows.Media">
+                  <d9p1:A>255</d9p1:A>
+                  <d9p1:B>255</d9p1:B>
+                  <d9p1:G>255</d9p1:G>
+                  <d9p1:R>255</d9p1:R>
+                  <d9p1:ScA>1</d9p1:ScA>
+                  <d9p1:ScB>1</d9p1:ScB>
+                  <d9p1:ScG>1</d9p1:ScG>
+                  <d9p1:ScR>1</d9p1:ScR>
+                </TextColor>
+                <TextFont xmlns:d9p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+                  <d9p1:FontFamily>Segoe UI</d9p1:FontFamily>
+                  <d9p1:FontSize>25</d9p1:FontSize>
+                  <d9p1:FontStyle>Regular</d9p1:FontStyle>
+                </TextFont>
+                <TextShadow xmlns:d9p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+                  <d9p1:Alpha>0</d9p1:Alpha>
+                  <d9p1:Color xmlns:d10p1="http://schemas.datacontract.org/2004/07/System.Windows.Media">
+                    <d10p1:A>0</d10p1:A>
+                    <d10p1:B>0</d10p1:B>
+                    <d10p1:G>0</d10p1:G>
+                    <d10p1:R>0</d10p1:R>
+                    <d10p1:ScA>0</d10p1:ScA>
+                    <d10p1:ScB>0</d10p1:ScB>
+                    <d10p1:ScG>0</d10p1:ScG>
+                    <d10p1:ScR>0</d10p1:ScR>
+                  </d9p1:Color>
+                  <d9p1:OffsetX>0</d9p1:OffsetX>
+                  <d9p1:OffsetY>0</d9p1:OffsetY>
+                </TextShadow>
+                <TextTrimming>EllipsisCharacter</TextTrimming>
+                <V_Alignment>Middle</V_Alignment>
+              </Property>
+              <IsRoot>false</IsRoot>
+              <PivotPos>LeftTop</PivotPos>
+              <WidgetType>Label</WidgetType>
+              <ID>1667519457</ID>
+              <ZIndex>10</ZIndex>
+              <LayoutAssistInfo>
+                <SnapGuidesList>
+                  <ArrayOfSnapGuide />
+                  <ArrayOfSnapGuide />
+                </SnapGuidesList>
+              </LayoutAssistInfo>
+              <IsHideInLayout>false</IsHideInLayout>
+              <IsLockInLayout>false</IsLockInLayout>
+            </UICNode>
+            <UICNode z:Id="i24" i:type="ObjectTreeNode">
+              <Parent z:Ref="i21" />
+              <Nodes />
+              <LayoutProperty>
+                <LayoutProperty>
+                  <X>0</X>
+                  <Y>0</Y>
+                  <Width>10</Width>
+                  <Height>66</Height>
+                  <Visible>true</Visible>
+                  <Anchors>Height Width</Anchors>
+                </LayoutProperty>
+                <LayoutProperty>
+                  <X>-285</X>
+                  <Y>19</Y>
+                  <Width>200</Width>
+                  <Height>200</Height>
+                  <Visible>false</Visible>
+                  <Anchors>None</Anchors>
+                </LayoutProperty>
+              </LayoutProperty>
+              <Property i:type="ImageBoxProperty">
+                <Effect>None</Effect>
+                <OwnerNode z:Ref="i24" />
+                <VariableName>ImageBox_2</VariableName>
+                <Image>hour_hand_10.png</Image>
+                <NinePatchMargin xmlns:d9p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+                  <d9p1:ButtomRowHeight>0</d9p1:ButtomRowHeight>
+                  <d9p1:LeftColumnWidth>0</d9p1:LeftColumnWidth>
+                  <d9p1:RightColumnWidth>0</d9p1:RightColumnWidth>
+                  <d9p1:TopRowHeight>0</d9p1:TopRowHeight>
+                </NinePatchMargin>
+                <ScaleType>Stretch</ScaleType>
+              </Property>
+              <IsRoot>false</IsRoot>
+              <PivotPos>LeftTop</PivotPos>
+              <WidgetType>ImageBox</WidgetType>
+              <ID>1803687386</ID>
+              <ZIndex>11</ZIndex>
+              <LayoutAssistInfo>
+                <SnapGuidesList>
+                  <ArrayOfSnapGuide />
+                  <ArrayOfSnapGuide />
+                </SnapGuidesList>
+              </LayoutAssistInfo>
+              <IsHideInLayout>false</IsHideInLayout>
+              <IsLockInLayout>false</IsLockInLayout>
+            </UICNode>
+            <UICNode z:Id="i25" i:type="ObjectTreeNode">
+              <Parent z:Ref="i21" />
+              <Nodes />
+              <LayoutProperty>
+                <LayoutProperty>
+                  <X>0</X>
+                  <Y>0</Y>
+                  <Width>6</Width>
+                  <Height>100</Height>
+                  <Visible>true</Visible>
+                  <Anchors>Height Width</Anchors>
+                </LayoutProperty>
+                <LayoutProperty>
+                  <X>-170</X>
+                  <Y>35</Y>
+                  <Width>200</Width>
+                  <Height>200</Height>
+                  <Visible>false</Visible>
+                  <Anchors>None</Anchors>
+                </LayoutProperty>
+              </LayoutProperty>
+              <Property i:type="ImageBoxProperty">
+                <Effect>None</Effect>
+                <OwnerNode z:Ref="i25" />
+                <VariableName>ImageBox_3</VariableName>
+                <Image>minute_hand_16.png</Image>
+                <NinePatchMargin xmlns:d9p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+                  <d9p1:ButtomRowHeight>0</d9p1:ButtomRowHeight>
+                  <d9p1:LeftColumnWidth>0</d9p1:LeftColumnWidth>
+                  <d9p1:RightColumnWidth>0</d9p1:RightColumnWidth>
+                  <d9p1:TopRowHeight>0</d9p1:TopRowHeight>
+                </NinePatchMargin>
+                <ScaleType>Stretch</ScaleType>
+              </Property>
+              <IsRoot>false</IsRoot>
+              <PivotPos>LeftTop</PivotPos>
+              <WidgetType>ImageBox</WidgetType>
+              <ID>1154002775</ID>
+              <ZIndex>12</ZIndex>
+              <LayoutAssistInfo>
+                <SnapGuidesList>
+                  <ArrayOfSnapGuide />
+                  <ArrayOfSnapGuide />
+                </SnapGuidesList>
+              </LayoutAssistInfo>
+              <IsHideInLayout>false</IsHideInLayout>
+              <IsLockInLayout>false</IsLockInLayout>
+            </UICNode>
+            <UICNode z:Id="i26" i:type="ObjectTreeNode">
+              <Parent z:Ref="i21" />
+              <Nodes />
+              <LayoutProperty>
+                <LayoutProperty>
+                  <X>0</X>
+                  <Y>0</Y>
+                  <Width>12</Width>
+                  <Height>96</Height>
+                  <Visible>true</Visible>
+                  <Anchors>Height Width</Anchors>
+                </LayoutProperty>
+                <LayoutProperty>
+                  <X>52</X>
+                  <Y>71</Y>
+                  <Width>200</Width>
+                  <Height>200</Height>
+                  <Visible>false</Visible>
+                  <Anchors>None</Anchors>
+                </LayoutProperty>
+              </LayoutProperty>
+              <Property i:type="ImageBoxProperty">
+                <Effect>None</Effect>
+                <OwnerNode z:Ref="i26" />
+                <VariableName>ImageBox_4</VariableName>
+                <Image>second_hand.png</Image>
+                <NinePatchMargin xmlns:d9p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+                  <d9p1:ButtomRowHeight>0</d9p1:ButtomRowHeight>
+                  <d9p1:LeftColumnWidth>0</d9p1:LeftColumnWidth>
+                  <d9p1:RightColumnWidth>0</d9p1:RightColumnWidth>
+                  <d9p1:TopRowHeight>0</d9p1:TopRowHeight>
+                </NinePatchMargin>
+                <ScaleType>Stretch</ScaleType>
+              </Property>
+              <IsRoot>false</IsRoot>
+              <PivotPos>LeftTop</PivotPos>
+              <WidgetType>ImageBox</WidgetType>
+              <ID>1984510712</ID>
+              <ZIndex>13</ZIndex>
+              <LayoutAssistInfo>
+                <SnapGuidesList>
+                  <ArrayOfSnapGuide />
+                  <ArrayOfSnapGuide />
+                </SnapGuidesList>
+              </LayoutAssistInfo>
+              <IsHideInLayout>false</IsHideInLayout>
+              <IsLockInLayout>false</IsLockInLayout>
+            </UICNode>
+          </Nodes>
+          <LayoutProperty>
+            <LayoutProperty>
+              <X>20</X>
+              <Y>20</Y>
+              <Width>230</Width>
+              <Height>217.28650137741056</Height>
+              <Visible>true</Visible>
+              <Anchors>Top Height Left Width</Anchors>
+            </LayoutProperty>
+            <LayoutProperty>
+              <X>704</X>
+              <Y>239</Y>
+              <Width>100</Width>
+              <Height>100</Height>
+              <Visible>false</Visible>
+              <Anchors>None</Anchors>
+            </LayoutProperty>
+          </LayoutProperty>
+          <Property i:type="LiveJumpPanelProperty">
+            <Effect>None</Effect>
+            <OwnerNode z:Ref="i21" />
+            <VariableName>LiveJumpPanel_1</VariableName>
+            <BackgroundAlpha>0</BackgroundAlpha>
+            <BackgroundColor xmlns:d7p1="http://schemas.datacontract.org/2004/07/System.Windows.Media">
+              <d7p1:A>255</d7p1:A>
+              <d7p1:B>0</d7p1:B>
+              <d7p1:G>0</d7p1:G>
+              <d7p1:R>0</d7p1:R>
+              <d7p1:ScA>1</d7p1:ScA>
+              <d7p1:ScB>0</d7p1:ScB>
+              <d7p1:ScG>0</d7p1:ScG>
+              <d7p1:ScR>0</d7p1:ScR>
+            </BackgroundColor>
+            <JumpDelayTime>1</JumpDelayTime>
+            <JumpHeight>350</JumpHeight>
+            <JumpTime>500</JumpTime>
+            <TiltAngle>0.17</TiltAngle>
+          </Property>
+          <IsRoot>false</IsRoot>
+          <PivotPos>LeftTop</PivotPos>
+          <WidgetType>LiveJumpPanel</WidgetType>
+          <ID>1362717100</ID>
+          <ZIndex>2</ZIndex>
+          <LayoutAssistInfo>
+            <SnapGuidesList>
+              <ArrayOfSnapGuide />
+              <ArrayOfSnapGuide />
+            </SnapGuidesList>
+          </LayoutAssistInfo>
+          <IsHideInLayout>false</IsHideInLayout>
+          <IsLockInLayout>false</IsLockInLayout>
+        </UICNode>
+      </Nodes>
+      <LayoutProperty>
+        <LayoutProperty>
+          <X>0</X>
+          <Y>0</Y>
+          <Width>854</Width>
+          <Height>480</Height>
+          <Visible>false</Visible>
+          <Anchors>None</Anchors>
+        </LayoutProperty>
+        <LayoutProperty>
+          <X>1</X>
+          <Y>1</Y>
+          <Width>480</Width>
+          <Height>854</Height>
+          <Visible>false</Visible>
+          <Anchors>None</Anchors>
+        </LayoutProperty>
+      </LayoutProperty>
+      <Property i:type="PanelProperty">
+        <Effect>None</Effect>
+        <OwnerNode z:Ref="i19" />
+        <VariableName>AnalogClockPanel</VariableName>
+        <BackgroundAlpha>100</BackgroundAlpha>
+        <BackgroundColor xmlns:d5p1="http://schemas.datacontract.org/2004/07/System.Windows.Media">
+          <d5p1:A>255</d5p1:A>
+          <d5p1:B>195</d5p1:B>
+          <d5p1:G>77</d5p1:G>
+          <d5p1:R>47</d5p1:R>
+          <d5p1:ScA>1</d5p1:ScA>
+          <d5p1:ScB>0.54285717</d5p1:ScB>
+          <d5p1:ScG>0.07374673</d5p1:ScG>
+          <d5p1:ScR>0.02870165</d5p1:ScR>
+        </BackgroundColor>
+      </Property>
+      <IsRoot>true</IsRoot>
+      <PivotPos>LeftTop</PivotPos>
+      <WidgetType>Panel</WidgetType>
+      <ID>480807490</ID>
+      <ZIndex>0</ZIndex>
+      <LayoutAssistInfo>
+        <SnapGuidesList>
+          <ArrayOfSnapGuide />
+          <ArrayOfSnapGuide />
+        </SnapGuidesList>
+        <OwnerNode z:Ref="i19" />
+      </LayoutAssistInfo>
+      <IsHideInLayout>false</IsHideInLayout>
+      <IsLockInLayout>false</IsLockInLayout>
+    </UICNode>
+    <UICNode z:Id="i27" i:type="ObjectTreeNode">
+      <Parent z:Ref="i1" />
+      <Nodes>
+        <UICNode z:Id="i28" i:type="ObjectTreeNode">
+          <Parent z:Ref="i27" />
+          <Nodes />
+          <LayoutProperty>
+            <LayoutProperty>
+              <X>40</X>
+              <Y>18</Y>
+              <Width>214</Width>
+              <Height>36</Height>
+              <Visible>true</Visible>
+              <Anchors>Top Height Width</Anchors>
+            </LayoutProperty>
+            <LayoutProperty>
+              <X>278</X>
+              <Y>128</Y>
+              <Width>214</Width>
+              <Height>36</Height>
+              <Visible>false</Visible>
+              <Anchors>None</Anchors>
+            </LayoutProperty>
+          </LayoutProperty>
+          <Property i:type="LabelProperty">
+            <Effect>None</Effect>
+            <OwnerNode z:Ref="i28" />
+            <VariableName>Label_1</VariableName>
+            <H_Alignment>Center</H_Alignment>
+            <HasTextShadow>true</HasTextShadow>
+            <LineBreaks>Word</LineBreaks>
+            <Text>MENU</Text>
+            <TextAlpha>100</TextAlpha>
+            <TextColor xmlns:d7p1="http://schemas.datacontract.org/2004/07/System.Windows.Media">
+              <d7p1:A>255</d7p1:A>
+              <d7p1:B>252</d7p1:B>
+              <d7p1:G>252</d7p1:G>
+              <d7p1:R>252</d7p1:R>
+              <d7p1:ScA>1</d7p1:ScA>
+              <d7p1:ScB>0.9734453</d7p1:ScB>
+              <d7p1:ScG>0.9734453</d7p1:ScG>
+              <d7p1:ScR>0.9734453</d7p1:ScR>
+            </TextColor>
+            <TextFont xmlns:d7p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+              <d7p1:FontFamily>System</d7p1:FontFamily>
+              <d7p1:FontSize>25</d7p1:FontSize>
+              <d7p1:FontStyle>Regular</d7p1:FontStyle>
+            </TextFont>
+            <TextShadow xmlns:d7p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+              <d7p1:Alpha>50</d7p1:Alpha>
+              <d7p1:Color xmlns:d8p1="http://schemas.datacontract.org/2004/07/System.Windows.Media">
+                <d8p1:A>255</d8p1:A>
+                <d8p1:B>0</d8p1:B>
+                <d8p1:G>0</d8p1:G>
+                <d8p1:R>0</d8p1:R>
+                <d8p1:ScA>1</d8p1:ScA>
+                <d8p1:ScB>0</d8p1:ScB>
+                <d8p1:ScG>0</d8p1:ScG>
+                <d8p1:ScR>0</d8p1:ScR>
+              </d7p1:Color>
+              <d7p1:OffsetX>1</d7p1:OffsetX>
+              <d7p1:OffsetY>1</d7p1:OffsetY>
+            </TextShadow>
+            <TextTrimming>EllipsisCharacter</TextTrimming>
+            <V_Alignment>Middle</V_Alignment>
+          </Property>
+          <IsRoot>false</IsRoot>
+          <PivotPos>LeftTop</PivotPos>
+          <WidgetType>Label</WidgetType>
+          <ID>2112994684</ID>
+          <ZIndex>34</ZIndex>
+          <LayoutAssistInfo>
+            <SnapGuidesList>
+              <ArrayOfSnapGuide />
+              <ArrayOfSnapGuide />
+            </SnapGuidesList>
+          </LayoutAssistInfo>
+          <IsHideInLayout>false</IsHideInLayout>
+          <IsLockInLayout>false</IsLockInLayout>
+        </UICNode>
+        <UICNode z:Id="i29" i:type="ObjectTreeNode">
+          <Parent z:Ref="i27" />
+          <Nodes />
+          <LayoutProperty>
+            <LayoutProperty>
+              <X>40</X>
+              <Y>92.069264069264392</Y>
+              <Width>39</Width>
+              <Height>39</Height>
+              <Visible>true</Visible>
+              <Anchors>Top Height Left Width</Anchors>
+            </LayoutProperty>
+            <LayoutProperty>
+              <X>376</X>
+              <Y>210</Y>
+              <Width>56</Width>
+              <Height>56</Height>
+              <Visible>false</Visible>
+              <Anchors>Height Width</Anchors>
+            </LayoutProperty>
+          </LayoutProperty>
+          <Property i:type="CheckBoxProperty">
+            <Effect>None</Effect>
+            <OwnerNode z:Ref="i29" />
+            <VariableName>CheckBox_1</VariableName>
+            <CheckState>true</CheckState>
+            <EnableState>true</EnableState>
+            <Style>RadioButton</Style>
+          </Property>
+          <IsRoot>false</IsRoot>
+          <PivotPos>LeftTop</PivotPos>
+          <WidgetType>CheckBox</WidgetType>
+          <ID>1997725742</ID>
+          <ZIndex>35</ZIndex>
+          <LayoutAssistInfo>
+            <SnapGuidesList>
+              <ArrayOfSnapGuide />
+              <ArrayOfSnapGuide />
+            </SnapGuidesList>
+          </LayoutAssistInfo>
+          <IsHideInLayout>false</IsHideInLayout>
+          <IsLockInLayout>false</IsLockInLayout>
+        </UICNode>
+        <UICNode z:Id="i30" i:type="ObjectTreeNode">
+          <Parent z:Ref="i27" />
+          <Nodes />
+          <LayoutProperty>
+            <LayoutProperty>
+              <X>87.666666666666686</X>
+              <Y>92.069264069264392</Y>
+              <Width>173.83333333333326</Width>
+              <Height>36</Height>
+              <Visible>true</Visible>
+              <Anchors>Top Height Left Width</Anchors>
+            </LayoutProperty>
+            <LayoutProperty>
+              <X>331</X>
+              <Y>141</Y>
+              <Width>214</Width>
+              <Height>36</Height>
+              <Visible>false</Visible>
+              <Anchors>None</Anchors>
+            </LayoutProperty>
+          </LayoutProperty>
+          <Property i:type="LabelProperty">
+            <Effect>None</Effect>
+            <OwnerNode z:Ref="i30" />
+            <VariableName>Label_2</VariableName>
+            <H_Alignment>Left</H_Alignment>
+            <HasTextShadow>true</HasTextShadow>
+            <LineBreaks>Word</LineBreaks>
+            <Text>Analog Clock</Text>
+            <TextAlpha>100</TextAlpha>
+            <TextColor xmlns:d7p1="http://schemas.datacontract.org/2004/07/System.Windows.Media">
+              <d7p1:A>255</d7p1:A>
+              <d7p1:B>252</d7p1:B>
+              <d7p1:G>252</d7p1:G>
+              <d7p1:R>252</d7p1:R>
+              <d7p1:ScA>1</d7p1:ScA>
+              <d7p1:ScB>0.9734453</d7p1:ScB>
+              <d7p1:ScG>0.9734453</d7p1:ScG>
+              <d7p1:ScR>0.9734453</d7p1:ScR>
+            </TextColor>
+            <TextFont xmlns:d7p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+              <d7p1:FontFamily>System</d7p1:FontFamily>
+              <d7p1:FontSize>25</d7p1:FontSize>
+              <d7p1:FontStyle>Regular</d7p1:FontStyle>
+            </TextFont>
+            <TextShadow xmlns:d7p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+              <d7p1:Alpha>50</d7p1:Alpha>
+              <d7p1:Color xmlns:d8p1="http://schemas.datacontract.org/2004/07/System.Windows.Media">
+                <d8p1:A>255</d8p1:A>
+                <d8p1:B>0</d8p1:B>
+                <d8p1:G>0</d8p1:G>
+                <d8p1:R>0</d8p1:R>
+                <d8p1:ScA>1</d8p1:ScA>
+                <d8p1:ScB>0</d8p1:ScB>
+                <d8p1:ScG>0</d8p1:ScG>
+                <d8p1:ScR>0</d8p1:ScR>
+              </d7p1:Color>
+              <d7p1:OffsetX>1</d7p1:OffsetX>
+              <d7p1:OffsetY>1</d7p1:OffsetY>
+            </TextShadow>
+            <TextTrimming>EllipsisCharacter</TextTrimming>
+            <V_Alignment>Middle</V_Alignment>
+          </Property>
+          <IsRoot>false</IsRoot>
+          <PivotPos>LeftTop</PivotPos>
+          <WidgetType>Label</WidgetType>
+          <ID>2070602266</ID>
+          <ZIndex>36</ZIndex>
+          <LayoutAssistInfo>
+            <SnapGuidesList>
+              <ArrayOfSnapGuide />
+              <ArrayOfSnapGuide />
+            </SnapGuidesList>
+          </LayoutAssistInfo>
+          <IsHideInLayout>false</IsHideInLayout>
+          <IsLockInLayout>false</IsLockInLayout>
+        </UICNode>
+        <UICNode z:Id="i31" i:type="ObjectTreeNode">
+          <Parent z:Ref="i27" />
+          <Nodes />
+          <LayoutProperty>
+            <LayoutProperty>
+              <X>40</X>
+              <Y>145.06926406926408</Y>
+              <Width>39</Width>
+              <Height>39</Height>
+              <Visible>true</Visible>
+              <Anchors>Top Height Left Width</Anchors>
+            </LayoutProperty>
+            <LayoutProperty>
+              <X>355</X>
+              <Y>236</Y>
+              <Width>56</Width>
+              <Height>56</Height>
+              <Visible>false</Visible>
+              <Anchors>Height Width</Anchors>
+            </LayoutProperty>
+          </LayoutProperty>
+          <Property i:type="CheckBoxProperty">
+            <Effect>None</Effect>
+            <OwnerNode z:Ref="i31" />
+            <VariableName>CheckBox_2</VariableName>
+            <CheckState>false</CheckState>
+            <EnableState>true</EnableState>
+            <Style>RadioButton</Style>
+          </Property>
+          <IsRoot>false</IsRoot>
+          <PivotPos>LeftTop</PivotPos>
+          <WidgetType>CheckBox</WidgetType>
+          <ID>1050472289</ID>
+          <ZIndex>37</ZIndex>
+          <LayoutAssistInfo>
+            <SnapGuidesList>
+              <ArrayOfSnapGuide />
+              <ArrayOfSnapGuide />
+            </SnapGuidesList>
+          </LayoutAssistInfo>
+          <IsHideInLayout>false</IsHideInLayout>
+          <IsLockInLayout>false</IsLockInLayout>
+        </UICNode>
+        <UICNode z:Id="i32" i:type="ObjectTreeNode">
+          <Parent z:Ref="i27" />
+          <Nodes />
+          <LayoutProperty>
+            <LayoutProperty>
+              <X>87.666666666666686</X>
+              <Y>145.06926406926408</Y>
+              <Width>173.83333333333326</Width>
+              <Height>36</Height>
+              <Visible>true</Visible>
+              <Anchors>Top Height Left Width</Anchors>
+            </LayoutProperty>
+            <LayoutProperty>
+              <X>330</X>
+              <Y>233</Y>
+              <Width>214</Width>
+              <Height>36</Height>
+              <Visible>false</Visible>
+              <Anchors>None</Anchors>
+            </LayoutProperty>
+          </LayoutProperty>
+          <Property i:type="LabelProperty">
+            <Effect>None</Effect>
+            <OwnerNode z:Ref="i32" />
+            <VariableName>Label_3</VariableName>
+            <H_Alignment>Left</H_Alignment>
+            <HasTextShadow>true</HasTextShadow>
+            <LineBreaks>Word</LineBreaks>
+            <Text>Flip Clock</Text>
+            <TextAlpha>100</TextAlpha>
+            <TextColor xmlns:d7p1="http://schemas.datacontract.org/2004/07/System.Windows.Media">
+              <d7p1:A>255</d7p1:A>
+              <d7p1:B>252</d7p1:B>
+              <d7p1:G>252</d7p1:G>
+              <d7p1:R>252</d7p1:R>
+              <d7p1:ScA>1</d7p1:ScA>
+              <d7p1:ScB>0.9734453</d7p1:ScB>
+              <d7p1:ScG>0.9734453</d7p1:ScG>
+              <d7p1:ScR>0.9734453</d7p1:ScR>
+            </TextColor>
+            <TextFont xmlns:d7p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+              <d7p1:FontFamily>System</d7p1:FontFamily>
+              <d7p1:FontSize>25</d7p1:FontSize>
+              <d7p1:FontStyle>Regular</d7p1:FontStyle>
+            </TextFont>
+            <TextShadow xmlns:d7p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+              <d7p1:Alpha>50</d7p1:Alpha>
+              <d7p1:Color xmlns:d8p1="http://schemas.datacontract.org/2004/07/System.Windows.Media">
+                <d8p1:A>255</d8p1:A>
+                <d8p1:B>0</d8p1:B>
+                <d8p1:G>0</d8p1:G>
+                <d8p1:R>0</d8p1:R>
+                <d8p1:ScA>1</d8p1:ScA>
+                <d8p1:ScB>0</d8p1:ScB>
+                <d8p1:ScG>0</d8p1:ScG>
+                <d8p1:ScR>0</d8p1:ScR>
+              </d7p1:Color>
+              <d7p1:OffsetX>1</d7p1:OffsetX>
+              <d7p1:OffsetY>1</d7p1:OffsetY>
+            </TextShadow>
+            <TextTrimming>EllipsisCharacter</TextTrimming>
+            <V_Alignment>Middle</V_Alignment>
+          </Property>
+          <IsRoot>false</IsRoot>
+          <PivotPos>LeftTop</PivotPos>
+          <WidgetType>Label</WidgetType>
+          <ID>941308670</ID>
+          <ZIndex>38</ZIndex>
+          <LayoutAssistInfo>
+            <SnapGuidesList>
+              <ArrayOfSnapGuide />
+              <ArrayOfSnapGuide />
+            </SnapGuidesList>
+          </LayoutAssistInfo>
+          <IsHideInLayout>false</IsHideInLayout>
+          <IsLockInLayout>false</IsLockInLayout>
+        </UICNode>
+        <UICNode z:Id="i33" i:type="ObjectTreeNode">
+          <Parent z:Ref="i27" />
+          <Nodes />
+          <LayoutProperty>
+            <LayoutProperty>
+              <X>40</X>
+              <Y>222.33333333333366</Y>
+              <Width>100</Width>
+              <Height>56</Height>
+              <Visible>true</Visible>
+              <Anchors>Top Height Left Width</Anchors>
+            </LayoutProperty>
+            <LayoutProperty>
+              <X>442</X>
+              <Y>323</Y>
+              <Width>214</Width>
+              <Height>56</Height>
+              <Visible>false</Visible>
+              <Anchors>None</Anchors>
+            </LayoutProperty>
+          </LayoutProperty>
+          <Property i:type="ButtonProperty">
+            <Effect>None</Effect>
+            <OwnerNode z:Ref="i33" />
+            <VariableName>Button_1</VariableName>
+            <BackgroundButtonImage xmlns:d7p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData" i:nil="true" />
+            <BackgroundType>Default</BackgroundType>
+            <ButtonImage i:nil="true" />
+            <ButtonType>TextButton</ButtonType>
+            <FilterColor xmlns:d7p1="http://schemas.datacontract.org/2004/07/System.Windows.Media">
+              <d7p1:A>255</d7p1:A>
+              <d7p1:B>255</d7p1:B>
+              <d7p1:G>255</d7p1:G>
+              <d7p1:R>255</d7p1:R>
+              <d7p1:ScA>1</d7p1:ScA>
+              <d7p1:ScB>1</d7p1:ScB>
+              <d7p1:ScG>1</d7p1:ScG>
+              <d7p1:ScR>1</d7p1:ScR>
+            </FilterColor>
+            <HasTextShadow>true</HasTextShadow>
+            <NinePatchMargin xmlns:d7p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+              <d7p1:ButtomRowHeight>27</d7p1:ButtomRowHeight>
+              <d7p1:LeftColumnWidth>42</d7p1:LeftColumnWidth>
+              <d7p1:RightColumnWidth>42</d7p1:RightColumnWidth>
+              <d7p1:TopRowHeight>27</d7p1:TopRowHeight>
+            </NinePatchMargin>
+            <Text>Apply</Text>
+            <TextAlpha>100</TextAlpha>
+            <TextColor xmlns:d7p1="http://schemas.datacontract.org/2004/07/System.Windows.Media">
+              <d7p1:A>255</d7p1:A>
+              <d7p1:B>252</d7p1:B>
+              <d7p1:G>252</d7p1:G>
+              <d7p1:R>252</d7p1:R>
+              <d7p1:ScA>1</d7p1:ScA>
+              <d7p1:ScB>0.9734453</d7p1:ScB>
+              <d7p1:ScG>0.9734453</d7p1:ScG>
+              <d7p1:ScR>0.9734453</d7p1:ScR>
+            </TextColor>
+            <TextFont xmlns:d7p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+              <d7p1:FontFamily>System</d7p1:FontFamily>
+              <d7p1:FontSize>25</d7p1:FontSize>
+              <d7p1:FontStyle>Regular</d7p1:FontStyle>
+            </TextFont>
+            <TextShadow xmlns:d7p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+              <d7p1:Alpha>50</d7p1:Alpha>
+              <d7p1:Color xmlns:d8p1="http://schemas.datacontract.org/2004/07/System.Windows.Media">
+                <d8p1:A>255</d8p1:A>
+                <d8p1:B>128</d8p1:B>
+                <d8p1:G>128</d8p1:G>
+                <d8p1:R>128</d8p1:R>
+                <d8p1:ScA>1</d8p1:ScA>
+                <d8p1:ScB>0.2158605</d8p1:ScB>
+                <d8p1:ScG>0.2158605</d8p1:ScG>
+                <d8p1:ScR>0.2158605</d8p1:ScR>
+              </d7p1:Color>
+              <d7p1:OffsetX>1</d7p1:OffsetX>
+              <d7p1:OffsetY>1</d7p1:OffsetY>
+            </TextShadow>
+            <TextTrimming>EllipsisCharacter</TextTrimming>
+          </Property>
+          <IsRoot>false</IsRoot>
+          <PivotPos>LeftTop</PivotPos>
+          <WidgetType>Button</WidgetType>
+          <ID>230406666</ID>
+          <ZIndex>39</ZIndex>
+          <LayoutAssistInfo>
+            <SnapGuidesList>
+              <ArrayOfSnapGuide />
+              <ArrayOfSnapGuide />
+            </SnapGuidesList>
+          </LayoutAssistInfo>
+          <IsHideInLayout>false</IsHideInLayout>
+          <IsLockInLayout>false</IsLockInLayout>
+        </UICNode>
+        <UICNode z:Id="i34" i:type="ObjectTreeNode">
+          <Parent z:Ref="i27" />
+          <Nodes />
+          <LayoutProperty>
+            <LayoutProperty>
+              <X>154</X>
+              <Y>222.33333333333366</Y>
+              <Width>100</Width>
+              <Height>56</Height>
+              <Visible>true</Visible>
+              <Anchors>Top Height Left Width</Anchors>
+            </LayoutProperty>
+            <LayoutProperty>
+              <X>461</X>
+              <Y>355</Y>
+              <Width>214</Width>
+              <Height>56</Height>
+              <Visible>false</Visible>
+              <Anchors>None</Anchors>
+            </LayoutProperty>
+          </LayoutProperty>
+          <Property i:type="ButtonProperty">
+            <Effect>None</Effect>
+            <OwnerNode z:Ref="i34" />
+            <VariableName>Button_2</VariableName>
+            <BackgroundButtonImage xmlns:d7p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData" i:nil="true" />
+            <BackgroundType>Default</BackgroundType>
+            <ButtonImage i:nil="true" />
+            <ButtonType>TextButton</ButtonType>
+            <FilterColor xmlns:d7p1="http://schemas.datacontract.org/2004/07/System.Windows.Media">
+              <d7p1:A>255</d7p1:A>
+              <d7p1:B>255</d7p1:B>
+              <d7p1:G>255</d7p1:G>
+              <d7p1:R>255</d7p1:R>
+              <d7p1:ScA>1</d7p1:ScA>
+              <d7p1:ScB>1</d7p1:ScB>
+              <d7p1:ScG>1</d7p1:ScG>
+              <d7p1:ScR>1</d7p1:ScR>
+            </FilterColor>
+            <HasTextShadow>true</HasTextShadow>
+            <NinePatchMargin xmlns:d7p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+              <d7p1:ButtomRowHeight>27</d7p1:ButtomRowHeight>
+              <d7p1:LeftColumnWidth>42</d7p1:LeftColumnWidth>
+              <d7p1:RightColumnWidth>42</d7p1:RightColumnWidth>
+              <d7p1:TopRowHeight>27</d7p1:TopRowHeight>
+            </NinePatchMargin>
+            <Text>Cancel</Text>
+            <TextAlpha>100</TextAlpha>
+            <TextColor xmlns:d7p1="http://schemas.datacontract.org/2004/07/System.Windows.Media">
+              <d7p1:A>255</d7p1:A>
+              <d7p1:B>252</d7p1:B>
+              <d7p1:G>252</d7p1:G>
+              <d7p1:R>252</d7p1:R>
+              <d7p1:ScA>1</d7p1:ScA>
+              <d7p1:ScB>0.9734453</d7p1:ScB>
+              <d7p1:ScG>0.9734453</d7p1:ScG>
+              <d7p1:ScR>0.9734453</d7p1:ScR>
+            </TextColor>
+            <TextFont xmlns:d7p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+              <d7p1:FontFamily>System</d7p1:FontFamily>
+              <d7p1:FontSize>25</d7p1:FontSize>
+              <d7p1:FontStyle>Regular</d7p1:FontStyle>
+            </TextFont>
+            <TextShadow xmlns:d7p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+              <d7p1:Alpha>50</d7p1:Alpha>
+              <d7p1:Color xmlns:d8p1="http://schemas.datacontract.org/2004/07/System.Windows.Media">
+                <d8p1:A>255</d8p1:A>
+                <d8p1:B>128</d8p1:B>
+                <d8p1:G>128</d8p1:G>
+                <d8p1:R>128</d8p1:R>
+                <d8p1:ScA>1</d8p1:ScA>
+                <d8p1:ScB>0.2158605</d8p1:ScB>
+                <d8p1:ScG>0.2158605</d8p1:ScG>
+                <d8p1:ScR>0.2158605</d8p1:ScR>
+              </d7p1:Color>
+              <d7p1:OffsetX>1</d7p1:OffsetX>
+              <d7p1:OffsetY>1</d7p1:OffsetY>
+            </TextShadow>
+            <TextTrimming>EllipsisCharacter</TextTrimming>
+          </Property>
+          <IsRoot>false</IsRoot>
+          <PivotPos>LeftTop</PivotPos>
+          <WidgetType>Button</WidgetType>
+          <ID>2028746847</ID>
+          <ZIndex>40</ZIndex>
+          <LayoutAssistInfo>
+            <SnapGuidesList>
+              <ArrayOfSnapGuide />
+              <ArrayOfSnapGuide />
+            </SnapGuidesList>
+          </LayoutAssistInfo>
+          <IsHideInLayout>false</IsHideInLayout>
+          <IsLockInLayout>false</IsLockInLayout>
+        </UICNode>
+      </Nodes>
+      <LayoutProperty>
+        <LayoutProperty>
+          <X>0</X>
+          <Y>0</Y>
+          <Width>300</Width>
+          <Height>300</Height>
+          <Visible>false</Visible>
+          <Anchors>Height Width</Anchors>
+        </LayoutProperty>
+        <LayoutProperty>
+          <X>1</X>
+          <Y>1</Y>
+          <Width>544</Width>
+          <Height>960</Height>
+          <Visible>false</Visible>
+          <Anchors>Height Width</Anchors>
+        </LayoutProperty>
+      </LayoutProperty>
+      <Property i:type="DialogProperty">
+        <Effect>None</Effect>
+        <OwnerNode z:Ref="i27" />
+        <VariableName>SettingDialog</VariableName>
+        <BackgroundAlpha>100</BackgroundAlpha>
+        <BackgroundColor xmlns:d5p1="http://schemas.datacontract.org/2004/07/System.Windows.Media">
+          <d5p1:A>255</d5p1:A>
+          <d5p1:B>0</d5p1:B>
+          <d5p1:G>0</d5p1:G>
+          <d5p1:R>0</d5p1:R>
+          <d5p1:ScA>1</d5p1:ScA>
+          <d5p1:ScB>0</d5p1:ScB>
+          <d5p1:ScG>0</d5p1:ScG>
+          <d5p1:ScR>0</d5p1:ScR>
+        </BackgroundColor>
+        <BackgroundImage>system_assets/panel_9patch.png</BackgroundImage>
+        <DialogStyle>Default</DialogStyle>
+        <FilterColor xmlns:d5p1="http://schemas.datacontract.org/2004/07/System.Windows.Media">
+          <d5p1:A>255</d5p1:A>
+          <d5p1:B>255</d5p1:B>
+          <d5p1:G>255</d5p1:G>
+          <d5p1:R>255</d5p1:R>
+          <d5p1:ScA>1</d5p1:ScA>
+          <d5p1:ScB>1</d5p1:ScB>
+          <d5p1:ScG>1</d5p1:ScG>
+          <d5p1:ScR>1</d5p1:ScR>
+        </FilterColor>
+        <NinePatchMargin xmlns:d5p1="http://schemas.datacontract.org/2004/07/UIComposer.ModelData">
+          <d5p1:ButtomRowHeight>34</d5p1:ButtomRowHeight>
+          <d5p1:LeftColumnWidth>34</d5p1:LeftColumnWidth>
+          <d5p1:RightColumnWidth>34</d5p1:RightColumnWidth>
+          <d5p1:TopRowHeight>34</d5p1:TopRowHeight>
+        </NinePatchMargin>
+      </Property>
+      <IsRoot>true</IsRoot>
+      <PivotPos>LeftTop</PivotPos>
+      <WidgetType>Dialog</WidgetType>
+      <ID>276619865</ID>
+      <ZIndex>0</ZIndex>
+      <LayoutAssistInfo>
+        <SnapGuidesList>
+          <ArrayOfSnapGuide />
+          <ArrayOfSnapGuide />
+        </SnapGuidesList>
+        <OwnerNode z:Ref="i27" />
+      </LayoutAssistInfo>
+      <IsHideInLayout>false</IsHideInLayout>
+      <IsLockInLayout>false</IsLockInLayout>
+    </UICNode>
+  </Nodes>
+  <MajorVersion>0</MajorVersion>
+  <MinorVersion>1</MinorVersion>
+  <LayoutType>Horizontal</LayoutType>
+  <ProjectName>DemoClock</ProjectName>
+  <NameSpace>DemoClock</NameSpace>
+  <Language>English</Language>
+  <LanguageTableFileName>DemoClock_LanguageTable.csv</LanguageTableFileName>
+  <LayoutType>Horizontal</LayoutType>
+  <ClassDir i:nil="true" />
+</Project>

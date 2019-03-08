@@ -1,0 +1,11 @@
+
+void main(
+	in float2 oUV : TEXCOORD0,
+	in float4 oColor : TEXCOORD1,
+	out float4 result : COLOR,
+	uniform sampler2D uTexture : TEXUNIT0
+)
+{
+	result = oColor.rgba * tex2D(uTexture, oUV);
+}
+

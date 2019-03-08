@@ -1,0 +1,32 @@
+/* PlayStation(R)Mobile SDK 1.21.01
+ * Copyright (C) 2013 Sony Computer Entertainment Inc.
+ * All Rights Reserved.
+ */
+
+void main(
+          float4 in a_Position  : POSITION,
+          float3 in a_Normal    : NORMAL,
+          float3 in a_Tangent   : TEXCOORD0,
+          float2 in a_TexCoord0  : TEXCOORD1,
+
+          float4 out v_Position            : POSITION,
+          float2 out v_TexCoord0           : TEXCOORD0,
+          float3 out v_LocalLightDirection : TEXCOORD1,
+          uniform float3   LocalLightPosition,
+          uniform float4x4 WorldViewProj
+          )
+{
+	v_Position	= mul( a_Position, WorldViewProj );
+
+    // 
+    v_LocalLightDirection = LocalLightPosition - a_Position.xyz;
+
+    float3 binormal = cross( a_Normal, a_Tangent );
+    float3x3 rotation = float3x3( a_Tangent,
+                                  binormal,
+                                  a_Normal );
+
+    v_LocalLightDirection = mul( rotation, v_LocalLightDirection );
+    v_TexCoord0 = a_TexCoord0;
+}
+

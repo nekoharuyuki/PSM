@@ -1,0 +1,30 @@
+/* PlayStation(R)Mobile SDK 1.21.01
+ * Copyright (C) 2013 Sony Computer Entertainment Inc.
+ * All Rights Reserved.
+ */
+
+//------------------------------------------------------------------------------------------
+void main(
+	float4 in a_Position			: POSITION,
+	float3 in a_Normal				: NORMAL,
+	float4 in a_Color				: COLOR0,
+	float2 in a_TexCoord0			: TEXCOORD0,
+	float2 in a_TexCoord1			: TEXCOORD1,
+	float2 in a_TexCoord2			: TEXCOORD2,
+	float4 in a_Weight				: TEXCOORD3,
+
+	float4 out v_Position			: POSITION,
+	float2 out v_TexCoord00			: TEXCOORD0,
+	float2 out v_TexCoord01			: TEXCOORD1,
+
+	uniform float4x4 ViewProj,
+	uniform float4x4 World00
+)
+{
+	float4 P = mul(a_Position, World00);
+
+	v_Position = mul(P, ViewProj);
+
+	v_TexCoord00 = a_TexCoord0;
+	v_TexCoord01 = a_TexCoord1;
+}

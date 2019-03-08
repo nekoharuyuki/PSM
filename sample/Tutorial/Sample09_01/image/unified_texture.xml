@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root version="1.0">
+  <info w="567" h="482" />
+  <textures>
+    <texture filename="image/map_spaceA.png" x="0" y="0" w="256" h="351" />
+    <texture filename="image/background.png" x="0" y="352" w="192" h="128" />
+    <texture filename="image/boss.png" x="193" y="352" w="296" h="80" />
+    <texture filename="image/SimpleShooting.png" x="193" y="433" w="373" h="48" />
+    <texture filename="image/GameOver.png" x="257" y="0" w="248" h="41" />
+    <texture filename="image/GraySmoke.png" x="257" y="42" w="64" h="64" />
+    <texture filename="image/PressStart.png" x="322" y="42" w="170" h="23" />
+    <texture filename="image/bullet_green.png" x="257" y="107" w="32" h="48" />
+    <texture filename="image/myship.png" x="322" y="66" w="32" h="32" />
+    <texture filename="image/BrackSmoke.png" x="290" y="107" w="32" h="32" />
+    <texture filename="image/particle.png" x="257" y="156" w="32" h="32" />
+    <texture filename="image/bullet_red.png" x="355" y="66" w="16" h="16" />
+    <texture filename="image/mybullet.png" x="323" y="107" w="8" h="8" />
+    <texture filename="image/EnemyBullet.png" x="290" y="140" w="8" h="8" />
+    <texture filename="image/Bullet.png" x="372" y="66" w="2" h="8" />
+    <texture filename="image/Star.png" x="322" y="99" w="2" h="2" />
+  </textures>
+</root>

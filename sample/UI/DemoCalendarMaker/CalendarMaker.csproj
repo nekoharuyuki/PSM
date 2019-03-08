@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3A14D093-F11C-4F8D-BE39-479A1F748EF6}</ProjectGuid>
+    <ProjectTypeGuids>{69878862-DA7D-4DC6-B0A1-50D8FAB4242F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>CalendarMaker</RootNamespace>
+    <AssemblyName>CalendarMaker</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Sce.PlayStation.Core" />
+    <Reference Include="Sce.PlayStation.HighLevel.UI" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Sce\Sce.Psm.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="MainScene.composer.cs" />
+    <Compile Include="MainScene.cs" />
+    <Compile Include="UIStringTable.cs" />
+    <Compile Include="WallpaperViewerScene.composer.cs" />
+    <Compile Include="WallpaperViewerScene.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Ticker.cs" />
+    <Compile Include="CalendarMakerScene.composer.cs" />
+    <Compile Include="CalendarMakerScene.cs" />
+    <Compile Include="WallpaperSelectionPanel.composer.cs" />
+    <Compile Include="WallpaperSelectionPanel.cs" />
+    <Compile Include="WallpaperGridListItem.composer.cs" />
+    <Compile Include="WallpaperGridListItem.cs" />
+    <Compile Include="CalendarPositionPanel.composer.cs" />
+    <Compile Include="CalendarPositionPanel.cs" />
+    <Compile Include="CalendarTypePanel.composer.cs" />
+    <Compile Include="CalendarTypePanel.cs" />
+    <Compile Include="WallpaperSizingPanel.composer.cs" />
+    <Compile Include="WallpaperSizingPanel.cs" />
+    <Compile Include="CompleteDialog.composer.cs" />
+    <Compile Include="CompleteDialog.cs" />
+    <Compile Include="SavePanel.composer.cs" />
+    <Compile Include="SavePanel.cs" />
+    <Compile Include="WallpaperGalleryItem.composer.cs" />
+    <Compile Include="WallpaperGalleryItem.cs" />
+    <Compile Include="FullScreenPanel.composer.cs" />
+    <Compile Include="FullScreenPanel.cs" />
+    <Compile Include="ExplanationDialog.composer.cs" />
+    <Compile Include="ExplanationDialog.cs" />
+    <Compile Include="ImageManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PsmMetadata Include="app.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </PsmMetadata>
+    <Content Include="assets\back_button_normal.png" />
+    <Content Include="assets\back_button_pressed.png" />
+    <Content Include="assets\cal_2011_6.png" />
+    <Content Include="assets\cal_2011_6_7.png" />
+    <Content Include="assets\cancel_disable.png" />
+    <Content Include="assets\cancel_normal.png" />
+    <Content Include="assets\cancel_pressed.png" />
+    <Content Include="assets\close_normal.png" />
+    <Content Include="assets\close_pressed.png" />
+    <Content Include="assets\forcus.png" />
+    <Content Include="assets\frame.png" />
+    <Content Include="assets\help_bar_down.png" />
+    <Content Include="assets\help_bar_up.png" />
+    <Content Include="assets\help_base.png" />
+    <Content Include="assets\main_background.png" />
+    <Content Include="assets\mc_button_disable.png" />
+    <Content Include="assets\mc_button_normal.png" />
+    <Content Include="assets\mc_button_pressed.png" />
+    <Content Include="assets\menu_window_1.png" />
+    <Content Include="assets\menu_window_2.png" />
+    <Content Include="assets\ok_disable.png" />
+    <Content Include="assets\ok_normal.png" />
+    <Content Include="assets\ok_pressed.png" />
+    <Content Include="assets\one_month_disable.png" />
+    <Content Include="assets\one_month_normal.png" />
+    <Content Include="assets\one_month_pressed.png" />
+    <Content Include="assets\panel_1.png" />
+    <Content Include="assets\plus_button.png" />
+    <Content Include="assets\position_disable.png" />
+    <Content Include="assets\position_normal.png" />
+    <Content Include="assets\position_pressed.png" />
+    <Content Include="assets\resize_disable.png" />
+    <Content Include="assets\resize_normal.png" />
+    <Content Include="assets\resize_pressed.png" />
+    <Content Include="assets\save_disable.png" />
+    <Content Include="assets\save_normal.png" />
+    <Content Include="assets\save_panel_9patch.png" />
+    <Content Include="assets\save_pressed.png" />
+    <Content Include="assets\selection_disable.png" />
+    <Content Include="assets\selection_normal.png" />
+    <Content Include="assets\selection_pressed.png" />
+    <Content Include="assets\shadow.png" />
+    <Content Include="assets\sw_button_disable.png" />
+    <Content Include="assets\sw_button_normal.png" />
+    <Content Include="assets\sw_button_pressed.png" />
+    <Content Include="assets\two_months_disable.png" />
+    <Content Include="assets\two_months_normal.png" />
+    <Content Include="assets\two_months_pressed.png" />
+    <Content Include="assets\type_disable.png" />
+    <Content Include="assets\type_normal.png" />
+    <Content Include="assets\type_pressed.png" />
+    <Content Include="assets\window.png" />
+    <Content Include="assets\wallpaper01.jpg" />
+    <Content Include="assets\wallpaper02.jpg" />
+    <Content Include="assets\wallpaper03.jpg" />
+    <Content Include="assets\wallpaper04.jpg" />
+    <Content Include="assets\wallpaper05.jpg" />
+    <Content Include="assets\wallpaper06.jpg" />
+    <Content Include="assets\wallpaper07.jpg" />
+    <Content Include="assets\wallpaper08.jpg" />
+    <Content Include="assets\wallpaper09.jpg" />
+    <Content Include="assets\spacer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CalendarMaker.uic" />
+  </ItemGroup>
+</Project>

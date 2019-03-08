@@ -1,0 +1,8 @@
+void main(float2 in v_texCoord  : TEXCOORD0,
+          float4 in v_color     : COLOR0,
+          float4 out color      : COLOR,
+          uniform sampler2D s_texture : TEXUNIT0)
+{
+    color = tex2D(s_texture, v_texCoord) * v_color;
+}
+  

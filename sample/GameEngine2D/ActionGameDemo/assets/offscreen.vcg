@@ -1,0 +1,11 @@
+
+void main(
+	in float2 iPosition : POSITION,
+	in float2 iUV : TEXCOORD0,
+	out float4 oPosition : POSITION,
+	out float2 oUV : TEXCOORD0
+)
+{
+	oPosition = float4(iPosition, 0.0f, 1.0f);
+	oUV = iUV;
+}

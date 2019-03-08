@@ -1,0 +1,15 @@
+void main(float4 in a_position	: POSITION, 
+          float3 in a_normal    : NORMAL,
+          float2 in a_texCoord  : TEXCOORD0,
+          float4 out v_position : POSITION,
+          float2 out v_texCoord : TEXCOORD0,
+          float4 out v_color    : COLOR0,
+          uniform float4x4 u_worldViewProj,
+          uniform float3 u_lightDirection)
+{
+	v_position = mul(a_position, u_worldViewProj);
+	v_texCoord = a_texCoord;
+	float lit2 = dot( u_lightDirection, a_normal ) * 0.5 + 0.5;
+	v_color = float4(lit2, lit2, lit2, 1.0);
+}
+  

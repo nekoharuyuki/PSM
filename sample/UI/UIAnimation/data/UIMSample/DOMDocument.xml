@@ -1,0 +1,51 @@
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" currentTimeline="1" xflVersion="2.1" creatorInfo="Adobe Flash Professional CS5.5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.5 build 349" majorVersion="11" minorVersion="5" buildNumber="349" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" autoSaveEnabled="true" autoSaveHasPrompted="true">
+     <symbols>
+          <Include href="SampleRect.xml" loadImmediate="false" itemID="4f0e404b-000001d4" lastModified="1326334169"/>
+     </symbols>
+     <timelines>
+          <DOMTimeline name="Scene 1" currentFrame="59">
+               <layers>
+                    <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true" autoNamed="false" animationType="motion object">
+                         <frames>
+                              <DOMFrame index="0" duration="60" tweenType="motion object" motionTweenRotate="none" motionTweenScale="false" isMotionObject="true" visibleAnimationKeyframes="2097151" keyMode="8195">
+                                   <motionObjectXML><AnimationCore TimeScale="24000" Version="1" duration="60000"><TimeMap strength="-10" type="Quadratic"/><TimeMap strength="5" type="Spring"/><TimeMap strength="50" type="Quartic"/><metadata><names><name langID="ja_JP" value="UIMSample"/></names><Settings orientToPath="0" xformPtXOffsetPct="0.48253" xformPtYOffsetPct="0.530303" xformPtZOffsetPixels="0"/></metadata><PropertyContainer id="headContainer"><PropertyContainer id="Basic_Motion"><Property enabled="1" id="Motion_X" ignoreTimeMap="0" readonly="0" visible="1"><Keyframe anchor="0,0" next="0,0" previous="0,0" roving="0" timevalue="0"/></Property><Property enabled="1" id="Motion_Y" ignoreTimeMap="0" readonly="0" visible="1"><Keyframe anchor="0,0" next="0,0" previous="0,0" roving="0" timevalue="0"/></Property><Property TimeMapIndex="1" enabled="1" id="Rotation_Z" ignoreTimeMap="0" readonly="0" visible="1"><Keyframe anchor="0,0" next="0,0" previous="0,0" roving="0" timevalue="0"/><Keyframe anchor="0,513" next="0,513" previous="0,513" roving="0" timevalue="59000"/></Property></PropertyContainer><PropertyContainer id="Transformation"><Property enabled="1" id="Skew_X" ignoreTimeMap="0" readonly="0" visible="1"><Keyframe anchor="0,0" next="0,0" previous="0,0" roving="0" timevalue="0"/></Property><Property enabled="1" id="Skew_Y" ignoreTimeMap="0" readonly="0" visible="1"><Keyframe anchor="0,0" next="0,0" previous="0,0" roving="0" timevalue="0"/></Property><Property TimeMapIndex="2" enabled="1" id="Scale_X" ignoreTimeMap="0" readonly="0" visible="1"><Keyframe anchor="0,0" next="0,0" previous="0,0" roving="0" timevalue="0"/><Keyframe anchor="0,300" next="0,300" previous="0,300" roving="0" timevalue="59000"/></Property><Property TimeMapIndex="2" enabled="1" id="Scale_Y" ignoreTimeMap="0" readonly="0" visible="1"><Keyframe anchor="0,0" next="0,0" previous="0,0" roving="0" timevalue="0"/><Keyframe anchor="0,300" next="0,300" previous="0,300" roving="0" timevalue="59000"/></Property></PropertyContainer><PropertyContainer id="Colors"/><PropertyContainer id="Filters"/></PropertyContainer></AnimationCore></motionObjectXML>
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="SampleRect">
+                                             <matrix>
+                                                  <Matrix a="0.0099945068359375" d="0.0099945068359375" tx="275" ty="200"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="40" y="35"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timelines>
+     <PrinterSettings/>
+     <publishHistory>
+          <PublishItem publishSize="1601" publishTime="1326257717"/>
+          <PublishItem publishSize="1599" publishTime="1324622393"/>
+          <PublishItem publishSize="1597" publishTime="1324622244"/>
+          <PublishItem publishSize="1598" publishTime="1324620843"/>
+          <PublishItem publishSize="1588" publishTime="1324615029"/>
+          <PublishItem publishSize="1662" publishTime="1324614990"/>
+          <PublishItem publishSize="1661" publishTime="1324614974"/>
+          <PublishItem publishSize="1673" publishTime="1324614951"/>
+          <PublishItem publishSize="1679" publishTime="1324614870"/>
+          <PublishItem publishSize="1444" publishTime="1324614854"/>
+          <PublishItem publishSize="1533" publishTime="1324614825"/>
+          <PublishItem publishSize="1437" publishTime="1324613416"/>
+          <PublishItem publishSize="1281" publishTime="1324613334"/>
+          <PublishItem publishSize="1581" publishTime="1324613254"/>
+          <PublishItem publishSize="1478" publishTime="1324613232"/>
+          <PublishItem publishSize="997" publishTime="1324613210"/>
+          <PublishItem publishSize="997" publishTime="1324613075"/>
+          <PublishItem publishSize="998" publishTime="1324612993"/>
+          <PublishItem publishSize="1011" publishTime="1324612881"/>
+          <PublishItem publishSize="983" publishTime="1324612848"/>
+     </publishHistory>
+</DOMDocument>

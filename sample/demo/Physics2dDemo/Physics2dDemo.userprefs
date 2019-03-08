@@ -1,0 +1,23 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="src\Player.cs">
+    <Files>
+      <File FileName="src\Player.cs" Line="188" Column="33" />
+      <File FileName="src\Physics2dDemo.cs" Line="20" Column="23" />
+      <File FileName="shaders\AmbientColor.vcg" Line="1" Column="1" />
+      <File FileName="shaders\AmbientColor.fcg" Line="11" Column="1" />
+      <File FileName="src\GameMain.cs" Line="76" Column="3" />
+      <File FileName="src\SceneMain.cs" Line="43" Column="31" />
+      <File FileName="src\sprite\FillRectAnimation.cs" Line="1" Column="1" />
+      <File FileName="src\sprite\LayoutAction.cs" Line="1" Column="1" />
+      <File FileName="src\sprite\LayoutAnimation.cs" Line="1" Column="1" />
+      <File FileName="src\sprite\LayoutAnimationList.cs" Line="1" Column="1" />
+      <File FileName="src\sprite\NumberLayout.cs" Line="1" Column="1" />
+      <File FileName="src\sprite\SpriteAnimation.cs" Line="30" Column="40" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

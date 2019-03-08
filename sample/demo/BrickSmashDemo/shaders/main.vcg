@@ -1,0 +1,20 @@
+/* PlayStation(R)Mobile SDK 1.21.01
+ * Copyright (C) 2013 Sony Computer Entertainment Inc.
+ * All Rights Reserved.
+ */
+
+void main( float4 in a_Position  : POSITION,
+		   float3 in a_Normal    : NORMAL,
+		   float2 in a_TexCoord  : TEXCOORD0,
+		   float4 out v_Position : POSITION,
+		   float4 out v_Color    : COLOR0,
+		   float2 out v_TexCoord : TEXCOORD0,
+		   uniform float4x4 projViewMatrix,
+		   uniform float3 lightVector,
+		   uniform float4 vertexColor )
+{
+	v_Position = mul( a_Position, projViewMatrix );
+	v_TexCoord = a_TexCoord;
+	float l = dot(lightVector, a_Normal) * 0.5 + 0.5;
+	v_Color = float4(l, l, l, 1.0) * vertexColor;
+}

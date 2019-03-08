@@ -1,0 +1,9 @@
+void main(float4 in a_Position    : POSITION,
+          float4 in col_attr      : COLOR0,
+          float4 out v_Position   : POSITION,
+          float4 out v_Color      : COLOR0,
+          uniform float4x4 u_WorldMatrix)
+{
+	v_Position = mul(a_Position, u_WorldMatrix);
+	v_Color = col_attr;
+}

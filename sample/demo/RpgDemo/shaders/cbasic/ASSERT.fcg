@@ -1,0 +1,11 @@
+/* PlayStation(R)Mobile SDK 1.21.01
+ * Copyright (C) 2013 Sony Computer Entertainment Inc.
+ * All Rights Reserved.
+ */
+
+void main(
+	float4 out Color				: COLOR
+)
+{
+    Color = float4( 1.0, 0.0, 0.0, 1.0 );
+}

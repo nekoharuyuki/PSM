@@ -1,0 +1,11 @@
+
+void main(
+	in float2 oUV : TEXCOORD0,
+	out float4 result : COLOR,
+	uniform sampler2D uTexture : TEXUNIT0
+)
+{
+	result = tex2D(uTexture, oUV);
+	//result = float4(0.0f, 0.0f, oUV.y*oUV.x, 1.0f);
+}
+

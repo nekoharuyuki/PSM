@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{459B330A-FB67-4D91-A5F7-719792200612}</ProjectGuid>
+    <ProjectTypeGuids>{69878862-DA7D-4DC6-B0A1-50D8FAB4242F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>LoadingThreadSample</RootNamespace>
+    <AssemblyName>LoadingThreadSample</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="LoadingThreadSample.cs" />
+    <Compile Include="MainScene.composer.cs" />
+    <Compile Include="MainScene.cs" />
+    <Compile Include="ThreadWorker.cs" />
+    <Compile Include="ResourceLoader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Sce.PlayStation.Core" />
+    <Reference Include="System" />
+    <Reference Include="Sce.PlayStation.HighLevel.UI" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Sce\Sce.Psm.CSharp.targets" />
+  <ItemGroup>
+    <PsmMetadata Include="app.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="resources\test0.png" />
+    <Content Include="resources\test1.png" />
+    <Content Include="resources\test2.png" />
+    <Content Include="resources\test3.png" />
+    <Content Include="resources\test4.png" />
+    <Content Include="resources\test5.png" />
+    <Content Include="resources\test6.png" />
+    <Content Include="resources\test7.png" />
+    <Content Include="resources\test8.png" />
+    <Content Include="resources\test9.png" />
+  </ItemGroup>
+</Project>

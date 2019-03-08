@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{658BCD10-4E7B-4D7E-B4CD-B0154983643F}</ProjectGuid>
+    <ProjectTypeGuids>{69878862-DA7D-4DC6-B0A1-50D8FAB4242F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>DefenseDemo</RootNamespace>
+    <AssemblyName>DefenseDemo</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="src\DefenseDemo.cs" />
+    <Compile Include="src\GameMain.cs" />
+    <Compile Include="src\Renderer.cs" />
+    <Compile Include="src\InputManager.cs" />
+    <Compile Include="src\SceneTitle.cs" />
+    <Compile Include="src\Grid.cs" />
+    <Compile Include="src\Object2D.cs" />
+    <Compile Include="src\Object3D.cs" />
+    <Compile Include="src\Posture.cs" />
+    <Compile Include="src\ResourceDataContainer.cs" />
+    <Compile Include="src\SceneGame.cs" />
+    <Compile Include="src\collision\CollisionCapsule.cs" />
+    <Compile Include="src\collision\CollisionCheck.cs" />
+    <Compile Include="src\collision\CollisionStageData.cs" />
+    <Compile Include="src\collision\CollisionTriangles.cs" />
+    <Compile Include="src\unit\Unit.cs" />
+    <Compile Include="src\unit\UnitDefense1.cs" />
+    <Compile Include="src\unit\UnitDefense2.cs" />
+    <Compile Include="src\unit\UnitDefense3.cs" />
+    <Compile Include="src\unit\UnitDefense4.cs" />
+    <Compile Include="src\unit\UnitManager.cs" />
+    <Compile Include="src\unit\UnitOffense1.cs" />
+    <Compile Include="src\unit\UnitOffense2.cs" />
+    <Compile Include="src\unit\UnitOffense3.cs" />
+    <Compile Include="src\unit\UnitOffense4.cs" />
+    <Compile Include="src\unit\UnitOffenseBoss.cs" />
+    <Compile Include="src\collision\CollisionLine.cs" />
+    <Compile Include="src\collision\CollisionPlane.cs" />
+    <Compile Include="src\collision\CollisionTriangle.cs" />
+    <Compile Include="src\collision\CollisionSphere.cs" />
+    <Compile Include="src\Ground.cs" />
+    <Compile Include="src\Fps.cs" />
+    <Compile Include="src\GridPiece.cs" />
+    <Compile Include="src\CameraInfo.cs" />
+    <Compile Include="src\EffectFade.cs" />
+    <Compile Include="src\unit\UnitBullet1.cs" />
+    <Compile Include="src\collision\CollisionUnitSettingData.cs" />
+    <Compile Include="src\CommonUtil.cs" />
+    <Compile Include="src\unit\UnitBullet2.cs" />
+    <Compile Include="src\rout\RoutDataPattern.cs" />
+    <Compile Include="src\rout\Rout.cs" />
+    <Compile Include="src\unit\UnitBullet3.cs" />
+    <Compile Include="src\unit\UnitBullet4.cs" />
+    <Compile Include="src\AudioManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Sce.PlayStation.Core" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Sce\Sce.Psm.CSharp.targets" />
+  <ItemGroup>
+    <Content Include="res\2d\2d_03.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e00\e00.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e00\e00.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e01\E01.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e01\E01.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e02\E02.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e02\E02.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e03\E03.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e03\E03.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e04\E04.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e04\E04.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e11\E11.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e11\E11.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e12\E12.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e12\E12.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e13\E13.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e13\E13.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e14\E14.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e14\E14.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e21\E21.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e21\E21.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e22\E22.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e22\E22.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e23\E23.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e23\E23.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e24\E24.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e24\E24.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e25\E25.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e25\E25.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e31\E31.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e31\E31.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e32\E32.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e32\E32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e33\E33.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e33\E33.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e34\E34.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e34\E34.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e35\E35.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e35\E35.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e41\E41.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e41\E41.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e42\E42.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\effect\e42\E42.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\enemy\ene00\ene00.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\enemy\ene00\ene00_l0.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\enemy\ene00\ene00_1.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\enemy\ene00\ene00_l2.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\enemy\ene00\map05.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\enemy\ene01\ene01_l0.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\enemy\ene01\ene01_l0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\enemy\ene01\ene01_l2.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\enemy\ene01\ene01_l2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\enemy\ene02\ene02_l0.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\enemy\ene02\ene02_l0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\enemy\ene02\ene02_l2.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\enemy\ene02\ene02_l2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\enemy\ene03\ene03_l0.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\enemy\ene03\ene03_l0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\enemy\ene03\ene03_l2.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\enemy\ene03\ene03_l2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\enemy\ene04\ene04_l0.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\enemy\ene04\ene04_l0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\enemy\ene04\ene04_l2.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\enemy\ene04\ene04_l2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\enemy\ene05\ene05_l0.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\enemy\ene05\ene05_l0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\enemy\ene05\ene05_l2.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\enemy\ene05\ene05_l2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\ground\ground00.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\ground\ground01.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\ground\ground02.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\ground\rout_attr.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\ground\unit_pos.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\ground\ground00_01.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\ground\ground00_02.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\ground\ground00_21.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\ground\ground00_22.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\ground\ground00_23.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\ground\base_oc.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\ground\suna.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\ui\u00\u00.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\ui\u00\u00.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\ui\u01\u01.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\ui\u01\u01.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\weapon\a01\A01_l0.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\weapon\a01\A01_l2.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\weapon\a01\A01.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\weapon\a01\A01_AO.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\weapon\a02\A02_l0.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\weapon\a02\A02_l2.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\weapon\a02\A02.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\weapon\a02\A02_AO.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\weapon\a03\A03_l0.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\weapon\a03\A03_l2.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\weapon\a03\A03.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\weapon\a03\A03_AO.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\weapon\a04\A04_l0.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\weapon\a04\A04_l2.mdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\weapon\a04\A04.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\3d\weapon\a04\A04_AO.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\sound\S01.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\sound\S11.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\sound\S21.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\sound\S31.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\sound\S32.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\sound\S33.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\sound\S34.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\sound\S41.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\sound\S42.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\sound\S43.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\sound\S44.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\sound\S45.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\sound\S51.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\sound\S52.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\sound\S61.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\sound\S62.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\sound\S91.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\sound\S92.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\sound\S93.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <PsmMetadata Include="app.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ShaderProgram Include="shaders\AmbientColor.fcg" />
+    <ShaderProgram Include="shaders\AmbientColor.vcg" />
+    <ShaderProgram Include="shaders\Simple.fcg" />
+    <ShaderProgram Include="shaders\Simple.vcg" />
+    <ShaderProgram Include="shaders\Texture.fcg" />
+    <ShaderProgram Include="shaders\Texture.vcg" />
+    <ShaderProgram Include="shaders\VertexColor.fcg" />
+    <ShaderProgram Include="shaders\VertexColor.vcg" />
+    <ShaderProgram Include="shaders\cbasic\ASSERT.fcg" />
+    <ShaderProgram Include="shaders\cbasic\ASSERT.vcg" />
+    <ShaderProgram Include="shaders\cbasic\C0L0NNT1I0AN0NN0NA0.fp.cg" />
+    <ShaderProgram Include="shaders\cbasic\C0L0NNT1I0MN0NN0NA0.fp.cg" />
+    <ShaderProgram Include="shaders\cbasic\C0L0NNT1I0RN0NN0NA0.fp.cg" />
+    <ShaderProgram Include="shaders\cbasic\C0L0NNT1I1MN0NN0NA0.fp.cg" />
+    <ShaderProgram Include="shaders\cbasic\C0L0NNT2I0MI1MN0NA0.fp.cg" />
+    <ShaderProgram Include="shaders\cbasic\C0L0NNT2I0RI1MN0NA0.fp.cg" />
+    <ShaderProgram Include="shaders\cbasic\C0L0NNT2I1MI0MN0NA0.fp.cg" />
+    <ShaderProgram Include="shaders\cbasic\C0L0NNT2I1RI0MN0NA0.fp.cg" />
+    <ShaderProgram Include="shaders\cbasic\W1C0L0NNA0T1.vp.cg" />
+    <ShaderProgram Include="shaders\cbasic\W1C0L0NNA0T2.vp.cg" />
+    <ShaderProgram Include="shaders\cbasic\W1C0L0NNA1T1.vp.cg" />
+    <ShaderProgram Include="shaders\cbasic\W1C0L0NNA1T2.vp.cg" />
+    <ShaderProgram Include="shaders\cbasic\W2C0L0NNA0T1.vp.cg" />
+    <ShaderProgram Include="shaders\cbasic\W4C0L0NNA0T1.vp.cg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\lib\BasicModel\BasicModel.csproj">
+      <Project>{0859B93A-C11F-4CF7-B743-218C8C6D248B}</Project>
+      <Name>BasicModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\lib\DemoGameLib\DemoGameLib.csproj">
+      <Project>{B269B495-09B8-4B06-8FC9-B4A7780BB9E9}</Project>
+      <Name>DemoGameLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
