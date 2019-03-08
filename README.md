@@ -5,18 +5,18 @@ PlayStation Mobile はソニーコンピュータエンタテイメント（SCE�
 
 ### 図1 PlayStation Mobile
 ![図1 PlayStation Mobile](https://github.com/nekoharuyuki/PSM/blob/master/image/%E5%9B%B31%20PlayStation%20Mobile.png)  
-開発者は PlayStation Mobile Developer Program で有料の契約（年間 US$99 相当を予定）を結び、開発したアプリケーションを配信できます。ただし、本稿執筆時の2013年5月8日から、期間限定で無料で申し込み可能となっています。詳細は PlayStation Mobile 公式サイトをご覧ください。
+開発者は PlayStation Mobile Developer Program で有料の契約（年間 US$99 相当を予定）を結び、開発したアプリケーションを配信できます。ただし、本稿執筆時の2013年5月8日から、期間限定で無料で申し込み可能となっています。詳細は [PlayStation Mobile 公式サイト](https://www.jp.playstation.com/psn/psm/)をご覧ください。
 
 これまで PLAYSTATION3 や PlayStation Vita のようなゲーム専用端末のコンテンツを開発するには、SCE と法人契約した企業にのみ限られていましたが、PlayStation Mobile は iOS や Android などのスマートフォンのアプリケーション配信ストアに近いビジネスモデルになると予想され、個人の開発者も PlayStation Vita などの PlayStation Mobile 対応デバイスで実行できるプログラムを開発し、PlayStation Store でコンテンツを販売できるようになるでしょう。
 
-### PlayStation Certified デバイス
+## PlayStation Certified デバイス
 PlayStation Mobile アプリケーションは PlayStation Vitaで実行できることが最大の特徴ですが、SCE がライセンスする PlayStation Certified デバイスでも実行できます。
 
 本校執筆時点で発表されている対応デバイスは Xperia や Sony Tablet シリーズなど Sony 製の Android デバイスが中心ですが、加えて HTC の HTC Oneシリーズが対応しています。詳細は公式サイトの対応機種一覧を見てください。
 
-### PlayStation™Certified devices
+[PlayStation™Certified devices](https://www.jp.playstation.com/psm/certified_j/)
 
-### PlayStation Mobileの技術
+## PlayStation Mobileの技術
 PlayStation Mobile は上記のように PlayStation Vita や PlayStation Certified デバイスなどクロスプラットフォームで動作するアプリケーション実行環境です。
 
 PlayStation Mobile SDK で開発されたアプリケーションは、コードを変更することなく多様なデバイスで実行できます。 このクロスプラットフォーム性は PlayStation Mobile が Mono と呼ばれるオープンソースで開発されている仮想マシンによって実現しています。
@@ -29,7 +29,7 @@ PlayStation Mobile SDK で開発されたアプリケーションは、コード
 
 PlayStation Mobile は Mono の仮想マシンをベースに、ゲームやアプリケーション開発に特化したフレームワークを提供することで、PlayStation Mobile に対応している環境であれば同じように実行できるように仕組んでいるのです。 
 
-### 基盤技術はMicrosoft .NET Framework
+## 基盤技術はMicrosoft .NET Framework
 PlayStation Mobile の技術基盤である Mono は Microsoft が開発する .NET Framework と呼ばれる技術と互換性のあるオープンソースの実装です。.NET Framework は多くの Windows アプリケーションが基盤としている技術で、それ自体は Microsoft の製品ですが、仕様はオープンに公開されています。
 
 PlayStation Mobile SDK が C# を開発言語としているのも .NET Framework アプリケーションの主要な開発言語が C# であるためです。
@@ -42,7 +42,7 @@ PlayStation Mobile や Unity の実行基盤となっている Mono は、こう
 
 特に 1990 年代の Microsoft を知る技術者であれば独善的な企業というイメージが強いため、プロプライエタリな独自技術にロックインされるのではないかと警戒でしょう。しかし 2000 年代中ごろから Microsoft の方針が変化し、多くの自社技術をオープンソース化するほか、標準化やオープンソースの支援を積極的に行うようになりました。PlayStation Mobile や Unity など、非 Windows 環境で互換技術の採用が進んでいることが、その証左となっています。
 
-Unity との共通点と相違点
+## Unity との共通点と相違点
 PlayStation Mobile アプリケーションの開発環境と実行基盤の仕組みは Unity に非常によく似ています。実行基盤に Mono を採用することで OS やデバイスを抽象化する点だけではなく、標準の統合開発環境 PlayStation Mobile Studio が MonoDevelop をベースとする点も同じです。
 
 ### 図3 Unityに付属するMonoDevelop
@@ -71,7 +71,7 @@ Unity と比較した場合、主に 3D ゲーム開発に特化している Uni
 
 PlayStation Mobile SDK は Unity のシーンエディタのようなゲーム空間を構築するツールはありませんが、代わりに UI Toolkit と呼ばれるユーザーインターフェイスに特化したライブラリが提供されます。加えてUIデザインをサポートするツール UI Composer が付属しており、効率的に UI のデザインが行えます。
 
-### 基本的なアプリケーション構造
+## 基本的なアプリケーション構造
 PlayStation Mobile SDK のアーキテクチャは実行基盤を Mono としている点において Unity に似ていますが、開発方法は DirectX や XNA Framework などで開発するゲームのように、すべてをコードで記述しなければなりません。グラフィックスに関連するフレームワークは DirectX や OpenGL の開発経験があれば違和感のない設計になっているので、一定のゲーム開発経験があれば習得は難しくありません。
 
 ここでは、単純に背景色を黒から赤に変化するアニメーション処理を例に基本的な動きを確認します。
@@ -141,7 +141,7 @@ Initialize() メソッドの処理が終了し Main() メソッドに復帰す�
 
 このときディスプレイの更新とフレームバッファの更新がずれるとティアリングと呼ばれる画面のちらつきが発生してしまいます。これを防ぐために GraphicsContext はディスプレイの更新間隔に合わせて SwapBuffers() メソッドを待機させます。この設定を垂直同期と呼び、一般的なデバイスでは 1 秒間に 60 回（約 16.6 ミリ秒に 1 回）の間隔で画面を更新します。Update() メソッドと Render() メソッドが呼び出される間隔はディスプレイの垂直同期に合わせられるため、それぞれ 1 秒間に約 60 回のペースで呼び出されることになります。
 
-### UI Composer と UI Toolkit
+## UI Composer と UI Toolkit
 PlayStation Mobile SDK ではアプリケーションの UI に利用できるウィジェット（Widget）と呼ばれる部品群を UI Toolkit というライブラリで提供しています。ラベル、ボタン、テキスト編集、イメージ、スライダーなどのウィジェットが標準で用意されており、必要に応じてカスタムウィジェットを作成することも可能です。
 
 ### 図7 標準のウィジェット
@@ -164,7 +164,7 @@ UI Composer による UI のデザインは便利ですが PlayStation Mobile St
 
 当然、UI Composer でデザインできる範囲はビルド時のインスタンス構造のみで、実行時に UI が変化する場合はコードで記述しなければなりません。
 
-### PlayStation Mobile と Android
+## PlayStation Mobile と Android
 PlayStation Mobile アプリケーションは PlayStation Vita で実行できるという点が売りになっていますが、デバイスの普及台数を考えれば PlayStation Certified ライセンスを取得した Android デバイスで実行できる点も無視できません。
 
 Android は開発者にとって自由度が高い OS ですが、その一方で性能の異なるハードウェアが大量に作られ、バージョンや機能もデバイスごとに異なる状態が続いています。一定の性能が要求されるゲーム開発にとって、これは致命的な問題です。これに対し PlayStation Certified は SCE が定める基準を満たしたデバイスにのみライセンスされるため、PlayStation Mobile アプリケーションを安定して実行できる性能が保証されます。
