@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetaWidgetLabel>
+    <id>2</id>
+    <name>Label</name>
+    <name_id>WidgetName_09</name_id>
+    <className>Label</className>
+    <type>UIComposer.Label</type>
+    <description id="WidgetDescriptoin_Label" lang="ja">ラベル</description>
+    <icon>../Images/widgets_list/text.png</icon>
+    <smallIcon>../Images/object_tree/label.png</smallIcon>
+    <dragIcon>Images/widgets_list/text.png</dragIcon>
+    <defaultWidth>214</defaultWidth>
+    <defaultHeight>36</defaultHeight>
+    <hasBorder>true</hasBorder>
+    <imagelist>
+        <image>Images/null.png</image>
+    </imagelist>
+    <alpha>100</alpha>
+    <textblock
+        hasTextBox="true"
+        textFont="System"
+        fontWeight="Regular"
+        fontStyle=""
+        fontSize="25"
+        textColor="#000000"
+        textAlpha="100"
+        textColorShadow="#808080"
+        shadowAlpha="50"
+        horizontalOffset="2.0"
+        verticalOffset="2.0"
+        horizontal="Left"
+        vertical="Center"
+        linebreaks="Character"
+    trimming="EllipsisCharacter">label</textblock>
+</MetaWidgetLabel>

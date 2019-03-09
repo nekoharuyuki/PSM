@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetaWidgetPagePanel>
+    <id>14</id>
+    <name>PagePanel</name>
+    <name_id>WidgetName_11</name_id>
+    <className>PagePanel</className>
+    <type>UIComposer.PagePanel</type>
+    <description id="WidgetDescriptoin_PagePanel" lang="ja">ページパネル</description>
+    <icon>../Images/widgets_list/pagepanel.png</icon>
+    <smallIcon>../Images/object_tree/pagepanel.png</smallIcon>
+    <dragIcon>Images/widgets_list/pagepanel.png</dragIcon>
+    <defaultWidth>100</defaultWidth>
+    <defaultHeight>50</defaultHeight>
+    <alpha>100</alpha>
+    <pagePanelComb></pagePanelComb>
+    <topDistance>0</topDistance>
+    <controlCount>0</controlCount>
+    <hasBorder>true</hasBorder>
+    <background
+        color="#AAAAAA"
+        alpha="30"/>
+</MetaWidgetPagePanel>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MetaWidgetCustomWidget>
+    <id>100</id>
+    <name>CustomWidget</name>
+    <name_id>WidgetName_100</name_id>
+    <className>CustomWidget</className>
+    <type>UIComposer.CustomWidget</type>
+    <description id="WidgetDescriptoin_CustomWidget" lang="ja">カスタムウィジェット</description>
+    <icon>../Images/widgets_list/custompanel.png</icon>
+    <smallIcon>../Images/object_tree/custompanel.png</smallIcon>
+    <dragIcon>Images/widgets_list/custompanel.png</dragIcon>
+    <defaultWidth>400</defaultWidth>
+    <defaultHeight>200</defaultHeight>
+    <background
+        color="#999999"
+        alpha="100"/>
+    <hasBorder>true</hasBorder>
+    <textblock
+        textFont="System"
+        textColor="#000000"
+        fontSize="20"
+        fontWeight="Regular"
+        horizontal="Center"
+        vertical="Center">CustomWidget</textblock>
+</MetaWidgetCustomWidget>

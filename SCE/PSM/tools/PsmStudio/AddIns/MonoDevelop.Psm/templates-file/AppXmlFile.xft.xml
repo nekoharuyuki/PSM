@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Template Originator="SCEI" Language="XML" Created="2011-01-20" LastModified="2011-02-25">
+
+	<TemplateConfiguration>
+		<_Name>Application Metadata File</_Name>
+		<Icon>md-xml-file-icon</Icon>
+		<_Category>PlayStation Mobile</_Category>
+		<_Description>Creates an Application Metadata file. Put this next to .csproj</_Description>
+		<DefaultFilename IsFixed="True">app.xml</DefaultFilename>
+	</TemplateConfiguration>
+
+	<TemplateFiles>
+		<File name="app.xml" DefaultExtension=".xml" DefaultName="app" src="../templates-project/PsmApplication/app.xml" />
+	</TemplateFiles>
+
+</Template>

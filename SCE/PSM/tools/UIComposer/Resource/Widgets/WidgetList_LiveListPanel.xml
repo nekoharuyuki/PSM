@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetaWidgetLiveListPanel>
+    <id>19</id>
+    <name>LiveListPanel</name>
+    <name_id>WidgetName_19</name_id>
+    <className>LiveListPanel</className>
+    <type>UIComposer.LiveListPanel</type>
+    <description id="WidgetDescriptoin_LiveListPanel" lang="ja">LiveListPanel</description>
+    <icon>../Images/widgets_list/livelistpanel.png</icon>
+    <smallIcon>../Images/object_tree/livelistpanel.png</smallIcon>
+    <dragIcon>Images/widgets_list/livelistpanel.png</dragIcon>
+    <defaultWidth>854</defaultWidth>
+    <defaultHeight>400</defaultHeight>
+    <alpha>100</alpha>
+    <listPanelItem></listPanelItem>
+    <scrollBarVisibility>ScrollableVisible</scrollBarVisibility>
+    <itemVerticalGap>0.5</itemVerticalGap>
+    <hasBorder>true</hasBorder>
+    <background
+        color="#DDDDDD"
+        alpha="50"/>
+</MetaWidgetLiveListPanel>

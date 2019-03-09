@@ -1,0 +1,9 @@
+2013-12-19 16:03:05
+psm-build-number:956
+PSM BRANCH=branch121
+Revision: 22641
+I=false
+PSS_PLATFORM_BUILD=1
+PSS_PLATFORM_BRANCH=psm_sdk_121
+PSS_PLATFORM_HOME=w:/Build/work/pss_platform_cache
+PSS_PLATFORM_HOME_GNU=w:/Build/work/pss_platform_cache

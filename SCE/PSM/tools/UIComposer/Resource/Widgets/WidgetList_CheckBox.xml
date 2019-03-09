@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetaWidgetCheckBox>
+    <id>5</id>
+    <name>CheckBox</name>
+    <name_id>WidgetName_03</name_id>
+    <className>CheckBox</className>
+    <type>UIComposer.CheckBox</type>
+    <description id="WidgetDescriptoin_CheckBox" lang="ja">チェックボックス</description>
+    <icon>../Images/widgets_list/checkbox.png</icon>
+    <smallIcon>../Images/object_tree/check_box.png</smallIcon>
+    <dragIcon>Images/widgets_list/checkbox.png</dragIcon>
+    <defaultWidth>56</defaultWidth>
+    <defaultHeight>56</defaultHeight>
+    <radioButtonWidth>39</radioButtonWidth>
+    <radioButtonHeight>39</radioButtonHeight>
+    <fixedWidth>true</fixedWidth>
+    <fixedHeight>true</fixedHeight>
+    <imagelist>
+        <image>system_assets/check_box_normal_disable.png</image>
+        <image>system_assets/radio_bt_selected_disable.png</image>
+        <image>system_assets/check_box_active.png</image>
+        <image>system_assets/check_box_active_disable.png</image>
+        <image>system_assets/radio_bt_normal.png</image>
+        <image>system_assets/radio_bt_normal_disable.png</image>
+        <image>system_assets/check_box_normal.png</image>
+        <image>system_assets/radio_bt_selected.png</image>
+    </imagelist>
+    <alpha>100</alpha>
+    <checkBoxStatus>false</checkBoxStatus>
+    <checkBoxSelected>true</checkBoxSelected>
+    <radioButtonSelected>false</radioButtonSelected>
+    <checkBoxEnabledStatus>true</checkBoxEnabledStatus>
+</MetaWidgetCheckBox>

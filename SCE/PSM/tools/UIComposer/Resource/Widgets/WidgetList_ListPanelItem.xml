@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetaWidgetListPanelItem>
+    <id>16</id>
+    <name>ListPanelItem</name>
+    <name_id>WidgetName_10</name_id>
+    <className>ListPanelItem</className>
+    <type>UIComposer.ListPanelItem</type>
+    <description id="WidgetDescriptoin_ListPanelItem" lang="ja">リストパネルアイテム</description>
+    <icon>../Images/widgets_list/listpanelitem.png</icon>
+    <smallIcon>../Images/object_tree/listpanelitem.png</smallIcon>
+    <dragIcon>Images/widgets_list/listpanelitem.png</dragIcon>
+    <defaultWidth>100</defaultWidth>
+    <defaultHeight>50</defaultHeight>
+    <imagelist>
+        <image>Images/null.png</image>
+    </imagelist>
+    <background
+        color="#000000"
+        alpha="0"/>
+    <hasChildren>true</hasChildren>
+</MetaWidgetListPanelItem>

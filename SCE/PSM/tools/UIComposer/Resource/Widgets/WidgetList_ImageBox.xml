@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetaWidgetImageBox>
+    <id>12</id>
+    <name>ImageBox</name>
+    <name_id>WidgetName_08</name_id>
+    <className>ImageBox</className>
+    <type>UIComposer.Image</type>
+    <description id="WidgetDescriptoin_ImageBox" lang="ja">イメージボックス</description>
+    <icon>../Images/widgets_list/image.png</icon>
+    <smallIcon>../Images/object_tree/image_box.png</smallIcon>
+    <dragIcon>Images/widgets_list/image.png</dragIcon>
+    <defaultWidth>200</defaultWidth>
+    <defaultHeight>200</defaultHeight>
+    <hasUserImage>true</hasUserImage>
+    <alpha>100</alpha>
+    <scaletype>Normal</scaletype>
+    <textblock
+        textFont="System"
+        textColor="#000000"
+        fontSize="20"
+        fontWeight="Regular"
+        horizontal="Center"
+        vertical="Center">ImageBox</textblock>
+    <hasBorder>true</hasBorder>
+    <background
+        color="#FFFFFF"
+        alpha="100"/>
+</MetaWidgetImageBox>

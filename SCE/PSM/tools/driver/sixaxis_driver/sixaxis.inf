@@ -1,0 +1,76 @@
+; SCE CONFIDENTIAL
+; Copyright (C) 2010 Sony Computer Entertainment Inc.
+; All Rights Reserved.
+
+[Version]
+Signature = "$Windows NT$"
+Class = HIDClass
+ClassGuid = {745a17a0-74d3-11d0-b6fe-00a0c90f57da}
+Provider = %ProviderName%
+CatalogFile = sixaxis.cat
+DriverVer = 01/20/2012,1.4.0.0
+PnpLockDown = 0
+DriverPackageDisplayName = %PackageName%
+
+[Manufacturer]
+%ProviderName% = Sixaxis, NTx86, NTamd64, NTia64
+
+[Sixaxis.NTx86]
+%DeviceDesc% = Sixaxis_Install, USB\VID_054c&PID_0268
+
+[Sixaxis.NTamd64]
+%DeviceDesc% = Sixaxis_Install, USB\VID_054c&PID_0268
+
+[Sixaxis.NTia64]
+%DeviceDesc% = Sixaxis_Install, USB\VID_054c&PID_0268
+
+[Sixaxis_Install]
+CopyFiles = Sixaxis_CopyFiles
+
+[Sixaxis_Install.Services]
+AddService = sixaxis, %SPSVCINST_ASSOCSERVICE%, Sixaxis_Service_Install
+
+[Sixaxis_Service_Install]
+DisplayName = %ServiceName%
+Description = %ServiceDesc%
+ServiceType = %SERVICE_KERNEL_DRIVER%
+StartType = %SERVICE_DEMAND_START%
+ErrorControl = %SERVICE_ERROR_NORMAL%
+ServiceBinary = %12%\sixaxis.sys
+
+[Sixaxis_CopyFiles]
+sixaxis.sys
+
+[DestinationDirs]
+Sixaxis_CopyFiles = 12
+
+[SourceDisksNames.x86]
+1 = %DiskName%,,,\x86
+
+[SourceDisksNames.amd64]
+2 = %DiskName%,,,\amd64
+
+[SourceDisksNames.ia64]
+3 = %DiskName%,,,\ia64
+
+[SourceDisksFiles.x86]
+sixaxis.sys = 1
+
+[SourceDisksFiles.amd64]
+sixaxis.sys = 2
+
+[SourceDisksFiles.ia64]
+sixaxis.sys = 3
+
+[Strings]
+ProviderName = "Sony Computer Entertainment Inc."
+PackageName = "Wireless controller for PLAYSTATION(R)3 Driver Package"
+DeviceDesc = "Wireless controller for PLAYSTATION(R)3"
+DiskName = "Wireless controller for PLAYSTATION(R)3 - Driver Install Disk"
+ServiceName = "Wireless controller for PLAYSTATION(R)3 Driver Service"
+ServiceDesc = "Enables the access of PLAYSTATION(R)3 wireless controllers"
+
+SPSVCINST_ASSOCSERVICE = 0x00000002
+SERVICE_KERNEL_DRIVER = 0x00000001
+SERVICE_DEMAND_START = 0x3
+SERVICE_ERROR_NORMAL = 0x1

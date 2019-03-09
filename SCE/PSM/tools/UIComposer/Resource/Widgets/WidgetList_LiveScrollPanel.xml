@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetaWidgetLiveScrollPanel>
+    <id>20</id>
+    <name>LiveScrollPanel</name>
+    <name_id>WidgetName_20</name_id>
+    <className>LiveScrollPanel</className>
+    <type>UIComposer.LiveScrollPanel</type>
+    <description id="WidgetDescriptoin_LiveScrollPanel" lang="ja">LiveScrollPanel</description>
+    <icon>../Images/widgets_list/livescrollpanel.png</icon>
+    <smallIcon>../Images/object_tree/livescrollpanel.png</smallIcon>
+    <dragIcon>Images/widgets_list/livescrollpanel.png</dragIcon>
+    <defaultWidth>100</defaultWidth>
+    <defaultHeight>50</defaultHeight>
+    <background
+        color="#DDDDDD"
+        alpha="50"/>
+    <alpha>100</alpha>
+    <direction>Horizontal</direction>
+    <elasticity>1</elasticity>
+    <hasBorder>true</hasBorder>
+    <horizontalScrollable>true</horizontalScrollable>
+    <verticalScrollable>true</verticalScrollable>
+</MetaWidgetLiveScrollPanel>

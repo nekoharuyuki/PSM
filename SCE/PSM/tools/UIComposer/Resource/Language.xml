@@ -1,0 +1,2003 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LanguageResoure>
+    <LanguageItems>
+        <LanguageItem>
+            <ID>COMMON_01</ID>
+            <English>Select a file to open.</English>
+            <Japanese>読み込むファイルを指定して下さい。</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>COMMON_02</ID>
+            <English>UI Composer XML File(*{0})|*{0}</English>
+            <Japanese>UI Composer XML File(*{0})|*{0}</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>COMMON_03</ID>
+            <English>All FIles(*.*)</English>
+            <Japanese>全てのファイル(*.*)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>COMMON_04</ID>
+            <English>Select a file to save.</English>
+            <Japanese>保存するファイル名を指定して下さい。</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>COMMON_05</ID>
+            <English>Image File(*.jpg;*.png)</English>
+            <Japanese>Image File(*.jpg;*.png)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>COMMON_06</ID>
+            <English>New Folder</English>
+            <Japanese>新規フォルダ作成</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>COMMON_07</ID>
+            <English>Are you sure to delete this file ?</English>
+            <Japanese>このファイルを削除します。よろしいですか？</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>COMMON_08</ID>
+            <English>Confirmation</English>
+            <Japanese>確認</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>COMMON_09</ID>
+            <English>Error</English>
+            <Japanese>エラー</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>COMMON_10</ID>
+            <English>Copy All Images ?</English>
+            <Japanese>全ての画像をコピーしてよろしいですか？</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>COMMON_11</ID>
+            <English>OK</English>
+            <Japanese>OK</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>COMMON_12</ID>
+            <English>Cancel</English>
+            <Japanese>Cancel</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>COMMON_13</ID>
+            <English>px</English>
+            <Japanese>px</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>COMMON_14</ID>
+            <English>Browse</English>
+            <Japanese>Browse</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>COMMON_15</ID>
+            <English>This project is not saved. Do you want to save ?</English>
+            <Japanese>プロジェクトファイルが保存されていません。保存しますか？</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>COMMON_16</ID>
+            <English>Confirmation</English>
+            <Japanese>確認</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>COMMON_17</ID>
+            <English>Specified project file is not exist.</English>
+            <Japanese>選択されたプロジェクトファイルが見つかりません。</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+          <ID>MSG_BOX_STRING_CONFIRM_READONLY</ID>
+          <English>This is read only file. Do you want to save as another name?</English>
+          <Japanese>読み取り専用です。別名で保存しますか？</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+          <ID>WARNING_MSG_READONLY_DISABLE_SAVE</ID>
+          <English>{0} is readonly, so it is disable to save.</English>
+          <Japanese>{0} は読み取り専用のため保存できません。</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+          <ID>WARNING_MSG_OVER_LIST_ITEM_SIZE</ID>
+          <English>{0}'s list item size is over list size.</English>
+          <Japanese>{0} のリストアイテムのサイズがリストのサイズを超えています。</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+          <ID>WARNING_MSG_LIST_ITEM_NULL</ID>
+          <English>list item is not attached to {0}.</English>
+          <Japanese>{0} にリストアイテムが設定されていません。</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+          <ID>WARNING_MSG_LAYOUT_SIZE_OVER_FOR_PREVIEW</ID>
+          <English>The layout size for which preview is possible is to {0}. </English>
+          <Japanese>プレビュー可能なレイアウトサイズは {0} までです。</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+          <ID>WARNING_MSG_CANT_SAVE_OUT_OF_PROJECT_DIR</ID>
+          <English>Save cannot be made to a folder other than "{0}". </English>
+          <Japanese>"{0}" 以外のフォルダに保存することはできません。</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>COMMON_ALERT_EMPTY</ID>
+            <English>Please enter '{0}'.</English>
+            <Japanese>{0}を入力して下さい。</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>COMMON_ALERT_WHITECHAR</ID>
+            <English>Whitespace character cannot be used for '{0}'.</English>
+            <Japanese>{0}に空白文字は使用できません。</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>COMMON_CONFIRM_OVERWRITE_FILE</ID>
+            <English>The specified file already exists {0} 
+Overwrite?</English>
+            <Japanese>指定されたファイルはすでに存在します。 {0} 
+上書きしますか？</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>COMMON_ALERT_CONFLICT_WIDGET_NAME</ID>
+            <English>'{0}' conflicts with the other widget class name.</English>
+            <Japanese>'{0}' は他のウィジェットクラス名と衝突しています。</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>COMMON_ALERT_CONFLICT_EXIST_NODE_NAME</ID>
+            <English>'{0}' conflicts with an existed name.</English>
+            <Japanese>'{0}' はすでに存在する名前と衝突しています。</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>COMMON_ALERT_INVALID_DIALOG_SIZE</ID>
+            <English>Default Dialog minimum size is ({0}, {1}).</English>
+            <Japanese>標準ダイアログの最小サイズは({0}, {1})です。</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>COMMON_ALERT_ALREADY_IMPORTED</ID>
+            <English>Specified folder is already imported.</English>
+            <Japanese>指定したフォルダは既にインポートされています。</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>COMMON_ALERT_CANNOT_IMPORT_PARENT_FOLDER</ID>
+            <English>Parent folder cannot be imported.</English>
+            <Japanese>親フォルダはインポートできません。</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>COMMON_ALERT_CANNOT_IMPORT_HIDDEN_OR_SPECIAL_FOLDER</ID>
+            <English>Hidden folders and special folders cannot be imported.
+Import skipped. </English>
+            <Japanese>隠しフォルダおよび特殊フォルダはインポートできません。
+スキップされました。</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+          <ID>COMMON_ALERT_UNEXPECTED_FILE_FORMAT</ID>
+            <English>Unexpected file format.</English>
+            <Japanese>予期しないフォーマットです。</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>COMMON_ALERT_CANNOT_OPEN_MULTIPLE_PRJECTS</ID>
+            <English>Cannot open multiple project files at once.</English>
+            <Japanese>複数のプロジェクトファイルを同時に開くことはできません。</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>COMMON_ALERT_CANNOT_COPY_CSV_FILE</ID>
+            <English>'{0}' already exists at project folder. Cannot overwrite</English>
+            <Japanese>'{0}' はプロジェクトフォルダに存在しています。上書きできません。</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>COMMON_ALERT_DONOT_EXIST</ID>
+            <English>'{0}' is not exist.</English>
+            <Japanese>'{0}' は存在しません。</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>COMMON_ALERT_TOO_LONG_FILE_PATH</ID>
+            <English>'{0}' is too long string.</English>
+            <Japanese>'{0}' は文字列が長すぎます。</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>COMMON_ALERT_OVER_TEXTURE_SIZE</ID>
+            <English>Texture size limitation is {0}.
+'{1}' is {2} x {3}.</English>
+            <Japanese>テクスチャのサイズ上限は'{0}'です。
+'{1}' のサイズは {2} x {3} です。</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>COMMON_NAME_PROJECT</ID>
+            <English>Project Name</English>
+            <Japanese>プロジェクト名</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>COMMON_NAME_CLASS</ID>
+            <English>Class Name</English>
+            <Japanese>クラス名</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>COMMON_NAME_NAMESPACE</ID>
+            <English>namespace</English>
+            <Japanese>namespace</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>COMMON_NAME_OUTPUT_FOLDER</ID>
+            <English>Sources(*.cs) output folder</English>
+            <Japanese>Sources(*.cs) output folder</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>ICMainWindow_Title</ID>
+            <English>PlayStation Mobile UI Composer</English>
+            <Japanese>PlayStation Mobile UI Composer</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>ICMainWindow_01</ID>
+            <English>WidgetList</English>
+            <Japanese>WidgetList</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>ICMainWindow_02</ID>
+            <English>Overview</English>
+            <Japanese>Overview</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>ICMainWindow_03</ID>
+            <English>Asset</English>
+            <Japanese>Asset</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>ICMainWindow_04</ID>
+            <English>ObjectTree</English>
+            <Japanese>ObjectTree</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>ICMainWindow_05</ID>
+            <English>Resource</English>
+            <Japanese>Resource</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>ICMainWindow_06</ID>
+            <English>Property</English>
+            <Japanese>Property</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>ArrowCursor</ID>
+            <English>Arrow Cursor</English>
+            <Japanese>矢印カーソル</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>HandCursor</ID>
+            <English>Hand Cursor</English>
+            <Japanese>ハンドカーソル</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>SaveProject</ID>
+            <English>Save Project</English>
+            <Japanese>プロジェクトを保存</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>OpenExistingProject</ID>
+            <English>Open Existing Project</English>
+            <Japanese>既存のプロジェクトを開く</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>CreateNewLayout</ID>
+            <English>Create New Layout</English>
+            <Japanese>新規レイアウトを作成</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Undo</ID>
+            <English>Undo</English>
+            <Japanese>元に戻す</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Redo</ID>
+            <English>Redo</English>
+            <Japanese>やり直す</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>ICMainWindow_17</ID>
+            <English>Test/Run</English>
+            <Japanese>Test/Run</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Copy</ID>
+            <English>Copy</English>
+            <Japanese>コピー</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Delete</ID>
+            <English>Delete</English>
+            <Japanese>削除</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Paste</ID>
+            <English>Paste</English>
+            <Japanese>貼り付け</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Cut</ID>
+            <English>Cut</English>
+            <Japanese>切り取り</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>ShowGrid</ID>
+            <English>Show Grid</English>
+            <Japanese>グリッド線を表示</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>ShowGuide</ID>
+            <English>Show Guide</English>
+            <Japanese>ガイド線を表示</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Alignment</ID>
+            <English>Alignment</English>
+            <Japanese>整列</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>AlignLeft</ID>
+            <English>Align Left</English>
+            <Japanese>左揃え</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>AlignCenterHorizontal</ID>
+            <English>Align Center (Horizontal)</English>
+            <Japanese>水平方向に中央揃え</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>AlignRight</ID>
+            <English>Align Right</English>
+            <Japanese>右揃え</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>AlignTop</ID>
+            <English>Align Top</English>
+            <Japanese>上揃え</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>AlignCenterVertical</ID>
+            <English>Align Center (Vertical)</English>
+            <Japanese>垂直方向に中央揃え</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>AlignBottom</ID>
+            <English>Align Bottom</English>
+            <Japanese>下揃え</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>AlignHorizontalCenterInContainer</ID>
+            <English>Align Horizontal Center In Container</English>
+            <Japanese>親ウィジェットの中央（水平方向）に整列</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>AlignVerticalCenterInContainer</ID>
+            <English>Align Vertical Center In Container</English>
+            <Japanese>親ウィジェットの中央（垂直方向）に整列</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Spacing</ID>
+            <English>Spacing</English>
+            <Japanese>間隔</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>MakeHorizontalSpacingEqual</ID>
+            <English>Make Horizontal Spacing Equal</English>
+            <Japanese>水平方向の間隔を等しくする</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>MakeVerticalSpacingEqual</ID>
+            <English>Make Vertical Spacing Equal</English>
+            <Japanese>垂直方向の間隔を等しくする</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Size</ID>
+            <English>Size</English>
+            <Japanese>サイズ</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>MakeSameWidth</ID>
+            <English>Make Same Width</English>
+            <Japanese>幅を等しくする</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>MakeSameHeight</ID>
+            <English>Make Same Height</English>
+            <Japanese>高さを等しくする</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>MakeSameSize</ID>
+            <English>Make Same Size</English>
+            <Japanese>サイズを等しくする</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Order</ID>
+            <English>Order</English>
+            <Japanese>重なり順</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>SendToBack</ID>
+            <English>Send to Back</English>
+            <Japanese>最背面へ移動</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>SendToFront</ID>
+            <English>Send to Front</English>
+            <Japanese>最前列へ移動</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>SendBackward</ID>
+            <English>Send Backward</English>
+            <Japanese>背面へ移動</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>SendForward</ID>
+            <English>Send Forward</English>
+            <Japanese>前面へ移動</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>ICMainWindow_38</ID>
+            <English>Project Settings</English>
+            <Japanese>Project Settings</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>ICMainWindow_41</ID>
+            <English>Build and Go in VS/MonoDevelop</English>
+            <Japanese>Build and Go in VS/MonoDevelop</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>ICMainWindow_49</ID>
+            <English>Select Parent</English>
+            <Japanese>Select Parent</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>ICMainWindow_50</ID>
+            <English>Select Children</English>
+            <Japanese>Select Children</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>ICMainWindow_51</ID>
+            <English>Select Previous Sibling</English>
+            <Japanese>Select Previous Sibling</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>ICMainWindow_52</ID>
+            <English>Select Next Sibling</English>
+            <Japanese>Select Next Sibling</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>ICMainWindow_68</ID>
+            <English>Show Layout Rectangles</English>
+            <Japanese>Show Layout Rectangles</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>DocumentPath</ID>
+            <English>/doc/en/tool_toc.html</English>
+            <Japanese>/doc/ja/tool_toc.html</Japanese>
+        </LanguageItem>
+
+<!-- OVERVIEW MODULE -->
+        <LanguageItem>
+            <ID>ViewLayoutOverviewControl_01</ID>
+            <English>Fit height</English>
+            <Japanese>Fit height</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>ViewLayoutOverviewControl_02</ID>
+            <English>Fit width</English>
+            <Japanese>Fit width</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>ViewLayoutOverviewControl_03</ID>
+            <English>Fit all</English>
+            <Japanese>Fit all</Japanese>
+        </LanguageItem>
+
+<!-- OBJECT TREE MODULE -->
+        <LanguageItem>
+            <ID>ViewObjectTreeControl_01</ID>
+            <English>Project</English>
+            <Japanese>Project</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>ViewObjectTreeControl_02</ID>
+            <English>C_ut</English>
+            <Japanese>C_ut</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>ViewObjectTreeControl_03</ID>
+            <English>_Copy</English>
+            <Japanese>_Copy</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>ViewObjectTreeControl_04</ID>
+            <English>_Paste</English>
+            <Japanese>_Paste</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>ViewObjectTreeControl_05</ID>
+            <English>Delete this layout?</English>
+            <Japanese>Delete this layout?</Japanese>
+        </LanguageItem>
+
+<!-- RESOURCE TABLE MODULE -->
+    <!-- Load csv -->
+        <LanguageItem>
+            <ID>LanguageTable_Load</ID>
+            <English>Load</English>
+            <Japanese>Load</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>LanguageTable_Reload</ID>
+            <English>Reload</English>
+            <Japanese>Reload</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>LanguageTable_Apply</ID>
+            <English>Apply to layout</English>
+            <Japanese>Apply to layout</Japanese>
+        </LanguageItem>
+
+    <!-- Right Click Menu -->
+        <LanguageItem>
+            <ID>ViewResourceTableControl_04</ID>
+            <English>AddColumn</English>
+            <Japanese>AddColumn</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>ViewResourceTableControl_05</ID>
+            <English>Delete Column</English>
+            <Japanese>Delete Column</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>ViewResourceTableControl_06</ID>
+            <English>Delete Row</English>
+            <Japanese>Delete Row</Japanese>
+        </LanguageItem>
+
+    <!-- Add New Column Window -->
+        <LanguageItem>
+            <ID>AddNewColumnWindow_Title</ID>
+            <English>AddNewColumnWindow</English>
+            <Japanese>AddNewColumnWindow</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>AddNewColumnWindow_01</ID>
+            <English>New Column</English>
+            <Japanese>New Column</Japanese>
+        </LanguageItem>
+
+<!-- WIDGET LIST MODULE -->
+    <!-- Widget Category -->
+        <LanguageItem>
+            <ID>WidgetList_01</ID>
+            <English>Common Widgets</English>
+            <Japanese>Common Widgets</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetList_02</ID>
+            <English>Panel Widgets</English>
+            <Japanese>Panel Widgets</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetList_03</ID>
+            <English>Live Widgets</English>
+            <Japanese>Live Widgets</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetList_04</ID>
+            <English>All</English>
+            <Japanese>All</Japanese>
+        </LanguageItem>
+
+    <!-- WIdget Description -->
+        <LanguageItem>
+            <ID>WidgetDescriptoin_BusyIndicator</ID>
+            <English>A widget indicating that some process is in progress</English>
+            <Japanese>何らかの処理が進行中であることを表示するウィジェット</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetDescriptoin_Button</ID>
+            <English>A button widget responding to touch operation</English>
+            <Japanese>タッチ操作に反応するボタンウィジェット</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetDescriptoin_CheckBox</ID>
+            <English>A widget for check boxes and radio buttons</English>
+            <Japanese>チェックボックス、ラジオボタン用のウィジェット</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetDescriptoin_Dialog</ID>
+            <English>A container widget that displays a modal dialog box</English>
+            <Japanese>モーダルなダイアログボックスを表示するためのコンテナウィジェット</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetDescriptoin_PopupList</ID>
+            <English>A widget used for selecting an item from multiple selection options</English>
+            <Japanese>複数の選択肢の中から1つを選ぶために利用するウィジェット</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetDescriptoin_EditableText</ID>
+            <English>A widget to enable text-editing</English>
+            <Japanese>テキスト編集ができるウィジェット</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetDescriptoin_GridListPanel</ID>
+            <English>A list widget to enable vertical or horizontal scrolling and line up items in a grid</English>
+            <Japanese>縦方向もしくは横方向にスクロール可能で、格子状に項目が並ぶリストウィジェット</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetDescriptoin_ImageBox</ID>
+            <English>A widget for displaying an image</English>
+            <Japanese>画像を表示するためのウィジェット</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetDescriptoin_Label</ID>
+            <English>A widget for displaying text</English>
+            <Japanese>テキストを表示するためのウィジェット</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetDescriptoin_ListPanelItem</ID>
+            <English>A widget for each item of a list panel</English>
+            <Japanese>リストパネルの各項目に表示するためのウィジェット</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetDescriptoin_PagePanel</ID>
+            <English>A container widget that enables scrolling by page</English>
+            <Japanese>ページ単位でスクロール可能なコンテナウィジェット</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetDescriptoin_Panel</ID>
+            <English>A container widget which can store arbitrary widgets</English>
+            <Japanese>任意のウィジェットを載せることができるコンテナウィジェット</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetDescriptoin_ProgressBar</ID>
+            <English>A widget used to display the progress level</English>
+            <Japanese>進捗の度合いを表示するウィジェット</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetDescriptoin_ScrollPanel</ID>
+            <English>A container widget which has the area where scrolling is enabled</English>
+            <Japanese>スクロール可能な領域を持つコンテナウィジェット</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetDescriptoin_Slider</ID>
+            <English>A widget for adjusting numerical values, etc.</English>
+            <Japanese>数値などの調整を行うためのウィジェット</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetDescriptoin_SpinBox</ID>
+            <English>A widget to select the date or time</English>
+            <Japanese>日付もしくは時刻を選択するためのウィジェット</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetDescriptoin_ListPanel</ID>
+            <English>A list widget that enables scrolling in the vertical direction only</English>
+            <Japanese>縦方向のみスクロール可能なリストウィジェット</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetDescriptoin_LiveListPanel</ID>
+            <English>A list widget that makes other widgets to be scrolled with a time delay from the moment a widget item is touched</English>
+            <Japanese>タッチした項目に対して、時間差を伴って他の項目がスクロールするリストウィジェット</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetDescriptoin_LiveScrollPanel</ID>
+            <English>A container widget that makes contents to move with a distorted effect from the touched area as the starting point</English>
+            <Japanese>タッチした点を起点として、ゆがみながらスクロールするコンテナウィジェット</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetDescriptoin_LiveJumpPanel</ID>
+            <English>A container widget that makes a placed widget to jump to the foreground of the screen</English>
+            <Japanese>配置したウィジェットを画面手前にジャンプさせることのできるコンテナウィジェット</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetDescriptoin_LiveFlipPanel</ID>
+            <English>A container widget that rotates by a sideways flick</English>
+            <Japanese>左右のフリックで回転するコンテナウィジェット</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetDescriptoin_LiveSphere</ID>
+            <English>A sphere-shaped widget</English>
+            <Japanese>球体状のウィジェット</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetDescriptoin_LiveSpringPanel</ID>
+            <English>A container widget that makes a placed widget move as if connected by a spring</English>
+            <Japanese>配置したウィジェットがバネでつながれているかのように動くコンテナウィジェット</Japanese>
+        </LanguageItem>
+
+    <!-- Widget Name -->
+        <LanguageItem>
+            <ID>WidgetDescriptoin_CustomWidget</ID>
+            <English>A widget independently created by users</English>
+            <Japanese>ユーザーが独自に作成したウィジェット</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetName_01</ID>
+            <English>BusyIndicator</English>
+            <Japanese>BusyIndicator</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetName_02</ID>
+            <English>Button</English>
+            <Japanese>Button</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetName_03</ID>
+            <English>CheckBox_RadioButton</English>
+            <Japanese>CheckBox_RadioButton</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetName_04</ID>
+            <English>Dialog</English>
+            <Japanese>Dialog</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetName_05</ID>
+            <English>PopupList</English>
+            <Japanese>PopupList</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetName_06</ID>
+            <English>EditableText</English>
+            <Japanese>EditableText</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetName_07</ID>
+            <English>GridListPanel</English>
+            <Japanese>GridListPanel</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetName_08</ID>
+            <English>ImageBox</English>
+            <Japanese>ImageBox</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetName_09</ID>
+            <English>Label</English>
+            <Japanese>Label</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetName_10</ID>
+            <English>ListPanelItem</English>
+            <Japanese>ListPanelItem</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetName_11</ID>
+            <English>PagePanel</English>
+            <Japanese>PagePanel</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetName_12</ID>
+            <English>Panel</English>
+            <Japanese>Panel</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetName_13</ID>
+            <English>ProgressBar</English>
+            <Japanese>ProgressBar</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetName_14</ID>
+            <English>Scene</English>
+            <Japanese>Scene</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetName_15</ID>
+            <English>ScrollPanel</English>
+            <Japanese>ScrollPanel</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetName_16</ID>
+            <English>Slider</English>
+            <Japanese>Slider</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetName_17</ID>
+            <English>Date/TimePicker</English>
+            <Japanese>Date/TimePicker</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetName_18</ID>
+            <English>ListPanel</English>
+            <Japanese>ListPanel</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetName_19</ID>
+            <English>LiveListPanel</English>
+            <Japanese>LiveListPanel</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetName_20</ID>
+            <English>LiveScrollPanel</English>
+            <Japanese>LiveScrollPanel</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetName_21</ID>
+            <English>LiveJumpPanel</English>
+            <Japanese>LiveJumpPanel</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetName_22</ID>
+            <English>LiveFlipPanel</English>
+            <Japanese>LiveFlipPanel</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetName_23</ID>
+            <English>LiveSphere</English>
+            <Japanese>LiveSphere</Japanese>
+        </LanguageItem>
+
+<!-- ASEET LIST MODULE -->
+        <LanguageItem>
+            <ID>WidgetName_24</ID>
+            <English>LiveSpringPanel</English>
+            <Japanese>LiveSpringPanel</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WidgetName_100</ID>
+            <English>CustomWidget</English>
+            <Japanese>CustomWidget</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>AssetTreeControl_01</ID>
+            <English>Create Folder</English>
+            <Japanese>Create</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>AssetTreeControl_02</ID>
+            <English>Insert New Item</English>
+            <Japanese>Insert New Item</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>AssetTreeControl_03</ID>
+            <English>Rename</English>
+            <Japanese>Rename</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>AssetTreeControl_04</ID>
+            <English>Delete</English>
+            <Japanese>Delete</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>AssetTreeControl_05</ID>
+            <English>Import image</English>
+            <Japanese>Import image</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>AssetTreeControl_06</ID>
+            <English>Import folder</English>
+            <Japanese>Import folder</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>AssertProgressWindow_01</ID>
+            <English>Loading</English>
+            <Japanese>Loading</Japanese>
+        </LanguageItem>
+
+<!-- MAIN MODULE -->
+    <!-- New Layout Window -->
+        <LanguageItem>
+            <ID>NewLayoutWindow_Title</ID>
+            <English>NewLayoutWindow</English>
+            <Japanese>NewLayoutWindow</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>NewLayoutWindow_01</ID>
+            <English>Class to Layout</English>
+            <Japanese>レイアウトするクラス</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>NewLayoutWindow_02</ID>
+            <English>Class Name</English>
+            <Japanese>クラス名</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>NewLayoutWindow_03</ID>
+            <English>Size</English>
+            <Japanese>サイズ</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>NewLayoutWindow_04</ID>
+            <English>Width</English>
+            <Japanese>Width</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>NewLayoutWindow_05</ID>
+            <English>Height</English>
+            <Japanese>Height</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>NewLayoutWindow_06</ID>
+            <English>Presets</English>
+            <Japanese>プリセット</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>LAYOUT_WIDTH_ERROR_MESSAGE</ID>
+            <Japanese>整数値 (>=1) を入力してください</Japanese>
+            <English>Please input an integer value(>=1) </English>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>LAYOUT_HEIGHT_ERROR_MESSAGE</ID>
+            <Japanese>整数値 (>=1) を入力してください</Japanese>
+            <English>Please input an integer value(>=1) </English>
+        </LanguageItem>
+
+    <!-- New Project Window -->
+        <LanguageItem>
+            <ID>NewProjectWindow_WindowTitle</ID>
+            <English>Create New Project</English>
+            <Japanese>新規プロジェクト作成</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>NewProjectWindow_ProjectName</ID>
+            <English>Project Name</English>
+            <Japanese>プロジェクト名</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>NewProjectWindow_ProjectFilePath</ID>
+            <English>File Path</English>
+            <Japanese>ファイルパス</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>NewProjectWindow_CreateProjectFolder</ID>
+            <English>Create project folder</English>
+            <Japanese>ファイル名のフォルダ自動作成</Japanese>
+        </LanguageItem>
+
+    <!-- Preference -->
+        <LanguageItem>
+            <ID>PreferencesWindow_Title</ID>
+            <English>Preferences</English>
+            <Japanese>Preferences</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>PreferencesWindow_01</ID>
+            <English>Path for IDE(currently not used)</English>
+            <Japanese>IDEのパス(現在使用されません)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>PreferencesWindow_02</ID>
+            <English>Guide Color</English>
+            <Japanese>ガイド線の色</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>PreferencesWindow_03</ID>
+            <English>Smart Guide Color</English>
+            <Japanese>スマートガイド線の色</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>PreferencesWindow_04</ID>
+            <English>Grid Color</English>
+            <Japanese>グリッド線の色</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>PreferencesWindow_05</ID>
+            <English>Grid Interval</English>
+            <Japanese>グリッド線の間隔</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>PreferencesWindow_06</ID>
+            <English>Layout Canvas Background Color</English>
+            <Japanese>レイアウトキャンバスの背景色</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>PreferencesWindow_07</ID>
+            <English>Display Layout Canvas Border</English>
+            <Japanese>レイアウトキャンバスの境界線の表示</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>PreferencesWindow_08</ID>
+            <English>UI Language</English>
+            <Japanese>UI 表示言語</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>NeedToRestartTheTool</ID>
+            <English>You need to restart the application</English>
+            <Japanese>再起動が必要です</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>DoYouWantToRestartTheToolNow</ID>
+            <English>You must restart the application to make the new settings take effect.
+Do you want to restart now?</English>
+            <Japanese>新しい設定を有効にするにはアプリケーションを再起動する必要があります。
+今、再起動しますか？</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>GRID_SPAN_ERROR_MESSAGE</ID>
+            <Japanese>整数値 (>=1) を入力してください</Japanese>
+            <English>Please input an integer value(>=1) </English>
+        </LanguageItem>
+
+    <!-- Project Settings -->
+        <LanguageItem>
+            <ID>ProjectPropertyWindow_Title</ID>
+            <English>Project Settings</English>
+            <Japanese>Project Settings</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>ProjectPropertyWindow_DirectoryWarn</ID>
+            <English>The project folder or a lower folder can be specified.</English>
+            <Japanese>プロジェクトファイルのあるフォルダ以下のフォルダを指定して下さい。</Japanese>
+        </LanguageItem>
+
+<!-- PROPERTY MODULE -->
+    <!-- Property Name -->
+        <LanguageItem>
+            <ID>Property_01</ID>
+            <English>Widget</English>
+            <Japanese>Widget</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_02</ID>
+            <English>Variable Name</English>
+            <Japanese>Variable Name</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_03</ID>
+            <English>x</English>
+            <Japanese>x</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_04</ID>
+            <English>y</English>
+            <Japanese>y</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_05</ID>
+            <English>w</English>
+            <Japanese>w</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_06</ID>
+            <English>h</English>
+            <Japanese>h</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_07</ID>
+            <English>Anchor</English>
+            <Japanese>Anchor</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_08</ID>
+            <English>↑</English>
+            <Japanese>↑</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_09</ID>
+            <English>↓</English>
+            <Japanese>↓</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_10</ID>
+            <English>←</English>
+            <Japanese>←</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_11</ID>
+            <English>→</English>
+            <Japanese>→</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_12</ID>
+            <English>Background Alpha</English>
+            <Japanese>Background Alpha</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_13</ID>
+            <English>%</English>
+            <Japanese>%</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_14</ID>
+            <English>Transition</English>
+            <Japanese>Transition</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_15</ID>
+            <English>Slide Out</English>
+            <Japanese>Slide Out</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_16</ID>
+            <English>Slide Out1</English>
+            <Japanese>Slide Out1</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_17</ID>
+            <English>Slide Out2</English>
+            <Japanese>Slide Out2</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_18</ID>
+            <English>H</English>
+            <Japanese>H</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_19</ID>
+            <English>W</English>
+            <Japanese>W</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_20</ID>
+            <English>BusyIndicator</English>
+            <Japanese>BusyIndicator</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_21</ID>
+            <English>Animating</English>
+            <Japanese>Animating</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>PROPERTY_STYLE</ID>
+            <English>Style</English>
+            <Japanese>Style</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_23</ID>
+            <English>Image Button</English>
+            <Japanese>Image Button</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_24</ID>
+            <English>Text Button</English>
+            <Japanese>Text Button</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_25</ID>
+            <English>Image</English>
+            <Japanese>Image</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_26</ID>
+            <English>Change Image</English>
+            <Japanese>Change Image</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_27</ID>
+            <English>Image Scale</English>
+            <Japanese>Image Scale</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_28</ID>
+            <English>Text</English>
+            <Japanese>Text</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_29</ID>
+            <English>Text Color</English>
+            <Japanese>Text Color</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_30</ID>
+            <English>Font</English>
+            <Japanese>Font</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_31</ID>
+            <English>Text Trimming</English>
+            <Japanese>Text Trimming</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_32</ID>
+            <English>Shadow</English>
+            <Japanese>Shadow</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_33</ID>
+            <English>Offset</English>
+            <Japanese>Offset</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_34</ID>
+            <English>Color</English>
+            <Japanese>Color</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_35</ID>
+            <English>State</English>
+            <Japanese>State</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_36</ID>
+            <English>9-patch</English>
+            <Japanese>9-patch</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_37</ID>
+            <English>Button</English>
+            <Japanese>Button</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_38</ID>
+            <English>CheckBox</English>
+            <Japanese>CheckBox</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_39</ID>
+            <English>Checked</English>
+            <Japanese>Checked</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_40</ID>
+            <English>Check Box</English>
+            <Japanese>Check Box</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_41</ID>
+            <English>Radio Button</English>
+            <Japanese>Radio Button</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_42</ID>
+            <English>Dialog</English>
+            <Japanese>Dialog</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_43</ID>
+            <English>Background Image</English>
+            <Japanese>Background Image</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_44</ID>
+            <English>PopupList</English>
+            <Japanese>PopupList</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_45</ID>
+            <English>Title</English>
+            <Japanese>Title</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_46</ID>
+            <English>LineBreaks</English>
+            <Japanese>LineBreaks</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_47</ID>
+            <English>ItemTitles</English>
+            <Japanese>ItemTitles</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_48</ID>
+            <English>SelectedIndex</English>
+            <Japanese>SelectedIndex</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_49</ID>
+            <English>Word Wrap</English>
+            <Japanese>Word Wrap</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_50</ID>
+            <English>Character Wrap</English>
+            <Japanese>Character Wrap</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_51</ID>
+            <English>Word Wrap with Hyphen</English>
+            <Japanese>Word Wrap with Hyphen</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_52</ID>
+            <English>EditableText</English>
+            <Japanese>EditableText</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_53</ID>
+            <English>Default Text</English>
+            <Japanese>Default Text</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_54</ID>
+            <English>Alignment</English>
+            <Japanese>Alignment</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_55</ID>
+            <English>Horizontal</English>
+            <Japanese>Horizontal</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_56</ID>
+            <English>Vertical</English>
+            <Japanese>Vertical</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_57</ID>
+            <English>Text Input Mode</English>
+            <Japanese>Text Input Mode</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_58</ID>
+            <English>GridListPanel</English>
+            <Japanese>GridListPanel</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_59</ID>
+            <English>Direction</English>
+            <Japanese>Direction</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_60</ID>
+            <English>Scroll Visible</English>
+            <Japanese>Scroll Visible</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_61</ID>
+            <English>Auto Visibility</English>
+            <Japanese>Auto Visibility</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_62</ID>
+            <English>ListPanelItem</English>
+            <Japanese>ListPanelItem</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_63</ID>
+            <English>ImageBox</English>
+            <Japanese>ImageBox</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_64</ID>
+            <English>Label</English>
+            <Japanese>Label</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_65</ID>
+            <English>ListPanel</English>
+            <Japanese>ListPanel</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>PROPERTY_SCROLLBAR_VISIBILITY</ID>
+            <English>ScrollBar Visibility</English>
+            <Japanese>ScrollBar Visibility</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_67</ID>
+            <English>Auto Visibility Vertical</English>
+            <Japanese>Auto Visibility Vertical</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_68</ID>
+            <English>Background Color</English>
+            <Japanese>Background Color</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_69</ID>
+            <English>PagePanel</English>
+            <Japanese>PagePanel</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_70</ID>
+            <English>Panels</English>
+            <Japanese>Panels</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_71</ID>
+            <English>Panel</English>
+            <Japanese>Panel</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_72</ID>
+            <English>ProgressBar</English>
+            <Japanese>ProgressBar</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_73</ID>
+            <English>Progress</English>
+            <Japanese>Progress</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_74</ID>
+            <English>Normal</English>
+            <Japanese>Normal</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_75</ID>
+            <English>WithAnimation</English>
+            <Japanese>WithAnimation</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_76</ID>
+            <English>Scene</English>
+            <Japanese>Scene</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_77</ID>
+            <English>ScrollPanel</English>
+            <Japanese>ScrollPanel</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_78</ID>
+            <English>Horizontal Visible</English>
+            <Japanese>Horizontal Visible</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_79</ID>
+            <English>Vertical Visible</English>
+            <Japanese>Vertical Visible</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_80</ID>
+            <English>Auto Visibility Horizontal</English>
+            <Japanese>Auto Visibility Horizontal</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_81</ID>
+            <English>Panel Class Name</English>
+            <Japanese>Panel Class Name</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_82</ID>
+            <English>Slider</English>
+            <Japanese>Slider</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_83</ID>
+            <English>Minimum Value</English>
+            <Japanese>Minimum Value</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_84</ID>
+            <English>Maximum Value</English>
+            <Japanese>Maximum Value</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_85</ID>
+            <English>Initial Value</English>
+            <Japanese>Initial Value</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_86</ID>
+            <English>Step</English>
+            <Japanese>Step</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_87</ID>
+            <English>DateTimePicker</English>
+            <Japanese>DateTimePicker</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_88</ID>
+            <English>Type</English>
+            <Japanese>Type</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_89</ID>
+            <English>Month</English>
+            <Japanese>Month</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_90</ID>
+            <English>Day</English>
+            <Japanese>Day</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_91</ID>
+            <English>Hour</English>
+            <Japanese>Hour</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_92</ID>
+            <English>Minute</English>
+            <Japanese>Minute</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_93</ID>
+            <English>At Line-Break Code</English>
+            <Japanese>At Line-Break Code</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_94</ID>
+            <English>enabled</English>
+            <Japanese>enabled</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>PROPERTY_ORIENTATION</ID>
+            <English>Orientation</English>
+            <Japanese>Orientation</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_96</ID>
+            <English>Visible</English>
+            <Japanese>Visible</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_97</ID>
+            <English>LiveListPanel</English>
+            <Japanese>LiveListPanel</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>PROPERTY_ITEM_VERTICAL_GAP</ID>
+            <English>Item Vertical Gap</English>
+            <Japanese>Item Vertical Gap</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_98</ID>
+            <English>LiveScrollPanel</English>
+            <Japanese>LiveScrollPanel</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_99</ID>
+            <English>LiveJumpPanel</English>
+            <Japanese>LiveJumpPanel</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_100</ID>
+            <English>Text Alpha</English>
+            <Japanese>Text Alpha</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_101</ID>
+            <English>Alpha</English>
+            <Japanese>Alpha</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_102</ID>
+            <English>Hide Item Border</English>
+            <Japanese>Hide Item Border</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_103</ID>
+            <English>Show Section</English>
+            <Japanese>Show Section</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_104</ID>
+            <English>Hide Empty Section</English>
+            <Japanese>Hide Empty Section</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_105</ID>
+            <English>Horizontal Scrollable</English>
+            <Japanese>Horizontal Scrollable</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_106</ID>
+            <English>Vertical Scrollable</English>
+            <Japanese>Vertical Scrollable</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_107</ID>
+            <English>LiveFlipPanel</English>
+            <Japanese>LiveFlipPanel</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_108</ID>
+            <English>LiveSphere</English>
+            <Japanese>LiveSphere</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_109</ID>
+            <English>Effect</English>
+            <Japanese>Effect</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Property_110</ID>
+            <English>Touch Enabled</English>
+            <Japanese>Touch Enabled</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WIDGET_NAME_LIVESPRINGPANEL</ID>
+            <English>LiveSpringPanel</English>
+            <Japanese>LiveSpringPanel</Japanese>
+        </LanguageItem>
+
+    <!-- Property Error -->
+        <LanguageItem>
+            <ID>TextStringInputError_NumericStart</ID>
+            <English>A numerical value cannot be used for the beginning</English>
+            <Japanese>先頭に数値は使用できません</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+          <ID>TextStringInputError_StringSize</ID>
+          <English>The maximum number of characters that can be entered is {0}</English>
+          <Japanese>入力可能な文字数は {0} までです</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>TextNumberInputError_Range</ID>
+            <English>Values that can be specified are {0} to {1}</English>
+            <Japanese>指定できる値は {0} から {1} です</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>TextNumberInputError_Numeric</ID>
+            <English>Enter an integer value</English>
+            <Japanese>整数値を入力してください</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>TextNumberInputError_Decimal</ID>
+            <English>Enter a fractional value</English>
+            <Japanese>小数値を入力してください</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>TextColorInputError_Range</ID>
+            <English>Enter 6 digits with 0 to 9 and A to F (a to f) for Color</English>
+            <Japanese>Colorは 6桁の 0～9、及びA～F(a～f)で指定してください</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>TextImageInputError_NoFile</ID>
+            <English>File does not exist "{0}"</English>
+            <Japanese>ファイルが存在しません "{0}"</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>INVALID_VARIABLE_NAME_ERROR_MESSAGE</ID>
+            <Japanese>英数字列(長さ>=1)を入力してください</Japanese>
+            <English>Please input an alpha-numeric string whose length is greater than or equal to 1.</English>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>WIDGET_NAME_CUSTOMWIDGET</ID>
+            <English>CustomWidget</English>
+            <Japanese>CustomWidget</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>INVALID_ESCAPE_SEQUENCE_ERROR_MESSAGE_FORMAT</ID>
+            <English>"{0}" has invalid escape sequence: "{1}"</English>
+            <Japanese>文字列 "{0}" は無効なエスケープシーケンスを含んでいます。: "{1}"</Japanese>
+        </LanguageItem>
+
+<!-- MAIN MENU -->
+    <!-- Menu File -->
+        <LanguageItem>
+            <ID>Menu_File</ID>
+            <English>_File</English>
+            <Japanese>ファイル(_F)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_CreateNewLayout</ID>
+            <English>Create _New Layout</English>
+            <Japanese>新規レイアウト作成(_N)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_CloseCurrentLayout</ID>
+            <English>_Close Current Layout</English>
+            <Japanese>編集中のレイアウトを閉じる(_C)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_CreateNewProject</ID>
+            <English>Create New _Project</English>
+            <Japanese>新規プロジェクトを作成 (_P)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_OpenExistingProject</ID>
+            <English>_Open Existing Project</English>
+            <Japanese>既存のプロジェクトを開く(_O)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_SaveProject</ID>
+            <English>_Save Project</English>
+            <Japanese>プロジェクトを保存 (_S)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_SaveProjectAs</ID>
+            <English>Save Project _As...</English>
+            <Japanese>プロジェクトに名前を付けて保存(_A)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_RecentProjects</ID>
+            <English>Recen_t Projects</English>
+            <Japanese>最近編集したプロジェクト(_T)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_ProjectProperty</ID>
+            <English>P_roject Property</English>
+            <Japanese>プロジェクト設定(_R)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_Preferences</ID>
+            <English>Pr_eferences</English>
+            <Japanese>環境設定(_E)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_Build</ID>
+            <English>_Build</English>
+            <Japanese>ビルド(_B)</Japanese>
+        </LanguageItem>
+      <LanguageItem>
+        <ID>Menu_Preview</ID>
+        <English>Pre_view</English>
+        <Japanese>プレビュー(_V)</Japanese>
+      </LanguageItem>
+      <LanguageItem>
+            <ID>Menu_Exit</ID>
+            <English>E_xit</English>
+            <Japanese>終了(_X)</Japanese>
+        </LanguageItem>
+
+    <!-- Menu Edit -->
+        <LanguageItem>
+            <ID>Menu_Edit</ID>
+            <English>_Edit</English>
+            <Japanese>編集(_E)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_Undo</ID>
+            <English>_Undo</English>
+            <Japanese>元に戻す(_U)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_Redo</ID>
+            <English>_Redo</English>
+            <Japanese>やり直す(_R)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_Cut</ID>
+            <English>Cu_t</English>
+            <Japanese>切り取り(_T)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_Copy</ID>
+            <English>_Copy</English>
+            <Japanese>コピー(_C)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_Paste</ID>
+            <English>_Paste</English>
+            <Japanese>貼り付け(_P)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_Delete</ID>
+            <English>_Delete</English>
+            <Japanese>削除(_D)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_SelectAll</ID>
+            <English>Select _All</English>
+            <Japanese>全て選択(_A)</Japanese>
+        </LanguageItem>
+
+    <!-- Menu View -->
+        <LanguageItem>
+            <ID>Menu_View</ID>
+            <English>_View</English>
+            <Japanese>表示(_V)</Japanese>
+        </LanguageItem>
+      <!-- View Size -->
+        <LanguageItem>
+            <ID>Menu_ZoomIn</ID>
+            <English>Zoom _In</English>
+            <Japanese>拡大(_I)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_ZoomOut</ID>
+            <English>Zoom _Out</English>
+            <Japanese>縮小(_O)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_RealScale</ID>
+            <English>_Canvas Scale : 100%</English>
+            <Japanese>キャンバスの倍率 : 100%(_C)</Japanese>
+        </LanguageItem>
+      <!-- Grid -->
+        <LanguageItem>
+            <ID>Menu_Grid</ID>
+            <English>_Grid</English>
+            <Japanese>グリッド(_G)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_ShowGrid</ID>
+            <English>_Show Grid</English>
+            <Japanese>グリッドを表示(_S)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_SnapToGrid</ID>
+            <English>S_nap To Grid</English>
+            <Japanese>グリッドに吸着(_N)</Japanese>
+        </LanguageItem>
+      <!-- Guide -->
+        <LanguageItem>
+            <ID>Menu_Guide</ID>
+            <English>G_uide</English>
+            <Japanese>ガイド線(_U)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_ShowGuide</ID>
+            <English>_Show Guide</English>
+            <Japanese>ガイド線を表示(_S)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_SnapToGuide</ID>
+            <English>S_nap To Guide</English>
+            <Japanese>ガイド線に吸着(_N)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_AddHorizontalGuide</ID>
+            <English>Add _Horizontal Guide</English>
+            <Japanese>水平方向のガイド線を追加(_H)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_AddVerticalGuide</ID>
+            <English>Add _Vertical Guide</English>
+            <Japanese>垂直方向のガイド線を追加(_V)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_DeleteAllGuides</ID>
+            <English>_Delete All Guides</English>
+            <Japanese>全てのガイド線を削除(_D)</Japanese>
+        </LanguageItem>
+      <!-- Canvas Orientation -->
+        <LanguageItem>
+            <ID>Menu_ChangeOrientation</ID>
+            <English>Canvas Orien_tation</English>
+            <Japanese>キャンバスの向き(_T)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_Portrait</ID>
+            <English>_Portrait</English>
+            <Japanese>ポートレート(_P)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_Landscape</ID>
+            <English>_Landscape</English>
+            <Japanese>ランドスケープ(_L)</Japanese>
+        </LanguageItem>
+      <!-- Bound Rect -->
+        <LanguageItem>
+            <ID>Menu_ShowBoundsRectangles</ID>
+            <English>Show _Bounds Rectangles</English>
+            <Japanese>ウィジェットの境界を表示(_B)</Japanese>
+        </LanguageItem>
+      <!-- Alignment -->
+        <LanguageItem>
+            <ID>Menu_Alignment</ID>
+            <English>_Alignment</English>
+            <Japanese>整列(_A)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_AlignLeft</ID>
+            <English>Align _Left</English>
+            <Japanese>左揃え(_L)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_AlignCenterHorizontal</ID>
+            <English>Align Center (_Horizontal)</English>
+            <Japanese>水平方向に中央揃え(_H)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_AlignRight</ID>
+            <English>Align _Right</English>
+            <Japanese>右揃え(_R)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_AlignTop</ID>
+            <English>Align _Top</English>
+            <Japanese>上揃え(_T)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_AlignCenterVertical</ID>
+            <English>Align Center (_Vertical)</English>
+            <Japanese>垂直方向に中央揃え(_V)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_AlignBottom</ID>
+            <English>Align _Bottom</English>
+            <Japanese>下揃え(_B)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_AlignHorizontalCenterInContainer</ID>
+            <English>Align Horizontal _Center In Container</English>
+            <Japanese>親ウィジェットの中央(水平方向)に整列(_C)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_AlignVerticalCenterInContainer</ID>
+            <English>Align Vertical C_enter In Container</English>
+            <Japanese>親ウィジェットの中央(垂直方向)に整列(_E)</Japanese>
+        </LanguageItem>
+      <!-- Spacing -->
+        <LanguageItem>
+            <ID>Menu_Spacing</ID>
+            <English>_Spacing</English>
+            <Japanese>間隔(_S)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_MakeHorizontalSpacingEqual</ID>
+            <English>Make _Horizontal Spacing Equal</English>
+            <Japanese>水平方向の間隔を等しくする(_H)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_MakeVerticalSpacingEqual</ID>
+            <English>Make _Vertical Spacing Equal</English>
+            <Japanese>垂直方向の間隔を等しくする(_V)</Japanese>
+        </LanguageItem>
+      <!-- Size -->
+        <LanguageItem>
+            <ID>Menu_Size</ID>
+            <English>Si_ze</English>
+            <Japanese>サイズ(_Z)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_MakeSameWidth</ID>
+            <English>Make Same _Width</English>
+            <Japanese>幅を等しくする(_W)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_MakeSameHeight</ID>
+            <English>Make Same _Height</English>
+            <Japanese>高さを等しくする(_H)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_MakeSameSize</ID>
+            <English>Make Same _Size</English>
+            <Japanese>サイズを等しくする(_S)</Japanese>
+        </LanguageItem>
+      <!-- Order -->
+        <LanguageItem>
+            <ID>Menu_Order</ID>
+            <English>O_rder</English>
+            <Japanese>重なり順(_R)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_SendToFront</ID>
+            <English>Send to _Front</English>
+            <Japanese>最前面へ移動(_F)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_SendToBack</ID>
+            <English>Send to _Back</English>
+            <Japanese>最背面へ移動(_B)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_SendForward</ID>
+            <English>Send F_orward</English>
+            <Japanese>前面へ移動(_O)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_SendBackward</ID>
+            <English>Send B_ackward</English>
+            <Japanese>背面へ移動(_A)</Japanese>
+        </LanguageItem>
+
+    <!-- Menu Window -->
+        <LanguageItem>
+            <ID>Menu_Window</ID>
+            <English>_Window</English>
+            <Japanese>ウィンドウ(_W)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_LayoutWindow</ID>
+            <English>_Layout Window</English>
+            <Japanese>レイアウトウィンドウ(_L)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_OverviewWindow</ID>
+            <English>O_verview Window</English>
+            <Japanese>オーバービューウィンドウ(_V)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_WidgetListWindow</ID>
+            <English>_Widget List Window</English>
+            <Japanese>ウィジェットリストウィンドウ(_W)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_PropertyWindow</ID>
+            <English>_Property Window</English>
+            <Japanese>プロパティウィンドウ(_P)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_AssetWindow</ID>
+            <English>_Asset Window</English>
+            <Japanese>アセットウィンドウ(_A)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_ObjectTreeWindow</ID>
+            <English>_Object Tree Window</English>
+            <Japanese>オブジェクトツリーウィンドウ(_O)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_LanguageTableWindow</ID>
+            <English>Language _Table Window</English>
+            <Japanese>言語テーブルウィンドウ(_T)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_ResetWindowLayout</ID>
+            <English>_Reset Window Layout</English>
+            <Japanese>ウィンドウレイアウトのリセット(_R)</Japanese>
+        </LanguageItem>
+
+    <!-- Menu Help -->
+        <LanguageItem>
+            <ID>Menu_Help</ID>
+            <English>_Help</English>
+            <Japanese>ヘルプ(_H)</Japanese>
+        </LanguageItem>
+        <LanguageItem>
+            <ID>Menu_About</ID>
+            <English>_About UI Composer</English>
+            <Japanese>UI Composer について(_A)</Japanese>
+        </LanguageItem>
+
+    </LanguageItems>
+</LanguageResoure>

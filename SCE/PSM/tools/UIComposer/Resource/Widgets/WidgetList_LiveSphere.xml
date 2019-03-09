@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetaWidgetLiveSphere>
+    <id>23</id>
+    <name>LiveSphere</name>
+    <name_id>WidgetName_23</name_id>
+    <className>LiveSphere</className>
+    <type>UIComposer.LiveSphere</type>
+    <description id="WidgetDescriptoin_LiveSphere" lang="ja">LiveSphere</description>
+    <icon>../Images/widgets_list/livesphere.png</icon>
+    <smallIcon>../Images/object_tree/livesphere.png</smallIcon>
+    <dragIcon>Images/widgets_list/livesphere.png</dragIcon>
+    <defaultWidth>200</defaultWidth>
+    <defaultHeight>200</defaultHeight>
+    <hasUserImage>true</hasUserImage>
+    <background
+        color="#DDDDDD"
+        alpha="50"/>
+    <alpha>100</alpha>
+    <scaletype>Normal</scaletype>
+    <revolutions>16</revolutions>
+    <hasBorder>true</hasBorder>
+    <touchEnabled>true</touchEnabled>
+</MetaWidgetLiveSphere>

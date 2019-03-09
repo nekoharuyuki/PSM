@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<Template>
+	<TemplateConfiguration>
+		<_Name>PlayStation Mobile Application</_Name>
+		<_Category>C#/PlayStation Mobile</_Category>
+		<Icon>psm-proj-icon-app</Icon>
+		<LanguageName>C#</LanguageName>
+		<_Description>Creates a basic PlayStation Mobile Application.</_Description>
+	</TemplateConfiguration>
+
+	<Actions>
+	</Actions>
+
+	<Combine name = "${ProjectName}" directory = ".">
+		<Options>
+			<StartupProject>${ProjectName}</StartupProject>
+		</Options>
+
+		<Project name = "${ProjectName}" directory = "." type = "Psm" >
+			<References>
+				<Reference type="Gac" refto="System" />
+				<Reference type="Gac" refto="System.Xml" />
+				<Reference type="Gac" refto="System.Core" />
+				<Reference type="Gac" refto="Sce.PlayStation.Core" />
+			</References>
+			<Files>
+				<File name="AppMain.cs" src="PsmApplication/AppMain.cs" />
+				<File name="shaders/Simple.fcg">
+				<![CDATA[
+void main( float4 out Color : COLOR,
+		   uniform float4 MaterialColor )
+{
+	Color = MaterialColor;
+}]]>
+				</File>
+				<File name="shaders/Simple.vcg">
+				<![CDATA[
+void main( float4 in a_Position  : POSITION,
+		   float4 out v_Position : POSITION,
+		   uniform float4x4 WorldViewProj
+		   )
+{
+	v_Position = mul( a_Position, WorldViewProj );
+}]]>
+				</File>
+				<File name="app.xml" src="PsmApplication/app.xml" />
+			</Files>
+		</Project>
+	</Combine>
+</Template>

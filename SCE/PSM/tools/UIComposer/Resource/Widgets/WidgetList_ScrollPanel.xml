@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetaWidgetScrollPanel>
+    <id>13</id>
+    <name>ScrollPanel</name>
+    <name_id>WidgetName_15</name_id>
+    <className>ScrollPanel</className>
+    <type>UIComposer.ScrollPanel</type>
+    <description id="WidgetDescriptoin_ScrollPanel" lang="ja">スクロールパネル</description>
+    <icon>../Images/widgets_list/scrollpanel.png</icon>
+    <smallIcon>../Images/object_tree/scrollpanel.png</smallIcon>
+    <dragIcon>Images/widgets_list/scrollpanel.png</dragIcon>
+    <defaultWidth>100</defaultWidth>
+    <defaultHeight>50</defaultHeight>
+    <alpha>100</alpha>
+    <background
+        color="#AAAAAA"
+        alpha="30"/>
+    <textblock
+        textFont="System"/>
+    <scrollBarVisibility>ScrollableVisible</scrollBarVisibility>
+    <horizontalvisible>true</horizontalvisible>
+    <verticalvisible>true</verticalvisible>
+    <autovisibilityhorizontal>true</autovisibilityhorizontal>
+    <autovisibilityvertical>true</autovisibilityvertical>
+    <horizontalScrollable>true</horizontalScrollable>
+    <verticalScrollable>true</verticalScrollable>
+    <hasBorder>true</hasBorder>
+</MetaWidgetScrollPanel>

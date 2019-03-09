@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Template Originator="SCEI" Language="C#" Created="2011-01-20" LastModified="2011-02-25">
+
+	<TemplateConfiguration>
+		<_Name>Empty Shader File</_Name>
+		<Icon>md-text-file-icon</Icon>
+		<_Category>PlayStation Mobile</_Category>
+		<_Description>Creates an empty PlayStation Mobile Shader file.</_Description>
+	</TemplateConfiguration>
+
+	<TemplateFiles>
+
+    <File name="${Name}.fcg" DefaultExtension=".fcg" DefaultName="Shader" AddStandardHeader="True">
+      <![CDATA[
+void main( float4 out Color : COLOR,
+           uniform float4 MaterialColor )
+{
+	Color = MaterialColor;
+}]]>
+    </File>
+    <File name="${Name}.vcg" DefaultExtension=".vcg" DefaultName="Shader" AddStandardHeader="True">
+      <![CDATA[
+void main( float4 in a_Position  : POSITION,
+		   float4 out v_Position : POSITION,
+		   uniform float4x4 WorldViewProj
+           )
+{
+	v_Position = mul( a_Position, WorldViewProj );
+}]]>
+    </File>
+
+	</TemplateFiles>
+
+</Template>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetaWidgetList>
+    <group name="Common Widgets" expand="true" uid="WidgetList_01">
+        <type file="Widgets/WidgetList_Label.xml">Label</type>
+        <type file="Widgets/WidgetList_Button.xml">Button</type>
+        <type file="Widgets/WidgetList_ImageBox.xml">ImageBox</type>
+        <type file="Widgets/WidgetList_EditableText.xml">EditableText</type>
+        <type file="Widgets/WidgetList_CheckBox.xml">CheckBox</type>
+        <type file="Widgets/WidgetList_Slider.xml">Slider</type>
+        <type file="Widgets/WidgetList_ProgressBar.xml">ProgressBar</type>
+        <type file="Widgets/WidgetList_BusyIndicator.xml">BusyIndicator</type>
+        <type file="Widgets/WidgetList_SpinBox.xml">SpinBox</type>
+        <type file="Widgets/WidgetList_PopupList.xml">PopupList</type>
+        <type file="Widgets/WidgetList_CustomWidget.xml">CustomWidget</type>
+    </group>
+    <group name="Panel Widgets" expand="true" uid="WidgetList_02">
+        <type file="Widgets/WidgetList_Panel.xml">Panel</type>
+        <type file="Widgets/WidgetList_ScrollPanel.xml">ScrollPanel</type>
+        <type file="Widgets/WidgetList_PagePanel.xml">PagePanel</type>
+        <type file="Widgets/WidgetList_ListPanel.xml">ListPanel</type>
+        <type file="Widgets/WidgetList_GridListPanel.xml">GridListPanel</type>
+    </group>
+    <group name="Live Widgets" expand="true" uid="WidgetList_03">
+        <type file="Widgets/WidgetList_LiveListPanel.xml">LiveListPanel</type>
+        <type file="Widgets/WidgetList_LiveScrollPanel.xml">LiveScrollPanel</type>
+        <type file="Widgets/WidgetList_LiveJumpPanel.xml">LiveJumpPanel</type>
+        <type file="Widgets/WidgetList_LiveFlipPanel.xml">LiveFlipPanel</type>
+        <type file="Widgets/WidgetList_LiveSphere.xml">LiveSphere</type>
+        <type file="Widgets/WidgetList_LiveSpringPanel.xml">LiveSpringPanel</type>
+    </group>
+    <group name="Layout Widgets" layout="true">
+        <type file="Widgets/WidgetList_Scene.xml">Scene</type>
+        <type file="Widgets/WidgetList_Panel.xml">Panel</type>
+        <type file="Widgets/WidgetList_Dialog.xml">Dialog</type>
+        <type file="Widgets/WidgetList_ListPanelItem.xml">ListPanelItem</type>
+    </group>
+</MetaWidgetList>

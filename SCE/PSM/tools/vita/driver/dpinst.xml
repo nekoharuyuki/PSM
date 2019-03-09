@@ -1,0 +1,195 @@
+<dpInst>
+	<!-- 0x0401 Arabic (Saudi Arabia) -->
+	<language code= "0x0401">
+	    <dpinstTitle>PlayStation(R) VITA USB Driver for PlayStation(R) Mobile Installer</dpinstTitle>
+        <welcomeTitle>Start installation of PlayStation(R) VITA USB Driver.</welcomeTitle>
+        <welcomeIntro>This wizard will walk you through installing the PlayStation(R) VITA USB Driver. This driver is for use with PlayStation(R) VITA in development.</welcomeIntro>
+        <installHeaderTitle>Installing PlayStation(R) VITA USB Driver.</installHeaderTitle>
+        <finishTitle>Installation of PlayStation(R) VITA USB Driver is complete.</finishTitle>
+	</language>
+	<!-- 0x0804 Chinese (People's Republic of China) -->
+	<language code= "0x0804">
+	    <dpinstTitle>PlayStation(R) VITA USB Driver for PlayStation(R) Mobile Installer</dpinstTitle>
+        <welcomeTitle>Start installation of PlayStation(R) VITA USB Driver.</welcomeTitle>
+        <welcomeIntro>This wizard will walk you through installing the PlayStation(R) VITA USB Driver. This driver is for use with PlayStation(R) VITA in development.</welcomeIntro>
+        <installHeaderTitle>Installing PlayStation(R) VITA USB Driver.</installHeaderTitle>
+        <finishTitle>Installation of PlayStation(R) VITA USB Driver is complete.</finishTitle>
+	</language>
+	<!-- 0x0404 Chinese (Taiwan) -->
+	<language code= "0x0404">
+	    <dpinstTitle>PlayStation(R) VITA USB Driver for PlayStation(R) Mobile Installer</dpinstTitle>
+        <welcomeTitle>Start installation of PlayStation(R) VITA USB Driver.</welcomeTitle>
+        <welcomeIntro>This wizard will walk you through installing the PlayStation(R) VITA USB Driver. This driver is for use with PlayStation(R) VITA in development.</welcomeIntro>
+        <installHeaderTitle>Installing PlayStation(R) VITA USB Driver.</installHeaderTitle>
+        <finishTitle>Installation of PlayStation(R) VITA USB Driver is complete.</finishTitle>
+	</language>
+	<!-- 0x0405 Czech (Czech Republic) -->
+	<language code= "0x0405">
+	    <dpinstTitle>PlayStation(R) VITA USB Driver for PlayStation(R) Mobile Installer</dpinstTitle>
+        <welcomeTitle>Start installation of PlayStation(R) VITA USB Driver.</welcomeTitle>
+        <welcomeIntro>This wizard will walk you through installing the PlayStation(R) VITA USB Driver. This driver is for use with PlayStation(R) VITA in development.</welcomeIntro>
+        <installHeaderTitle>Installing PlayStation(R) VITA USB Driver.</installHeaderTitle>
+        <finishTitle>Installation of PlayStation(R) VITA USB Driver is complete.</finishTitle>
+	</language>
+	<!-- 0x0406 Danish (Denmark) -->
+	<language code= "0x0406">
+	    <dpinstTitle>PlayStation(R) VITA USB Driver for PlayStation(R) Mobile Installer</dpinstTitle>
+        <welcomeTitle>Start installation of PlayStation(R) VITA USB Driver.</welcomeTitle>
+        <welcomeIntro>This wizard will walk you through installing the PlayStation(R) VITA USB Driver. This driver is for use with PlayStation(R) VITA in development.</welcomeIntro>
+        <installHeaderTitle>Installing PlayStation(R) VITA USB Driver.</installHeaderTitle>
+        <finishTitle>Installation of PlayStation(R) VITA USB Driver is complete.</finishTitle>
+	</language>
+	<!-- 0x0407 German (Germany) -->
+	<language code= "0x0407">
+	    <dpinstTitle>PlayStation(R) VITA USB Driver for PlayStation(R) Mobile Installer</dpinstTitle>
+        <welcomeTitle>Start installation of PlayStation(R) VITA USB Driver.</welcomeTitle>
+        <welcomeIntro>This wizard will walk you through installing the PlayStation(R) VITA USB Driver. This driver is for use with PlayStation(R) VITA in development.</welcomeIntro>
+        <installHeaderTitle>Installing PlayStation(R) VITA USB Driver.</installHeaderTitle>
+        <finishTitle>Installation of PlayStation(R) VITA USB Driver is complete.</finishTitle>
+	</language>
+	<!-- 0x0408 Greek (Greece) -->
+	<language code= "0x0408">
+	    <dpinstTitle>PlayStation(R) VITA USB Driver for PlayStation(R) Mobile Installer</dpinstTitle>
+        <welcomeTitle>Start installation of PlayStation(R) VITA USB Driver.</welcomeTitle>
+        <welcomeIntro>This wizard will walk you through installing the PlayStation(R) VITA USB Driver. This driver is for use with PlayStation(R) VITA in development.</welcomeIntro>
+        <installHeaderTitle>Installing PlayStation(R) VITA USB Driver.</installHeaderTitle>
+        <finishTitle>Installation of PlayStation(R) VITA USB Driver is complete.</finishTitle>
+	</language>
+	<!-- 0x0409 English (United States) -->
+	<language code= "0x0409">
+	    <dpinstTitle>PlayStation(R) VITA USB Driver for PlayStation(R) Mobile Installer</dpinstTitle>
+        <welcomeTitle>Start installation of PlayStation(R) VITA USB Driver.</welcomeTitle>
+        <welcomeIntro>This wizard will walk you through installing the PlayStation(R) VITA USB Driver. This driver is for use with PlayStation(R) VITA in development.</welcomeIntro>
+        <installHeaderTitle>Installing PlayStation(R) VITA USB Driver.</installHeaderTitle>
+        <finishTitle>Installation of PlayStation(R) VITA USB Driver is complete.</finishTitle>
+	</language>
+	<!-- 0x0C0A Spanish - Modern Sort (Spain) -->
+	<language code= "0x0C0A">
+	    <dpinstTitle>PlayStation(R) VITA USB Driver for PlayStation(R) Mobile Installer</dpinstTitle>
+        <welcomeTitle>Start installation of PlayStation(R) VITA USB Driver.</welcomeTitle>
+        <welcomeIntro>This wizard will walk you through installing the PlayStation(R) VITA USB Driver. This driver is for use with PlayStation(R) VITA in development.</welcomeIntro>
+        <installHeaderTitle>Installing PlayStation(R) VITA USB Driver.</installHeaderTitle>
+        <finishTitle>Installation of PlayStation(R) VITA USB Driver is complete.</finishTitle>
+	</language>
+	<!-- 0x040B Finnish (Finland) -->
+	<language code= "0x040B">
+	    <dpinstTitle>PlayStation(R) VITA USB Driver for PlayStation(R) Mobile Installer</dpinstTitle>
+        <welcomeTitle>Start installation of PlayStation(R) VITA USB Driver.</welcomeTitle>
+        <welcomeIntro>This wizard will walk you through installing the PlayStation(R) VITA USB Driver. This driver is for use with PlayStation(R) VITA in development.</welcomeIntro>
+        <installHeaderTitle>Installing PlayStation(R) VITA USB Driver.</installHeaderTitle>
+        <finishTitle>Installation of PlayStation(R) VITA USB Driver is complete.</finishTitle>
+	</language>
+	<!-- 0x040C French (France) -->
+	<language code= "0x040C">
+	    <dpinstTitle>PlayStation(R) VITA USB Driver for PlayStation(R) Mobile Installer</dpinstTitle>
+        <welcomeTitle>Start installation of PlayStation(R) VITA USB Driver.</welcomeTitle>
+        <welcomeIntro>This wizard will walk you through installing the PlayStation(R) VITA USB Driver. This driver is for use with PlayStation(R) VITA in development.</welcomeIntro>
+        <installHeaderTitle>Installing PlayStation(R) VITA USB Driver.</installHeaderTitle>
+        <finishTitle>Installation of PlayStation(R) VITA USB Driver is complete.</finishTitle>
+	</language>
+	<!-- 0x040D Hebrew (Israel) -->
+	<language code= "0x040D">
+	    <dpinstTitle>PlayStation(R) VITA USB Driver for PlayStation(R) Mobile Installer</dpinstTitle>
+        <welcomeTitle>Start installation of PlayStation(R) VITA USB Driver.</welcomeTitle>
+        <welcomeIntro>This wizard will walk you through installing the PlayStation(R) VITA USB Driver. This driver is for use with PlayStation(R) VITA in development.</welcomeIntro>
+        <installHeaderTitle>Installing PlayStation(R) VITA USB Driver.</installHeaderTitle>
+        <finishTitle>Installation of PlayStation(R) VITA USB Driver is complete.</finishTitle>
+	</language>
+	<!-- 0x040E Hungarian (Hungary) -->
+	<language code= "0x040E">
+	    <dpinstTitle>PlayStation(R) VITA USB Driver for PlayStation(R) Mobile Installer</dpinstTitle>
+        <welcomeTitle>Start installation of PlayStation(R) VITA USB Driver.</welcomeTitle>
+        <welcomeIntro>This wizard will walk you through installing the PlayStation(R) VITA USB Driver. This driver is for use with PlayStation(R) VITA in development.</welcomeIntro>
+        <installHeaderTitle>Installing PlayStation(R) VITA USB Driver.</installHeaderTitle>
+        <finishTitle>Installation of PlayStation(R) VITA USB Driver is complete.</finishTitle>
+	</language>
+	<!-- 0x0410 Italian (Italy) -->
+	<language code= "0x0410">
+	    <dpinstTitle>PlayStation(R) VITA USB Driver for PlayStation(R) Mobile Installer</dpinstTitle>
+        <welcomeTitle>Start installation of PlayStation(R) VITA USB Driver.</welcomeTitle>
+        <welcomeIntro>This wizard will walk you through installing the PlayStation(R) VITA USB Driver. This driver is for use with PlayStation(R) VITA in development.</welcomeIntro>
+        <installHeaderTitle>Installing PlayStation(R) VITA USB Driver.</installHeaderTitle>
+        <finishTitle>Installation of PlayStation(R) VITA USB Driver is complete.</finishTitle>
+	</language>
+	<!-- 0x0411 Japanese (Japan) -->
+	<language code= "0x0411">
+	    <dpinstTitle>PlayStation(R) VITA USB Driver for PlayStation(R) Mobile Installer</dpinstTitle>
+        <welcomeTitle>PlayStation(R) VITA USB Driver インストールを開始します</welcomeTitle>
+        <welcomeIntro>ウィザードに従い PlayStation(R) VITA USB Driver をインストールします。本ドライバーは PlayStation(R) VITA を開発に用いる場合に使用されます</welcomeIntro>
+        <installHeaderTitle>PlayStation(R) VITA USB Driver をインストールしています</installHeaderTitle>
+        <finishTitle>PlayStation(R) VITA USB Driver のインストールに成功しました</finishTitle>
+	</language>
+	<!-- 0x0412 Korean (Korea) -->
+	<language code= "0x0412">
+	    <dpinstTitle>PlayStation(R) VITA USB Driver for PlayStation(R) Mobile Installer</dpinstTitle>
+        <welcomeTitle>Start installation of PlayStation(R) VITA USB Driver.</welcomeTitle>
+        <welcomeIntro>This wizard will walk you through installing the PlayStation(R) VITA USB Driver. This driver is for use with PlayStation(R) VITA in development.</welcomeIntro>
+        <installHeaderTitle>Installing PlayStation(R) VITA USB Driver.</installHeaderTitle>
+        <finishTitle>Installation of PlayStation(R) VITA USB Driver is complete.</finishTitle>
+	</language>
+	<!-- 0x0414 Norwegian (Bokmål) (Norway) -->
+	<language code= "0x0414">
+	    <dpinstTitle>PlayStation(R) VITA USB Driver for PlayStation(R) Mobile Installer</dpinstTitle>
+        <welcomeTitle>Start installation of PlayStation(R) VITA USB Driver.</welcomeTitle>
+        <welcomeIntro>This wizard will walk you through installing the PlayStation(R) VITA USB Driver. This driver is for use with PlayStation(R) VITA in development.</welcomeIntro>
+        <installHeaderTitle>Installing PlayStation(R) VITA USB Driver.</installHeaderTitle>
+        <finishTitle>Installation of PlayStation(R) VITA USB Driver is complete.</finishTitle>
+	</language>
+	<!-- 0x0413 Dutch (Netherlands) -->
+	<language code= "0x0413">
+	    <dpinstTitle>PlayStation(R) VITA USB Driver for PlayStation(R) Mobile Installer</dpinstTitle>
+        <welcomeTitle>Start installation of PlayStation(R) VITA USB Driver.</welcomeTitle>
+        <welcomeIntro>This wizard will walk you through installing the PlayStation(R) VITA USB Driver. This driver is for use with PlayStation(R) VITA in development.</welcomeIntro>
+        <installHeaderTitle>Installing PlayStation(R) VITA USB Driver.</installHeaderTitle>
+        <finishTitle>Installation of PlayStation(R) VITA USB Driver is complete.</finishTitle>
+	</language>
+	<!-- 0x0415 Polish (Poland) -->
+	<language code= "0x0415">
+	    <dpinstTitle>PlayStation(R) VITA USB Driver for PlayStation(R) Mobile Installer</dpinstTitle>
+        <welcomeTitle>Start installation of PlayStation(R) VITA USB Driver.</welcomeTitle>
+        <welcomeIntro>This wizard will walk you through installing the PlayStation(R) VITA USB Driver. This driver is for use with PlayStation(R) VITA in development.</welcomeIntro>
+        <installHeaderTitle>Installing PlayStation(R) VITA USB Driver.</installHeaderTitle>
+        <finishTitle>Installation of PlayStation(R) VITA USB Driver is complete.</finishTitle>
+	</language>
+	<!-- 0x0416 Portuguese (Brazil) -->
+	<language code= "0x0416">
+	    <dpinstTitle>PlayStation(R) VITA USB Driver for PlayStation(R) Mobile Installer</dpinstTitle>
+        <welcomeTitle>Start installation of PlayStation(R) VITA USB Driver.</welcomeTitle>
+        <welcomeIntro>This wizard will walk you through installing the PlayStation(R) VITA USB Driver. This driver is for use with PlayStation(R) VITA in development.</welcomeIntro>
+        <installHeaderTitle>Installing PlayStation(R) VITA USB Driver.</installHeaderTitle>
+        <finishTitle>Installation of PlayStation(R) VITA USB Driver is complete.</finishTitle>
+	</language>
+	<!-- 0x0816 Portuguese (Portugal) -->
+	<language code= "0x0816">
+	    <dpinstTitle>PlayStation(R) VITA USB Driver for PlayStation(R) Mobile Installer</dpinstTitle>
+        <welcomeTitle>Start installation of PlayStation(R) VITA USB Driver.</welcomeTitle>
+        <welcomeIntro>This wizard will walk you through installing the PlayStation(R) VITA USB Driver. This driver is for use with PlayStation(R) VITA in development.</welcomeIntro>
+        <installHeaderTitle>Installing PlayStation(R) VITA USB Driver.</installHeaderTitle>
+        <finishTitle>Installation of PlayStation(R) VITA USB Driver is complete.</finishTitle>
+	</language>
+	<!-- 0x0419 Russian (Russia) -->
+	<language code= "0x0419">
+	    <dpinstTitle>PlayStation(R) VITA USB Driver for PlayStation(R) Mobile Installer</dpinstTitle>
+        <welcomeTitle>Start installation of PlayStation(R) VITA USB Driver.</welcomeTitle>
+        <welcomeIntro>This wizard will walk you through installing the PlayStation(R) VITA USB Driver. This driver is for use with PlayStation(R) VITA in development.</welcomeIntro>
+        <installHeaderTitle>Installing PlayStation(R) VITA USB Driver.</installHeaderTitle>
+        <finishTitle>Installation of PlayStation(R) VITA USB Driver is complete.</finishTitle>
+	</language>
+	<!-- 0x041D Swedish (Sweden) -->
+	<language code= "0x041D">
+	    <dpinstTitle>PlayStation(R) VITA USB Driver for PlayStation(R) Mobile Installer</dpinstTitle>
+        <welcomeTitle>Start installation of PlayStation(R) VITA USB Driver.</welcomeTitle>
+        <welcomeIntro>This wizard will walk you through installing the PlayStation(R) VITA USB Driver. This driver is for use with PlayStation(R) VITA in development.</welcomeIntro>
+        <installHeaderTitle>Installing PlayStation(R) VITA USB Driver.</installHeaderTitle>
+        <finishTitle>Installation of PlayStation(R) VITA USB Driver is complete.</finishTitle>
+	</language>
+	<!-- 0x041F Turkish (Turkey) -->
+	<language code= "0x041F">
+	    <dpinstTitle>PlayStation(R) VITA USB Driver for PlayStation(R) Mobile Installer</dpinstTitle>
+        <welcomeTitle>Start installation of PlayStation(R) VITA USB Driver.</welcomeTitle>
+        <welcomeIntro>This wizard will walk you through installing the PlayStation(R) VITA USB Driver. This driver is for use with PlayStation(R) VITA in development.</welcomeIntro>
+        <installHeaderTitle>Installing PlayStation(R) VITA USB Driver.</installHeaderTitle>
+        <finishTitle>Installation of PlayStation(R) VITA USB Driver is complete.</finishTitle>
+	</language>
+	<legacyMode/>
+</dpInst>

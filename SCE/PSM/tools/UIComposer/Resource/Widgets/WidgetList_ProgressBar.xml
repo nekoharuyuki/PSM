@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetaWidgetProgressBar>
+    <id>7</id>
+    <name>ProgressBar</name>
+    <name_id>WidgetName_13</name_id>
+    <className>ProgressBar</className>
+    <type>UIComposer.ProgressBar</type>
+    <description id="WidgetDescriptoin_ProgressBar" lang="ja">プログレスバー</description>
+    <icon>../Images/widgets_list/progressbar.png</icon>
+    <smallIcon>../Images/object_tree/progressbar.png</smallIcon>
+    <dragIcon>Images/widgets_list/progressbar.png</dragIcon>
+    <defaultWidth>362</defaultWidth>
+    <defaultHeight>16</defaultHeight>
+    <fixedHeight>true</fixedHeight>
+    <imagelist>
+        <image>system_assets/slider_bar_normal_9patch.png</image>
+        <image>system_assets/slider_bar_active_9patch.png</image>
+        <image>system_assets/slider_bar_active_9patch.png</image>
+    </imagelist>
+    <ninepatch
+        topRowHeight="0"
+        bottomRowHeight="0"
+        leftColumnWidth="8"
+        rightColumnWidth="8"/>
+    <alpha>100</alpha>
+    <progressStyle>Normal</progressStyle>
+    <progress>0.0</progress>
+    <horizonalStyle>false</horizonalStyle>
+    <verticalStyle>false</verticalStyle>
+</MetaWidgetProgressBar>

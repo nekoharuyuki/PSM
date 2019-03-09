@@ -1,0 +1,865 @@
+xsi 0600txt 0032
+
+SI_FileInfo { 
+	"tex_scroll1", 
+	"sawada", 
+	"Fri Jun 12 10:50:01 2009", 
+	"Maya Version 2009", 
+}
+
+SI_Scene tex_scroll1 { 
+	"FRAMES", 
+	1.000000, 
+	48.000000, 
+	24.000000, 
+}
+
+SI_CoordinateSystem { 
+	1, 
+	0, 
+	1, 
+	0, 
+	2, 
+	5, 
+}
+
+SI_Angle { 
+	0, 
+}
+
+SI_Ambience { 
+	0.300000, 
+	0.300000, 
+	0.300000, 
+}
+
+SI_MaterialLibrary MATLIB-tex_scroll1 { 
+	1, 
+	XSI_Material lambert1 { 
+		10, 
+		"surface","lambert1_Shader",
+		"shadow","lambert1_Shader",
+		"Photon","lambert1_Shader",
+		"volume","",
+		"environment","",
+		"contour","",
+		"displacement","",
+		"PhotonVolume","",
+		"normal","",
+		"RealTime","",
+		XSI_Shader lambert1_Shader { 
+			"Softimage.material-lambert.1", 
+			4, 
+			51, 
+			24, 
+			"Name","STRING","lambert1_Shader",
+			"ambient.red","FLOAT",0.000000,
+			"ambient.green","FLOAT",0.000000,
+			"ambient.blue","FLOAT",0.000000,
+			"ambient.alpha","FLOAT",1.000000,
+			"diffuse.red","FLOAT",0.000000,
+			"diffuse.green","FLOAT",0.000000,
+			"diffuse.blue","FLOAT",0.000000,
+			"diffuse.alpha","FLOAT",0.800000,
+			"transparency.red","FLOAT",0.000000,
+			"transparency.green","FLOAT",0.000000,
+			"transparency.blue","FLOAT",0.000000,
+			"transparency.alpha","FLOAT",1.000000,
+			"trans_glossy","FLOAT",0.000000,
+			"transparent_samples","INTEGER",0,
+			"reflectivity.red","FLOAT",0.000000,
+			"reflectivity.green","FLOAT",0.000000,
+			"reflectivity.blue","FLOAT",0.000000,
+			"reflectivity.alpha","FLOAT",0.000000,
+			"reflect_glossy","FLOAT",0.000000,
+			"reflect_samples","INTEGER",0,
+			"index_of_refraction","FLOAT",1.000000,
+			"translucency","FLOAT",0.000000,
+			"incandescence.red","FLOAT",0.000000,
+			"incandescence.green","FLOAT",0.000000,
+			"incandescence.blue","FLOAT",0.000000,
+			"incandescence.alpha","FLOAT",1.000000,
+			"inc_inten","FLOAT",1.000000,
+			"bump.x","FLOAT",0.000000,
+			"bump.y","FLOAT",0.000000,
+			"bump.z","FLOAT",0.000000,
+			"notrace","BOOLEAN",0,
+			"diffuse_inuse","BOOLEAN",1,
+			"reflect_inuse","BOOLEAN",1,
+			"refract_inuse","BOOLEAN",1,
+			"incand_inuse","BOOLEAN",1,
+			"translucent_inuse","BOOLEAN",1,
+			"radiance.red","FLOAT",1.000000,
+			"radiance.green","FLOAT",1.000000,
+			"radiance.blue","FLOAT",1.000000,
+			"radiance.alpha","FLOAT",1.000000,
+			"scaletrans","FLOAT",1.000000,
+			"inverttrans","BOOLEAN",0,
+			"usealphatrans","BOOLEAN",0,
+			"scalerefl","FLOAT",1.000000,
+			"invertrefl","BOOLEAN",0,
+			"usealpharefl","BOOLEAN",0,
+			"diffuse.red","FLOAT",1.000000,
+			"diffuse.green","FLOAT",1.000000,
+			"diffuse.blue","FLOAT",1.000000,
+			"diffuse.alpha","FLOAT",1.000000,
+			"ambient","","",
+			"diffuse","file1_Image","SHADER",
+			"transparency","","",
+			"trans_glossy","","",
+			"reflectivity","","",
+			"reflect_glossy","","",
+			"index_of_refraction","","",
+			"translucency","","",
+			"incandescence","","",
+			"inc_inten","","",
+			"bump","","",
+			"notrace","","",
+			"diffuse_inuse","","",
+			"reflect_inuse","","",
+			"refract_inuse","","",
+			"incand_inuse","","",
+			"translucent_inuse","","",
+			"radiance","","",
+			"scaletrans","","",
+			"inverttrans","","",
+			"usealphatrans","","",
+			"scalerefl","","",
+			"invertrefl","","",
+			"usealpharefl","","",
+		}
+
+		XSI_Shader file1_Image { 
+			"Softimage.txt2d-image-explicit.1", 
+			4, 
+			30, 
+			21, 
+			"Name","STRING","file1_Image",
+			"tspace_id","STRING","map1",
+			"repeats.x","FLOAT",1.000000,
+			"repeats.y","FLOAT",1.000000,
+			"repeats.z","FLOAT",1.000000,
+			"alt_x","BOOLEAN",0,
+			"alt_y","BOOLEAN",0,
+			"alt_z","BOOLEAN",0,
+			"min.x","FLOAT",0.000000,
+			"min.y","FLOAT",0.000000,
+			"min.z","FLOAT",0.000000,
+			"max.x","FLOAT",1.000000,
+			"max.y","FLOAT",1.000000,
+			"max.z","FLOAT",1.000000,
+			"step.x","FLOAT",0.001000,
+			"step.y","FLOAT",0.001000,
+			"step.z","FLOAT",0.001000,
+			"factor","FLOAT",5.000000,
+			"torus_u","BOOLEAN",0,
+			"torus_v","BOOLEAN",0,
+			"alpha","BOOLEAN",0,
+			"bump_inuse","BOOLEAN",0,
+			"alpha_output","BOOLEAN",0,
+			"alpha_factor","FLOAT",1.000000,
+			"eccmax","FLOAT",20.000000,
+			"maxminor","FLOAT",16.000000,
+			"disc_r","FLOAT",0.300000,
+			"bilinear","BOOLEAN",1,
+			"filtered","BOOLEAN",0,
+			"bump_filtered","BOOLEAN",0,
+			"tex","file1","IMAGE",
+			"repeats","","",
+			"alt_x","","",
+			"alt_y","","",
+			"alt_z","","",
+			"min","","",
+			"max","","",
+			"step","","",
+			"factor","","",
+			"torus_u","","",
+			"torus_v","","",
+			"alpha","","",
+			"bump_inuse","","",
+			"alpha_output","","",
+			"alpha_factor","","",
+			"eccmax","","",
+			"maxminor","","",
+			"disc_r","","",
+			"bilinear","","",
+			"filtered","","",
+			"bump_filtered","","",
+		}
+
+	}
+
+}
+
+XSI_ImageLibrary { 
+	1, 
+	XSI_Image file1 { 
+		"C:/Documents and Settings/sawada/My Documents/maya/projects/default/basic/z.bmp", 
+		256, 
+		256, 
+		3, 
+		24, 
+		0.000000, 
+		1.000000, 
+		0.000000, 
+		1.000000, 
+		0.000000, 
+		0, 
+		0, 
+		0, 
+	}
+
+}
+
+SI_Model MDL-MAYASceneRoot { 
+	SI_Visibility { 
+		1, 
+	}
+
+	XSI_Transform { 
+		0.000000, 
+		0.000000, 
+		0.000000, 
+		0.000000, 
+		0.000000, 
+		0.000000, 
+		"XYZ", 
+		1.000000, 
+		1.000000, 
+		1.000000, 
+		0, 
+		0.000000, 
+		0.000000, 
+		0.000000, 
+		0.000000, 
+		0.000000, 
+		0.000000, 
+		0.000000, 
+		0.000000, 
+		0.000000, 
+		1.000000, 
+		1.000000, 
+		1.000000, 
+		0.000000, 
+		0.000000, 
+		0.000000, 
+		0.000000, 
+		0.000000, 
+		0.000000, 
+		1.000000, 
+		1.000000, 
+		1.000000, 
+		1.000000, 
+		1.000000, 
+		1.000000, 
+		0.000000, 
+		0.000000, 
+		0.000000, 
+		0.000000, 
+		0.000000, 
+		0.000000, 
+		0.000000, 
+		0.000000, 
+		0.000000, 
+	}
+
+	SI_Model MDL-CubeCompass { 
+		SI_Visibility { 
+			1, 
+		}
+
+		XSI_Transform { 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			"XYZ", 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			0, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+		}
+
+		SI_Null CubeCompass { 
+		}
+
+		XSI_CustomPSet CrosswalkProps { 
+			"NODE", 
+			"", 
+			2,
+			"UniqueID","Text","|CubeCompass", 
+			"DisplayName","Text","CubeCompass", 
+		}
+
+	}
+
+	SI_Model MDL-persp { 
+		SI_Visibility { 
+			0, 
+		}
+
+		XSI_Transform { 
+			12.333333, 
+			12.333333, 
+			12.333333, 
+			-35.264389, 
+			45.000000, 
+			-0.000000, 
+			"XYZ", 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			0, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+		}
+
+		XSI_Camera { 
+			0, 
+			1.333330, 
+			0.660595, 
+			1, 
+			1, 
+			7.500019, 
+			21.361959, 
+			0.100000, 
+			32768.000000, 
+			1, 
+			1.417320, 
+			1.062993, 
+			0.000000, 
+			0.000000, 
+			XSI_CameraFocalLength { 
+				35.000000, 
+			}
+
+		}
+
+		XSI_CustomPSet CrosswalkProps { 
+			"NODE", 
+			"", 
+			2,
+			"UniqueID","Text","|persp", 
+			"DisplayName","Text","persp", 
+		}
+
+	}
+
+	SI_Model MDL-top { 
+		SI_Visibility { 
+			0, 
+		}
+
+		XSI_Transform { 
+			0.000000, 
+			100.000000, 
+			0.000000, 
+			-90.000000, 
+			0.000000, 
+			0.000000, 
+			"XYZ", 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			0, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+		}
+
+		XSI_Camera { 
+			0, 
+			1.333330, 
+			0.660595, 
+			1, 
+			0, 
+			22.500055, 
+			100.000000, 
+			0.100000, 
+			32768.000000, 
+			0, 
+			1.417320, 
+			1.062993, 
+			0.000000, 
+			0.000000, 
+			XSI_CameraFocalLength { 
+				35.000000, 
+			}
+
+		}
+
+		XSI_CustomPSet CrosswalkProps { 
+			"NODE", 
+			"", 
+			2,
+			"UniqueID","Text","|top", 
+			"DisplayName","Text","top", 
+		}
+
+	}
+
+	SI_Model MDL-front { 
+		SI_Visibility { 
+			0, 
+		}
+
+		XSI_Transform { 
+			0.000000, 
+			0.000000, 
+			100.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			"XYZ", 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			0, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+		}
+
+		XSI_Camera { 
+			0, 
+			1.333330, 
+			0.660595, 
+			1, 
+			0, 
+			22.500055, 
+			100.000000, 
+			0.100000, 
+			32768.000000, 
+			0, 
+			1.417320, 
+			1.062993, 
+			0.000000, 
+			0.000000, 
+			XSI_CameraFocalLength { 
+				35.000000, 
+			}
+
+		}
+
+		XSI_CustomPSet CrosswalkProps { 
+			"NODE", 
+			"", 
+			2,
+			"UniqueID","Text","|front", 
+			"DisplayName","Text","front", 
+		}
+
+	}
+
+	SI_Model MDL-side { 
+		SI_Visibility { 
+			0, 
+		}
+
+		XSI_Transform { 
+			100.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			90.000000, 
+			0.000000, 
+			"XYZ", 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			0, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+		}
+
+		XSI_Camera { 
+			0, 
+			1.333330, 
+			0.660595, 
+			1, 
+			0, 
+			22.500055, 
+			100.000000, 
+			0.100000, 
+			32768.000000, 
+			0, 
+			1.417320, 
+			1.062993, 
+			0.000000, 
+			0.000000, 
+			XSI_CameraFocalLength { 
+				35.000000, 
+			}
+
+		}
+
+		XSI_CustomPSet CrosswalkProps { 
+			"NODE", 
+			"", 
+			2,
+			"UniqueID","Text","|side", 
+			"DisplayName","Text","side", 
+		}
+
+	}
+
+	SI_Model MDL-pCube1 { 
+		SI_Visibility { 
+			1, 
+		}
+
+		XSI_Transform { 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			"XYZ", 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			0, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			1.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+			0.000000, 
+		}
+
+		XSI_Mesh MSH-pCube1 { 
+			XSI_Shape SHP-pCube1 { 
+				"ORDERED", 
+				XSI_SubComponentAttributeList { 
+					"POSITION", 
+					"FLOAT3", 
+					8, 
+
+					-4.000000,-4.000000,4.000000,
+					4.000000,-4.000000,4.000000,
+					-4.000000,4.000000,4.000000,
+					4.000000,4.000000,4.000000,
+					-4.000000,4.000000,-4.000000,
+					4.000000,4.000000,-4.000000,
+					-4.000000,-4.000000,-4.000000,
+					4.000000,-4.000000,-4.000000,
+				}
+
+				XSI_SubComponentAttributeList MAYANormal { 
+					"NORMAL", 
+					"FLOAT3", 
+					24, 
+
+					0.000000,0.000000,1.000000,
+					0.000000,0.000000,1.000000,
+					0.000000,0.000000,1.000000,
+					0.000000,0.000000,1.000000,
+					0.000000,1.000000,0.000000,
+					0.000000,1.000000,0.000000,
+					0.000000,1.000000,0.000000,
+					0.000000,1.000000,0.000000,
+					0.000000,0.000000,-1.000000,
+					0.000000,0.000000,-1.000000,
+					0.000000,0.000000,-1.000000,
+					0.000000,0.000000,-1.000000,
+					0.000000,-1.000000,0.000000,
+					0.000000,-1.000000,0.000000,
+					0.000000,-1.000000,0.000000,
+					0.000000,-1.000000,0.000000,
+					1.000000,0.000000,0.000000,
+					1.000000,0.000000,0.000000,
+					1.000000,0.000000,0.000000,
+					1.000000,0.000000,0.000000,
+					-1.000000,0.000000,0.000000,
+					-1.000000,0.000000,0.000000,
+					-1.000000,0.000000,0.000000,
+					-1.000000,0.000000,0.000000,
+				}
+
+				XSI_SubComponentAttributeList map1 { 
+					"TEXCOORD", 
+					"FLOAT2", 
+					14, 
+
+					0.000000,0.000000,
+					1.000000,0.000000,
+					0.000000,1.000000,
+					1.000000,1.000000,
+					0.000000,2.000000,
+					1.000000,2.000000,
+					0.000000,3.000000,
+					1.000000,3.000000,
+					0.000000,4.000000,
+					1.000000,4.000000,
+					2.000000,0.000000,
+					2.000000,1.000000,
+					-1.000000,0.000000,
+					-1.000000,1.000000,
+				}
+
+			}
+
+			XSI_VertexList { 
+				1, 
+				"position",
+				8, 
+
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+			}
+
+			XSI_PolygonList pCube1lambert1 { 
+				2, 
+				"map1","MAYANormal",
+				"lambert1", 
+				24, 
+				6, 
+
+				4,
+				0,0,0,
+				1,1,1,
+				3,3,2,
+				2,2,3,
+
+				4,
+				2,2,4,
+				3,3,5,
+				5,5,6,
+				4,4,7,
+
+				4,
+				4,4,8,
+				5,5,9,
+				7,7,10,
+				6,6,11,
+
+				4,
+				6,6,12,
+				7,7,13,
+				1,9,14,
+				0,8,15,
+
+				4,
+				1,1,16,
+				7,10,17,
+				5,11,18,
+				3,3,19,
+
+				4,
+				6,12,20,
+				0,0,21,
+				2,2,22,
+				4,13,23,
+
+			}
+
+		}
+
+		SI_GlobalMaterial { 
+			"lambert1", 
+			"", 
+		}
+
+		XSI_CustomPSet CrosswalkProps { 
+			"NODE", 
+			"", 
+			2,
+			"UniqueID","Text","|pCube1", 
+			"DisplayName","Text","pCube1", 
+		}
+
+	}
+
+}
+

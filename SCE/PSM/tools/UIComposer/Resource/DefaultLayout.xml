@@ -1,0 +1,32 @@
+<DockingManager version="1.3.0">
+    <ResizingPanel ResizeWidth="*" ResizeHeight="*" EffectiveSize="0,0" Orientation="Horizontal">
+        <ResizingPanel ResizeWidth="244" ResizeHeight="*" EffectiveSize="244,1139" Orientation="Vertical">
+            <DockablePane ResizeWidth="0.743868779485324*" ResizeHeight="0.743868779485324*" EffectiveSize="244,842.803327156872" ID="99800be2-289a-4327-9f9a-81850da883f4" Anchor="Left" IsAutoHidden="false">
+                <DockableContent Name="ViewObjectTreeDock" FloatingWindowSize="250,400" ChildIndex="0" Width="379" Height="994" Anchor="Left" State="Docked" />
+            </DockablePane>
+            <DockablePane ResizeWidth="0.256131220514676*" ResizeHeight="0.256131220514676*" EffectiveSize="244,290.196672843128" ID="cbd799c8-f9b7-4d25-a75f-a3a957e2b85c" Anchor="Left" IsAutoHidden="false">
+                <DockableContent Name="ViewLayoutOverviewDock" FloatingWindowSize="250,400" ChildIndex="0" Width="379" Height="224.523600973237" Anchor="Left" State="Docked" />
+            </DockablePane>
+        </ResizingPanel>
+        <ResizingPanel ResizeWidth="*" ResizeHeight="*" EffectiveSize="1338,1139" Orientation="Vertical">
+            <ResizingPanel ResizeWidth="*" ResizeHeight="*" EffectiveSize="1338,1139" Orientation="Horizontal">
+                <DockablePane ResizeWidth="0.771254483891515*" ResizeHeight="*" EffectiveSize="1027.3109725435,1139" ID="dd30c622-f7c1-4a59-9c9a-bfd0ef87c941" Anchor="Left" IsAutoHidden="false">
+                    <DockableContent Name="ViewLayoutDock" FloatingWindowSize="250,400" ChildIndex="0" Width="742" Height="763" Anchor="Left" State="Docked" />
+                </DockablePane>
+                <DockablePane ResizeWidth="0.228745516108485*" ResizeHeight="*" EffectiveSize="304.689027456502,1139" ID="471469c5-86eb-402d-822f-d859ba87d8c5" Anchor="Left" SelectedIndex="0" IsAutoHidden="false">
+                    <DockableContent Name="PropertyDock" FloatingWindowSize="432,817" ChildIndex="1" Width="379" Height="994" Anchor="Left" State="Docked" />
+                    <DockableContent Name="ProjectDock" FloatingWindowSize="250,400" ChildIndex="1" Width="379" Height="1139" Anchor="Left" State="Docked" />
+                </DockablePane>
+            </ResizingPanel>
+        </ResizingPanel>
+        <ResizingPanel ResizeWidth="282" ResizeHeight="*" EffectiveSize="282,1139" Orientation="Vertical">
+            <DockablePane ResizeWidth="*" ResizeHeight="0.468908930129084*" EffectiveSize="282,1139" ID="8da6ce61-c5e1-4660-8941-ce3344250dfb" Anchor="Left" IsAutoHidden="false">
+                <DockableContent Name="WidgetListDock" FloatingWindowSize="250,400" ChildIndex="0" Width="379" Height="232.431028431028" Anchor="Left" State="Docked" />
+            </DockablePane>
+        </ResizingPanel>
+    </ResizingPanel>
+    <Hidden>
+        <DockableContent Name="ResourceDock" FloatingWindowSize="250,400" ChildIndex="0" Width="300" Height="763" Anchor="Right" State="Docked" />
+    </Hidden>
+    <Windows />
+</DockingManager>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetaWidgetButton>
+    <id>4</id>
+    <name>Button</name>
+    <className>Button</className>
+    <type>UIComposer.Button</type>
+    <description id="WidgetDescriptoin_Button" lang="ja">ボタン</description>
+    <icon>../Images/widgets_list/button.png</icon>
+    <smallIcon>../Images/object_tree/button.png</smallIcon>
+    <dragIcon>Images/widgets_list/button.png</dragIcon>
+    <defaultWidth>214</defaultWidth>
+    <defaultHeight>56</defaultHeight>
+    <textblock
+        hasTextBox="true"
+        textFont="System"
+        textColor="#000000"
+        textAlpha="100"
+        textColorShadow="#808080"
+        shadowAlpha="50"
+        fontSize="25"
+        fontWeight="Regular"
+        horizontal="Center"
+        vertical="Center"
+        linebreaks="Character"
+        trimming="EllipsisCharacter"
+        horizontalOffset="2.0"
+        verticalOffset="2.0">Button</textblock>
+    <ninepatch
+        topRowHeight="27"
+        bottomRowHeight="27"
+        leftColumnWidth="42"
+        rightColumnWidth="42"/>
+    <alpha>100</alpha>
+    <filterColor
+        color="#FFFFFF"
+        alpha="100"/>
+    <background
+        color="#FFFFFF"
+        alpha="100"/>
+    <transitionOut>None</transitionOut>
+    <imageButton>false</imageButton>
+    <buttonImage></buttonImage>
+    <buttonState>Normal</buttonState>
+    <imagelist>
+        <image>system_assets/button_9patch_normal.png</image>
+        <image>system_assets/button_9patch_press.png</image>
+        <image>system_assets/button_9patch_disable.png</image>
+    </imagelist>
+</MetaWidgetButton>

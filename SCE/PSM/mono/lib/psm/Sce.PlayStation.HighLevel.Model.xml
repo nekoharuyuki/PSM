@@ -1,0 +1,576 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sce.PlayStation.HighLevel.Model</name>
+    </assembly>
+    <members>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicModel">
+            <summary>Class representing a model</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicModel.#ctor(System.String,System.Int32)">
+            <summary>Creates a model (from a file)</summary>
+            <param name="fileName">Filename</param>
+            <param name="index">Model number in a file</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicModel.#ctor(System.Byte[],System.Int32)">
+            <summary>Creates a model (from a file image)</summary>
+            <param name="fileImage">File image</param>
+            <param name="index">Model number in a file</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicModel.Dispose">
+            <summary>Frees unmanaged resources of a model</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicModel.BindPrograms(Sce.PlayStation.HighLevel.Model.BasicProgramContainer)">
+            <summary>Links a program to a model</summary>
+            <param name="container">Program Container</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicModel.BindTextures(Sce.PlayStation.HighLevel.Model.BasicTextureContainer)">
+            <summary>Links a texture to a model</summary>
+            <param name="container">Texture Container</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicModel.SetWorldMatrix(Sce.PlayStation.Core.Matrix4@)">
+            <summary>Sets a world matrix</summary>
+            <param name="world">World matrix</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicModel.SetCurrentMotion(System.Int32,System.Single)">
+            <summary>Sets the current motion</summary>
+            <param name="index">Motion number</param>
+            <param name="delay">Delay time (unit = s)</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicModel.Animate(System.Single)">
+            <summary>Calculates the model animation</summary>
+            <param name="step">Step time (unit = s)</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicModel.Update">
+            <summary>Updates the model matrix</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicModel.Draw(Sce.PlayStation.Core.Graphics.GraphicsContext)">
+            <summary>Renders a model</summary>
+            <param name="graphics">Graphics Context</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicModel.Draw(Sce.PlayStation.Core.Graphics.GraphicsContext,Sce.PlayStation.HighLevel.Model.BasicProgram)">
+            <summary>Renders a model (with the specified program)</summary>
+            <param name="graphics">Graphics Context</param>
+            <param name="program">Specified program</param>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicModel.Name">
+            <summary>Model name</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicModel.BoundingSphere">
+            <summary>Bounding sphere</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicModel.WorldMatrix">
+            <summary>World matrix</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicModel.CurrentMotion">
+            <summary>Current motion number</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicModel.TransitionDelay">
+            <summary>Motion transition delay time (units = seconds)</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicModel.Bones">
+            <summary>Bone array included in a model</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicModel.Parts">
+            <summary>Part array included in a model</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicModel.Materials">
+            <summary>Material array included in a model</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicModel.Textures">
+            <summary>Texture array included in a model</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicModel.Motions">
+            <summary>Motion array included in a model</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicModel.Programs">
+            <summary>Program array included in a model</summary>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicBone">
+            <summary>Class representing a model bone</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicBone.#ctor">
+            <summary>Creates a bone</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicBone.Name">
+            <summary>Bone name</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicBone.BoundingSphere">
+            <summary>Bounding sphere</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicBone.ParentBone">
+            <summary>Parent bone number</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicBone.Visibility">
+            <summary>Visibility</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicBone.DrawParts">
+            <summary>Render part number</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicBone.BlendBones">
+            <summary>Skinning effect bone number</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicBone.BlendOffsets">
+            <summary>Skinning offset matrix</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicBone.Pivot">
+            <summary>Pivot position</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicBone.Translation">
+            <summary>Translation</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicBone.Rotation">
+            <summary>Rotation amount</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicBone.Scaling">
+            <summary>Scaling</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicBone.WorldMatrix">
+            <summary>World matrix</summary>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicPart">
+            <summary>Class representing a model part</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicPart.#ctor">
+            <summary>Creates a part</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicPart.Name">
+            <summary>Part name</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicPart.Meshes">
+            <summary>Mesh array included in a part</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicPart.Arrays">
+            <summary>Array of vertex array included in a part</summary>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicMesh">
+            <summary>Class representing a model mesh</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicMesh.#ctor">
+            <summary>Creates a mesh</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMesh.Material">
+            <summary>Material number</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMesh.Arrays">
+            <summary>Number of the vertex array</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMesh.BlendIndices">
+            <summary>Skinning matrix number</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMesh.Primitives">
+            <summary>Primitive array</summary>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicArrays">
+            <summary>Class representing a model vertex array</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicArrays.#ctor">
+            <summary>Create vertex array</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicArrays.VertexBuffer">
+            <summary>Vertex buffer</summary>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicMaterial">
+            <summary>Class representing a model material</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicMaterial.#ctor">
+            <summary>Creates a material</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMaterial.Name">
+            <summary>Material name</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMaterial.Program">
+            <summary>Program number</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMaterial.FileName">
+            <summary>Program filename</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMaterial.Diffuse">
+            <summary>Diffuse color</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMaterial.Specular">
+            <summary>Specular color</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMaterial.Ambient">
+            <summary>Ambient color</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMaterial.Emission">
+            <summary>Emission color</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMaterial.Opacity">
+            <summary>Opacity</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMaterial.Shininess">
+            <summary>Luminance</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMaterial.Layers">
+            <summary>Layer array included in a material</summary>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicLayer">
+            <summary>Class representing a model layer</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicLayer.#ctor">
+            <summary>Creates a layer</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicLayer.Texture">
+            <summary>Texture number</summary>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicTexture">
+            <summary>Class representing a model texture</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicTexture.#ctor">
+            <summary>Creates a texture</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicTexture.Name">
+            <summary>Texture name</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicTexture.Texture">
+            <summary>Texture to be used</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicTexture.FileName">
+            <summary>Filename of texture to be used</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicTexture.UVTranslation">
+            <summary>Translation of UV coordinates</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicTexture.UVScaling">
+            <summary>UV coordinate scaling</summary>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicMotion">
+            <summary>Class representing a model motion</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicMotion.#ctor">
+            <summary>Creates a motion</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMotion.Name">
+            <summary>Motion name</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMotion.FrameStart">
+            <summary>Start frame</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMotion.FrameEnd">
+            <summary>End frame</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMotion.FrameRate">
+            <summary>Frame rate</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMotion.FrameRepeat">
+            <summary>Repeat mode</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMotion.Frame">
+            <summary>Current frame</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMotion.Weight">
+            <summary>Current blend coefficient</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMotion.FCurves">
+            <summary>Function curve array included in a motion</summary>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicFCurve">
+            <summary>Class representing a model function curve</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicFCurve.#ctor">
+            <summary>Creates a function curve</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurve.DimCount">
+            <summary>Dimensionality</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurve.KeyCount">
+            <summary>Number of keys</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurve.InterpType">
+            <summary>Animation interpolation type</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurve.TargetType">
+            <summary>Animation target type</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurve.ChannelType">
+            <summary>Animation channel type</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurve.ChannelOption">
+            <summary>Animation channel option</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurve.TargetIndex">
+            <summary>Animation target number</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurve.KeyFrames">
+            <summary>Key frame array</summary>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicMotionRepeatMode">
+            <summary>Motion repeat mode</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMotionRepeatMode.Hold">
+            <summary>Individual playback</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMotionRepeatMode.Cycle">
+            <summary>Repeat playback</summary>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicFCurveInterpType">
+            <summary>Animation interpolation type</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveInterpType.Constant">
+            <summary>Constant interpolation</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveInterpType.Linear">
+            <summary>Linear interpolation</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveInterpType.Hermite">
+            <summary>Hermite interpolation</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveInterpType.Cubic">
+            <summary>Cubic interpolation</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveInterpType.Slerp">
+            <summary>Spherical linear interpolation</summary>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicFCurveTargetType">
+            <summary>Animation target type</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveTargetType.None">
+            <summary>None</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveTargetType.Bone">
+            <summary>Bone</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveTargetType.Material">
+            <summary>Material</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveTargetType.Texture">
+            <summary>Textures</summary>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicFCurveChannelType">
+            <summary>Animation channel type</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveChannelType.None">
+            <summary>None</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveChannelType.Visibility">
+            <summary>Bone visibility</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveChannelType.Translation">
+            <summary>Bone translation</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveChannelType.Rotation">
+            <summary>Bone rotation amount</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveChannelType.Scaling">
+            <summary>Bone scaling</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveChannelType.Diffuse">
+            <summary>Material diffuse color</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveChannelType.Specular">
+            <summary>Material specular color</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveChannelType.Emission">
+            <summary>Material emission color</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveChannelType.Ambient">
+            <summary>Material ambient color</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveChannelType.Opacity">
+            <summary>Material opacity</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveChannelType.Shininess">
+            <summary>Material luminance</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveChannelType.UVTranslation">
+            <summary>Translation of texture coordinates</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveChannelType.UVScaling">
+            <summary>Texture coordinate scaling</summary>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicProgram">
+            <summary>Class representing a basic program</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicProgram.#ctor(Sce.PlayStation.HighLevel.Model.BasicParameters)">
+            <summary>Creates a program</summary>
+            <param name="parameters">Parameters (creates new when null)</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicProgram.#ctor(System.String,System.String,Sce.PlayStation.HighLevel.Model.BasicParameters)">
+            <summary>Creates a program (from a file)</summary>
+            <param name="vpFileName">Vertex shader filename</param>
+            <param name="fpFileName">Filename of the fragment shader (vpFileName used when NULL)</param>
+            <param name="parameters">Parameters (creates new when null)</param>
+            <remarks>Creates a shader program from a specified file. The usable file format is CGX. The shader to be specified must be compatible to the existing shader included in the HighLevel.Model source code, and have the same uniform and attribute variables declared.</remarks>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicProgram.#ctor(Sce.PlayStation.HighLevel.Model.BasicProgram)">
+            <summary>Creates a copy of a program</summary>
+            <param name="program">Program</param>
+            <remarks>Creates a copy of the program. The 2 programs will then share unmanaged resources. When Dispose() is called for all copies, the shared unmanaged resources will be freed.</remarks>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicProgram.ShallowClone">
+            <summary>Creates a copy of a program</summary>
+            <returns>Program copy</returns>
+            <remarks>Creates a copy of the program. The 2 programs will then share unmanaged resources. When Dispose() is called for all copies, the shared unmanaged resources will be freed.</remarks>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicProgram.Dispose">
+            <summary>Frees the unmanaged resources of the program</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicProgram.UpdateShader">
+            <summary>Updates the shader state</summary>
+            <remarks>A virtual function that is called from the graphics context before primitive rendering. This function is used when a cached state in a class is applied to the shader.</remarks>
+        </member>
+        <member name="P:Sce.PlayStation.HighLevel.Model.BasicProgram.Parameters">
+            <summary>Parameters</summary>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicParameters">
+            <summary>Class representing basic program parameters</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.#ctor">
+            <summary>Creates a parameter</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.Enable(Sce.PlayStation.HighLevel.Model.BasicEnableMode,System.Boolean)">
+            <summary>Enables or disables the specified shader feature</summary>
+            <param name="mode">Shader feature to enable or disable</param>
+            <param name="status">Specify true to enable</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.IsEnabled(Sce.PlayStation.HighLevel.Model.BasicEnableMode)">
+            <summary>Obtains whether or not the specified shader feature is enabled</summary>
+            <param name="mode">Shader feature to enable or disable</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetProjectionMatrix(Sce.PlayStation.Core.Matrix4@)">
+            <summary>Sets the projection matrix</summary>
+            <param name="projection">Projection matrix</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetViewMatrix(Sce.PlayStation.Core.Matrix4@)">
+            <summary>Sets a view matrix</summary>
+            <param name="view">View matrix</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetWorldCount(System.Int32)">
+            <summary>Sets the number of world matrices</summary>
+            <param name="count">Number of world matrices (1 - 16)</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetWorldMatrix(System.Int32,Sce.PlayStation.Core.Matrix4@)">
+            <summary>Sets a world matrix</summary>
+            <param name="index">World matrix number (0 - 15)</param>
+            <param name="world">World matrix</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetLightCount(System.Int32)">
+            <summary>Sets the number of lights</summary>
+            <param name="count">Number of lights (0 - 3)</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetLightDirection(System.Int32,Sce.PlayStation.Core.Vector3@)">
+            <summary>Sets the light direction vector</summary>
+            <param name="index">Light number (0 - 2)</param>
+            <param name="direction">Direction vector</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetLightDiffuse(System.Int32,Sce.PlayStation.Core.Vector3@)">
+            <summary>Sets the light diffuse color</summary>
+            <param name="index">Light number (0 - 2)</param>
+            <param name="diffuse">Diffuse color</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetLightSpecular(System.Int32,Sce.PlayStation.Core.Vector3@)">
+            <summary>Sets the light specular color</summary>
+            <param name="index">Light number (0 - 2)</param>
+            <param name="specular">Specular color</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetLightAmbient(Sce.PlayStation.Core.Vector3@)">
+            <summary>Sets the light ambient color</summary>
+            <param name="ambient">Ambient color</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetFogRange(System.Single,System.Single)">
+            <summary>Sets the fog range</summary>
+            <param name="start">Start distance</param>
+            <param name="end">End distance</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetFogColor(Sce.PlayStation.Core.Vector3@)">
+            <summary>Sets the fog color</summary>
+            <param name="color">Color</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetMaterialDiffuse(Sce.PlayStation.Core.Vector3@)">
+            <summary>Sets the material diffuse color</summary>
+            <param name="diffuse">Diffuse color</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetMaterialSpecular(Sce.PlayStation.Core.Vector3@)">
+            <summary>Sets the material specular color</summary>
+            <param name="specular">Specular color</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetMaterialAmbient(Sce.PlayStation.Core.Vector3@)">
+            <summary>Sets the material ambient color</summary>
+            <param name="ambient">Ambient color</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetMaterialEmission(Sce.PlayStation.Core.Vector3@)">
+            <summary>Sets the material emission color</summary>
+            <param name="emission">Emission color</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetMaterialOpacity(System.Single)">
+            <summary>Sets the material opacity</summary>
+            <param name="opacity">Opacity</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetMaterialShininess(System.Single)">
+            <summary>Sets the material luminance</summary>
+            <param name="shininess">Luminance</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetPositionOffset(System.Single,System.Single,System.Single,System.Single)">
+            <summary>Set offset of vertex position coordinates</summary>
+            <param name="transX">Translation of X</param>
+            <param name="transY">Translation of Y</param>
+            <param name="transZ">Translation of Z</param>
+            <param name="scale">Scaling</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetTexCoordOffset(System.Int32,System.Single,System.Single,System.Single,System.Single)">
+            <summary>Set offset of vertex texture coordinates</summary>
+            <param name="index">Number of the texture coordinate (always 0)</param>
+            <param name="transU">Translation of U</param>
+            <param name="transV">Translation of V</param>
+            <param name="scaleU">U scaling</param>
+            <param name="scaleV">V scaling</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetVertexWeightCount(System.Int32)">
+            <summary>Sets the number of vertex weights</summary>
+            <param name="count">Number of vertex weights (0 - 4)</param>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicEnableMode">
+            <summary>Shader feature to enable or disable</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicEnableMode.Lighting">
+            <summary>Lighting</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicEnableMode.Fog">
+            <summary>Fog</summary>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicProgramContainer">
+            <summary>Class representing a program container</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicProgramContainer.#ctor(Sce.PlayStation.HighLevel.Model.BasicParameters)">
+            <summary>Creates a program container</summary>
+            <param name="parameters">Shared parameter (not shared when null)</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicProgramContainer.Dispose">
+            <summary>Frees the unmanaged resources of the program container</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicProgramContainer.Add(System.String,Sce.PlayStation.HighLevel.Model.BasicProgram)">
+            <summary>Registers a program</summary>
+            <param name="key">Search key</param>
+            <param name="program">Program</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicProgramContainer.Find(System.String)">
+            <summary>Searches for a program</summary>
+            <param name="key">Search key</param>
+            <returns>Program (search fails when null)</returns>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicProgramContainer.Parameters">
+            <summary>Shared parameters</summary>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicTextureContainer">
+            <summary>Class representing a texture container</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicTextureContainer.#ctor">
+            <summary>Creates a texture container</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicTextureContainer.Dispose">
+            <summary>Frees the unmanaged resources of the texture container</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicTextureContainer.Add(System.String,Sce.PlayStation.Core.Graphics.Texture)">
+            <summary>Registers a texture</summary>
+            <param name="key">Search key</param>
+            <param name="texture">Textures</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicTextureContainer.Find(System.String)">
+            <summary>Searches for a texture</summary>
+            <param name="key">Search key</param>
+            <returns>Texture (search fails when null)</returns>
+        </member>
+    </members>
+</doc>

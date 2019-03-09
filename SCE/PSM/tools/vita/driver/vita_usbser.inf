@@ -1,0 +1,44 @@
+; PlayStation(R) Mobile USB Debug Setup File
+;
+; SCE CONFIDENTIAL DOCUMENT
+; Copyright (C) 2012 Sony Computer Entertainment Inc.
+;                                                All Rights Reserved.
+
+[Version]
+Signature = "$Windows NT$"
+Class = Ports
+Provider = %SCEI%
+DriverVer = 11/21/2012,1.2.0.0
+ClassGUID={4D36E978-E325-11CE-BFC1-08002BE10318}
+CatalogFile=vita_usbser.cat
+
+[Manufacturer]
+%SCEI% = SCEI,NTx86,NTamd64
+
+[SCEI.NTx86]
+%PSVITAUSB% = PSVitaUsbDbg,USB\VID_054C&PID_069B
+
+[SCEI.NTamd64]
+%PSVITAUSB% = PSVitaUsbDbg,USB\VID_054C&PID_069B
+
+[DestinationDirs]
+DefaultDestDir = 12
+FakeModemCopyFileSection = 12
+
+[PSVitaUsbDbg.NT]
+include = mdmcpq.inf
+CopyFiles = FakeModemCopyFileSection
+AddReg = PSVitaUsbDbg.NT.AddReg
+
+[PSVitaUsbDbg.NT.AddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,usbser.sys
+HKR,,EnumPropPages32,,"MsPorts.dll,SerialPortPropPageProvider"
+
+[PSVitaUsbDbg.NT.Services]
+include = mdmcpq.inf
+AddService = usbser,0x00000002,LowerFilter_Service_Inst
+
+[Strings]
+SCEI = "Sony Computer Entertainment Inc."
+PSVITAUSB = "PSM USB Debug"

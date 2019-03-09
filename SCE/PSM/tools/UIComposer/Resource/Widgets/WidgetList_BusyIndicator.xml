@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetaWidgetBusyIndicator>
+    <id>8</id>
+    <name>BusyIndicator</name>
+    <className>BusyIndicator</className>
+    <type>UIComposer.BusyIndicator</type>
+    <description id="WidgetDescriptoin_BusyIndicator" lang="ja">ビジーインジケーター</description>
+    <icon>../Images/widgets_list/busyindicator.png</icon>
+    <smallIcon>../Images/object_tree/busyindicator.png</smallIcon>
+    <dragIcon>Images/widgets_list/busyindicator.png</dragIcon>
+    <defaultWidth>48</defaultWidth>
+    <defaultHeight>48</defaultHeight>
+    <fixedWidth>true</fixedWidth>
+    <fixedHeight>true</fixedHeight>
+    <alpha>100</alpha>
+    <imagelist>
+        <image>Images/widgets/busy48_01.png</image>
+    </imagelist>
+    <ninepatch
+        topRowHeight="0"
+        bottomRowHeight="0"
+        leftColumnWidth="0"
+        rightColumnWidth="0"/>
+</MetaWidgetBusyIndicator>

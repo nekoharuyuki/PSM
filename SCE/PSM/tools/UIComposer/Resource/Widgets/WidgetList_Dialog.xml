@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetaWidgetDialog>
+    <id>18</id>
+    <name>Dialog</name>
+    <name_id>WidgetName_04</name_id>
+    <className>Dialog</className>
+    <type>UIComposer.Dialog</type>
+    <description id="WidgetDescriptoin_Dialog" lang="ja">ダイアログ</description>
+    <icon>../Images/widgets_list/dialog.png</icon>
+    <smallIcon>../Images/object_tree/dialog.png</smallIcon>
+    <dragIcon>Images/widgets_list/dialog.png</dragIcon>
+    <defaultWidth>100</defaultWidth>
+    <defaultHeight>50</defaultHeight>
+	<imagelist>
+    	<image>system_assets/panel_9patch.png</image>
+    </imagelist>
+    <ninepatch
+        topRowHeight="34"
+        bottomRowHeight="34"
+        leftColumnWidth="34"
+        rightColumnWidth="34"/>
+    <filterColor
+        color="#FFFFFF"
+        alpha="100"/>
+    <background
+        color="#000000"
+        alpha="0"/>
+    <buttonImage>Images/null.png</buttonImage>
+    <dialogSetting>Default</dialogSetting>
+    <hasChildren>true</hasChildren>
+    <effect>BunjeeJumpEffect</effect>
+</MetaWidgetDialog>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetaWidgetLiveJumpPanel>
+    <id>21</id>
+    <name>LiveJumpPanel</name>
+    <name_id>WidgetName_21</name_id>
+    <className>LiveJumpPanel</className>
+    <type>UIComposer.LiveJumpPanel</type>
+    <description id="WidgetDescriptoin_LiveJumpPanel" lang="ja">LiveJumpPanel</description>
+    <icon>../Images/widgets_list/livejumppanel.png</icon>
+    <smallIcon>../Images/object_tree/livejumppanel.png</smallIcon>
+    <dragIcon>Images/widgets_list/livejumppanel.png</dragIcon>
+    <defaultWidth>100</defaultWidth>
+    <defaultHeight>100</defaultHeight>
+    <hasChildren>true</hasChildren>
+    <jumpHeight>350.0</jumpHeight>
+    <jumpDelayTime>1</jumpDelayTime>
+    <jumpTime>500</jumpTime>
+    <tiltAngle>0.17</tiltAngle>
+    <hasBorder>true</hasBorder>
+    <background
+        color="#000000"
+        alpha="0"/>
+</MetaWidgetLiveJumpPanel>

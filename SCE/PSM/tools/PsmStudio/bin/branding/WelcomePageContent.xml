@@ -1,0 +1,33 @@
+<WelcomePageContent>
+	<Column minWidth="250">
+		<Links iconSize="LargeToolbar" homogeneous="true">
+			<Link href="monodevelop://MonoDevelop.Ide.Commands.FileCommands.NewProject" title="Start New Solution.." icon="gtk-new" />
+			<Link href="monodevelop://MonoDevelop.Ide.Commands.FileCommands.OpenFile" title="Open Solution or File..." icon="gtk-open" />
+		</Links>
+		<RecentProjects title="Recent Projects" />
+	</Column>
+	<Column minWidth="250">
+		<Links title="Support Links">
+			<Link title="PlayStation Mobile Developer Community" 
+				href="http://community.eu.playstation.com/t5/PlayStation-Suite-Developer/ct-p/PSSdevforum"
+				desc="Communication place for Playstation Mobile Developer"
+			/>
+			<Link title="Sony Entertainment Network" 
+				href="https://account.sonyentertainmentnetwork.com/login.action"
+				desc="PSN Account management"
+			/>
+		</Links>
+		<Links title="Development Links">
+			<Link title="Mono Documentation Library" href="http://www.go-mono.com/docs/"
+				desc="Online documentation for Mono libraries."
+			/>
+			<Link title="MSDN Class Library Reference" href="http://msdn.microsoft.com/en-us/library/ff361664.aspx"
+				desc="Documentation for Microsoft's implementation of the .NET framework."
+			/>
+			<Link title="The Code Project" href="http://www.codeproject.com/"
+				desc="A popular site for .NET articles, code snippets, and discussions."
+			/>
+		</Links>
+		<!--<NewsFeed title="News Links" src="http://www.monodevelop.com/files/news/news.xml" id="NewsLinks" />-->
+	</Column>
+</WelcomePageContent>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetaWidgetScene>
+    <id>0</id>
+    <name>Scene</name>
+    <name_id>WidgetName_14</name_id>
+    <className>Scene</className>
+    <type>UIComposer.Scene</type>
+    <description lang="ja">シーン</description>
+    <icon>../Images/widgets_list/panel.png</icon>
+    <smallIcon>../Images/object_tree/panel.png</smallIcon>
+    <dragIcon>Images/button-panel.png</dragIcon>
+    <defaultWidth>100</defaultWidth>
+    <defaultHeight>100</defaultHeight>
+    <background
+        color="#FFFFFF"
+        alpha="0"/>
+    <imagelist>
+        <image>Images/null.png</image>
+    </imagelist>
+    <hasChildren>true</hasChildren>
+    <alpha>100</alpha>
+    <hasChildren>true</hasChildren>
+    <transition>None</transition>
+    <transitionOut>None</transitionOut>
+</MetaWidgetScene>

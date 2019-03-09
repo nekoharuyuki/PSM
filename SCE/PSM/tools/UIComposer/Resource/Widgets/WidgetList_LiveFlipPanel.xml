@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetaWidgetLiveFlipPanel>
+    <id>22</id>
+    <name>LiveFlipPanel</name>
+    <name_id>WidgetName_22</name_id>
+    <className>LiveFlipPanel</className>
+    <type>UIComposer.LiveFlipPanel</type>
+    <description id="WidgetDescriptoin_LiveFlipPanel" lang="ja">LiveFlipPanel</description>
+    <icon>../Images/widgets_list/liveflippanel.png</icon>
+    <smallIcon>../Images/object_tree/liveflippanel.png</smallIcon>
+    <dragIcon>Images/widgets_list/liveflippanel.png</dragIcon>
+    <defaultWidth>100</defaultWidth>
+    <defaultHeight>50</defaultHeight>    
+    <alpha>100</alpha>
+    <frontPanelclassname></frontPanelclassname>
+    <backPanelclassname></backPanelclassname>
+    <revolutions>16</revolutions>
+    <hasBorder>true</hasBorder>
+    <background
+        color="#DDDDDD"
+        alpha="50"/>
+    <touchEnabled>true</touchEnabled>
+</MetaWidgetLiveFlipPanel>

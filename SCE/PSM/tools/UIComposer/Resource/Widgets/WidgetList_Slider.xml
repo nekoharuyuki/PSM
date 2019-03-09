@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetaWidgetSlider>
+    <id>6</id>
+    <name>Slider</name>
+    <name_id>WidgetName_16</name_id>
+    <type>UIComposer.Slider</type>
+    <className>Slider</className>
+    <description id="WidgetDescriptoin_Slider" lang="ja">スライダー</description>
+    <icon>../Images/widgets_list/slider.png</icon>
+    <smallIcon>../Images/object_tree/slider.png</smallIcon>
+    <dragIcon>Images/widgets_list/slider.png</dragIcon>
+    <defaultWidth>362</defaultWidth>
+    <defaultHeight>58</defaultHeight>
+    <fixedWidth>false</fixedWidth>
+    <fixedHeight>true</fixedHeight>
+    <ninepatch
+        topRowHeight="0"
+        bottomRowHeight="0"
+        leftColumnWidth="8"
+        rightColumnWidth="8"/>
+    <alpha>100</alpha>
+    <slider
+        min="0"
+        max="100"
+        initial="0"
+        step="1"
+        sliderStyle="false"
+        style="Horizontal"
+        horizonalStyle="true"
+        verticalStyle="false"
+        sliderTabSize="40"/>
+    <imagelist>
+        <image>system_assets/slider_bar_normal_9patch.png</image>
+        <image>system_assets/slider_bar_active_9patch.png</image>
+        <image>system_assets/slider_bar_verti_normal_9patch.png</image>
+        <image>system_assets/slider_bar_verti_active_9patch.png</image>
+        <image>../system_assets/slider.png</image>
+        <image>../system_assets/slider_verti.png</image>
+    </imagelist>
+</MetaWidgetSlider>

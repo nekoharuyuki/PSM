@@ -1,0 +1,21 @@
+<Branding>
+	<ApplicationName>PlayStation Mobile Studio</ApplicationName>
+	<ApplicationIcons><Icon>psm-app-icon-16.png</Icon><Icon>psm-app-icon-32.png</Icon></ApplicationIcons> 
+	<WelcomePage>
+		<HeaderTextSize>x-large</HeaderTextSize>
+		<HeaderTextColor>#4e6d9f</HeaderTextColor>
+		<BackgroundColor>white</BackgroundColor>
+		<TextSize>medium</TextSize>
+		<TextColor>black</TextColor>
+		<LinkColor>#5a7ac7</LinkColor>
+		<Spacing>20</Spacing>
+		<LogoHeight>90</LogoHeight>
+	</WelcomePage>
+	<AboutBox>
+		<TextColor>#ffffff</TextColor>
+		<BackgroundColor>#008888</BackgroundColor>
+	</AboutBox>
+	<SplashScreen>
+		<ShowVersionInfo>False</ShowVersionInfo>
+	</SplashScreen>
+</Branding>

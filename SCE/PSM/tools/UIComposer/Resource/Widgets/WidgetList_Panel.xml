@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetaWidgetPanel>
+    <id>11</id>
+    <name>Panel</name>
+    <name_id>WidgetName_12</name_id>
+    <className>Panel</className>
+    <type>UIComposer.Panel</type>
+    <description id="WidgetDescriptoin_Panel" lang="ja">パネル</description>
+    <icon>../Images/widgets_list/panel.png</icon>
+    <smallIcon>../Images/object_tree/panel.png</smallIcon>
+    <dragIcon>Images/widgets_list/panel.png</dragIcon>
+    <defaultWidth>100</defaultWidth>
+    <defaultHeight>100</defaultHeight>
+    <imagelist>
+        <image>Images/null.png</image>
+    </imagelist>
+    <background
+        color="#999999"
+        alpha="100"/>    
+    <hasChildren>true</hasChildren>
+    <textblock
+        textFont="System"/>
+    <hasBorder>true</hasBorder>
+</MetaWidgetPanel>

@@ -1,0 +1,39 @@
+.MDS 1.00
+
+Model "back" {
+	Bone "bone-0" {
+		DrawPart "part-0"
+	}
+	Part "part-0" {
+		Mesh "mesh-0" {
+			SetMaterial "material-0"
+			SetArrays "arrays-0"
+			DrawArrays TRIANGLE_STRIP 4 1 0 1 2 3
+		}
+		Arrays "arrays-0" POSITION|TEXCOORD 0 4 {
+			-30000.000000 15000.000000 -10000.000000 0.000000 0.000000
+			-30000.000000 -15000.000000 -10000.000000 0.000000 1.000000
+			30000.000000 15000.000000 -10000.000000 1.000000 0.000000
+			30000.000000 -15000.000000 -10000.000000 1.000000 1.000000
+		}
+	}
+	Material "material-0" {
+		Layer "layer-0" {
+			SetTexture "texture-0"
+		}
+	}
+	Texture "texture-0" {
+		FileName "back.bmp"
+		UVTranslate 0.000000 0.000000
+		UVScale 3.000000 3.000000
+	}
+	Motion "motion-0" {
+		FrameLoop 0.000000 20.000000
+		FrameRate 1.000000
+		Animate "Material::material-0" UVTranslate 0 "fcurve-0"
+		FCurve "fcurve-0" LINEAR HOLD 2 2 {
+			0.000000 0.000000 0.000000
+			20.000000 1.000000 -1.000000
+		}
+	}
+}

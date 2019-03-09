@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetaWidgetSpinBox>
+    <id>10</id>
+    <name>DateTimePicker</name>
+    <name_id>WidgetName_17</name_id>
+    <className>DateTimePicker</className>
+    <type>UIComposer.SpinBox</type>
+    <description id="WidgetDescriptoin_SpinBox" lang="ja">スピンボックス</description>
+    <icon>../Images/widgets_list/spinbox.png</icon>
+    <smallIcon>../Images/object_tree/spinbox.png</smallIcon>
+    <dragIcon>Images/widgets_list/spinbox.png</dragIcon>
+    <defaultWidth>276</defaultWidth>
+    <defaultHeight>228</defaultHeight>
+    <fixedWidth>true</fixedWidth>
+    <fixedHeight>true</fixedHeight>
+    <imagelist>
+        <image>Images/widgets/spin_base_time.png</image>
+        <image>Images/widgets/spin_base_date.png</image>
+    </imagelist>
+    <alpha>100</alpha>
+    <dateModeWidth>340</dateModeWidth>
+    <dateModeHeight>228</dateModeHeight>
+    <spinBoxType>Time</spinBoxType>
+</MetaWidgetSpinBox>

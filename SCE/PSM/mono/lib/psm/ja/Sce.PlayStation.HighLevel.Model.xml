@@ -1,0 +1,576 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sce.PlayStation.HighLevel.Model</name>
+    </assembly>
+    <members>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicModel">
+            <summary>モデルを表すクラス</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicModel.#ctor(System.String,System.Int32)">
+            <summary>モデルを作成する(ファイルから)</summary>
+            <param name="fileName">ファイル名</param>
+            <param name="index">ファイル内のモデル番号</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicModel.#ctor(System.Byte[],System.Int32)">
+            <summary>モデルを作成する(ファイルイメージから)</summary>
+            <param name="fileImage">ファイルイメージ</param>
+            <param name="index">ファイル内のモデル番号</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicModel.Dispose">
+            <summary>モデルのアンマネージドリソースを解放する</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicModel.BindPrograms(Sce.PlayStation.HighLevel.Model.BasicProgramContainer)">
+            <summary>モデルにプログラムを関連づける</summary>
+            <param name="container">プログラムコンテナ</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicModel.BindTextures(Sce.PlayStation.HighLevel.Model.BasicTextureContainer)">
+            <summary>モデルにテクスチャを関連づける</summary>
+            <param name="container">テクスチャコンテナ</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicModel.SetWorldMatrix(Sce.PlayStation.Core.Matrix4@)">
+            <summary>ワールド行列を設定する</summary>
+            <param name="world">ワールド行列</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicModel.SetCurrentMotion(System.Int32,System.Single)">
+            <summary>カレントモーションを設定する</summary>
+            <param name="index">モーション番号</param>
+            <param name="delay">遅延時間 (単位＝秒)</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicModel.Animate(System.Single)">
+            <summary>モデルのアニメーションを計算する</summary>
+            <param name="step">ステップ時間 (単位＝秒)</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicModel.Update">
+            <summary>モデルの行列を更新する</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicModel.Draw(Sce.PlayStation.Core.Graphics.GraphicsContext)">
+            <summary>モデルを描画する</summary>
+            <param name="graphics">グラフィックスコンテキスト</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicModel.Draw(Sce.PlayStation.Core.Graphics.GraphicsContext,Sce.PlayStation.HighLevel.Model.BasicProgram)">
+            <summary>モデルを描画する (指定されたプログラムで)</summary>
+            <param name="graphics">グラフィックスコンテキスト</param>
+            <param name="program">指定されたプログラム</param>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicModel.Name">
+            <summary>モデルの名前</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicModel.BoundingSphere">
+            <summary>バウンディングスフィア</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicModel.WorldMatrix">
+            <summary>ワールド行列</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicModel.CurrentMotion">
+            <summary>カレントモーション番号</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicModel.TransitionDelay">
+            <summary>モーション遷移遅延時間 (単位＝秒)</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicModel.Bones">
+            <summary>モデルに含まれるボーンの配列</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicModel.Parts">
+            <summary>モデルに含まれるパートの配列</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicModel.Materials">
+            <summary>モデルに含まれるマテリアルの配列</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicModel.Textures">
+            <summary>モデルに含まれるテクスチャの配列</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicModel.Motions">
+            <summary>モデルに含まれるモーションの配列</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicModel.Programs">
+            <summary>モデルに含まれるプログラムの配列</summary>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicBone">
+            <summary>モデルのボーンを表すクラス</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicBone.#ctor">
+            <summary>ボーンを作成する</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicBone.Name">
+            <summary>ボーンの名前</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicBone.BoundingSphere">
+            <summary>バウンディングスフィア</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicBone.ParentBone">
+            <summary>親ボーンの番号</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicBone.Visibility">
+            <summary>ビジビリティ</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicBone.DrawParts">
+            <summary>描画パートの番号</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicBone.BlendBones">
+            <summary>スキニングの影響ボーンの番号</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicBone.BlendOffsets">
+            <summary>スキニングのオフセット行列</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicBone.Pivot">
+            <summary>ピボット位置</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicBone.Translation">
+            <summary>移動量</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicBone.Rotation">
+            <summary>回転量</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicBone.Scaling">
+            <summary>スケーリング</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicBone.WorldMatrix">
+            <summary>ワールド行列</summary>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicPart">
+            <summary>モデルのパートを表すクラス</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicPart.#ctor">
+            <summary>パートを作成する</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicPart.Name">
+            <summary>パートの名前</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicPart.Meshes">
+            <summary>パートに含まれるメッシュの配列</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicPart.Arrays">
+            <summary>パートに含まれる頂点配列の配列</summary>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicMesh">
+            <summary>モデルのメッシュを表すクラス</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicMesh.#ctor">
+            <summary>メッシュを作成する</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMesh.Material">
+            <summary>マテリアルの番号</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMesh.Arrays">
+            <summary>頂点配列の番号</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMesh.BlendIndices">
+            <summary>スキニングの行列番号</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMesh.Primitives">
+            <summary>プリミティブの配列</summary>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicArrays">
+            <summary>モデルの頂点配列を表すクラス</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicArrays.#ctor">
+            <summary>頂点配列を作成する</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicArrays.VertexBuffer">
+            <summary>頂点バッファ</summary>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicMaterial">
+            <summary>モデルのマテリアルを表すクラス</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicMaterial.#ctor">
+            <summary>マテリアルを作成する</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMaterial.Name">
+            <summary>マテリアルの名前</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMaterial.Program">
+            <summary>プログラムの番号</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMaterial.FileName">
+            <summary>プログラムのファイル名</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMaterial.Diffuse">
+            <summary>ディフューズカラー</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMaterial.Specular">
+            <summary>スペキュラーカラー</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMaterial.Ambient">
+            <summary>アンビエントカラー</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMaterial.Emission">
+            <summary>エミッションカラー</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMaterial.Opacity">
+            <summary>不透明度</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMaterial.Shininess">
+            <summary>輝度</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMaterial.Layers">
+            <summary>マテリアルに含まれるレイヤーの配列</summary>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicLayer">
+            <summary>モデルのレイヤーを表すクラス</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicLayer.#ctor">
+            <summary>レイヤーを作成する</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicLayer.Texture">
+            <summary>テクスチャの番号</summary>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicTexture">
+            <summary>モデルのテクスチャを表すクラス</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicTexture.#ctor">
+            <summary>テクスチャを作成する</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicTexture.Name">
+            <summary>テクスチャの名前</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicTexture.Texture">
+            <summary>使用するテクスチャ</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicTexture.FileName">
+            <summary>使用するテクスチャのファイル名</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicTexture.UVTranslation">
+            <summary>UV 座標の移動量</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicTexture.UVScaling">
+            <summary>UV 座標のスケーリング</summary>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicMotion">
+            <summary>モデルのモーションを表すクラス</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicMotion.#ctor">
+            <summary>モーションを作成する</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMotion.Name">
+            <summary>モーションの名前</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMotion.FrameStart">
+            <summary>開始フレーム</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMotion.FrameEnd">
+            <summary>終了フレーム</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMotion.FrameRate">
+            <summary>フレームレート</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMotion.FrameRepeat">
+            <summary>繰り返しモード</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMotion.Frame">
+            <summary>現在のフレーム</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMotion.Weight">
+            <summary>現在のブレンド係数</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMotion.FCurves">
+            <summary>モーションに含まれる関数カーブの配列</summary>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicFCurve">
+            <summary>モデルの関数カーブを表すクラス</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicFCurve.#ctor">
+            <summary>関数カーブを作成する</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurve.DimCount">
+            <summary>次元数</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurve.KeyCount">
+            <summary>キー数</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurve.InterpType">
+            <summary>アニメーションの補間タイプ</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurve.TargetType">
+            <summary>アニメーションのターゲットタイプ</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurve.ChannelType">
+            <summary>アニメーションのチャンネルタイプ</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurve.ChannelOption">
+            <summary>アニメーションのチャンネルオプション</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurve.TargetIndex">
+            <summary>アニメーションのターゲット番号</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurve.KeyFrames">
+            <summary>キーフレームの配列</summary>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicMotionRepeatMode">
+            <summary>モーションの繰り返しモード</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMotionRepeatMode.Hold">
+            <summary>単発再生</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicMotionRepeatMode.Cycle">
+            <summary>繰り返し再生</summary>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicFCurveInterpType">
+            <summary>アニメーションの補間タイプ</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveInterpType.Constant">
+            <summary>定数補間</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveInterpType.Linear">
+            <summary>線形補間</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveInterpType.Hermite">
+            <summary>エルミート補間</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveInterpType.Cubic">
+            <summary>キュービック補間</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveInterpType.Slerp">
+            <summary>球面線形補間</summary>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicFCurveTargetType">
+            <summary>アニメーションのターゲットタイプ</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveTargetType.None">
+            <summary>なし</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveTargetType.Bone">
+            <summary>ボーン</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveTargetType.Material">
+            <summary>マテリアル</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveTargetType.Texture">
+            <summary>テクスチャ</summary>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicFCurveChannelType">
+            <summary>アニメーションのチャンネルタイプ</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveChannelType.None">
+            <summary>なし</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveChannelType.Visibility">
+            <summary>ボーンのビジビリティ</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveChannelType.Translation">
+            <summary>ボーンの移動量</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveChannelType.Rotation">
+            <summary>ボーンの回転量</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveChannelType.Scaling">
+            <summary>ボーンのスケーリング</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveChannelType.Diffuse">
+            <summary>マテリアルのディフューズカラー</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveChannelType.Specular">
+            <summary>マテリアルのスペキュラーカラー</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveChannelType.Emission">
+            <summary>マテリアルのエミッションカラー</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveChannelType.Ambient">
+            <summary>マテリアルのアンビエントカラー</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveChannelType.Opacity">
+            <summary>マテリアルの不透明度</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveChannelType.Shininess">
+            <summary>マテリアルの輝度</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveChannelType.UVTranslation">
+            <summary>テクスチャ座標の移動量</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicFCurveChannelType.UVScaling">
+            <summary>テクスチャ座標のスケーリング</summary>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicProgram">
+            <summary>基本プログラムを表すクラス</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicProgram.#ctor(Sce.PlayStation.HighLevel.Model.BasicParameters)">
+            <summary>プログラムを作成する</summary>
+            <param name="parameters">パラメータ (nullならば新規作成)</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicProgram.#ctor(System.String,System.String,Sce.PlayStation.HighLevel.Model.BasicParameters)">
+            <summary>プログラムを作成する (ファイルから)</summary>
+            <param name="vpFileName">頂点シェーダーのファイル名</param>
+            <param name="fpFileName">フラグメントシェーダーのファイル名（nullならばvpFileNameを使用）</param>
+            <param name="parameters">パラメータ (nullならば新規作成)</param>
+            <remarks>指定されたファイルからシェーダープログラムを作成します。利用可能なファイルフォーマットは CGX です。なお、指定するシェーダーは、HighLevel.Modelのソースコードに含まれる既定のシェーダーと互換性をもち、同じユニフォーム変数やアトリビュート変数が宣言されている必要があります。</remarks>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicProgram.#ctor(Sce.PlayStation.HighLevel.Model.BasicProgram)">
+            <summary>プログラムを複製する</summary>
+            <param name="program">プログラム</param>
+            <remarks>プログラムを複製します。複製されたプログラムはアンマネージドリソースを共有します。すべての複製に対して Dispose() が呼び出されたとき、共有されたアンマネージドリソースが解放されます。</remarks>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicProgram.ShallowClone">
+            <summary>プログラムを複製する</summary>
+            <returns>プログラムの複製</returns>
+            <remarks>プログラムを複製します。複製されたプログラムはアンマネージドリソースを共有します。すべての複製に対して Dispose() が呼び出されたとき、共有されたアンマネージドリソースが解放されます。</remarks>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicProgram.Dispose">
+            <summary>プログラムのアンマネージメントリソースを解放する</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicProgram.UpdateShader">
+            <summary>シェーダーの状態を更新する</summary>
+            <remarks>プリミティブ描画前にグラフィックスコンテキストから呼び出される仮想関数です。この関数はクラス内にキャッシュされた状態をシェーダーに反映する場合に使用します。</remarks>
+        </member>
+        <member name="P:Sce.PlayStation.HighLevel.Model.BasicProgram.Parameters">
+            <summary>パラメータ</summary>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicParameters">
+            <summary>基本プログラムのパラメータを表すクラス</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.#ctor">
+            <summary>パラメータを作成する</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.Enable(Sce.PlayStation.HighLevel.Model.BasicEnableMode,System.Boolean)">
+            <summary>指定されたシェーダー機能を有効または無効にする</summary>
+            <param name="mode">有効または無効にするシェーダー機能</param>
+            <param name="status">有効ならばtrue</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.IsEnabled(Sce.PlayStation.HighLevel.Model.BasicEnableMode)">
+            <summary>指定されたシェーダー機能が有効かどうかを取得する</summary>
+            <param name="mode">有効または無効にするシェーダー機能</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetProjectionMatrix(Sce.PlayStation.Core.Matrix4@)">
+            <summary>プロジェクション行列を設定する</summary>
+            <param name="projection">プロジェクション行列</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetViewMatrix(Sce.PlayStation.Core.Matrix4@)">
+            <summary>ビュー行列を設定する</summary>
+            <param name="view">ビュー行列</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetWorldCount(System.Int32)">
+            <summary>ワールド行列の数を設定する</summary>
+            <param name="count">ワールド行列の数 (1～16)</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetWorldMatrix(System.Int32,Sce.PlayStation.Core.Matrix4@)">
+            <summary>ワールド行列を設定する</summary>
+            <param name="index">ワールド行列の番号 (0～15)</param>
+            <param name="world">ワールド行列</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetLightCount(System.Int32)">
+            <summary>ライトの数を設定する</summary>
+            <param name="count">ライトの数 (0～3)</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetLightDirection(System.Int32,Sce.PlayStation.Core.Vector3@)">
+            <summary>ライトの方向ベクトルを設定する</summary>
+            <param name="index">ライトの番号 (0～2)</param>
+            <param name="direction">方向ベクトル</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetLightDiffuse(System.Int32,Sce.PlayStation.Core.Vector3@)">
+            <summary>ライトのディフューズカラーを設定する</summary>
+            <param name="index">ライトの番号 (0～2)</param>
+            <param name="diffuse">ディフューズカラー</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetLightSpecular(System.Int32,Sce.PlayStation.Core.Vector3@)">
+            <summary>ライトのスペキュラカラーを設定する</summary>
+            <param name="index">ライトの番号 (0～2)</param>
+            <param name="specular">スペキュラカラー</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetLightAmbient(Sce.PlayStation.Core.Vector3@)">
+            <summary>ライトのアンビエントカラーを設定する</summary>
+            <param name="ambient">アンビエントカラー</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetFogRange(System.Single,System.Single)">
+            <summary>フォグの範囲を設定する</summary>
+            <param name="start">開始距離</param>
+            <param name="end">終了距離</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetFogColor(Sce.PlayStation.Core.Vector3@)">
+            <summary>フォグのカラーを設定する</summary>
+            <param name="color">カラー</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetMaterialDiffuse(Sce.PlayStation.Core.Vector3@)">
+            <summary>マテリアルのディフューズカラーを設定する</summary>
+            <param name="diffuse">ディフューズカラー</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetMaterialSpecular(Sce.PlayStation.Core.Vector3@)">
+            <summary>マテリアルのスペキュラーカラーを設定する</summary>
+            <param name="specular">スペキュラーカラー</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetMaterialAmbient(Sce.PlayStation.Core.Vector3@)">
+            <summary>マテリアルのアンビエントカラーを設定する</summary>
+            <param name="ambient">アンビエントカラー</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetMaterialEmission(Sce.PlayStation.Core.Vector3@)">
+            <summary>マテリアルのエミッションカラーを設定する</summary>
+            <param name="emission">エミッションカラー</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetMaterialOpacity(System.Single)">
+            <summary>マテリアルの不透明度を設定する</summary>
+            <param name="opacity">不透明度</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetMaterialShininess(System.Single)">
+            <summary>マテリアルの輝度を設定する</summary>
+            <param name="shininess">輝度</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetPositionOffset(System.Single,System.Single,System.Single,System.Single)">
+            <summary>頂点ポジション座標のオフセットを設定する</summary>
+            <param name="transX">X 移動量</param>
+            <param name="transY">Y 移動量</param>
+            <param name="transZ">Z 移動量</param>
+            <param name="scale">スケーリング</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetTexCoordOffset(System.Int32,System.Single,System.Single,System.Single,System.Single)">
+            <summary>頂点テクスチャ座標のオフセットを設定する</summary>
+            <param name="index">テクスチャ座標の番号 (つねに 0)</param>
+            <param name="transU">U 移動量</param>
+            <param name="transV">V 移動量</param>
+            <param name="scaleU">U スケーリング</param>
+            <param name="scaleV">V スケーリング</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicParameters.SetVertexWeightCount(System.Int32)">
+            <summary>頂点ウェイトの数を設定する</summary>
+            <param name="count">頂点ウェイトの数 (0～4)</param>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicEnableMode">
+            <summary>有効または無効にするシェーダー機能</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicEnableMode.Lighting">
+            <summary>ライティング</summary>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicEnableMode.Fog">
+            <summary>フォグ</summary>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicProgramContainer">
+            <summary>プログラムコンテナを表すクラス</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicProgramContainer.#ctor(Sce.PlayStation.HighLevel.Model.BasicParameters)">
+            <summary>プログラムコンテナを作成する</summary>
+            <param name="parameters">共有パラメータ (nullならば共有をおこなわない)</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicProgramContainer.Dispose">
+            <summary>プログラムコンテナのアンマネージドリソースを解放する</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicProgramContainer.Add(System.String,Sce.PlayStation.HighLevel.Model.BasicProgram)">
+            <summary>プログラムを登録する</summary>
+            <param name="key">検索キー</param>
+            <param name="program">プログラム</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicProgramContainer.Find(System.String)">
+            <summary>プログラムを検索する</summary>
+            <param name="key">検索キー</param>
+            <returns>プログラム (nullならば検索失敗)</returns>
+        </member>
+        <member name="F:Sce.PlayStation.HighLevel.Model.BasicProgramContainer.Parameters">
+            <summary>共有パラメータ</summary>
+        </member>
+        <member name="T:Sce.PlayStation.HighLevel.Model.BasicTextureContainer">
+            <summary>テクスチャコンテナを表すクラス</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicTextureContainer.#ctor">
+            <summary>テクスチャコンテナを作成する</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicTextureContainer.Dispose">
+            <summary>テクスチャコンテナのアンマネージドリソースを解放する</summary>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicTextureContainer.Add(System.String,Sce.PlayStation.Core.Graphics.Texture)">
+            <summary>テクスチャを登録する</summary>
+            <param name="key">検索キー</param>
+            <param name="texture">テクスチャ</param>
+        </member>
+        <member name="M:Sce.PlayStation.HighLevel.Model.BasicTextureContainer.Find(System.String)">
+            <summary>テクスチャを検索する</summary>
+            <param name="key">検索キー</param>
+            <returns>テクスチャ (nullならば検索失敗)</returns>
+        </member>
+    </members>
+</doc>

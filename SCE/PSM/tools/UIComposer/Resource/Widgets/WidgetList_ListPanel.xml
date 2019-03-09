@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetaWidgetListPanel>
+    <id>15</id>
+    <name>ListPanel</name>
+    <name_id>WidgetName_18</name_id>
+    <className>ListPanel</className>
+    <type>UIComposer.ListPanel</type>
+    <description id="WidgetDescriptoin_ListPanel" lang="ja">リストパネル</description>
+    <icon>../Images/widgets_list/listpanel.png</icon>
+    <smallIcon>../Images/object_tree/listpanel.png</smallIcon>
+    <dragIcon>Images/widgets_list/listpanel.png</dragIcon>
+    <defaultWidth>854</defaultWidth>
+    <defaultHeight>400</defaultHeight>
+    <alpha>100</alpha>
+    <background
+        color="#AAAAAA"
+        alpha="30"/>    
+    <scrollBarVisibility>ScrollableVisible</scrollBarVisibility>
+    <scrollbarVisibleSelected>true</scrollbarVisibleSelected>
+    <autoVisibilityVerticalSelected>true</autoVisibilityVerticalSelected>
+    <hasBorder>true</hasBorder>
+    <showItemBorder>true</showItemBorder>
+    <showSection>true</showSection>
+    <showEmptySection>true</showEmptySection>
+</MetaWidgetListPanel>

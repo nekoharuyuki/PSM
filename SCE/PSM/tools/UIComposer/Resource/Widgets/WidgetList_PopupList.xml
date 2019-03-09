@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetaWidgetPopupList>
+    <id>9</id>
+    <name>PopupList</name>
+    <name_id>WidgetName_05</name_id>
+    <className>PopupList</className>
+    <type>UIComposer.PopupList</type>
+    <description id="WidgetDescriptoin_PopupList" lang="ja">ポップアップリスト</description>
+    <icon>../Images/widgets_list/popuplist.png</icon>
+    <smallIcon>../Images/object_tree/popuplist.png</smallIcon>
+    <dragIcon>Images/widgets_list/popuplist.png</dragIcon>
+    <defaultWidth>360</defaultWidth>
+    <defaultHeight>56</defaultHeight>
+    <fixedWidth>false</fixedWidth>
+    <fixedHeight>true</fixedHeight>
+    <imagelist>
+        <image>Images/widgets/drop_down_9patch_normal.png</image>
+    </imagelist>
+    <ninepatch
+        topRowHeight="27"
+        bottomRowHeight="27"
+        leftColumnWidth="42"
+        rightColumnWidth="42"/>
+    <alpha>100</alpha>
+    <textblock
+        horizontalOffset="2.0"
+        verticalOffset="2.0"
+        textFont="System"
+        fontWeight="Regular"
+        fontSize="25"
+        textColor="#000000"
+        textAlpha="100"
+        textColorShadow="#808080"
+        shadowAlpha="50"
+        trimming="EllipsisCharacter"/>
+</MetaWidgetPopupList>

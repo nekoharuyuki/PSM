@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetaWidgetEditableText>
+    <id>3</id>
+    <name>EditableText</name>
+    <name_id>WidgetName_06</name_id>
+    <className>EditableText</className>
+    <type>UIComposer.EditableText</type>
+    <description id="WidgetDescriptoin_EditableText" lang="ja">エディタブルテキスト</description>
+    <icon>../Images/widgets_list/editabletext.png</icon>
+    <smallIcon>../Images/object_tree/editabletext.png</smallIcon>
+    <dragIcon>Images/widgets_list/editabletext.png</dragIcon>
+    <defaultWidth>360</defaultWidth>
+    <defaultHeight>56</defaultHeight>
+    <fixedWidth>false</fixedWidth>
+    <fixedHeight>false</fixedHeight>
+    <imagelist>
+        <image>system_assets/text_field_9patch_normal.png</image>
+    </imagelist>
+    <ninepatch
+        topRowHeight="27"
+        bottomRowHeight="27"
+        leftColumnWidth="42"
+        rightColumnWidth="42"/>
+    <textblock
+        hasTextBox="true"
+        textFont="System"
+        textColor="#000000"
+        textAlpha="100"
+        textColorShadow="#808080"
+        shadowAlpha="50"
+        fontSize="25"
+        fontWeight="Regular"
+        horizontal="Left"
+        vertical="Center"
+        linebreaks="Character"
+        trimming="EllipsisCharacter"
+        horizontalOffset="2.0"
+        verticalOffset="2.0">Edit</textblock>
+    <alpha>100</alpha>
+    <inputTraits>true</inputTraits>
+    <placeholder></placeholder>
+    <textInputTraits>Normal</textInputTraits>
+</MetaWidgetEditableText>

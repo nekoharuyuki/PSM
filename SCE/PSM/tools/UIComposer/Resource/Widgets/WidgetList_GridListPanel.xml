@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetaWidgetGridListPanel>
+    <id>17</id>
+    <name>GridListPanel</name>
+    <name_id>WidgetName_07</name_id>
+    <className>GridListPanel</className>
+    <type>UIComposer.GridListPanel</type>
+    <description id="WidgetDescriptoin_GridListPanel" lang="ja">グリッドリストパネル</description>
+    <icon>../Images/widgets_list/gridlistpanel.png</icon>
+    <smallIcon>../Images/object_tree/gridlistpanel.png</smallIcon>
+    <dragIcon>Images/widgets_list/gridlistpanel.png</dragIcon>
+    <defaultWidth>100</defaultWidth>
+    <defaultHeight>50</defaultHeight>
+    <alpha>100</alpha>
+    <direction>Vertical</direction>
+    <scrollBarVisibility>ScrollableVisible</scrollBarVisibility>
+    <hasBorder>true</hasBorder>
+    <background
+        color="#AAAAAA"
+        alpha="30"/>
+</MetaWidgetGridListPanel>
