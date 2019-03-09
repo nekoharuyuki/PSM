@@ -4,32 +4,34 @@
 PlayStation Mobile はソニーコンピュータエンタテイメント（SCE）が提唱する、新しいコンテンツ配信の取り組みです。発表当時は PlayStation Mobile と命名していましたが、その後 PlayStation Mobile に改名されました。PlayStation Mobile 対応コンテンツは PlayStation Store を通じて PlayStation Vita や SCE がライセンスする Android 端末に配信できます。
 
 ### 図1 PlayStation Mobile
-図1 PlayStation Mobile
-開発者は PlayStation Mobile Developer Program で有料の契約（年間 US$99 相当を予定）を結び、開発したアプリケーションを配信できます。ただし、本稿執筆時の2013年5月8日から、期間限定で無料で申し込み可能となっています。詳細は PlayStation Mobile 公式サイトをご覧ください。
+![図1 PlayStation Mobile](https://github.com/nekoharuyuki/PSM/blob/master/image/%E5%9B%B31%20PlayStation%20Mobile.png)  
+開発者は PlayStation Mobile Developer Program で有料の契約（年間 US$99 相当を予定）を結び、開発したアプリケーションを配信できます。ただし、本稿執筆時の2013年5月8日から、期間限定で無料で申し込み可能となっています。  
+
+詳細は [PlayStation Mobile 公式サイト](https://www.jp.playstation.com/psn/psm/)をご覧ください。
 
 これまで PLAYSTATION3 や PlayStation Vita のようなゲーム専用端末のコンテンツを開発するには、SCE と法人契約した企業にのみ限られていましたが、PlayStation Mobile は iOS や Android などのスマートフォンのアプリケーション配信ストアに近いビジネスモデルになると予想され、個人の開発者も PlayStation Vita などの PlayStation Mobile 対応デバイスで実行できるプログラムを開発し、PlayStation Store でコンテンツを販売できるようになるでしょう。
 
-### PlayStation Certified デバイス
+## PlayStation Certified デバイス
 PlayStation Mobile アプリケーションは PlayStation Vitaで実行できることが最大の特徴ですが、SCE がライセンスする PlayStation Certified デバイスでも実行できます。
 
 本校執筆時点で発表されている対応デバイスは Xperia や Sony Tablet シリーズなど Sony 製の Android デバイスが中心ですが、加えて HTC の HTC Oneシリーズが対応しています。詳細は公式サイトの対応機種一覧を見てください。
 
-### PlayStation™Certified devices
+[PlayStation™Certified devices](https://www.jp.playstation.com/psm/certified_j/)
 
-### PlayStation Mobileの技術
+## PlayStation Mobileの技術
 PlayStation Mobile は上記のように PlayStation Vita や PlayStation Certified デバイスなどクロスプラットフォームで動作するアプリケーション実行環境です。
 
 PlayStation Mobile SDK で開発されたアプリケーションは、コードを変更することなく多様なデバイスで実行できます。 このクロスプラットフォーム性は PlayStation Mobile が Mono と呼ばれるオープンソースで開発されている仮想マシンによって実現しています。
 
 ### 図2 PlayStation Mobileアーキテクチャ概要
-図2 PlayStation Mobileアーキテクチャ概要
+![図2 PlayStation Mobileアーキテクチャ概要](https://github.com/nekoharuyuki/PSM/blob/master/image/%E5%9B%B32%20PlayStation%20Mobile%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3%E6%A6%82%E8%A6%81.png)  
 通常、プログラミング言語で書かれたコードはコンパイラによって対象のデバイスおよび OS に特化した機械語に変換されます。機械語に変換された実行可能ファイルは、対象の CPU 及び OS 以外で動かすことはできません。
 
 1990 年代中ごろから、Java の普及と共に実行環境に依存しない中間言語方式が注目されるようになりました。中間言語方式では、プログラミング言語で書かれたコードが特定の CPU や OS に依存しない中間言語と呼ばれる仮想的な機械語に変換されます。そして、仮想マシンと呼ばれる中間言語を読み取り、機械語に変換して実行するソフトウェアによって実行されます。
 
 PlayStation Mobile は Mono の仮想マシンをベースに、ゲームやアプリケーション開発に特化したフレームワークを提供することで、PlayStation Mobile に対応している環境であれば同じように実行できるように仕組んでいるのです。 
 
-### 基盤技術はMicrosoft .NET Framework
+## 基盤技術はMicrosoft .NET Framework
 PlayStation Mobile の技術基盤である Mono は Microsoft が開発する .NET Framework と呼ばれる技術と互換性のあるオープンソースの実装です。.NET Framework は多くの Windows アプリケーションが基盤としている技術で、それ自体は Microsoft の製品ですが、仕様はオープンに公開されています。
 
 PlayStation Mobile SDK が C# を開発言語としているのも .NET Framework アプリケーションの主要な開発言語が C# であるためです。
@@ -42,19 +44,19 @@ PlayStation Mobile や Unity の実行基盤となっている Mono は、こう
 
 特に 1990 年代の Microsoft を知る技術者であれば独善的な企業というイメージが強いため、プロプライエタリな独自技術にロックインされるのではないかと警戒でしょう。しかし 2000 年代中ごろから Microsoft の方針が変化し、多くの自社技術をオープンソース化するほか、標準化やオープンソースの支援を積極的に行うようになりました。PlayStation Mobile や Unity など、非 Windows 環境で互換技術の採用が進んでいることが、その証左となっています。
 
-Unity との共通点と相違点
+## Unity との共通点と相違点
 PlayStation Mobile アプリケーションの開発環境と実行基盤の仕組みは Unity に非常によく似ています。実行基盤に Mono を採用することで OS やデバイスを抽象化する点だけではなく、標準の統合開発環境 PlayStation Mobile Studio が MonoDevelop をベースとする点も同じです。
 
 ### 図3 Unityに付属するMonoDevelop
-図3 Unityに付属するMonoDevelop
+![図3 Unityに付属するMonoDevelop](https://github.com/nekoharuyuki/PSM/blob/master/image/%E5%9B%B33%20Unity%E3%81%AB%E4%BB%98%E5%B1%9E%E3%81%99%E3%82%8BMonoDevelop.png)  
 ### 図4 PlayStation Mobile Studio
-図4 PlayStation Mobile Studio
+![図4 PlayStation Mobile Studio](https://github.com/nekoharuyuki/PSM/blob/master/image/%E5%9B%B34%20PlayStation%20Mobile%20Studio.png)  
 MonoDevelop は、それ自身が Mono 上で動作する統合開発環境で、Mono 及び .NET Framework 上で動作するアプリケーション開発の為に作られました。
 
 PlayStation Mobile Studio は MonoDevelop をカスタマイズした PlayStation Mobile アプリケーション開発に特化した統合開発環境です。C# エディタなどの基本的な部分は純正の MonoDevelop と大きな違いはありませんが、専用のソリューション・テンプレート「PlayStation Mobile アプリケーション」が用意されています。
 
 ### 図5 PlayStation Mobile アプリケーションのソリューション
-図5 PlayStation Mobile アプリケーションのソリューション
+![図5 PlayStation Mobile アプリケーションのソリューション](https://github.com/nekoharuyuki/PSM/blob/master/image/%E5%9B%B35%20PlayStation%20Mobile%20%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E3%82%BD%E3%83%AA%E3%83%A5%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3.png)  
 「PlayStation Mobile アプリケーション」から作成したソリューションは、開発したアプリケーションをPCや接続されているデバイスで実行できます。プログラムを PlayStation Vita や PlayStation Certified 端末で動かすには、端末側に PlayStation Mobile Development Assistant をインストールしておく必要があります。
 
 PS Vita 用の PlayStation Mobile Development Assistant は PlayStation Store で配信されています。PS Vita から開発者ライセンスを登録しているアカウントで PlayStation Store にアクセスしてください。
@@ -62,7 +64,7 @@ PS Vita 用の PlayStation Mobile Development Assistant は PlayStation Store �
 Android 用の PlayStation Mobile Development Assistant は SDK に含まれているため、PlayStation Mobile Studio で実行すると自動的に端末側にインストールされます。
 
 ### 図6 実行環境の選択
-図6 実行環境の選択
+![図6 実行環境の選択](https://github.com/nekoharuyuki/PSM/blob/master/image/%E5%9B%B36%20%E5%AE%9F%E8%A1%8C%E7%92%B0%E5%A2%83%E3%81%AE%E9%81%B8%E6%8A%9E.png)  
 PC にデバイスを接続し、正しく認識されていれば PlayStation Mobile Studio のツールバーにあるコンボボックスでデバイスを選択できます。PlayStation Vita や PlayStation Certified デバイスが無くても、「PlayStation Mobile Simulator」を選択することで、PC上でアプリケーションを実行できます。
 
 MonoDevelop をベースとした統合開発環境を使い、C# で開発する点は Unity と同じですが、開発方法は異なります。Unity はシーンエディタを用いてオブジェクトを空間に配置し、グラフィカルにゲーム世界を構築できました。一方、PlayStation Mobile Studio はコードによる開発が中心となります。ゲームループを管理し、ゲームの更新や描画処理を自前で記述する必要があります。
@@ -71,7 +73,7 @@ Unity と比較した場合、主に 3D ゲーム開発に特化している Uni
 
 PlayStation Mobile SDK は Unity のシーンエディタのようなゲーム空間を構築するツールはありませんが、代わりに UI Toolkit と呼ばれるユーザーインターフェイスに特化したライブラリが提供されます。加えてUIデザインをサポートするツール UI Composer が付属しており、効率的に UI のデザインが行えます。
 
-### 基本的なアプリケーション構造
+## 基本的なアプリケーション構造
 PlayStation Mobile SDK のアーキテクチャは実行基盤を Mono としている点において Unity に似ていますが、開発方法は DirectX や XNA Framework などで開発するゲームのように、すべてをコードで記述しなければなりません。グラフィックスに関連するフレームワークは DirectX や OpenGL の開発経験があれば違和感のない設計になっているので、一定のゲーム開発経験があれば習得は難しくありません。
 
 ここでは、単純に背景色を黒から赤に変化するアニメーション処理を例に基本的な動きを確認します。
@@ -88,8 +90,7 @@ public class AppMain
 	public static void Main (string[] args)
 	{
 		Initialize ();
-		while (isRunning) 
-{
+		while (isRunning) {
 			SystemEvents.CheckEvents ();
 			Update ();
 			Render ();
@@ -141,30 +142,30 @@ Initialize() メソッドの処理が終了し Main() メソッドに復帰す�
 
 このときディスプレイの更新とフレームバッファの更新がずれるとティアリングと呼ばれる画面のちらつきが発生してしまいます。これを防ぐために GraphicsContext はディスプレイの更新間隔に合わせて SwapBuffers() メソッドを待機させます。この設定を垂直同期と呼び、一般的なデバイスでは 1 秒間に 60 回（約 16.6 ミリ秒に 1 回）の間隔で画面を更新します。Update() メソッドと Render() メソッドが呼び出される間隔はディスプレイの垂直同期に合わせられるため、それぞれ 1 秒間に約 60 回のペースで呼び出されることになります。
 
-### UI Composer と UI Toolkit
+## UI Composer と UI Toolkit
 PlayStation Mobile SDK ではアプリケーションの UI に利用できるウィジェット（Widget）と呼ばれる部品群を UI Toolkit というライブラリで提供しています。ラベル、ボタン、テキスト編集、イメージ、スライダーなどのウィジェットが標準で用意されており、必要に応じてカスタムウィジェットを作成することも可能です。
 
 ### 図7 標準のウィジェット
-図7 標準のウィジェット
+![図7 標準のウィジェット](https://github.com/nekoharuyuki/PSM/blob/master/image/%E5%9B%B37%20%E6%A8%99%E6%BA%96%E3%81%AE%E3%82%A6%E3%82%A3%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88.png)  
 UI Toolkit によってウィジェットのインスタンスを作成するだけでボタンなどの UI 要素を表示できますが、ウィジェットの位置やデザインを変更するたびにコードを書き換え、ビルドして実行するのは極めて効率が悪いです。
 
 そこで UI のデザインを専門とする UI Composer というツールが提供されています。
 
 ### 図8 UI Composer
-図8 UI Composer
+![図8 UI Composer](https://github.com/nekoharuyuki/PSM/blob/master/image/%E5%9B%B38%20UI%20Composer.png)  
 UI Composer を使うとグラフィカルなデザイナ上でウィジェットを編集でき、マウスのドラッグ & ドロップを中心とする操作だけでアプリケーションの UI をデザインができます。
 
 また UI Composer は多言語対応のために言語テーブルを作成することができます。ウィジェットから言語テーブルを参照することで、UIで使用するテキストを言語ごとに切り替えられます。
 
 ### 図9 言語テーブルによる多言語対応
-図9 言語テーブルによる多言語対応
+![図9 言語テーブルによる多言語対応](https://github.com/nekoharuyuki/PSM/blob/master/image/%E5%9B%B39%20%E8%A8%80%E8%AA%9E%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB%E3%81%AB%E3%82%88%E3%82%8B%E5%A4%9A%E8%A8%80%E8%AA%9E%E5%AF%BE%E5%BF%9C.png)  
 UI Composer で配置したウィジェットは C# コードとして出力され、PlayStation Mobile Studio のプロジェクトに追加して利用できます。
 
 UI Composer による UI のデザインは便利ですが PlayStation Mobile Studio に統合されておらず、プロジェクトも別に管理されるため PlayStation Mobile Studio のプロジェクトとは同期されません。実質的には UI コードのジェネレータ程度のもので、Visual Studio のような使い勝手を想像すると期待を外れます。ウィジェットに対するイベントハンドラは自己管理しなければなりません。
 
 当然、UI Composer でデザインできる範囲はビルド時のインスタンス構造のみで、実行時に UI が変化する場合はコードで記述しなければなりません。
 
-### PlayStation Mobile と Android
+## PlayStation Mobile と Android
 PlayStation Mobile アプリケーションは PlayStation Vita で実行できるという点が売りになっていますが、デバイスの普及台数を考えれば PlayStation Certified ライセンスを取得した Android デバイスで実行できる点も無視できません。
 
 Android は開発者にとって自由度が高い OS ですが、その一方で性能の異なるハードウェアが大量に作られ、バージョンや機能もデバイスごとに異なる状態が続いています。一定の性能が要求されるゲーム開発にとって、これは致命的な問題です。これに対し PlayStation Certified は SCE が定める基準を満たしたデバイスにのみライセンスされるため、PlayStation Mobile アプリケーションを安定して実行できる性能が保証されます。
