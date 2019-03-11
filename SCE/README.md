@@ -89,6 +89,7 @@ PlayStation Mobile SDK（プレイステーション モバイル エスディ�
   * ゲームエンジン2D
 
 ## PlayStation Certified
+![アイコン](https://github.com/nekoharuyuki/PSM/blob/master/SCE/800px-PlayStation_Certified_monocolor.svg.png)  
 認証された機種にはこのアイコンがつけられる。  
 PlayStation Certified（プレイステーション サーティファイド）は、Android搭載端末メーカーに対する、PlayStation Mobile対応サポートプログラムである。  
 コンテンツ再生においてPlayStation クオリティが保てる機器にはPlayStation Certifiedロゴがライセンスされる。  
